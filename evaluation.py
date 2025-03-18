@@ -33,7 +33,7 @@ model_dict = {
 }
 
 
-def get_chat_response(model, system_message, messages, temperature=0.001):
+def get_chat_response(model, system_message, messages, temperature=0.001, max_retries=3):
     """
     Get response from a model with multi-turn conversation history
     
@@ -42,91 +42,111 @@ def get_chat_response(model, system_message, messages, temperature=0.001):
         system_message: system message
         messages: list of message dicts with 'role' and 'content'
         temperature: sampling temperature
+        max_retries: maximum number of retry attempts on API errors
     
     Returns:
         model response as string
     """
-    if model in ['claude-3.5-sonnet']:
-        client = anthropic.Anthropic(
-            api_key=os.getenv('ANTHROPIC_API_KEY')
-        )
-        
-        # Format messages for Anthropic
-        anthropic_messages = []
-        for msg in messages:
-            anthropic_messages.append({
-                'role': msg['role'], 
-                'content': [{'type': 'text', 'text': msg['content']}]
-            })
+    retries = 0
+    while retries < max_retries:
+        try:
+            if model in ['claude-3.5-sonnet']:
+                client = anthropic.Anthropic(
+                    api_key=os.getenv('ANTHROPIC_API_KEY')
+                )
+                
+                # Format messages for Anthropic
+                anthropic_messages = []
+                for msg in messages:
+                    anthropic_messages.append({
+                        'role': msg['role'], 
+                        'content': [{'type': 'text', 'text': msg['content']}]
+                    })
+                    
+                message = client.messages.create(
+                    model=model_dict[model],
+                    max_tokens=2048,
+                    temperature=temperature,
+                    system=system_message,
+                    messages=anthropic_messages
+                )
+                return message.content[0].text
             
-        message = client.messages.create(
-            model=model_dict[model],
-            max_tokens=2048,
-            temperature=temperature,
-            system=system_message,
-            messages=anthropic_messages
-        )
-        return message.content[0].text
-    
-    # Handle DeepInfra models
-    if model in ['deepseek-v3', 'deepseek-r1', 'deepseek-r1-32B', 'deepseek-r1-70B', 'qwq', 'llama-3.3-70B', 'llama-3.1-70B', 'llama-3.1-8B', 'qwen-2.5-72B', 'gemma-2-27B']:
-        client = OpenAI(
-            api_key=os.getenv('DEEPINFRA_API_KEY'),
-            base_url=os.getenv('DEEPINFRA_BASE_URL')
-        )
-        
-        # Format messages with system message for DeepInfra
-        formatted_messages = [{"role": "system", "content": system_message}]
-        formatted_messages.extend(messages)
-        
-        full_response = ''
-        chat_completion = client.chat.completions.create(
-            model=model_dict[model],
-            temperature=temperature,
-            messages=formatted_messages,
-            stream=True,
-        )
+            # Handle DeepInfra models
+            if model in ['deepseek-v3', 'deepseek-r1', 'deepseek-r1-32B', 'deepseek-r1-70B', 'qwq', 'llama-3.3-70B', 'llama-3.1-70B', 'llama-3.1-8B', 'qwen-2.5-72B', 'gemma-2-27B']:
+                client = OpenAI(
+                    api_key=os.getenv('DEEPINFRA_API_KEY'),
+                    base_url=os.getenv('DEEPINFRA_BASE_URL')
+                )
+                
+                # Format messages with system message for DeepInfra
+                formatted_messages = [{"role": "system", "content": system_message}]
+                formatted_messages.extend(messages)
+                
+                full_response = ''
+                chat_completion = client.chat.completions.create(
+                    model=model_dict[model],
+                    temperature=temperature,
+                    messages=formatted_messages,
+                    stream=True,
+                )
 
-        for event in chat_completion:
-            if event.choices[0].finish_reason:
-                break 
+                for event in chat_completion:
+                    if event.choices[0].finish_reason:
+                        break 
+                    else:
+                        content = event.choices[0].delta.content or ""
+                        full_response += content
+
+                return full_response
+            
+            # Handle Yi Lightning
+            elif model == 'yi-lightning':
+                client = OpenAI(
+                    api_key=os.getenv('YI_API_KEY'),
+                    base_url=os.getenv('YI_BASE_URL')
+                )
+                formatted_messages = [{"role": "system", "content": system_message}]
+                formatted_messages.extend(messages)
+                
+                response = client.chat.completions.create(
+                    model=model_dict[model],
+                    messages=formatted_messages,
+                    temperature=temperature,
+                )
+                
+                return response.choices[0].message.content
+            
+            # Handle OpenAI models
             else:
-                content = event.choices[0].delta.content or ""
-                full_response += content
+                client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+                
+                formatted_messages = [{"role": "system", "content": system_message}]
+                formatted_messages.extend(messages)
+                
+                response = client.chat.completions.create(
+                    model=model_dict[model],
+                    messages=formatted_messages,
+                    temperature=temperature,
+                )
 
-        return full_response
-    
-    # Handle Yi Lightning
-    elif model == 'yi-lightning':
-        client = OpenAI(
-            api_key=os.getenv('YI_API_KEY'),
-            base_url=os.getenv('YI_BASE_URL')
-        )
-        formatted_messages = [{"role": "system", "content": system_message}]
-        formatted_messages.extend(messages)
-        
-        response = client.chat.completions.create(
-            model=model_dict[model],
-            messages=formatted_messages,
-            temperature=temperature,
-        )
-        
-        return response.choices[0].message.content
-    
-    # Handle OpenAI models
-    else:
-        client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-        
-        formatted_messages = [{"role": "system", "content": system_message}]
-        formatted_messages.extend(messages)
-        
-        response = client.chat.completions.create(
-            model=model_dict[model],
-            messages=formatted_messages,
-            temperature=temperature,
-        )
-
-        return response.choices[0].message.content
+                return response.choices[0].message.content
+                
+        except Exception as e:
+            retries += 1
+            error_type = type(e).__name__
+            error_message = str(e)
+            
+            # Check if we've reached max retries
+            if retries >= max_retries:
+                print(f"Failed after {max_retries} attempts. Last error: {error_type}: {error_message}")
+                # Return a special string indicating an error occurred
+                return f"ERROR: API request failed after {max_retries} attempts. Last error: {error_type}: {error_message}"
+            
+            # If we still have retries left, wait and try again
+            wait_time = 2 ** retries  # Exponential backoff: 2, 4, 8 seconds
+            print(f"Attempt {retries} failed with {error_type}: {error_message}. Retrying in {wait_time} seconds...")
+            time.sleep(wait_time)
 
 
 def extract_criminal_prediction(response):
@@ -181,10 +201,7 @@ def extract_self_role_prediction(response, player_id, num_players):
     """Extract the model's prediction of its own role (player_id)"""
     patterns = [
         rf"Final Player {player_id}:\s*(\w+)",
-        rf"Final Player {player_id} - (\w+)",
-        rf"Player {player_id}:\s*(\w+)",
-        rf"Player {player_id} - (\w+)",
-        rf"Player {player_id} is (?:an? )?(\w+)"
+        rf"Final Player {player_id} - (\w+)"
     ]
     
     for pattern in patterns:
@@ -298,7 +315,7 @@ def calculate_scores_with_self_role(criminal_prediction, role_predictions, groun
     return total_score, criminal_correct, roles_correct, non_criminal_count, self_role_correct, self_role_prediction
 
 
-def evaluate_model(model, dataset_path, num_scenarios=5, output_file=None):
+def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
     """
     Evaluate model performance on the MetaSkeptic dataset with per-round tracking
     and role-specific performance tracking
@@ -306,7 +323,7 @@ def evaluate_model(model, dataset_path, num_scenarios=5, output_file=None):
     Args:
         model: model name
         dataset_path: path to dataset json file
-        num_scenarios: number of scenarios to evaluate (default: 5)
+        num_scenarios: number of scenarios to evaluate 
         output_file: optional file to save results
     """
     # Load dataset
@@ -409,9 +426,6 @@ def evaluate_model(model, dataset_path, num_scenarios=5, output_file=None):
             # Also track by player's role
             if player_role in role_metrics:
                 role_metrics[player_role][round_num].append(round_result)
-            
-            # Add a small delay to avoid rate limiting
-            time.sleep(0.5)
         
         # Save scenario results
         scenario_result = {
@@ -490,15 +504,26 @@ def evaluate_model(model, dataset_path, num_scenarios=5, output_file=None):
 
 def main():
     # Set the models to evaluate
-    models = ['gpt-4o-mini','llama-3.3-70B','deepseek-r1-32B']
+    models = ['llama-3.3-70B','deepseek-r1-32B','o1-mini','gpt-4o']
     
     # Dataset types to evaluate
     dataset_types = ['all']
     player_counts = [6]
     all_results = {}
     
+    # First, load existing overall summary if it exists
+    overall_summary_path = "d:/github/MetaSkeptic/results/overall_summary.json"
+    if os.path.exists(overall_summary_path):
+        try:
+            with open(overall_summary_path, 'r', encoding='utf-8') as f:
+                all_results = json.load(f)
+                print(f"Loaded existing results from {overall_summary_path}")
+        except Exception as e:
+            print(f"Error loading existing results: {e}")
+            all_results = {}
+    
     for model in models:
-        model_results = {}
+        model_results = all_results.get(model, {})
         
         for player_count in player_counts:
             for dataset_type in dataset_types:
@@ -513,14 +538,54 @@ def main():
                 # Create results directory if it doesn't exist
                 os.makedirs("d:/github/MetaSkeptic/results/", exist_ok=True)
                 
+                # Check if we need to load existing results file
+                detailed_results = None
+                if os.path.exists(output_file):
+                    try:
+                        with open(output_file, 'r', encoding='utf-8') as f:
+                            existing_data = json.load(f)
+                            detailed_results = existing_data.get("detailed_results", [])
+                            print(f"Loaded existing detailed results for {model} on {dataset_path}")
+                    except Exception as e:
+                        print(f"Error loading existing detailed results: {e}")
+                
                 print(f"Evaluating {model} on {dataset_path}")
                 
-                summary, _ = evaluate_model(
+                summary, new_results = evaluate_model(
                     model=model, 
                     dataset_path=dataset_path,
                     num_scenarios=17,  # Adjust as needed
-                    output_file=output_file
+                    output_file=None  # Don't save directly, we'll handle it ourselves
                 )
+                
+                # If we have existing results, merge with new ones
+                if detailed_results:
+                    # Create a lookup of existing scenario IDs
+                    existing_ids = {result['scenario_id'] for result in detailed_results}
+                    
+                    # Add only new scenarios that don't already exist
+                    for result in new_results:
+                        if result['scenario_id'] not in existing_ids:
+                            detailed_results.append(result)
+                            existing_ids.add(result['scenario_id'])
+                    
+                    # Save merged results
+                    output_data = {
+                        "summary": summary,
+                        "detailed_results": detailed_results
+                    }
+                    
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        json.dump(output_data, f, indent=2)
+                else:
+                    # Save new results as is
+                    output_data = {
+                        "summary": summary,
+                        "detailed_results": new_results
+                    }
+                    
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        json.dump(output_data, f, indent=2)
                 
                 model_results[f"{player_count}_{dataset_type}"] = summary
         

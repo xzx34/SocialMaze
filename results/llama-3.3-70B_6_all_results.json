@@ -1,0 +1,1518 @@
+{
+  "summary": {
+    "model": "llama-3.3-70B",
+    "dataset": "metaskeptic_6_all.json",
+    "num_scenarios": 17,
+    "rounds": {
+      "1": {
+        "criminal_accuracy": 64.70588235294117,
+        "avg_total_score": 43.294117647058826,
+        "avg_criminal_score": 19.41176470588235,
+        "avg_role_score": 23.88235294117647,
+        "self_role_accuracy": 52.94117647058824,
+        "num_scenarios": 17
+      },
+      "2": {
+        "criminal_accuracy": 52.94117647058824,
+        "avg_total_score": 40.588235294117645,
+        "avg_criminal_score": 15.882352941176471,
+        "avg_role_score": 24.705882352941178,
+        "self_role_accuracy": 52.94117647058824,
+        "num_scenarios": 17
+      },
+      "3": {
+        "criminal_accuracy": 58.82352941176471,
+        "avg_total_score": 49.76470588235294,
+        "avg_criminal_score": 17.647058823529413,
+        "avg_role_score": 32.11764705882353,
+        "self_role_accuracy": 52.94117647058824,
+        "num_scenarios": 17
+      }
+    },
+    "role_specific": {
+      "Investigator": {
+        "1": {
+          "criminal_accuracy": 75.0,
+          "avg_total_score": 47.0,
+          "avg_criminal_score": 22.5,
+          "avg_role_score": 24.5,
+          "self_role_accuracy": 100.0,
+          "num_scenarios": 4
+        },
+        "2": {
+          "criminal_accuracy": 50.0,
+          "avg_total_score": 43.0,
+          "avg_criminal_score": 15.0,
+          "avg_role_score": 28.0,
+          "self_role_accuracy": 100.0,
+          "num_scenarios": 4
+        },
+        "3": {
+          "criminal_accuracy": 75.0,
+          "avg_total_score": 57.5,
+          "avg_criminal_score": 22.5,
+          "avg_role_score": 35.0,
+          "self_role_accuracy": 100.0,
+          "num_scenarios": 4
+        }
+      },
+      "Criminal": {
+        "1": {
+          "criminal_accuracy": 100.0,
+          "avg_total_score": 55.2,
+          "avg_criminal_score": 30.0,
+          "avg_role_score": 25.2,
+          "self_role_accuracy": 100.0,
+          "num_scenarios": 5
+        },
+        "2": {
+          "criminal_accuracy": 100.0,
+          "avg_total_score": 58.0,
+          "avg_criminal_score": 30.0,
+          "avg_role_score": 28.0,
+          "self_role_accuracy": 100.0,
+          "num_scenarios": 5
+        },
+        "3": {
+          "criminal_accuracy": 100.0,
+          "avg_total_score": 74.8,
+          "avg_criminal_score": 30.0,
+          "avg_role_score": 44.8,
+          "self_role_accuracy": 100.0,
+          "num_scenarios": 5
+        }
+      },
+      "Rumormonger": {
+        "1": {
+          "criminal_accuracy": 60.0,
+          "avg_total_score": 40.4,
+          "avg_criminal_score": 18.0,
+          "avg_role_score": 22.4,
+          "self_role_accuracy": 0.0,
+          "num_scenarios": 5
+        },
+        "2": {
+          "criminal_accuracy": 40.0,
+          "avg_total_score": 34.4,
+          "avg_criminal_score": 12.0,
+          "avg_role_score": 22.4,
+          "self_role_accuracy": 0.0,
+          "num_scenarios": 5
+        },
+        "3": {
+          "criminal_accuracy": 40.0,
+          "avg_total_score": 34.4,
+          "avg_criminal_score": 12.0,
+          "avg_role_score": 22.4,
+          "self_role_accuracy": 0.0,
+          "num_scenarios": 5
+        }
+      },
+      "Lunatic": {
+        "1": {
+          "criminal_accuracy": 0.0,
+          "avg_total_score": 23.333333333333332,
+          "avg_criminal_score": 0.0,
+          "avg_role_score": 23.333333333333332,
+          "self_role_accuracy": 0.0,
+          "num_scenarios": 3
+        },
+        "2": {
+          "criminal_accuracy": 0.0,
+          "avg_total_score": 18.666666666666668,
+          "avg_criminal_score": 0.0,
+          "avg_role_score": 18.666666666666668,
+          "self_role_accuracy": 0.0,
+          "num_scenarios": 3
+        },
+        "3": {
+          "criminal_accuracy": 0.0,
+          "avg_total_score": 23.333333333333332,
+          "avg_criminal_score": 0.0,
+          "avg_role_score": 23.333333333333332,
+          "self_role_accuracy": 0.0,
+          "num_scenarios": 3
+        }
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "scenario_id": "all_1",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Lunatic",
+        "2": "Rumormonger",
+        "3": "Criminal",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Investigator"
+      },
+      "player_role": "Lunatic",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Unknown",
+            "4": "Unknown",
+            "5": "Rumormonger",
+            "6": "Rumormonger"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 1:\n\n1. **Player 1 says Player 4 is not the criminal.** As the actual Criminal, I (Player 1) might be trying to deflect attention or provide truthful information to blend in. This statement alone doesn't reveal much about my intentions or role.\n2. **Player 2 says Player 3 is the criminal.** This could be a truthful statement if Player 2 is an Investigator, or it could be a misleading statement if Player 2 is not an Investigator.\n3. **Player 3 says Player 4 is not the criminal.** Similar to Player 1's statement, this could be truthful or an attempt to mislead, depending on Player 3's role.\n4. **Player 4 says Player 3 is the criminal.** This statement directly contradicts Player 2's statement, suggesting that either Player 2 or Player 4 (or both) are not Investigators.\n5. **Player 5 says Player 1 is not the criminal.** This statement supports my (Player 1's) initial claim of not being the criminal, but since I am the criminal, this indicates Player 5 might not be an Investigator or is trying to mislead.\n6. **Player 6 says Player 1 is not the criminal.** Similar to Player 5's statement, this supports the notion that I am not the criminal, which we know to be false. This suggests Player 6 might also not be an Investigator.\n\nGiven these statements and knowing my role as the Criminal, my analysis for Round 1 is as follows:\n\n- Players 5 and 6 both claim I am not the criminal, which could indicate they are either trying to mislead or genuinely believe this, possibly due to being the Rumormonger or Lunatic.\n- The contradiction between Players 2 and 4 regarding Player 3's role suggests at least one of them is not an Investigator.\n- Since I know I am the Criminal, statements claiming I am not (from Players 5 and 6) are false, indicating these players might not be Investigators.\n\n**Final Judgment After Round 1:**\nGiven the information, it's challenging to pinpoint the criminal's identity from the perspective of another player, but since I am the criminal, I will proceed with the analysis based on the roles and statements provided.\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator (based on the direct accusation towards another player, which could be a trait of an Investigator trying to reveal the truth)\nFinal Player 3: Unknown\nFinal Player 4: Unknown\nFinal Player 5: Rumormonger or Lunatic (due to the false claim about Player 1)\nFinal Player 6: Rumormonger or Lunatic (for the same reason as Player 5)\n\nThis judgment is highly speculative after just one round and will likely change as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Unknown",
+            "5": "Rumormonger",
+            "6": "Lunatic"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 2, in addition to the information from Round 1:\n\n1. **Player 1 says Player 2 is the criminal.** As the Criminal, I'm making a statement that could be true or false. Given my role, this statement is likely intended to mislead.\n2. **Player 2 says Player 4 is the criminal.** This contradicts my statement and could be a genuine attempt by an Investigator to identify the criminal or a misleading statement by another role.\n3. **Player 3 says Player 1 is the criminal.** This is the first statement directly accusing me of being the criminal. If Player 3 is an Investigator, this statement would be true.\n4. **Player 4 says Player 6 is not the criminal.** This statement could be truthful or an attempt to deflect attention from themselves or someone else.\n5. **Player 5 says Player 2 is not the criminal.** This supports Player 2's innocence, which could mean Player 5 is also not an Investigator or is trying to protect Player 2.\n6. **Player 6 says Player 3 is the criminal.** This statement contradicts Player 3's accusation towards me and could indicate that Player 6 is trying to protect me or mislead others.\n\nConsidering both rounds:\n\n- Player 3's accusation towards me in Round 2 is significant because it directly identifies me as the criminal, which is true.\n- The contradiction between my statement (accusing Player 2) and Player 3's statement (accusing me) suggests that one of us is likely the criminal, and given my role, Player 3's statement is correct.\n- Players 5 and 6's statements from Round 1 claiming I am not the criminal, combined with their Round 2 statements, suggest they might be the Rumormonger and Lunatic, respectively, or vice versa.\n\n**Final Judgment After Round 2:**\nGiven the new information, the analysis shifts significantly with Player 3's direct accusation towards me.\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator (given the direct accusations and potential for truthfulness)\nFinal Player 3: Investigator (for directly accusing me, the actual criminal, which aligns with an Investigator's truthful nature)\nFinal Player 4: Unknown (could be an Investigator, Rumormonger, or Lunatic based on the statements)\nFinal Player 5: Rumormonger (due to the consistent defense of me and potential for false information)\nFinal Player 6: Lunatic (given the potential for false accusations and defense of me in Round 1)\n\nThis judgment is more informed than after Round 1 but still speculative. The roles of Players 4, 5, and 6 could be adjusted as more information becomes available in the final round."
+        },
+        {
+          "round": 3,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Rumormonger",
+            "5": "Lunatic",
+            "6": "Investigator"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 3, in addition to the information from Rounds 1 and 2:\n\n1. **Player 1 says Player 6 is not the criminal.** As the Criminal, I'm making a statement that could be intended to mislead or deflect attention.\n2. **Player 2 says Player 5 is the criminal.** This is a direct accusation towards Player 5, which could be true if Player 2 is an Investigator or false if Player 2 is not.\n3. **Player 3 says Player 1 is not the criminal.** This statement contradicts Player 3's previous accusation towards me in Round 2, which was correct. This inconsistency suggests that Player 3 might not be a consistent truth-teller, which could indicate a role other than Investigator, but given the previous correct accusation, it's more likely that Player 3 is indeed an Investigator who has been misled or is trying to test others.\n4. **Player 4 says Player 1 is not the criminal.** This statement supports the notion that I am not the criminal, which we know to be false. This could indicate that Player 4 is not an Investigator or is trying to mislead.\n5. **Player 5 says Player 2 is not the criminal.** This statement could be an attempt to defend Player 2 or mislead others about Player 2's role.\n6. **Player 6 says Player 4 is not the criminal.** This statement could be truthful or an attempt to deflect attention from themselves or someone else.\n\nConsidering all rounds:\n\n- The inconsistency in Player 3's statements (accusing me in Round 2 and then saying I'm not the criminal in Round 3) is notable. However, given that Player 3 was the first to correctly identify me as the criminal, it's possible that Player 3 is an Investigator who was testing the waters or is being cautious.\n- Player 2's direct accusation towards Player 5 in Round 3, combined with previous statements, suggests that Player 2 could indeed be an Investigator trying to uncover the truth.\n- Players 4 and 5's consistent defense of me or others, despite knowing I am the criminal, suggests they might be in roles that provide false or misleading information, such as Rumormonger or Lunatic.\n\n**Final Judgment After Round 3:**\nGiven all the information, the analysis refines the roles further.\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator (for the consistent attempts to uncover the truth and direct accusations)\nFinal Player 3: Investigator (despite the inconsistency, the initial correct accusation and the role in the game suggest this)\nFinal Player 4: Rumormonger (for the consistent provision of potentially false information and defense of the criminal)\nFinal Player 5: Lunatic (given the defense of the criminal and potential for false accusations)\nFinal Player 6: Investigator (the statements, while sometimes defensive, do not strongly indicate a misleading role, and the need for three Investigators suggests this assignment)\n\nThis final judgment takes into account all statements and the known roles and behaviors within the game, providing a comprehensive analysis based on the information provided."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_2",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Rumormonger",
+        "2": "Criminal",
+        "3": "Investigator",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Lunatic"
+      },
+      "player_role": "Rumormonger",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "None",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Unknown",
+            "4": "Investigator",
+            "5": "Unknown",
+            "6": "Criminal"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the statements from Round 1:\n\n1. As Player 1 (myself), I stated that Player 4 is not the criminal. Given that I am an Investigator, this statement is true.\n2. Player 2 says I (Player 1) am not the criminal, which aligns with the truth since I am an Investigator.\n3. Player 3 says Player 6 is not the criminal.\n4. Player 4 says I (Player 1) am not the criminal, which is also true.\n5. Player 5 says Player 6 is not the criminal, supporting Player 3's statement.\n6. Player 6 says Player 3 is not the criminal.\n\nFrom these statements, we can deduce some information:\n- Since I (Player 1) am an Investigator and said Player 4 is not the criminal, Player 4 cannot be the criminal.\n- Both Player 2 and Player 4 confirmed that I (Player 1) am not the criminal, which is consistent with my role as an Investigator.\n- Players 3, 5, and 6 all made statements that could potentially be true or false based on their roles.\n\nGiven the information from Round 1, it's challenging to pinpoint the criminal or the exact roles of all players with certainty. However, we can start forming some hypotheses:\n\n- Since Player 2 and Player 4 both correctly identified me as not being the criminal, and considering my statement about Player 4, it's possible that one or both of them could be Investigators like myself. However, it's also possible that one of them could be the Rumormonger or even the Lunatic, given the limited information.\n- Players 3, 5, and 6's statements about other players not being the criminal could be true or false, depending on their roles.\n\nFinal Judgment after Round 1:\nGiven the lack of direct evidence pointing to any player as the criminal and the potential roles of each player, my judgment is speculative at this stage.\n\nFinal Criminal Is Player: Unable to determine with certainty, but let's hypothesize Player 6 for the sake of providing an answer, acknowledging this is highly speculative.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator (speculative, could also be Rumormonger or Lunatic)\nFinal Player 3: Unknown (could be Investigator, Rumormonger, Lunatic, or Criminal)\nFinal Player 4: Investigator (speculative, given the statement aligning with truth, but could also be Rumormonger)\nFinal Player 5: Unknown (similar to Player 3, could be any role)\nFinal Player 6: Criminal (highly speculative for the purpose of this exercise, acknowledging the lack of concrete evidence)\n\nThis judgment will evolve as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "None",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Unknown",
+            "5": "Unknown",
+            "6": "Criminal"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the statements from Round 2, considering the previous round's information:\n\n1. I (Player 1) stated that Player 6 is the criminal. As an Investigator, my statements are truthful.\n2. Player 2 says Player 5 is not the criminal.\n3. Player 3 says Player 5 is not the criminal, aligning with Player 2's statement.\n4. Player 4 says Player 6 is not the criminal, which contradicts my statement as an Investigator.\n5. Player 5 says Player 6 is not the criminal, supporting Player 4's statement.\n6. Player 6 says Player 4 is the criminal.\n\nFrom these statements and considering my role as an Investigator, we can deduce:\n- My statement that Player 6 is the criminal is true.\n- Player 4's statement that Player 6 is not the criminal must be false, given my truthful statement. This indicates Player 4 could be the Criminal, Rumormonger, or Lunatic, as they provided misleading information.\n- Player 6's statement that Player 4 is the criminal could be true or false. If I am correct that Player 6 is the criminal, then Player 6's statement about Player 4 is likely an attempt to mislead.\n- Players 2 and 3 both stated that Player 5 is not the criminal, which could be true. If so, it suggests that Player 5 might not be the criminal, but without more information, it's hard to determine their role or the criminal's identity with absolute certainty.\n\nGiven this analysis, my previous speculation about Player 6 being the criminal gains more support, especially considering my own statement as an Investigator. However, the roles of other players are still somewhat unclear.\n\nFinal Judgment after Round 2:\nFinal Criminal Is Player: 6\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator (speculative, seems plausible given the supportive statement)\nFinal Player 3: Investigator (speculative, aligns with Player 2, could be another truthful role)\nFinal Player 4: Unknown (provided false information, could be Criminal, Rumormonger, or Lunatic)\nFinal Player 5: Unknown (statements from others suggest not the criminal, but role unclear)\nFinal Player 6: Criminal (based on my Investigator statement and the analysis of Round 2 statements)\n\nThis judgment is more informed than after Round 1 but still subject to change based on Round 3's statements."
+        },
+        {
+          "round": 3,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "None",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Rumormonger",
+            "5": "Lunatic",
+            "6": "Criminal"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the statements from Round 3, considering the previous rounds' information:\n\n1. I (Player 1) again stated that Player 6 is the criminal, reinforcing my previous truthful statement as an Investigator.\n2. Player 2 says I (Player 1) am not the criminal, which is true and consistent with their previous statements, suggesting they might indeed be an Investigator.\n3. Player 3 says Player 5 is not the criminal, which aligns with their previous statement and could indicate they are also an Investigator.\n4. Player 4 says Player 6 is not the criminal, which is false given my consistent statement as an Investigator. This further supports the notion that Player 4 is not an Investigator and could be the Criminal, Rumormonger, or Lunatic.\n5. Player 5 says Player 6 is not the criminal, which could be a truthful statement if they are an Investigator or a false statement if they are the Rumormonger or Lunatic. However, given the majority of statements suggesting Player 6's involvement and my own role as an Investigator, this statement is likely misleading.\n6. Player 6 says Player 4 is not the criminal, which could be true or false. Given that I believe Player 6 is the criminal based on my Investigator role, this statement could be an attempt to deflect suspicion.\n\nConsidering all rounds, the consistency of my statements as an Investigator, and the analysis of other players' statements:\n- My repeated statement that Player 6 is the criminal, combined with the lack of contradictory evidence from other likely Investigators (Players 2 and 3), strengthens the case against Player 6.\n- Players 2 and 3 have consistently provided statements that align with what would be expected from Investigators, supporting the notion that they are indeed Investigators.\n- Player 4's consistent denial of Player 6 being the criminal, despite my truthful statements as an Investigator, suggests they are likely involved in misleading the group, possibly as the Rumormonger or Lunatic, but given the context, it's less likely they are the Criminal if Player 6 is indeed the Criminal.\n- Player 5's statements have been inconsistent with the truth as revealed by my Investigator statements, suggesting they might be the Rumormonger or Lunatic, but their role is less clear without more direct evidence.\n- Player 6's attempts to deflect suspicion by stating Player 4 is not the criminal, after previously accusing Player 4, further supports the suspicion against them as the Criminal.\n\nFinal Judgment after Round 3:\nFinal Criminal Is Player: 6\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Rumormonger (given the consistent attempt to mislead about Player 6, but acknowledging the possibility of being the Lunatic)\nFinal Player 5: Lunatic (considering their statements and the need for one Lunatic in the game, who believes they are the Criminal)\nFinal Player 6: Criminal (based on my consistent Investigator statements and the analysis of all rounds)\n\nThis final judgment is made with the information available from all three rounds, taking into account the roles' behaviors and the necessity of each role being present in the game."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_3",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Investigator",
+        "2": "Lunatic",
+        "3": "Investigator",
+        "4": "Rumormonger",
+        "5": "Criminal",
+        "6": "Investigator"
+      },
+      "player_role": "Investigator",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Investigator",
+          "criminal_prediction": "5",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Rumormonger",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Criminal",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "To analyze the statements from Round 1, let's consider the roles and their behaviors:\n\n1. **Investigators** always tell the truth about whether someone is the Criminal.\n2. **Criminals** can lie or tell the truth.\n3. **Rumormongers** believe they are Investigators but can provide incorrect information.\n4. **Lunatics** believe they are Criminals and can lie or tell the truth.\n\nGiven the statements:\n\n- **Player 1** (myself) says Player 6 is not the Criminal. As an Investigator, I am telling the truth.\n- **Player 2** says Player 1 is the Criminal. Since I know I am an Investigator and not the Criminal, Player 2 must be either the Criminal, the Lunatic, or the Rumormonger.\n- **Player 3** says Player 4 is not the Criminal. This could be true or false depending on Player 3's role.\n- **Player 4** says Player 5 is the Criminal. This statement's truthfulness depends on Player 4's role.\n- **Player 5** says Player 6 is the Criminal. Given my statement that Player 6 is not the Criminal, if I am correct (and I know I am as an Investigator), then Player 5 is likely not an Investigator, suggesting they could be the Criminal, the Lunatic, or the Rumormonger.\n- **Player 6** says Player 5 is the Criminal. This contradicts Player 5's statement about Player 6. Given that I've already stated Player 6 is not the Criminal, and considering the potential roles, Player 6's statement could be an attempt to deflect or could be truthful, depending on their actual role.\n\n**Analysis**:\n- Since I am an Investigator and said Player 6 is not the Criminal, we can trust that statement.\n- Player 2 accusing me (an Investigator) of being the Criminal suggests they are not an Investigator, potentially making them the Criminal, Lunatic, or Rumormonger.\n- The contradiction between Players 5 and 6, with both accusing each other, suggests one of them could be the Criminal or the Lunatic, as they are making statements that could be false.\n\n**Initial Judgment**:\nGiven the information and the process of elimination, my initial guess for the Criminal and the roles of each player would be:\n\nFinal Judgment:\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Rumormonger (or possibly Lunatic/Criminal, but less likely given the direct accusation towards me)\nFinal Player 3: Investigator (assuming their statement is truthful, but this is speculative)\nFinal Player 4: Investigator (similarly speculative, assuming their statement is truthful)\nFinal Player 5: Criminal (based on the contradiction with Player 6 and my known truthful statement about Player 6)\nFinal Player 6: Investigator (since I've stated they are not the Criminal, and if they were the Lunatic, they might not truthfully accuse another player of being the Criminal without more information)\n\nThis judgment is highly speculative at this stage, given the limited information and the complexity of the roles' interactions. Further rounds will provide more clarity."
+        },
+        {
+          "round": 2,
+          "player_role": "Investigator",
+          "criminal_prediction": "5",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Rumormonger",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Criminal",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "**Analysis of Round 2 Statements**:\n\n- **Player 1** (myself) says Player 3 is not the Criminal. As an Investigator, this statement is true.\n- **Player 2** says Player 5 is the Criminal. Given Player 2's previous statement accusing me (an Investigator) of being the Criminal, if they are now telling the truth, it could indicate they are the Rumormonger, as their statements can be inconsistent.\n- **Player 3** says Player 5 is the Criminal. This aligns with several other statements, but without knowing Player 3's role, we can't confirm the truthfulness.\n- **Player 4** says Player 5 is the Criminal. Similar to Player 3, this could be true or false depending on Player 4's role.\n- **Player 5** says Player 3 is not the Criminal. Given that multiple players, including myself, have suggested Player 5 might be the Criminal, and considering Player 5's statement about Player 3, if Player 5 were indeed the Criminal, this statement could be an attempt to deflect suspicion.\n- **Player 6** says Player 5 is the Criminal. This statement aligns with the majority and supports the possibility that Player 5 is indeed the Criminal.\n\n**Consolidating Information**:\n- From Round 1, we had suspicions about Player 5 being the Criminal due to the contradiction with Player 6 and the pattern of accusations.\n- In Round 2, the majority of players (Players 2, 3, 4, and 6) accuse Player 5 of being the Criminal. This consensus, combined with my own statements (which are truthful as an Investigator), strengthens the case against Player 5.\n\n**Role Assignments**:\n- **Player 1** is confirmed as an Investigator based on my own knowledge.\n- **Player 2**'s inconsistency (first accusing me, then accusing Player 5) suggests they might be the Rumormonger, as they could provide false information while believing they are telling the truth.\n- **Player 3** and **Player 4** both accuse Player 5, which could indicate they are Investigators, but without direct evidence, this remains speculative.\n- **Player 5**, given the majority's accusation and the analysis, is likely the Criminal.\n- **Player 6**, having accused Player 5 in both rounds, could be an Investigator, but like Players 3 and 4, this is based on the assumption that their statements are truthful.\n\n**Updated Judgment**:\nGiven the accumulation of evidence and the process of elimination, my updated guess for the Criminal and the roles of each player would be:\n\nFinal Judgment:\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Rumormonger\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Criminal\nFinal Player 6: Investigator\n\nThis judgment is more confident than after Round 1, given the consensus among players regarding Player 5's role. However, the true test of these deductions will come after analyzing the statements from the final round."
+        },
+        {
+          "round": 3,
+          "player_role": "Investigator",
+          "criminal_prediction": "5",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Rumormonger",
+            "3": "Investigator",
+            "4": "Lunatic",
+            "5": "Criminal",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "**Analysis of Round 3 Statements**:\n\n- **Player 1** (myself) says Player 5 is the Criminal. As an Investigator, this statement is true and consistent with my previous deductions.\n- **Player 2** says Player 1 is not the Criminal. Given Player 2's previous inconsistency, this statement could be true or false, but it aligns with the fact that I am an Investigator.\n- **Player 3** says Player 1 is not the Criminal. This statement is true and supports the notion that Player 3 could be an Investigator, as they are providing truthful information.\n- **Player 4** says Player 3 is the Criminal. This is a significant contradiction, as Player 3 has been suspected to be an Investigator based on previous statements. If Player 4 is an Investigator, this would be a truthful statement, but given the context, it seems less likely.\n- **Player 5** says Player 3 is the Criminal. Given that Player 5 is highly suspected to be the Criminal, this statement could be an attempt to mislead or deflect suspicion.\n- **Player 6** says Player 4 is not the Criminal. This statement supports the idea that Player 6 is an Investigator, as they are providing information that could be truthful.\n\n**Reconciling Contradictions**:\n- The statements from Players 4 and 5 accusing Player 3 of being the Criminal contradict the earlier consensus and my own statements. Given that Player 5 is likely the Criminal, their statement is likely false.\n- Player 4's accusation against Player 3 introduces a new contradiction. If Player 4 were an Investigator, they would not falsely accuse another player. This suggests Player 4 might not be an Investigator, potentially making them the Lunatic, as they believe they are telling the truth but are actually providing false information.\n\n**Final Role Assignments**:\n- **Player 1** is confirmed as an Investigator.\n- **Player 2**'s statements have been inconsistent, suggesting they are the Rumormonger.\n- **Player 3** has provided truthful information, suggesting they are an Investigator.\n- **Player 4**'s false accusation suggests they are the Lunatic.\n- **Player 5** is highly likely the Criminal, given the majority's accusations and their own attempts to deflect suspicion.\n- **Player 6** has provided consistent and truthful information, suggesting they are an Investigator.\n\n**Final Judgment**:\nGiven the analysis of all rounds, my final guess for the Criminal and the roles of each player is:\n\nFinal Judgment:\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Rumormonger\nFinal Player 3: Investigator\nFinal Player 4: Lunatic\nFinal Player 5: Criminal\nFinal Player 6: Investigator\n\nThis conclusion is based on the accumulation of evidence across all three rounds, considering the behaviors and statements of each player in the context of their potential roles."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_4",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Investigator",
+        "2": "Rumormonger",
+        "3": "Criminal",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Lunatic"
+      },
+      "player_role": "Investigator",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Investigator",
+          "criminal_prediction": "3",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Unknown",
+            "3": "Criminal",
+            "4": "Unknown",
+            "5": "Unknown",
+            "6": "Unknown"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 44.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "To analyze the statements from Round 1, let's consider the roles and their behaviors:\n\n1. **Investigators** always tell the truth about whether someone is a Criminal.\n2. **Criminals** can lie or tell the truth.\n3. **Rumormongers** believe they are Investigators but can provide incorrect information.\n4. **Lunatics** believe they are Criminals and can lie or tell the truth.\n\nGiven the statements:\n\n- **Player 1** (myself) says **Player 3** is the criminal. As an Investigator, I am telling the truth, so I believe **Player 3** could be the Criminal.\n- **Player 2** says **Player 6** is not the criminal. This could be true or false depending on **Player 2**'s role.\n- **Player 3** says **Player 5** is not the criminal. If **Player 3** is indeed the Criminal (as I claimed), this statement could be a lie or the truth.\n- **Player 4** says **Player 1** (myself) is not the criminal. Given that I am an Investigator, this statement is true, but it doesn't reveal much about **Player 4**'s role.\n- **Player 5** says **Player 2** is not the criminal. Similar to **Player 2**'s statement, this could be true or false.\n- **Player 6** says **Player 5** is not the criminal. Again, this could be true or false depending on **Player 6**'s role.\n\nAt this stage, it's challenging to definitively identify roles or the Criminal due to the limited information and the potential for deception from non-Investigator roles. However, based on the statements:\n\n- If **Player 3** is indeed the Criminal (as I stated), and assuming **Player 3**'s statement about **Player 5** is a lie (since a Criminal might lie), then **Player 5** could potentially be the Criminal, but this contradicts my initial statement, which I know to be true as an Investigator.\n- **Player 2** and **Player 6**'s statements about each other not being the Criminal could be attempts to deflect or genuinely informative, depending on their roles.\n- **Player 4**'s statement about me not being the Criminal is true but doesn't give away **Player 4**'s role.\n- **Player 5**'s statement about **Player 2** not being the Criminal is similarly ambiguous.\n\nGiven the information and the need to make an educated guess:\n\nFinal Judgment:\nFinal Criminal Is Player 3.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Unknown (Could be Rumormonger or Lunatic, given the potential for false information)\nFinal Player 3: Criminal (Based on my initial statement as an Investigator)\nFinal Player 4: Unknown (Could be Investigator, Rumormonger, or Lunatic, but the statement about me is true)\nFinal Player 5: Unknown (Could be any role, given the ambiguity of the statements)\nFinal Player 6: Unknown (Similar to Player 2 and 5, could be any role except Investigator, since their statement's truthfulness is uncertain)\n\nThis judgment is highly speculative at this stage and will likely change as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Investigator",
+          "criminal_prediction": "6",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Unknown",
+            "4": "Unknown",
+            "5": "Unknown",
+            "6": "Criminal"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 2 statements:\n\n- **Player 1** (myself) says **Player 2** is not the criminal. As an Investigator, I am telling the truth.\n- **Player 2** says **Player 1** is not the criminal. This statement is true, which could indicate **Player 2** is also an Investigator, but it's not conclusive since other roles could also tell the truth in this instance.\n- **Player 3** says **Player 5** is not the criminal. This is a repeat of **Player 3**'s statement from Round 1. If **Player 3** is indeed the Criminal (as I initially suspected), this could be an attempt to mislead.\n- **Player 4** says **Player 1** is not the criminal. This is a repeat of **Player 4**'s statement from Round 1, which is true but doesn't reveal much about **Player 4**'s role.\n- **Player 5** says **Player 3** is the criminal. This directly contradicts my initial statement and could be true or false depending on **Player 5**'s role.\n- **Player 6** says **Player 1** is the criminal. This is a false statement since I am an Investigator, not the Criminal. Given that I know my own role, **Player 6**'s statement is a lie, which suggests **Player 6** could be the Criminal, the Lunatic, or possibly the Rumormonger if they are providing false information.\n\nConsidering the new information:\n\n- **Player 2**'s statement about me not being the Criminal, combined with my statement about **Player 2** not being the Criminal, suggests **Player 2** could indeed be an Investigator, as we are both telling the truth about each other.\n- **Player 5**'s accusation towards **Player 3** introduces a contradiction with my initial statement. If **Player 5** is an Investigator, then **Player 3** would indeed be the Criminal, contradicting my role's truthful statement. This suggests **Player 5** might not be an Investigator, or there's a complex web of deceit.\n- **Player 6**'s false accusation towards me strongly suggests **Player 6** is not an Investigator and could be the Criminal or the Lunatic.\n\nGiven the analysis:\n\nFinal Judgment:\nFinal Criminal Is Player 6.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator (Based on the mutual truthful statements)\nFinal Player 3: Unknown (Initially suspected as the Criminal, but **Player 5**'s statement and the overall analysis introduce uncertainty)\nFinal Player 4: Unknown (Could be an Investigator, Rumormonger, or Lunatic, as the statements don't reveal enough)\nFinal Player 5: Unknown (Could be any role, given the ambiguity and potential for deceit)\nFinal Player 6: Criminal (Given the false statement about me, which is a strong indicator of deceitful behavior)\n\nThis judgment is based on the information available up to Round 2 and will be refined as more statements are made in the final round."
+        },
+        {
+          "round": 3,
+          "player_role": "Investigator",
+          "criminal_prediction": "6",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Lunatic",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Criminal"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 28.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 3 statements:\n\n- **Player 1** (myself) says **Player 2** is not the criminal. This is consistent with my previous statements and reinforces that **Player 2** is likely not the Criminal.\n- **Player 2** says **Player 4** is not the criminal. Given that **Player 2** is likely an Investigator (based on previous analysis), this statement is probably true.\n- **Player 3** says **Player 2** is the criminal. This is a contradiction to my previous statements and **Player 2**'s behavior, which suggests **Player 3** might be providing false information. If **Player 3** is the Criminal or the Lunatic, this would explain the false accusation.\n- **Player 4** says **Player 2** is not the criminal. This aligns with **Player 2**'s likely role as an Investigator and reinforces the notion that **Player 2** is not the Criminal.\n- **Player 5** says **Player 6** is not the criminal. Given **Player 6**'s previous false statement about me, this could be an attempt to mislead or a genuine statement. However, considering **Player 6**'s behavior, it's possible that **Player 5** is trying to deflect or is genuinely mistaken.\n- **Player 6** says **Player 5** is the criminal. This statement, combined with **Player 6**'s previous false accusation, suggests that **Player 6** is indeed a deceitful role, likely the Criminal or the Lunatic. However, the fact that **Player 6** accused me falsely in Round 2 and now accuses **Player 5** introduces a complexity. If **Player 6** is the Criminal, the accusation against **Player 5** could be a lie. If **Player 6** is the Lunatic, believing themselves to be the Criminal, they might accuse someone they believe is not the \"real\" Criminal (in their misguided belief).\n\nConsidering all rounds:\n\n- **Player 2** is consistently defended by truthful statements (including my own), suggesting **Player 2** is indeed an Investigator.\n- **Player 6**'s behavior (false accusations) strongly suggests a deceitful role, likely the Criminal or the Lunatic.\n- **Player 3**'s accusation against **Player 2** in Round 3, contradicting previous truthful statements, suggests **Player 3** might be providing false information, potentially as the Lunatic or the Criminal.\n- **Player 5**'s statement about **Player 6** not being the Criminal could be an attempt to mislead or a genuine mistake, given the complexity of **Player 6**'s behavior.\n\nGiven the analysis:\n\nFinal Judgment:\nFinal Criminal Is Player 6.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Lunatic (Given the false accusation against **Player 2** and the overall behavior)\nFinal Player 4: Investigator (Based on the consistent defense of **Player 2** and the lack of contradictory evidence)\nFinal Player 5: Rumormonger (Given the potential for mistaken or misleading statements, and the defense of **Player 6** which could be a genuine mistake)\nFinal Player 6: Criminal (Given the consistent pattern of deceitful behavior and false accusations)\n\nThis final judgment takes into account all statements from the three rounds and aims to provide a coherent explanation of the roles based on the information provided."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_5",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Criminal",
+        "2": "Rumormonger",
+        "3": "Investigator",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Lunatic"
+      },
+      "player_role": "Criminal",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Unknown",
+            "3": "Potential",
+            "4": "Potential",
+            "5": "Potential",
+            "6": "Potential"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 30,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "To analyze the statements from Round 1, let's consider the roles and their behaviors:\n\n1. **Investigators** always tell the truth about whether someone is the Criminal.\n2. **Criminals** can lie or tell the truth to confuse others.\n3. **Rumormongers** believe they are Investigators but may provide incorrect information.\n4. **Lunatics** believe they are Criminals and can lie or tell the truth.\n\nGiven the statements:\n\n- **Player 1** (myself, known to be the Criminal) says Player 4 is the Criminal. As the Criminal, my statement is intended to mislead.\n- **Player 2** says Player 3 is the Criminal.\n- **Player 3** says Player 2 is not the Criminal.\n- **Player 4** says Player 2 is not the Criminal.\n- **Player 5** says Player 3 is not the Criminal.\n- **Player 6** says Player 2 is the Criminal.\n\n**Analysis**:\n- If Player 2 were indeed the Criminal, then Player 3 and Player 4's statements would be truthful, suggesting they could be Investigators. However, this doesn't immediately clarify their roles without considering the statements of all players.\n- Player 1's statement (myself) is likely a deception, given my role as the Criminal.\n- The statements about Player 2 being the Criminal (by Player 2 themselves, if they were an Investigator, would not accuse themselves, but here it's Player 6 accusing them) and not being the Criminal (by Players 3 and 4) create a conflict. If Player 2 were indeed the Criminal, then Players 3 and 4 would be telling the truth, potentially marking them as Investigators.\n- Player 5's statement supports Player 3 not being the Criminal, which could align with Player 5 being an Investigator if Player 3 is indeed not the Criminal.\n\n**Initial Deductions**:\n- Given my role as the Criminal and my statement accusing Player 4, I am attempting to deflect. Thus, my statement about Player 4 is likely false.\n- Players 3 and 4 both defend Player 2, suggesting they might be truthful, potentially marking them as Investigators or at least not the Criminal.\n- Player 6 accuses Player 2, which could be a truthful statement if Player 6 is an Investigator, or a misleading one if they are not.\n\n**Judgment After Round 1**:\nGiven the information and attempting to deduce roles based on the statements, it's challenging to pinpoint the Criminal and roles with certainty after just one round. However, considering the dynamics:\n\nFinal Judgment:\nFinal Criminal Is Player 1. (Given I know my role, but let's analyze as if deducing)\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Unknown (Potential Investigator or target of accusations)\nFinal Player 3: Potential Investigator\nFinal Player 4: Potential Investigator\nFinal Player 5: Potential Investigator\nFinal Player 6: Potential Investigator or Misleading Role\n\nThis judgment is highly speculative after Round 1, and roles will become clearer as more information is gathered in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Unknown",
+            "3": "Potential",
+            "4": "Potential",
+            "5": "Potential",
+            "6": "Potential"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 30,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "**Analysis of Round 2 Statements**:\n\n- **Player 1** (myself, the Criminal) says Player 2 is the Criminal, which is a lie intended to mislead.\n- **Player 2** says Player 6 is the Criminal.\n- **Player 3** says Player 4 is not the Criminal.\n- **Player 4** says Player 5 is not the Criminal.\n- **Player 5** says Player 2 is not the Criminal.\n- **Player 6** says Player 3 is the Criminal.\n\n**Combining Information from Rounds 1 and 2**:\n\n- From Round 1, Players 3 and 4 seemed to provide potentially truthful information, defending Player 2. In Round 2, they continue to make statements that could be seen as defensive or truthful, suggesting they might indeed be Investigators.\n- Player 5's statement in Round 2, saying Player 2 is not the Criminal, aligns with the potential that Player 5 is also an Investigator, given the consistency with their Round 1 statement.\n- Player 2's accusation of Player 6 in Round 2 introduces a new dynamic. If Player 2 were an Investigator, this statement would be truthful. However, considering the accusations against Player 2, it's possible Player 2 is not the Criminal but another role.\n- My statements (as Player 1) in both rounds are attempts to deceive. Accusing different players (Player 4 in Round 1 and Player 2 in Round 2) is a strategy to spread confusion.\n\n**Deductions**:\n\n- Players 3, 4, and 5 seem to be providing consistent information that could be truthful, suggesting they might be Investigators.\n- Player 2's role is unclear but is a focal point of accusations and defenses.\n- Player 6's accusation of Player 3 introduces doubt about Player 3's role, but considering the potential for Player 6 to be misleading (if they were the Lunatic or the Criminal), this statement must be weighed against others.\n\n**Judgment After Round 2**:\n\nGiven the evolving information:\n\nFinal Judgment:\nFinal Criminal Is Player 1. (Acknowledging my known role)\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Unknown (Potential target or misleading role)\nFinal Player 3: Potential Investigator\nFinal Player 4: Potential Investigator\nFinal Player 5: Potential Investigator\nFinal Player 6: Potential Lunatic or Misleading Role\n\nThis analysis continues to refine the potential roles based on the statements provided, acknowledging the complexity and the need for further clarification in the final round."
+        },
+        {
+          "round": 3,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Rumormonger",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Lunatic"
+          },
+          "roles_correct": 5,
+          "non_criminal_count": 5,
+          "role_score": 70.0,
+          "total_score": 100.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "**Analysis of Round 3 Statements**:\n\n- **Player 1** (myself, the Criminal) says Player 6 is not the Criminal, which could be a truthful statement or another attempt to mislead.\n- **Player 2** says Player 4 is the Criminal, introducing a new accusation.\n- **Player 3** says Player 1 is the Criminal, which is a truthful statement.\n- **Player 4** says Player 3 is not the Criminal, supporting the possibility that Player 3 is an Investigator.\n- **Player 5** says Player 4 is not the Criminal, aligning with previous statements that could indicate Player 5 is an Investigator.\n- **Player 6** says Player 5 is the Criminal, which could be a misleading statement if Player 6 is the Lunatic or attempting to deflect.\n\n**Combining Information from All Rounds**:\n\n- **Player 3's** statement in Round 3 directly accuses me (Player 1) as the Criminal, which is true. Given the consistency of Player 3's statements across rounds, it's likely that Player 3 is an Investigator.\n- **Player 4** and **Player 5** have consistently provided statements that support each other and defend against accusations, suggesting they are also Investigators.\n- **Player 2's** accusations have shifted, which could indicate a role that is either misleading (Criminal or Lunatic) or genuinely seeking to uncover the truth but with incorrect information.\n- **Player 6's** statement accusing Player 5 in Round 3, after previously accusing Player 3, suggests inconsistency or an attempt to mislead, potentially marking Player 6 as the Lunatic or a role intended to confuse.\n\n**Final Deductions**:\n\n- The consistent and truthful nature of Players 3, 4, and 5's statements across the rounds suggests they are the Investigators.\n- Player 2's shifting accusations and potential for misinformation suggest a role that is not an Investigator, possibly the Rumormonger, given the belief in being an Investigator but providing incorrect information.\n- Player 6's inconsistent accusations and potential to mislead suggest the role of the Lunatic, believing themselves to be the Criminal but providing untruthful or misleading information.\n\n**Final Judgment**:\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Rumormonger\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Lunatic\n\nThis final analysis combines all information from the three rounds to deduce the roles of each player, acknowledging the strategic accusations and defenses made throughout the game."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_6",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Lunatic",
+        "2": "Investigator",
+        "3": "Investigator",
+        "4": "Criminal",
+        "5": "Rumormonger",
+        "6": "Investigator"
+      },
+      "player_role": "Lunatic",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Lunatic"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 42.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 1:\n\n1. **Player 1 says Player 3 is not the criminal.** As I am Player 1 and I know I am the Criminal, this statement is true but does not reveal any information about my role directly.\n2. **Player 2 says Player 6 is not the criminal.** This could be true or false depending on Player 2's role. If Player 2 is an Investigator, then Player 6 is indeed not the Criminal.\n3. **Player 3 says Player 5 is not the criminal.** Similar to Player 2's statement, this could be true or false. If Player 3 is an Investigator, then Player 5 is not the Criminal.\n4. **Player 4 says Player 5 is not the criminal.** This statement supports Player 3's statement about Player 5. If both are Investigators, then Player 5 is likely not the Criminal.\n5. **Player 5 says Player 1 is the criminal.** Given that I am Player 1 and I am indeed the Criminal, this statement is true. However, this does not necessarily mean Player 5 is an Investigator, as other roles could also make true statements by chance.\n6. **Player 6 says Player 3 is not the criminal.** This statement agrees with mine, suggesting that if Player 6 is an Investigator, then Player 3 is not the Criminal.\n\nGiven these statements and knowing my role as the Criminal, the most revealing statement is from Player 5, which correctly identifies me as the Criminal. However, since only Investigators consistently provide truthful information, and considering the agreement among some statements, it's challenging to deduce roles with certainty after just one round.\n\n**Initial Deductions:**\n\n- Player 5's statement is correct, but it doesn't confirm their role as an Investigator since other roles can also tell the truth.\n- Players 3 and 4 both say Player 5 is not the Criminal, which could indicate they are Investigators if their statements align with truthfulness.\n- My statement (Player 1) about Player 3 not being the Criminal is true but doesn't directly help in identifying roles.\n\n**Final Judgment After Round 1:**\n\nGiven the information, I must make educated guesses:\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator (based on the lack of contradictory information and the need for at least one Investigator)\nFinal Player 3: Investigator (due to the agreement with my statement and the potential for truthfulness)\nFinal Player 4: Investigator (supporting Player 3's statement, suggesting a pattern of truthfulness)\nFinal Player 5: Rumormonger (since they correctly identified me but may not consistently provide truthful information)\nFinal Player 6: Lunatic (given the agreement with my statement but the uncertainty around their role and the need for a Lunatic in the game)\n\nThis judgment is highly speculative after just one round and will likely change as more information becomes available."
+        },
+        {
+          "round": 2,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Rumormonger",
+            "5": "Investigator",
+            "6": "Lunatic"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 28.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 2, in conjunction with the previous round:\n\n1. **Player 1 says Player 5 is not the criminal.** As the Criminal, I'm making a statement that could be true or false, but in this context, it's intended to mislead.\n2. **Player 2 says Player 3 is not the criminal.** This supports the previous statement from Player 2 about Player 6, suggesting consistency but not necessarily truthfulness.\n3. **Player 3 says Player 6 is not the criminal.** This agrees with my initial statement and Player 6's statement from Round 1, potentially indicating that Player 3 is an Investigator or at least providing truthful information in this instance.\n4. **Player 4 says Player 1 is not the criminal.** This is a false statement since I am the Criminal. Given that Player 4 previously agreed with Player 3 about Player 5, this inconsistency suggests Player 4 might not be an Investigator.\n5. **Player 5 says Player 1 is the criminal.** Again, Player 5 correctly identifies me as the Criminal, reinforcing the possibility that they might indeed be an Investigator or at least have accurate information about me.\n6. **Player 6 says Player 5 is not the criminal.** This statement could be true or false, but considering Player 5's consistent identification of me as the Criminal, it's interesting to see Player 6 potentially trying to mislead or provide incorrect information.\n\n**Deductions After Round 2:**\n\n- Player 5's consistent statements identifying me as the Criminal suggest they could indeed be an Investigator, despite my initial speculation about them being a Rumormonger.\n- Player 4's false statement about me not being the Criminal indicates they are likely not an Investigator, potentially being the Rumormonger or the Lunatic.\n- The agreements and potential truthfulness from Players 2, 3, and 6 make it challenging to pinpoint their exact roles without more information.\n\n**Final Judgment After Round 2:**\n\nGiven the evolving information:\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator (maintaining this guess due to consistent statements that could be true)\nFinal Player 3: Investigator (based on agreements and potential truthfulness)\nFinal Player 4: Rumormonger (due to the false statement about me, indicating they might not consistently provide truthful information)\nFinal Player 5: Investigator (revising my previous guess, considering their consistent correct identification of me as the Criminal)\nFinal Player 6: Lunatic (given the potential for misleading information and the need to fit the remaining role into the game dynamics)\n\nThis judgment still involves speculation and will be refined with additional information from the next round."
+        },
+        {
+          "round": 3,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Rumormonger",
+            "3": "Investigator",
+            "4": "Lunatic",
+            "5": "Investigator",
+            "6": "Lunatic"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 3, in conjunction with the previous rounds:\n\n1. **Player 1 says Player 5 is not the criminal.** As the Criminal, I'm repeating a statement from Round 2, attempting to maintain consistency in my deception.\n2. **Player 2 says Player 4 is the criminal.** This is a false statement since I am the Criminal. If Player 2 were an Investigator, they would know I am the Criminal, not Player 4.\n3. **Player 3 says Player 5 is not the criminal.** This statement agrees with mine and potentially indicates truthfulness about Player 5's role.\n4. **Player 4 says Player 2 is the criminal.** This statement is false, as I am the Criminal. Given Player 4's previous false statement and this one, it suggests they are not providing truthful information consistently.\n5. **Player 5 says Player 1 is the criminal.** For the third time, Player 5 correctly identifies me as the Criminal, strongly suggesting they are indeed an Investigator due to their consistent truthfulness.\n6. **Player 6 says Player 4 is the criminal.** This statement agrees with Player 2's but is false since I am the Criminal. This could indicate that Player 6 is also not an Investigator, potentially being the Lunatic.\n\n**Final Deductions:**\n\n- Player 5's consistent correct identification of me as the Criminal solidifies their role as an Investigator.\n- Player 4's repeated false statements about the Criminal's identity suggest they are likely the Rumormonger, as they do not consistently provide truthful information.\n- Players 2 and 6's false statements about the Criminal's identity, especially in Round 3, indicate they are not Investigators. Given Player 6's potential for providing misleading information and their agreement with Player 2 in Round 3, it's plausible that Player 6 is the Lunatic.\n- Player 3's statements have been consistent with potential truthfulness, but their role is still speculative. However, given the need for three Investigators and considering Player 5's clear role as an Investigator, it's reasonable to deduce that Player 3 could also be an Investigator, given their consistent statements that align with truthfulness.\n\n**Final Judgment:**\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Rumormonger (revising my guess, considering their false statement in Round 3 and the need for a Rumormonger)\nFinal Player 3: Investigator (based on consistent potential truthfulness and the need for three Investigators)\nFinal Player 4: Lunatic (given their repeated false statements and the fit with the game's roles)\nFinal Player 5: Investigator (confirmed by their consistent correct identification of me as the Criminal)\nFinal Player 6: Lunatic (revising my guess, considering their agreement with Player 2 in Round 3 and the need to correctly assign roles)\n\nThis final judgment concludes my analysis based on the information provided throughout the three rounds."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_7",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Criminal",
+        "2": "Investigator",
+        "3": "Investigator",
+        "4": "Investigator",
+        "5": "Lunatic",
+        "6": "Rumormonger"
+      },
+      "player_role": "Criminal",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Unknown",
+            "5": "Rumormonger",
+            "6": "Unknown"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 58.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 1:\n\n1. **Player 1 says Player 6 is not the criminal.** As a Criminal myself, I know I'm Player 1, so this statement could be true or false, but it's designed to mislead.\n2. **Player 2 says Player 4 is not the criminal.** This could be a truthful statement from an Investigator or a misleading statement from another role.\n3. **Player 3 says Player 4 is not the criminal.** Similar to Player 2's statement, this could be truthful or misleading.\n4. **Player 4 says Player 5 is not the criminal.** Again, this statement's truthfulness depends on Player 4's role.\n5. **Player 5 says Player 3 is the criminal.** If Player 5 is an Investigator, this would be a strong clue. However, if Player 5 is not an Investigator, this statement might be false.\n6. **Player 6 says Player 4 is the criminal.** This statement directly accuses Player 4, which could be a genuine accusation from an Investigator or a false lead from another role.\n\nGiven the information and my role as the Criminal (Player 1), I must analyze the statements to deduce other players' roles and identify the criminal (which, ironically, is me, but I need to play along as if I'm trying to solve it).\n\n- **Player 5's accusation** against Player 3 is a strong statement but could be from any role.\n- **Players 2 and 3** both clearing Player 4 could indicate they are Investigators trying to protect an innocent, or they could be trying to mislead.\n- **Player 6's accusation** against Player 4 is direct but could be from any role trying to deflect or genuinely accuse.\n\n**Initial Deduction:**\nGiven that I am the Criminal and trying to analyze the statements without revealing myself, it's challenging to pinpoint roles accurately with just one round of statements. However, I must make an educated guess based on the information provided.\n\n**Final Judgment After Round 1:**\nFinal Criminal Is Player 1. (This is ironic since I know I'm the Criminal, but based on the statements, it's too early to conclusively determine the Criminal's identity for an outside observer.)\nThe roles of players 1-6 are:\nFinal Player 1: Criminal (Known to me, but let's analyze as if unknown)\nFinal Player 2: Investigator (Speculative, based on the protective statement towards Player 4)\nFinal Player 3: Investigator (Similar reasoning as Player 2)\nFinal Player 4: Unknown (Too early to tell, but potentially innocent given the defense from Players 2 and 3)\nFinal Player 5: Rumormonger or Lunatic (The accusation against Player 3 could be a misdirection or a genuine but incorrect belief)\nFinal Player 6: Unknown (The accusation against Player 4 could be a genuine attempt to reveal the Criminal or a misdirection)\n\nThis analysis will evolve as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Lunatic"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 2, in conjunction with Round 1:\n\n1. **Player 1 says Player 4 is not the criminal.** As the Criminal, I'm trying to protect myself and potentially mislead by clearing another player.\n2. **Player 2 says Player 3 is not the criminal.** This continues the pattern of Players 2 and 3 defending each other or other players, suggesting they might be Investigators.\n3. **Player 3 says Player 4 is not the criminal.** Similar to Round 1, Player 3 defends Player 4, which could indicate a genuine belief in Player 4's innocence or a coordinated effort to mislead.\n4. **Player 4 says Player 3 is not the criminal.** This reciprocal defense between Players 3 and 4 could suggest they are both innocent or working together to appear innocent.\n5. **Player 5 says Player 4 is not the criminal.** Player 5's statement in Round 1 accused Player 3, but now clears Player 4, which could indicate inconsistency or a change in strategy, possibly characteristic of a Rumormonger or Lunatic.\n6. **Player 6 says Player 2 is not the criminal.** This statement could be an attempt to genuinely clear Player 2 or to mislead others about Player 6's own intentions.\n\n**Observations:**\n- **Consistency in Defense:** Players 2, 3, and 4 form a network of mutual defense, which could indicate they are all Investigators or are working together to appear as such.\n- **Player 5's Inconsistency:** The shift from accusing Player 3 to defending Player 4 might suggest that Player 5 is not an Investigator, potentially being a Rumormonger or Lunatic.\n- **My Statements (Player 1):** As the Criminal, my statements are designed to mislead. Clearing Player 6 in Round 1 and Player 4 in Round 2 could be attempts to divert attention from myself.\n\n**Deduction:**\nGiven the patterns and inconsistencies, it's still challenging to pinpoint roles with absolute certainty. However, some roles can be speculated upon based on behavior:\n\n**Final Judgment After Round 2:**\nFinal Criminal Is Player 1. (Again, known to me, but the analysis continues as if solving the puzzle without this knowledge.)\nThe roles of players 1-6 are:\nFinal Player 1: Criminal (My role, but analyzing as if unknown)\nFinal Player 2: Investigator (Consistently defensive of other players, suggesting a genuine attempt to uncover the truth)\nFinal Player 3: Investigator (Similar reasoning as Player 2, with a pattern of defense)\nFinal Player 4: Investigator (The mutual defense with Players 2 and 3 suggests innocence and a role focused on truth-finding)\nFinal Player 5: Rumormonger (The inconsistency in statements might indicate a belief in being an Investigator but providing misleading information)\nFinal Player 6: Lunatic (The accusation against Player 4 in Round 1, followed by defense of Player 2 in Round 2, could suggest a belief in being the Criminal, with statements aimed at misleading)\n\nThis analysis will continue to evolve with the information from Round 3."
+        },
+        {
+          "round": 3,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Lunatic"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 3, in conjunction with Rounds 1 and 2:\n\n1. **Player 1 says Player 2 is the criminal.** As the Criminal, I'm making a direct accusation against another player, which could be a genuine attempt to mislead or a desperate move to deflect attention.\n2. **Player 2 says Player 6 is not the criminal.** This statement continues Player 2's pattern of defense, which could indicate a genuine belief in Player 6's innocence or an attempt to appear as an Investigator.\n3. **Player 3 says Player 2 is not the criminal.** Player 3 defends Player 2, consistent with the mutual defense seen between Players 2, 3, and 4 in previous rounds.\n4. **Player 4 says Player 3 is not the criminal.** This statement reinforces the defensive network between Players 2, 3, and 4, suggesting they are likely all Investigators.\n5. **Player 5 says Player 4 is the criminal.** Player 5's accusation against Player 4 contradicts the defensive statements from Players 2, 3, and 4, suggesting that Player 5 is likely not an Investigator and could be a Rumormonger or Lunatic.\n6. **Player 6 says Player 2 is the criminal.** This accusation against Player 2, combined with my own accusation against Player 2, could indicate that Player 6 is also trying to mislead or is genuinely mistaken about Player 2's role.\n\n**Observations:**\n- **Consistency in Defense:** Players 2, 3, and 4 continue to form a network of mutual defense, strongly suggesting they are all Investigators.\n- **Accusations Against Player 2:** Both I (Player 1) and Player 6 accuse Player 2, which could be a coordinated attempt to mislead or independent mistakes.\n- **Player 5's Accusation:** The accusation against Player 4 further solidifies the suspicion that Player 5 is not an Investigator, likely being a Rumormonger or Lunatic.\n\n**Deduction:**\nGiven the patterns, inconsistencies, and the accumulation of evidence, the roles can be deduced with a higher degree of certainty:\n\n**Final Judgment After Round 3:**\nFinal Criminal Is Player 1. (Known to me, and the analysis should now conclusively point towards me as the puzzle is solved.)\nThe roles of players 1-6 are:\nFinal Player 1: Criminal (My role, and the statements should have led to this conclusion)\nFinal Player 2: Investigator (Consistently defensive of other players and defended by others, indicating a genuine attempt to uncover the truth)\nFinal Player 3: Investigator (Part of the mutual defense network, suggesting innocence and a truth-finding role)\nFinal Player 4: Investigator (Similarly, part of the defensive network, indicating an Investigator role)\nFinal Player 5: Rumormonger (Inconsistent statements and accusations against different players suggest a belief in being an Investigator but providing misleading information)\nFinal Player 6: Lunatic (The accusation against Player 2, combined with previous statements, suggests a belief in being the Criminal and attempting to mislead)\n\nThis final analysis concludes the deduction process, and the roles should now be clear based on the statements provided across all three rounds."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_8",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Criminal",
+        "2": "Lunatic",
+        "3": "Investigator",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Rumormonger"
+      },
+      "player_role": "Criminal",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Rumormonger"
+          },
+          "roles_correct": 4,
+          "non_criminal_count": 5,
+          "role_score": 56.0,
+          "total_score": 86.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "To analyze the statements and deduce the roles, let's break down the information provided in Round 1:\n\n1. **Player 1 says Player 6 is the criminal.** As a Criminal myself, I might try to deflect attention, but this statement alone doesn't reveal much without considering the others.\n2. **Player 2 says Player 3 is not the criminal.** If Player 2 is an Investigator, this statement is true. If not, it could be a ploy.\n3. **Player 3 says Player 5 is not the criminal.** Similar to Player 2's statement, if Player 3 is an Investigator, then Player 5 is not the criminal.\n4. **Player 4 says Player 6 is not the criminal.** This contradicts Player 1's statement. If Player 4 is an Investigator, then Player 6 is not the criminal.\n5. **Player 5 says Player 1 is the criminal.** This is interesting because, as the actual Criminal, I know I am indeed the criminal. However, Player 5 could be an Investigator telling the truth, or another role trying to mislead.\n6. **Player 6 says Player 3 is the criminal.** This statement contradicts the information that might suggest Player 3 is not the criminal, based on Player 2's statement.\n\nGiven these statements, let's try to deduce the roles and the criminal:\n\n- **Player 1 (Myself)**: I know I am the Criminal.\n- **Player 5**: Accused me correctly, which could mean Player 5 is an Investigator.\n- **Player 2 and Player 3**: Their statements suggest they could be Investigators, but without more information, it's hard to say for sure.\n- **Player 4**: Contradicted my statement about Player 6, which could mean Player 4 is an Investigator if Player 6 is indeed not the criminal.\n- **Player 6**: Accused Player 3, which could be a truthful statement if Player 6 is an Investigator, but given the conflicting information, it's less clear.\n\n**Final Judgment After Round 1:**\nGiven the information and my role as the Criminal, I must make an educated guess:\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Rumormonger or Lunatic (Given the contradiction and the fact that I know I'm the criminal, Player 6's statement seems misleading, but it's too early to tell if it's a Rumormonger or Lunatic with certainty.)\n\nThis judgment is based on the assumption that the majority of the players telling the truth or trying to mislead in a way that doesn't directly point to themselves as the criminal might be Investigators, and those providing contradictory or misleading information might be other roles. However, this analysis will evolve as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Lunatic"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the Round 2 statements:\n\n1. **Player 1 says Player 3 is not the criminal.** As the Criminal, I'm trying to deflect attention. This statement could be true or false, but it's aimed at protecting myself.\n2. **Player 2 says Player 4 is not the criminal.** If Player 2 is an Investigator, this statement is true. It aligns with the possibility of Player 2 being an Investigator.\n3. **Player 3 says Player 1 is the criminal.** This directly accuses me, which could mean Player 3 is an Investigator telling the truth.\n4. **Player 4 says Player 5 is not the criminal.** Similar to Player 2's statement, if Player 4 is an Investigator, then Player 5 is not the criminal.\n5. **Player 5 says Player 2 is not the criminal.** This supports the idea that Player 2 could be an Investigator, as it defends them.\n6. **Player 6 says Player 2 is the criminal.** This contradicts Player 5's statement and previous impressions of Player 2. Given the inconsistency, Player 6's role as a Rumormonger or Lunatic becomes more likely, as they might provide misleading information.\n\nConsidering both rounds, we can refine our deductions:\n\n- **Player 1 (Myself)**: Still the Criminal.\n- **Player 3**: Accused me directly in Round 2, suggesting they might be an Investigator.\n- **Player 2**: Consistently defended by others and made statements that could be true, suggesting they are likely an Investigator.\n- **Player 5**: Also made statements that could be true and defended Player 2, suggesting they could be an Investigator.\n- **Player 4**: Made a statement that aligns with the possibility of them being an Investigator.\n- **Player 6**: The contradiction with Player 5's statement about Player 2, and the overall pattern of providing potentially misleading information, suggests they are likely the Rumormonger or Lunatic.\n\n**Final Judgment After Round 2:**\nGiven the new information:\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Lunatic (Given the direct contradiction and the pattern of potentially misleading statements, it seems more likely that Player 6 is the Lunatic, believing they are the Criminal and making statements accordingly.)\n\nThis analysis evolves with the new statements, focusing on the consistency of statements and the roles that players are likely to fulfill based on their accusations and defenses."
+        },
+        {
+          "round": 3,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Lunatic"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the Round 3 statements:\n\n1. **Player 1 says Player 4 is not the criminal.** As the Criminal, I continue to try to deflect attention. This statement could be true, given that I know I'm the criminal and Player 4 has been acting like an Investigator.\n2. **Player 2 says Player 3 is not the criminal.** This statement supports the idea that both Player 2 and Player 3 are Investigators, as they have been making statements that could be true and defending each other.\n3. **Player 3 says Player 2 is not the criminal.** Similar to Player 2's statement, this reinforces the notion that Player 3 is also an Investigator.\n4. **Player 4 says Player 6 is not the criminal.** Given the previous deductions, if Player 4 is an Investigator, this statement is likely true, and it aligns with the suspicion that Player 6 might be the Lunatic.\n5. **Player 5 says Player 6 is not the criminal.** This statement, combined with the others, suggests that Player 5 is also an Investigator, as they are providing information that could be true and are consistent in their accusations and defenses.\n6. **Player 6 says Player 5 is not the criminal.** This statement, while potentially true, comes from a player who has been suspected to be the Lunatic. The fact that Player 6 defends Player 5, who has been acting like an Investigator, could be part of the Lunatic's strategy to blend in or cause confusion.\n\nConsidering all three rounds, the deductions become clearer:\n\n- **Player 1 (Myself)**: Confirmed as the Criminal through my own knowledge.\n- **Player 2, Player 3, Player 4, and Player 5**: All have made statements that are consistent with the role of Investigators. They have defended each other and provided information that could be true, given the context of the game.\n- **Player 6**: Despite the defensive statement in Round 3, the overall pattern of behavior and the contradictions with other players' statements suggest that Player 6 is likely the Lunatic. The Lunatic believes they are the Criminal and makes statements that might be true or false, aiming to confuse.\n\n**Final Judgment After Round 3:**\nGiven all the information:\n\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Lunatic\n\nThis final judgment concludes that the majority of the players are Investigators, working together to uncover the truth, while Player 6 is identified as the Lunatic, causing confusion and attempting to blend in with the Investigators. As the Criminal, my role is confirmed, and the game's dynamics are now clear."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_9",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Lunatic",
+        "2": "Rumormonger",
+        "3": "Investigator",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Criminal"
+      },
+      "player_role": "Lunatic",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Investigator"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 28.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 1:\n\n1. **Player 1 says Player 6 is the criminal.** As the actual Criminal, I know I am Player 1, so this statement is false. This could mean I'm trying to mislead, which is consistent with my role.\n\n2. **Player 2 says Player 3 is not the criminal.** This statement could be true or false. If Player 2 is an Investigator, then Player 3 is indeed not the criminal. If Player 2 is not an Investigator, the statement's truthfulness is uncertain.\n\n3. **Player 3 says Player 5 is not the criminal.** Similar to Player 2's statement, if Player 3 is an Investigator, then Player 5 is not the criminal. Otherwise, the statement's reliability is questionable.\n\n4. **Player 4 says Player 5 is not the criminal.** This echoes Player 3's statement, suggesting either both are telling the truth (and thus likely Investigators), or they are both providing misleading information.\n\n5. **Player 5 says Player 4 is not the criminal.** This statement supports the idea that Players 4 and 5 might be Investigators, as they are providing consistent information about each other.\n\n6. **Player 6 says Player 2 is not the criminal.** If Player 6 were an Investigator, this would be a truthful statement. However, since I (Player 1) falsely accused Player 6 of being the criminal, and considering the roles, it's possible that Player 6 could be an Investigator or another role.\n\nGiven these statements and knowing my own role, my analysis for Round 1 is speculative but must consider the potential for deception from non-Investigator roles.\n\n**Final Judgment after Round 1:**\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Rumormonger\nFinal Player 6: Investigator\n\nThis judgment is based on the pattern of statements that seem to protect certain players from being accused of being the criminal, with an assumption that consistent and protective statements might indicate Investigator roles, while my own statement as the Criminal is clearly misleading. However, the true roles can only be accurately determined with more information from subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Investigator",
+            "3": "Rumormonger",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Lunatic"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 28.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 2, in conjunction with Round 1:\n\n1. **Player 1 says Player 2 is not the criminal.** As the Criminal, I'm making a statement that could be true or false, but given my role, it's likely intended to mislead. However, since I know I'm the criminal, this statement could actually be true, as Player 2 is not the criminal.\n\n2. **Player 2 says Player 1 is the criminal.** This statement directly accuses me, and since I am indeed the Criminal, this statement is true. Given the game mechanics, this suggests Player 2 is likely an Investigator, as they provide truthful information.\n\n3. **Player 3 says Player 6 is the criminal.** This is a new accusation. If Player 3 is an Investigator, then this statement would be true, but since I know I'm the criminal, this statement is false. This could indicate that Player 3 is either the Rumormonger or the Lunatic, as they are providing potentially false information.\n\n4. **Player 4 says Player 3 is not the criminal.** This statement supports the idea that Player 4 might be an Investigator, as it aligns with the truth (since I am the criminal, and Player 3 is not). However, it's also possible that Player 4 is just coincidentally telling the truth or is trying to protect Player 3 for other reasons.\n\n5. **Player 5 says Player 4 is not the criminal.** Similar to the previous statement, this could indicate that Player 5 is an Investigator, but given the pattern of statements, it's also possible that Player 5 is the Rumormonger, providing statements that might not always align with the truth.\n\n6. **Player 6 says Player 5 is the criminal.** This statement is false since I know I am the criminal. Given that Player 6 made a statement in Round 1 that seemed protective and truthful, this change in behavior could suggest that Player 6 is the Lunatic, believing themselves to be the criminal and making statements based on that belief.\n\nConsidering these statements and the roles' behaviors:\n\n- **Player 2** is likely an **Investigator** because they correctly identified me as the criminal.\n- **Player 3** and **Player 6** could be either the **Rumormonger** or the **Lunatic**, given their false accusations. However, **Player 6**'s change in behavior from Round 1 to Round 2 might lean more towards being the **Lunatic**.\n- **Player 4** and **Player 5** could be **Investigators** or the **Rumormonger**, but their consistent protective statements might suggest they are **Investigators**.\n\n**Final Judgment after Round 2:**\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Investigator\nFinal Player 3: Rumormonger\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Lunatic\n\nThis judgment is refined based on the direct accusation by Player 2, the change in behavior by Player 6, and the patterns of statements that seem to either truthfully protect or falsely accuse, aligning with the roles' expected behaviors."
+        },
+        {
+          "round": 3,
+          "player_role": "Lunatic",
+          "criminal_prediction": "1",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Rumormonger",
+            "3": "Lunatic",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Lunatic"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 42.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 3, in conjunction with the previous rounds:\n\n1. **Player 1 says Player 5 is the criminal.** As the Criminal, I'm making a false accusation to mislead, which is consistent with my role.\n\n2. **Player 2 says Player 5 is the criminal.** Given that Player 2 previously correctly identified me as the Criminal, this statement is surprising and false. It suggests that Player 2 might not be an Investigator as previously thought, or there's an unexpected dynamic at play. However, considering the game mechanics, it's more likely that Player 2's previous statement was a coincidence or part of a larger strategy, and this statement could be a mistake or an attempt to mislead, which doesn't fit the Investigator role perfectly.\n\n3. **Player 3 says Player 4 is not the criminal.** This statement could be true or false. If Player 3 is the Rumormonger, as previously suspected, this statement might not be reliable.\n\n4. **Player 4 says Player 5 is not the criminal.** This statement aligns with the truth, as I know I am the Criminal, and Player 5 is not. Given the consistency of Player 4's statements across rounds, it's plausible that Player 4 is an Investigator.\n\n5. **Player 5 says Player 3 is not the criminal.** This statement is true, as I am the Criminal, and Player 3 is not. However, given the previous suspicions about Player 5's role, this could also be a coincidence or part of a strategy.\n\n6. **Player 6 says Player 4 is not the criminal.** This statement is true and aligns with the previous assessment that Player 6 might be the Lunatic, as they are making a statement that happens to be true but could be based on their misguided belief about their own role.\n\nConsidering these statements and the overall pattern:\n\n- **Player 2**'s false accusation of Player 5 as the criminal in Round 3, after correctly identifying me in Round 2, introduces a complexity. It's possible that Player 2 is not an Investigator but rather another role that occasionally provides truthful information.\n- **Player 4**'s consistent statements across rounds suggesting they are not the criminal and their protective statements towards others could indicate they are an **Investigator**.\n- **Player 6**'s statement, while true, and their behavior across rounds might still suggest they are the **Lunatic**.\n\nGiven the information and the need to make a final judgment:\n\n**Final Judgment after Round 3:**\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Rumormonger\nFinal Player 3: Lunatic\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Lunatic\n\nThis final judgment takes into account the complexities and inconsistencies across the rounds, attempting to align the statements with the roles' expected behaviors. Player 2's unexpected false accusation leads to reevaluating their role as possibly the Rumormonger, given the initial correct identification could have been a coincidence or strategic move. Player 3 and Player 6's behaviors are reassessed based on their statements and the overall dynamics, suggesting they could both fit the Lunatic role due to their unpredictable statements, but given the game's constraints, one must be the Lunatic, and the other could fit another role. However, the provided judgment aims to offer a coherent conclusion based on the information given."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_10",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Investigator",
+        "2": "Lunatic",
+        "3": "Investigator",
+        "4": "Investigator",
+        "5": "Criminal",
+        "6": "Rumormonger"
+      },
+      "player_role": "Investigator",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Investigator",
+          "criminal_prediction": "5",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Unknown",
+            "3": "Investigator",
+            "4": "Unknown",
+            "5": "Criminal",
+            "6": "Not"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 58.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "To deduce the roles and the criminal after Round 1, let's analyze the statements:\n\n1. **Player 1 (Myself) says Player 4 is not the criminal.** As an Investigator, I am telling the truth, so Player 4 is indeed not the criminal.\n2. **Player 2 says Player 5 is not the criminal.** This could be true or false depending on Player 2's role.\n3. **Player 3 says Player 5 is the criminal.** This statement directly contradicts Player 2's statement. If Player 3 is an Investigator, then Player 5 could be the criminal. However, we have to consider all statements.\n4. **Player 4 says Player 5 is the criminal.** Given that I've stated Player 4 is not the criminal and assuming Player 4 could be telling the truth (since we don't know their role yet), this supports the possibility of Player 5 being the criminal.\n5. **Player 5 says Player 1 is not the criminal.** This is true since I am an Investigator, not the criminal. However, this doesn't reveal much about Player 5's role since a criminal or any other role could say this truthfully or falsely.\n6. **Player 6 says Player 4 is the criminal.** This directly contradicts my statement as an Investigator, which means Player 6 cannot be an Investigator since they are providing false information about Player 4.\n\nGiven these statements:\n\n- **Player 5** is accused by Players 3 and 4, which could indicate they are the criminal, especially since their statement about me doesn't necessarily clear them of suspicion.\n- **Player 6** is likely not an Investigator because their statement about Player 4 contradicts my truthful statement.\n- Since I am an Investigator and said Player 4 is not the criminal, and considering the accusations towards Player 5, my initial guess would lean towards **Player 5** being the criminal based on the majority accusation and the fact that my statement as an Investigator has already cleared Player 4.\n\nHowever, it's crucial to remember that this is just after Round 1, and roles like Rumormonger and Lunatic can provide misleading information. The Criminal themselves can also lie. Thus, while we have initial suspicions, the game is far from over.\n\n**Final Judgment After Round 1:**\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Unknown\nFinal Player 3: Investigator (based on the accusation towards Player 5, which could be truthful)\nFinal Player 4: Unknown (but not the criminal, as per my statement)\nFinal Player 5: Criminal (initial suspicion based on majority accusations)\nFinal Player 6: Not Investigator (likely Criminal, Rumormonger, or Lunatic, given the false statement about Player 4)\n\nThis judgment will evolve as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Investigator",
+          "criminal_prediction": "5",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Criminal",
+            "3": "Investigator",
+            "4": "Unknown",
+            "5": "Criminal",
+            "6": "Rumormonger"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 2 statements:\n\n1. **Player 1 (Myself) says Player 6 is not the criminal.** As an Investigator, this statement is true, so Player 6 is not the criminal.\n2. **Player 2 says Player 4 is the criminal.** This contradicts my previous statement (and thus truthful information) that Player 4 is not the criminal. This suggests Player 2 might not be an Investigator.\n3. **Player 3 says Player 4 is not the criminal.** This aligns with my initial statement, supporting the idea that Player 3 could also be an Investigator or at least telling the truth in this instance.\n4. **Player 4 says Player 2 is not the criminal.** Given that Player 2 accused Player 4 (falsely, according to my knowledge), this statement could be true or part of a strategy to deflect suspicion.\n5. **Player 5 says Player 3 is not the criminal.** Since we suspected Player 5 of being the criminal after Round 1, this statement could be an attempt to mislead, but it doesn't necessarily clear Player 5 of suspicion.\n6. **Player 6 says Player 3 is the criminal.** This statement contradicts my truthful statement that Player 6 is not the criminal and also contradicts the statement from Player 3 (and my previous statement) that Player 4 is not the criminal. Given that I've already established Player 6 is not the criminal (as an Investigator's truthful statement), Player 6's role is likely to be either a Rumormonger or a Lunatic, providing false information.\n\nConsidering both rounds:\n\n- **Player 2's** accusation towards Player 4, despite my truthful statement clearing Player 4, suggests Player 2 is not an Investigator.\n- **Player 3** and I have made consistent statements about Player 4 not being the criminal, which could indicate Player 3 is also an Investigator.\n- **Player 5** was initially suspected as the criminal, and while their statement about Player 3 doesn't necessarily clear them, we need to consider all roles and the possibility of deception.\n- **Player 6** is likely a Rumormonger or Lunatic, given their false accusations.\n\nGiven the new information and re-evaluating the statements:\n\n**Final Judgment After Round 2:**\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Criminal or Rumormonger (due to the false accusation towards Player 4)\nFinal Player 3: Investigator (based on consistent truthful statements)\nFinal Player 4: Unknown (but not the criminal, as per my previous statements)\nFinal Player 5: Criminal (suspicion maintained due to initial accusations and potential for deception)\nFinal Player 6: Rumormonger or Lunatic (due to providing false information)\n\nThis analysis will continue to evolve with the information from Round 3."
+        },
+        {
+          "round": 3,
+          "player_role": "Investigator",
+          "criminal_prediction": "5",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Rumormonger",
+            "5": "Criminal",
+            "6": "Lunatic"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 58.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 3 statements:\n\n1. **Player 1 (Myself) says Player 3 is not the criminal.** As an Investigator, this statement is true, reinforcing that Player 3 is not the criminal.\n2. **Player 2 says Player 5 is the criminal.** This statement aligns with our initial suspicion of Player 5. If Player 2 is telling the truth, it could indicate they are an Investigator or at least not the criminal themselves.\n3. **Player 3 says Player 5 is the criminal.** This statement supports the suspicion against Player 5 and, combined with my statement and Player 2's, strengthens the case against Player 5.\n4. **Player 4 says Player 3 is not the criminal.** This statement is consistent with the information we have, as both I and Player 4 have stated that Player 3 is not the criminal.\n5. **Player 5 says Player 4 is the criminal.** Given our suspicion of Player 5 being the criminal, this statement could be an attempt to deflect suspicion.\n6. **Player 6 says Player 2 is the criminal.** Since we've established that Player 6 is likely a Rumormonger or Lunatic due to their previous false statements, this accusation against Player 2 is likely false.\n\nConsidering all rounds:\n\n- The consistent accusations against **Player 5** from multiple players, including myself, Player 2, and Player 3, who have all provided truthful information or are suspected to be telling the truth in this context, strongly suggest that **Player 5** is indeed the criminal.\n- **Player 2's** statement accusing Player 5, combined with the lack of evidence against them being the criminal (despite Player 6's false accusation), suggests they could be an Investigator.\n- **Player 3** and I have consistently provided truthful information, reinforcing our roles as Investigators.\n- **Player 4** has not been identified as the criminal through any reliable source and has provided statements that align with truthful information.\n- **Player 6** has been identified as likely being a Rumormonger or Lunatic due to their false accusations.\n\n**Final Judgment After Round 3:**\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator (based on the accusation against Player 5 and lack of evidence against them)\nFinal Player 3: Investigator (consistent truthful statements)\nFinal Player 4: Rumormonger (given the statements and the process of elimination, considering they are not the criminal and have provided information that could be seen as deflecting or misleading)\nFinal Player 5: Criminal (based on consistent accusations and analysis)\nFinal Player 6: Lunatic (given the consistent provision of false information and the fact that they believe they are the criminal, fitting the Lunatic's behavior)\n\nThis final judgment concludes the analysis based on the information provided throughout the three rounds."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_11",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Rumormonger",
+        "2": "Lunatic",
+        "3": "Criminal",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Investigator"
+      },
+      "player_role": "Rumormonger",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "3",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Criminal",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Rumormonger"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 58.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "To deduce the roles and the criminal after Round 1, let's analyze the statements given:\n\n1. **Player 1 says Player 4 is not the criminal.** As an Investigator, I know my statement is true, so Player 4 is not the criminal.\n2. **Player 2 says Player 3 is the criminal.** This could be true or false depending on Player 2's role.\n3. **Player 3 says Player 4 is the criminal.** Given that I (an Investigator) have already stated that Player 4 is not the criminal, and assuming my role is to provide truthful information, Player 3's statement is false. This suggests Player 3 could be the Criminal, Lunatic, or Rumormonger.\n4. **Player 4 says Player 5 is not the criminal.** This statement's truthfulness is unknown without knowing Player 4's role.\n5. **Player 5 says Player 4 is not the criminal.** This supports my initial statement and could indicate Player 5 is also an Investigator or at least not the Criminal.\n6. **Player 6 says Player 4 is not the criminal.** Similar to Player 5, this supports the notion that Player 4 is not the criminal, but the role of Player 6 is still uncertain.\n\nGiven these statements:\n\n- **Player 4** is confirmed not to be the criminal by me (Investigator), Player 5, and Player 6.\n- **Player 3** is a potential candidate for the criminal or another misleading role (Lunatic or Rumormonger) because their statement contradicts a known truth (from my perspective as an Investigator).\n- **Player 2** accusing Player 3 could mean Player 2 is an Investigator telling the truth, or another role making an accusation.\n\n**Initial Deductions:**\n\n- Since I am an Investigator and stated Player 4 is not the criminal, and this is supported by Players 5 and 6, it seems likely that **Player 4 is not the criminal**.\n- **Player 3** is a strong candidate for either being the Criminal or having a role that provides false information (Lunatic or Rumormonger), given their false accusation against Player 4.\n- **Player 2**'s role is uncertain but potentially an Investigator if their accusation against Player 3 is true.\n\n**Final Judgment After Round 1:**\n\nGiven the information and the need to make a judgment:\n\nFinal Criminal Is Player 3.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Criminal\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Rumormonger\n\nThis judgment is based on the initial analysis and the fact that we have to make a guess after each round. It's likely to change as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "2",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Criminal",
+            "3": "Lunatic",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Rumormonger"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 28.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Let's analyze the statements from Round 2:\n\n1. **Player 1 says Player 4 is not the criminal.** This is consistent with my previous statement, reaffirming that Player 4 is not the criminal.\n2. **Player 2 says Player 3 is the criminal.** This is the same as their Round 1 statement, which could indicate that Player 2 is indeed an Investigator if Player 3 is the Criminal, or they could be a Rumormonger or Lunatic making a consistent but potentially false accusation.\n3. **Player 3 says Player 4 is not the criminal.** This statement contradicts their Round 1 statement, where they accused Player 4 of being the criminal. This change could indicate that Player 3 is the Lunatic, as they believe they are the Criminal but are providing inconsistent information.\n4. **Player 4 says Player 2 is not the criminal.** This statement's truthfulness is uncertain without knowing Player 4's role, but it could suggest that Player 4 believes Player 2 is not the Criminal, potentially supporting the idea that Player 2 is an Investigator or another non-Criminal role.\n5. **Player 5 says Player 6 is not the criminal.** This statement, combined with Player 6's statement from Round 1 that Player 4 is not the criminal, and Player 6's Round 2 statement, suggests that Players 5 and 6 might be exchanging truthful information, potentially indicating they are both Investigators or at least one of them is an Investigator and the other a non-Criminal.\n6. **Player 6 says Player 5 is not the criminal.** Similar to Player 5's statement, this supports the notion that Player 5 is not the Criminal and could indicate that Player 6 is also a non-Criminal or an Investigator.\n\n**Deductions After Round 2:**\n\n- **Player 3**'s inconsistency (accusing Player 4 in Round 1 and then saying Player 4 is not the criminal in Round 2) strongly suggests that **Player 3 is the Lunatic**. Lunatics believe they are the Criminal but provide inconsistent or false information.\n- **Player 2**'s consistent accusation against Player 3 could mean that **Player 2 is indeed an Investigator**, especially if we consider that Player 3's behavior is indicative of the Lunatic.\n- The exchange between **Players 5 and 6** suggests they are both likely non-Criminals and could be Investigators or one of them is the Rumormonger, given their consistent support of each other not being the Criminal.\n\n**Final Judgment After Round 2:**\n\nGiven the analysis and the evolving understanding of the players' roles:\n\nFinal Criminal Is Player 2.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Criminal\nFinal Player 3: Lunatic\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Rumormonger\n\nThis judgment reflects the current analysis, but it's subject to change with more information from Round 3. The identification of Player 3 as the Lunatic and the potential roles of other players help to refine the guesses about who the Criminal might be and the roles of the other players."
+        },
+        {
+          "round": 3,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "2",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Criminal",
+            "3": "Lunatic",
+            "4": "Rumormonger",
+            "5": "Investigator",
+            "6": "Investigator"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 28.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Let's analyze the statements from Round 3:\n\n1. **Player 1 says Player 4 is not the criminal.** Consistent with my previous statements, reaffirming that Player 4 is not the criminal.\n2. **Player 2 says Player 6 is the criminal.** This is a new accusation from Player 2, who previously consistently accused Player 3. If Player 2 were an Investigator, we would expect consistent truthful information. This change could indicate that Player 2 is not an Investigator but could be the Criminal or another role providing misleading information.\n3. **Player 3 says Player 5 is the criminal.** Given that we've deduced Player 3 is likely the Lunatic based on their previous inconsistent statements, this accusation is likely false or misleading.\n4. **Player 4 says Player 2 is not the criminal.** This statement supports the idea that Player 2 might not be the Criminal, but without knowing Player 4's role for certain, it's hard to assess the truthfulness of this claim.\n5. **Player 5 says Player 3 is the criminal.** This statement aligns with our previous deduction that Player 3 is the Lunatic, not the Criminal. However, it's possible that Player 5 is an Investigator providing truthful information, or they could be another role.\n6. **Player 6 says Player 1 is not the criminal.** Since I am indeed an Investigator and not the Criminal, this statement is true. Given that Player 6 has provided information that supports the truth (in this case, about me), it suggests that Player 6 could be an Investigator or at least a non-Criminal role.\n\n**Deductions After Round 3:**\n\n- **Player 3**'s accusation against Player 5, given their previous behavior, is likely false, reinforcing the notion that **Player 3 is the Lunatic**.\n- **Player 2**'s new accusation against Player 6, after previously accusing Player 3, suggests that **Player 2 might be the Criminal**. Criminals can provide false or misleading information to confuse others.\n- **Player 5**'s statement that Player 3 is the criminal (though we believe Player 3 is the Lunatic) could indicate that **Player 5 is an Investigator** trying to provide truthful information based on their understanding.\n- **Player 6**'s truthful statement about me (Player 1) not being the criminal suggests that **Player 6 could also be an Investigator**.\n\n**Final Judgment After Round 3:**\n\nGiven the analysis and the accumulation of information:\n\nFinal Criminal Is Player 2.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Criminal\nFinal Player 3: Lunatic\nFinal Player 4: Rumormonger\nFinal Player 5: Investigator\nFinal Player 6: Investigator\n\nThis final judgment takes into account the consistent accusations, the behaviors of the players, and the logical deductions based on the roles and their expected behaviors in the game. Player 2's change in accusation and the overall pattern of statements lead to the conclusion that Player 2 is likely the Criminal. The roles of the other players are deduced based on their statements' consistency, truthfulness, and alignment with the expected behaviors of their roles."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_12",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Rumormonger",
+        "2": "Investigator",
+        "3": "Investigator",
+        "4": "Investigator",
+        "5": "Criminal",
+        "6": "Lunatic"
+      },
+      "player_role": "Rumormonger",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "4",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Unknown",
+            "3": "Unknown",
+            "4": "Criminal",
+            "5": "Unknown",
+            "6": "Unknown"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "To analyze the statements from Round 1, let's consider the roles and their behaviors:\n\n1. **Investigators** always tell the truth about whether someone is the Criminal.\n2. **Criminals** can lie or tell the truth.\n3. **Rumormongers** believe they are Investigators but can provide incorrect information.\n4. **Lunatics** believe they are Criminals and can lie or tell the truth.\n\nGiven the statements:\n\n- **Player 1** (myself) says Player 4 is the criminal. As an Investigator, I am telling the truth based on my initial deduction, but this is just the start of the game, and my statement is based on the role I've been given and the initial setup.\n- **Player 2** says Player 3 is not the criminal. This could be true or false depending on Player 2's role.\n- **Player 3** says Player 6 is not the criminal. Again, this could be true or false.\n- **Player 4** says Player 1 is not the criminal. Given that I am an Investigator and thus not the criminal, this statement is true, which could imply Player 4 is also an Investigator or telling the truth in this instance.\n- **Player 5** says Player 2 is the criminal. This is a direct accusation and could be true or false.\n- **Player 6** says Player 5 is the criminal. Another direct accusation.\n\n**Initial Analysis**:\nGiven that I am an Investigator and stated that Player 4 is the criminal, and considering Player 4's response that I am not the criminal (which is true), it seems there might be some confusion or strategy at play. However, it's crucial to remember that only Investigators provide consistently truthful information.\n\n**Deductions**:\n- Since I know I'm an Investigator and my statement about Player 4 is based on the information I have, I will initially stick with my assessment unless proven otherwise.\n- Player 4's statement about me not being the criminal is correct, which might suggest they are also an Investigator, but it's too early to confirm.\n- The accusations and denials from other players are mixed and don't provide clear evidence yet.\n\n**Final Judgment After Round 1**:\nGiven the limited information and the need to make an educated guess, I will proceed with caution.\n\nFinal Criminal Is Player 4.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Unknown\nFinal Player 3: Unknown\nFinal Player 4: Criminal\nFinal Player 5: Unknown\nFinal Player 6: Unknown\n\nThis judgment is highly speculative at this stage, and further rounds will be crucial in clarifying the roles and identifying the criminal accurately."
+        },
+        {
+          "round": 2,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "3",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Unknown",
+            "3": "Criminal",
+            "4": "Unknown",
+            "5": "Unknown",
+            "6": "Unknown"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "**Analysis of Round 2 Statements**:\n\n- **Player 1** (myself) says Player 3 is the criminal. As an Investigator, I am providing truthful information based on my current deductions.\n- **Player 2** says Player 5 is the criminal. This could be true or false depending on Player 2's role.\n- **Player 3** says Player 1 is not the criminal. This is true, as I am an Investigator, but it doesn't necessarily reveal Player 3's role.\n- **Player 4** says Player 3 is not the criminal. Given my initial suspicion of Player 4 being the criminal, this statement could be an attempt to mislead.\n- **Player 5** says Player 2 is not the criminal. This could be true or false and doesn't provide clear evidence.\n- **Player 6** says Player 1 is not the criminal. This statement is true, as I am an Investigator, but like Player 3's statement, it doesn't reveal Player 6's role.\n\n**Deductions**:\n- My statement about Player 3 being the criminal is based on the accumulation of information from both rounds. As an Investigator, I am looking for consistency and truthfulness.\n- Player 3's statement that I am not the criminal is correct, which could suggest they are also an Investigator, but given my current suspicion, I need more information.\n- Player 4's denial of Player 3 being the criminal, after I initially accused them of being the criminal, suggests they might be trying to deflect attention.\n- The consistency of Players 3 and 6 stating I am not the criminal, while true, doesn't necessarily clear them of being the criminal or another role.\n\n**Combining Information from Both Rounds**:\n- In Round 1, I accused Player 4, and they denied being the criminal while also stating I was not the criminal, which is true.\n- In Round 2, I shifted my accusation to Player 3 based on the pattern of statements and denials.\n\n**Final Judgment After Round 2**:\nGiven the evolving information and the need to reassess based on new statements:\n\nFinal Criminal Is Player 3.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Unknown\nFinal Player 3: Criminal\nFinal Player 4: Unknown (Initially suspected, but current information is inconclusive)\nFinal Player 5: Unknown\nFinal Player 6: Unknown\n\nThis judgment remains speculative, and the next round will be crucial in confirming or denying these deductions. The key will be to identify consistent truth-telling (Investigator behavior) and inconsistencies that might reveal other roles."
+        },
+        {
+          "round": 3,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "5",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Unknown",
+            "3": "Unknown",
+            "4": "Unknown",
+            "5": "Criminal",
+            "6": "Unknown"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 30,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "**Analysis of Round 3 Statements**:\n\n- **Player 1** (myself) says Player 2 is the criminal. As an Investigator, I am providing truthful information based on my current deductions.\n- **Player 2** says Player 6 is not the criminal. This statement's truthfulness depends on Player 2's role.\n- **Player 3** says Player 2 is not the criminal. Given my previous suspicion of Player 3, this statement could be an attempt to protect themselves or genuinely inform.\n- **Player 4** says Player 2 is not the criminal. This aligns with Player 3's statement and could indicate they are either truthful or coordinating to mislead.\n- **Player 5** says Player 2 is the criminal. This statement aligns with mine, suggesting either we are both correct, or one of us is misleading.\n- **Player 6** says Player 2 is not the criminal. This adds to the majority opinion that Player 2 is not the criminal, but as an Investigator, I must consider the consistency of statements across rounds.\n\n**Deductions**:\n- The majority of players (Players 2, 3, 4, and 6) state that Player 2 is not the criminal, which could suggest that Player 2 is indeed not the criminal, or there is a coordinated effort to mislead.\n- However, as an Investigator, my role is to provide truthful information. Given the statements across all rounds, I must consider the consistency and truthfulness of each player's statements.\n- Player 5's statement aligning with mine (accusing Player 2) is notable, but without knowing Player 5's role, it's difficult to assess the validity of this claim.\n\n**Combining Information from All Rounds**:\n- Across the rounds, there has been significant inconsistency and potential misdirection, making it challenging to pinpoint the criminal based solely on the statements.\n- As an Investigator, my statements have been guided by the information available and my role to tell the truth.\n- The criminal could be any player who has been consistently misleading or has made statements that could be true or false, given their role.\n\n**Final Judgment After Round 3**:\nGiven the accumulation of information and the need to make a final assessment:\n\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Unknown (Possibly an Investigator or another role given the majority's defense)\nFinal Player 3: Unknown (Previous suspicion, but current information is inconclusive)\nFinal Player 4: Unknown (Initially suspected, but current information suggests potential innocence or misdirection)\nFinal Player 5: Criminal (Based on the alignment with my statement and the potential for misdirection by other players)\nFinal Player 6: Unknown (Statements suggest potential truthfulness, but role remains unclear)\n\nThis final judgment is based on the analysis of statements across all rounds, considering the roles and potential strategies of each player. The criminal's identity and the roles of other players are deduced from the patterns of truthfulness and potential deception observed throughout the game."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_13",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Rumormonger",
+        "2": "Investigator",
+        "3": "Investigator",
+        "4": "Criminal",
+        "5": "Lunatic",
+        "6": "Investigator"
+      },
+      "player_role": "Rumormonger",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "4",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Criminal",
+            "5": "Rumormonger",
+            "6": "Lunatic"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 58.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "To make my judgment, I'll analyze the statements given in Round 1, keeping in mind the roles and their characteristics.\n\n1. **Player 1 (Myself) says Player 3 is not the criminal.** As an Investigator, I am truthful, so Player 3 is indeed not the criminal.\n2. **Player 2 says Player 4 is the criminal.** This could be true or false depending on Player 2's role.\n3. **Player 3 says Player 4 is the criminal.** If Player 3 were an Investigator, this would be a strong indication. However, we cannot confirm Player 3's role yet.\n4. **Player 4 says Player 1 is not the criminal.** I know I am not the criminal, so this statement is true. However, this doesn't necessarily mean Player 4 is truthful or an Investigator because the statement could be coincidentally true.\n5. **Player 5 says Player 2 is not the criminal.** This statement's truthfulness depends on Player 5's role.\n6. **Player 6 says Player 1 is not the criminal.** I am indeed not the criminal, but like with Player 4's statement, this doesn't confirm Player 6's role.\n\nGiven these statements, here are my observations and deductions:\n\n- Players 2 and 3 both accuse Player 4 of being the criminal. If both were Investigators, this would strongly suggest Player 4 is the criminal. However, we cannot confirm their roles.\n- Player 4's statement about me (Player 1) not being the criminal is true but doesn't reveal much about Player 4's role since it's a statement that could be made by any role.\n- Players 5 and 6 both make statements that are true (about Players 2 and 1 not being the criminal, respectively), but like with Player 4, this doesn't confirm their roles.\n\n**Initial Judgment:**\n\nGiven the information, I have to make some educated guesses. Players 2 and 3 agreeing that Player 4 is the criminal is a strong indication, but without knowing their roles, it's hard to be certain. However, since I must provide a judgment:\n\nFinal Judgment:\nFinal Criminal Is Player 4.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Criminal\nFinal Player 5: Rumormonger\nFinal Player 6: Lunatic\n\nThis judgment is based on the assumption that the consensus between Players 2 and 3 might indicate they are both telling the truth, which would make them Investigators. However, this is a very preliminary judgment and may change significantly with more information from subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "4",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Criminal",
+            "5": "Rumormonger",
+            "6": "Lunatic"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 58.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 2 statements:\n\n1. **Player 1 (Myself) says Player 5 is not the criminal.** As an Investigator, I am truthful, so Player 5 is indeed not the criminal.\n2. **Player 2 says Player 5 is not the criminal.** This aligns with my statement and Player 3's, suggesting Player 2 could be an Investigator, but it's not conclusive.\n3. **Player 3 says Player 5 is not the criminal.** Similar to Player 2, this could indicate Player 3 is an Investigator, but we need more information to confirm.\n4. **Player 4 says Player 6 is not the criminal.** If Player 4 were the criminal (as I suspected in Round 1), this statement could be an attempt to mislead. However, it's also possible Player 4 is telling the truth, which would mean Player 6 is not the criminal.\n5. **Player 5 says Player 4 is not the criminal.** Given that Players 2 and 3 both accused Player 4 of being the criminal in Round 1, and now Player 5 says Player 4 is not the criminal, this could indicate Player 5 is either a Rumormonger or the Lunatic, providing misleading information.\n6. **Player 6 says Player 1 is not the criminal.** I know I am not the criminal, so this statement is true. However, like before, this doesn't necessarily reveal Player 6's role.\n\n**Observations and Deductions:**\n\n- The consensus among Players 1, 2, and 3 that Player 5 is not the criminal supports my initial statement and suggests these players might be truthful, potentially all being Investigators. However, we cannot confirm this without more information.\n- Player 4's statement that Player 6 is not the criminal could be an attempt to deflect or could be truthful. If Player 4 is indeed the criminal, they might try to protect themselves by making a statement that seems innocuous.\n- Player 5's statement that Player 4 is not the criminal contradicts the accusations from Round 1. This contradiction could indicate that Player 5 is not an Investigator, possibly being the Rumormonger or the Lunatic.\n\n**Updated Judgment:**\n\nConsidering the new information:\n\nFinal Judgment:\nFinal Criminal Is Player 4.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Criminal\nFinal Player 5: Rumormonger\nFinal Player 6: Lunatic\n\nThis judgment remains somewhat consistent with my initial assessment, but the roles of Players 5 and 6 are still speculative. Player 5's contradiction of the earlier accusations against Player 4 makes me lean towards them being the Rumormonger, and Player 6's statements, while truthful, do not clearly indicate their role, leading me to still consider them as potentially the Lunatic. However, these are preliminary conclusions and may change with further information."
+        },
+        {
+          "round": 3,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "5",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Investigator",
+            "4": "Rumormonger",
+            "5": "Criminal",
+            "6": "Lunatic"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 28.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 3 statements:\n\n1. **Player 1 (Myself) says Player 4 is not the criminal.** This statement contradicts my earlier suspicion of Player 4 being the criminal. As an Investigator, I am truthful, so Player 4 is indeed not the criminal.\n2. **Player 2 says Player 6 is not the criminal.** This could be a truthful statement, but given the accusations and counter-accusations, it's hard to determine Player 2's role based solely on this.\n3. **Player 3 says Player 5 is not the criminal.** Similar to Player 2's statement, this could be true, but without knowing Player 3's role, it's speculative.\n4. **Player 4 says Player 6 is the criminal.** Given that I've now stated Player 4 is not the criminal (and I'm an Investigator), if Player 4 were indeed not the criminal, this statement could be an attempt by the actual criminal to mislead. However, it's also possible Player 4 is telling the truth.\n5. **Player 5 says Player 2 is the criminal.** This accusation against Player 2, who has been acting in a way that could be consistent with an Investigator, suggests that Player 5 might be providing misleading information, potentially as the Rumormonger or Lunatic.\n6. **Player 6 says Player 3 is not the criminal.** This statement, combined with the earlier consensus that Player 5 is not the criminal, and my statement that Player 4 is not the criminal, starts to paint a picture where the actual criminal might be someone who has been less accused or has been making statements that seem truthful but could be misleading.\n\n**Observations and Deductions:**\n\n- My statement that Player 4 is not the criminal contradicts my earlier suspicion, meaning I have to reconsider who the criminal might be.\n- The accusations against Player 6 by Player 4, and the statement by Player 5 against Player 2, introduce new possibilities for who the criminal might be.\n- Given that I am an Investigator and have stated Players 3 and 4 are not the criminal, and considering the consensus that Player 5 is not the criminal, the focus shifts towards Players 2 and 6, who have been less directly accused or have made statements that could be seen as truthful but might be misleading.\n\n**Final Judgment:**\n\nConsidering all the information:\n\nFinal Judgment:\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Investigator\nFinal Player 4: Rumormonger\nFinal Player 5: Criminal\nFinal Player 6: Lunatic\n\nThis final judgment is based on the process of elimination and the analysis of statements. Player 5's accusations and the pattern of statements suggest that Player 5 could be the Criminal, trying to mislead by accusing others. Player 4's change in accusations and the fact that they were initially suspected but then cleared by my statement, might indicate they are the Rumormonger, providing incorrect information believing it to be true. Player 6, having made statements that are true but could be seen as attempts to deflect or mislead, is considered the Lunatic. Players 2 and 3, having made statements that align with the truth and having been less accused, are also considered Investigators."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_14",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Criminal",
+        "2": "Rumormonger",
+        "3": "Lunatic",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Investigator"
+      },
+      "player_role": "Criminal",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Unknown",
+            "3": "Possibly",
+            "4": "Possibly",
+            "5": "Unknown",
+            "6": "Unknown"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 30,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 1:\n\n1. **Player 1 says Player 2 is the criminal.** As the actual Criminal, I know I am Player 1, so this statement is false, which is expected from a Criminal.\n2. **Player 2 says Player 5 is the criminal.** This could be true or false, but since I know I am the Criminal, this statement is false.\n3. **Player 3 says Player 1 is not the criminal.** Given that I am indeed the Criminal (Player 1), this statement is false. This could indicate that Player 3 is either a Rumormonger or a Lunatic because they are providing incorrect information.\n4. **Player 4 says Player 2 is not the criminal.** This statement could be true or false, but since I am the Criminal and not Player 2, this statement is actually true. This could suggest that Player 4 is an Investigator, but it's too early to conclude.\n5. **Player 5 says Player 3 is not the criminal.** This statement's truthfulness is unknown without more context, but it doesn't directly help identify the Criminal or roles based on Round 1 information alone.\n6. **Player 6 says Player 3 is not the criminal.** Similar to Player 5's statement, this doesn't provide enough information to determine roles or the Criminal's identity directly.\n\nGiven the information from Round 1 and knowing my role as the Criminal (Player 1), the analysis is as follows:\n\n- **Player 1 (Myself)** is confirmed to be the Criminal based on the role I've been assigned, not based on the statements.\n- **Player 3**'s statement that I am not the Criminal suggests they might not be an Investigator, potentially being a Rumormonger or Lunatic.\n- **Player 4**'s statement that Player 2 is not the Criminal aligns with the truth (since I am the Criminal), which might suggest they are an Investigator, but it's too early to be certain.\n\n**Final Judgment After Round 1:**\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Unknown\nFinal Player 3: Possibly Rumormonger or Lunatic\nFinal Player 4: Possibly Investigator\nFinal Player 5: Unknown\nFinal Player 6: Unknown\n\nThis judgment is based on limited information and will likely change as more statements are made in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Possibly",
+            "3": "Possibly",
+            "4": "Likely",
+            "5": "Unknown",
+            "6": "Unknown"
+          },
+          "roles_correct": 0,
+          "non_criminal_count": 5,
+          "role_score": 0,
+          "total_score": 30,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 2, in addition to the information from Round 1:\n\n1. **Player 1 says Player 2 is the criminal.** This is a repeat of my statement from Round 1, and as the Criminal, I know this is false.\n2. **Player 2 says Player 4 is not the criminal.** This statement aligns with the truth since I am the Criminal (Player 1), not Player 4. However, since Player 2's role is unknown, this could be a truthful statement from an Investigator or a strategic move by another role.\n3. **Player 3 says Player 4 is not the criminal.** This statement agrees with Player 2's and could suggest that Player 3 is also providing truthful information, potentially indicating they might not be the Lunatic or could be a Rumormonger providing a correct statement by chance.\n4. **Player 4 says Player 2 is not the criminal.** This statement is true since I am the Criminal, and it aligns with the statements from Players 2, 3, and 5 about Player 2 or Player 4 not being the Criminal. This consistency could suggest that Player 4 is indeed an Investigator.\n5. **Player 5 says Player 2 is not the criminal.** This statement is also true and aligns with the majority opinion about Player 2. However, without knowing Player 5's role, it's difficult to assess their intentions.\n6. **Player 6 says Player 3 is not the criminal.** This statement is true since I am the Criminal, but like in Round 1, it doesn't provide enough information to determine Player 6's role directly.\n\nConsidering the statements from both rounds:\n\n- **Player 1** is confirmed as the Criminal based on my role assignment.\n- **Player 4**'s consistent truthful statements (about Player 2 not being the Criminal in both rounds) suggest they are likely an Investigator.\n- **Player 2** and **Player 3**'s statements about other players not being the Criminal could indicate they are also Investigators, but given the complexity and the potential for Rumormongers or Lunatics to occasionally tell the truth, their roles are not yet clear.\n- **Player 5** and **Player 6**'s roles remain uncertain, though their statements have been truthful so far, they could be Investigators, Rumormongers providing correct information by chance, or even the Lunatic believing they are telling the truth.\n\n**Final Judgment After Round 2:**\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Possibly Investigator\nFinal Player 3: Possibly Investigator or Rumormonger\nFinal Player 4: Likely Investigator\nFinal Player 5: Unknown, possibly Investigator\nFinal Player 6: Unknown, possibly Investigator or Rumormonger\n\nThis analysis will continue to evolve with the statements from Round 3, aiming to clarify the roles of all players."
+        },
+        {
+          "round": 3,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Likely",
+            "3": "Possibly",
+            "4": "Investigator",
+            "5": "Investigator",
+            "6": "Possibly"
+          },
+          "roles_correct": 2,
+          "non_criminal_count": 5,
+          "role_score": 28.0,
+          "total_score": 58.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 3, in addition to the information from Rounds 1 and 2:\n\n1. **Player 1 says Player 6 is the criminal.** As the Criminal, I know this statement is false, which is consistent with my role.\n2. **Player 2 says Player 4 is the criminal.** This statement is false since I am the Criminal (Player 1), and Player 4 has been acting consistently like an Investigator. This could indicate that Player 2 is not an Investigator, potentially being the Rumormonger or Lunatic.\n3. **Player 3 says Player 6 is the criminal.** This statement agrees with mine, but since I know I am the Criminal, this statement is false. Given Player 3's previous statements that could be seen as truthful, this might suggest they are a Rumormonger who occasionally provides incorrect information.\n4. **Player 4 says Player 5 is not the criminal.** This statement is true since I am the Criminal, and it aligns with Player 4's previous behavior as a likely Investigator.\n5. **Player 5 says Player 4 is not the criminal.** This statement is also true and supports the notion that Player 4 is indeed an Investigator. Player 5's consistent truthful statements could indicate they are also an Investigator.\n6. **Player 6 says Player 2 is not the criminal.** This statement is true since I am the Criminal, but it doesn't provide clear insight into Player 6's role without considering the context of all statements.\n\nConsidering the statements from all three rounds:\n\n- **Player 1** is confirmed as the Criminal based on my role assignment.\n- **Player 4**'s consistent truthful statements across all rounds strongly suggest they are an Investigator.\n- **Player 5**'s statements, especially in Rounds 2 and 3, also suggest they are likely an Investigator, given their consistency with truthful information.\n- **Player 2**'s statement in Round 3 accusing Player 4 (who has been acting like an Investigator) of being the Criminal, suggests they might be the Lunatic, as they are providing false information and could believe they are the Criminal.\n- **Player 3**'s agreement with my false statement in Round 3, despite previous statements that could be seen as truthful, might indicate they are the Rumormonger, occasionally providing incorrect information.\n- **Player 6**'s role remains somewhat unclear, but their statement in Round 3 could suggest they are trying to provide truthful information, potentially being an Investigator or simply not having enough information to make an accurate accusation.\n\n**Final Judgment After Round 3:**\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Likely Lunatic\nFinal Player 3: Possibly Rumormonger\nFinal Player 4: Investigator\nFinal Player 5: Investigator\nFinal Player 6: Possibly Investigator or Rumormonger\n\nThis final analysis considers all statements made across the three rounds, aiming to provide the most accurate assessment of each player's role based on their behavior and the information provided."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_15",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Rumormonger",
+        "2": "Criminal",
+        "3": "Lunatic",
+        "4": "Investigator",
+        "5": "Investigator",
+        "6": "Investigator"
+      },
+      "player_role": "Rumormonger",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "2",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Criminal",
+            "3": "Lunatic",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "To make my judgment, I'll analyze the statements given in Round 1, keeping in mind the roles and their behaviors:\n\n1. **Player 1 (Myself)** says Player 2 is the criminal. As an Investigator, I provide truthful information.\n2. **Player 2** says Player 5 is the criminal. If Player 2 were an Investigator, this statement would be true. However, since I've accused Player 2 of being the criminal, and given my role as an Investigator, I believe Player 2's statement might be an attempt to deflect.\n3. **Player 3** says Player 1 is the criminal. Since I know I'm an Investigator and not the criminal, Player 3's statement is false. This could indicate that Player 3 is either the Rumormonger (believing they're an Investigator but providing incorrect information) or the Lunatic (believing they're the Criminal and making false accusations).\n4. **Player 4** says Player 2 is the criminal. This aligns with my statement and could indicate that Player 4 is also an Investigator, providing truthful information.\n5. **Player 5** says Player 4 is not the criminal. This statement is tricky because it doesn't directly accuse someone of being the criminal. However, if Player 5 were an Investigator, they would know whether Player 4 is the criminal or not. Given that Player 4 has made a statement that aligns with mine, and assuming Player 4 might be an Investigator, Player 5's statement could be seen as somewhat defensive or misleading, potentially indicating a non-Investigator role.\n6. **Player 6** says Player 2 is the criminal. This statement aligns with mine and Player 4's, suggesting that Player 6 could also be an Investigator.\n\nGiven these observations:\n\n- **Player 2** is accused by multiple players (including myself), which, combined with their attempt to deflect by accusing another player, makes them a strong candidate for the Criminal.\n- **Player 3**'s false accusation against me suggests they might not be an Investigator, potentially being the Rumormonger or the Lunatic.\n- **Players 4 and 6** align with my statement, suggesting they could be Investigators.\n- **Player 5**'s statement, while not directly accusatory, seems defensive or misleading, which could indicate a role other than Investigator, but it's less clear without more information.\n\n**Final Judgment After Round 1:**\nFinal Criminal Is Player 2.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Criminal\nFinal Player 3: Lunatic\nFinal Player 4: Investigator\nFinal Player 5: Rumormonger\nFinal Player 6: Investigator\n\nThis judgment is based on the initial analysis and may change as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "2",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Criminal",
+            "3": "Lunatic",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 2 statements:\n\n1. **Player 1 (Myself)** says Player 6 is not the criminal. As an Investigator, I'm providing truthful information, which means I believe Player 6 is indeed not the criminal.\n2. **Player 2** says Player 3 is not the criminal. Given that I suspect Player 2 of being the Criminal from Round 1, this statement could be an attempt to mislead or protect an ally, but it's also possible that Player 3 is not the criminal.\n3. **Player 3** says Player 1 is the criminal. This is a repeat of their Round 1 statement, which I know to be false since I'm an Investigator. This consistent false accusation against me strengthens the likelihood that Player 3 is either the Rumormonger or the Lunatic.\n4. **Player 4** says Player 3 is not the criminal. This statement aligns with Players 2 and 5, suggesting that Player 3 might indeed not be the criminal. Given that I suspected Player 4 of being an Investigator in Round 1, this statement supports that suspicion.\n5. **Player 5** says Player 3 is not the criminal. This statement, combined with their Round 1 statement, suggests that Player 5 might be providing information that seems truthful but could be misleading due to their potential role as the Rumormonger.\n6. **Player 6** says Player 4 is not the criminal. This statement aligns with my assessment of Player 4 as potentially an Investigator, as it provides truthful information about Player 4's innocence.\n\nConsidering the statements from both rounds:\n\n- The consistent accusations against **Player 2** from Round 1, combined with their potentially misleading statements, keep them as a prime candidate for the Criminal.\n- **Player 3**'s repeated false accusations against me solidify their role as likely the Lunatic, given their consistent belief in a false narrative (that I am the Criminal).\n- **Players 4 and 6** continue to provide statements that align with truthful information, supporting their potential roles as Investigators.\n- **Player 5**'s statements seem to provide some truthful information but could be misleading, which might indicate their role as the Rumormonger, though their behavior is less clear than others.\n\n**Final Judgment After Round 2:**\nFinal Criminal Is Player 2.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Criminal\nFinal Player 3: Lunatic\nFinal Player 4: Investigator\nFinal Player 5: Rumormonger\nFinal Player 6: Investigator\n\nThis judgment refines the analysis from Round 1, considering the additional information provided in Round 2. The assessment may evolve further with the statements from Round 3."
+        },
+        {
+          "round": 3,
+          "player_role": "Rumormonger",
+          "criminal_prediction": "2",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Criminal",
+            "3": "Lunatic",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 0,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 3 statements:\n\n1. **Player 1 (Myself)** says Player 5 is not the criminal. As an Investigator, I provide truthful information, indicating I believe Player 5 is not the criminal.\n2. **Player 2** says Player 6 is not the criminal. Given my suspicion of Player 2 being the Criminal, this statement could be an attempt to mislead. However, since multiple players, including myself, have suggested Player 6 is not the criminal, this statement might be truthful but is made with potential ulterior motives.\n3. **Player 3** says Player 6 is not the criminal. This statement aligns with others, including myself and Player 2, suggesting that Player 6 is indeed not the criminal. Given Player 3's role as likely the Lunatic, this truthful statement is consistent with the Lunatic's ability to make statements that may be truthful or false.\n4. **Player 4** says Player 2 is the criminal. This statement aligns with my initial accusation in Round 1 and supports the suspicion that Player 2 is indeed the criminal. Given that I believe Player 4 is an Investigator, this statement reinforces that belief.\n5. **Player 5** says Player 6 is not the criminal. This statement, combined with their previous statements, suggests that Player 5 is providing information that seems truthful but could be part of their role as the Rumormonger, who believes they are an Investigator but provides potentially misleading information.\n6. **Player 6** says Player 5 is not the criminal. This statement aligns with mine from Round 3, indicating that Player 5 is likely not the criminal. Given that I suspect Player 6 is an Investigator, this statement supports that suspicion.\n\nConsidering all rounds:\n\n- **Player 2** remains the prime candidate for the Criminal due to the initial accusations and their behavior throughout the game.\n- **Player 3**'s role as the Lunatic is supported by their consistent false accusations against me and their variable truthfulness in other statements.\n- **Players 4 and 6** continue to provide statements that align with truthful information, reinforcing their suspected roles as Investigators.\n- **Player 5**'s statements, while often aligning with truthful information, are made with the potential bias of the Rumormonger, who believes they are providing accurate information but might be misled.\n\n**Final Judgment After Round 3:**\nFinal Criminal Is Player 2.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Criminal\nFinal Player 3: Lunatic\nFinal Player 4: Investigator\nFinal Player 5: Rumormonger\nFinal Player 6: Investigator\n\nThis final judgment consolidates the analysis from all three rounds, providing a comprehensive assessment of each player's role based on their statements and behaviors throughout the game."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_16",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Investigator",
+        "2": "Rumormonger",
+        "3": "Lunatic",
+        "4": "Criminal",
+        "5": "Investigator",
+        "6": "Investigator"
+      },
+      "player_role": "Investigator",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Investigator",
+          "criminal_prediction": "3",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Unknown",
+            "3": "Potential",
+            "4": "Unknown",
+            "5": "Unknown",
+            "6": "Unknown"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "To deduce the roles and the criminal, let's analyze the statements given in Round 1:\n\n1. **Player 1 says Player 6 is not the criminal.** As an Investigator, I know my statement is true, so Player 6 is not the criminal.\n2. **Player 2 says Player 1 is not the criminal.** This could be true or false depending on Player 2's role. If Player 2 is an Investigator, then it's true. If Player 2 is not an Investigator, it could be a lie or the truth.\n3. **Player 3 says Player 1 is the criminal.** Given that I am an Investigator and know I am not the criminal, Player 3's statement must be false. This suggests Player 3 could be the Criminal, Rumormonger, or Lunatic.\n4. **Player 4 says Player 3 is not the criminal.** This statement's truthfulness depends on Player 4's role. If Player 4 is an Investigator, then Player 3 is not the criminal. If not, it could be a lie or the truth.\n5. **Player 5 says Player 6 is not the criminal.** Similar to statement 2, the truthfulness depends on Player 5's role. However, since I've already confirmed Player 6 is not the criminal as an Investigator, this statement aligns with the truth.\n6. **Player 6 says Player 1 is not the criminal.** Again, this is true, but the role of Player 6 is not yet clear.\n\nGiven these statements:\n\n- **Player 3** is likely not an Investigator because they falsely accused me (Player 1) of being the criminal. This makes Player 3 a potential candidate for the Criminal, Rumormonger, or Lunatic.\n- **Player 1 (Myself)** is confirmed as not the criminal by my own statement and supported by others, which is consistent with my role as an Investigator.\n- **Players 2, 4, 5, and 6** could potentially be Investigators or other roles, but their statements do not provide enough information to conclusively determine their roles yet.\n\n**Initial Deduction:**\n\nGiven the information, **Player 3** stands out due to the false accusation against me. However, it's too early to conclusively determine the roles of all players or the criminal with certainty. \n\n**Final Judgment After Round 1:**\nFinal Criminal Is Player 3.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Unknown\nFinal Player 3: Potential Criminal/Rumormonger/Lunatic\nFinal Player 4: Unknown\nFinal Player 5: Unknown\nFinal Player 6: Unknown\n\nThis judgment is based on the limited information from Round 1 and will be updated as more statements are made in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Investigator",
+          "criminal_prediction": "5",
+          "criminal_correct": 0,
+          "criminal_score": 0,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Rumormonger",
+            "4": "Unknown",
+            "5": "Potential",
+            "6": "Unknown"
+          },
+          "roles_correct": 1,
+          "non_criminal_count": 5,
+          "role_score": 14.0,
+          "total_score": 14.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 2 statements:\n\n1. **Player 1 says Player 3 is not the criminal.** As an Investigator, I'm stating the truth. Given Player 3's previous false accusation, this suggests Player 3 might be the Rumormonger or Lunatic, as they believed I was the criminal.\n2. **Player 2 says Player 1 is not the criminal.** This statement is true and consistent with previous statements from Player 2. It supports the possibility that Player 2 is an Investigator.\n3. **Player 3 says Player 5 is not the criminal.** Since I've already questioned Player 3's reliability due to their false accusation in Round 1, this statement's truthfulness is uncertain. If Player 3 is the Lunatic, they might believe Player 5 is not the criminal even if Player 5 is.\n4. **Player 4 says Player 5 is not the criminal.** Similar to Player 3's statement, without knowing Player 4's role, it's hard to assess the truthfulness. However, if Player 4 is an Investigator, then Player 5 is indeed not the criminal.\n5. **Player 5 says Player 6 is not the criminal.** I've already stated that Player 6 is not the criminal in Round 1, so this statement aligns with the truth. However, it doesn't reveal much about Player 5's role.\n6. **Player 6 says Player 2 is not the criminal.** This statement supports the previous impressions that Player 2 might be telling the truth, potentially being an Investigator.\n\n**Deductions:**\n\n- **Player 3** seems less likely to be the Criminal given my statement in Round 2, but their role as Rumormonger or Lunatic is still plausible due to their initial false accusation.\n- **Player 2** consistently states that I am not the criminal, which aligns with the truth and suggests they could be an Investigator.\n- **Players 4 and 5** seem to be providing truthful information in Round 2, but without more context, it's hard to determine their roles.\n- **Player 6** also seems to provide truthful information, but like Players 4 and 5, their role remains unclear.\n\n**Updated Judgment:**\n\nGiven the new information, the picture is still not entirely clear, but some roles and the criminal's identity can be speculated upon with more confidence.\n\n**Final Judgment After Round 2:**\nFinal Criminal Is Player 5.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Rumormonger/Lunatic\nFinal Player 4: Unknown\nFinal Player 5: Potential Criminal\nFinal Player 6: Unknown\n\nThis judgment is speculative, especially regarding Player 5's role as the potential criminal, which is based on the process of elimination and the fact that less information has been directly contradicting or supporting their potential role as the criminal compared to others. Further analysis after Round 3 will be crucial for a more accurate determination."
+        },
+        {
+          "round": 3,
+          "player_role": "Investigator",
+          "criminal_prediction": "4",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Investigator",
+            "2": "Investigator",
+            "3": "Rumormonger",
+            "4": "Criminal",
+            "5": "Investigator",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Investigator",
+          "response": "Analyzing the Round 3 statements:\n\n1. **Player 1 says Player 4 is the criminal.** As an Investigator, I'm stating what I believe to be true based on the analysis of previous rounds.\n2. **Player 2 says Player 4 is not the criminal.** Given that Player 2 has consistently provided statements that align with the truth (e.g., stating I am not the criminal), this contradiction with my statement suggests that either Player 2 is not an Investigator or there's a misunderstanding in the analysis.\n3. **Player 3 says Player 2 is not the criminal.** This statement aligns with previous statements from Players 2 and 6, suggesting that Player 2 is indeed not the criminal. However, since Player 3's reliability is questionable (potential Rumormonger or Lunatic), this statement's truthfulness is not definitive.\n4. **Player 4 says Player 1 is the criminal.** This is a false statement since I am an Investigator and not the criminal. This strongly suggests that Player 4 is either the Criminal or the Lunatic, as they would knowingly make false accusations.\n5. **Player 5 says Player 4 is the criminal.** This statement aligns with my own conclusion in Round 3. If Player 5 is an Investigator, this would confirm Player 4 as the criminal.\n6. **Player 6 says Player 2 is not the criminal.** This statement is consistent with previous statements and reinforces the idea that Player 2 is likely not the criminal.\n\n**Final Deductions:**\n\n- **Player 4's** statement that I am the criminal is a clear lie, which, combined with my own analysis and statement, strongly suggests that **Player 4 is the Criminal**. This is because only the Criminal would knowingly accuse an Investigator of being the criminal.\n- **Player 2's** consistent defense of my innocence and their statement that Player 4 is not the criminal, despite my accusation, suggests that **Player 2 is indeed an Investigator**, as they have provided truthful information throughout the game, even if it contradicts my final conclusion about Player 4.\n- **Player 3** remains questionable but is likely the Rumormonger or Lunatic due to their initial false accusation against me.\n- **Player 5** aligning with my conclusion about Player 4 could suggest they are also an Investigator, but without more direct evidence, this remains speculative.\n- **Player 6** has provided consistent truthful information, suggesting they could also be an Investigator.\n\n**Final Judgment:**\nFinal Criminal Is Player 4.\nThe roles of players 1-6 are:\nFinal Player 1: Investigator\nFinal Player 2: Investigator\nFinal Player 3: Rumormonger/Lunatic\nFinal Player 4: Criminal\nFinal Player 5: Investigator\nFinal Player 6: Investigator\n\nThis final judgment is based on the analysis of all statements across the three rounds, focusing on the consistency of truthfulness and the logical deductions from the statements provided by each player."
+        }
+      ]
+    },
+    {
+      "scenario_id": "all_17",
+      "dataset_type": "all",
+      "ground_truth_roles": {
+        "1": "Criminal",
+        "2": "Investigator",
+        "3": "Investigator",
+        "4": "Lunatic",
+        "5": "Rumormonger",
+        "6": "Investigator"
+      },
+      "player_role": "Criminal",
+      "rounds": [
+        {
+          "round": 1,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Lunatic",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 1:\n\n1. **Player 1 says Player 5 is the criminal.** As the actual Criminal, I know this statement is false because I am the criminal, not Player 5. This means Player 1 (myself) is indeed the Criminal, but let's analyze further to see if we can deduce other roles.\n\n2. **Player 2 says Player 5 is not the criminal.** This statement could be true or false. If Player 2 is an Investigator, then Player 5 is indeed not the criminal, which aligns with my knowledge. If Player 2 is not an Investigator, this statement's truthfulness is uncertain.\n\n3. **Player 3 says Player 1 is the criminal.** This statement is true, but since only Investigators provide consistently truthful information, and given that I am the Criminal, Player 3 could potentially be an Investigator.\n\n4. **Player 4 says Player 2 is not the criminal.** Similar to Player 2's statement, this could be true or false depending on Player 4's role. If Player 4 is an Investigator, then Player 2 is not the criminal.\n\n5. **Player 5 says Player 2 is the criminal.** This statement is false because I know I am the criminal. If Player 5 were an Investigator, they would not make false accusations. This suggests Player 5 might be either the Rumormonger or the Lunatic, but since they are accusing someone else of being the criminal, it's less likely they believe they are the criminal (Lunatic's trait), making Rumormonger a possible role.\n\n6. **Player 6 says Player 1 is the criminal.** Like Player 3, this statement is true. Given that only Investigators provide truthful information consistently, Player 6 could also be an Investigator.\n\nGiven these observations:\n- Players 3 and 6 are likely Investigators because they correctly identified me as the criminal.\n- Player 5's false accusation against Player 2, combined with my statement against Player 5, suggests Player 5 could be the Rumormonger, as they might believe they are an Investigator but provide incorrect information.\n- Player 2 and Player 4's statements need further analysis, but since they did not accuse me, and considering the roles of Players 3 and 6, they could potentially be the remaining Investigator and the Lunatic, or one of them could be the Rumormonger if Player 5 is actually the Lunatic. However, given the information, it seems more likely that one of them could be the Lunatic, believing they are the criminal but not consistently providing false information about others being the criminal.\n\nFinal Judgment:\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Lunatic\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Rumormonger\nFinal Player 6: Investigator\n\nThis judgment is based on the analysis of Round 1 statements and may change as more information becomes available in subsequent rounds."
+        },
+        {
+          "round": 2,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Lunatic",
+            "3": "Investigator",
+            "4": "Lunatic",
+            "5": "Rumormonger",
+            "6": "Investigator"
+          },
+          "roles_correct": 4,
+          "non_criminal_count": 5,
+          "role_score": 56.0,
+          "total_score": 86.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 2, considering the previous judgment:\n\n1. **Player 1 says Player 6 is not the criminal.** As the Criminal, I know this statement is true because Player 6 is not the criminal. However, this statement is intended to mislead, as I previously identified Player 6 as likely an Investigator.\n\n2. **Player 2 says Player 4 is not the criminal.** Given the previous judgment where Player 2 was tentatively identified as the Lunatic, this statement could be true or false. If Player 2 is indeed the Lunatic, they might believe they are the criminal and make statements that are not necessarily about their own role but could be misleading about others.\n\n3. **Player 3 says Player 1 is the criminal.** This statement is true and consistent with Player 3's previous statement, reinforcing the likelihood that Player 3 is an Investigator.\n\n4. **Player 4 says Player 1 is not the criminal.** This statement is false, which contradicts the previous tentative identification of Player 4 as an Investigator. If Player 4 were an Investigator, they would know I am the criminal. This suggests Player 4 might not be an Investigator, potentially being the Rumormonger or the Lunatic. However, given that Player 5 was previously considered for the Rumormonger role, Player 4's false statement might indicate they are the Lunatic, believing they are not the criminal but actually providing false information.\n\n5. **Player 5 says Player 3 is not the criminal.** This statement is true but does not necessarily clarify Player 5's role since we already know Player 3 is not the criminal. Given the previous consideration of Player 5 as the Rumormonger, this statement does not provide strong evidence against that role, as Rumormongers can provide true or false information.\n\n6. **Player 6 says Player 4 is not the criminal.** This statement is true and consistent with the behavior expected of an Investigator, reinforcing the previous judgment that Player 6 is likely an Investigator.\n\nConsidering these statements:\n- The consistency of Players 3 and 6 in identifying me as the criminal or providing truthful information about others not being the criminal strengthens their cases as Investigators.\n- Player 4's false statement about me not being the criminal, combined with their previous statement, suggests they might be the Lunatic, as they seem to be providing misleading information and previously were considered for a role that does not align with providing false accusations.\n- Player 2's statement, while potentially true, does not provide clear insight into their role without more context, but their previous behavior suggested they could be the Lunatic.\n- Player 5's statement, while true, does not strongly indicate their role but previously was considered as potentially the Rumormonger.\n\nRevising the judgment based on Round 2:\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Lunatic\nFinal Player 3: Investigator\nFinal Player 4: Lunatic\nFinal Player 5: Rumormonger\nFinal Player 6: Investigator\n\nThis revised judgment takes into account the new information from Round 2, but the roles of Players 2, 4, and 5 are still somewhat uncertain and may require further clarification in the final round."
+        },
+        {
+          "round": 3,
+          "player_role": "Criminal",
+          "criminal_prediction": "1",
+          "criminal_correct": 1,
+          "criminal_score": 30,
+          "role_predictions": {
+            "1": "Criminal",
+            "2": "Lunatic",
+            "3": "Investigator",
+            "4": "Investigator",
+            "5": "Rumormonger",
+            "6": "Investigator"
+          },
+          "roles_correct": 3,
+          "non_criminal_count": 5,
+          "role_score": 42.0,
+          "total_score": 72.0,
+          "self_role_correct": 1,
+          "self_role_prediction": "Criminal",
+          "response": "Analyzing the statements from Round 3:\n\n1. **Player 1 says Player 6 is the criminal.** As the Criminal, I know this statement is false because I am the criminal, not Player 6. This is another attempt to mislead.\n\n2. **Player 2 says Player 3 is not the criminal.** This statement is true and aligns with previous judgments. However, given that Player 2 was tentatively identified as the Lunatic, this true statement does not necessarily clarify their role, as Lunatics can provide true or false information.\n\n3. **Player 3 says Player 4 is not the criminal.** This statement is true and consistent with the expected behavior of an Investigator, reinforcing the previous judgment that Player 3 is likely an Investigator.\n\n4. **Player 4 says Player 1 is the criminal.** This statement is true, which contradicts the previous tentative identification of Player 4 as the Lunatic based on their false statement in Round 2. Given this true statement, it's possible that Player 4 could be an Investigator, but this would mean revising the roles of other players.\n\n5. **Player 5 says Player 4 is the criminal.** This statement is false, which aligns with the previous consideration of Player 5 as the Rumormonger, providing incorrect information.\n\n6. **Player 6 says Player 1 is the criminal.** This statement is true and consistent with the behavior expected of an Investigator, reinforcing the previous judgment that Player 6 is likely an Investigator.\n\nConsidering these statements and revising the previous judgments:\n- Players 3 and 6 are consistently providing truthful information, solidifying their roles as Investigators.\n- Player 4's true statement in Round 3 about me being the criminal suggests they could indeed be an Investigator, which would mean there are three Investigators (Players 3, 4, and 6). This contradicts the initial game setup, indicating a need to reassess the roles based on the information provided.\n- Player 2's statement, while true, does not strongly indicate their role but was previously considered as potentially the Lunatic.\n- Player 5's false statement reinforces their potential role as the Rumormonger.\n\nGiven the constraints of the game (3 Investigators, 1 Criminal, 1 Rumormonger, 1 Lunatic) and the analysis:\n- It seems there was an oversight in the interpretation of Player 4's role due to the false statement in Round 2, which led to considering them as the Lunatic. However, their true statement in Round 3 suggests they are more likely an Investigator.\n- The true statements from Players 3, 4, and 6 about the criminal's identity or others not being the criminal indicate they are likely the Investigators.\n- Player 5's false accusation suggests they are the Rumormonger.\n- Player 2's role remains less clear but, given the other roles, might be the Lunatic by process of elimination.\n\nRevised Final Judgment:\nFinal Criminal Is Player 1.\nThe roles of players 1-6 are:\nFinal Player 1: Criminal\nFinal Player 2: Lunatic\nFinal Player 3: Investigator\nFinal Player 4: Investigator\nFinal Player 5: Rumormonger\nFinal Player 6: Investigator\n\nThis final judgment attempts to reconcile the information from all rounds with the game's role constraints, acknowledging the complexity and potential for misinterpretation based on the statements provided."
+        }
+      ]
+    }
+  ]
+}
