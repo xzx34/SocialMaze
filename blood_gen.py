@@ -2,7 +2,15 @@ import json
 import random
 from itertools import combinations
 
-def assign_roles(number=6, dataset_type='original'):
+def assign_roles(number=6, dataset_type='original', player1_role=None):
+    """
+    Assign roles to players with optional specification of player 1's role.
+    
+    Args:
+        number: Total number of players
+        dataset_type: Type of dataset/game configuration
+        player1_role: If specified, forces player 1 to have this role
+    """
     roles_config = {
         "6-original": {"Criminal": 1, "Investigator": 5},
         "6-rumormonger": {"Criminal": 1, "Investigator": 4, "Rumormonger": 1},
@@ -14,13 +22,17 @@ def assign_roles(number=6, dataset_type='original'):
         '10-all': {"Criminal": 1, "Investigator": 5, "Rumormonger": 2, "Lunatic": 2}
     }
 
-    role_counts = roles_config[f"{number}-{dataset_type}"]
+    role_counts = roles_config[f"{number}-{dataset_type}"].copy()
     
     # Get all possible roles in this game configuration
     possible_roles = list(role_counts.keys())
     
-    # Randomly select a role for player 1 with equal probability among available roles
-    player1_role = random.choice(possible_roles)
+    # If player1_role is specified and valid, use it
+    if player1_role and player1_role in possible_roles and role_counts[player1_role] > 0:
+        player1_role = player1_role
+    else:
+        # Otherwise randomly select a role for player 1 with equal probability among available roles
+        player1_role = random.choice(possible_roles)
     
     # Decrease the count of the selected role
     role_counts[player1_role] -= 1
@@ -136,12 +148,57 @@ Please provide this Final Judgment after each round of statements, updating your
 
 
 def generate_dataset(number, dataset_type, n_scenarios_per_type):
+    """
+    Generate a dataset with equal distribution of player 1's roles.
+    """
     dataset = []
     solvable_scenarios = 0
     
-    while solvable_scenarios < n_scenarios_per_type:
+    # Determine how many scenarios we need per player 1 role
+    possible_roles = []
+    role_counts = {
+        "6-original": {"Investigator": 5, "Criminal": 1, "Rumormonger": 0, "Lunatic": 0},
+        "6-rumormonger": {"Investigator": 4, "Criminal": 1, "Rumormonger": 1, "Lunatic": 0},
+        "6-lunatic": {"Investigator": 4, "Criminal": 1, "Rumormonger": 0, "Lunatic": 1},
+        "6-all": {"Investigator": 3, "Criminal": 1, "Rumormonger": 1, "Lunatic": 1},
+        '10-original': {"Investigator": 9, "Criminal": 1, "Rumormonger": 0, "Lunatic": 0},
+        '10-rumormonger': {"Investigator": 7, "Criminal": 1, "Rumormonger": 2, "Lunatic": 0},
+        '10-lunatic': {"Investigator": 7, "Criminal": 1, "Rumormonger": 0, "Lunatic": 2},
+        '10-all': {"Investigator": 5, "Criminal": 1, "Rumormonger": 2, "Lunatic": 2}
+    }[f"{number}-{dataset_type}"]
+    
+    for role, count in role_counts.items():
+        if count > 0:
+            possible_roles.append(role)
+    
+    # Calculate scenarios per role
+    scenarios_per_role = n_scenarios_per_type // len(possible_roles)
+    extra_scenarios = n_scenarios_per_type % len(possible_roles)
+    
+    # Keep track of generated scenarios per role
+    role_scenario_counts = {role: 0 for role in possible_roles}
+    role_scenario_targets = {role: scenarios_per_role + (1 if i < extra_scenarios else 0) 
+                            for i, role in enumerate(possible_roles)}
+    
+    # Generate scenarios until we have enough for each role
+    attempts = 0
+    max_attempts = n_scenarios_per_type * 100  # Safeguard against infinite loops
+    
+    while solvable_scenarios < n_scenarios_per_type and attempts < max_attempts:
+        attempts += 1
+        
+        # Determine which role to generate next
+        available_roles = [role for role in possible_roles 
+                          if role_scenario_counts[role] < role_scenario_targets[role]]
+        
+        if not available_roles:
+            break
+        
+        target_role = random.choice(available_roles)
+        
+        # Generate scenario with the target role
         scenario_id = f"{dataset_type}_{solvable_scenarios+1}"
-        player_roles = assign_roles(number, dataset_type)
+        player_roles = assign_roles(number, dataset_type, player1_role=target_role)
         criminal_id = [player for player, role in player_roles.items() if role == "Criminal"][0] 
         statements = []
         all_players = list(player_roles.keys())
@@ -161,7 +218,8 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
             statements.append({"round": round_num, "statements": round_statements})
 
         prompts = generate_prompts(player_roles, number, dataset_type)
-        prompts = {k: v for k, v in prompts.items() if k== '1'}
+        # Only keep player 1's prompt
+        prompts = {k: v for k, v in prompts.items() if k == '1'}
 
         scenario_data = {
             "scenario_id": scenario_id,
@@ -180,10 +238,16 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
         if solution_analysis["unique_solution"]:
             dataset.append(scenario_data)
             solvable_scenarios += 1
+            role_scenario_counts[player_roles["1"]] += 1
             
             # Print progress
-            if solvable_scenarios % 10 == 0:
+            if solvable_scenarios % 10 == 0 or solvable_scenarios == n_scenarios_per_type:
                 print(f"Generated {solvable_scenarios}/{n_scenarios_per_type} solvable scenarios for {dataset_type} with {number} players")
+                print(f"Role distribution: {role_scenario_counts}")
+    
+    if attempts >= max_attempts:
+        print(f"Warning: Reached maximum attempts ({max_attempts}) for {dataset_type} with {number} players")
+        print(f"Only generated {solvable_scenarios}/{n_scenarios_per_type} scenarios")
     
     return dataset
 
@@ -444,14 +508,14 @@ if __name__ == "__main__":
     dataset_types = ["original", "rumormonger", "lunatic", "all"] 
     # Fix 2: Rename the variable to avoid name conflict
     player_counts = [6, 10]
-    n_scenarios_per_type = 202  
+    n_scenarios_per_type = 52  
 
     for dataset_type in dataset_types:
         # Fix 3: Use player_count instead of number
         for player_count in player_counts:
             dataset = generate_dataset(player_count, dataset_type, n_scenarios_per_type)
             # Fix 4: Include player count in output filename for clarity
-            output_filename = f"metaskeptic_{player_count}_{dataset_type}.json"
+            output_filename = f"blood_{player_count}_{dataset_type}.json"
             with open(output_filename, 'w', encoding='utf-8') as f:
                 json.dump(dataset, f, indent=4, ensure_ascii=False) 
             print(f"Dataset '{dataset_type}' with {player_count} players saved to '{output_filename}'")

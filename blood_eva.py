@@ -1,152 +1,14 @@
 import re
 import json
+import re
+import json
 import os
 import time
 from tqdm import tqdm
-from openai import OpenAI
-import anthropic
 from dotenv import load_dotenv
+from tool import get_chat_response
 
 load_dotenv()
-
-model_dict = {
-    'gpt-4o': 'gpt-4o',
-    'gpt-4o-mini': 'gpt-4o-mini',
-    'o1-mini': 'o1-mini-2024-09-12',
-    'chatgpt-4o-latest': 'chatgpt-4o-latest',
-    'llama-3.3-70B': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
-    'llama-3.1-70B': 'meta-llama/Meta-Llama-3.1-70B-Instruct',
-    'llama-3.1-8B': 'meta-llama/Meta-Llama-3.1-8B-Instruct',
-    'gemma-2-27B': 'google/gemma-2-27b-it',
-    'gemma-2-9B': 'google/gemma-2-9b-it',
-    'qwen-2.5-72B': 'Qwen/Qwen2.5-72B-Instruct',
-    'qwen-2.5-32B': 'Qwen/Qwen2.5-32B-Instruct',
-    'qwen-2.5-14B': 'Qwen/Qwen2.5-14B-Instruct',
-    'qwen-2.5-7B': 'Qwen/Qwen2.5-7B-Instruct',
-    'yi-lightning': 'yi-lightning',
-    'claude-3.5-sonnet': 'claude-3-5-sonnet-20241022',
-    'qwq':'Qwen/QwQ-32B',
-    'deepseek-v3': 'deepseek-ai/DeepSeek-V3',
-    'deepseek-r1': 'deepseek-ai/DeepSeek-R1',
-    'deepseek-r1-32B': 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
-    'deepseek-r1-70B': 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B'
-}
-
-
-def get_chat_response(model, system_message, messages, temperature=0.001, max_retries=3):
-    """
-    Get response from a model with multi-turn conversation history
-    
-    Args:
-        model: model name
-        system_message: system message
-        messages: list of message dicts with 'role' and 'content'
-        temperature: sampling temperature
-        max_retries: maximum number of retry attempts on API errors
-    
-    Returns:
-        model response as string
-    """
-    retries = 0
-    while retries < max_retries:
-        try:
-            if model in ['claude-3.5-sonnet']:
-                client = anthropic.Anthropic(
-                    api_key=os.getenv('ANTHROPIC_API_KEY')
-                )
-                
-                # Format messages for Anthropic
-                anthropic_messages = []
-                for msg in messages:
-                    anthropic_messages.append({
-                        'role': msg['role'], 
-                        'content': [{'type': 'text', 'text': msg['content']}]
-                    })
-                    
-                message = client.messages.create(
-                    model=model_dict[model],
-                    max_tokens=2048,
-                    temperature=temperature,
-                    system=system_message,
-                    messages=anthropic_messages
-                )
-                return message.content[0].text
-            
-            # Handle DeepInfra models
-            if model in ['deepseek-v3', 'deepseek-r1', 'deepseek-r1-32B', 'deepseek-r1-70B', 'qwq', 'llama-3.3-70B', 'llama-3.1-70B', 'llama-3.1-8B', 'qwen-2.5-72B', 'gemma-2-27B']:
-                client = OpenAI(
-                    api_key=os.getenv('DEEPINFRA_API_KEY'),
-                    base_url=os.getenv('DEEPINFRA_BASE_URL')
-                )
-                
-                # Format messages with system message for DeepInfra
-                formatted_messages = [{"role": "system", "content": system_message}]
-                formatted_messages.extend(messages)
-                
-                full_response = ''
-                chat_completion = client.chat.completions.create(
-                    model=model_dict[model],
-                    temperature=temperature,
-                    messages=formatted_messages,
-                    stream=True,
-                )
-
-                for event in chat_completion:
-                    if event.choices[0].finish_reason:
-                        break 
-                    else:
-                        content = event.choices[0].delta.content or ""
-                        full_response += content
-
-                return full_response
-            
-            # Handle Yi Lightning
-            elif model == 'yi-lightning':
-                client = OpenAI(
-                    api_key=os.getenv('YI_API_KEY'),
-                    base_url=os.getenv('YI_BASE_URL')
-                )
-                formatted_messages = [{"role": "system", "content": system_message}]
-                formatted_messages.extend(messages)
-                
-                response = client.chat.completions.create(
-                    model=model_dict[model],
-                    messages=formatted_messages,
-                    temperature=temperature,
-                )
-                
-                return response.choices[0].message.content
-            
-            # Handle OpenAI models
-            else:
-                client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-                
-                formatted_messages = [{"role": "system", "content": system_message}]
-                formatted_messages.extend(messages)
-                
-                response = client.chat.completions.create(
-                    model=model_dict[model],
-                    messages=formatted_messages,
-                    temperature=temperature,
-                )
-
-                return response.choices[0].message.content
-                
-        except Exception as e:
-            retries += 1
-            error_type = type(e).__name__
-            error_message = str(e)
-            
-            # Check if we've reached max retries
-            if retries >= max_retries:
-                print(f"Failed after {max_retries} attempts. Last error: {error_type}: {error_message}")
-                # Return a special string indicating an error occurred
-                return f"ERROR: API request failed after {max_retries} attempts. Last error: {error_type}: {error_message}"
-            
-            # If we still have retries left, wait and try again
-            wait_time = 2 ** retries  # Exponential backoff: 2, 4, 8 seconds
-            print(f"Attempt {retries} failed with {error_type}: {error_message}. Retrying in {wait_time} seconds...")
-            time.sleep(wait_time)
 
 
 def extract_criminal_prediction(response):
@@ -504,7 +366,7 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
 
 def main():
     # Set the models to evaluate
-    models = ['llama-3.3-70B','deepseek-r1-32B','o1-mini','gpt-4o']
+    models = ['gpt-4o-mini']
     
     # Dataset types to evaluate
     dataset_types = ['all']
@@ -512,7 +374,7 @@ def main():
     all_results = {}
     
     # First, load existing overall summary if it exists
-    overall_summary_path = "d:/github/MetaSkeptic/results/overall_summary.json"
+    overall_summary_path = "results/overall_summary.json"
     if os.path.exists(overall_summary_path):
         try:
             with open(overall_summary_path, 'r', encoding='utf-8') as f:
@@ -527,18 +389,13 @@ def main():
         
         for player_count in player_counts:
             for dataset_type in dataset_types:
-                dataset_path = f"d:/github/MetaSkeptic/metaskeptic_{player_count}_{dataset_type}.json"
+                dataset_path = f"blood_{player_count}_{dataset_type}.json"
                 
                 if not os.path.exists(dataset_path):
                     print(f"Warning: {dataset_path} does not exist. Skipping.")
                     continue
-                
-                output_file = f"d:/github/MetaSkeptic/results/{model}_{player_count}_{dataset_type}_results.json"
-                
-                # Create results directory if it doesn't exist
-                os.makedirs("d:/github/MetaSkeptic/results/", exist_ok=True)
-                
-                # Check if we need to load existing results file
+
+                output_file = f"results/{model}_{player_count}_{dataset_type}_results.json"
                 detailed_results = None
                 if os.path.exists(output_file):
                     try:
@@ -638,7 +495,7 @@ def main():
         print("\n" + "-"*80 + "\n")
     
     # Save overall summary
-    with open("d:/github/MetaSkeptic/results/overall_summary.json", 'w', encoding='utf-8') as f:
+    with open("results/overall_summary.json", 'w', encoding='utf-8') as f:
         json.dump(all_results, f, indent=2)
 
 
