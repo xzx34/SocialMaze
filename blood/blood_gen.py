@@ -256,17 +256,18 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
 def check_unique_solution(scenario_data):
     """
     Check if there's a unique solution for identifying the criminal from player 1's perspective.
+
+    Returns:
+        dict: Contains 'unique_solution' (bool), 'possible_criminals' (list), and analysis details
     """
-    # Note: This function is quite large so I'm keeping it as is
-    # Your existing check_unique_solution implementation
     player_roles = scenario_data["roles"]
     all_players = list(player_roles.keys())
     statements = scenario_data["statements"]
     number = len(all_players)
     dataset_type = scenario_data["dataset_type"]
-    
+
     # Get role counts for this scenario
-    role_counts = {
+    role_counts_config = {
         "6-original": {"Investigator": 5, "Criminal": 1, "Rumormonger": 0, "Lunatic": 0},
         "6-rumormonger": {"Investigator": 4, "Criminal": 1, "Rumormonger": 1, "Lunatic": 0},
         "6-lunatic": {"Investigator": 4, "Criminal": 1, "Rumormonger": 0, "Lunatic": 1},
@@ -276,192 +277,277 @@ def check_unique_solution(scenario_data):
         '10-lunatic': {"Investigator": 7, "Criminal": 1, "Rumormonger": 0, "Lunatic": 2},
         '10-all': {"Investigator": 5, "Criminal": 1, "Rumormonger": 2, "Lunatic": 2}
     }
-    
-    counts = role_counts[f"{number}-{dataset_type}"]
+
+    counts = role_counts_config[f"{number}-{dataset_type}"]
     investigator_count = counts["Investigator"]
-    
+
     # Player 1's actual role
     player1_role = player_roles["1"]
     possible_criminals = set()
-    
+    reasoning_steps_str = ""
+    first_valid_reasoning = ""
+    unique_solution_found = False
+
     # Determine which perspectives player 1 might have based on their actual role
     perspective_roles = []
-    
+
     if player1_role == "Investigator" or player1_role == "Rumormonger":
         perspective_roles.append("Investigator")
         perspective_roles.append("Rumormonger")
+        # 我被告知是Investigator,但我也有可能是Rumormonger
 
         for perspective in perspective_roles:
+            current_reasoning = f"Considering player 1's perspective as {perspective}\n"
             # Find all possible combinations of investigators
             potential_investigators = []
-            
+
             if perspective == "Investigator":
                 potential_investigators.append("1")
                 remaining_investigator_count = investigator_count - 1
+                current_reasoning += f"From Investigator perspective, player 1 is an Investigator. Remaining investigators to find: {remaining_investigator_count}\n"
+                # 假如说我是Investigator,那么还剩下remaining_investigator_count个Investigator
             elif perspective == "Rumormonger":
                 remaining_investigator_count = investigator_count
-            
+                current_reasoning += f"From Rumormonger perspective, player 1 is NOT an Investigator. Need to find {remaining_investigator_count} Investigators among others.\n"
+                # 假如说我是Rumormonger,那么还剩下remaining_investigator_count个Investigator
+
             # Add all other players who could be investigators
             # Only players who have consistent statements can be potential investigators
+            potential_investigator_candidates = []
             for player_id in all_players:
+                # 分析一下除了我之外的玩家,还有谁可以做Investigator
                 if player_id != "1":
                     can_be_investigator = True
-                    criminal_accusations = set()  
-                    not_criminal_claims = set()  
+                    criminal_accusations = set()
+                    not_criminal_claims = set()
                     for round_data in statements:
                         for statement in round_data["statements"]:
                             if statement["player"] == player_id:
                                 target = statement["target_player"]
                                 claim = statement["statement_type"]
-                                
+
                                 if target == "1" and claim == "is":
+                                    # player_id说我是criminal,但我不可能是criminal,它一定不是Investigator
                                     can_be_investigator = False
                                     break
-                                
+
                                 if claim == "is":
                                     criminal_accusations.add(target)
                                 elif claim == "is not":
                                     not_criminal_claims.add(target)
-                                
+
                                 if any(p in not_criminal_claims for p in criminal_accusations):
+                                    # player_id说p是criminal但又说p不是,自相矛盾,它一定不是Investigator
                                     can_be_investigator = False
                                     break
-                                
+
                                 if len(criminal_accusations) > 1:
                                     can_be_investigator = False
+                                    # player_id说过不止一个人是criminal,它一定不是Investigator
                                     break
-                    
                         if not can_be_investigator:
                             break
-                    
+
                     if can_be_investigator:
-                        potential_investigators.append(player_id)
-                    
-            for investigators in combinations(potential_investigators[1:], remaining_investigator_count):
+                        potential_investigator_candidates.append(player_id)
+
+            current_reasoning += f"Potential investigator candidates (excluding player 1): {potential_investigator_candidates}\n"
+
+            # 所以最后可能做Investigator的人有:potential_investigators
+            for investigators_tuple in combinations(potential_investigator_candidates, remaining_investigator_count):
+                investigators = list(investigators_tuple)
                 if perspective == "Investigator":
                     investigator_set = {"1"}.union(set(investigators))
+                    # 当我是Investigator时,我一定是Investigator
                 else:
                     investigator_set = set(investigators)
+                    # 当我是Rumormonger时,我一定不是Investigator
+                current_reasoning += f"Assuming investigators are: {sorted(list(investigator_set))}\n"
                 is_consistent = True
-                
-                criminal_candidates = set(all_players) - investigator_set - {"1"}
-                
+
+                criminal_candidates = set(all_players) - investigator_set
+                if perspective == "Investigator":
+                    pass # Criminal can be anyone not an investigator
+                elif perspective == "Rumormonger":
+                    pass # Criminal can be anyone not an investigator
+
+                # 假设真正的的investigator是investigators
+
+                current_possible_criminals = set(all_players) - investigator_set
+                current_reasoning += f"Initially possible criminals: {sorted(list(current_possible_criminals))}\n"
+
+                # 我们回忆下所有investigators的statement
                 for round_data in statements:
                     for statement in round_data["statements"]:
                         player = statement["player"]
                         target = statement["target_player"]
                         claim = statement["statement_type"]
-                        
+
                         if player in investigator_set:
+                            current_reasoning += f"Investigator {player} says Player {target} {claim} the criminal.\n"
                             if claim == "is":
-                                if target not in criminal_candidates:
+                                # player说过target是criminal
+                                if target not in current_possible_criminals:
                                     is_consistent = False
+                                    current_reasoning += f"Contradiction: Investigator {player} says Player {target} is the criminal, but Player {target} is not in the current possible criminals.\n"
                                     break
                                 else:
-                                    criminal_candidates = {target}
-                            
+                                    current_possible_criminals = current_possible_criminals.intersection({target})
+                                    current_reasoning += f"Possible criminals narrowed to: {sorted(list(current_possible_criminals))}\n"
+                                    # 所以可能是criminal的人只有target
                             elif claim == "is not":
-                                if target in criminal_candidates:
-                                    criminal_candidates.remove(target)
-                                    
-                                if not criminal_candidates:
+                                # player说过target不是criminal
+                                if target in current_possible_criminals:
+                                    current_possible_criminals.discard(target)
+                                    current_reasoning += f"Player {target} removed from possible criminals. Remaining: {sorted(list(current_possible_criminals))}\n"
+                                    #但target在可能是criminal的人里,所以我们从中去掉target
+
+                                if not current_possible_criminals:
                                     is_consistent = False
+                                    current_reasoning += "Contradiction: No possible criminals left.\n"
                                     break
-                    
                     if not is_consistent:
-                        break
-                
-                if is_consistent and len(criminal_candidates) == 1:
-                    possible_criminals.update(criminal_candidates)
+                        continue
+
+                if is_consistent and len(current_possible_criminals) == 1:
+                    # 最终我们发现,有且仅有xxx可能是criminal
+                    possible_criminals.update(current_possible_criminals)
+                    current_reasoning += f"Unique possible criminal found under this assumption: {current_possible_criminals}\n"
+                    if not unique_solution_found:
+                        first_valid_reasoning = current_reasoning
+                        unique_solution_found = True
+                    reasoning_steps_str += current_reasoning
 
     # Handle Criminal and Lunatic perspectives
     if player1_role == "Criminal" or player1_role == "Lunatic":
         perspective_roles.append("Criminal")
         perspective_roles.append("Lunatic")
+        # 我被告知是Criminal,但我也有可能是Lunatic
 
         for perspective in perspective_roles:
+            current_reasoning = f"Considering player 1's perspective as {perspective}\n"
             potential_investigators = []
             remaining_investigator_count = investigator_count
 
+            potential_investigator_candidates = []
             for player_id in all_players:
+                # 分析一下除了我之外的玩家,还有谁可以做Investigator
                 if player_id != "1":
                     can_be_investigator = True
-                    criminal_accusations = set()  
-                    not_criminal_claims = set()  
+                    criminal_accusations = set()
+                    not_criminal_claims = set()
                     for round_data in statements:
                         for statement in round_data["statements"]:
                             if statement["player"] == player_id:
                                 target = statement["target_player"]
                                 claim = statement["statement_type"]
-                                
+
                                 if target == "1" and claim == "is" and perspective == "Lunatic":
+                                    # player_id说我是criminal,但我是Lunatic,它一定不是Investigator
                                     can_be_investigator = False
                                     break
                                 if target == "1" and claim == "is not" and perspective == "Criminal":
+                                    # player_id说我不是criminal,但我是Criminal,它一定不是Investigator
                                     can_be_investigator = False
                                     break
                                 if claim == "is":
                                     criminal_accusations.add(target)
                                 elif claim == "is not":
                                     not_criminal_claims.add(target)
-                                
+
                                 if any(p in not_criminal_claims for p in criminal_accusations):
+                                    # player_id说p是criminal但又说p不是,自相矛盾,它一定不是Investigator
                                     can_be_investigator = False
                                     break
-                                
+
                                 if len(criminal_accusations) > 1:
                                     can_be_investigator = False
+                                    # player_id说过不止一个人是criminal,它一定不是Investigator
                                     break
-                    
                         if not can_be_investigator:
                             break
-                    
+
                     if can_be_investigator:
-                        potential_investigators.append(player_id)
-                
-                for investigators in combinations(potential_investigators, remaining_investigator_count):
-                    investigator_set = set(investigators)
-                    
-                    is_consistent = True
-                   
-                    if perspective == "Criminal":
-                        criminal_candidates = {"1"}
-                    elif perspective == "Lunatic":
-                        criminal_candidates = set(all_players) - {"1"}
-                    
-                    for round_data in statements:
-                        for statement in round_data["statements"]:
-                            player = statement["player"]
-                            target = statement["target_player"]
-                            claim = statement["statement_type"]
-                            
-                            if player in investigator_set:
-                                if claim == "is":
-                                    if target not in criminal_candidates:
-                                        is_consistent = False
-                                        break
-                                    else:
-                                        criminal_candidates = {target}
-                                
-                                elif claim == "is not":
-                                    if target in criminal_candidates:
-                                        criminal_candidates.remove(target)
-                                        
-                                    if not criminal_candidates:
-                                        is_consistent = False
-                                        break
-                        
-                        if not is_consistent:
-                            break
-                    
-                    if is_consistent and len(criminal_candidates) == 1:
-                        possible_criminals.update(criminal_candidates)
-        
-    return {
+                        potential_investigator_candidates.append(player_id)
+
+            current_reasoning += f"Potential investigator candidates (excluding player 1): {potential_investigator_candidates}\n"
+
+            # 所以最后可能做Investigator的人有:potential_investigators
+            for investigators_tuple in combinations(potential_investigator_candidates, remaining_investigator_count):
+                investigators = list(investigators_tuple)
+                investigator_set = set(investigators)
+                current_reasoning += f"Assuming investigators are: {sorted(list(investigator_set))}\n"
+                # 假设真正的investigator是investigators
+
+                is_consistent = True
+
+                if perspective == "Criminal":
+                    criminal_candidates = {"1"}
+                    current_reasoning += "From Criminal perspective, player 1 is the Criminal.\n"
+                    # 当我是Criminal时,我一定是唯一的criminal
+                elif perspective == "Lunatic":
+                    criminal_candidates = set(all_players) - {"1"}
+                    current_reasoning += "From Lunatic perspective, player 1 believes they are the Criminal, but any other player could be the real Criminal.\n"
+                    # 当我是Lunatic时,除了我之外,其他人都有可能是criminal
+
+                current_possible_criminals = criminal_candidates
+                current_reasoning += f"Initially possible criminals: {sorted(list(current_possible_criminals))}\n"
+
+                # 我们回忆下所有investigators的statement
+                for round_data in statements:
+                    for statement in round_data["statements"]:
+                        player = statement["player"]
+                        target = statement["target_player"]
+                        claim = statement["statement_type"]
+
+                        if player in investigator_set:
+                            current_reasoning += f"Investigator {player} says Player {target} {claim} the criminal.\n"
+                            if claim == "is":
+                                # player说过target是criminal
+                                if target not in current_possible_criminals:
+                                    is_consistent = False
+                                    current_reasoning += f"Contradiction: Investigator {player} says Player {target} is the criminal, but Player {target} is not in the current possible criminals.\n"
+                                    break
+                                else:
+                                    current_possible_criminals = current_possible_criminals.intersection({target})
+                                    current_reasoning += f"Possible criminals narrowed to: {sorted(list(current_possible_criminals))}\n"
+                                    # 所以可能是criminal的人只有target
+                            elif claim == "is not":
+                                # player说过target不是criminal
+                                if target in current_possible_criminals:
+                                    current_possible_criminals.discard(target)
+                                    current_reasoning += f"Player {target} removed from possible criminals. Remaining: {sorted(list(current_possible_criminals))}\n"
+                                    #但target在可能是criminal的人里,所以我们从中去掉target
+
+                                if not current_possible_criminals:
+                                    is_consistent = False
+                                    current_reasoning += "Contradiction: No possible criminals left.\n"
+                                    break
+                    if not is_consistent:
+                        continue
+
+                if is_consistent and len(current_possible_criminals) == 1:
+                    # 最终我们发现,有且仅有xxx可能是criminal
+                    possible_criminals.update(current_possible_criminals)
+                    current_reasoning += f"Unique possible criminal found under this assumption: {current_possible_criminals}\n"
+                    if not unique_solution_found:
+                        first_valid_reasoning = current_reasoning
+                        unique_solution_found = True
+                    reasoning_steps_str += current_reasoning
+
+    solution_analysis = {
         "unique_solution": len(possible_criminals) == 1,
         "possible_criminals": list(possible_criminals),
         "player1_role": player1_role
     }
+    if solution_analysis["unique_solution"]:
+        final_criminal = list(possible_criminals)[0]
+        final_conclusion_en = f"Therefore, based on the above reasoning, the final criminal is Player {final_criminal}."
+        reasoning_steps_str += final_conclusion_en
+        solution_analysis["reasoning_steps"] = reasoning_steps_str
+        solution_analysis["first_valid_reasoning"] = first_valid_reasoning
+
+    return solution_analysis
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Generate Blood Game dataset')
