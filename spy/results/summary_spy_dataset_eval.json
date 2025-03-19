@@ -1,0 +1,12 @@
+{
+  "gpt-4o-mini": {
+    "accuracy": 50.0,
+    "correct": 4,
+    "total": 8
+  },
+  "llama-3.3-70B": {
+    "accuracy": 62.5,
+    "correct": 5,
+    "total": 8
+  }
+}

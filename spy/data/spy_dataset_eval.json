@@ -1,0 +1,1042 @@
+[
+  {
+    "scenario_id": "normal_5",
+    "normal_word": "tiger",
+    "spy_word": "lion",
+    "spy_player": "2",
+    "player_words": {
+      "1": "tiger",
+      "2": "lion",
+      "3": "tiger",
+      "4": "tiger"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This large feline is known for its distinctive orange coat with black stripes, making it one of the most recognizable animals in the wild.",
+        "round2": "Often referred to as the king of the jungle, this creature is a powerful predator with a fearsome roar that can be heard from miles away.",
+        "round3": "This animal is primarily found in Asia and is often associated with strength and courage in various cultures and folklore.",
+        "full_response": "Round 1 description: This large feline is known for its distinctive orange coat with black stripes, making it one of the most recognizable animals in the wild.  \nRound 2 description: Often referred to as the king of the jungle, this creature is a powerful predator with a fearsome roar that can be heard from miles away.  \nRound 3 description: This animal is primarily found in Asia and is often associated with strength and courage in various cultures and folklore."
+      },
+      "2": {
+        "round1": "This animal is often referred to as the king of a particular ecosystem, known for its majestic appearance and powerful roar.",
+        "round2": "The creature I'm thinking of has a distinctive mane that sets it apart from other big cats, and it's a popular symbol in various cultures and sports teams.",
+        "round3": "In the wild, this predator is a social animal that lives in groups, called prides, which are typically made up of several females, their cubs, and one or more males.",
+        "full_response": "Round 1 description: This animal is often referred to as the king of a particular ecosystem, known for its majestic appearance and powerful roar.\nRound 2 description: The creature I'm thinking of has a distinctive mane that sets it apart from other big cats, and it's a popular symbol in various cultures and sports teams.\nRound 3 description: In the wild, this predator is a social animal that lives in groups, called prides, which are typically made up of several females, their cubs, and one or more males."
+      },
+      "3": {
+        "round1": "This animal is known for its distinctive stripes and powerful roar.",
+        "round2": "You might find this creature stalking its prey in dense jungles.",
+        "round3": "This carnivore is a symbol of strength and ferocity in many cultures.",
+        "full_response": "Round 1 description: This animal is known for its distinctive stripes and powerful roar.\nRound 2 description: You might find this creature stalking its prey in dense jungles.\nRound 3 description: This carnivore is a symbol of strength and ferocity in many cultures. \n"
+      },
+      "4": {
+        "round1": "This creature is often depicted as a symbol of strength and courage in various cultures.",
+        "round2": "Known for its distinctive pattern, this animal is a top predator in its natural habitat.",
+        "round3": "This species is part of the big cat family and is often featured in conservation campaigns due to its endangered status.",
+        "full_response": "Round 1 description: This creature is often depicted as a symbol of strength and courage in various cultures.\nRound 2 description: Known for its distinctive pattern, this animal is a top predator in its natural habitat.\nRound 3 description: This species is part of the big cat family and is often featured in conservation campaigns due to its endangered status."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This large feline is known for its distinctive orange coat with black stripes, making it one of the most recognizable animals in the wild."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This animal is often referred to as the king of a particular ecosystem, known for its majestic appearance and powerful roar."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This animal is known for its distinctive stripes and powerful roar."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This creature is often depicted as a symbol of strength and courage in various cultures."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Often referred to as the king of the jungle, this creature is a powerful predator with a fearsome roar that can be heard from miles away."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The creature I'm thinking of has a distinctive mane that sets it apart from other big cats, and it's a popular symbol in various cultures and sports teams."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You might find this creature stalking its prey in dense jungles."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: Known for its distinctive pattern, this animal is a top predator in its natural habitat."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This animal is primarily found in Asia and is often associated with strength and courage in various cultures and folklore."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: In the wild, this predator is a social animal that lives in groups, called prides, which are typically made up of several females, their cubs, and one or more males."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This carnivore is a symbol of strength and ferocity in many cultures."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This species is part of the big cat family and is often featured in conservation campaigns due to its endangered status."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_1",
+    "normal_word": "bread",
+    "spy_word": "rice",
+    "spy_player": "2",
+    "player_words": {
+      "1": "bread",
+      "2": "rice",
+      "3": "bread",
+      "4": "bread"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This staple food is often made from flour and water, and it's a key ingredient in many cultures' diets.",
+        "round2": "You can find this item in various forms, such as loaves, rolls, or baguettes, and it's commonly served with meals.",
+        "round3": "It undergoes a fermentation process before baking, which contributes to its texture and flavor, making it a beloved comfort food.",
+        "full_response": "Round 1 description: This staple food is often made from flour and water, and it's a key ingredient in many cultures' diets.  \nRound 2 description: You can find this item in various forms, such as loaves, rolls, or baguettes, and it's commonly served with meals.  \nRound 3 description: It undergoes a fermentation process before baking, which contributes to its texture and flavor, making it a beloved comfort food.  "
+      },
+      "2": {
+        "round1": "It's a staple food in many cultures, often served as a side dish in various cuisines around the world.",
+        "round2": "This food is usually grown in flooded fields and requires a lot of water to cultivate, making it a challenging crop to farm.",
+        "round3": "When cooked, it can be fluffy and soft, but if overcooked, it becomes mushy and unappetizing, so the cooking time is crucial to get it just right.",
+        "full_response": "Round 1 description: It's a staple food in many cultures, often served as a side dish in various cuisines around the world.\nRound 2 description: This food is usually grown in flooded fields and requires a lot of water to cultivate, making it a challenging crop to farm.\nRound 3 description: When cooked, it can be fluffy and soft, but if overcooked, it becomes mushy and unappetizing, so the cooking time is crucial to get it just right."
+      },
+      "3": {
+        "round1": "It's a staple food found in many cultures.",
+        "round2": "It's often served alongside soups and salads.",
+        "round3": "It can be toasted, sliced, or used to make sandwiches.",
+        "full_response": "Round 1 description: It's a staple food found in many cultures.\nRound 2 description: It's often served alongside soups and salads.\nRound 3 description: It can be toasted, sliced, or used to make sandwiches. \n"
+      },
+      "4": {
+        "round1": "This item is often found on the kitchen counter and is a staple in many households.",
+        "round2": "It's something you might slice for a quick snack or to prepare a meal.",
+        "round3": "This common food can be baked at home or purchased fresh from a local shop.",
+        "full_response": "Round 1 description: This item is often found on the kitchen counter and is a staple in many households.\nRound 2 description: It's something you might slice for a quick snack or to prepare a meal.\nRound 3 description: This common food can be baked at home or purchased fresh from a local shop."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This staple food is often made from flour and water, and it's a key ingredient in many cultures' diets."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a staple food in many cultures, often served as a side dish in various cuisines around the world."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's a staple food found in many cultures."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This item is often found on the kitchen counter and is a staple in many households."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You can find this item in various forms, such as loaves, rolls, or baguettes, and it's commonly served with meals."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This food is usually grown in flooded fields and requires a lot of water to cultivate, making it a challenging crop to farm."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's often served alongside soups and salads."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's something you might slice for a quick snack or to prepare a meal."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It undergoes a fermentation process before baking, which contributes to its texture and flavor, making it a beloved comfort food."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: When cooked, it can be fluffy and soft, but if overcooked, it becomes mushy and unappetizing, so the cooking time is crucial to get it just right."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It can be toasted, sliced, or used to make sandwiches."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This common food can be baked at home or purchased fresh from a local shop."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_5",
+    "normal_word": "star",
+    "spy_word": "planet",
+    "spy_player": "1",
+    "player_words": {
+      "1": "planet",
+      "2": "star",
+      "3": "star",
+      "4": "star"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a celestial body that orbits a star and is often categorized as terrestrial or gas giant, depending on its composition.",
+        "round2": "It is part of our solar system, and some of its members have rings or moons that accompany them on their journeys through space.",
+        "round3": "This entity is crucial for supporting life as we know it, providing the right conditions for ecosystems to thrive.",
+        "full_response": "Round 1 description: This is a celestial body that orbits a star and is often categorized as terrestrial or gas giant, depending on its composition.  \nRound 2 description: It is part of our solar system, and some of its members have rings or moons that accompany them on their journeys through space.  \nRound 3 description: This entity is crucial for supporting life as we know it, providing the right conditions for ecosystems to thrive."
+      },
+      "2": {
+        "round1": "It's a massive, luminous ball of hot, glowing gas that's often seen in the night sky, twinkling like a diamond against the dark canvas of space.",
+        "round2": "This celestial object is frequently associated with navigation, mythology, and romance, and its appearance has been a source of fascination and inspiration for humans throughout history.",
+        "round3": "The intense heat and energy emitted by this entity are so powerful that they can illuminate entire planets, making it a vital component of our solar system and a key factor in the formation of life.",
+        "full_response": "Round 1 description: It's a massive, luminous ball of hot, glowing gas that's often seen in the night sky, twinkling like a diamond against the dark canvas of space.\nRound 2 description: This celestial object is frequently associated with navigation, mythology, and romance, and its appearance has been a source of fascination and inspiration for humans throughout history.\nRound 3 description: The intense heat and energy emitted by this entity are so powerful that they can illuminate entire planets, making it a vital component of our solar system and a key factor in the formation of life."
+      },
+      "3": {
+        "round1": "It's something you might wish on.",
+        "round2": "It can be found in the night sky.",
+        "round3": "It often symbolizes hope and guidance.",
+        "full_response": "Round 1 description: It's something you might wish on.\nRound 2 description: It can be found in the night sky. \nRound 3 description: It often symbolizes hope and guidance. \n"
+      },
+      "4": {
+        "round1": "It's often associated with the night sky and can be used to navigate.",
+        "round2": "People often wish upon a specific configuration of this object.",
+        "round3": "Its appearance can vary greatly, from a tiny twinkle to a massive, glowing sphere.",
+        "full_response": "Round 1 description: It's often associated with the night sky and can be used to navigate.\nRound 2 description: People often wish upon a specific configuration of this object.\nRound 3 description: Its appearance can vary greatly, from a tiny twinkle to a massive, glowing sphere."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a celestial body that orbits a star and is often categorized as terrestrial or gas giant, depending on its composition."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a massive, luminous ball of hot, glowing gas that's often seen in the night sky, twinkling like a diamond against the dark canvas of space."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's something you might wish on."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's often associated with the night sky and can be used to navigate."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It is part of our solar system, and some of its members have rings or moons that accompany them on their journeys through space."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This celestial object is frequently associated with navigation, mythology, and romance, and its appearance has been a source of fascination and inspiration for humans throughout history."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It can be found in the night sky."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: People often wish upon a specific configuration of this object."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This entity is crucial for supporting life as we know it, providing the right conditions for ecosystems to thrive."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The intense heat and energy emitted by this entity are so powerful that they can illuminate entire planets, making it a vital component of our solar system and a key factor in the formation of life."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It often symbolizes hope and guidance."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: Its appearance can vary greatly, from a tiny twinkle to a massive, glowing sphere."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_4",
+    "normal_word": "sofa",
+    "spy_word": "couch",
+    "spy_player": "4",
+    "player_words": {
+      "1": "sofa",
+      "2": "sofa",
+      "3": "sofa",
+      "4": "couch"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a piece of furniture often found in living rooms, designed for sitting and lounging comfortably.",
+        "round2": "It typically has cushions and can often accommodate multiple people, making it a popular choice for social gatherings.",
+        "round3": "You might find this item paired with a coffee table, serving as a central spot for relaxation and entertainment in a home.",
+        "full_response": "Round 1 description: This is a piece of furniture often found in living rooms, designed for sitting and lounging comfortably.  \nRound 2 description: It typically has cushions and can often accommodate multiple people, making it a popular choice for social gatherings.  \nRound 3 description: You might find this item paired with a coffee table, serving as a central spot for relaxation and entertainment in a home.  "
+      },
+      "2": {
+        "round1": "It's a piece of furniture where people often relax and watch TV after a long day.",
+        "round2": "This item is typically found in a living room and is designed to seat multiple people at once.",
+        "round3": "Its comfort is often enhanced with the addition of cushions, pillows, and sometimes even a throw blanket.",
+        "full_response": "Round 1 description: It's a piece of furniture where people often relax and watch TV after a long day.\nRound 2 description: This item is typically found in a living room and is designed to seat multiple people at once.\nRound 3 description: Its comfort is often enhanced with the addition of cushions, pillows, and sometimes even a throw blanket."
+      },
+      "3": {
+        "round1": "It's a comfy place to relax and watch movies.",
+        "round2": "You might find it in a living room, often paired with a coffee table.",
+        "round3": "It's upholstered and comes in various styles and colors.",
+        "full_response": "Round 1 description: It's a comfy place to relax and watch movies.\nRound 2 description: You might find it in a living room, often paired with a coffee table.\nRound 3 description: It's upholstered and comes in various styles and colors. \n"
+      },
+      "4": {
+        "round1": "This piece of furniture is often the center of family gatherings in the living room.",
+        "round2": "It's a place where you can comfortably sit or lie down while watching TV.",
+        "round3": "Often covered with cushions and blankets, this item is perfect for a lazy Sunday.",
+        "full_response": "Round 1 description: This piece of furniture is often the center of family gatherings in the living room.\nRound 2 description: It's a place where you can comfortably sit or lie down while watching TV.\nRound 3 description: Often covered with cushions and blankets, this item is perfect for a lazy Sunday."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a piece of furniture often found in living rooms, designed for sitting and lounging comfortably."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a piece of furniture where people often relax and watch TV after a long day."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's a comfy place to relax and watch movies."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This piece of furniture is often the center of family gatherings in the living room."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It typically has cushions and can often accommodate multiple people, making it a popular choice for social gatherings."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This item is typically found in a living room and is designed to seat multiple people at once."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You might find it in a living room, often paired with a coffee table."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a place where you can comfortably sit or lie down while watching TV."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find this item paired with a coffee table, serving as a central spot for relaxation and entertainment in a home."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: Its comfort is often enhanced with the addition of cushions, pillows, and sometimes even a throw blanket."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's upholstered and comes in various styles and colors."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: Often covered with cushions and blankets, this item is perfect for a lazy Sunday."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_3",
+    "normal_word": "sofa",
+    "spy_word": "couch",
+    "spy_player": "2",
+    "player_words": {
+      "1": "sofa",
+      "2": "couch",
+      "3": "sofa",
+      "4": "sofa"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a piece of furniture that often serves as a central gathering spot in a living room, providing comfort for sitting and lounging.",
+        "round2": "You might find this item covered in various fabrics, and it often comes with cushions for added support and style.",
+        "round3": "This furniture piece typically accommodates multiple people and can sometimes be transformed into a bed for guests.",
+        "full_response": "Round 1 description: This is a piece of furniture that often serves as a central gathering spot in a living room, providing comfort for sitting and lounging.  \n\nRound 2 description: You might find this item covered in various fabrics, and it often comes with cushions for added support and style.  \n\nRound 3 description: This furniture piece typically accommodates multiple people and can sometimes be transformed into a bed for guests.  "
+      },
+      "2": {
+        "round1": "It's a piece of furniture where people often relax and watch TV, usually found in a living room or family room.",
+        "round2": "This item typically has cushions and upholstery, and it's designed to seat multiple people comfortably, sometimes with armrests on the sides.",
+        "round3": "In many homes, it's a central piece of furniture where family members and friends gather to socialize, take naps, or enjoy quiet time together.",
+        "full_response": "Round 1 description: It's a piece of furniture where people often relax and watch TV, usually found in a living room or family room.\nRound 2 description: This item typically has cushions and upholstery, and it's designed to seat multiple people comfortably, sometimes with armrests on the sides.\nRound 3 description: In many homes, it's a central piece of furniture where family members and friends gather to socialize, take naps, or enjoy quiet time together."
+      },
+      "3": {
+        "round1": "You often find it in a living room, perfect for relaxing after a long day.",
+        "round2": "It's typically upholstered and comes in various styles and fabrics.",
+        "round3": "It's a comfortable place to stretch out and watch a movie.",
+        "full_response": "Round 1 description: You often find it in a living room, perfect for relaxing after a long day.\nRound 2 description: It's typically upholstered and comes in various styles and fabrics.\nRound 3 description: It's a comfortable place to stretch out and watch a movie. \n"
+      },
+      "4": {
+        "round1": "This is a common piece of furniture where you can sit or lie down in your living room.",
+        "round2": "It's something you might choose based on comfort, style, and how well it matches your decor.",
+        "round3": "People often gather around this item to watch TV or have conversations.",
+        "full_response": "Round 1 description: This is a common piece of furniture where you can sit or lie down in your living room.\nRound 2 description: It's something you might choose based on comfort, style, and how well it matches your decor.\nRound 3 description: People often gather around this item to watch TV or have conversations."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a piece of furniture that often serves as a central gathering spot in a living room, providing comfort for sitting and lounging."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a piece of furniture where people often relax and watch TV, usually found in a living room or family room."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You often find it in a living room, perfect for relaxing after a long day."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is a common piece of furniture where you can sit or lie down in your living room."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find this item covered in various fabrics, and it often comes with cushions for added support and style."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This item typically has cushions and upholstery, and it's designed to seat multiple people comfortably, sometimes with armrests on the sides."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's typically upholstered and comes in various styles and fabrics."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's something you might choose based on comfort, style, and how well it matches your decor."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This furniture piece typically accommodates multiple people and can sometimes be transformed into a bed for guests."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: In many homes, it's a central piece of furniture where family members and friends gather to socialize, take naps, or enjoy quiet time together."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's a comfortable place to stretch out and watch a movie."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: People often gather around this item to watch TV or have conversations."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_2",
+    "normal_word": "castle",
+    "spy_word": "palace",
+    "spy_player": "4",
+    "player_words": {
+      "1": "castle",
+      "2": "castle",
+      "3": "castle",
+      "4": "palace"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a large, fortified structure that often has tall towers and walls designed for defense in historical times.",
+        "round2": "You might find this grand building on a hill, often surrounded by a beautiful landscape, serving as a royal residence or a place of power.",
+        "round3": "In many fairy tales, this impressive home often serves as the setting for adventures, featuring intricate architecture and sometimes a magical atmosphere.",
+        "full_response": "Round 1 description: This is a large, fortified structure that often has tall towers and walls designed for defense in historical times.  \nRound 2 description: You might find this grand building on a hill, often surrounded by a beautiful landscape, serving as a royal residence or a place of power.  \nRound 3 description: In many fairy tales, this impressive home often serves as the setting for adventures, featuring intricate architecture and sometimes a magical atmosphere."
+      },
+      "2": {
+        "round1": "This structure is often associated with medieval times and is typically depicted as a grand, fortified residence of a king or noble.",
+        "round2": "The architecture of this building often features towers, moats, and battlements, showcasing a blend of defensive and aesthetic design elements.",
+        "round3": "In modern times, this type of structure is frequently used as a tourist attraction, a filming location, or even a luxury hotel, offering a glimpse into history and opulence.",
+        "full_response": "Round 1 description: This structure is often associated with medieval times and is typically depicted as a grand, fortified residence of a king or noble.\nRound 2 description: The architecture of this building often features towers, moats, and battlements, showcasing a blend of defensive and aesthetic design elements.\nRound 3 description: In modern times, this type of structure is frequently used as a tourist attraction, a filming location, or even a luxury hotel, offering a glimpse into history and opulence."
+      },
+      "3": {
+        "round1": "It’s a large, impressive building often associated with royalty and history.",
+        "round2": "You might find a moat and drawbridge protecting this structure.",
+        "round3": "This place often features towers, thick walls, and is designed for defense.",
+        "full_response": "Round 1 description: It’s a large, impressive building often associated with royalty and history. \nRound 2 description:  You might find a moat and drawbridge protecting this structure.\nRound 3 description: This place often features towers, thick walls, and is designed for defense. \n\n\n"
+      },
+      "4": {
+        "round1": "This is a grand structure often associated with royalty and luxury.",
+        "round2": "It's a place that can house a large number of people and is known for its opulent decorations and vast gardens.",
+        "round3": "Think of a building that is not just a residence but a symbol of power and governance, often open for public tours.",
+        "full_response": "Round 1 description: This is a grand structure often associated with royalty and luxury.\nRound 2 description: It's a place that can house a large number of people and is known for its opulent decorations and vast gardens.\nRound 3 description: Think of a building that is not just a residence but a symbol of power and governance, often open for public tours."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a large, fortified structure that often has tall towers and walls designed for defense in historical times."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This structure is often associated with medieval times and is typically depicted as a grand, fortified residence of a king or noble."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s a large, impressive building often associated with royalty and history."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is a grand structure often associated with royalty and luxury."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find this grand building on a hill, often surrounded by a beautiful landscape, serving as a royal residence or a place of power."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The architecture of this building often features towers, moats, and battlements, showcasing a blend of defensive and aesthetic design elements."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You might find a moat and drawbridge protecting this structure."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a place that can house a large number of people and is known for its opulent decorations and vast gardens."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: In many fairy tales, this impressive home often serves as the setting for adventures, featuring intricate architecture and sometimes a magical atmosphere."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: In modern times, this type of structure is frequently used as a tourist attraction, a filming location, or even a luxury hotel, offering a glimpse into history and opulence."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This place often features towers, thick walls, and is designed for defense."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: Think of a building that is not just a residence but a symbol of power and governance, often open for public tours."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_2",
+    "normal_word": "chair",
+    "spy_word": "table",
+    "spy_player": "1",
+    "player_words": {
+      "1": "table",
+      "2": "chair",
+      "3": "chair",
+      "4": "chair"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This object is often found in dining rooms and is where families gather for meals and conversations.",
+        "round2": "You might use this flat surface for working, playing games, or displaying items in your living space.",
+        "round3": "It's a piece of furniture that typically has four legs and can come in various shapes, like round, square, or rectangular.",
+        "full_response": "Round 1 description: This object is often found in dining rooms and is where families gather for meals and conversations.  \nRound 2 description: You might use this flat surface for working, playing games, or displaying items in your living space.  \nRound 3 description: It's a piece of furniture that typically has four legs and can come in various shapes, like round, square, or rectangular.  "
+      },
+      "2": {
+        "round1": "It's something you might find in a living room, used for sitting and relaxing, often with a back support and legs to stand on.",
+        "round2": "This object is commonly found in offices, homes, and public spaces, serving as a piece of furniture designed to provide a comfortable place to sit for one person.",
+        "round3": "The item I'm thinking of can be made from a variety of materials, such as wood, metal, or plastic, and comes in many different styles, from modern to antique, to suit various tastes and decor.",
+        "full_response": "Round 1 description: It's something you might find in a living room, used for sitting and relaxing, often with a back support and legs to stand on.\nRound 2 description: This object is commonly found in offices, homes, and public spaces, serving as a piece of furniture designed to provide a comfortable place to sit for one person.\nRound 3 description: The item I'm thinking of can be made from a variety of materials, such as wood, metal, or plastic, and comes in many different styles, from modern to antique, to suit various tastes and decor."
+      },
+      "3": {
+        "round1": "You sit on it to read a book.",
+        "round2": "It often has four legs and a backrest.",
+        "round3": "It's commonly found in dining rooms and living rooms.",
+        "full_response": "Round 1 description: You sit on it to read a book.\nRound 2 description: It often has four legs and a backrest.\nRound 3 description: It's commonly found in dining rooms and living rooms. \n"
+      },
+      "4": {
+        "round1": "It's a piece of furniture commonly found in homes, offices, and schools.",
+        "round2": "You can sit on it, and it usually has four legs and a backrest.",
+        "round3": "It comes in various materials like wood, metal, and plastic, and can range from simple to ornate designs.",
+        "full_response": "Round 1 description: It's a piece of furniture commonly found in homes, offices, and schools.\nRound 2 description: You can sit on it, and it usually has four legs and a backrest.\nRound 3 description: It comes in various materials like wood, metal, and plastic, and can range from simple to ornate designs."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This object is often found in dining rooms and is where families gather for meals and conversations."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's something you might find in a living room, used for sitting and relaxing, often with a back support and legs to stand on."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You sit on it to read a book."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a piece of furniture commonly found in homes, offices, and schools."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might use this flat surface for working, playing games, or displaying items in your living space."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This object is commonly found in offices, homes, and public spaces, serving as a piece of furniture designed to provide a comfortable place to sit for one person."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It often has four legs and a backrest."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: You can sit on it, and it usually has four legs and a backrest."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It's a piece of furniture that typically has four legs and can come in various shapes, like round, square, or rectangular."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The item I'm thinking of can be made from a variety of materials, such as wood, metal, or plastic, and comes in many different styles, from modern to antique, to suit various tastes and decor."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's commonly found in dining rooms and living rooms."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It comes in various materials like wood, metal, and plastic, and can range from simple to ornate designs."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_1",
+    "normal_word": "book",
+    "spy_word": "magazine",
+    "spy_player": "1",
+    "player_words": {
+      "1": "magazine",
+      "2": "book",
+      "3": "book",
+      "4": "book"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a printed publication that often contains articles, photographs, and advertisements, typically released on a regular schedule.",
+        "round2": "It can be a source of entertainment or information, often focused on specific topics like fashion, technology, or lifestyle.",
+        "round3": "You might find it on a coffee table or in a waiting room, inviting readers to flip through its glossy pages for a quick read.",
+        "full_response": "Round 1 description: This is a printed publication that often contains articles, photographs, and advertisements, typically released on a regular schedule.  \nRound 2 description: It can be a source of entertainment or information, often focused on specific topics like fashion, technology, or lifestyle.  \nRound 3 description: You might find it on a coffee table or in a waiting room, inviting readers to flip through its glossy pages for a quick read.  "
+      },
+      "2": {
+        "round1": "It's something that you might find on a shelf in a library or a home, often filled with pages of written content.",
+        "round2": "This object is a common tool for learning, entertainment, and relaxation, and it can be held in your hands or listened to in audio format.",
+        "round3": "The item I'm thinking of has a cover that protects its inner contents, and it can be a valuable possession for someone who collects rare or special editions of it.",
+        "full_response": "Round 1 description: It's something that you might find on a shelf in a library or a home, often filled with pages of written content.\nRound 2 description: This object is a common tool for learning, entertainment, and relaxation, and it can be held in your hands or listened to in audio format.\nRound 3 description: The item I'm thinking of has a cover that protects its inner contents, and it can be a valuable possession for someone who collects rare or special editions of it."
+      },
+      "3": {
+        "round1": "It can hold countless stories within its pages.",
+        "round2": "It often has a spine but lacks bones.",
+        "round3": "You might find it on a shelf or in a library.",
+        "full_response": "Round 1 description: It can hold countless stories within its pages.\nRound 2 description: It often has a spine but lacks bones.\nRound 3 description: You might find it on a shelf or in a library. \n\n\n"
+      },
+      "4": {
+        "round1": "It's an object that can be filled with endless stories and information, often found in a library or on a nightstand.",
+        "round2": "People often turn to it for relaxation, learning, or escaping reality, and it can be made of paper or accessed digitally.",
+        "round3": "This item is cherished by many for its ability to preserve knowledge and spark imagination, and it's a common gift for birthdays and holidays.",
+        "full_response": "Round 1 description: It's an object that can be filled with endless stories and information, often found in a library or on a nightstand.\nRound 2 description: People often turn to it for relaxation, learning, or escaping reality, and it can be made of paper or accessed digitally.\nRound 3 description: This item is cherished by many for its ability to preserve knowledge and spark imagination, and it's a common gift for birthdays and holidays."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a printed publication that often contains articles, photographs, and advertisements, typically released on a regular schedule."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's something that you might find on a shelf in a library or a home, often filled with pages of written content."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It can hold countless stories within its pages."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's an object that can be filled with endless stories and information, often found in a library or on a nightstand."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It can be a source of entertainment or information, often focused on specific topics like fashion, technology, or lifestyle."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This object is a common tool for learning, entertainment, and relaxation, and it can be held in your hands or listened to in audio format."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It often has a spine but lacks bones."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: People often turn to it for relaxation, learning, or escaping reality, and it can be made of paper or accessed digitally."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find it on a coffee table or in a waiting room, inviting readers to flip through its glossy pages for a quick read."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The item I'm thinking of has a cover that protects its inner contents, and it can be a valuable possession for someone who collects rare or special editions of it."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You might find it on a shelf or in a library."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This item is cherished by many for its ability to preserve knowledge and spark imagination, and it's a common gift for birthdays and holidays."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_3",
+    "normal_word": "ocean",
+    "spy_word": "lake",
+    "spy_player": "1",
+    "player_words": {
+      "1": "lake",
+      "2": "ocean",
+      "3": "ocean",
+      "4": "ocean"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a large body of water, often surrounded by land, that can be a peaceful spot for relaxation and recreation.",
+        "round2": "Many people enjoy fishing, boating, or swimming in this natural feature that often reflects the sky.",
+        "round3": "It can be a habitat for various wildlife and is typically larger than a pond but smaller than an ocean.",
+        "full_response": "Round 1 description: This is a large body of water, often surrounded by land, that can be a peaceful spot for relaxation and recreation.  \nRound 2 description: Many people enjoy fishing, boating, or swimming in this natural feature that often reflects the sky.  \nRound 3 description: It can be a habitat for various wildlife and is typically larger than a pond but smaller than an ocean.  "
+      },
+      "2": {
+        "round1": "It's a vast body of water that covers a significant portion of our planet and is home to a diverse range of marine life.",
+        "round2": "This natural wonder has been a source of inspiration for artists, writers, and musicians throughout history, with its power and beauty evoking feelings of awe and serenity.",
+        "round3": "The ecosystem it supports is crucial for the global climate, with its currents and tides playing a key role in regulating the weather and temperature of the Earth.",
+        "full_response": "Round 1 description: It's a vast body of water that covers a significant portion of our planet and is home to a diverse range of marine life.\nRound 2 description: This natural wonder has been a source of inspiration for artists, writers, and musicians throughout history, with its power and beauty evoking feelings of awe and serenity.\nRound 3 description: The ecosystem it supports is crucial for the global climate, with its currents and tides playing a key role in regulating the weather and temperature of the Earth."
+      },
+      "3": {
+        "round1": "It's a vast, salty expanse home to diverse life.",
+        "round2": "Many people enjoy swimming and boating in this body of water.",
+        "round3": "It covers a large portion of our planet and plays a crucial role in the climate.",
+        "full_response": "Round 1 description: It's a vast, salty expanse home to diverse life.\nRound 2 description:  Many people enjoy swimming and boating in this body of water.\nRound 3 description: It covers a large portion of our planet and plays a crucial role in the climate. \n\n\n\n"
+      },
+      "4": {
+        "round1": "This vast body of water covers about 71% of the Earth's surface and is home to a diverse range of marine life.",
+        "round2": "It's a crucial part of the global climate system, playing a key role in regulating temperature and weather patterns.",
+        "round3": "Explorers and traders have long used this expansive waterway to connect different parts of the world, facilitating trade and cultural exchange.",
+        "full_response": "Round 1 description: This vast body of water covers about 71% of the Earth's surface and is home to a diverse range of marine life.\nRound 2 description: It's a crucial part of the global climate system, playing a key role in regulating temperature and weather patterns.\nRound 3 description: Explorers and traders have long used this expansive waterway to connect different parts of the world, facilitating trade and cultural exchange."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a large body of water, often surrounded by land, that can be a peaceful spot for relaxation and recreation."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a vast body of water that covers a significant portion of our planet and is home to a diverse range of marine life."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's a vast, salty expanse home to diverse life."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This vast body of water covers about 71% of the Earth's surface and is home to a diverse range of marine life."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Many people enjoy fishing, boating, or swimming in this natural feature that often reflects the sky."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This natural wonder has been a source of inspiration for artists, writers, and musicians throughout history, with its power and beauty evoking feelings of awe and serenity."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: Many people enjoy swimming and boating in this body of water."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a crucial part of the global climate system, playing a key role in regulating temperature and weather patterns."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It can be a habitat for various wildlife and is typically larger than a pond but smaller than an ocean."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The ecosystem it supports is crucial for the global climate, with its currents and tides playing a key role in regulating the weather and temperature of the Earth."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It covers a large portion of our planet and plays a crucial role in the climate."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: Explorers and traders have long used this expansive waterway to connect different parts of the world, facilitating trade and cultural exchange."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_4",
+    "normal_word": "star",
+    "spy_word": "planet",
+    "spy_player": "1",
+    "player_words": {
+      "1": "planet",
+      "2": "star",
+      "3": "star",
+      "4": "star"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a celestial body that orbits a star and can vary in size and composition.",
+        "round2": "You might find this object in our solar system, where it is one of the major components that make up the night sky.",
+        "round3": "Some of these entities can support life, while others are barren and inhospitable, showcasing the diversity of the universe.",
+        "full_response": "Round 1 description: This is a celestial body that orbits a star and can vary in size and composition.  \nRound 2 description: You might find this object in our solar system, where it is one of the major components that make up the night sky.  \nRound 3 description: Some of these entities can support life, while others are barren and inhospitable, showcasing the diversity of the universe."
+      },
+      "2": {
+        "round1": "It's a celestial body that is often associated with navigation and is used by sailors to chart their courses.",
+        "round2": "This object is a massive ball of hot, glowing gas that is held together by its own gravity and emits a tremendous amount of light and heat.",
+        "round3": "In many cultures, it's a symbol of excellence, achievement, or fame, and is often represented on flags, awards, or other insignia to signify greatness or prestige.",
+        "full_response": "Round 1 description: It's a celestial body that is often associated with navigation and is used by sailors to chart their courses.\nRound 2 description: This object is a massive ball of hot, glowing gas that is held together by its own gravity and emits a tremendous amount of light and heat.\nRound 3 description: In many cultures, it's a symbol of excellence, achievement, or fame, and is often represented on flags, awards, or other insignia to signify greatness or prestige."
+      },
+      "3": {
+        "round1": "It's a celestial body that provides light in the night sky.",
+        "round2": "It often appears on flags and emblems, symbolizing ambition and aspiration.",
+        "round3": "People make wishes upon it when they see it twinkling.",
+        "full_response": "Round 1 description: It's a celestial body that provides light in the night sky.\nRound 2 description: It often appears on flags and emblems, symbolizing ambition and aspiration.\nRound 3 description: People make wishes upon it when they see it twinkling. \n"
+      },
+      "4": {
+        "round1": "It's often used as a symbol of guidance and direction in the dark.",
+        "round2": "This celestial body is often associated with wishes and dreams.",
+        "round3": "It can be a symbol of excellence and is often used to rate or highlight quality in various fields.",
+        "full_response": "Round 1 description: It's often used as a symbol of guidance and direction in the dark.\nRound 2 description: This celestial body is often associated with wishes and dreams.\nRound 3 description: It can be a symbol of excellence and is often used to rate or highlight quality in various fields."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a celestial body that orbits a star and can vary in size and composition."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a celestial body that is often associated with navigation and is used by sailors to chart their courses."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's a celestial body that provides light in the night sky."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's often used as a symbol of guidance and direction in the dark."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find this object in our solar system, where it is one of the major components that make up the night sky."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This object is a massive ball of hot, glowing gas that is held together by its own gravity and emits a tremendous amount of light and heat."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It often appears on flags and emblems, symbolizing ambition and aspiration."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This celestial body is often associated with wishes and dreams."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Some of these entities can support life, while others are barren and inhospitable, showcasing the diversity of the universe."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: In many cultures, it's a symbol of excellence, achievement, or fame, and is often represented on flags, awards, or other insignia to signify greatness or prestige."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: People make wishes upon it when they see it twinkling."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It can be a symbol of excellence and is often used to rate or highlight quality in various fields."
+          }
+        ]
+      }
+    ]
+  }
+]
