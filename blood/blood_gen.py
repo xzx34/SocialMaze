@@ -229,9 +229,14 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
         # Check if this scenario has a unique solution
         solution_analysis = check_unique_solution(scenario_data)
         scenario_data["solution_analysis"] = solution_analysis
-        
-        # Only include scenarios with a unique solution
+
+        # Check if player 1's role is determined as "Unknown"
         if solution_analysis["unique_solution"]:
+            if "My Role Is Unknown" in solution_analysis["reasoning_process"]:
+                ground_truth_roles = scenario_data["ground_truth_roles"].copy()
+                ground_truth_roles["1"] = "Unknown"
+                scenario_data["ground_truth_roles"] = ground_truth_roles
+            
             dataset.append(scenario_data)
             solvable_scenarios += 1
             role_scenario_counts[player_roles["1"]] += 1
