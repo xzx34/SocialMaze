@@ -57,11 +57,13 @@ def extract_role_predictions(response, num_players):
     
     return role_predictions
 
-def extract_self_role_prediction(response, player_id, num_players):
-    """Extract the model's prediction of its own role (player_id)"""
+def extract_self_role_prediction(response, player_id):
+    """Extract the model's prediction of its own role"""
+    # Look for "My Role Is" or similar patterns
     patterns = [
-        rf"Final Player {player_id}:\s*(\w+)",
-        rf"Final Player {player_id} - (\w+)"
+        r"My Role Is (\w+)",
+        r"My Role is (\w+)",
+        r"My role is (\w+)"
     ]
     
     for pattern in patterns:
@@ -77,105 +79,15 @@ def extract_self_role_prediction(response, player_id, num_players):
                 return "Rumormonger"
             elif "Luna" in role:
                 return "Lunatic"
+            elif "Unknown" in role:
+                return "Unknown"
     
-    return None
-
-def calculate_scores(criminal_prediction, role_predictions, ground_truth_roles):
-    """
-    Calculate accuracy scores using the custom scoring system:
-    - 30 points for correctly identifying the criminal
-    - 70 points distributed evenly among other correct role identifications
-    
-    Returns a tuple of (score, criminal_correct, roles_correct, total_roles)
-    """
-    # Find the true criminal from ground truth
-    true_criminal = None
-    for player_id, role in ground_truth_roles.items():
-        if role == "Criminal":
-            true_criminal = player_id
-            break
-    
-    criminal_correct = 0
-    criminal_score = 0
-    if criminal_prediction == true_criminal:
-        criminal_correct = 1
-        criminal_score = 30
-    
-    # Calculate role score for non-criminal players (70 points distributed evenly)
-    roles_correct = 0
-    non_criminal_count = len(ground_truth_roles) - 1  # Exclude criminal
-    points_per_role = 70 / non_criminal_count if non_criminal_count > 0 else 0
-    
-    role_score = 0
-    for player_id, true_role in ground_truth_roles.items():
-        if player_id == true_criminal:
-            continue  # Skip the criminal, already counted
-            
-        if player_id in role_predictions and role_predictions[player_id] == true_role:
-            roles_correct += 1
-            role_score += points_per_role
-    
-    # Total score (0-100)
-    total_score = criminal_score + role_score
-    
-    return total_score, criminal_correct, roles_correct, non_criminal_count
-
-def calculate_scores_with_self_role(criminal_prediction, role_predictions, ground_truth_roles, player_id):
-    """
-    Calculate accuracy scores including self-role identification
-    
-    Returns a tuple of (
-        total_score, 
-        criminal_correct, 
-        roles_correct, 
-        non_criminal_count,
-        self_role_correct,
-        self_role_prediction
-    )
-    """
-    # Find the true criminal from ground truth
-    true_criminal = None
-    for pid, role in ground_truth_roles.items():
-        if role == "Criminal":
-            true_criminal = pid
-            break
-    
-    criminal_correct = 0
-    criminal_score = 0
-    if criminal_prediction == true_criminal:
-        criminal_correct = 1
-        criminal_score = 30
-    
-    # Extract self role prediction and check if correct
-    self_role_prediction = role_predictions.get(player_id)
-    true_self_role = ground_truth_roles.get(player_id)
-    self_role_correct = 0
-    if self_role_prediction == true_self_role:
-        self_role_correct = 1
-    
-    # Calculate role score for non-criminal players (70 points distributed evenly)
-    roles_correct = 0
-    non_criminal_count = len(ground_truth_roles) - 1  # Exclude criminal
-    points_per_role = 70 / non_criminal_count if non_criminal_count > 0 else 0
-    
-    role_score = 0
-    for pid, true_role in ground_truth_roles.items():
-        if pid == true_criminal:
-            continue  # Skip the criminal, already counted
-            
-        if pid in role_predictions and role_predictions[pid] == true_role:
-            roles_correct += 1
-            role_score += points_per_role
-    
-    # Total score (0-100)
-    total_score = criminal_score + role_score
-    
-    return total_score, criminal_correct, roles_correct, non_criminal_count, self_role_correct, self_role_prediction
+    return "Unknown"
 
 def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
     """
-    Evaluate model performance on the MetaSkeptic dataset with per-round tracking
-    and role-specific performance tracking
+    Evaluate model performance on the MetaSkeptic dataset focusing only on criminal 
+    prediction accuracy and self-role prediction accuracy
     
     Args:
         model: model name
@@ -195,7 +107,7 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
     
     results = []
     
-    # Track scores by round across all scenarios
+    # Track accuracy by round across all scenarios
     round_metrics = {1: [], 2: [], 3: []}
     
     # Track metrics by role of the player
@@ -216,6 +128,13 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
         player_id = "1"
         player_role = ground_truth_roles[player_id]  # Get the actual role of player 1
         system_prompt = scenario['prompts'][player_id]
+        
+        # Find the true criminal from ground truth
+        true_criminal = None
+        for pid, role in ground_truth_roles.items():
+            if role == "Criminal":
+                true_criminal = pid
+                break
         
         # Setup conversation history
         conversation = []
@@ -253,27 +172,21 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
             
             # Extract predictions
             criminal_prediction = extract_criminal_prediction(response)
-            role_predictions = extract_role_predictions(response, num_players)
+            self_role_prediction = extract_self_role_prediction(response, player_id)
             
-            # Calculate scores with new scoring system
-            total_score, criminal_correct, roles_correct, non_criminal_count, self_role_correct, self_role_prediction = calculate_scores_with_self_role(
-                criminal_prediction, role_predictions, ground_truth_roles, player_id
-            )
+            # Calculate accuracy metrics
+            criminal_correct = int(criminal_prediction == true_criminal)
+            self_role_correct = int(self_role_prediction == player_role)
             
             # Save round results
             round_result = {
                 "round": round_num,
                 "player_role": player_role,
                 "criminal_prediction": criminal_prediction,
+                "true_criminal": true_criminal, 
                 "criminal_correct": criminal_correct,
-                "criminal_score": 30 if criminal_correct else 0,
-                "role_predictions": role_predictions,
-                "roles_correct": roles_correct,
-                "non_criminal_count": non_criminal_count,
-                "role_score": total_score - (30 if criminal_correct else 0),
-                "total_score": total_score,
-                "self_role_correct": self_role_correct,
                 "self_role_prediction": self_role_prediction,
+                "self_role_correct": self_role_correct,
                 "response": response
             }
             
@@ -295,20 +208,17 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
         
         results.append(scenario_result)
     
-    # Calculate aggregate scores per round
+    # Calculate aggregate accuracy per round
     round_summaries = {}
     for round_num, metrics in round_metrics.items():
-        criminal_accuracy = sum(m["criminal_correct"] for m in metrics) / len(metrics) * 100 if metrics else 0
-        avg_total_score = sum(m["total_score"] for m in metrics) / len(metrics) if metrics else 0
-        avg_criminal_score = sum(m["criminal_score"] for m in metrics) / len(metrics) if metrics else 0
-        avg_role_score = sum(m["role_score"] for m in metrics) / len(metrics) if metrics else 0
-        self_role_accuracy = sum(m["self_role_correct"] for m in metrics) / len(metrics) * 100 if metrics else 0
+        if not metrics:
+            continue
+            
+        criminal_accuracy = sum(m["criminal_correct"] for m in metrics) / len(metrics) * 100
+        self_role_accuracy = sum(m["self_role_correct"] for m in metrics) / len(metrics) * 100
         
         round_summaries[round_num] = {
             "criminal_accuracy": criminal_accuracy,
-            "avg_total_score": avg_total_score,
-            "avg_criminal_score": avg_criminal_score,
-            "avg_role_score": avg_role_score,
             "self_role_accuracy": self_role_accuracy,
             "num_scenarios": len(metrics)
         }
@@ -323,16 +233,10 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
                 continue
                 
             criminal_accuracy = sum(m["criminal_correct"] for m in metrics) / len(metrics) * 100
-            avg_total_score = sum(m["total_score"] for m in metrics)
-            avg_criminal_score = sum(m["criminal_score"] for m in metrics) 
-            avg_role_score = sum(m["role_score"] for m in metrics)
             self_role_accuracy = sum(m["self_role_correct"] for m in metrics) / len(metrics) * 100
             
             role_summaries[role][round_num] = {
                 "criminal_accuracy": criminal_accuracy,
-                "avg_total_score": avg_total_score,
-                "avg_criminal_score": avg_criminal_score,
-                "avg_role_score": avg_role_score,
                 "self_role_accuracy": self_role_accuracy,
                 "num_scenarios": len(metrics)
             }
@@ -486,13 +390,12 @@ def main():
         for config, summary in model_results.items():
             player_count, dataset_type = config.split('_')
             print(f"\n  Config: {player_count}p {dataset_type}")
-            print(f"  {'Round':<10} {'Criminal Acc':<15} {'Self-Role Acc':<15} {'Total Score':<15}")
-            print(f"  {'-'*60}")
+            print(f"  {'Round':<10} {'Criminal Acc':<15} {'Self-Role Acc':<15}")
+            print(f"  {'-'*45}")
             
             for round_num, round_summary in sorted(summary["rounds"].items()):
                 print(f"  {round_num:<10} {round_summary['criminal_accuracy']:>5.1f}%{'':<9} "
-                      f"{round_summary['self_role_accuracy']:>5.1f}%{'':<9} "
-                      f"{round_summary['avg_total_score']:>5.1f}/100{'':<5}")
+                      f"{round_summary['self_role_accuracy']:>5.1f}%{'':<9}")
         
         # Performance by role
         print("\n  === Performance by Player Role ===")
@@ -510,14 +413,13 @@ def main():
                     continue
                     
                 print(f"\n  Role: {role}")
-                print(f"  {'Round':<10} {'Criminal Acc':<15} {'Self-Role Acc':<15} {'Total Score':<15}")
-                print(f"  {'-'*60}")
+                print(f"  {'Round':<10} {'Criminal Acc':<15} {'Self-Role Acc':<15}")
+                print(f"  {'-'*45}")
                 
                 for round_num, round_summary in sorted(role_data.items()):
                     if "num_scenarios" in round_summary and round_summary["num_scenarios"] > 0:
                         print(f"  {round_num:<10} {round_summary['criminal_accuracy']:>5.1f}%{'':<9} "
-                              f"{round_summary['self_role_accuracy']:>5.1f}%{'':<9} "
-                              f"{round_summary['avg_total_score']:>5.1f}/100{'':<5}")
+                              f"{round_summary['self_role_accuracy']:>5.1f}%{'':<9}")
         
         print("\n" + "-"*80 + "\n")
     
