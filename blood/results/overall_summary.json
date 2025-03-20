@@ -7,70 +7,70 @@
       "rounds": {
         "1": {
           "criminal_accuracy": 47.05882352941176,
-          "self_role_accuracy": 47.05882352941176,
+          "self_role_accuracy": 52.94117647058824,
           "num_scenarios": 17
         },
         "2": {
-          "criminal_accuracy": 76.47058823529412,
-          "self_role_accuracy": 47.05882352941176,
+          "criminal_accuracy": 58.82352941176471,
+          "self_role_accuracy": 52.94117647058824,
           "num_scenarios": 17
         },
         "3": {
-          "criminal_accuracy": 76.47058823529412,
-          "self_role_accuracy": 47.05882352941176,
+          "criminal_accuracy": 64.70588235294117,
+          "self_role_accuracy": 52.94117647058824,
           "num_scenarios": 17
         }
       },
       "role_specific": {
         "Investigator": {
           "1": {
-            "criminal_accuracy": 50.0,
+            "criminal_accuracy": 20.0,
             "self_role_accuracy": 100.0,
-            "num_scenarios": 4
+            "num_scenarios": 5
           },
           "2": {
-            "criminal_accuracy": 100.0,
+            "criminal_accuracy": 40.0,
             "self_role_accuracy": 100.0,
-            "num_scenarios": 4
+            "num_scenarios": 5
           },
           "3": {
-            "criminal_accuracy": 100.0,
+            "criminal_accuracy": 40.0,
             "self_role_accuracy": 100.0,
-            "num_scenarios": 4
+            "num_scenarios": 5
           }
         },
         "Criminal": {
           "1": {
-            "criminal_accuracy": 75.0,
+            "criminal_accuracy": 100.0,
             "self_role_accuracy": 100.0,
             "num_scenarios": 4
           },
           "2": {
-            "criminal_accuracy": 75.0,
+            "criminal_accuracy": 100.0,
             "self_role_accuracy": 100.0,
             "num_scenarios": 4
           },
           "3": {
-            "criminal_accuracy": 75.0,
+            "criminal_accuracy": 100.0,
             "self_role_accuracy": 100.0,
             "num_scenarios": 4
           }
         },
         "Rumormonger": {
           "1": {
-            "criminal_accuracy": 50.0,
+            "criminal_accuracy": 66.66666666666666,
             "self_role_accuracy": 0.0,
-            "num_scenarios": 4
+            "num_scenarios": 3
           },
           "2": {
-            "criminal_accuracy": 50.0,
+            "criminal_accuracy": 66.66666666666666,
             "self_role_accuracy": 0.0,
-            "num_scenarios": 4
+            "num_scenarios": 3
           },
           "3": {
-            "criminal_accuracy": 50.0,
+            "criminal_accuracy": 66.66666666666666,
             "self_role_accuracy": 0.0,
-            "num_scenarios": 4
+            "num_scenarios": 3
           }
         },
         "Lunatic": {
@@ -80,12 +80,12 @@
             "num_scenarios": 4
           },
           "2": {
-            "criminal_accuracy": 75.0,
+            "criminal_accuracy": 25.0,
             "self_role_accuracy": 0.0,
             "num_scenarios": 4
           },
           "3": {
-            "criminal_accuracy": 75.0,
+            "criminal_accuracy": 50.0,
             "self_role_accuracy": 0.0,
             "num_scenarios": 4
           }
@@ -100,43 +100,43 @@
       "num_scenarios": 17,
       "rounds": {
         "1": {
-          "criminal_accuracy": 52.94117647058824,
+          "criminal_accuracy": 41.17647058823529,
           "self_role_accuracy": 41.17647058823529,
           "num_scenarios": 17
         },
         "2": {
-          "criminal_accuracy": 58.82352941176471,
-          "self_role_accuracy": 47.05882352941176,
+          "criminal_accuracy": 41.17647058823529,
+          "self_role_accuracy": 52.94117647058824,
           "num_scenarios": 17
         },
         "3": {
-          "criminal_accuracy": 52.94117647058824,
-          "self_role_accuracy": 41.17647058823529,
+          "criminal_accuracy": 58.82352941176471,
+          "self_role_accuracy": 52.94117647058824,
           "num_scenarios": 17
         }
       },
       "role_specific": {
         "Investigator": {
           "1": {
-            "criminal_accuracy": 50.0,
-            "self_role_accuracy": 75.0,
-            "num_scenarios": 4
+            "criminal_accuracy": 0.0,
+            "self_role_accuracy": 80.0,
+            "num_scenarios": 5
           },
           "2": {
-            "criminal_accuracy": 75.0,
+            "criminal_accuracy": 0.0,
             "self_role_accuracy": 100.0,
-            "num_scenarios": 4
+            "num_scenarios": 5
           },
           "3": {
-            "criminal_accuracy": 75.0,
-            "self_role_accuracy": 75.0,
-            "num_scenarios": 4
+            "criminal_accuracy": 40.0,
+            "self_role_accuracy": 100.0,
+            "num_scenarios": 5
           }
         },
         "Criminal": {
           "1": {
             "criminal_accuracy": 100.0,
-            "self_role_accuracy": 100.0,
+            "self_role_accuracy": 75.0,
             "num_scenarios": 4
           },
           "2": {
@@ -152,19 +152,19 @@
         },
         "Rumormonger": {
           "1": {
-            "criminal_accuracy": 50.0,
+            "criminal_accuracy": 66.66666666666666,
             "self_role_accuracy": 0.0,
-            "num_scenarios": 4
+            "num_scenarios": 3
           },
           "2": {
-            "criminal_accuracy": 50.0,
+            "criminal_accuracy": 66.66666666666666,
             "self_role_accuracy": 0.0,
-            "num_scenarios": 4
+            "num_scenarios": 3
           },
           "3": {
-            "criminal_accuracy": 25.0,
+            "criminal_accuracy": 66.66666666666666,
             "self_role_accuracy": 0.0,
-            "num_scenarios": 4
+            "num_scenarios": 3
           }
         },
         "Lunatic": {
@@ -179,7 +179,7 @@
             "num_scenarios": 4
           },
           "3": {
-            "criminal_accuracy": 0.0,
+            "criminal_accuracy": 25.0,
             "self_role_accuracy": 0.0,
             "num_scenarios": 4
           }

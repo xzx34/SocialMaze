@@ -588,6 +588,9 @@ My Role Is {player1_determined_role}."""
         "reasoning_process": return_reasoning_process
     }
 
+def format_set(s):
+    return '{' + ', '.join(sorted(s)) + '}'
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Generate Blood Game dataset')
     parser.add_argument('--dataset_types', nargs='+', default=["original", "rumormonger", "lunatic", "all"],

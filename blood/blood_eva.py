@@ -1,7 +1,6 @@
 import re
 import json
 import os
-import time
 import argparse
 from tqdm import tqdm
 from dotenv import load_dotenv
@@ -14,9 +13,7 @@ load_dotenv()
 def extract_criminal_prediction(response):
     """Extract criminal prediction from model response"""
     patterns = [
-        r"Final Criminal Is Player (\d+)",
-        r"Final Criminal is Player (\d+)",
-        r"Final Criminal is player (\d+)"
+        r"Final Criminal Is Player (\d+)"
     ]
     
     for pattern in patterns:
@@ -26,44 +23,11 @@ def extract_criminal_prediction(response):
     
     return 'None'
 
-def extract_role_predictions(response, num_players):
-    """Extract role predictions for all players from model response"""
-    role_predictions = {}
-    
-    # Different patterns to match role assignments in the response
-    for player_id in range(1, num_players + 1):
-        player_str = str(player_id)
-        patterns = [
-            rf"Final Player {player_str}:\s*(\w+)",
-            rf"Final Player {player_str} - (\w+)"
-        ]
-        
-        for pattern in patterns:
-            matches = re.search(pattern, response, re.IGNORECASE)
-            if matches:
-                role = matches.group(1).strip().title()
-                # Normalize role names
-                if "Investigat" in role:
-                    role = "Investigator"
-                elif "Criminal" in role or "Killer" in role or "Murderer" in role:
-                    role = "Criminal"
-                elif "Rumor" in role:
-                    role = "Rumormonger"
-                elif "Luna" in role:
-                    role = "Lunatic"
-                    
-                role_predictions[player_str] = role
-                break
-    
-    return role_predictions
-
-def extract_self_role_prediction(response, player_id):
+def extract_self_role_prediction(response):
     """Extract the model's prediction of its own role"""
     # Look for "My Role Is" or similar patterns
     patterns = [
-        r"My Role Is (\w+)",
-        r"My Role is (\w+)",
-        r"My role is (\w+)"
+        r"My Role Is (\w+)"
     ]
     
     for pattern in patterns:
@@ -172,7 +136,7 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
             
             # Extract predictions
             criminal_prediction = extract_criminal_prediction(response)
-            self_role_prediction = extract_self_role_prediction(response, player_id)
+            self_role_prediction = extract_self_role_prediction(response)
             
             # Calculate accuracy metrics
             criminal_correct = int(criminal_prediction == true_criminal)
