@@ -594,7 +594,7 @@ def parse_args():
                         help='Types of datasets to generate')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6, 10],
                         help='Number of players in each game')
-    parser.add_argument('--n_scenarios_per_type', type=int, default=52,
+    parser.add_argument('--n_scenarios_per_type', type=int, default=17,
                         help='Number of scenarios to generate for each dataset type')
     parser.add_argument('--output_dir', type=str, default=None,
                         help='Custom output directory for saving datasets')
