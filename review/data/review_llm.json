@@ -1,0 +1,28 @@
+[
+  {
+    "scenario_id": "product_1",
+    "true_rating": 1,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "I was extremely disappointed with the UrbanStyle Travel Guide; it lacked any useful information about the destinations and felt more like a poorly organized collection of generic tips than a true travel resource. For nearly $50, I expected much more than what this guide offered, making it a waste of money for any traveler."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I was thoroughly disappointed with the UrbanStyle Travel Guide, which turned out to be a poorly researched and outdated book with inaccurate information and lackluster recommendations that completely failed to enhance my travel experience. The guide's subpar content and unhelpful maps made it essentially useless, leaving me to wonder how a product of such low quality could be sold at such a hefty price of $48.91."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "I expected a stylish guidebook for the price, but this was just a cheap pamphlet with blurry photos and basic information any free website could provide.  Complete waste of money."
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The UrbanStyle Travel Guide offers a sleek design and covers a wide range of urban destinations, which is quite appealing. However, the content feels a bit sparse and outdated in some sections, which could be disappointing for those seeking the latest insights and recommendations."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "The UrbanStyle Travel Guide is a complete disappointment, lacking any useful information or insights that would make it worth the exorbitant price; the layouts are poorly designed and the recommendations are outdated and unrealistic, making it a waste of time and money."
+      }
+    ]
+  }
+]

@@ -257,7 +257,6 @@ def get_review_from_api(prompt, reviewer_id, model_mapping=None):
     
     # Use the appropriate model based on reviewer_id
     model = model_mapping[reviewer_id]
-    print(f"Getting review for Reviewer {reviewer_id} ({REVIEWER_ROLES[reviewer_id]['type']}) using model: {model}")
     
     # Call the API using tool.get_chat_response
     response = get_chat_response(
@@ -292,9 +291,9 @@ def generate_dataset(n_scenarios):
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Generate dataset for e-commerce review inference')
-    parser.add_argument('--n_scenarios', type=int, default=10, 
+    parser.add_argument('--n_scenarios', type=int, default=1, 
                         help='Number of product scenarios to generate')
-    parser.add_argument('--output_name', type=str, default='review_dataset',
+    parser.add_argument('--output_name', type=str, default='review_llm',
                         help='Name of the output file (without extension)')
     parser.add_argument('--models', type=str, nargs=5, 
                         default=['gpt-4o-mini', 'llama-3.3-70B', 'gemma-2-27B', 'qwen-2.5-72B', 'gpt-4o-mini'],
@@ -324,61 +323,39 @@ def main():
     
     print(f"Generated {len(raw_dataset)} product scenarios")
     
-    # Save raw dataset
-    raw_output_path = data_dir / f"{args.output_name}_raw.json"
-    with open(raw_output_path, "w", encoding="utf-8") as f:
-        json.dump(raw_dataset, f, indent=2, ensure_ascii=False)
-    print(f"Raw dataset saved to {raw_output_path}")
-    # Create evaluation dataset with API-generated reviews
-    eval_dataset = []
+    # Create simplified dataset with API-generated reviews
+    simplified_dataset = []
     for i, scenario in enumerate(raw_dataset):
         print(f"Processing scenario {i+1}/{len(raw_dataset)}")
         
-        eval_scenario = {
-            "scenario_id": scenario["scenario_id"],
-            "product": scenario["product"],
-            "category": scenario["category"],
-            "brand": scenario["brand"],
-            "price": scenario["price"],
-            "description": scenario["description"],
-            "true_rating": scenario["true_rating"],
-            "reviewer_ratings": scenario["reviewer_ratings"],
-            "reviews": {}
-        }
+        # Temporary structure to hold review data
+        reviews = {}
         
         # Get reviews from API
         for reviewer_id in ["1", "2", "3", "4", "5"]:
+            print(f"  Getting review for Reviewer #{reviewer_id} using model: {model_mapping[reviewer_id]}")
             prompt = scenario["prompts"][reviewer_id]
             review_text = get_review_from_api(prompt, reviewer_id, model_mapping)
-            
-            eval_scenario["reviews"][reviewer_id] = {
-                "text": review_text,
-                "role": REVIEWER_ROLES[reviewer_id]["type"],
-                "assigned_rating": scenario["reviewer_ratings"][reviewer_id]
-            }
+            reviews[reviewer_id] = review_text
         
-        # Format reviews for easier consumption in the evaluation task
-        eval_scenario["formatted_reviews"] = [
-            {
-                "reviewer_id": reviewer_id,
-                "role": REVIEWER_ROLES[reviewer_id]["type"],
-                "text": eval_scenario["reviews"][reviewer_id]["text"]
-            }
-            for reviewer_id in ["1", "2", "3", "4", "5"]
-        ]
+        # Create simplified scenario structure
+        simplified_scenario = {
+            "scenario_id": scenario["scenario_id"],
+            "true_rating": scenario["true_rating"],
+            "formatted_reviews": [
+                {"reviewer_id": reviewer_id, "text": reviews[reviewer_id]}
+                for reviewer_id in ["1", "2", "3", "4", "5"]
+            ]
+        }
         
-        eval_dataset.append(eval_scenario)
-        
-        # Save progress after each scenario to avoid losing data if the script crashes
-        temp_output_path = data_dir / f"{args.output_name}_progress.json"
-        with open(temp_output_path, "w", encoding="utf-8") as f:
-            json.dump(eval_dataset, f, indent=2, ensure_ascii=False)
+        simplified_dataset.append(simplified_scenario)
     
-    # Save final evaluation dataset
-    eval_output_path = data_dir / f"{args.output_name}_eval.json"
-    with open(eval_output_path, "w", encoding="utf-8") as f:
-        json.dump(eval_dataset, f, indent=2, ensure_ascii=False)
-    print(f"Evaluation dataset saved to {eval_output_path}")
+    # Save final dataset
+    output_path = data_dir / "review_llm.json"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(simplified_dataset, f, indent=2, ensure_ascii=False)
+    
+    print(f"Dataset saved to {output_path}")
 
 if __name__ == "__main__":
     main()

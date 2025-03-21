@@ -92,7 +92,7 @@ Reviews:
         prompt += f"\nReviewer #{reviewer_id}: \"{text}\"\n"
     
     prompt += """
-Analyze these reviews carefully. What is the TRUE quality of this product on a scale of 1-5 stars?
+Analyze these reviews carefully. What is the TRUE quality of this product on a scale of 1-5 stars?  The rating should be rounded to the nearest whole number (e.g., 4.6 rounds to 5, 3.1 rounds to 3).
 First explain your reasoning, then provide your final rating in exactly this format:
 Final Rating: X
 Where X is a number from 1 to 5.
@@ -147,9 +147,6 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
         
         # Extract prediction
         prediction = extract_rating_prediction(response)
-        if prediction == 0:
-            print(f"Warning: Could not extract rating for scenario {scenario_id}. Using default of 3.")
-            prediction = 3  # Default to middle rating if extraction fails
         
         is_correct = prediction == true_rating
         
@@ -176,89 +173,112 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
     # Calculate accuracy
     accuracy = correct_predictions / total_scenarios * 100 if total_scenarios > 0 else 0
     
-    # Calculate per-rating accuracy and distribution
-    per_rating_metrics = {}
+    # Calculate distribution for each true rating
+    rating_distributions = {}
     for true_rating in range(1, 6):
-        # Get indices for this true rating (zero-indexed)
         true_idx = true_rating - 1
-        
-        # Count total instances of this true rating
         total = np.sum(confusion_matrix[true_idx])
         
         if total > 0:
-            # Calculate accuracy for this rating
-            correct = confusion_matrix[true_idx][true_idx]
-            rating_accuracy = (correct / total) * 100
-            
-            # Calculate distribution of predictions for this true rating
             distribution = {}
             for pred_rating in range(1, 6):
                 pred_idx = pred_rating - 1
                 count = confusion_matrix[true_idx][pred_idx]
                 percentage = (count / total) * 100 if total > 0 else 0
-                distribution[pred_rating] = {
-                    "count": int(count),
-                    "percentage": percentage
-                }
+                distribution[pred_rating] = percentage
             
-            per_rating_metrics[true_rating] = {
+            rating_distributions[true_rating] = {
                 "total": int(total),
-                "correct": int(correct),
-                "accuracy": rating_accuracy,
                 "distribution": distribution
             }
     
-    # Summary
+    # Create summary
     summary = {
         "model": model,
         "total_scenarios": total_scenarios,
         "correct_predictions": correct_predictions,
         "accuracy": accuracy,
         "confusion_matrix": confusion_matrix.tolist(),
-        "per_rating_metrics": per_rating_metrics,
-        "results": results
+        "rating_distributions": rating_distributions
     }
-    
-    # Print summary
-    print(f"\nModel: {model}")
-    print(f"Accuracy: {accuracy:.2f}% ({correct_predictions}/{total_scenarios})")
-    
-    # Print confusion matrix
-    print("\nConfusion Matrix (rows: true rating, columns: predicted rating):")
-    headers = [""] + [f"Pred {i}" for i in range(1, 6)]
-    table_data = []
-    for i in range(5):
-        row = [f"True {i+1}"] + [confusion_matrix[i][j] for j in range(5)]
-        table_data.append(row)
-    
-    # Print per-rating metrics
-    print("\nPer-Rating Metrics:")
-    for rating, metrics in per_rating_metrics.items():
-        print(f"\nTrue Rating: {rating}")
-        print(f"  Total samples: {metrics['total']}")
-        print(f"  Correctly predicted: {metrics['correct']} ({metrics['accuracy']:.2f}%)")
-        print("  Prediction distribution:")
-        for pred_rating, dist in metrics['distribution'].items():
-            print(f"    Predicted as {pred_rating}: {dist['count']} ({dist['percentage']:.2f}%)")
     
     # Save results if output file specified
     if output_file:
         # Ensure directory exists
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        
+        # Check if results file already exists
+        if os.path.exists(output_file):
+            # Read existing results
+            with open(output_file, 'r', encoding='utf-8') as f:
+                existing_results = json.load(f)
+                
+            # Update with new scenarios
+            existing_results_dict = {r["scenario_id"]: r for r in existing_results.get("results", [])}
+            for result in results:
+                existing_results_dict[result["scenario_id"]] = result
+                
+            # Recalculate confusion matrix and stats
+            updated_results = list(existing_results_dict.values())
+            updated_confusion_matrix = np.zeros((5, 5), dtype=int)
+            updated_correct = 0
+            
+            for r in updated_results:
+                if 1 <= r["prediction"] <= 5 and 1 <= r["true_rating"] <= 5:
+                    updated_confusion_matrix[r["true_rating"]-1][r["prediction"]-1] += 1
+                if r["correct"]:
+                    updated_correct += 1
+            
+            updated_total = len(updated_results)
+            updated_accuracy = updated_correct / updated_total * 100 if updated_total > 0 else 0
+            
+            # Recalculate rating distributions
+            updated_rating_distributions = {}
+            for true_rating in range(1, 6):
+                true_idx = true_rating - 1
+                total = np.sum(updated_confusion_matrix[true_idx])
+                
+                if total > 0:
+                    distribution = {}
+                    for pred_rating in range(1, 6):
+                        pred_idx = pred_rating - 1
+                        count = updated_confusion_matrix[true_idx][pred_idx]
+                        percentage = (count / total) * 100 if total > 0 else 0
+                        distribution[pred_rating] = percentage
+                    
+                    updated_rating_distributions[true_rating] = {
+                        "total": int(total),
+                        "distribution": distribution
+                    }
+            
+            # Update summary with new data
+            summary = {
+                "model": model,
+                "total_scenarios": updated_total,
+                "correct_predictions": updated_correct,
+                "accuracy": updated_accuracy,
+                "confusion_matrix": updated_confusion_matrix.tolist(),
+                "rating_distributions": updated_rating_distributions,
+                "results": updated_results
+            }
+        else:
+            # Add results to summary for new files
+            summary["results"] = results
+        
+        # Save results
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2, ensure_ascii=False)
-        print(f"Results saved to {output_file}")
     
     return summary
 
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on e-commerce review inference')
-    parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o-mini','llama-3.3-70B'],
+    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.3-70B', 'gemma-3-27B', 'qwen-2.5-72B','qwq'],
                         help='Models to evaluate (can provide multiple)')
-    parser.add_argument('--dataset', type=str, default='data/review_dataset_eval.json', 
+    parser.add_argument('--dataset', type=str, default='data/review_amazon.json', 
                         help='Path to dataset')
-    parser.add_argument('--num_scenarios', type=int, default=None, 
+    parser.add_argument('--num_scenarios', type=int, default=100, 
                         help='Number of scenarios to evaluate (default: all)')
     
     return parser.parse_args()
@@ -275,8 +295,19 @@ def main():
     # Get dataset basename for result files
     dataset_basename = os.path.basename(args.dataset).split('.')[0]
     
+    # Load existing summary if it exists
+    summary_file = results_dir / f"summary_{dataset_basename}.json"
+    existing_summary = {}
+    if os.path.exists(summary_file):
+        try:
+            with open(summary_file, 'r', encoding='utf-8') as f:
+                existing_summary = json.load(f)
+        except (json.JSONDecodeError, FileNotFoundError):
+            # If file is corrupted or not found, start with empty summary
+            existing_summary = {}
+    
     # Evaluate each model
-    results_summary = {}
+    results_summary = existing_summary.copy()
     for model in args.models:
         # Create unique output filename for this model
         output_file = results_dir / f"{model}_{dataset_basename}_results.json"
@@ -284,31 +315,17 @@ def main():
         # Run evaluation
         model_results = evaluate_model(model, args.dataset, args.num_scenarios, output_file)
         
-        # Add to summary
+        # Add or update model results in summary
         results_summary[model] = {
             "accuracy": model_results["accuracy"],
             "correct": model_results["correct_predictions"],
             "total": model_results["total_scenarios"],
-            "per_rating_accuracy": {
-                rating: metrics["accuracy"] 
-                for rating, metrics in model_results["per_rating_metrics"].items()
-            }
+            "rating_distributions": model_results["rating_distributions"]
         }
     
-    # Save overall summary
-    summary_file = results_dir / f"summary_{dataset_basename}.json"
+    # Save updated summary
     with open(summary_file, 'w', encoding='utf-8') as f:
         json.dump(results_summary, f, indent=2, ensure_ascii=False)
-    
-    print(f"\nOverall evaluation summary:")
-    for model, stats in results_summary.items():
-        print(f"{model}: {stats['accuracy']:.2f}% ({stats['correct']}/{stats['total']})")
-        
-        print("  Per-rating accuracy:")
-        for rating, accuracy in stats["per_rating_accuracy"].items():
-            print(f"    Rating {rating}: {accuracy:.2f}%")
-            
-    print(f"Summary saved to {summary_file}")
 
 if __name__ == "__main__":
     main()
