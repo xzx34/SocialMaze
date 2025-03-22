@@ -5,6 +5,7 @@ import argparse
 from tqdm import tqdm
 from dotenv import load_dotenv
 import sys
+import time
 sys.path.append("..") # Add parent directory to path
 from utils.tool import get_chat_response
 
@@ -48,27 +49,17 @@ def extract_self_role_prediction(response):
     
     return "Unknown"
 
-def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
+def evaluate_model(model, scenarios, dataset_name=None, output_file=None):
     """
-    Evaluate model performance on the MetaSkeptic dataset focusing only on criminal 
+    Evaluate model performance on the Blood Game scenarios focusing only on criminal 
     prediction accuracy and self-role prediction accuracy
     
     Args:
         model: model name
-        dataset_path: path to dataset json file
-        num_scenarios: number of scenarios to evaluate 
+        scenarios: list of scenario data to evaluate
+        dataset_name: optional name of the dataset
         output_file: optional file to save results
     """
-    # Load dataset
-    with open(dataset_path, 'r', encoding='utf-8') as f:
-        dataset = json.load(f)
-    
-    # Sample scenarios to evaluate
-    if num_scenarios < len(dataset):
-        evaluated_scenarios = dataset[:num_scenarios]
-    else:
-        evaluated_scenarios = dataset
-    
     results = []
     
     # Track accuracy by round across all scenarios
@@ -79,26 +70,22 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
         "Investigator": {1: [], 2: [], 3: []},
         "Criminal": {1: [], 2: [], 3: []},
         "Rumormonger": {1: [], 2: [], 3: []},
-        "Lunatic": {1: [], 2: [], 3: []}
+        "Lunatic": {1: [], 2: [], 3: []},
+        "Unknown": {1: [], 2: [], 3: []}  # Add Unknown role tracking
     }
     
-    for scenario in tqdm(evaluated_scenarios, desc=f"Evaluating {model}"):
+    for scenario in tqdm(scenarios, desc=f"Evaluating {model}"):
         scenario_id = scenario['scenario_id']
-        ground_truth_roles = scenario['ground_truth_roles']
-        num_players = len(ground_truth_roles)
+        ground_truth = scenario['ground_truth']
         statements = scenario['statements']
         
         # Choose player 1's perspective for consistency
         player_id = "1"
-        player_role = ground_truth_roles[player_id]  # Get the actual role of player 1
-        system_prompt = scenario['prompts'][player_id]
+        player_role = ground_truth["player1_role"]  # Get the actual role of player 1
+        system_prompt = scenario['prompts'][player_id] if 'prompts' in scenario else system_prompts.get(scenario_id)
         
-        # Find the true criminal from ground truth
-        true_criminal = None
-        for pid, role in ground_truth_roles.items():
-            if role == "Criminal":
-                true_criminal = pid
-                break
+        # Get the true criminal
+        true_criminal = ground_truth["criminal"]
         
         # Setup conversation history
         conversation = []
@@ -165,7 +152,7 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
         scenario_result = {
             "scenario_id": scenario_id,
             "dataset_type": scenario.get('dataset_type', ''),
-            "ground_truth_roles": ground_truth_roles,
+            "ground_truth": ground_truth,
             "player_role": player_role,
             "rounds": round_results
         }
@@ -208,7 +195,7 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
     # Create summary
     summary = {
         "model": model,
-        "dataset": os.path.basename(dataset_path),
+        "dataset": dataset_name,
         "num_scenarios": len(results),
         "rounds": round_summaries,
         "role_specific": role_summaries
@@ -231,13 +218,13 @@ def evaluate_model(model, dataset_path, num_scenarios, output_file=None):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate models on Blood Game scenarios')
-    parser.add_argument('--models', nargs='+', default=['gpt-4o-mini','llama-3.3-70B'], 
+    parser.add_argument('--models', nargs='+', default=['llama-3.3-70B', 'gemma-3-27B', 'qwen-2.5-72B','qwq'], 
                         help='Models to evaluate')
     parser.add_argument('--dataset_types', nargs='+', default=['all'],
                         help='Types of datasets to evaluate (original, rumormonger, lunatic, all)')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6],
                         help='Number of players in each game')
-    parser.add_argument('--num_scenarios', type=int, default=17,
+    parser.add_argument('--num_scenarios', type=int, default=2,
                         help='Number of scenarios to evaluate per dataset')
     parser.add_argument('--results_dir', type=str, default='results',
                         help='Custom directory for saving results (default: blood/results)')
@@ -289,57 +276,163 @@ def main():
                 if not os.path.exists(dataset_path):
                     print(f"Warning: {dataset_path} does not exist. Skipping.")
                     continue
+                
+                # Load the full dataset
+                with open(dataset_path, 'r', encoding='utf-8') as f:
+                    full_dataset = json.load(f)
 
+                # Main results file
                 output_file = os.path.join(results_dir, f"{model}_{player_count}_{dataset_type}_results.json")
                 detailed_results = None
+                
+                # Check if existing results file exists
                 if os.path.exists(output_file):
                     try:
                         with open(output_file, 'r', encoding='utf-8') as f:
                             existing_data = json.load(f)
                             detailed_results = existing_data.get("detailed_results", [])
                             print(f"Loaded existing detailed results for {model} on {os.path.basename(dataset_path)}")
+                            print(f"Found {len(detailed_results)} existing scenario results")
                     except Exception as e:
                         print(f"Error loading existing detailed results: {e}")
+                        # Create a backup of the problematic file
+                        if os.path.exists(output_file):
+                            backup_file = output_file + f".backup_{int(time.time())}"
+                            try:
+                                import shutil
+                                shutil.copy2(output_file, backup_file)
+                                print(f"Created backup of problematic file: {backup_file}")
+                            except Exception as backup_err:
+                                print(f"Failed to create backup: {backup_err}")
                 
                 print(f"Evaluating {model} on {os.path.basename(dataset_path)}")
                 
-                summary, new_results = evaluate_model(
-                    model=model, 
-                    dataset_path=dataset_path,
-                    num_scenarios=args.num_scenarios,
-                    output_file=None  # Don't save directly, we'll handle it ourselves
-                )
+                # Determine how many new scenarios to evaluate
+                num_existing = len(detailed_results) if detailed_results else 0
+                num_new = max(0, args.num_scenarios - num_existing)
                 
-                # If we have existing results, merge with new ones
+                if num_new <= 0:
+                    print(f"Already have {num_existing} results, which meets or exceeds the requested {args.num_scenarios}.")
+                    print("Skipping evaluation. To force re-evaluation, use a higher --num_scenarios value.")
+                    continue
+                
+                print(f"Will evaluate {num_new} new scenarios to reach target of {args.num_scenarios}")
+                
+                # Get a slice of the dataset that excludes already evaluated scenarios
                 if detailed_results:
-                    # Create a lookup of existing scenario IDs
+                    # Get IDs of scenarios already evaluated
                     existing_ids = {result['scenario_id'] for result in detailed_results}
                     
-                    # Add only new scenarios that don't already exist
-                    for result in new_results:
-                        if result['scenario_id'] not in existing_ids:
-                            detailed_results.append(result)
-                            existing_ids.add(result['scenario_id'])
+                    # Find scenarios in the dataset that haven't been evaluated yet
+                    new_scenarios = [s for s in full_dataset if s['scenario_id'] not in existing_ids]
                     
-                    # Save merged results
-                    output_data = {
-                        "summary": summary,
-                        "detailed_results": detailed_results
-                    }
+                    if len(new_scenarios) < num_new:
+                        print(f"Warning: Only {len(new_scenarios)} new scenarios available")
+                        num_new = len(new_scenarios)
                     
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        json.dump(output_data, f, indent=2)
+                    # Take only the number of new scenarios needed
+                    eval_scenarios = new_scenarios[:num_new]
                 else:
-                    # Save new results as is
-                    output_data = {
-                        "summary": summary,
-                        "detailed_results": new_results
-                    }
-                    
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        json.dump(output_data, f, indent=2)
+                    # No existing results, just take the first num_new scenarios
+                    eval_scenarios = full_dataset[:num_new]
                 
-                model_results[f"{player_count}_{dataset_type}"] = summary
+                # Only evaluate if there are new scenarios to process
+                if eval_scenarios:
+                    summary, new_results = evaluate_model(
+                        model=model, 
+                        scenarios=eval_scenarios,
+                        output_file=None  # Don't save directly, we'll handle it ourselves
+                    )
+                    
+                    # If we have existing results, merge with new ones
+                    if detailed_results:
+                        # Merge the new results with existing ones
+                        combined_results = detailed_results + new_results
+                        print(f"Combined {len(detailed_results)} existing and {len(new_results)} new results")
+                        
+                        # Recalculate summary based on all results
+                        all_round_metrics = {1: [], 2: [], 3: []}
+                        all_role_metrics = {
+                            "Investigator": {1: [], 2: [], 3: []},
+                            "Criminal": {1: [], 2: [], 3: []},
+                            "Rumormonger": {1: [], 2: [], 3: []},
+                            "Lunatic": {1: [], 2: [], 3: []},
+                            "Unknown": {1: [], 2: [], 3: []}
+                        }
+                        
+                        # Collect metrics from all results
+                        for result in combined_results:
+                            for round_result in result['rounds']:
+                                round_num = round_result['round']
+                                all_round_metrics[round_num].append(round_result)
+                                
+                                player_role = round_result['player_role']
+                                if player_role in all_role_metrics:
+                                    all_role_metrics[player_role][round_num].append(round_result)
+                        
+                        # Recalculate summary
+                        updated_summary = {
+                            "model": model,
+                            "dataset": os.path.basename(dataset_path),
+                            "num_scenarios": len(combined_results),
+                            "rounds": {},
+                            "role_specific": {}
+                        }
+                        
+                        # Update round metrics
+                        for round_num, metrics in all_round_metrics.items():
+                            if not metrics:
+                                continue
+                                
+                            criminal_accuracy = sum(m["criminal_correct"] for m in metrics) / len(metrics) * 100
+                            self_role_accuracy = sum(m["self_role_correct"] for m in metrics) / len(metrics) * 100
+                            
+                            updated_summary["rounds"][str(round_num)] = {
+                                "criminal_accuracy": criminal_accuracy,
+                                "self_role_accuracy": self_role_accuracy,
+                                "num_scenarios": len(metrics)
+                            }
+                        
+                        # Update role-specific metrics
+                        for role, rounds in all_role_metrics.items():
+                            updated_summary["role_specific"][role] = {}
+                            
+                            for round_num, metrics in rounds.items():
+                                if not metrics:
+                                    continue
+                                    
+                                criminal_accuracy = sum(m["criminal_correct"] for m in metrics) / len(metrics) * 100
+                                self_role_accuracy = sum(m["self_role_correct"] for m in metrics) / len(metrics) * 100
+                                
+                                updated_summary["role_specific"][role][str(round_num)] = {
+                                    "criminal_accuracy": criminal_accuracy,
+                                    "self_role_accuracy": self_role_accuracy,
+                                    "num_scenarios": len(metrics)
+                                }
+                        
+                        # Save updated results
+                        output_data = {
+                            "summary": updated_summary,
+                            "detailed_results": combined_results
+                        }
+                        
+                        with open(output_file, 'w', encoding='utf-8') as f:
+                            json.dump(output_data, f, indent=2)
+                        
+                        model_results[f"{player_count}_{dataset_type}"] = updated_summary
+                    else:
+                        # No existing results, save new results as is
+                        output_data = {
+                            "summary": summary,
+                            "detailed_results": new_results
+                        }
+                        
+                        with open(output_file, 'w', encoding='utf-8') as f:
+                            json.dump(output_data, f, indent=2)
+                        
+                        model_results[f"{player_count}_{dataset_type}"] = summary
+                else:
+                    print(f"No new scenarios to evaluate for {model} on {os.path.basename(dataset_path)}")
         
         all_results[model] = model_results
     

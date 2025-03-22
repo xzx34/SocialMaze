@@ -222,7 +222,10 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
             "dataset_type": dataset_type,
             "roles": player_roles,
             "statements": statements,
-            "ground_truth_roles": player_roles,
+            "ground_truth": {
+                "criminal": criminal_id,
+                "player1_role": player_roles["1"]
+            },
             "prompts": prompts 
         }
         
@@ -233,9 +236,8 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
         # Check if player 1's role is determined as "Unknown"
         if solution_analysis["unique_solution"]:
             if "My Role Is Unknown" in solution_analysis["reasoning_process"]:
-                ground_truth_roles = scenario_data["ground_truth_roles"].copy()
-                ground_truth_roles["1"] = "Unknown"
-                scenario_data["ground_truth_roles"] = ground_truth_roles
+                # 更新 ground_truth 中的 player1_role 为 Unknown
+                scenario_data["ground_truth"]["player1_role"] = "Unknown"
             
             dataset.append(scenario_data)
             solvable_scenarios += 1
@@ -597,7 +599,7 @@ def parse_args():
                         help='Types of datasets to generate')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6, 10],
                         help='Number of players in each game')
-    parser.add_argument('--n_scenarios_per_type', type=int, default=17,
+    parser.add_argument('--n_scenarios_per_type', type=int, default=100,
                         help='Number of scenarios to generate for each dataset type')
     parser.add_argument('--output_dir', type=str, default=None,
                         help='Custom output directory for saving datasets')
