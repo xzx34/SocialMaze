@@ -6,6 +6,7 @@ from tqdm import tqdm
 from dotenv import load_dotenv
 import sys
 import time
+import concurrent.futures
 sys.path.append("..") # Add parent directory to path
 from utils.tool import get_chat_response
 
@@ -49,7 +50,94 @@ def extract_self_role_prediction(response):
     
     return "Unknown"
 
-def evaluate_model(model, scenarios, dataset_name=None, output_file=None):
+def evaluate_scenario(model, scenario):
+    """
+    Evaluate a single scenario and return the results
+    
+    Args:
+        model: model name
+        scenario: scenario data to evaluate
+    """
+    scenario_id = scenario['scenario_id']
+    ground_truth = scenario['ground_truth']
+    statements = scenario['statements']
+    
+    # Choose player 1's perspective for consistency
+    player_id = "1"
+    player_role = ground_truth["player1_role"]  # Get the actual role of player 1
+    system_prompt = scenario['prompts'][player_id]
+    
+    # Get the true criminal
+    true_criminal = ground_truth["criminal"]
+    
+    # Setup conversation history
+    conversation = []
+    round_results = []
+    
+    # Evaluate each round
+    for round_idx, round_data in enumerate(statements):
+        round_num = round_data["round"]
+        round_statements = round_data["statements"]
+        
+        # Format the statements for this round
+        statements_text = f"\nRound {round_num} statements:\n"
+        for stmt in round_statements:
+            statements_text += f"{stmt['statement']}\n"
+        
+        # Add this round's statements to conversation
+        conversation.append({
+            "role": "user", 
+            "content": statements_text
+        })
+        
+        # Get model response
+        response = get_chat_response(
+            model=model,
+            system_message=system_prompt,
+            messages=conversation,
+            temperature=0.7
+        )
+        
+        # Add model response to conversation
+        conversation.append({
+            "role": "assistant",
+            "content": response
+        })
+        
+        # Extract predictions
+        criminal_prediction = extract_criminal_prediction(response)
+        self_role_prediction = extract_self_role_prediction(response)
+        
+        # Calculate accuracy metrics
+        criminal_correct = int(criminal_prediction == true_criminal)
+        self_role_correct = int(self_role_prediction == player_role)
+        
+        # Save round results
+        round_result = {
+            "round": round_num,
+            "player_role": player_role,
+            "criminal_prediction": criminal_prediction,
+            "true_criminal": true_criminal, 
+            "criminal_correct": criminal_correct,
+            "self_role_prediction": self_role_prediction,
+            "self_role_correct": self_role_correct,
+            "response": response
+        }
+        
+        round_results.append(round_result)
+    
+    # Save scenario results
+    scenario_result = {
+        "scenario_id": scenario_id,
+        "dataset_type": scenario.get('dataset_type', ''),
+        "ground_truth": ground_truth,
+        "player_role": player_role,
+        "rounds": round_results
+    }
+    
+    return scenario_result
+
+def evaluate_model(model, scenarios, dataset_name=None, output_file=None, max_workers=4):
     """
     Evaluate model performance on the Blood Game scenarios focusing only on criminal 
     prediction accuracy and self-role prediction accuracy
@@ -59,6 +147,7 @@ def evaluate_model(model, scenarios, dataset_name=None, output_file=None):
         scenarios: list of scenario data to evaluate
         dataset_name: optional name of the dataset
         output_file: optional file to save results
+        max_workers: maximum number of workers for parallel execution
     """
     results = []
     
@@ -74,90 +163,37 @@ def evaluate_model(model, scenarios, dataset_name=None, output_file=None):
         "Unknown": {1: [], 2: [], 3: []}  # Add Unknown role tracking
     }
     
-    for scenario in tqdm(scenarios, desc=f"Evaluating {model}"):
-        scenario_id = scenario['scenario_id']
-        ground_truth = scenario['ground_truth']
-        statements = scenario['statements']
-        
-        # Choose player 1's perspective for consistency
-        player_id = "1"
-        player_role = ground_truth["player1_role"]  # Get the actual role of player 1
-        system_prompt = scenario['prompts'][player_id] if 'prompts' in scenario else system_prompts.get(scenario_id)
-        
-        # Get the true criminal
-        true_criminal = ground_truth["criminal"]
-        
-        # Setup conversation history
-        conversation = []
-        round_results = []
-        
-        # Evaluate each round
-        for round_idx, round_data in enumerate(statements):
-            round_num = round_data["round"]
-            round_statements = round_data["statements"]
-            
-            # Format the statements for this round
-            statements_text = f"\nRound {round_num} statements:\n"
-            for stmt in round_statements:
-                statements_text += f"{stmt['statement']}\n"
-            
-            # Add this round's statements to conversation
-            conversation.append({
-                "role": "user", 
-                "content": statements_text
-            })
-            
-            # Get model response
-            response = get_chat_response(
-                model=model,
-                system_message=system_prompt,
-                messages=conversation,
-                temperature=0.001
-            )
-            
-            # Add model response to conversation
-            conversation.append({
-                "role": "assistant",
-                "content": response
-            })
-            
-            # Extract predictions
-            criminal_prediction = extract_criminal_prediction(response)
-            self_role_prediction = extract_self_role_prediction(response)
-            
-            # Calculate accuracy metrics
-            criminal_correct = int(criminal_prediction == true_criminal)
-            self_role_correct = int(self_role_prediction == player_role)
-            
-            # Save round results
-            round_result = {
-                "round": round_num,
-                "player_role": player_role,
-                "criminal_prediction": criminal_prediction,
-                "true_criminal": true_criminal, 
-                "criminal_correct": criminal_correct,
-                "self_role_prediction": self_role_prediction,
-                "self_role_correct": self_role_correct,
-                "response": response
-            }
-            
-            round_results.append(round_result)
-            round_metrics[round_num].append(round_result)
-            
-            # Also track by player's role
-            if player_role in role_metrics:
-                role_metrics[player_role][round_num].append(round_result)
-        
-        # Save scenario results
-        scenario_result = {
-            "scenario_id": scenario_id,
-            "dataset_type": scenario.get('dataset_type', ''),
-            "ground_truth": ground_truth,
-            "player_role": player_role,
-            "rounds": round_results
+    # Use ThreadPoolExecutor for concurrent evaluation
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all scenarios to the executor
+        future_to_scenario = {
+            executor.submit(evaluate_scenario, model, scenario): scenario
+            for scenario in scenarios
         }
         
-        results.append(scenario_result)
+        # Process results as they complete
+        for future in tqdm(concurrent.futures.as_completed(future_to_scenario), 
+                          total=len(scenarios), 
+                          desc=f"Evaluating {model}"):
+            try:
+                scenario_result = future.result()
+                results.append(scenario_result)
+                
+                # Extract round results for metrics
+                for round_result in scenario_result["rounds"]:
+                    round_num = round_result["round"]
+                    player_role = round_result["player_role"]
+                    
+                    # Add to round metrics
+                    round_metrics[round_num].append(round_result)
+                    
+                    # Add to role-specific metrics
+                    if player_role in role_metrics:
+                        role_metrics[player_role][round_num].append(round_result)
+                        
+            except Exception as e:
+                scenario = future_to_scenario[future]
+                print(f"Error evaluating scenario {scenario['scenario_id']}: {e}")
     
     # Calculate aggregate accuracy per round
     round_summaries = {}
@@ -218,16 +254,19 @@ def evaluate_model(model, scenarios, dataset_name=None, output_file=None):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate models on Blood Game scenarios')
-    parser.add_argument('--models', nargs='+', default=['llama-3.3-70B', 'gemma-3-27B', 'qwen-2.5-72B','qwq'], 
+    #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq
+    parser.add_argument('--models', nargs='+', default=['llama-3.1-8B', 'gemma-2-9B', 'gemma-2-27B', 'llama-3.3-70B', 'qwen-2.5-72B', 'qwq'], 
                         help='Models to evaluate')
-    parser.add_argument('--dataset_types', nargs='+', default=['all'],
+    parser.add_argument('--dataset_types', nargs='+', default=['original','rumormonger','lunatic','all'],
                         help='Types of datasets to evaluate (original, rumormonger, lunatic, all)')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6],
                         help='Number of players in each game')
-    parser.add_argument('--num_scenarios', type=int, default=2,
+    parser.add_argument('--num_scenarios', type=int, default=100,
                         help='Number of scenarios to evaluate per dataset')
     parser.add_argument('--results_dir', type=str, default='results',
                         help='Custom directory for saving results (default: blood/results)')
+    parser.add_argument('--max_workers', type=int, default=10,
+                        help='Maximum number of workers for parallel execution')
     return parser.parse_args()
 
 def main():
@@ -239,6 +278,9 @@ def main():
     # Dataset types to evaluate
     dataset_types = args.dataset_types
     player_counts = args.player_counts
+    
+    # Maximum workers for parallel execution
+    max_workers = args.max_workers
     
     # Use specified results directory or create default
     if args.results_dir:
@@ -341,7 +383,9 @@ def main():
                     summary, new_results = evaluate_model(
                         model=model, 
                         scenarios=eval_scenarios,
-                        output_file=None  # Don't save directly, we'll handle it ourselves
+                        dataset_name=os.path.basename(dataset_path),
+                        output_file=None,  # Don't save directly, we'll handle it ourselves
+                        max_workers=max_workers
                     )
                     
                     # If we have existing results, merge with new ones

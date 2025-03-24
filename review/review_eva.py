@@ -265,7 +265,7 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on e-commerce review inference')
-    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.3-70B', 'gemma-3-27B', 'qwen-2.5-72B','qwq'],
+    parser.add_argument('--models', type=str, nargs='+', default=[''],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--dataset', type=str, default='data/review_amazon.json', 
                         help='Path to dataset')
