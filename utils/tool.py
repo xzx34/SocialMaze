@@ -7,6 +7,7 @@ from openai import OpenAI
 import anthropic
 from dotenv import load_dotenv
 import datetime
+import tempfile
 
 load_dotenv()
 
@@ -36,28 +37,37 @@ model_dict = {
 
 def log_token_cost(model, total_tokens):
     """
-    Log token usage to a single file for cost calculation
+    记录模型token使用量的累计总和
     
     Args:
-        model: model name
-        total_tokens: total number of tokens used (input + output)
+        model: 模型名称
+        total_tokens: 本次使用的token数量(输入+输出)
     """
-    # Create logs directory if it doesn't exist
+    # 创建logs目录(如果不存在)
     log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs")
     os.makedirs(log_dir, exist_ok=True)
     
-    # Single file for all token costs
-    log_file = os.path.join(log_dir, "token_costs.csv")
+    # 使用JSON文件记录每个模型的累计token使用量
+    log_file = os.path.join(log_dir, "model_token_totals.json")
     
-    # Check if file exists and create header if not
-    file_exists = os.path.exists(log_file)
+    # 读取现有的token累计数据(如果存在)
+    token_totals = {}
+    if os.path.exists(log_file):
+        try:
+            with open(log_file, "r", encoding="utf-8") as f:
+                token_totals = json.load(f)
+        except:
+            token_totals = {}
     
-    with open(log_file, "a", encoding="utf-8") as f:
-        if not file_exists:
-            f.write("timestamp,model,total_tokens\n")
-        
-        timestamp = datetime.datetime.now().isoformat()
-        f.write(f"{timestamp},{model},{total_tokens}\n")
+    # 更新当前模型的token累计量
+    if model in token_totals:
+        token_totals[model] += total_tokens
+    else:
+        token_totals[model] = total_tokens
+    
+    # 保存更新后的累计数据
+    with open(log_file, "w", encoding="utf-8") as f:
+        json.dump(token_totals, f, indent=2)
 
 
 def get_chat_response(model, system_message, messages, temperature=0.001, max_retries=3):
@@ -106,7 +116,7 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 return message.content[0].text
             
             # Handle DeepInfra models
-            if model in ['deepseek-v3', 'deepseek-r1', 'deepseek-r1-32B', 'deepseek-r1-70B', 'qwq', 'llama-3.3-70B', 'llama-3.1-70B', 'llama-3.1-8B', 'qwen-2.5-72B', 'gemma-2-27B', 'gemma-3-27B']:
+            if model in ['deepseek-v3', 'deepseek-r1', 'deepseek-r1-32B', 'deepseek-r1-70B', 'qwq', 'llama-3.3-70B', 'llama-3.1-70B', 'llama-3.1-8B', 'qwen-2.5-72B', 'gemma-2-27B', 'gemma-3-27B','gemma-2-9B']:
                 client = OpenAI(
                     api_key=os.getenv('DEEPINFRA_API_KEY'),
                     base_url=os.getenv('DEEPINFRA_BASE_URL')
@@ -199,18 +209,78 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 formatted_messages = [{"role": "system", "content": system_message}]
                 formatted_messages.extend(messages)
                 
-                response = client.chat.completions.create(
-                    model=model_dict[model],
-                    messages=formatted_messages,
-                    temperature=temperature,
-                )
+                # 创建临时JSONL文件用于批处理API
+                with tempfile.NamedTemporaryFile(mode='w', suffix='.jsonl', delete=False) as temp_file:
+                    # 准备批处理请求
+                    batch_request = {
+                        "custom_id": "request-1",
+                        "method": "POST", 
+                        "url": "/v1/chat/completions",
+                        "body": {
+                            "model": model_dict[model],
+                            "messages": formatted_messages,
+                            "temperature": temperature
+                        }
+                    }
+                    json.dump(batch_request, temp_file)
+                    temp_file_path = temp_file.name
                 
-                # Log token usage
-                if hasattr(response, 'usage') and response.usage:
-                    total_tokens = response.usage.total_tokens
-                    log_token_cost(model, total_tokens)
-
-                return response.choices[0].message.content
+                try:
+                    # 上传文件
+                    with open(temp_file_path, 'rb') as file:
+                        uploaded_file = client.files.create(
+                            file=file,
+                            purpose="batch"
+                        )
+                    
+                    # 创建批处理任务
+                    batch_job = client.batches.create(
+                        input_file_id=uploaded_file.id,
+                        endpoint="/v1/chat/completions",
+                        completion_window="24h"
+                    )
+                    
+                    # 等待批处理完成
+                    batch_status = None
+                    while batch_status not in ["completed", "failed", "expired", "cancelled"]:
+                        batch_info = client.batches.retrieve(batch_job.id)
+                        batch_status = batch_info.status
+                        
+                        if batch_status in ["completed", "failed", "expired", "cancelled"]:
+                            break
+                        
+                        # 睡眠一段时间后再检查状态
+                        time.sleep(5)
+                    
+                    if batch_status == "completed":
+                        # 获取结果
+                        output_file = client.files.content(batch_info.output_file_id)
+                        output_content = output_file.text
+                        
+                        # 解析结果
+                        result_json = json.loads(output_content)
+                        response_body = result_json["response"]["body"]
+                        
+                        # 创建类似于普通API返回的对象
+                        response = type('', (), {})()
+                        response.choices = [type('', (), {})()]
+                        response.choices[0].message = type('', (), {})()
+                        response.choices[0].message.content = response_body["choices"][0]["message"]["content"]
+                        
+                        # 设置用于记录的usage
+                        if "usage" in response_body:
+                            response.usage = type('', (), {})()
+                            response.usage.total_tokens = response_body["usage"]["total_tokens"]
+                            log_token_cost(model, response.usage.total_tokens)
+                        
+                        return response.choices[0].message.content
+                    else:
+                        raise Exception(f"Batch job failed with status: {batch_status}")
+                    
+                finally:
+                    # 清理临时文件
+                    if os.path.exists(temp_file_path):
+                        os.unlink(temp_file_path)
                 
         except Exception as e:
             retries += 1

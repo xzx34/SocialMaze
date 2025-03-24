@@ -24,15 +24,6 @@ def extract_rating_prediction(response):
     Returns:
         An integer rating between 1-5, or 0 if extraction failed
     """
-    # First look for the exact "Final Rating: X" format
-    final_rating_match = re.search(r"final rating:\s*(\d+)", response.lower())
-    if final_rating_match:
-        try:
-            rating = int(final_rating_match.group(1))
-            # Ensure rating is between 1-5
-            return max(1, min(5, rating))
-        except ValueError:
-            pass
     
     # Pattern to match rating expressions - fallback options
     rating_patterns = [
