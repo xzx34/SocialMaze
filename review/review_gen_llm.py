@@ -7,6 +7,8 @@ import argparse
 from pathlib import Path
 from dotenv import load_dotenv
 import sys
+import concurrent.futures
+from tqdm import tqdm
 
 # Add parent directory to path for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -266,9 +268,7 @@ def get_review_from_api(prompt, reviewer_id, model_mapping=None):
         temperature=0.7
     )
     
-    # Add a small delay to avoid rate limiting
-    time.sleep(1)
-    
+    # No need for delay here as we'll handle rate limiting with the thread pool
     return response.strip()
 
 def generate_dataset(n_scenarios):
@@ -288,16 +288,74 @@ def generate_dataset(n_scenarios):
     
     return dataset
 
+def process_scenario(scenario, model_mapping, max_workers=5):
+    """
+    Process a single scenario with concurrent review generation.
+    
+    Args:
+        scenario: Scenario data dictionary
+        model_mapping: Dictionary mapping reviewer IDs to model names
+        max_workers: Maximum number of concurrent workers for this scenario
+    
+    Returns:
+        A simplified scenario dictionary with generated reviews
+    """
+    reviews = {}
+    
+    # Define a worker function for the executor
+    def get_reviewer_review(reviewer_id):
+        prompt = scenario["prompts"][reviewer_id]
+        review_text = get_review_from_api(prompt, reviewer_id, model_mapping)
+        return reviewer_id, review_text
+    
+    # Use ThreadPoolExecutor to get reviews concurrently
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all tasks
+        future_to_reviewer = {
+            executor.submit(get_reviewer_review, reviewer_id): reviewer_id 
+            for reviewer_id in ["1", "2", "3", "4", "5"]
+        }
+        
+        # Process results as they complete
+        for future in concurrent.futures.as_completed(future_to_reviewer):
+            reviewer_id = future_to_reviewer[future]
+            try:
+                result_reviewer_id, review_text = future.result()
+                reviews[result_reviewer_id] = review_text
+                print(f"  Completed review for Reviewer #{reviewer_id} using model: {model_mapping[reviewer_id]}")
+            except Exception as e:
+                print(f"  Error getting review for Reviewer #{reviewer_id}: {e}")
+                # Provide a fallback in case of error
+                reviews[reviewer_id] = f"Error generating review: {str(e)}"
+    
+    # Create simplified scenario structure
+    simplified_scenario = {
+        "scenario_id": scenario["scenario_id"],
+        "true_rating": scenario["true_rating"],
+        "formatted_reviews": [
+            {"reviewer_id": reviewer_id, "text": reviews[reviewer_id]}
+            for reviewer_id in ["1", "2", "3", "4", "5"]
+        ]
+    }
+    
+    return simplified_scenario
+
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Generate dataset for e-commerce review inference')
-    parser.add_argument('--n_scenarios', type=int, default=1, 
+    parser.add_argument('--n_scenarios', type=int, default=100, 
                         help='Number of product scenarios to generate')
     parser.add_argument('--output_name', type=str, default='review_llm',
                         help='Name of the output file (without extension)')
     parser.add_argument('--models', type=str, nargs=5, 
-                        default=['gpt-4o-mini', 'llama-3.3-70B', 'gemma-2-27B', 'qwen-2.5-72B', 'gpt-4o-mini'],
+                        default=['gpt-4o-mini', 'llama-3.3-70B', 'gemma-2-27B', 'qwen-2.5-72B', 'gemma-3-27B'],
                         help='Models to use for each reviewer (5 models required)')
+    parser.add_argument('--scenario_workers', type=int, default=10,
+                        help='Maximum number of scenarios to process concurrently')
+    parser.add_argument('--review_workers', type=int, default=1,
+                        help='Maximum number of concurrent reviews per scenario')
+    parser.add_argument('--rate_limit', type=float, default=0.2,
+                        help='Minimum time between API calls in seconds to avoid rate limiting')
     return parser.parse_args()
 
 def main():
@@ -323,35 +381,36 @@ def main():
     
     print(f"Generated {len(raw_dataset)} product scenarios")
     
-    # Create simplified dataset with API-generated reviews
+    # Create simplified dataset with API-generated reviews using concurrency
     simplified_dataset = []
-    for i, scenario in enumerate(raw_dataset):
-        print(f"Processing scenario {i+1}/{len(raw_dataset)}")
+    
+    # Define a worker function for processing scenarios
+    def process_scenario_worker(scenario_index):
+        scenario = raw_dataset[scenario_index]
+        # Add a small delay based on index to prevent all workers from starting API calls simultaneously
+        time.sleep(args.rate_limit * (scenario_index % args.review_workers))
+        return process_scenario(scenario, model_mapping, args.review_workers)
+    
+    # Process scenarios concurrently with a progress bar
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.scenario_workers) as executor:
+        # Submit all tasks
+        futures = [executor.submit(process_scenario_worker, i) for i in range(len(raw_dataset))]
         
-        # Temporary structure to hold review data
-        reviews = {}
-        
-        # Get reviews from API
-        for reviewer_id in ["1", "2", "3", "4", "5"]:
-            print(f"  Getting review for Reviewer #{reviewer_id} using model: {model_mapping[reviewer_id]}")
-            prompt = scenario["prompts"][reviewer_id]
-            review_text = get_review_from_api(prompt, reviewer_id, model_mapping)
-            reviews[reviewer_id] = review_text
-        
-        # Create simplified scenario structure
-        simplified_scenario = {
-            "scenario_id": scenario["scenario_id"],
-            "true_rating": scenario["true_rating"],
-            "formatted_reviews": [
-                {"reviewer_id": reviewer_id, "text": reviews[reviewer_id]}
-                for reviewer_id in ["1", "2", "3", "4", "5"]
-            ]
-        }
-        
-        simplified_dataset.append(simplified_scenario)
+        # Process results with a progress bar
+        for i, future in enumerate(tqdm(concurrent.futures.as_completed(futures), 
+                                      total=len(futures), 
+                                      desc="Processing scenarios")):
+            try:
+                simplified_scenario = future.result()
+                simplified_dataset.append(simplified_scenario)
+            except Exception as e:
+                print(f"Error processing scenario {i}: {e}")
+    
+    # Sort the dataset by scenario_id to maintain order
+    simplified_dataset.sort(key=lambda x: x["scenario_id"])
     
     # Save final dataset
-    output_path = data_dir / "review_llm.json"
+    output_path = data_dir / f"{args.output_name}.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(simplified_dataset, f, indent=2, ensure_ascii=False)
     

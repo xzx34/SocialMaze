@@ -35,38 +35,76 @@ model_dict = {
     'deepseek-r1-70B': 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B'
 }
 
-def log_token_cost(model, total_tokens):
+def log_token_cost(model, input_tokens=0, output_tokens=0, total_tokens=None):
     """
-    记录模型token使用量的累计总和
+    记录模型token使用量，按日期和模型分别记录输入和输出token
     
     Args:
         model: 模型名称
-        total_tokens: 本次使用的token数量(输入+输出)
+        input_tokens: 输入token数量
+        output_tokens: 输出token数量
+        total_tokens: 总token数量(向后兼容，如果提供则自动分配)
     """
+    # 如果只提供了total_tokens，尝试分配给输入和输出（向后兼容）
+    if total_tokens is not None and input_tokens == 0 and output_tokens == 0:
+        # 假设输入占比约为70%，输出占比约为30%
+        input_tokens = int(total_tokens * 0.7)
+        output_tokens = total_tokens - input_tokens
+    
     # 创建logs目录(如果不存在)
     log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs")
     os.makedirs(log_dir, exist_ok=True)
     
-    # 使用JSON文件记录每个模型的累计token使用量
-    log_file = os.path.join(log_dir, "model_token_totals.json")
+    # 使用JSON文件记录每个模型的token使用情况
+    log_file = os.path.join(log_dir, "model_token_usage.json")
     
-    # 读取现有的token累计数据(如果存在)
-    token_totals = {}
+    # 获取当前日期作为记录索引
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    
+    # 读取现有的token使用记录(如果存在)
+    token_records = {}
     if os.path.exists(log_file):
         try:
             with open(log_file, "r", encoding="utf-8") as f:
+                token_records = json.load(f)
+        except:
+            token_records = {}
+    
+    # 确保各级嵌套字典存在
+    if today not in token_records:
+        token_records[today] = {}
+    
+    if model not in token_records[today]:
+        token_records[today][model] = {"input_tokens": 0, "output_tokens": 0}
+    
+    # 更新当前模型的token使用量
+    token_records[today][model]["input_tokens"] += input_tokens
+    token_records[today][model]["output_tokens"] += output_tokens
+    
+    # 保存更新后的记录数据
+    with open(log_file, "w", encoding="utf-8") as f:
+        json.dump(token_records, f, indent=2)
+    
+    # 同时更新累计总量文件（向后兼容）
+    total_log_file = os.path.join(log_dir, "model_token_totals.json")
+    
+    # 读取现有的token累计数据(如果存在)
+    token_totals = {}
+    if os.path.exists(total_log_file):
+        try:
+            with open(total_log_file, "r", encoding="utf-8") as f:
                 token_totals = json.load(f)
         except:
             token_totals = {}
     
     # 更新当前模型的token累计量
     if model in token_totals:
-        token_totals[model] += total_tokens
+        token_totals[model] += (input_tokens + output_tokens)
     else:
-        token_totals[model] = total_tokens
+        token_totals[model] = (input_tokens + output_tokens)
     
     # 保存更新后的累计数据
-    with open(log_file, "w", encoding="utf-8") as f:
+    with open(total_log_file, "w", encoding="utf-8") as f:
         json.dump(token_totals, f, indent=2)
 
 
@@ -111,7 +149,7 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 # Log token usage
                 if hasattr(message, 'usage'):
                     total_tokens = message.usage.input_tokens + message.usage.output_tokens
-                    log_token_cost(model, total_tokens)
+                    log_token_cost(model, input_tokens=message.usage.input_tokens, output_tokens=message.usage.output_tokens)
                 
                 return message.content[0].text
             
@@ -140,7 +178,9 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                     # Log token usage if available
                     if hasattr(token_response, 'usage') and token_response.usage:
                         total_tokens = token_response.usage.total_tokens
-                        log_token_cost(model, total_tokens)
+                        input_tokens = token_response.usage.prompt_tokens if hasattr(token_response.usage, 'prompt_tokens') else 0
+                        completion_tokens = token_response.usage.completion_tokens if hasattr(token_response.usage, 'completion_tokens') else 0
+                        log_token_cost(model, input_tokens=input_tokens, output_tokens=completion_tokens, total_tokens=total_tokens)
                         
                     # Now get the streaming response for the actual use
                     full_response = ''
@@ -198,7 +238,9 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 # Log token usage if available
                 if hasattr(response, 'usage') and response.usage:
                     total_tokens = response.usage.total_tokens
-                    log_token_cost(model, total_tokens)
+                    input_tokens = response.usage.prompt_tokens if hasattr(response.usage, 'prompt_tokens') else 0
+                    completion_tokens = response.usage.completion_tokens if hasattr(response.usage, 'completion_tokens') else 0
+                    log_token_cost(model, input_tokens=input_tokens, output_tokens=completion_tokens, total_tokens=total_tokens)
                 
                 return response.choices[0].message.content
             
@@ -271,7 +313,13 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                         if "usage" in response_body:
                             response.usage = type('', (), {})()
                             response.usage.total_tokens = response_body["usage"]["total_tokens"]
-                            log_token_cost(model, response.usage.total_tokens)
+                            
+                            # 尝试获取输入输出token
+                            input_tokens = response_body["usage"].get("prompt_tokens", 0)
+                            output_tokens = response_body["usage"].get("completion_tokens", 0)
+                            
+                            # 记录token使用情况
+                            log_token_cost(model, input_tokens=input_tokens, output_tokens=output_tokens, total_tokens=response.usage.total_tokens)
                         
                         return response.choices[0].message.content
                     else:

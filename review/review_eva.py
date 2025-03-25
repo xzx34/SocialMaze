@@ -8,6 +8,7 @@ from pathlib import Path
 from tqdm import tqdm
 from dotenv import load_dotenv
 import sys
+import concurrent.futures
 
 # Add parent directory to path for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -25,27 +26,18 @@ def extract_rating_prediction(response):
         An integer rating between 1-5, or 0 if extraction failed
     """
     
-    # Pattern to match rating expressions - fallback options
-    rating_patterns = [
-        r"Final Rating: (\d+)"
-    ]
+    # Pattern to match "Final Rating: X" where X is a digit, with optional markdown bold markers
+    pattern = r"\*{0,2}Final Rating:\*{0,2}\s*(\d+)"
     
-    # Check for patterns
-    for pattern in rating_patterns:
-        match = re.search(pattern, response.lower())
-        if match:
-            try:
-                rating = int(match.group(1))
-                # Ensure rating is between 1-5
-                return max(1, min(5, rating))
-            except ValueError:
-                continue
-    
-    # If no match found with the specific patterns, look for any isolated numbers 1-5
-    # This is a fallback method
-    isolated_numbers = re.findall(r'(?<!\d)([1-5])(?!\d)', response)
-    if isolated_numbers:
-        return int(isolated_numbers[0])
+    # Check for pattern
+    match = re.search(pattern, response, re.IGNORECASE)
+    if match:
+        try:
+            rating = int(match.group(1))
+            # Ensure rating is between 1-5
+            return max(1, min(5, rating))
+        except ValueError:
+            return 0
     
     return 0  # Return 0 if no valid rating found
 
@@ -91,7 +83,7 @@ Where X is a number from 1 to 5.
     
     return prompt
 
-def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
+def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None, max_workers=10):
     """
     Evaluate model performance on the review rating inference task
     
@@ -100,6 +92,7 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
         dataset_path: path to dataset json file
         num_scenarios: number of scenarios to evaluate (None for all)
         output_file: optional file to save results
+        max_workers: maximum number of concurrent workers
     
     Returns:
         Dictionary with evaluation results
@@ -112,15 +105,13 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
     if num_scenarios is not None and num_scenarios < len(dataset):
         dataset = dataset[:num_scenarios]
     
-    results = []
-    correct_predictions = 0
     total_scenarios = len(dataset)
     
     # Create confusion matrix (true_rating, predicted_rating)
     confusion_matrix = np.zeros((5, 5), dtype=int)
     
-    # Evaluate each scenario
-    for scenario in tqdm(dataset, desc=f"Evaluating {model}"):
+    # Define a worker function to process a single scenario
+    def process_scenario(scenario):
         scenario_id = scenario["scenario_id"]
         true_rating = scenario["true_rating"]
         
@@ -141,13 +132,6 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
         
         is_correct = prediction == true_rating
         
-        if is_correct:
-            correct_predictions += 1
-        
-        # Update confusion matrix (subtract 1 because indices are 0-based)
-        if 1 <= prediction <= 5 and 1 <= true_rating <= 5:
-            confusion_matrix[true_rating-1][prediction-1] += 1
-        
         # Store result
         result = {
             "scenario_id": scenario_id,
@@ -156,10 +140,37 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
             "correct": is_correct,
             "response": response
         }
-        results.append(result)
         
         # Optional: Add delay to avoid rate limits
         time.sleep(0.5)
+        
+        return result
+    
+    # Use ThreadPoolExecutor for concurrent evaluation
+    results = []
+    correct_predictions = 0
+    
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all tasks
+        future_to_scenario = {executor.submit(process_scenario, scenario): scenario 
+                              for scenario in dataset}
+        
+        # Process results as they complete
+        for future in tqdm(concurrent.futures.as_completed(future_to_scenario), 
+                          total=len(future_to_scenario), 
+                          desc=f"Evaluating {model}"):
+            result = future.result()
+            results.append(result)
+            
+            # Update correct count
+            if result["correct"]:
+                correct_predictions += 1
+            
+            # Update confusion matrix
+            prediction = result["prediction"]
+            true_rating = result["true_rating"]
+            if 1 <= prediction <= 5 and 1 <= true_rating <= 5:
+                confusion_matrix[true_rating-1][prediction-1] += 1
     
     # Calculate accuracy
     accuracy = correct_predictions / total_scenarios * 100 if total_scenarios > 0 else 0
@@ -265,12 +276,15 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on e-commerce review inference')
-    parser.add_argument('--models', type=str, nargs='+', default=[''],
+    #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq deepseek-r1
+    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.1-8B', 'gemma-2-9B', 'gemma-2-27B', 'llama-3.3-70B', 'qwen-2.5-72B', 'qwq', 'deepseek-r1'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--dataset', type=str, default='data/review_amazon.json', 
                         help='Path to dataset')
     parser.add_argument('--num_scenarios', type=int, default=100, 
                         help='Number of scenarios to evaluate (default: all)')
+    parser.add_argument('--max_workers', type=int, default=10,
+                        help='Maximum number of concurrent workers (default: 10)')
     
     return parser.parse_args()
 
@@ -303,8 +317,8 @@ def main():
         # Create unique output filename for this model
         output_file = results_dir / f"{model}_{dataset_basename}_results.json"
         
-        # Run evaluation
-        model_results = evaluate_model(model, args.dataset, args.num_scenarios, output_file)
+        # Run evaluation with concurrent processing
+        model_results = evaluate_model(model, args.dataset, args.num_scenarios, output_file, args.max_workers)
         
         # Add or update model results in summary
         results_summary[model] = {
