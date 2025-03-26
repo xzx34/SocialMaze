@@ -1,0 +1,121 @@
+{
+  "llama-3.1-8B": {
+    "accuracy": 62.0,
+    "correct": 62,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 50.0,
+        "precision": 100.0
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 100.0,
+        "precision": 38.70967741935484
+      }
+    }
+  },
+  "gemma-2-9b": {
+    "accuracy": 76.0,
+    "correct": 76,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 100.0,
+        "precision": 76.0
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 0.0,
+        "precision": 0
+      }
+    }
+  },
+  "gemma-2-27B": {
+    "accuracy": 77.0,
+    "correct": 77,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 81.57894736842105,
+        "precision": 87.32394366197182
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 62.5,
+        "precision": 51.724137931034484
+      }
+    }
+  },
+  "llama-3.3-70B": {
+    "accuracy": 72.0,
+    "correct": 72,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 63.1578947368421,
+        "precision": 100.0
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 100.0,
+        "precision": 46.15384615384615
+      }
+    }
+  },
+  "qwen-2.5-72B": {
+    "accuracy": 64.0,
+    "correct": 64,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 53.94736842105263,
+        "precision": 97.61904761904762
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 95.83333333333334,
+        "precision": 39.6551724137931
+      }
+    }
+  },
+  "qwq": {
+    "accuracy": 79.0,
+    "correct": 79,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 73.68421052631578,
+        "precision": 98.24561403508771
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 95.83333333333334,
+        "precision": 53.48837209302325
+      }
+    }
+  },
+  "deepseek-r1": {
+    "accuracy": 82.0,
+    "correct": 82,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 77.63157894736842,
+        "precision": 98.33333333333333
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 95.83333333333334,
+        "precision": 57.49999999999999
+      }
+    }
+  }
+}

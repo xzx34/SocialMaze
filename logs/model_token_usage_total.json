@@ -1,0 +1,6 @@
+{
+  "llama-3.1-8B": {
+    "input_tokens": 5164,
+    "output_tokens": 3190
+  }
+}

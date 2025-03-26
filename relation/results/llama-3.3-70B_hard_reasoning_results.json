@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "llama-3.3-70B",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "total_samples": 100,
+    "correct_predictions": 92,
+    "accuracy": 92.0
+  },
+  "results": [
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since C and K have a good relationship, and C and F have a good relationship, then by transitivity, F and K have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since N and A have a good relationship, and N and D have a good relationship, then by transitivity, A and D have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since K and I have a good relationship, and K and M have a bad relationship (through transitivity with K and L, and L and M), and given the transitive properties, I and M must have a bad relationship because I is connected to K and K has a bad relationship with M.\n\nHowever, to directly answer the question based on the given information without overcomplicating with unnecessary steps:\n\nK and I have a good relationship, and K and L have a bad relationship. Since L and M have a good relationship, this implies K and M have a bad relationship (because K and L have a bad relationship, and L and M have a good relationship). Given K and I have a good relationship, and K and M have a bad relationship, it suggests I and M would have a bad relationship due to the transitive properties of relationships.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and D have a bad relationship (because C and G have a bad relationship, and D and G have a good relationship), and D and F have a good relationship, then C and F must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since K and N have a good relationship, and I and N have a bad relationship, then by the transitive property, I and K must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if B and C have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and N have a good relationship.\n2. N and K have a bad relationship, which means B and K must have a bad relationship because B has a good relationship with N, and N has a bad relationship with K.\n3. However, we also know that K and C have a good relationship.\n4. Given that B has a good relationship with N, and N has a bad relationship with K, and K has a good relationship with C, it might seem complex. But the key is in the relationships involving B and the group dynamics.\n\nSince B has a good relationship with N, and N has bad relationships with several people (including K, J, and L), B cannot have a direct good relationship with all those N has bad relationships with due to the transitivity rule. However, the direct relationships given do not explicitly state B's relationship with C as bad due to B's relationship with N and N's bad relationship with K.\n\nBut let's break it down further with the given information:\n- B and N have a good relationship.\n- N and K have a bad relationship.\n- This implies B and K should have a bad relationship because of the transitive property (if B has a good relationship with N, and N has a bad relationship with K, then B and K must have a bad relationship).\n- K and C have a good relationship.\n\nGiven the transitive properties and the fact that B and K have a bad relationship (inferred from B's good relationship with N and N's bad relationship with K), and knowing K and C have a good relationship, we can infer that B and C cannot have a direct good relationship because B and K have a bad relationship, and K and C have a good relationship, which would imply B and C have a bad relationship through transitivity.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and L have a bad relationship, and C and F have a good relationship, then by the transitive property, F and L must have a bad relationship, which is consistent with the given information.\n\nAlso, since C and L have a bad relationship, and L and G have a good relationship, then by the transitive property, C and G must have a bad relationship.\n\nNow, since C and F have a good relationship, and C and G have a bad relationship, then by the transitive property, F and G must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since C and P have a good relationship, and C and D have a good relationship, then by transitivity, P and D have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if K and P have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. **E and N have a bad relationship.**\n2. **N and F have a good relationship.** (This implies E and F could have either a good or bad relationship, but it's not directly stated.)\n3. **E and I have a good relationship.**\n4. **E and G have a good relationship.**\n5. **N and L have a bad relationship.**\n6. **E and L have a bad relationship.**\n7. **J and C have a good relationship.**\n8. **N and M have a good relationship.**\n9. **L and K have a good relationship.** (This means K and L are in the same group.)\n10. **B and M have a bad relationship.**\n11. **N and O have a good relationship.**\n12. **G and N have a bad relationship.** (Given E and G have a good relationship, and E and N have a bad relationship, this is consistent with the rules.)\n13. **N and P have a good relationship.** (This implies N and P are in the same group.)\n14. **J and B have a good relationship.**\n15. **J and N have a bad relationship.**\n16. **J and E have a bad relationship.**\n17. **J and L have a bad relationship.**\n18. **J and A have a good relationship.**\n19. **E and D have a good relationship.**\n20. **L and H have a good relationship.**\n\nFrom the information:\n\n- Since **N and L have a bad relationship** and **L and K have a good relationship**, it implies **N and K have a bad relationship** (because if N had a good relationship with K, given N's bad relationship with L, it would imply L and K have a bad relationship, which contradicts the given information).\n- Given **N and P have a good relationship**, and we've deduced **N and K have a bad relationship**, it implies **K and P have a bad relationship** (because if K and P had a good relationship, given K's bad relationship with N, it would imply N and P have a bad relationship, which contradicts the given information).\n\nTherefore, based on the transitive properties and the given relationships, K and P do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since A has a good relationship with both E and N, and N has a bad relationship with C, then E must have a bad relationship with C (because if E had a good relationship with C, then by transitivity, N would have a good relationship with C, which contradicts the given information).\n\nAlso, since C has a good relationship with I, and E has a bad relationship with C, then E must have a bad relationship with I (because if E had a good relationship with I, then by transitivity, E would have a good relationship with C, which again contradicts the given information).\n\nHowever, we need to determine if E and I have a good relationship. Given the information that A has a good relationship with E, and A also has a good relationship with other people who have a bad relationship with C (like N), and C has a good relationship with I, we cannot directly conclude the relationship between E and I from A's relationships alone.\n\nBut since A has a good relationship with E, and A also has a good relationship with N, and N has a bad relationship with C, and C has a good relationship with I, it implies that E and I are in different groups (because E is related to A and N, and I is related to C, and N and C have a bad relationship).\n\nGiven the transitive properties and group definitions, if someone from one group (E's group) has a bad relationship with someone from another group (I's group, which includes C), then everyone from the first group (E's group) has a bad relationship with everyone from the second group (I's group).\n\nTherefore, since E is in the same group as A and N, and I is in the same group as C, and N and C have a bad relationship, it means E and I have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if O and A have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and I have a good relationship.\n2. B and E have a good relationship.\n3. B and A have a good relationship.\n\nFrom these, we can infer that A, B, E, and I are in the same group because they all have good relationships with each other (directly or through transitivity).\n\n4. C and F have a good relationship.\n5. C and D have a good relationship.\n6. C and O have a good relationship.\n7. C and H have a good relationship.\n8. C and L have a good relationship.\n\nThis means C, F, D, O, H, and L are in the same group because they have good relationships with each other.\n\n9. C and E have a bad relationship.\n\nThis indicates that C and E are in different groups. Since E is with A, B, and I, and C is with F, D, O, H, and L, A, B, E, I and C, F, D, O, H, L must be in separate groups due to the bad relationship between C and E.\n\n10. I and C have a bad relationship.\n\nThis further confirms that I (and thus A and B, by association) and C (and thus F, D, O, H, L, by association) are in separate groups.\n\nGiven that A is associated with B, E, and I, and O is associated with C, F, D, H, and L, and there's a bad relationship between members of these two groups (e.g., C and E, I and C), we conclude that O and A are in different groups and thus do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "To determine if N and O have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and N have a good relationship.\n2. B and F have a good relationship, but there's no direct information linking N and O through F.\n3. B and M have a good relationship, and B and N have a good relationship, but M's relationship with N or O isn't directly stated.\n4. E and M have a bad relationship, which implies that if M has a good relationship with someone, that someone has a bad relationship with E.\n5. H and O have a good relationship.\n6. H and E have a good relationship, which means H cannot have a good relationship with M (because E and M have a bad relationship).\n7. Since B has a good relationship with both M and N, and given the transitive property, we need to find a link between N and O.\n\nGiven that:\n- B has a good relationship with N.\n- B has a good relationship with M.\n- E has a bad relationship with M, but E has a good relationship with H.\n- H has a good relationship with O.\n\nThe critical link here is through B and the relationships around M and E. However, the direct connection between N and O isn't explicitly stated, but we can infer through the relationships:\n\n- Since B and N have a good relationship, and B and M have a good relationship, N and M have a good relationship by transitivity.\n- Given E and M have a bad relationship, and H and E have a good relationship, it implies H and M have a bad relationship (as E and M have a bad relationship, and H is connected to E).\n- But we know H and O have a good relationship.\n\nTo directly address the question: Since B and N have a good relationship, and B and M have a good relationship, it suggests N and M have a good relationship. However, the relationship between N and O isn't directly stated, and the connections through other individuals don't provide a clear, direct link that would necessarily imply a good relationship between N and O based on the given rules and information.\n\nGiven the information and focusing strictly on the question of whether N and O have a good relationship, we must consider the implications of the relationships provided:\n\n- There's no direct statement that N and O have a good or bad relationship.\n- The relationships provided create groups and connections but don't explicitly link N and O in a way that directly answers the question without assuming additional relationships not stated.\n\nTherefore, based on the strict interpretation of the provided relationships and the rules:\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if M and I have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. J and H have a good relationship.\n2. N and J have a bad relationship.\n3. A and G have a good relationship.\n4. A and N have a good relationship.\n5. Since A and N have a good relationship, and N and J have a bad relationship, A and J must have a bad relationship (by rule 2).\n6. J and M have a good relationship.\n7. A and I have a good relationship.\n\nGiven that A and J have a bad relationship (inferred from step 5), and J and M have a good relationship, we cannot directly conclude the relationship between M and I from these steps. However, we know:\n\n- A has a good relationship with I (given).\n- A has a bad relationship with J (inferred).\n- J has a good relationship with M (given).\n\nSince A has a bad relationship with J, and J has a good relationship with M, it implies that A and M must have a bad relationship (because if A had a good relationship with M, given J's good relationship with M, it would contradict the bad relationship between A and J, as it would suggest a good relationship between A and J through M, which is not possible).\n\nNow, knowing A and M have a bad relationship, and A has a good relationship with I, it means I and M must have a bad relationship (because if I and M had a good relationship, given A's good relationship with I, it would imply A has a good relationship with M through I, which contradicts the established bad relationship between A and M).\n\nTherefore, based on the transitive properties and the given relationships, M and I do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since A and P have a good relationship, and A and the following people have good relationships: B, E, H, D, M, G, then P also has good relationships with these people through transitivity.\n\nAdditionally, A has a good relationship with K, but K has a bad relationship with C. This implies that A (and thus P, through transitivity) cannot have a direct good relationship with C or anyone who has a good relationship with C.\n\nHowever, we see that A has a good relationship with K, and K has a bad relationship with C, which means A (and thus P) must have a bad relationship with C (and anyone who has a good relationship with C) if the rules of transitivity were to strictly apply in a simple manner. But given the information provided and focusing strictly on the question of whether P and L have a good relationship:\n\nGiven C and L have a good relationship, and considering the transitive properties and the fact that A (thus P) has a relationship with K which has a bad relationship with C, it suggests that P cannot have a good relationship with L due to the transitive properties of relationships and the separation of groups.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if H and F have a good relationship, let's analyze the given relationships step by step, focusing on connections that could lead from H to F, either directly or through transitivity.\n\n1. **H and I have a good relationship.**\n2. **I and K have a bad relationship.** This implies that H and K cannot have a direct good relationship because if they did, given H's good relationship with I, it would contradict the transitive property (since I and K have a bad relationship).\n3. **H and E have a good relationship.**\n4. **E and N have a bad relationship.** This means H and N cannot have a direct good relationship because H has a good relationship with E, and E has a bad relationship with N.\n5. **K and F have a good relationship.** This is a direct connection but doesn't directly involve H.\n6. **K and N have a good relationship.** Given E's bad relationship with N and H's good relationship with E, H cannot have a good relationship with N or K through transitivity without contradicting the given relationships.\n7. **C and K have a bad relationship,** and **I and C have a bad relationship.** These relationships further complicate direct connections but don't provide a clear path from H to F through good relationships.\n\nGiven these points, the critical path to consider for a potential good relationship between H and F involves K, since K and F have a good relationship. However, because I and K have a bad relationship, and H and I have a good relationship, H and K cannot have a good relationship through the transitive property (as it would imply I and K have a good relationship, which contradicts the given information).\n\nSince we cannot establish a chain of good relationships from H to F without violating the given conditions or the transitive properties of relationships, we must conclude based on the information provided:\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since B and H have a good relationship, and B and I have a good relationship, then by transitivity, I and H should have a good relationship. \n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if E and A have a good relationship, we must analyze the given relationships and apply the transitive properties.\n\n1. **N and L have a good relationship.**\n2. **D and L have a bad relationship.**\n   - This implies D and N have a bad relationship because D has a bad relationship with L, and L has a good relationship with N.\n3. **N and C have a bad relationship.**\n4. **C and D have a good relationship.**\n   - This is consistent with the implication from step 2 that D and N have a bad relationship, given N and C have a bad relationship.\n5. **K and M have a good relationship.**\n6. **J and C have a bad relationship.**\n7. **N and F have a good relationship.**\n8. **N and B have a good relationship.**\n9. **C and K have a bad relationship.**\n10. **N and K have a bad relationship.**\n    - This is consistent with the bad relationship between C and K, and N and C.\n11. **J and A have a good relationship.**\n12. **C and J have a bad relationship.**\n    - This implies C and A have a bad relationship because J has a good relationship with A, and C has a bad relationship with J.\n13. **J and K have a bad relationship.**\n14. **J and N have a bad relationship.**\n15. **J and O have a good relationship.**\n16. **C and I have a good relationship.**\n17. **C and E have a good relationship.**\n    - Given C and E have a good relationship, and from step 12, we know C and A have a bad relationship, this implies E and A have a bad relationship because E has a good relationship with C, and C has a bad relationship with A.\n18. **N and G have a good relationship.**\n19. **C and H have a good relationship.**\n\nFrom the analysis, particularly step 17, we conclude that E and A do not have a good relationship due to the transitive properties of their relationships with C.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since A and M have a good relationship, and A and H do not have a direct bad relationship, we need to check for transitivity. \n\nA has a good relationship with C, but C has a bad relationship with H. According to rule 2, if A has a good relationship with C, and A has a good relationship with H (through someone else), then C and H must have a good relationship, which contradicts the given information. \n\nHowever, there is no direct or indirect good relationship established between A and H. But since A has a good relationship with D, and there's no information about D's relationship with H or anyone else related to H, we cannot conclude a good relationship between A and H through transitivity based on given data.\n\nGiven A has a good relationship with M, and there's no direct information about H and M's relationship, we look for transitivity. \n\nA has a good relationship with J, but J has a bad relationship with O. H has a good relationship with O. Following rule 2, if J has a bad relationship with O, and H has a good relationship with O, then J and H must have a bad relationship (as J and O are in different groups due to their bad relationship). \n\nSince A has a good relationship with J, and J must have a bad relationship with H (due to J's bad relationship with O and H's good relationship with O), it implies A's group and H's group are separate due to the bad relationship between any member of A's group (like J) and any member of H's group (like H itself).\n\nThus, given the bad relationship between J (from A's group) and H (from H's own group, which includes O), and knowing groups are completely separate, H and M (who is in A's group) must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since A has a good relationship with H, and A has a good relationship with K, but K has a bad relationship with C, then H must have a bad relationship with C (by rule 2). \n\nHowever, F has a good relationship with C. \n\nBy rule 2, if H has a bad relationship with C, and F has a good relationship with C, then H and F must have a bad relationship.\n\nBut we need to determine if F and H have a good relationship. \n\nGiven the information that C, F, J, and N are connected through good relationships with C, and A, D, E, G, H, I, K, L, and M are connected through good relationships with A, and considering that B has a good relationship with C but a bad relationship with L, and A has a good relationship with L, then B and A (and thus the rest of A's group) must have a bad relationship. \n\nSince C has a good relationship with B, then C (and thus the rest of C's group, including F) must have a bad relationship with A (and the rest of A's group, including H).\n\nTherefore, F and H cannot have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and G have a good relationship, and C and H have a bad relationship, then by the transitive property, G and H must have a bad relationship, because if they had a good relationship, it would imply C and H have a good relationship, which contradicts the given information.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Since K and F have a good relationship, and K and J have a good relationship, F and J have a good relationship through transitivity.\n\nD and J have a bad relationship, so F (who has a good relationship with J) and D must have a bad relationship.\n\nA and D have a good relationship, and A and H have a good relationship. Since D and H are both connected to A through good relationships, but F and D have a bad relationship, it implies that F and H cannot be directly concluded to have a bad relationship based on the given information. \n\nHowever, since A has good relationships with both H and F (through the transitive property from K to F, and directly with A), and given that groups are defined by good relationships, H and F must be in the same group as A and K. \n\nTherefore, F and H have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since A has a good relationship with both F and K, and given the transitive property of good relationships, it follows that F and K have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if G and N have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. E and G have a good relationship.\n2. E and I have a good relationship.\n3. Since E has a good relationship with both G and I, G and I must have a good relationship (by transitivity).\n4. There's no direct information about the relationship between G and N, so we need to find a connection through other people.\n5. L and N have a good relationship.\n6. E and L have a bad relationship.\n7. Because E and L have a bad relationship, and E has a good relationship with G, L and G must have a bad relationship (by the second transitivity rule).\n8. Since L and G have a bad relationship, and L and N have a good relationship, G and N must have a bad relationship (by the same rule, considering the relationships of L with G and N).\n\nGiven these steps, we conclude that G and N do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since J and I have a good relationship, and J and M have a good relationship, then I and M have a good relationship (through transitivity).\n\nWe also know that J and E have a bad relationship, and E and A have a good relationship, which implies that J and A have a bad relationship (because if J and A had a good relationship, then through transitivity, J and E would have a good relationship, which contradicts the given information).\n\nGiven that I and M have a good relationship, and I and N have a bad relationship, then M and N have a bad relationship (through transitivity).\n\nAdditionally, since N and H have a good relationship, and M and N have a bad relationship, then M and H have a bad relationship (through transitivity).\n\nHowever, we cannot directly determine the relationship between M and A from the given information. \n\nBut, since E and A have a good relationship, and E and J have a bad relationship, and J and M have a good relationship, then A and M cannot have a good relationship (because if A and M had a good relationship, then through transitivity, E and M would have a good relationship, and since E and J have a bad relationship, and J and M have a good relationship, this would imply E and J have a good relationship, which contradicts the given information).\n\nTherefore, based on the transitive properties and given relationships, M and A do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since C and I have a good relationship, and C and M have a good relationship, then by transitivity, I and M have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since N and J have a good relationship, and N and D, H, M, B have good relationships, J also has good relationships with D, H, M, B through transitivity.\n\nN and C have a bad relationship, and since N has a good relationship with J, C and J must have a bad relationship (rule 2).\n\nC and E have a good relationship, and C and J have a bad relationship. Using rule 2, if C and J have a bad relationship, and C and E have a good relationship, then J and E must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if C and B have a good relationship, we must analyze the given relationships and apply the rules provided.\n\n1. **Direct Relationships Involving C and B:**\n   - There's no direct information about the relationship between C and B.\n\n2. **Indirect Relationships:**\n   - **C's Relationships:** C has good relationships with H and O, and a bad relationship with F. Additionally, C has a good relationship with K.\n   - **B's Relationships:** B has a good relationship with A.\n\n3. **Transitive Properties:**\n   - Since A has a bad relationship with J, and J has a good relationship with several people (G, N, E), A (and thus B, by transitivity) would have a bad relationship with these individuals if the relationships were directly connected through A. However, the direct connection between B and these individuals is not provided.\n   - C has a good relationship with K, but K has a bad relationship with J and L. This implies C and J (and L) have a bad relationship through K, but we already know J and L have bad relationships with several people.\n   - A has a bad relationship with L, and L has good relationships with D, I, M, and F. This means A (and thus B) would have a bad relationship with these individuals if the transitivity applies directly, which it does through A's bad relationship with L.\n   - Since C has a good relationship with K, and K has a bad relationship with L, and L has a good relationship with F, but C has a bad relationship with F, it shows the complexity of the relationships but doesn't directly impact C and B's relationship without a clear chain involving B.\n\n4. **Groups:**\n   - **Group Involving C:** C, H, O, and K are in one group because they have good relationships with each other.\n   - **Group Involving B:** B and A are in another group because they have a good relationship.\n\n5. **Conclusion:**\n   - The critical piece of information is that A (and thus B, by association) has a bad relationship with several individuals, but there's no direct or clear indirect link provided between C and B that would definitively classify their relationship as good or bad based on the given rules and relationships.\n   - However, considering the groups and the fact that C and K are in one group, and K has a bad relationship with A (and thus B), it suggests that C and B are in separate groups due to the bad relationship between their respective group members (K and A/B).\n\nGiven the complexity and the specific rules about groups and transitivity, without a direct link or a clear chain of relationships that would force C and B into a specific category based on the provided information, the analysis leans towards them not being in the same group due to the associations and the bad relationships involving members of their respective groups. However, the question asks for a definitive 'Yes' or 'No' based on the information provided and the rules.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since C and P have a good relationship, and C and G have a good relationship, then by transitivity, P and G have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and L have a good relationship, and C and J have a bad relationship, then L and J must have a bad relationship. \nAlso, since J and M have a good relationship, then M and L must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since B and M have a good relationship, and B and N have a good relationship, but C and N have a bad relationship, then B and C must have a bad relationship. \n\nGiven that A and B have a bad relationship, and C and A have a good relationship, it confirms that B and C have a bad relationship. \n\nBecause B and C have a bad relationship, and C and K have a good relationship, then B and K must have a bad relationship. \n\nSince B and M have a good relationship, and B and K have a bad relationship, then M and K must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since K and N have a bad relationship, and N and H have a good relationship, then by the transitive property, K and H must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if F and O have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. A and F have a bad relationship.\n2. A and O have a good relationship.\n\nFrom point 2, since A has a good relationship with O, and from the rules, if A has a bad relationship with F, then F and O must have a bad relationship because A cannot have both good and bad relationships with the same person through different paths without violating the rules.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and K have a bad relationship, and K and E have a good relationship, then C and E must have a bad relationship due to the transitive property of bad relationships. \n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since A and I have a good relationship, and A and C have a good relationship, then by transitivity, I and C should have a good relationship. \n\nHowever, it's also given that F and I have a bad relationship, and G and F have a good relationship. This implies that I and G have a bad relationship (because if I and G had a good relationship, then by transitivity with G and F having a good relationship, I and F would have a good relationship, which contradicts the given information).\n\nAdditionally, C and G have a bad relationship. If I and C had a bad relationship, it would mean that I and G have a good relationship (since A has good relationships with both I and C, and C and G have a bad relationship), which again contradicts the information derived from F and I's bad relationship and G and F's good relationship.\n\nThus, considering the relationships and transitivity rules, I and C must have a good relationship to maintain consistency across all given relationships.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and F have a good relationship, and C and N have a bad relationship, F and N must have a bad relationship. \nSince N and H have a good relationship, and F and N have a bad relationship, H and F must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since H and G have a good relationship, and H and E have a good relationship, then by transitivity, G and E have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if H and B have a good relationship, we must analyze the given relationships and apply the rules provided.\n\n1. K and O have a good relationship.\n2. C and G have a good relationship.\n3. B and I have a good relationship.\n4. K and M have a good relationship.\n5. C and N have a good relationship.\n6. B and F have a good relationship.\n7. C and L have a good relationship.\n8. K and H have a good relationship.\n9. K and E have a good relationship.\n10. C and K have a bad relationship.\n11. K and D have a good relationship.\n12. I and K have a bad relationship.\n13. I and O have a bad relationship.\n14. C and J have a good relationship.\n15. B and A have a good relationship.\n16. A and C have a bad relationship.\n17. I and C have a bad relationship.\n\nFrom point 10, we know C and K have a bad relationship. \nFrom point 8, we know K and H have a good relationship.\n\nGiven that K and H have a good relationship and C and K have a bad relationship, we can infer that C and H must have a bad relationship (rule 2: If A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship).\n\nNow, since A and C have a bad relationship (point 16), and we've established that C and H have a bad relationship, we need to find a connection between H and B.\n\nB and A have a good relationship (point 15), and K and H have a good relationship (point 8). However, I and K have a bad relationship (point 12), and B and I have a good relationship (point 3). This implies that B and K must have a bad relationship because if B and I have a good relationship and I and K have a bad relationship, then by the rules, B and K cannot have a good relationship.\n\nGiven that K and H have a good relationship, and we've deduced that B and K must have a bad relationship, it means H and B cannot have a direct good relationship through K because K's good relationship with H does not extend to B due to B and K's bad relationship.\n\nHowever, the critical link here involves understanding the groups and how relationships are transitive. Since B and K have a bad relationship (inferred from the relationships involving I), and K and H have a good relationship, the direct question of whether H and B have a good relationship hinges on the transitivity and group dynamics.\n\nGiven I and K have a bad relationship, and B and I have a good relationship, it suggests B and K are in different groups. Since K and H are in the same group (due to their good relationship), and B and K are not, H and B are not in the same group either, implying they do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and I have a good relationship, and C and A have a good relationship, I and A have a good relationship through transitivity.\n\nC and D have a good relationship, and D and P have a bad relationship. This implies that C and P have a bad relationship, because if C and P had a good relationship, then through transitivity with D and P, D and P would have to have a good relationship, which contradicts the given information.\n\nGiven B and P have a good relationship, and C and P have a bad relationship, then B and C must have a bad relationship, because if B and C had a good relationship, then through transitivity with P, C and P would have a good relationship, which contradicts the deduced information.\n\nSince B and M have a good relationship, and B and C have a bad relationship, M and C must have a bad relationship.\n\nGiven C and I have a good relationship, and M and C have a bad relationship, then I and M must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since I and B have a good relationship, and I and K have a bad relationship, then B and K must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since L and C have a good relationship, and L and A have a good relationship, then by transitivity, A and C have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since F and I have a good relationship, and F and H have a good relationship, then by transitivity, H and I have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Since A has a good relationship with both J (through N) and L, and given the transitive properties of relationships, we can infer that J and L have a good relationship because they are both connected to A through good relationships.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since F and M have a good relationship, and F and B have a good relationship, then by transitivity, M and B have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "To determine if F and L have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. D and J have a good relationship.\n2. A and G have a bad relationship.\n3. N and G have a bad relationship.\n4. D and G have a good relationship.\n5. C and G have a bad relationship.\n6. D and O have a good relationship.\n7. N and L have a good relationship.\n8. N and A have a good relationship.\n9. N and K have a bad relationship.\n10. D and F have a good relationship.\n11. D and E have a good relationship.\n12. D and H have a good relationship.\n13. D and M have a good relationship.\n14. K and G have a bad relationship.\n15. K and C have a good relationship.\n16. N and B have a good relationship.\n17. N and I have a good relationship.\n\nFrom point 10, we know D and F have a good relationship. \n\nSince D has a good relationship with G (point 4), and by transitivity, anyone who has a good relationship with D should also have a good relationship with G if they are to be in the same group as D and G. However, the direct relationships between F and other individuals are not explicitly stated except for D.\n\nGiven N and G have a bad relationship (point 3) and N and L have a good relationship (point 7), L cannot have a good relationship with G because of the transitive property that would imply N and G have a good relationship if L and G had a good relationship, which contradicts the given information.\n\nHowever, since D and F have a good relationship, and D also has a good relationship with several other people, for F and L to have a good relationship, there must be a chain of good relationships connecting them without contradicting any given bad relationships.\n\nGiven D's good relationships with many individuals and N's good relationship with L, if we can connect D and N through a good relationship, it might help. N and A have a good relationship, and A and G have a bad relationship, but D and G have a good relationship, which already suggests a complex network.\n\nThe key here is that D and G have a good relationship, but N and G have a bad relationship. This means D and N cannot both be in the same group as G because their relationships with G are opposites. \n\nHowever, since D and F have a good relationship, and considering the transitive properties and the groups' definitions, for F and L to have a good relationship, there needs to be a connection between them that does not violate any given conditions.\n\nGiven that N and L have a good relationship, and N also has good relationships with several other people (A, B, I), but N and G have a bad relationship, and considering D's good relationship with G, it implies that D and N are in different groups due to their opposing relationships with G.\n\nBut, looking closely, D and N do not have a direct relationship stated, and all the relationships provided do not directly link F and L in a way that violates the rules given their connections through D and N, respectively.\n\nSince D has a good relationship with F, and there's no direct information that F and L have a bad relationship or that would force them into separate groups based on the given relationships, and considering the transitive properties might suggest connections but do not explicitly forbid a good relationship between F and L based on the information given, we must consider the implications of the relationships carefully.\n\nGiven the information and focusing strictly on the question of whether F and L have a good relationship, without explicit statements that they have a bad relationship or that would necessarily place them in separate groups based on the transitive properties and the given relationships, the answer leans towards the possibility based on the absence of direct contradiction.\n\nHowever, the critical insight comes from recognizing that while D and F have a good relationship, and N and L have a good relationship, the relationships between D and N (or their respective groups) and how they interact with others, especially considering G's role, are crucial. \n\nGiven that D and G have a good relationship, but N and G have a bad relationship, this already suggests that D and N are in different social groups due to their differing relationships with G. \n\nBut, to directly answer the question without overcomplicating it: Since D and F have a good relationship, and there's no explicit information that directly connects F and L in a negative way or forces them into different groups based on the given relationships, and considering the rules provided, the question essentially asks us to infer based on the given relationships and the transitive properties.\n\nThe final determination of whether F and L have a good relationship should be based on whether there's a direct or indirect indication that they cannot be in the same group due to the relationships provided.\n\nGiven the complexity and the need to adhere strictly to the provided rules and information, the critical factor is whether F and L can be connected through good relationships without violating any of the given conditions or the transitive properties.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "To determine if H and B have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. C and O have a good relationship.\n2. C and P have a good relationship.\n3. C and A have a good relationship.\n4. C and E have a good relationship.\n5. From points 1, 2, 3, and 4, we know C has good relationships with O, P, A, and E.\n\n6. C and K have a bad relationship.\n7. C and L have a bad relationship.\n8. From points 6 and 7, we know C has bad relationships with K and L.\n\n9. L and K have a bad relationship.\n10. K and H have a good relationship.\n11. K and G have a good relationship.\n12. K and I have a good relationship.\n13. K and N have a good relationship.\n14. From points 10, 11, 12, and 13, we know K has good relationships with H, G, I, and N.\n\n15. F and L have a good relationship.\n16. F and D have a good relationship.\n17. F and J have a good relationship.\n18. F and B have a good relationship.\n19. F and M have a good relationship.\n20. From points 15, 16, 17, 18, and 19, we know F has good relationships with L, D, J, B, and M.\n\n21. Since C has a bad relationship with L (point 7), and F has a good relationship with L (point 15), C and F must have a bad relationship through transitivity (rule 2).\n\n22. However, it's given that C and E have a good relationship (point 4), and E and F have a bad relationship (given). This implies that C and F indeed have a bad relationship, reinforcing point 21.\n\n23. Given that K has a bad relationship with C (point 6) and K has a good relationship with H (point 10), and considering the transitive properties, we cannot directly infer a good or bad relationship between H and any of C's good relationship partners (like A, O, P, E) without more specific connections.\n\n24. Since F has a good relationship with B (point 18), and we are trying to find out if H and B have a good relationship, we need a connection between H and B or their respective groups.\n\n25. K and H have a good relationship (point 10), and K and L have a bad relationship (point 9). F and L have a good relationship (point 15), which means K and F must have a bad relationship (since K and L have a bad relationship, and L and F have a good relationship).\n\n26. Given that K and F have a bad relationship (inferred from point 25), and F and B have a good relationship (point 18), it implies that K and B must have a bad relationship because if K (who has a bad relationship with F) were to have a good relationship with B (who has a good relationship with F), it would contradict the transitive property that if A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship.\n\n27. Since K and H have a good relationship (point 10), and we've deduced that K and B must have a bad relationship (point 26), by the transitive property, H and B must have a bad relationship because K cannot have a good relationship with H and a bad relationship with B without implying H and B have a bad relationship due to the group dynamics and transitive properties outlined.\n\nThe final answer is: $\\boxed{No}$"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since K and L have a good relationship, and K and M have a good relationship, then by transitivity, L and M have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if P and F have a good relationship, we must analyze the given relationships and apply the transitive properties.\n\n1. H and I have a good relationship.\n2. H and E have a good relationship.\n3. H and G have a good relationship.\n4. H and F have a good relationship.\n5. K and P have a good relationship.\n6. K and O have a good relationship.\n7. K and M have a good relationship.\n8. K and A have a good relationship.\n9. K and D have a good relationship.\n10. J and B have a good relationship.\n11. J and C have a good relationship.\n12. L and N have a good relationship.\n13. H and L have a bad relationship.\n14. J and L have a bad relationship.\n15. K and L have a bad relationship.\n16. J and H have a bad relationship.\n17. K and H have a bad relationship.\n18. K and J have a bad relationship.\n19. B and K have a bad relationship.\n20. E and L have a bad relationship.\n\nFrom the information given:\n- H has a good relationship with E, G, F, and I.\n- K has a good relationship with P, O, M, A, and D.\n- Since H and K have a bad relationship, and by transitivity, anyone who has a good relationship with H cannot have a good relationship with K, and vice versa.\n\nGiven that K and P have a good relationship, and K and H have a bad relationship, P cannot have a good relationship with H (because if P had a good relationship with H, then by transitivity, K would have a good relationship with H, which contradicts the given information).\n\nHowever, to determine if P and F have a good relationship, we need to find a connection between P and F through their relationships.\n\nSince K has a bad relationship with H, and H has a good relationship with F, we cannot directly infer a good relationship between P and F from K's relationships. \n\nBut, considering the groups:\n- H, E, G, F, and I are in one group (let's call it Group 1) because they all have good relationships with each other.\n- K, P, O, M, A, and D are in another group (let's call it Group 2) because they all have good relationships with each other.\n\nGiven that K and H have a bad relationship, Group 1 and Group 2 must have a bad relationship with each other (by rule 5).\n\nTherefore, since F is in Group 1 and P is in Group 2, and these groups have a bad relationship with each other, P and F must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since C and H have a good relationship, and C and D have a good relationship, then by transitivity, H and D have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since A and O have a good relationship, and A and C have a bad relationship, then O and C must have a bad relationship. \nAlso, C and I have a good relationship. \nGiven that O and C have a bad relationship, and C and I have a good relationship, then O and I must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and E have a good relationship, and C and G have a good relationship, then E and G have a good relationship through transitivity.\n\nAlso, A and G have a bad relationship.\n\nGiven that N and A have a good relationship, and N and C have a bad relationship, and C and E have a good relationship, it implies that A and E cannot have a good relationship directly or through transitivity without contradicting the given relationships.\n\nTherefore, considering the transitive properties and given relationships, A and E must have a bad relationship because A has a bad relationship with G, and E has a good relationship with G through C.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if A and L have a good relationship, we must analyze the given relationships and apply the transitive properties.\n\n1. **K and I have a bad relationship.**\n2. **K and C have a bad relationship.**\n3. **I and B have a good relationship.**\n4. **C and P have a good relationship.**\n5. **C and O have a good relationship.**\n6. **C and J have a bad relationship.**\n7. **K and J have a bad relationship.**\n8. **J and H have a good relationship.**\n9. **I and C have a bad relationship.**\n10. **F and K have a good relationship.**\n11. **I and J have a bad relationship.**\n12. **F and D have a good relationship.**\n13. **F and N have a good relationship.**\n14. **D and H have a bad relationship.**\n15. **C and L have a good relationship.**\n16. **C and M have a good relationship.**\n17. **F and G have a good relationship.**\n18. **F and E have a good relationship.**\n19. **F and A have a good relationship.**\n20. **B and C have a bad relationship.**\n\nFrom point 19, **F and A have a good relationship.**\n\nSince F has a good relationship with A, and we need to find out about A and L, we should look for connections between F (or A) and L.\n\nFrom point 15, **C and L have a good relationship.**\n\nAlso, from the given relationships:\n- **I and C have a bad relationship** (point 9).\n- **B and C have a bad relationship** (point 20).\n- **I and B have a good relationship** (point 3), which implies that I and B are in the same group.\n- Given **I and C have a bad relationship**, and **B and C have a bad relationship**, it means B, I, and C cannot be in the same group.\n\nNow, focusing on A and L:\n- We know **F and A have a good relationship** (point 19).\n- And **F and K have a good relationship** (point 10), which means F, A, and K are in the same group because they all have good relationships with each other.\n- **K and C have a bad relationship** (point 2), which means K and C are not in the same group.\n- Since **C and L have a good relationship** (point 15), C and L are in the same group.\n- Given that K and C are in different groups and have a bad relationship, and knowing that A is with K and F in one group, while L is with C in another, we can infer that A and L are in different groups due to the bad relationships between members of their respective groups (e.g., K and C).\n\nTherefore, based on the transitive properties and the given relationships, A and L do not have a direct or indirect good relationship established through the information provided, and they are actually implied to be in separate groups due to the connections and the bad relationships between the groups they are associated with.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since N and G have a good relationship, and N and C have a bad relationship, then G and C must have a bad relationship. \n\nB and C have a good relationship, and G and C have a bad relationship. \n\nUsing the rule that if A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship, we can conclude that B and G must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since O and H have a bad relationship, and O and I have a good relationship, then by the transitive property of bad relationships, H and I must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if L and A have a good relationship, we must analyze the given relationships and apply the transitive properties.\n\n1. K and A have a good relationship.\n2. K and J have a bad relationship.\n3. Since K and J have a bad relationship, and K has a good relationship with A, then A and J must have a bad relationship (by rule 2).\n4. J and G have a bad relationship.\n5. G and L have a good relationship.\n6. Since J and G have a bad relationship, and G has a good relationship with L, then J and L must have a bad relationship (by rule 2).\n7. Given that A and J have a bad relationship (from step 3), and J and L have a bad relationship (from step 6), we cannot directly conclude the relationship between A and L from these steps.\n8. However, we know K and A have a good relationship, and K and G have a bad relationship.\n9. G and L have a good relationship, which means G and L are in the same group.\n10. Since K and G have a bad relationship, and G and L are in the same group, K and L must have a bad relationship (by rule 5).\n11. Given K and A have a good relationship, and K and L have a bad relationship, it implies A and L have a bad relationship (by rule 2, considering the transitive properties and group formations).\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Since L and E have a good relationship, and L and O have a bad relationship, then E and O must have a bad relationship. \nAlso, since O and N have a good relationship, then E and N must have a bad relationship. \nAdditionally, O and C have a good relationship, so E and C must have a bad relationship. \nFurthermore, O and G have a bad relationship, and L and G have a bad relationship, so E and G do not have a direct bad relationship. \nHowever, since L and G have a bad relationship, and L and E have a good relationship, then E and G must have a good relationship through transitivity with L. \nSince F and G have a good relationship, and E and G have a good relationship, then E and F must have a good relationship. \nFinally, since F and H have a good relationship, and E and F have a good relationship, then E and H must have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and N have a good relationship, and C and I, C and J, C and L, C and F, C and D, C and O all have good relationships, but K and C have a bad relationship, and A and K have a good relationship, then by transitivity, A and C must have a bad relationship (because if A and C had a good relationship, then by transitivity, K and C would have a good relationship, which contradicts the given information).\n\nGiven that A and C have a bad relationship, and C and N have a good relationship, then by the transitive property of bad relationships, A and N must have a bad relationship.\n\nHowever, we are asked about the relationship between A and N. Since N and P have a bad relationship, and A and P have a good relationship, then by the transitive property of bad relationships, A and N indeed have a bad relationship, which directly answers the question.\n\nBut since the question asks if A and N have a \"good\" relationship, the answer must reflect the opposite.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since B and G have a good relationship, and B and C have a good relationship, then G and C have a good relationship through transitivity.\n\nHowever, K and C have a bad relationship. \n\nGiven that G and C have a good relationship, and C and K have a bad relationship, then G and K must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if N and G have a good relationship, we must analyze the given relationships and apply the rules provided.\n\n1. **Start with N**: N has a good relationship with J (given).\n2. **J's relationships**: J has a good relationship with N (as mentioned), and also with C. However, J has bad relationships with F, L, and K.\n3. **L's relationships**: Despite J having a bad relationship with L, L has good relationships with several people, including E, H, and G.\n4. **Connecting N to G through good relationships**: Since J has a bad relationship with L, and L has a good relationship with G, we cannot directly infer a good relationship between J (and thus N) and G through L because of the bad relationship between J and L.\n\nHowever, we need to find a path or a reason to conclude the relationship between N and G based on the given rules and relationships.\n\nGiven that:\n- J and N have a good relationship.\n- J and L have a bad relationship.\n- L and G have a good relationship.\n\nBut, there's no direct or indirect good relationship established between N and G through the given information that doesn't involve a bad relationship somewhere in the chain (like J to L). \n\nYet, considering the rules:\n- If A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship.\n- This implies that because J has a bad relationship with L, and J has a good relationship with N, L and N should have a bad relationship if we were to follow the logic of transitivity in bad relationships. However, this rule doesn't directly apply to establishing good relationships.\n\nSince we cannot establish a direct or indirect good relationship between N and G without violating the given relationships or rules, and given the constraints and the information provided:\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if D and H have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. C and A have a good relationship.\n2. C and D have a good relationship.\n3. From points 1 and 2, and given the transitive property, A and D have a good relationship (since C has a good relationship with both A and D).\n4. C and M have a bad relationship.\n5. C and K have a bad relationship.\n6. K and H have a good relationship.\n7. Since C has a bad relationship with K, and K has a good relationship with H, by the transitive property of bad relationships, C and H must have a bad relationship (because if C had a good relationship with H, given C's bad relationship with K, it would imply K and H have a bad relationship, which contradicts the given information).\n8. Given that C and D have a good relationship, and if we consider the possibility of D and H having a good relationship, it would imply (through transitivity with C's relationships) that C and H have a good relationship, which contradicts the conclusion from point 7.\n\nHowever, the critical insight comes from understanding the groups and the implications of the bad relationships:\n\n- Since C and K have a bad relationship, and C has a good relationship with D and A, while K has a good relationship with H, it implies that the groups {C, A, D, G} and {K, H, E, L, J, B} are separate due to the bad relationships between C and K, and by extension, between their respective groups.\n- The bad relationship between C and M also separates {C, A, D, G} from {M, N, I, F}, given M's good relationship with F and the bad relationship between A and F.\n\nGiven these separations and the direct relationships provided:\n\n- D is in the same group as C (and thus A and G), due to their good relationships.\n- H is in the same group as K (and thus E, L, J, B), due to their good relationships.\n\nSince C and K have a bad relationship, and by the rules, this extends to their respective groups, D (being in the same group as C) and H (being in the same group as K) must have a bad relationship due to the group separation caused by the bad relationship between C and K.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and G have a good relationship, and C and E have a bad relationship, then by the transitive property of bad relationships, G and E must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since K and A have a good relationship, and K and C have a bad relationship, then A and C must have a bad relationship through transitivity.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since M and I have a good relationship, and M and L have a bad relationship, then I and L must have a bad relationship due to the transitive property of relationships. \n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "To determine if G and P have a good relationship, we must analyze the given relationships and apply the transitive properties.\n\n1. M and E have a good relationship.\n2. M and H have a bad relationship.\n3. H and K have a bad relationship.\n4. L and H have a bad relationship.\n5. C and H have a good relationship.\n6. L and N have a good relationship.\n7. L and A have a good relationship.\n8. J and P have a good relationship.\n9. L and M have a bad relationship.\n10. M and K have a bad relationship.\n11. M and F have a good relationship.\n12. H and L have a bad relationship.\n13. C and D have a good relationship.\n14. G and M have a bad relationship.\n15. J and K have a good relationship.\n16. L and K have a bad relationship.\n17. M and B have a good relationship.\n18. J and G have a good relationship.\n19. L and I have a good relationship.\n20. C and O have a good relationship.\n\nFrom the information given:\n- M and H have a bad relationship (2).\n- C and H have a good relationship (5), which implies C and M have a bad relationship because if C and M had a good relationship, then by transitivity, H and M would have a good relationship, which contradicts the given information.\n- G and M have a bad relationship (14).\n- J and G have a good relationship (18).\n- J and P have a good relationship (8).\n- J and K have a good relationship (15).\n- M and K have a bad relationship (10), which implies that anyone with a good relationship with M cannot have a good relationship with K, and vice versa.\n- Since G has a bad relationship with M, and J has a good relationship with both G and K, it suggests that G and K do not have a direct bad relationship through the given information but are connected through J.\n- However, L and K have a bad relationship (16), and L and M have a bad relationship (9), which does not directly affect G and P's relationship but indicates complex groupings.\n- The key information is J and G have a good relationship, and J and P have a good relationship, which directly implies G and P have a good relationship through transitivity.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since F and H have a good relationship, and F and N have a good relationship, then by transitivity, H and N have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and K have a good relationship, and C and O have a bad relationship, then K and O must have a bad relationship. \nAlso, since O and D have a good relationship, then K and D must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since O and C have a bad relationship, and O and H have a good relationship, then by the transitive property of bad relationships, C and H must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and L have a good relationship, and C and F have a bad relationship, then L and F must have a bad relationship. \n\nAlso, A and F have a good relationship, and A and H have a good relationship. \n\nGiven A has a good relationship with both F and H, and L has a bad relationship with F, then by the transitive property, L and H cannot be in the same group as L and F. However, since A is in the same group as both H and F, and given the rules, this implies L cannot be in the same group as A (because L has a bad relationship with F, who is in the same group as A).\n\nBut C is in the same group as L, and C has a bad relationship with F. Since A has a good relationship with F, this means C and A must be in separate groups. \n\nGiven C and L are in the same group, and A and H are in the same group, and these are separate groups, then L and H must be in separate groups. \n\nTherefore, L and H do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since A has a good relationship with both K and H, and given the transitive properties of relationships, we can conclude that K and H have a good relationship through their mutual good relationship with A.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since C and H have a good relationship, and C and A have a good relationship, then A and H have a good relationship (through transitivity).\n\nAlso, A and D have a bad relationship, and K and D have a good relationship. Given that C and A have a good relationship, and C and K have a bad relationship, it implies that A and K have a bad relationship (because if A had a good relationship with K, then through transitivity with C having a good relationship with A, C would have a good relationship with K, which contradicts the given).\n\nHowever, we know K and J have a good relationship. Since A and K have a bad relationship, and A and H have a good relationship, it implies that K and H must have a bad relationship (because if K and H had a good relationship, then through transitivity with A having a bad relationship with K, A would have a bad relationship with H, which contradicts the given good relationship between A and H).\n\nGiven that K and H have a bad relationship, and K and J have a good relationship, it implies that J and H have a bad relationship (because if J and H had a good relationship, then through transitivity with K having a good relationship with J, K would have a good relationship with H, which contradicts the deduced bad relationship between K and H).\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since K and D have a good relationship, and K and H have a good relationship, then by transitivity, D and H have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since N and C have a bad relationship, and N and P have a good relationship, then by the transitive property of bad relationships, P and C must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if B and K have a good relationship, let's analyze the given relationships step by step, focusing on those that directly or indirectly connect B and K.\n\n1. **N and A have a good relationship.**\n2. **N and C have a bad relationship.** This implies A and C have a bad relationship because N has a good relationship with A and a bad relationship with C.\n3. **C and H have a good relationship**, **C and K have a good relationship**, **C and M have a good relationship**, and **C and L have a good relationship**. This means H, K, M, and L all have good relationships with each other (through transitivity with C).\n4. **N and B have a good relationship.** Since N has a bad relationship with C, and B has a good relationship with N, B must have a bad relationship with C (because if B had a good relationship with C, given N's good relationship with B, it would imply N has a good relationship with C, which contradicts the given).\n5. **B and E have a bad relationship.**\n6. **O and E have a good relationship**, and **O and C have a bad relationship**. This is consistent with our deductions so far and does not directly impact B and K's relationship.\n7. **N and P have a good relationship**, and **M and P have a bad relationship**. This implies that C (who has a good relationship with M) and P have a bad relationship, and by extension, anyone who has a good relationship with C will have a bad relationship with P.\n8. **Given that N has a good relationship with B and a bad relationship with C**, and considering the transitive properties, B cannot have a good relationship with C (as established earlier). Since C has a good relationship with K, and B has a bad relationship with C, we need to determine if this forces B and K into a bad relationship.\n\nGiven the transitive properties and the fact that B has a bad relationship with C, and C has a good relationship with K, it does not directly imply a bad relationship between B and K because the relationships are defined such that if A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship. However, the converse is not explicitly stated as a rule, meaning having a bad relationship with someone who has a good relationship with another does not automatically imply a bad relationship between the first and the third person without additional context.\n\nHowever, considering **N and B have a good relationship** and **N and C have a bad relationship**, and knowing **C and K have a good relationship**, for B and K to have a good relationship, there must be a chain of good relationships connecting them without contradicting the given relationships. Since N has a good relationship with B and a bad relationship with C (and by extension with K, because C and K have a good relationship), this suggests B and K are in different groups due to their indirect connections through N and C.\n\nBut let's directly address the question: Since **N and B have a good relationship** and **N and C have a bad relationship**, and given **C and K have a good relationship**, the critical insight comes from understanding that if B were to have a good relationship with K, it would imply (through the transitivity of good relationships) that N has a good relationship with K (since N has a good relationship with B), which contradicts the fact that N has a bad relationship with C, and C has a good relationship with K. Thus, B and K cannot have a direct good relationship without violating the given conditions and the transitive properties of relationships.\n\nTherefore, considering the transitive properties and the given relationships, B and K must have a bad relationship because the alternative would contradict the established relationships and their transitive implications.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since M and C have a bad relationship, and M and B have a good relationship, then B and C must have a bad relationship (by rule 2). \n\nAlso, C and G have a good relationship. \n\nGiven that B and C have a bad relationship, and C and G have a good relationship, then B and G must have a bad relationship (by rule 2).\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Since H and B have a good relationship, and H and P have a good relationship, then by transitivity, B and P have a good relationship.\n\nHowever, we also know that A and P have a bad relationship, and K and A have a good relationship. This implies that K and P have a bad relationship (because if K and A have a good relationship, and A and P have a bad relationship, then K and P must have a bad relationship).\n\nFurthermore, since K and P have a bad relationship, and H and P have a good relationship, then K and H must have a bad relationship, which is consistent with the given information.\n\nNow, since K and H have a bad relationship, and H and B have a good relationship, then K and B must have a bad relationship.\n\nGiven that K and A have a good relationship, and A and P have a bad relationship, it means that K and P have a bad relationship. And since H and P have a good relationship, and H and B have a good relationship, it might suggest that B and P have a good relationship through H. \n\nHowever, considering that A and P have a bad relationship, and K and A have a good relationship, and also K and B have a bad relationship (inferred from K and H having a bad relationship and H and B having a good relationship), and K and P having a bad relationship, we can conclude that the initial assumption about B and P having a good relationship through H is incorrect because it would imply that K and P have a good relationship if B and P had a good relationship, given the transitive properties.\n\nThe correct interpretation should focus on the direct and indirect relationships provided. Since H and B have a good relationship, and H and P have a good relationship, but A and P have a bad relationship, and K and A have a good relationship, which implies K and P have a bad relationship, it indicates a conflict in the initial straightforward transitive approach.\n\nThe crucial insight comes from recognizing that if B and P had a good relationship, given H's good relationships with both, it would not directly contradict any given statement but would be inconsistent with the implied relationships between groups. \n\nGiven A and P have a bad relationship, and considering the groups formed by good relationships, H, B, and P would be in one group if B and P had a good relationship. However, since A and P have a bad relationship, and K and A have a good relationship, it suggests that K, A, and P cannot all be in the same group due to the bad relationship between A and P.\n\nThe information about K, H, and their respective relationships indicates that K and H are in separate groups. Given that H and P have a good relationship, and considering the transitive properties and group definitions, the direct relationships provided do not explicitly state a good relationship between B and P but imply connections through H.\n\nYet, considering all provided relationships and the rules about groups and transitivity, the question about B and P having a good relationship hinges on understanding the implications of the bad relationship between A and P and the good relationships involving H.\n\nGiven the complexity and the need to adhere strictly to the provided relationships and rules, the critical factor is the bad relationship between A and P, and how it affects the potential groupings and relationships.\n\nSince H has good relationships with both B and P, but A and P have a bad relationship, and considering the implications of these relationships on group formations and the transitive properties of relationships, the answer to whether B and P have a good relationship should be based on the direct and indirect implications of these relationships.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Since C and L have a good relationship, and C and the people A has a good relationship with (which includes N, since A and N have a good relationship) must also have a good relationship with L through transitivity, we can conclude that L and N have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Since F and D have a good relationship, and F and N have a good relationship, then by transitivity, D and N have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if F and M have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. A and F have a good relationship.\n2. A and I have a good relationship, but there's no direct connection from I to M or F to M.\n3. A and L have no direct relationship, but A and K have a good relationship, and K and L have a bad relationship. This implies A and L have a bad relationship (because if A has a good relationship with K, and K has a bad relationship with L, then A must have a bad relationship with L due to the transitive property of bad relationships).\n4. Since A and L have a bad relationship, and L and M have a good relationship, this means A and M must have a bad relationship (following the rule that if A has a bad relationship with L, and L has a good relationship with M, then A and M have a bad relationship).\n5. Given A and F have a good relationship, and A and M have a bad relationship, it implies F and M have a bad relationship (because if A has a good relationship with F, and A has a bad relationship with M, then due to transitivity, F and M cannot have a good relationship).\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if F and K have a good relationship, let's analyze the given relationships step by step, focusing on the connections that could link F and K through good relationships.\n\n1. **B and I have a good relationship**: This doesn't directly connect to F or K.\n2. **C and D have a good relationship**: This also doesn't directly connect to F or K.\n3. **C and K have a good relationship**: This establishes a direct good relationship between C and K.\n4. **B and M have a good relationship**: Doesn't directly connect to F or K.\n5. **C and G have a good relationship**: Doesn't directly connect to F or K.\n6. **C and H have a good relationship**: Doesn't directly connect to F or K.\n7. **B and L have a good relationship**: Doesn't directly connect to F or K.\n8. **C and A have a good relationship**: Establishes C's connection to A, but doesn't directly connect to F or K.\n9. **B and N have a good relationship**: Establishes B's connection to N.\n10. **B and E have a good relationship**: Doesn't directly connect to F or K.\n11. **B and F have a good relationship**: Establishes a direct good relationship between B and F.\n12. **B and J have a good relationship**: Doesn't directly connect to F or K.\n13. **C and N have a bad relationship**: Indicates a bad relationship between C and N.\n14. **A and N have a bad relationship**: Indicates a bad relationship between A and N, implying A and C are in one group, and N is in another because C and A have a good relationship.\n15. **Given B and N have a good relationship**, and **C and N have a bad relationship**, it implies B and C must be in different groups because of the transitive property of bad relationships.\n\nSince **B and F have a good relationship**, F is in the same group as B. Given **C and K have a good relationship**, K is in the same group as C. Because B (and thus F) and C (and thus K) are in different groups due to their respective relationships with N, F and K cannot have a direct good relationship established through the given connections. The groups are separate, and a bad relationship between any two members from different groups implies all members from one group have a bad relationship with all members from the other group.\n\nTherefore, considering the separation of groups and the transitive properties of relationships, F and K, being in different groups due to the connections through B, C, and their relationships with N, do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if H and L have a good relationship, let's analyze the given relationships step by step, focusing on those that directly or indirectly involve H and L.\n\n1. **E and A have a good relationship.**  \n2. **E and L have a good relationship.**  \nFrom these, we can infer that A and L have a good relationship (through E).\n\n3. **E and J have a bad relationship.**  \n4. **J and H have a good relationship.**  \nGiven that E and J have a bad relationship, and knowing that relationships are transitive, if E has a good relationship with someone who has a good relationship with J, then that someone must have a bad relationship with J. However, since E has a good relationship with L, and we're trying to find out about H and L, we need to connect H and L through their relationships.\n\n5. **J and O have a good relationship.**  \n6. **J and H have a good relationship.**  \n7. **J and N have a good relationship.**  \nThese indicate that O, H, and N are all in the same group as J.\n\n8. **F and O have a bad relationship.**  \nGiven that G has a good relationship with F, and G also has a good relationship with M and B, this implies that O (and thus J and H, by transitivity) cannot be in the same group as F, M, B, or G.\n\n9. **G and K have a bad relationship.**  \n10. **K and C have a good relationship.**  \n11. **K and J have a bad relationship.**  \nThese relationships indicate that K and J are in separate groups, with K being in a group with C, and J being in a group with H, O, and N.\n\n12. **E and K have a bad relationship.**  \n13. **E and D have a bad relationship.**  \n14. **D and K have a bad relationship.**  \n15. **D and J have a bad relationship.**  \nGiven that E has a bad relationship with both K and D, and D has a bad relationship with K, it suggests that E, D, and K are in separate groups. However, since D has a bad relationship with J, and E has a bad relationship with J as well, it indicates that D and E cannot be in the same group as J (and thus H).\n\n16. **G and D have a good relationship.**  \nThis implies that D is in the same group as G, M, B, and F (since G has good relationships with all these individuals).\n\nNow, considering the relationships involving E and L, and knowing that E has a good relationship with L, and a bad relationship with J (and thus with H, by transitivity), we can infer that L cannot be in the same group as J or H because E's relationship with L is good, and with J (and thus H) is bad.\n\nGiven the transitive properties and the fact that E has a good relationship with L but a bad relationship with J (and thus H), it indicates that L and H are in different groups due to their indirect connections through E and J. Therefore, based on the given relationships and the rules provided:\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if L and I have a good relationship, let's analyze the given relationships step by step, focusing on those that directly or indirectly connect L and I.\n\n1. **K and L have a good relationship.**\n2. **K and J have a good relationship.**\n3. **K and N have a good relationship.**\n4. **M and I have a good relationship.**\n5. **M and H have a good relationship.**\n6. **H and K have a bad relationship.**\n\nFrom point 6, since H and K have a bad relationship, and M has a good relationship with both H and I, it means K and I must have a bad relationship because if K and I had a good relationship, given M's good relationship with H, it would imply H and K have a good relationship through transitivity, which contradicts the given information.\n\nNow, since K and L have a good relationship (point 1), and we've deduced K and I have a bad relationship, it implies L and I have a bad relationship. This is because if L and I had a good relationship, given K's good relationship with L, it would imply K and I have a good relationship through transitivity, which again contradicts our deduction based on the given relationships.\n\nTherefore, based on the transitive properties and the given relationships, L and I do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since A and G have a good relationship, and A and E, A and J, A and K also have good relationships, G is in the same group as A, E, J, and K. \n\nB and C have a good relationship, so C is in the same group as B. B also has good relationships with D, H, I, L, and M, so they are all in the same group as C.\n\nHowever, K and C have a bad relationship. Given the rules, this means that everyone in K's group (which includes A, E, G, J) must have a bad relationship with everyone in C's group (which includes B, C, D, H, I, L, M).\n\nTherefore, since G is in the same group as A and K, and C is in a different group with a bad relationship to K's group, G and C must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Since M and H have a good relationship, and M and F have a good relationship, H and F have a good relationship through transitivity.\n\nD and F have a bad relationship, so D and H must have a bad relationship.\n\nN and D have a good relationship, and N and H have a bad relationship (because N and M have a bad relationship, and M and H have a good relationship).\n\nC and N have a bad relationship, and C and K have a good relationship, so N and K have a bad relationship.\n\nSince N and K have a bad relationship, and N and H have a bad relationship, we cannot directly conclude the relationship between H and K from the given information about N.\n\nHowever, we can analyze the relationships of other people with H and K:\n\nM and H have a good relationship, and M and F have a good relationship.\nC and K have a good relationship, and C and G have a good relationship, and C and J have a good relationship, and C and A have a good relationship.\n\nBut, C and M have a bad relationship, so C and H have a bad relationship (because M and H have a good relationship).\n\nSince C and K have a good relationship, and C and H have a bad relationship, K and H have a bad relationship is not necessarily true.\n\nHowever, M and H have a good relationship, and M and F have a good relationship, and D and F have a bad relationship, and N and D have a good relationship, and N and M have a bad relationship.\n\nGiven the relationships:\n- N and E have a good relationship\n- N and L have a good relationship\n- N and I have a good relationship\n- N and B have a good relationship\n- J and L have a bad relationship\n\nAnd:\n- C and J have a good relationship\n- C and A have a good relationship\n- C and G have a good relationship\n- C and K have a good relationship\n\nWe see that C and N have a bad relationship, and through transitivity, everyone related to C (A, G, J, K) has a bad relationship with everyone related to N (B, E, I, L).\n\nSince M and H have a good relationship, and M and F have a good relationship, and D and F have a bad relationship, and N and D have a good relationship, and N and M have a bad relationship, H is in the same group as M and F.\n\nGiven that C and M have a bad relationship, and C and K have a good relationship, and considering the transitive properties and the groups, H and K do not have a direct good relationship established, but since H is related to M, and M is not related to K's group (because C and M have a bad relationship), and considering the separate groups, H and K are likely in different groups.\n\nHowever, based on the given rules and information, we cannot directly conclude a bad relationship between H and K without assuming information not provided.\n\nBut, analyzing further:\n- If H and K had a good relationship, then M and K would have a good relationship (because M and H have a good relationship), and since C and K have a good relationship, and C and M have a bad relationship, this would create a contradiction.\n\nTherefore, considering the transitive properties and the separate groups, the correct answer is:\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if A and H have a good relationship, we need to analyze the given relationships and apply the transitive properties.\n\n1. We know that L and A have a good relationship.\n2. Also, L and I have a good relationship, and L and G do not have a direct connection to H, but we see that C and H have a good relationship.\n3. Furthermore, C and E have a good relationship, and since L and E have a bad relationship, this implies that C and L must have a bad relationship because if C and L had a good relationship, given C's good relationship with E, it would contradict the bad relationship between L and E.\n4. However, since C and F have a good relationship, and we are trying to connect A (through L) to H (through C), we need to find a path that does not violate the rules.\n5. Given that L and A have a good relationship, and we need to connect A to H, we look for a connection between L (or A) and the group containing H.\n6. Since C and H have a good relationship, and C and E have a good relationship, but L and E have a bad relationship, it suggests that L (and thus A, by transitivity) cannot be in the same group as E and C (and H, by extension) because L has a bad relationship with E, and within a group, everyone must have a good relationship with each other.\n7. However, the critical insight comes from recognizing that while L and E have a bad relationship, and C and E have a good relationship, it does not directly impact the relationship between A and H unless we can establish a direct or indirect good relationship between A (or L) and H (or C) that does not violate the given bad relationships.\n8. Given the bad relationships involving L (with E, J, and K), and knowing that K and N have a good relationship, and F and N have a bad relationship, which implies C and N have a bad relationship (since C and F have a good relationship), we see that the connections between these individuals create separate groups based on their relationships.\n9. The direct connection between C and H is a good relationship, and since C and E have a good relationship, but L and E have a bad relationship, it indicates that A (through L) and H (through C) are likely in different groups due to the transitive properties of their relationships.\n10. However, the key to solving this lies in recognizing the groups and applying the rule that if someone from one group has a bad relationship with someone from another group, then everyone from the first group has a bad relationship with everyone from the second group. Given the complex web of relationships, the critical path to determine the relationship between A and H involves understanding that A and L are connected, and their relationships with others can help determine their group membership.\n\nGiven the information and focusing on the question of whether A and H have a good relationship, we must consider the implications of the transitive properties and group definitions. Since L and A have a good relationship, and there's a complex network of relationships that define different groups, the question essentially asks us to infer the relationship between A and H based on the provided connections.\n\nGiven that C and H have a good relationship, and C also has a good relationship with E, but L (and thus A) has a bad relationship with E, it suggests that A and H are in different groups due to the transitive properties and the definition of a group requiring all members to have good relationships with each other. This implies that A and H do not have a direct or indirect good relationship that would place them in the same group without violating the given conditions.\n\nFinal Answer: No"
+    }
+  ]
+}

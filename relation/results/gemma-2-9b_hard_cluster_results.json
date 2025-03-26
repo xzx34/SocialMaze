@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gemma-2-9b",
+    "difficulty": "hard",
+    "question_type": "cluster",
+    "total_samples": 100,
+    "correct_predictions": 0,
+    "accuracy": 0.0
+  },
+  "results": [
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "ERROR: API request failed after 3 attempts. Last error: KeyError: 'gemma-2-9b'"
+    }
+  ]
+}

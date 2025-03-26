@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gemma-2-27B",
+    "difficulty": "easy",
+    "question_type": "reasoning",
+    "total_samples": 100,
+    "correct_predictions": 56,
+    "accuracy": 56.00000000000001
+  },
+  "results": [
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   *  A, B, F, G, H are in one group (all have good relationships with each other directly or through transitivity).\n   * C, E, I are in another group (all have bad relationships with at least one other member of the group).\n\n2. **Analyze the Relationship:**\n\n   * Since I is in a different group than B, and groups are completely separate, they must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n    *  A, B, C, F, H have good relationships with each other (directly or transitively). This forms Group 1.\n    * D, G have a good relationship. This forms Group 2.\n    * E, I have a good relationship. This forms Group 3.\n\n2. **Analyze Relationships Between Groups:**\n    * A (Group 1) has a bad relationship with D (Group 2). This means Group 1 and Group 2 have a bad relationship.\n    *  There's no direct or transitive relationship between Group 1 and Group 3, or Group 2 and Group 3.\n\n3. **Determine B and H's Relationship:**\n    * Since B and H are both in Group 1, they have a good relationship.\n\n**Final Answer: Yes** \n\n\n"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n    *  A, D, F form a group (good relationships between all).\n    * C, G, H form a group (good relationships between all).\n\n2. **Analyze Relationships Between Groups:**\n    * A has a good relationship with B.\n    * A is in a group with D and F.\n    * Therefore, B has good relationships with D and F.\n\n3. **Determine G and B's Relationship:**\n    * B is in a group with A, D, and F.\n    * G is in a group with C, H.\n    * There's no direct or transitive good relationship between B and G's groups.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **A is connected to everyone else with good relationships:** A-E, A-H, A-B, A-G, A-C.\n\n2. **C and F have a bad relationship.**\n\n3. **E and F have a bad relationship.**\n\n4. **Since A has good relationships with both C and E, and C and E have connections to A through bad relationships with F, C and E must have a bad relationship.**\n\n\nFinal Answer: No \n"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n    *  B, D, E, I form a group (all have good relationships with each other).\n    * A, G form a group (good relationship).\n    * H, F form a group (good relationship).\n\n2. **Analyze Relationships Between Groups:**\n    * D (from group 1) has a bad relationship with H (from group 3). This means all members of group 1 have bad relationships with all members of group 3.\n\n3. **Determine D and F's Relationship:**\n    * Since D is in group 1 and F is in group 3, they have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Here's the breakdown:\n\n1. **A and G have a good relationship.**\n2. **A and D have a good relationship.**\n3. **A and H have a good relationship.**\n4. **A and C have a good relationship.**\n\nSince A has good relationships with D, H, and C, they all belong to the same group.\n\n5. **B and F have a good relationship.**\n6. **B and I have a good relationship.**\n7. **B and E have a good relationship.**\n\nB has good relationships with F, I, and E, forming another group.\n\n8. **C and E have a bad relationship.**\n\nThis means the group with A (D, H, C) has a bad relationship with the group with B (F, I, E).\n\n9. **D and F have a bad relationship.**\n\nThis confirms the separation between the two groups.\n\n**Therefore, G and B have a bad relationship.**\n\nFinal Answer: No \n"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   *  A, D, C, I, E form a group (all have good relationships with each other directly or through transitivity).\n   * B, F, H, G form a group.\n\n2. **Analyze the Relationship:**\n\n   * E is in the group with A.\n   * A has a good relationship with B.\n   * B is in the group with G.\n\n3. **Conclusion:**\n\n   Since E is connected to G through a chain of good relationships, they must have a good relationship.\n\n\nFinal Answer: Yes \n"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   *  Group 1: A, B, C, G, H (All have good relationships with each other directly or through transitivity)\n\n2. **Analyze Relationships Between Groups:**\n\n   * C and E have a bad relationship. Since C is in Group 1 and E is not, this means Group 1 has a bad relationship with E.\n   * E and D have a good relationship, and E and F have a good relationship. This means D and F are in the same group as E.\n\n3. **Determine F's Group:**\n\n   * F is in the same group as E, and E is not in Group 1. Therefore, F is not in Group 1.\n\n4. **Final Answer:** Since F is not in the same group as B, they do not have a good relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** C, D, F, H  (C-D good, C-F good, C-H good)\n   * **Group 2:** I, A, E (I-A good, I-E good)\n   * **Group 3:** J, B, G (J-B good, J-G good)\n\n2. **Analyze Relationships Between Groups:**\n\n   * I (Group 2) has a bad relationship with H (Group 1). This means Group 2 and Group 1 have a bad relationship.\n   * J (Group 3) has a bad relationship with I (Group 2). This means Group 3 and Group 2 have a bad relationship.\n   * J (Group 3) has a good relationship with B (Group 3).\n\n3. **Determine E and H's Relationship:**\n\n   * E is in Group 2, and H is in Group 1. Since these groups have a bad relationship, E and H must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n    * B has good relationships with F, E, D, G. This forms a group: {B, F, E, D, G}\n    * H has good relationships with C and A. This forms a group: {H, C, A}\n\n2. **Analyze Relationships Between Groups:**\n    * C and E have a bad relationship. This means the group {H, C, A} has a bad relationship with the group {B, F, E, D, G}.\n\n3. **Determine A and D's Relationship:**\n    * Since A is in the group {H, C, A} and D is in the group {B, F, E, D, G}, and these groups have a bad relationship, A and D have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **H and C are enemies.**\n2. **H is friends with A.**\n3. **B is friends with E, I, G, D, and C.** (This means B is friends with everyone except H and F)\n4. **D is enemies with H.**\n5. **H is friends with F.**\n\nSince B is friends with D and I, and B is friends with everyone else except H and F,  D and I must be friends.\n\n**Final Answer: Yes** \n\n\n"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **B and F are good:**  Given.\n2. **F and C are bad:** Given.\n3. **C and D are good:** Given.\n4. **B and D are bad:** Given.\n\nSince B has a good relationship with F, and F has a bad relationship with C, then B must have a bad relationship with C.\n\nBecause B has a bad relationship with C, and C has a good relationship with D, then B must have a bad relationship with D.\n\nSince B has a good relationship with A, and B has a bad relationship with D, then A must have a bad relationship with D.\n\nTherefore, A and F cannot be in the same group, and thus do not have a good relationship.\n\n**Final Answer: No** \n"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** H, A, G (H is good with A and G, A is good with H, G is good with H)\n   * **Group 2:** B, F, D (B is good with F and D, F is good with B, D is good with B)\n   * **Group 3:** E, C, I (E is good with C and I, C is good with E and I, I is good with E and C)\n\n2. **Analyze Relationships Between Groups:**\n\n   * H (Group 1) has a bad relationship with C (Group 3). This means Group 1 and Group 3 have a bad relationship.\n\n3. **Determine A and I's Relationship:**\n\n   * A is in Group 1.\n   * I is in Group 3.\n   * Since Group 1 and Group 3 have a bad relationship, A and I have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** A, C, D, E, H (All have good relationships with each other directly or through transitivity)\n   * **Group 2:** B, F, G, I (All have good relationships with each other directly or through transitivity)\n\n2. **Analyze the Relationship:**\n\n   * C (from Group 1) has a bad relationship with I (from Group 2).\n\n3. **Apply the Rules:**\n\n   * Since groups are completely separate based on bad relationships, everyone in Group 1 has a bad relationship with everyone in Group 2.\n\n4. **Conclusion:**\n\n   * I is in Group 2, and G is in Group 2. Therefore, I and G have a good relationship.\n\n\nFinal Answer: Yes \n"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n    *  C has good relationships with: F, I, D, E, H. This forms a group.\n    * A has good relationships with: B, G. This forms a separate group.\n\n2. **Analyze Relationships Between Groups:**\n    * A has a bad relationship with C. This means everyone in A's group has a bad relationship with everyone in C's group.\n\n3. **Answer the Question:**\n    * Since D is in C's group and H is in C's group, they have a good relationship.\n\n**Final Answer: Yes** \n\n\n"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   *  We see that B has good relationships with F, C, G, and E. Since these relationships are good, they all belong to the same group.\n   *  H and D have a good relationship, forming another group.\n\n2. **Analyze Relationships:**\n\n   * I has bad relationships with C and H.\n   * Since C and H are in separate groups, I cannot be in either group.\n   * G is in the same group as B, and B has a good relationship with C. Since I has a bad relationship with C, I must have a bad relationship with G.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify J's connections:** J has good relationships with A, C, E. J has a bad relationship with F.\n\n2. **Analyze through transitivity:**\n    * Since J has a good relationship with C, and J has a good relationship with E, then C and E must have a good relationship.\n\n**Final Answer: Yes** \n\n\n"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **B and F are enemies.**\n2. **B is friends with G, H, D, I, and C.**\n3. **E is friends with F and A.**\n4. **E is enemies with C.**\n\nSince B is friends with D, and we know friendships are transitive,  A must be friends with D.\n\n**Final Answer: Yes** \n"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** H, E, C, B, G (H-E good, H-C good, C-B good, H-B good, E-G bad, I-G good, I-D good, A-I bad, C-I bad, A-C bad)\n   * **Group 2:** A, F (A-F good)\n   * **Group 3:** D, I (I-D good)\n\n2. **Analyze Relationships Between Groups:**\n\n   * Group 1 and Group 2 have a bad relationship (A-I bad, A in Group 2, I in Group 1)\n   * Group 1 and Group 3 have a bad relationship (I-G good, E-G bad, E in Group 1, G in Group 3)\n   * Group 2 and Group 3 have a bad relationship (A-I bad, A in Group 2, I in Group 3)\n\n3. **Determine F and I's Relationship:**\n\n   * F is in Group 2, and I is in Group 3. Since these groups have a bad relationship, F and I must have a bad relationship.\n\n\n\nFinal Answer: No \n"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** A, J, E, G, I (A is connected to all, and relationships are transitive)\n   * **Group 2:** B, C, D, F, H (B is connected to all, and relationships are transitive)\n\n2. **Analyze the Relationship:**\n\n   * F is in Group 2.\n   * E is in Group 1.\n   * Groups 1 and 2 have a bad relationship (D in Group 2 has a bad relationship with G in Group 1).\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n   -  B has good relationships with D, H, E, I, and G. This forms a group: {B, D, H, E, I, G}\n   - C has good relationships with A and F.  This forms a separate group: {C, A, F}\n\n2. **Analyze the Relationship between Groups:**\n   - C and B have no direct relationship.\n   - Since C and E have a bad relationship, and E is in B's group, everyone in C's group has a bad relationship with everyone in B's group.\n\n3. **Determine C and H's Relationship:**\n   - H is in B's group, and C's group has a bad relationship with B's group.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **C and A have a good relationship.**\n2. **C and B have a bad relationship.**\n3. **B and G have a good relationship.**\n\nSince C has a good relationship with A and a bad relationship with B, B and A must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n   - A has good relationships with: I, C, H, E. This forms a group.\n   - G has good relationships with: B, D, F. This forms a group.\n\n2. **Analyze Relationships Between Groups:**\n   - A (from group 1) has a good relationship with I.\n   - I (from group 1) has a bad relationship with D (from group 2).\n\n3. **Conclusion:** Since there's a bad relationship between members of different groups, all members of group 1 have bad relationships with all members of group 2. Therefore, H (from group 1) has a bad relationship with D (from group 2).\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** B, E, C, F (B is connected to all, and relationships are transitive)\n   * **Group 2:** H, A, D (H is connected to A and D)\n\n2. **Analyze Relationships Between Groups:**\n\n   * E (Group 1) has a bad relationship with H (Group 2).\n\n3. **Conclusion:**\n\n   Since there's a bad relationship between members of Group 1 and Group 2, all members of Group 1 have bad relationships with all members of Group 2. Therefore, D (Group 2) and F (Group 1) have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** J, D, B (J has good relationships with D and B, and we assume transitivity)\n   * **Group 2:** C, A, F (C has good relationships with A and F)\n   * **Group 3:** E, G (E and G have a bad relationship)\n   * **Group 4:** I (I has bad relationships with C, J, and H)\n   * **Group 5:** H (H has bad relationships with C, I, and J, but a good relationship with G)\n\n2. **Analyze Relationships Between Groups:**\n\n   * Group 1 (J, D, B) has a bad relationship with Group 4 (I) because J and I have a bad relationship.\n   * Group 1 (J, D, B) has a bad relationship with Group 5 (H) because J and H have a bad relationship.\n   * Group 2 (C, A, F) has a bad relationship with Group 4 (I) because C and I have a bad relationship.\n   * Group 2 (C, A, F) has a bad relationship with Group 5 (H) because C and H have a bad relationship.\n\n3. **Determine B and C's Relationship:**\n\n   * B is in Group 1, and C is in Group 2.\n   * Since these groups have a bad relationship, B and C must also have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** A, C, E, I (All have good relationships with each other directly or through transitivity)\n\n2. **Analyze Relationships:**\n\n   * H has a bad relationship with C (part of Group 1)\n   * H has a good relationship with B and D\n   * Since H is connected to Group 1 through a bad relationship, B and D cannot be part of Group 1.\n\n3. **Determine D's Relationship with A:**\n\n   * D is not in Group 1 with A.\n   * There's no direct information about a relationship between D and A.\n   * Since groups are separate, and D is not in A's group, their relationship must be bad.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n   - A, B, C, E, G form a group (good relationships between all).\n   - H, D, F form a group (good relationships between all).\n\n2. **Analyze Relationships Between Groups:**\n   - A has a good relationship with C, and C has a bad relationship with H. Therefore, A has a bad relationship with H.\n   - Since A is in the first group and H is in the second group, the groups have a bad relationship.\n\n3. **Determine E and D's Relationship:**\n   - E is in the first group, and D is in the second group.\n   - Because the groups have a bad relationship, E and D have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   *  **Group 1:** B, C, G, H (B is connected to C, G, and H through good relationships)\n   *  **Group 2:** A, F (A has a good relationship with F)\n   *  **Group 3:** E, D (E has a good relationship with D)\n\n2. **Analyze Relationships Between Groups:**\n\n   * A (Group 2) has a bad relationship with C (Group 1). This means Group 2 and Group 1 have a bad relationship.\n   * A (Group 2) has a bad relationship with E (Group 3). This means Group 2 and Group 3 have a bad relationship.\n\n3. **Determine C and F's Relationship:**\n\n   * C is in Group 1, and F is in Group 2. Since these groups have a bad relationship, C and F must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **B and G good:**  We know this directly.\n2. **E and A good:** We know this directly.\n3. **B and I good:** We know this directly.\n4. **B and H good:** We know this directly.\n5. **E and F good:** We know this directly.\n6. **E and C bad:** We know this directly.\n7. **E and D good:** We know this directly.\n8. **B and C good:** We know this directly.\n9. **A and G bad:** We know this directly.\n\n**Analysis:**\n\n* Since B and G have a good relationship, and G and A have a bad relationship, B and A must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   *  **Group 1:** A, B, E, G, I \n   *  **Group 2:** J, D, H, F\n\n2. **Reasoning:**\n\n   * A has good relationships with E and I.\n   * Since A and E are in the same group, and E and I are in the same group, then A and I must also have a good relationship.\n\n**Final Answer: Yes** \n\n\n"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** C, E, G, H \n   * **Group 2:** I, A, D, B\n   * **Group 3:** J, F\n\n2. **Analyze Relationships:**\n\n   * F is in Group 3.\n   * E is in Group 1.\n   * Since Groups 1 and 3 are separate (due to the bad relationship between C and F), F and E must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** B, F, I (B is connected to F and I through good relationships)\n   * **Group 2:** A, C (A is connected to C through a good relationship)\n   * **Group 3:** D (D is currently alone)\n\n2. **Analyze Relationships Between Groups:**\n\n   * C (Group 2) has a bad relationship with G, who has a good relationship with H. Therefore, C has a bad relationship with H.\n   * C (Group 2) has a bad relationship with E.\n   * B (Group 1) has a good relationship with E.\n\n3. **Determine D and E's Relationship:**\n\n   * Since B (Group 1) has a good relationship with E, and D is in a separate group from B, D must have a bad relationship with E.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Here's the breakdown:\n\n1. **C and B are good.**\n2. **C and D are good.**  \n3. **C and I are good.**\n\nTherefore, through transitivity, B and I have a good relationship.\n\nFinal Answer: Yes \n"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** A, D, E, H (They all have good relationships with each other directly or through A)\n   * **Group 2:** B, F (They have a good relationship)\n\n2. **Analyze Relationships Between Groups:**\n\n   * A (from Group 1) has a good relationship with C.\n   * C has a bad relationship with F (from Group 2).\n   * Therefore, Group 1 and Group 2 have a bad relationship.\n\n3. **Determine D and F's Relationship:**\n\n   * D is in Group 1.\n   * F is in Group 2.\n   * Since the groups have a bad relationship, D and F have a bad relationship.\n\n\n**Final Answer: No** \n"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Here's the breakdown:\n\n1. **A is connected to G (good).**\n2. **A is connected to H (good).**\n\nSince relationships are transitive, and A has good relationships with both G and H, then **H and G must have a good relationship.**\n\n\nFinal Answer: Yes \n"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** A, B, C, D, F (connected through good relationships)\n   * **Group 2:** H, G, I, E (connected through good relationships)\n\n2. **Analyze Relationships Between Groups:**\n\n   * C (Group 1) has a bad relationship with H (Group 2).\n\n3. **Conclusion:**\n\n   Since I is in Group 2 and C is in Group 1, and there's a bad relationship between the groups, I and C have a bad relationship.\n\n**Final Answer: No** \n"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n    * A has good relationships with D, G, and F.  \n    * Since A has a bad relationship with C, everyone in A's group has a bad relationship with C.\n    * B has good relationships with C, H, and E. This forms a separate group.\n\n2. **Analyze Connections:**\n    * A's group and B's group are separate because A's group has a bad relationship with C, and B's group has a good relationship with C.\n\n3. **Answer the Question:**\n    * Since F is in A's group and B is in a separate group, they do not have a good relationship.\n\n**Final Answer: No** \n"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** A, B, E, F, H (All have good relationships with each other directly or through transitivity)\n\n2. **Analyze the Relationship:**\n\n   * H is in Group 1.\n   * F is in Group 1.\n\n3. **Conclusion:**\n\nSince H and F are in the same group, they have a good relationship.\n\n\nFinal Answer: Yes \n"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes \n"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **B and C have a good relationship** (directly stated).\n2. **C and A have a good relationship** (directly stated).\n3. **Therefore, B and A have a good relationship** (transitivity).\n\n\nFinal Answer: Yes \n"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No \n"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   * **Group 1:** B, A, H, F (connected through good relationships)\n   * **Group 2:** C, E, I, D, G (connected through good relationships)\n\n2. **Analyze Relationships Between Groups:**\n\n   * H (Group 1) has a bad relationship with C (Group 2).\n\n3. **Conclusion:**\n\n   Since F is in Group 1 and C is in Group 2, and there's a bad relationship between the groups, F and H cannot have a good relationship.\n\n**Final Answer: No** \n"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **C and A are good.**\n2. **C and F are good.**\n3. **C and H are bad.**\n4. **H and E are bad.**\n5. **H and D are good.**\n6. **E and F are bad.**\n7. **E and H are bad.**\n8. **H and B are good.**\n9. **E and G are good.**\n10. **C and E are bad.**\n\n* Since C and H are bad, and H and B are good, then C and B must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **H and D have a good relationship.**\n2. **H and G have a good relationship.**\n3. **G and J have a bad relationship.**\n4. **J and I have a good relationship.**\n5. **F and J have a bad relationship.**\n6. **E and J have a bad relationship.**\n7. **E and G have a bad relationship.**\n8. **C and A have a good relationship.**\n9. **C and F have a good relationship.**\n10. **C and E have a good relationship.**\n11. **C and H have a bad relationship.**\n\nSince H has a good relationship with D, and H has a bad relationship with C, then D and C must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n   -  A, D, F have good relationships with each other (directly or through transitivity). This forms Group 1.\n   - B, C, E, H have good relationships with each other (directly or through transitivity). This forms Group 2.\n\n2. **Analyze Relationships Between Groups:**\n   - A (Group 1) has a bad relationship with C (Group 2).\n\n3. **Determine F and E's Relationship:**\n   - Since F is in Group 1 and E is in Group 2, and the groups have a bad relationship, F and E must have a bad relationship.\n\n**Final Answer: No** \n\n\n"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Here's the breakdown:\n\n1. **Identify Groups:**\n\n   *  We need to figure out which people belong to the same groups based on the given relationships.\n\n2. **Analyze Relationships:**\n\n   *  D and E have a good relationship.\n   *  D and F have a good relationship.\n   *  Therefore, E and F must have a good relationship (transitivity).\n\n   *  H and E have a bad relationship.\n   *  H and C have a bad relationship.\n   *  C and E have a bad relationship.\n   *  Therefore, H and F must have a bad relationship (since they are connected to E through bad relationships).\n\n3. **Answer:**\n\nFinal Answer: No \n\n\n"
+    }
+  ]
+}

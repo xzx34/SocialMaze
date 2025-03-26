@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gemma-2-27B",
+    "difficulty": "hard",
+    "question_type": "cluster",
+    "total_samples": 100,
+    "correct_predictions": 65,
+    "accuracy": 65.0
+  },
+  "results": [
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "Final Answer: 4 \n"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "Final Answer: 4 \n"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n* **Group 1:** A, B, E, I, L, N, O.  They all have good relationships with each other directly or through A.\n* **Group 2:** C, D, F, G, H, J, K, M. They all have good relationships with each other directly or through C. \n\nSince N has a bad relationship with C, these two groups are completely separate. \n"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:** C, A, I, M.  They all have good relationships with each other directly or through transitivity.\n\n2. **Group 2:** N, D, F, E, J. They all have good relationships with each other directly or through transitivity.\n\n3. **Group 3:** H, G, B, L, O. They all have good relationships with each other directly or through transitivity. \n\n\nLet me know if you'd like to explore any specific relationships within these groups!"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n* **Group 1:** C, B, F, J, O, H, N \n* **Group 2:** M, E, A, K, P, G, L, I\n* **Group 3:** D \n\n\nLet me know if you'd like to see the reasoning behind this grouping! \n"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:** N, A, J, M, F.  They all have good relationships with each other directly or through N.\n\n2. **Group 2:** C, E, I, K, H. They all have good relationships with each other directly or through C.\n\n3. **Group 3:** L, B, D. They all have good relationships with each other directly or through L. \n\n\nLet me know if you'd like to see the reasoning for why other potential groupings don't work! \n"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:**  C is at the center of a group with A, E, F, B, I, and O.\n\n2. **Group 2:** K is at the center of a group with D, J, H, L, M, and N.\n\n3. **Group 3:**  G is alone as it has no good relationships with anyone else. \n\n\nLet me know if you'd like to explore the relationships within each group further! \n"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n**Group 1:**\n\n* C is the central figure with good relationships with A, B, H, K, M, and G.\n*  Since C has a good relationship with G, and G has a good relationship with D, then C has a good relationship with D.\n*  D is connected to E, F, I, J, L, and N.\n\nTherefore, Group 1 consists of: A, B, C, D, E, F, G, H, I, J, K, L, M, and N.\n\n**Group 2:**\n\n* There are no other individuals who have good relationships with each other, forming a separate group. \n\n\nLet me know if you'd like to explore other relationship scenarios!"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Identify Initial Groups:** Start by looking for pairs with good relationships. This gives us potential starting points for groups.\n\n2. **Expand Groups:** Use transitivity to expand these initial groups. If A is good with B, and B is good with C, then A is good with C.\n\n3. **Separate Groups:**  Remember that groups are completely separate. If someone in one group has a bad relationship with someone in another, the groups are distinct.\n\n4. **Analyze the Relationships:**\n\n   * **Group 1:** N is good with A, B, E, H, J. This forms a group.\n   * **Group 2:** K is good with C, D, I.  \n   * **Group 3:** L is good with F, G, M.\n\n5. **Confirm Separation:** Notice that there are bad relationships between members of different groups (e.g., N and K, K and L). This confirms they are distinct groups. \n\n\nLet me know if you'd like a more detailed explanation of any specific relationship chain!"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n* **Group 1:** A, B, E, F, G, I \n* **Group 2:** J, M\n* **Group 3:** C, D, K, L \n\n**Explanation:**\n\n1. **Identify initial connections:** Start by noting direct good relationships.\n\n2. **Apply transitivity:**  If A is good with B, and B is good with C, then A is good with C. Use this to expand connections.\n\n3. **Find breaks:**  Bad relationships create boundaries between groups. For example, since N is bad with J, they cannot be in the same group.\n\n4. **Isolate groups:** Continue this process until you have identified all distinct sets of people who have good relationships with each other (directly or through transitivity). \n\n\nLet me know if you'd like a more detailed walkthrough of how each group is formed! \n"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n\nHere's the breakdown of how the groups form:\n\n* **Group 1:**  N, F, B, G \n* **Group 2:**  C, I, E, H, D, L\n* **Group 3:** J, A, O, K, M \n\nLet me know if you'd like to see the reasoning behind why these are the distinct groups! \n"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "Final Answer: 4 \n"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's how we can determine the groups:\n\n**Group 1:**\n\n* Starts with B: B has good relationships with A, E, and I.\n* Expanding:\n    * A is good with B, so A is in the group.\n    * E is good with B, so E is in the group.\n    * I is good with B, but bad with C, so I is in this group, but C is not.\n\n**Group 2:**\n\n* Starts with C: C has good relationships with D, F, H, K, L, and O.\n* Expanding:\n    * D, F, H, K, L, and O are all good with C, so they are in the group.\n\n**Group 3:**\n\n* Starts with K: K has good relationships with G, J, M, and N.\n* Expanding:\n    * G, J, M, and N are all good with K, so they are in the group.\n\n**Important Notes:**\n\n*  There are no connections between Group 1 and Group 2 or Group 3. This is because C has a bad relationship with I, and I is in Group 1. Similarly, there are bad relationships between members of Group 2 and Group 3.\n*  Therefore, these three sets of people form distinct groups. \n\n\n"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown of how the groups form:\n\n* **Group 1:** C, B, D, G, I, N \n* **Group 2:** K, E, F, J, L, O\n* **Group 3:** A, H, M \n\n**Explanation:**\n\n1. **Identifying Initial Groups:** We start by looking for pairs with good relationships. This helps us form initial groups.\n\n2. **Expanding Groups:** We use transitivity to expand these groups. For example, since C has good relationships with B, D, G, I, and N, they all belong to the same group.\n\n3. **Separating Groups:**  Bad relationships act as barriers between groups. Since C has a bad relationship with K, they cannot be in the same group.\n\n4. **Final Groups:** By carefully analyzing the relationships and applying the rules, we arrive at three distinct groups. \n\n\n"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Identify K's group:** K has good relationships with N, G, D, A, O, and L.  Due to transitivity, these individuals all belong to the same group.\n\n2. **Identify C's group:** C has good relationships with F, M, E, B.  Due to transitivity, these individuals all belong to the same group.\n\n3. **Remaining individuals:** J, H, I form their own group as they have good relationships with each other.\n\n4. **Separation:** Since K's group has a bad relationship with J's group (K and J have a bad relationship), these groups are completely separate.  Similarly, C's group is separate from both K's and J's groups. \n\n\n"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify A's Group:** A has good relationships with D, C, G, E, N, J, M, and K. Due to transitivity, everyone in this list is connected and forms a group.\n\n2. **Separate Group:** H is connected to O, F, L, B, and I.  Since C has a bad relationship with H, this group is completely separate from A's group.\n\n3. **No Other Groups:**  There are no other connections that would form additional groups. J and O have a bad relationship, preventing them from connecting to any other established groups. \n\n\nLet me know if you'd like to explore other relationship scenarios!"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify A's Group:** A has good relationships with many people (E, D, H, G, L, I, M, K).  This forms a core group.\n\n2. **Extend A's Group:** Since C has good relationships with B, F, J, and N, and C also has a good relationship with A, these individuals are all part of A's group.\n\n3. **Separate Group:** B and L have a bad relationship. This means B cannot be in the same group as L, even though they both have good relationships with A and C.\n\n4. **Final Groups:** This results in two distinct groups:\n    * Group 1: A, E, D, H, G, L, I, M, K, C, B, F, J, N\n    * Group 2:  (None - only B and L are isolated) \n\n\n"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Group 1:** A is connected to many people through good relationships (I, D, G, E, C, M, H, L). Since relationships are transitive, all these people are connected to each other through A, forming a group.\n\n2. **Group 2:** K is connected to N, J, F, and B through good relationships. This forms a separate group.\n\n3. **Separation:**  D has a bad relationship with J. Since A is in a good relationship with D and K is in a good relationship with J, this means Group 1 and Group 2 are completely separate. \n\n\nLet me know if you'd like to explore other relationship scenarios!"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Group 1:** A is connected to H, J, O, N, G, F, E, I, and C through good relationships. Due to transitivity, all these individuals are in the same group.\n\n2. **Group 2:** K is connected to B, M, L, and D through good relationships.  \n\n3. **Separation:** Since C has a bad relationship with K, Group 1 and Group 2 are completely separate. \n\n\nLet me know if you'd like to explore other relationship scenarios!"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:**  H, A, J, D, M, B, L.  This group is connected through H.\n\n2. **Group 2:** C, F, G, K, P. This group is connected through C.\n\n3. **Group 3:** O, I, E, N. This group is connected through O. \n\n**Explanation:**\n\n* Notice that there are bad relationships between members of different groups (e.g., H and C, C and O). This enforces the separation of groups.\n* All members within a group have good relationships with each other, either directly or through transitive relationships. \n\n\n"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify A's Group:** A has good relationships with N, E, B, G, K, F, I, and C.  Due to transitivity, everyone in this list has good relationships with each other, forming one group.\n\n2. **Identify H's Group:** H has good relationships with L, M, D, and J.  \n\n3. **Separate Groups:** Since A and C have a good relationship, but C and H have a bad relationship, A's group and H's group are separate.\n\n4. **No Other Groups:** All remaining individuals (not listed in A or H's relationships) are effectively isolated and cannot form groups with anyone else based on the given information. \n\n\n"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify A's Group:** A has good relationships with J, C, N, H, B, E, I, and M.  Due to transitivity, all these people are in the same group as A.\n\n2. **Separate Group:**  Since C has a bad relationship with G, and G is connected to the rest of A's group,  G, D, K, L, and F form a completely separate group. \n\n\nLet me know if you'd like to explore more relationship scenarios!"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify Core Groups:**  Notice that A has good relationships with many people (B, D, E, F, G, H). This suggests A is likely at the center of a group.  Similarly, C is connected to many people (J, I, L, M, N, K).\n\n2. **Apply Transitivity:** Since A has good relationships with B, D, E, F, G, and H, they all belong to the same group as A.\n\n3. **Separate Groups:** B has a bad relationship with K. This means K cannot be in the same group as A and the people connected to A. Therefore, C and its connected individuals (J, I, L, M, N, K) form a separate group. \n\n\nLet me know if you'd like me to break down any specific relationships further!"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify Initial Groups:**  We see that B has good relationships with many people (N, D, M, E, H, O, F). This suggests B might be central to a group. C also has many good relationships (A, G, I, L, K, J).\n\n2. **Apply Transitivity:** Since B and N have a good relationship, and B has good relationships with others, those others must also have good relationships with N. However, C and N have a bad relationship. This means C cannot be in the same group as B and the people B is connected to.\n\n3. **Separate Groups:** This creates two distinct groups:\n    * **Group 1:**  B, N, D, M, E, H, O, F \n    * **Group 2:** C, A, G, I, L, K, J\n\n4. **Confirm Separation:** The bad relationship between C and N confirms that these groups are completely separate. \n\n\nLet me know if you'd like to explore other relationship scenarios!"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Identify Initial Groups:** Start by looking for pairs with good relationships. This gives us potential starting points for groups:\n    * N-J\n    * C-L\n    * K-I\n    * C-F\n    * N-D\n    * N-H\n    * C-E\n    * C-G\n    * N-M\n    * N-B\n    * K-A\n    * K-O\n\n2. **Expand Groups Using Transitivity:**\n\n    * **Group 1:** N-J-L-D-H-M-B  (N is connected to all through good relationships, and L is connected to J through good relationships)\n    * **Group 2:** C-F-E-G (All connected through good relationships)\n    * **Group 3:** K-I-A-O (All connected through good relationships)\n\n3. **Separate Groups:** Notice that people in Group 1 have bad relationships with people in Group 3 (due to K-N being bad). This confirms they are distinct groups.\n\n4. **Final Count:** We have three distinct groups. \n\n\n"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n* **Group 1:** A, B, D, E, G, H, I, M, O.  A has good relationships with all these individuals, and through transitivity, they all have good relationships with each other.\n* **Group 2:** C, F, J, K, L. C has good relationships with all these individuals, and through transitivity, they all have good relationships with each other.\n\nN is isolated because of its bad relationship with C and A. \n"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "4",
+      "correct": false,
+      "response": "Final Answer: 4 \n"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "Final Answer: 4 \n"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify Core Groups:**  We see that A has good relationships with many people (J, O, I, E, D, K, N). This suggests A is central to a group. C also has many good relationships (B, G, M, L, F, H). This indicates a potential second group.\n\n2. **Apply Transitivity:**\n\n   * Since A is good with K and K is bad with C, everyone in A's group must have a bad relationship with everyone in C's group.\n\n3. **Distinct Groups:** This establishes two distinct groups:\n\n   * **Group 1:** A, J, O, I, E, D, K, N\n   * **Group 2:** C, B, G, M, L, F, H\n\n4. **Remaining Individuals:** There are no other connections provided, so the remaining individuals (if any) would form their own isolated groups. \n\n\n"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:**  K, O, M, H, E, D \n   * K is the central figure with good relationships to all others in this group.\n\n2. **Group 2:** C, G, N, L, J\n   * C is the central figure with good relationships to all others in this group.\n\n3. **Group 3:** B, I, F, A\n   * B is the central figure with good relationships to all others in this group. \n\n\nLet me know if you'd like to see the reasoning behind why these are the only groups!"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n* **Group 1:** C, D, E, F, I, J, K, M \n* **Group 2:** A, B, G, H, L, N\n\n**Reasoning:**\n\n1. **C is central:** C has good relationships with many people, forming the core of a potential group.\n\n2. **Transitivity:** Since C has good relationships with D, E, etc., they are all part of the same group due to transitivity.\n\n3. **N is isolated:** N has bad relationships with C and K, separating it from Group 1.\n\n4. **N forms a group:** N has good relationships with A, B, G, H, and L, forming a separate group. \n\n5. **K and L's bad relationship:** This confirms the separation between the two groups."
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n**Group 1:**\n\n* K, M, A, D, E, J, C (K connects to all of them, and relationships are transitive)\n\n**Group 2:**\n\n* B, N, G, F, L, H, I, O (B connects to all of them)\n\n**Explanation:**\n\n* K and C have a bad relationship, separating the people connected to K from those connected to B.\n*  Since relationships are transitive, everyone connected to K is in one group, and everyone connected to B is in another. \n\n\n"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n**Group 1:**\n\n* H is the central figure with good relationships with A, F, G, E, I.\n*  Through transitivity, A, F, G, E, and I all have good relationships with each other.\n\n**Group 2:**\n\n* B is the central figure with good relationships with J, D, C, K, O, N, M, L.\n* Through transitivity, all these individuals have good relationships with each other.\n\n**Separation:**\n\n* E from Group 1 has a bad relationship with N from Group 2. This establishes a clear separation between the two groups. \n\n\nLet me know if you'd like to explore any other relationship scenarios!"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n1. **Identify Initial Groups:** We can start by looking for pairs with good relationships. This gives us potential starting points for groups:\n    * M and E\n    * M and I\n    * M and A\n    * N and J\n    * N and D\n    * N and L\n    * N and H\n    * K and F\n    * K and B\n    * K and C\n\n2. **Expand Groups Using Transitivity:**\n\n    * **Group 1:** M, E, I, A  (M is good with E, I, and A)\n    * **Group 2:** N, J, D, L, H (N is good with J, D, L, and H)\n\n3. **Identify Separating Bad Relationships:**\n\n    * K and M have a bad relationship, separating any potential connections between Group 1 and K.\n    * K and N have a bad relationship, separating any potential connections between Group 2 and K.\n\n4. **Final Groups:** Since there are no other connections that bridge Group 1 and Group 2, they remain as two distinct groups. \n\n\n"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:**  C, D, G \n2. **Group 2:** K, E, L, J, H, B\n3. **Group 3:** M, N, I, F \n\n**Explanation:**\n\n* **Group 1** is formed because C has good relationships with D and G.\n* **Group 2** is formed because K has good relationships with E, L, J, H, and B.\n* **Group 3** is formed because M has good relationships with N, I, and F.\n\nNotice that these groups are completely separate due to the bad relationships between members of different groups. For example, C (Group 1) has a bad relationship with K (Group 2), and M (Group 3) has a bad relationship with C (Group 1). \n\n\n"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:** K, M, A \n   - K has good relationships with M, A.\n   - A has a good relationship with K.\n   - M has a good relationship with K (transitive).\n\n2. **Group 2:** C, N, B, H, D, F\n   - C has good relationships with N, B, H, D, F.\n   - All other members have good relationships with C (transitive).\n\n3. **Group 3:** J, E, G, I\n   - J has good relationships with E, G.\n   - G has a good relationship with J.\n   - E has a good relationship with J (transitive).\n   - I has a good relationship with G (transitive).\n\n\n\nLet me know if you'd like to explore any specific relationships within these groups!"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify Core Groups:**  Notice that 'A' has good relationships with many people (O, N, D, J, B, F, H, M, E). This makes 'A' a central figure.  We can start building groups around 'A'.\n\n2. **Group 1:** A, O, N, D, J, B, F, H, M, E form a group because they all have good relationships with each other (directly or through 'A').\n\n3. **Group 2:** C, I, G, K, L form a group because they all have good relationships with each other (directly or through 'C').\n\n4. **Separation:**  Since 'F' has a bad relationship with 'C', the two groups are completely separate. \n\n\nLet me know if you'd like to explore more complex relationship scenarios!"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Identify Initial Groups:** Start by looking for pairs with good relationships. This gives us potential starting points for groups:\n    * K and A\n    * J and C\n    * J and M\n    * G and F\n    * G and D\n    * G and L\n    * N and E\n    * J and I\n    * N and B\n    * G and H\n\n2. **Expand Groups:** Use transitivity to expand these initial pairs into larger groups. For example:\n    * Since K and A have a good relationship, and A is likely in a group with others (due to the number of people), we need to see who A has good relationships with.\n\n3. **Identify Conflicts:** Look for relationships that create conflict and separate groups:\n    * H and K have a bad relationship. This means any group containing H cannot contain K.\n    * K and J have a bad relationship. This further separates potential groups.\n    * N and J have a bad relationship.\n\n4. **Finalize Groups:**  Carefully analyze all relationships, considering both positive and negative connections. You'll find that the relationships lead to three distinct groups where everyone within a group has good relationships with each other. \n\n\nLet me know if you'd like me to walk through the formation of each group step-by-step! \n"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Group 1:** C is at the center of a large group with good relationships to H, J, N, O, G, P, M, K, D, and L.  \n\n2. **Group 2:** E is connected to A, B, F, and I.\n\n3. **Separation:** Since C and E have a bad relationship, these two groups are completely separate. \n\n\nLet me know if you'd like to explore other relationship scenarios!"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n* **Group 1:** B, C, D, E, G, H, J, K, L, N.  B has a good relationship with everyone in this group. Transitivity then connects the rest.\n* **Group 2:** A, F, I, M. M connects A, F, and I. \n\nL and M's bad relationship separates these two groups. \n"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n* **Group 1:** H, E, D, A, B, J.  They all have good relationships with each other directly or through H.\n* **Group 2:** C, I, M, O, F. They all have good relationships with each other directly or through C.\n* **Group 3:** L, K, N, G. They all have good relationships with each other directly or through L. \n\n\nLet me know if you'd like to explore any specific relationships within these groups!"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:**  H is central, with good relationships with L, O, I, B, P, and E.  Due to transitivity, L, O, I, B, and P are all connected to each other through H.\n\n2. **Group 2:** K is central, with good relationships with J, A, G, F, and N. Due to transitivity, J, A, G, F, and N are all connected to each other through K.\n\n3. **Group 3:** C is central, with good relationships with M, D, and E. Due to transitivity, M, D, and E are all connected to each other through C.\n\n**Separation:**\n\n* A and P have a bad relationship, separating Group 1 from Group 2.\n* D and N have a bad relationship, separating Group 3 from Group 2. \n\n\nLet me know if you'd like me to elaborate on any specific connection!"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n* **Group 1:** B, I, M, L, N, E, F, J.  They are all connected through good relationships with B.\n* **Group 2:** C, D, G, H, A, K. They are all connected through good relationships with C.\n\nNotice that N has a bad relationship with both A and C, preventing these two groups from merging. \n\n\n"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "2",
+      "correct": false,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the reasoning:\n\n1. **Identify A's group:** A has good relationships with I, H, F, M, K, N, and E. Due to transitivity, everyone in this list has good relationships with each other, forming one group.\n\n2. **Identify C's group:** C has good relationships with L, B, D, G, and J.  \n\n3. **Separate Groups:** Since K has a bad relationship with C, A's group and C's group are completely separate. \n\n\nLet me know if you'd like to explore more relationship scenarios!"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n* **Group 1:** A, E, F, G, J, K, N \n* **Group 2:** B, C, D, H, I, L, M\n* **Group 3:**  (No one else is connected) \n\n\nLet me know if you'd like to see the reasoning behind this grouping! \n"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "3",
+      "correct": false,
+      "response": "Final Answer: 3 \n\nHere's the breakdown:\n\n1. **Group 1:** K, L, J, N.  They are all connected through good relationships with K.\n\n2. **Group 2:** M, B, I, H. They are connected through a chain of good relationships.\n\n3. **Group 3:**  A, D. They have a good relationship directly.\n\n**Explanation:**\n\n*  Notice that people like C, E, F are isolated and don't have good relationships with anyone else to form a group.\n*  The bad relationships between members of different groups (like A and K, H and K) ensure these groups remain separate. \n\n\n"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2 \n\nHere's the breakdown:\n\n* **Group 1:** A, D, F, G, H, I, J, K \n* **Group 2:** B, C, E, L, M, N\n\n**Reasoning:**\n\n1. **A is central:** A has good relationships with many people (D, F, G, H, I, J, K). This forms the core of a group.\n\n2. **Group 1:** Everyone connected to A through good relationships belongs to the same group.\n\n3. **Group 2:** C is connected to B, E, L, M, and N through good relationships. Since B has a bad relationship with J (from Group 1), these two groups are separate. \n\n\nLet me know if you'd like to explore other relationship scenarios!"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3 \n\n\nHere's how we can determine the groups:\n\n1. **Identify Initial Groups:**\n\n   *  We see C has good relationships with A, B, J, and N.  \n   *  K has good relationships with H, P, E, and O.\n   *  F has good relationships with D, M, I, L, and G.\n\n2. **Expand Groups Using Transitivity:**\n\n   * Since C and N have a good relationship, and C has a good relationship with A, B, and J, then N also has good relationships with A, B, and J. This forms group 1: {A, B, C, J, N}.\n   * Since K and O have a good relationship, and K has good relationships with H, P, and E, then O also has good relationships with H, P, and E. This forms group 2: {H, K, E, O, P}.\n   * F's good relationships with D, M, I, L, and G form group 3: {D, F, G, I, L, M}.\n\n3. **Confirm Separation:**\n\n   * Notice that there are bad relationships between members of different groups (e.g., C and G, K and C). This confirms that the groups are distinct. \n\n\nLet me know if you'd like to explore any specific relationships within these groups!"
+    }
+  ]
+}

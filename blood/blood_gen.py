@@ -122,7 +122,7 @@ Game Mechanics:
 - Lunatics believe they are Criminals (they are told they are Criminals) and make statements that may be truthful or false.
 - Only Investigators provide consistently truthful information. Other roles may provide misleading or incorrect information.
 
-You are Player {player_id}, and your role is {perceived_role}.
+You are Player {player_id}, and you are told that you are {perceived_role}.
 """
         analysis_task = """
 After each round of statements, you need to analyze all the statements so far and deduce who you think is the criminal and what is the role of each player.

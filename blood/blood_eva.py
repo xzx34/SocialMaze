@@ -14,12 +14,24 @@ load_dotenv()
 
 def extract_criminal_prediction(response):
     """Extract criminal prediction from model response"""
+    # 寻找最后出现的最终判断结果
+    lines = response.strip().split('\n')
+    
+    # 从末尾开始搜索"Final Criminal Is Player X"
+    for line in reversed(lines):
+        matches = re.search(r"Final Criminal Is Player (\d+)", line)
+        if matches:
+            return matches.group(1)
+    
+    # 如果末尾没找到，尝试在整个响应中查找，但保持大小写敏感
     patterns = [
-        r"Final Criminal Is Player (\d+)"
+        r"Final Criminal Is Player (\d+)",
+        r"Final criminal is Player (\d+)",
+        r"final criminal is player (\d+)"
     ]
     
     for pattern in patterns:
-        matches = re.search(pattern, response, re.IGNORECASE)
+        matches = re.search(pattern, response)
         if matches:
             return matches.group(1)
     
@@ -27,27 +39,38 @@ def extract_criminal_prediction(response):
 
 def extract_self_role_prediction(response):
     """Extract the model's prediction of its own role"""
-    # Look for "My Role Is" or similar patterns
+    lines = response.strip().split('\n')
+    
+    for line in reversed(lines):
+        matches = re.search(r"My Role Is (\w+)", line)
+        if matches:
+            role = matches.group(1).strip()
+            return normalize_role(role)
+    
     patterns = [
-        r"My Role Is (\w+)"
+        r"My Role Is (\w+)",
+        r"My role is (\w+)",
+        r"my role is (\w+)"
     ]
     
     for pattern in patterns:
-        matches = re.search(pattern, response, re.IGNORECASE)
+        matches = re.search(pattern, response)
         if matches:
-            role = matches.group(1).strip().title()
-            # Normalize role names
-            if "Investigat" in role:
-                return "Investigator"
-            elif "Criminal" in role or "Killer" in role or "Murderer" in role:
-                return "Criminal"
-            elif "Rumor" in role:
-                return "Rumormonger"
-            elif "Luna" in role:
-                return "Lunatic"
-            elif "Unknown" in role:
-                return "Unknown"
+            role = matches.group(1).strip()
+            return normalize_role(role)
     
+    return "Unknown"
+
+def normalize_role(role):
+    role = role.strip().title()
+    if "Investigat" in role:
+        return "Investigator"
+    elif "Criminal" in role or "Killer" in role or "Murderer" in role:
+        return "Criminal"
+    elif "Rumor" in role:
+        return "Rumormonger" 
+    elif "Luna" in role:
+        return "Lunatic"
     return "Unknown"
 
 def evaluate_scenario(model, scenario):
@@ -64,7 +87,7 @@ def evaluate_scenario(model, scenario):
     
     # Choose player 1's perspective for consistency
     player_id = "1"
-    player_role = ground_truth["player1_role"]  # Get the actual role of player 1
+    player_role = scenario['roles'][player_id]
     system_prompt = scenario['prompts'][player_id]
     
     # Get the true criminal
@@ -79,8 +102,22 @@ def evaluate_scenario(model, scenario):
         round_num = round_data["round"]
         round_statements = round_data["statements"]
         
+        reminder_text = """Remember the following rules:
+- Rumormongers believe they are Investigators (they are told they are Investigators), but they provide statements that may be incorrect.
+- Lunatics believe they are Criminals (they are told they are Criminals) and make statements that may be truthful or false.
+You are Player {player_id}, and you are told that you are {perceived_role}.
+
+Your Task:
+After considering the statements from each round, you must provide your judgment in the following format:
+
+Final Judgment:
+Final Criminal Is Player [Criminal Player Number].
+My Role Is [Player 1's Role or "Unknown"].
+
+""".format(player_id=player_id, perceived_role=player_role)
+        
         # Format the statements for this round
-        statements_text = f"\nRound {round_num} statements:\n"
+        statements_text = reminder_text + f"\nRound {round_num} statements:\n"
         for stmt in round_statements:
             statements_text += f"{stmt['statement']}\n"
         
@@ -254,8 +291,8 @@ def evaluate_model(model, scenarios, dataset_name=None, output_file=None, max_wo
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate models on Blood Game scenarios')
-    #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq
-    parser.add_argument('--models', nargs='+', default=['llama-3.1-8B', 'gemma-2-9B', 'gemma-2-27B', 'llama-3.3-70B', 'qwen-2.5-72B', 'qwq'], 
+    #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq 
+    parser.add_argument('--models', nargs='+', default=['llama-3.1-8B', 'gemma-2-9B', 'gemma-2-27B', 'llama-3.3-70B', 'qwen-2.5-72B', 'qwq','deepseek-r1'], 
                         help='Models to evaluate')
     parser.add_argument('--dataset_types', nargs='+', default=['original','rumormonger','lunatic','all'],
                         help='Types of datasets to evaluate (original, rumormonger, lunatic, all)')

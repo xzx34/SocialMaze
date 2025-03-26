@@ -8,6 +8,7 @@ from pathlib import Path
 from tqdm import tqdm
 from dotenv import load_dotenv
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Add parent directory to path for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -112,7 +113,66 @@ def is_correct_answer(prediction, true_answer, question_type):
     
     return False
 
-def evaluate_model(model, difficulty, question_type, dataset_path, num_samples=None, output_file=None):
+def evaluate_single_sample(args):
+    """Evaluate a single sample
+    
+    Args:
+        args: tuple containing (model, sample, idx, question_type)
+        
+    Returns:
+        Dictionary with the evaluation result
+    """
+    model, sample, idx, question_type = args
+    
+    # Skip invalid samples
+    if "user_prompt" not in sample or "answer" not in sample:
+        return None
+    
+    # Extract true answer
+    true_answer = sample["answer"]
+    if "Final Answer: " in true_answer:
+        true_answer = true_answer.replace("Final Answer: ", "")
+    
+    # Extract system_prompt from the sample data
+    system_prompt = sample["system_prompt"]
+    user_prompt = sample["user_prompt"]
+    
+    try:
+        # Get model response
+        response = get_chat_response(
+            model=model,
+            system_message=system_prompt,
+            messages=[{"role": "user", "content": user_prompt}],
+            temperature=0.1
+        )
+        
+        # Extract prediction
+        prediction = extract_answer(response, question_type)
+        
+        # Check if prediction is correct
+        is_correct = is_correct_answer(prediction, true_answer, question_type)
+        
+        # Store result
+        result = {
+            "sample_id": idx,
+            "difficulty": sample.get("difficulty", "unknown"),
+            "question_type": question_type,
+            "true_answer": true_answer,
+            "prediction": prediction,
+            "correct": is_correct,
+            "response": response
+        }
+        
+        return result
+    except Exception as e:
+        # Handle errors
+        return {
+            "sample_id": idx,
+            "error": str(e),
+            "correct": False
+        }
+
+def evaluate_model(model, difficulty, question_type, dataset_path, num_samples=None, output_file=None, concurrency=1):
     """
     Evaluate model performance on a specific relation task type and difficulty
     
@@ -123,6 +183,7 @@ def evaluate_model(model, difficulty, question_type, dataset_path, num_samples=N
         dataset_path: path to dataset json file
         num_samples: number of samples to evaluate (None for all)
         output_file: optional file to save results
+        concurrency: number of concurrent evaluations to run
     
     Returns:
         Dictionary with evaluation results
@@ -139,54 +200,28 @@ def evaluate_model(model, difficulty, question_type, dataset_path, num_samples=N
     correct_predictions = 0
     total_valid_samples = 0
     
-    # Evaluate each sample
-    for idx, sample in enumerate(tqdm(dataset, desc=f"Evaluating {model} on {difficulty} {question_type}")):
-        # Skip invalid samples
-        if "user_prompt" not in sample or "answer" not in sample:
-            continue
+    # Prepare tasks for parallel execution
+    tasks = [(model, sample, idx, question_type) for idx, sample in enumerate(dataset)]
+    
+    # Use ThreadPoolExecutor for parallel evaluation
+    with ThreadPoolExecutor(max_workers=concurrency) as executor:
+        # Submit all tasks and track with tqdm
+        futures = {executor.submit(evaluate_single_sample, task): task for task in tasks}
         
-        total_valid_samples += 1
-        
-        # Extract true answer
-        true_answer = sample["answer"]
-        if "Final Answer: " in true_answer:
-            true_answer = true_answer.replace("Final Answer: ", "")
-        
-        # Extract system_prompt from the sample data
-        system_prompt = sample["system_prompt"]
-        user_prompt = sample["user_prompt"]
-        
-        # Get model response
-        response = get_chat_response(
-            model=model,
-            system_message=system_prompt,
-            messages=[{"role": "user", "content": user_prompt}],
-            temperature=0.1
-        )
-        
-        # Extract prediction
-        prediction = extract_answer(response, question_type)
-        
-        # Check if prediction is correct
-        is_correct = is_correct_answer(prediction, true_answer, question_type)
-        
-        if is_correct:
-            correct_predictions += 1
-        
-        # Store result
-        result = {
-            "sample_id": idx,
-            "difficulty": difficulty,
-            "question_type": question_type,
-            "true_answer": true_answer,
-            "prediction": prediction,
-            "correct": is_correct,
-            "response": response
-        }
-        results.append(result)
-        
-        # Optional: Add delay to avoid rate limits
-        time.sleep(0.5)
+        for future in tqdm(as_completed(futures), total=len(futures), desc=f"Evaluating {model} on {difficulty} {question_type}"):
+            result = future.result()
+            if result is None:
+                continue
+                
+            total_valid_samples += 1
+            
+            if result.get("correct", False):
+                correct_predictions += 1
+                
+            results.append(result)
+            
+            # Small delay between tasks to avoid overloading API
+            time.sleep(0.1)
     
     # Calculate accuracy
     accuracy = correct_predictions / total_valid_samples * 100 if total_valid_samples > 0 else 0
@@ -220,17 +255,19 @@ def evaluate_model(model, difficulty, question_type, dataset_path, num_samples=N
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on relation tasks')
-    parser.add_argument('--models', type=str, nargs='+', default=['gemma-2-27B'],
+    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.1-8B','gemma-2-9b','gemma-2-27B','llama-3.3-70B','qwen-2.5-72B','qwq','deepseek-r1'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--difficulties', type=str, nargs='+', default=['easy', 'hard'],
                         help='Difficulty levels to evaluate')
     parser.add_argument('--question_types', type=str, nargs='+', 
                         default=['reasoning', 'group', 'cluster', 'count'],
                         help='Question types to evaluate')
-    parser.add_argument('--num_samples', type=int, default=2, 
+    parser.add_argument('--num_samples', type=int, default=100, 
                         help='Number of samples to evaluate (default: all)')
     parser.add_argument('--force_reevaluate', action='store_true',
                         help='Force re-evaluation of models even if they exist in summary')
+    parser.add_argument('--concurrency', type=int, default=10,
+                        help='Number of concurrent evaluations to run (default: 4)')
     
     return parser.parse_args()
 
@@ -281,7 +318,7 @@ def main():
                 # Create unique output filename for this evaluation
                 output_file = results_dir / f"{model}_{difficulty}_{question_type}_results.json"
                 
-                # Run evaluation
+                # Run evaluation with concurrency
                 try:
                     model_results = evaluate_model(
                         model=model,
@@ -289,7 +326,8 @@ def main():
                         question_type=question_type,
                         dataset_path=dataset_path,
                         num_samples=args.num_samples,
-                        output_file=output_file
+                        output_file=output_file,
+                        concurrency=args.concurrency  # Pass concurrency parameter
                     )
                     
                     # Add to results summary

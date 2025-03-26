@@ -1,0 +1,324 @@
+{
+  "llama-3.1-8B": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 67.0,
+        "correct": 67,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 22.0,
+        "correct": 22,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 34.0,
+        "correct": 34,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 2.0,
+        "correct": 2,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 59.0,
+        "correct": 59,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 12.0,
+        "correct": 12,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 31.0,
+        "correct": 31,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      }
+    }
+  },
+  "gemma-2-9b": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "total": 100
+      }
+    }
+  },
+  "gemma-2-27B": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 56.00000000000001,
+        "correct": 56,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 32.0,
+        "correct": 32,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 75.0,
+        "correct": 75,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 38.0,
+        "correct": 38,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 51.0,
+        "correct": 51,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 20.0,
+        "correct": 20,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 65.0,
+        "correct": 65,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 28.000000000000004,
+        "correct": 28,
+        "total": 100
+      }
+    }
+  },
+  "llama-3.3-70B": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 96.0,
+        "correct": 96,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 79.0,
+        "correct": 79,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 98.0,
+        "correct": 98,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 67.0,
+        "correct": 67,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 92.0,
+        "correct": 92,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 70.0,
+        "correct": 70,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 91.0,
+        "correct": 91,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 56.99999999999999,
+        "correct": 57,
+        "total": 100
+      }
+    }
+  },
+  "qwen-2.5-72B": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 91.0,
+        "correct": 91,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 81.0,
+        "correct": 81,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 89.0,
+        "correct": 89,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 69.0,
+        "correct": 69,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 94.0,
+        "correct": 94,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 75.0,
+        "correct": 75,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 81.0,
+        "correct": 81,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 64.0,
+        "correct": 64,
+        "total": 100
+      }
+    }
+  },
+  "qwq": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 91.0,
+        "correct": 91,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 94.0,
+        "correct": 94,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 97.0,
+        "correct": 97,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 94.0,
+        "correct": 94,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 88.0,
+        "correct": 88,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 96.0,
+        "correct": 96,
+        "total": 100
+      }
+    }
+  },
+  "deepseek-r1": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 95.0,
+        "correct": 95,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 94.0,
+        "correct": 94,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 98.0,
+        "correct": 98,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 97.0,
+        "correct": 97,
+        "total": 100
+      }
+    }
+  }
+}
