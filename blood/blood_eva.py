@@ -88,6 +88,7 @@ def evaluate_scenario(model, scenario):
     # Choose player 1's perspective for consistency
     player_id = "1"
     player_role = scenario['roles'][player_id]
+    perceived_role = 'Criminal' if player_role == 'Lunatic' or player_role == 'Criminal' else 'Investigator'
     system_prompt = scenario['prompts'][player_id]
     
     # Get the true criminal
@@ -114,7 +115,7 @@ Final Judgment:
 Final Criminal Is Player [Criminal Player Number].
 My Role Is [Player 1's Role or "Unknown"].
 
-""".format(player_id=player_id, perceived_role=player_role)
+""".format(player_id=player_id, perceived_role=perceived_role)
         
         # Format the statements for this round
         statements_text = reminder_text + f"\nRound {round_num} statements:\n"
@@ -292,17 +293,17 @@ def evaluate_model(model, scenarios, dataset_name=None, output_file=None, max_wo
 def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate models on Blood Game scenarios')
     #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq 
-    parser.add_argument('--models', nargs='+', default=['llama-3.1-8B', 'gemma-2-9B', 'gemma-2-27B', 'llama-3.3-70B', 'qwen-2.5-72B', 'qwq','deepseek-r1'], 
+    parser.add_argument('--models', nargs='+', default=['gpt-4o-mini','gpt-4o','o3-mini'], 
                         help='Models to evaluate')
     parser.add_argument('--dataset_types', nargs='+', default=['original','rumormonger','lunatic','all'],
                         help='Types of datasets to evaluate (original, rumormonger, lunatic, all)')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6],
                         help='Number of players in each game')
-    parser.add_argument('--num_scenarios', type=int, default=100,
+    parser.add_argument('--num_scenarios', type=int, default=2,
                         help='Number of scenarios to evaluate per dataset')
     parser.add_argument('--results_dir', type=str, default='results',
                         help='Custom directory for saving results (default: blood/results)')
-    parser.add_argument('--max_workers', type=int, default=10,
+    parser.add_argument('--max_workers', type=int, default=20,
                         help='Maximum number of workers for parallel execution')
     return parser.parse_args()
 
