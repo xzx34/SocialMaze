@@ -1,6 +1,38 @@
 {
   "llama-3.1-8B": {
-    "input_tokens": 5164,
-    "output_tokens": 3190
+    "input_tokens": 2996452,
+    "output_tokens": 1063534
+  },
+  "gemma-2-9B": {
+    "input_tokens": 2671338,
+    "output_tokens": 651036
+  },
+  "gemma-2-27B": {
+    "input_tokens": 2684116,
+    "output_tokens": 690890
+  },
+  "llama-3.3-70B": {
+    "input_tokens": 3143562,
+    "output_tokens": 1141470
+  },
+  "qwen-2.5-72B": {
+    "input_tokens": 3552386,
+    "output_tokens": 1739345
+  },
+  "qwq": {
+    "input_tokens": 7620616,
+    "output_tokens": 10573446
+  },
+  "deepseek-r1": {
+    "input_tokens": 9041922,
+    "output_tokens": 4805165
+  },
+  "gpt-4o-mini": {
+    "input_tokens": 29018,
+    "output_tokens": 10660
+  },
+  "gpt-4o": {
+    "input_tokens": 29331,
+    "output_tokens": 11081
   }
 }

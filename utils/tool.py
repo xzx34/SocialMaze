@@ -15,6 +15,7 @@ load_dotenv()
 model_dict = {
     'gpt-4o': 'gpt-4o',
     'gpt-4o-mini': 'gpt-4o-mini',
+    'o3-mini': 'o3-mini-2025-01-31',
     'o1-mini': 'o1-mini-2024-09-12',
     'chatgpt-4o-latest': 'chatgpt-4o-latest',
     'llama-3.3-70B': 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
@@ -152,26 +153,11 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 formatted_messages = [{"role": "system", "content": system_message}]
                 formatted_messages.extend(messages)
                 
-                # For streaming responses, we need to use non-streaming first to get token count
-                # then use streaming for the actual response
+                # 直接使用流式API获取响应并估算token使用情况
+                full_response = ''
+                input_text_length = len(system_message) + sum(len(msg['content']) for msg in messages)
+                
                 try:
-                    # First make a non-streaming call to get token usage
-                    token_response = client.chat.completions.create(
-                        model=model_dict[model],
-                        temperature=temperature,
-                        messages=formatted_messages,
-                        stream=False,
-                    )
-                    
-                    # Log token usage if available
-                    if hasattr(token_response, 'usage') and token_response.usage:
-                        total_tokens = token_response.usage.total_tokens
-                        input_tokens = token_response.usage.prompt_tokens if hasattr(token_response.usage, 'prompt_tokens') else 0
-                        completion_tokens = token_response.usage.completion_tokens if hasattr(token_response.usage, 'completion_tokens') else 0
-                        log_token_cost(model, input_tokens=input_tokens, output_tokens=completion_tokens, total_tokens=total_tokens)
-                        
-                    # Now get the streaming response for the actual use
-                    full_response = ''
                     chat_completion = client.chat.completions.create(
                         model=model_dict[model],
                         temperature=temperature,
@@ -186,27 +172,23 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                             content = event.choices[0].delta.content or ""
                             full_response += content
 
+                    # 估算token使用量
+                    # 大约4个字符等于1个token（这是一个粗略估计）
+                    estimated_input_tokens = input_text_length // 4
+                    estimated_output_tokens = len(full_response) // 4
+                    estimated_total_tokens = estimated_input_tokens + estimated_output_tokens
+                    
+                    # 记录估算的token使用情况
+                    log_token_cost(model, 
+                                 input_tokens=estimated_input_tokens, 
+                                 output_tokens=estimated_output_tokens, 
+                                 total_tokens=estimated_total_tokens)
+                    
                     return full_response
                     
                 except Exception as deep_err:
-                    # If token estimation fails, just use streaming directly
-                    print(f"Token estimation failed, using streaming directly: {deep_err}")
-                    full_response = ''
-                    chat_completion = client.chat.completions.create(
-                        model=model_dict[model],
-                        temperature=temperature,
-                        messages=formatted_messages,
-                        stream=True,
-                    )
-
-                    for event in chat_completion:
-                        if event.choices[0].finish_reason:
-                            break 
-                        else:
-                            content = event.choices[0].delta.content or ""
-                            full_response += content
-
-                    return full_response
+                    print(f"Streaming API call failed: {deep_err}")
+                    raise
             
             # Handle Yi Lightning
             elif model == 'yi-lightning':
