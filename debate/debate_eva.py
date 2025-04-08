@@ -348,7 +348,7 @@ def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on paper acceptance decisions')
     # llama-3.1-8B, gemma-2-9b, gemma-2-27B,llama-3.3-70B,qwen-2.5-72B,qwq,deepseek-r1
-    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.1-8B','gemma-2-9b','gemma-2-27B','llama-3.3-70B','qwen-2.5-72B','qwq','deepseek-r1'],
+    parser.add_argument('--models', type=str, nargs='+', default=['o3-mini','gpt-4o-mini','gpt-4o'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--dataset', type=str, default='data/debate.json', 
                         help='Path to debate dataset')
