@@ -304,6 +304,7 @@ def check_unique_solution(scenario_data):
     if player1_role == "Investigator" or player1_role == "Rumormonger":
         perspective_roles.append("Investigator")
         perspective_roles.append("Rumormonger")
+        possible_criminals = set()
 
         return_reasoning_process+="I'm told I'm an Investigator, but I might also be a Rumormonger. I need to discuss both possibilities\n"
         for perspective in perspective_roles:
@@ -369,16 +370,19 @@ def check_unique_solution(scenario_data):
                     rumormonger_reasoning=reasoning_process+"I must be an Investigator\n"
                 continue
             reasoning_process+="Now we need to consider all possible combinations of Investigators\n"
-            investigator_announcement_made = False
-            for investigators in combinations(potential_investigators[1:], remaining_investigator_count):
+
+            if perspective == "Investigator":
+                reasoning_process+=f"I am an Investigator, so I will occupy a position in the combination\n"
+            
+            if perspective == "Rumormonger":
+                reasoning_process+=f"I am a Rumormonger, so I will not occupy a position in the combination\n"
+            potential_investigators = [p for p in potential_investigators if p != '1']
+
+            for investigators in combinations(potential_investigators, remaining_investigator_count):
                 if perspective == "Investigator":
                     investigator_set = {"1"}.union(set(investigators))
-                    if not investigator_announcement_made:
-                        reasoning_process+=f"I am an Investigator, so I will occupy a position in the combination\n"
-                        investigator_announcement_made = True
                 else:
                     investigator_set = set(investigators)
-                    reasoning_process+=f"I am a Rumormonger, so I will not occupy a position in the combination\n"
                 is_consistent = True
                 
                 criminal_candidates = set(all_players) - investigator_set - {"1"}
@@ -519,7 +523,7 @@ My Role Is {player1_determined_role}."""
                     criminal_candidates = {"1"}
                     reasoning_process+=f"I am the Criminal,"
                 elif perspective == "Lunatic":
-                    criminal_candidates = set(all_players) - {"1"}
+                    criminal_candidates = set(all_players) - {"1"}-investigator_set
                     reasoning_process+=f"I am a Lunatic,"
                 reasoning_process+=f"so the set of potential criminals is {format_set(criminal_candidates)}\n"
                 reasoning_process+="Let's review the statements made by investigators\n"
@@ -584,7 +588,7 @@ Final Criminal Is Player {criminal_player}.
 My Role Is {player1_determined_role}."""
         
     return {
-        "unique_solution": len(possible_criminals) == 1,
+        "unique_solution": len(possible_criminals) == 1 and player1_determined_role != "Unknown",
         "possible_criminals": list(possible_criminals),
         "player1_role": player1_role,
         "reasoning_process": return_reasoning_process

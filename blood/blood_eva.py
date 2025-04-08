@@ -292,18 +292,18 @@ def evaluate_model(model, scenarios, dataset_name=None, output_file=None, max_wo
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate models on Blood Game scenarios')
-    #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq 
-    parser.add_argument('--models', nargs='+', default=['gpt-4o-mini','gpt-4o','o3-mini'], 
+    #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq deepseek-r1
+    parser.add_argument('--models', nargs='+', default=['qwq','o3-mini','gpt-4o-mini','gpt-4o','gemma-2-9B','gemma-2-27B','llama-3.1-8B','llama-3.3-70B','qwen-2.5-72B','deepseek-r1'], 
                         help='Models to evaluate')
     parser.add_argument('--dataset_types', nargs='+', default=['original','rumormonger','lunatic','all'],
                         help='Types of datasets to evaluate (original, rumormonger, lunatic, all)')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6],
                         help='Number of players in each game')
-    parser.add_argument('--num_scenarios', type=int, default=2,
+    parser.add_argument('--num_scenarios', type=int, default=100,
                         help='Number of scenarios to evaluate per dataset')
     parser.add_argument('--results_dir', type=str, default='results',
                         help='Custom directory for saving results (default: blood/results)')
-    parser.add_argument('--max_workers', type=int, default=20,
+    parser.add_argument('--max_workers', type=int, default=25,
                         help='Maximum number of workers for parallel execution')
     return parser.parse_args()
 
