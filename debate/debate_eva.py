@@ -166,6 +166,7 @@ Final Decision: [Accept/Reject]
     # 组合最终提示
     prompt = base_prompt + paper_info + reviewer_comments + author_response + final_instruction
     
+    prompt=base_prompt + paper_info + reviewer_comments + final_instruction
     return prompt
 
 def process_paper(debate_item, model, system_prompt):
@@ -348,7 +349,7 @@ def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on paper acceptance decisions')
     # llama-3.1-8B, gemma-2-9b, gemma-2-27B,llama-3.3-70B,qwen-2.5-72B,qwq,deepseek-r1
-    parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o-mini','gpt-4o','o3-mini'],
+    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.1-8B','gemma-2-9b','gemma-2-27B','llama-3.3-70B','qwen-2.5-72B','qwq','deepseek-r1','gpt-4o-mini','gpt-4o','o3-mini'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--dataset', type=str, default='data/debate.json', 
                         help='Path to debate dataset')
