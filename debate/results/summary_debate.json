@@ -117,5 +117,56 @@
         "precision": 57.49999999999999
       }
     }
+  },
+  "gpt-4o-mini": {
+    "accuracy": 85.0,
+    "correct": 85,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 94.73684210526315,
+        "precision": 86.74698795180723
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 54.166666666666664,
+        "precision": 76.47058823529412
+      }
+    }
+  },
+  "gpt-4o": {
+    "accuracy": 90.0,
+    "correct": 90,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 93.42105263157895,
+        "precision": 93.42105263157895
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 79.16666666666666,
+        "precision": 79.16666666666666
+      }
+    }
+  },
+  "o3-mini": {
+    "accuracy": 79.0,
+    "correct": 79,
+    "total": 100,
+    "stats": {
+      "Reject": {
+        "total": 76,
+        "recall": 72.36842105263158,
+        "precision": 100.0
+      },
+      "Accept": {
+        "total": 24,
+        "recall": 100.0,
+        "precision": 53.333333333333336
+      }
+    }
   }
 }

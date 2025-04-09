@@ -231,9 +231,13 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                         "body": {
                             "model": model_dict[model],
                             "messages": formatted_messages,
-                            "temperature": temperature
                         }
                     }
+                    
+                    # 只有在非o3-mini和o1-mini模型时才添加temperature参数
+                    if model not in ['o3-mini', 'o1-mini']:
+                        batch_request["body"]["temperature"] = temperature
+                        
                     json.dump(batch_request, temp_file)
                     temp_file_path = temp_file.name
                 
