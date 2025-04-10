@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gpt-4o",
+    "difficulty": "hard",
+    "question_type": "cluster",
+    "total_samples": 100,
+    "correct_predictions": 93,
+    "accuracy": 93.0
+  },
+  "results": [
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has good relationships with N, L, P, E, M, F, and B.\n   - By transitivity, all these people (A, N, L, P, E, M, F, B) have good relationships with each other.\n   - N has a bad relationship with C, so C cannot be in this group.\n   - K has a bad relationship with N, so K cannot be in this group.\n\n2. **Group 2: Starting with C**\n   - C has good relationships with O, D, H, J, and I.\n   - By transitivity, all these people (C, O, D, H, J, I) have good relationships with each other.\n   - C has a bad relationship with K and G, so K and G cannot be in this group.\n\n3. **Group 3: Starting with K**\n   - K has a good relationship with G.\n   - By transitivity, K and G form a group.\n   - K has a bad relationship with N, so K and G cannot be in the group with A's connections.\n\nSince there are no other connections provided, we have identified three distinct groups:\n\n- Group 1: A, N, L, P, E, M, F, B\n- Group 2: C, O, D, H, J, I\n- Group 3: K, G\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (C's Group):**\n   - C has good relationships with J, G, M, D, K, and F.\n   - By transitivity, J, G, M, D, K, and F all have good relationships with each other.\n   - C has a bad relationship with H and N, so H and N cannot be in this group.\n\n2. **Group 2 (A's Group):**\n   - A has good relationships with L, O, H, I, B, N, and E.\n   - By transitivity, L, O, H, I, B, N, and E all have good relationships with each other.\n   - A has a bad relationship with C (indirectly through H and N), so C and anyone in C's group cannot be in this group.\n\n3. **Remaining People:**\n   - The people not yet assigned to a group are H and N.\n   - H and N both have good relationships with A, so they are part of A's group.\n\nSince all people are accounted for and no additional groups can be formed without violating the given relationship rules, we have:\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with known good relationships:**\n   - L and E have a good relationship.\n   - B and N have a good relationship.\n   - B and F have a good relationship.\n   - J and H have a good relationship.\n   - J and I have a good relationship.\n   - K and G have a good relationship.\n   - K and C have a good relationship.\n   - K and D have a good relationship.\n   - L and M have a good relationship.\n   - B and A have a good relationship.\n\n2. **Apply transitive properties to form groups:**\n\n   - **Group 1:**\n     - Start with B and N having a good relationship.\n     - B also has a good relationship with F and A.\n     - Therefore, N, B, F, and A form a group.\n\n   - **Group 2:**\n     - L and E have a good relationship.\n     - L also has a good relationship with M.\n     - Therefore, L, E, and M form a group.\n\n   - **Group 3:**\n     - J has a good relationship with H and I.\n     - Therefore, J, H, and I form a group.\n\n   - **Group 4:**\n     - K has a good relationship with G, C, and D.\n     - Therefore, K, G, C, and D form a group.\n\n3. **Verify separation of groups:**\n   - N and J have a bad relationship, so Group 1 and Group 3 are separate.\n   - N and K have a bad relationship, so Group 1 and Group 4 are separate.\n   - L and J have a bad relationship, so Group 2 and Group 3 are separate.\n   - K and L have a bad relationship, so Group 2 and Group 4 are separate.\n   - J and M have a bad relationship, so Group 2 and Group 3 are separate.\n\nEach group is distinct and separate from the others based on the bad relationships provided.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (Starting with A):**\n   - A has a good relationship with C, G, J, H, I, F, and N.\n   - By transitivity, C, G, J, H, I, F, and N all have good relationships with each other.\n   - Therefore, Group 1 consists of: A, C, G, J, H, I, F, N.\n\n2. **Group 2 (Starting with K):**\n   - K has a good relationship with B, M, E, O, D, and L.\n   - By transitivity, B, M, E, O, D, and L all have good relationships with each other.\n   - Therefore, Group 2 consists of: K, B, M, E, O, D, L.\n\n3. **Checking for any overlap or additional connections:**\n   - A and K have a bad relationship (since C and K have a bad relationship and A and C have a good relationship, by transitivity, A and K must have a bad relationship).\n   - Since A and K are in different groups and have a bad relationship, all members of Group 1 have a bad relationship with all members of Group 2.\n\n4. **Remaining person:**\n   - Person O is already included in Group 2.\n\nThus, there are no additional connections or overlaps between these groups, and no other people are left ungrouped.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Good Relationships:**\n   - K and F\n   - H and I\n   - H and E\n   - K and N\n   - C and O\n   - C and J\n   - C and G\n   - L and D\n   - C and B\n   - K and M\n   - H and A\n\n2. **Identify Bad Relationships:**\n   - I and K\n   - C and M\n   - C and L\n   - L and K\n   - E and N\n   - I and C\n   - C and K\n   - I and L\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1:** Start with C. C has good relationships with O, J, G, and B. Since C has a bad relationship with K, M, L, and I, these cannot be in the same group as C.\n     - Group 1: {C, O, J, G, B}\n\n   - **Group 2:** Start with K. K has good relationships with F, N, and M. K has a bad relationship with C and L, so they cannot be in the same group.\n     - Group 2: {K, F, N, M}\n\n   - **Group 3:** Start with H. H has good relationships with I, E, and A. H has no direct bad relationships, but I has a bad relationship with C and L, so they cannot be in the same group as C or L.\n     - Group 3: {H, I, E, A}\n\n   - **Group 4:** Start with L. L has a good relationship with D. L has bad relationships with C, K, and I, so they cannot be in the same group.\n     - Group 4: {L, D}\n\n4. **Check for Overlaps or Additional Groups:**\n   - Each group is distinct and separate due to the bad relationships between members of different groups.\n   - No additional people are left ungrouped.\n\nThus, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with N:**\n   - N has good relationships with A, F, D, and M.\n   - N has bad relationships with J, L, and H.\n\n   From N's good relationships, we can form a group: {N, A, F, D, M}.\n\n2. **Analyze J:**\n   - J has good relationships with K, C, and O.\n   - J has bad relationships with N, L, and H.\n\n   From J's good relationships, we can form another group: {J, K, C, O}.\n\n3. **Analyze H:**\n   - H has a good relationship with B.\n   - H has bad relationships with J and L.\n\n   From H's good relationship, we can form another group: {H, B}.\n\n4. **Analyze L:**\n   - L has a good relationship with I.\n   - L has bad relationships with J and N.\n\n   From L's good relationship, we can form another group: {L, I}.\n\n5. **Remaining people:**\n   - G and E are only mentioned in relation to B, who is in a group with H. Since B has good relationships with G and E, they can be added to the group with B and H: {H, B, G, E}.\n\n6. **Check for any overlaps or additional connections:**\n   - B has a bad relationship with O, confirming that B's group is separate from J's group.\n   - No other connections suggest merging any of these groups.\n\nThus, the distinct groups are:\n- Group 1: {N, A, F, D, M}\n- Group 2: {J, K, C, O}\n- Group 3: {H, B, G, E}\n- Group 4: {L, I}\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with B:**\n   - B has a good relationship with F, N, M, D, C, I, and K.\n   - Since relationships are transitive, all these people (B, F, N, M, D, C, I, K) form a group because they all have good relationships with each other through B.\n\n2. **Consider H:**\n   - H has a good relationship with J, E, O, L, G, and A.\n   - Since relationships are transitive, all these people (H, J, E, O, L, G, A) form another group because they all have good relationships with each other through H.\n\n3. **Check for any overlap between the two groups:**\n   - B's group: B, F, N, M, D, C, I, K\n   - H's group: H, J, E, O, L, G, A\n   - There is no overlap between these two groups, and no relationships indicate a connection between any member of B's group and H's group.\n\n4. **Consider the bad relationships:**\n   - E and M have a bad relationship.\n   - H and C have a bad relationship.\n   - These bad relationships confirm that B's group and H's group are separate because:\n     - E (from H's group) and M (from B's group) have a bad relationship.\n     - H (from H's group) and C (from B's group) have a bad relationship.\n\n5. **Remaining person:**\n   - Person O is already included in H's group.\n\nSince there are no other people left ungrouped and no additional relationships to consider, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with N.\n   - N has a good relationship with G, A, J, M, and F.\n   - By transitivity, G, A, J, M, and F all have good relationships with each other.\n   - N has a bad relationship with C and L, so C and L are not in this group.\n   - N has no direct relationship with B, D, E, H, I, or K, but since N has a bad relationship with L, and L has a good relationship with B and D, B and D cannot be in the same group as N.\n   - Therefore, Group 1 consists of: N, G, A, J, M, F.\n\n2. **Group 2**: Start with C.\n   - C has a good relationship with H, K, E, and I.\n   - By transitivity, H, K, E, and I all have good relationships with each other.\n   - C has a bad relationship with N and L, so N and L are not in this group.\n   - C has no direct relationship with B, D, G, A, J, M, or F, but since C has a bad relationship with N, and N has a good relationship with G, A, J, M, and F, none of these can be in the same group as C.\n   - Therefore, Group 2 consists of: C, H, K, E, I.\n\n3. **Group 3**: Start with L.\n   - L has a good relationship with D and B.\n   - By transitivity, D and B have a good relationship with each other.\n   - L has a bad relationship with N and C, so N and C are not in this group.\n   - L has no direct relationship with G, A, J, M, F, H, K, E, or I, but since L has a bad relationship with N, and N has a good relationship with G, A, J, M, and F, none of these can be in the same group as L.\n   - Therefore, Group 3 consists of: L, D, B.\n\nEach group is distinct and separate from the others, as determined by the bad relationships and the transitive properties.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with known good relationships:**\n   - N and F, M, O, P are in a group because they all have good relationships with N.\n   - J, C, B, A are in a group because J has good relationships with C, B, and A.\n   - E, I, G, D are in a group because E has good relationships with I, G, and D.\n   - L and K, H are in a group because L has good relationships with K and H.\n\n2. **Analyze bad relationships to separate groups:**\n   - E and N have a bad relationship, so E's group (E, I, G, D) and N's group (N, F, M, O, P) are separate.\n   - N and L have a bad relationship, so N's group (N, F, M, O, P) and L's group (L, K, H) are separate.\n   - J and N have a bad relationship, so J's group (J, C, B, A) and N's group (N, F, M, O, P) are separate.\n   - J and E have a bad relationship, so J's group (J, C, B, A) and E's group (E, I, G, D) are separate.\n   - J and L have a bad relationship, so J's group (J, C, B, A) and L's group (L, K, H) are separate.\n\n3. **Verify separation:**\n   - Since E and L have a bad relationship, E's group (E, I, G, D) and L's group (L, K, H) are separate.\n   - Since G and N have a bad relationship, E's group (E, I, G, D) and N's group (N, F, M, O, P) are separate.\n   - Since B and M have a bad relationship, J's group (J, C, B, A) and N's group (N, F, M, O, P) are separate.\n\n4. **Conclusion:**\n   - We have identified four distinct groups:\n     1. Group 1: N, F, M, O, P\n     2. Group 2: J, C, B, A\n     3. Group 3: E, I, G, D\n     4. Group 4: L, K, H\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with N:**\n   - N has a good relationship with B, A, J, H, and E.\n   - N has a bad relationship with K and L.\n\n2. **Group 1 (N's group):**\n   - N, B, A, J, H, E\n   - Since N has a good relationship with all these people, they form a group.\n\n3. **Analyze L:**\n   - L has a good relationship with M, F, and G.\n   - L has a bad relationship with N and C.\n\n4. **Group 2 (L's group):**\n   - L, M, F, G\n   - Since L has a good relationship with M, F, and G, they form a group.\n\n5. **Analyze K:**\n   - K has a good relationship with C, D, and I.\n   - K has a bad relationship with N and L.\n\n6. **Group 3 (K's group):**\n   - K, C, D, I\n   - Since K has a good relationship with C, D, and I, they form a group.\n\n7. **Check for any other possible connections:**\n   - B and M have a bad relationship, confirming they are in separate groups.\n   - C and L have a bad relationship, confirming they are in separate groups.\n   - N and K have a bad relationship, confirming they are in separate groups.\n   - N and L have a bad relationship, confirming they are in separate groups.\n\nBased on the analysis, we have identified three distinct groups:\n\n- Group 1: N, B, A, J, H, E\n- Group 2: L, M, F, G\n- Group 3: K, C, D, I\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1:**\n   - Start with C.\n   - C has a good relationship with K, A, I, and M.\n   - By transitivity, K, A, I, and M all have good relationships with each other.\n   - Therefore, Group 1 consists of {C, K, A, I, M}.\n\n2. **Group 2:**\n   - Start with N.\n   - N has a good relationship with D, F, E, and J.\n   - By transitivity, D, F, E, and J all have good relationships with each other.\n   - Therefore, Group 2 consists of {N, D, F, E, J}.\n\n3. **Group 3:**\n   - Start with H.\n   - H has a good relationship with G, B, L, and O.\n   - By transitivity, G, B, L, and O all have good relationships with each other.\n   - Therefore, Group 3 consists of {H, G, B, L, O}.\n\nNow, let's verify the separation of these groups:\n- C and N have a bad relationship, so Group 1 and Group 2 are separate.\n- C and H have a bad relationship, so Group 1 and Group 3 are separate.\n- H and N have a bad relationship, so Group 2 and Group 3 are separate.\n\nThus, there are no overlaps between these groups, and they are completely separate.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1:**\n   - Start with C.\n   - C has a good relationship with B, D, F, J, O, and H.\n   - By transitivity, B, D, F, J, O, and H all have good relationships with each other.\n   - Therefore, Group 1 consists of C, B, D, F, J, O, and H.\n\n2. **Group 2:**\n   - Start with M.\n   - M has a good relationship with E and A.\n   - By transitivity, E and A have a good relationship with each other.\n   - Therefore, Group 2 consists of M, E, and A.\n\n3. **Group 3:**\n   - Start with K.\n   - K has a good relationship with P, G, L, N, and I.\n   - By transitivity, P, G, L, N, and I all have good relationships with each other.\n   - Therefore, Group 3 consists of K, P, G, L, N, and I.\n\nNow, let's verify the separation of these groups:\n- C and K have a bad relationship, which means Group 1 and Group 3 are separate.\n- M and C have a bad relationship, which means Group 2 and Group 1 are separate.\n- M and K have a bad relationship, which means Group 2 and Group 3 are separate.\n\nSince all groups are separate and no additional people are left ungrouped, we have:\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with B.\n   - B has a good relationship with I, E, and A.\n   - I has a good relationship with B.\n   - E has a good relationship with B.\n   - A has a good relationship with B.\n   - Therefore, Group 1 consists of {A, B, E, I}.\n\n2. **Group 2**: Start with C.\n   - C has a good relationship with F, D, O, H, and L.\n   - F has a good relationship with C.\n   - D has a good relationship with C.\n   - O has a good relationship with C.\n   - H has a good relationship with C.\n   - L has a good relationship with C.\n   - Therefore, Group 2 consists of {C, D, F, H, L, O}.\n\n3. **Group 3**: Start with K.\n   - K has a good relationship with G, M, N, and J.\n   - G has a good relationship with K.\n   - M has a good relationship with K.\n   - N has a good relationship with K.\n   - J has a good relationship with K.\n   - Therefore, Group 3 consists of {G, J, K, M, N}.\n\nNow, verify that there are no connections between these groups:\n- C and K have a bad relationship, so Group 2 and Group 3 are separate.\n- I and C have a bad relationship, so Group 1 and Group 2 are separate.\n- I and K have a bad relationship, so Group 1 and Group 3 are separate.\n\nThus, the groups are completely separate, and there are no overlaps or additional connections that would merge any of these groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has good relationships with G, N, F, E, I, and B.\n   - By transitivity, G, N, F, E, I, and B all have good relationships with each other.\n   - This forms Group 1: {A, G, N, F, E, I, B}\n\n2. **Consider J:**\n   - J has a good relationship with H and M.\n   - J has a bad relationship with N (from Group 1), so J, H, and M cannot be in Group 1.\n   - By transitivity, H and M have good relationships with each other.\n   - This forms Group 2: {J, H, M}\n\n3. **Consider L:**\n   - L has good relationships with K, C, and D.\n   - L has a bad relationship with J (from Group 2) and N (from Group 1), so L, K, C, and D cannot be in Groups 1 or 2.\n   - By transitivity, K, C, and D have good relationships with each other.\n   - This forms Group 3: {L, K, C, D}\n\n4. **Remaining person:**\n   - The only person not yet grouped is O.\n   - There is no information about O's relationships, so O forms their own group.\n\nThus, we have identified 3 distinct groups based on the given relationships:\n\n- Group 1: {A, G, N, F, E, I, B}\n- Group 2: {J, H, M}\n- Group 3: {L, K, C, D}\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with K.\n   - K has a good relationship with N, E, A, and D.\n   - N cannot be in the same group as I (since I and N have a bad relationship).\n   - K has a bad relationship with C, L, and J, so C, L, and J are not in this group.\n   - Therefore, Group 1 consists of: K, N, E, A, D.\n\n2. **Group 2**: Start with C.\n   - C has a good relationship with O, G, H, and M.\n   - C has a bad relationship with K, L, and J, so they are not in this group.\n   - Therefore, Group 2 consists of: C, O, G, H, M.\n\n3. **Group 3**: Start with L.\n   - L has a good relationship with P and F.\n   - L has a bad relationship with K, N, C, and J, so they are not in this group.\n   - Therefore, Group 3 consists of: L, P, F.\n\n4. **Group 4**: Start with J.\n   - J has a good relationship with I and B.\n   - J has a bad relationship with K, C, and L, so they are not in this group.\n   - Therefore, Group 4 consists of: J, I, B.\n\nNow, let's verify that these groups are distinct and separate:\n- Each group is formed based on good relationships and the transitive property.\n- There are no overlapping members between groups due to bad relationships.\n\nThus, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1:**\n   - Start with H, who has good relationships with G, F, B, O, P, and M.\n   - Since H has a bad relationship with C, C cannot be in this group.\n   - L also has a bad relationship with H, so L cannot be in this group.\n   - Therefore, Group 1 consists of: H, G, F, B, O, P, M.\n\n2. **Group 2:**\n   - Start with C, who has good relationships with E, N, K, and I.\n   - C has a bad relationship with L, so L cannot be in this group.\n   - Therefore, Group 2 consists of: C, E, N, K, I.\n\n3. **Group 3:**\n   - Start with L, who has good relationships with A, J, and D.\n   - L has a bad relationship with C and I, so they cannot be in this group.\n   - Therefore, Group 3 consists of: L, A, J, D.\n\nNow, let's verify that these groups are distinct and separate:\n- Group 1 and Group 2 are separate because H (from Group 1) has a bad relationship with C (from Group 2).\n- Group 1 and Group 3 are separate because H (from Group 1) has a bad relationship with L (from Group 3).\n- Group 2 and Group 3 are separate because C (from Group 2) has a bad relationship with L (from Group 3).\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with N:**\n   - N has a good relationship with L, F, B, and G.\n   - N has a bad relationship with C, K, and J.\n\n2. **Consider L:**\n   - L has a good relationship with N.\n   - L has a bad relationship with D.\n\n3. **Consider C:**\n   - C has a good relationship with D, I, E, and H.\n   - C has a bad relationship with N, J, and K.\n\n4. **Consider J:**\n   - J has a good relationship with A and O.\n   - J has a bad relationship with C, N, and K.\n\n5. **Consider K:**\n   - K has a good relationship with M.\n   - K has a bad relationship with C and J.\n\nFrom these relationships, we can form the following groups:\n\n- **Group 1:** N, L, F, B, G\n  - All have good relationships with each other, directly or through transitivity.\n\n- **Group 2:** C, D, I, E, H\n  - All have good relationships with each other, directly or through transitivity.\n\n- **Group 3:** J, A, O\n  - All have good relationships with each other, directly or through transitivity.\n\n- **Group 4:** K, M\n  - Both have a good relationship with each other.\n\nEach group is separate because:\n- N has a bad relationship with C and J, separating Group 1 from Groups 2 and 3.\n- C has a bad relationship with J and K, separating Group 2 from Groups 3 and 4.\n- J has a bad relationship with K, separating Group 3 from Group 4.\n\nThus, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with C's group:**\n   - C has good relationships with P, I, B, D, G, and N.\n   - Since C and P have a good relationship, P is in C's group.\n   - Since C and I have a good relationship, I is in C's group.\n   - Since C and B have a good relationship, B is in C's group.\n   - Since C and D have a good relationship, D is in C's group.\n   - Since C and G have a good relationship, G is in C's group.\n   - Since C and N have a good relationship, N is in C's group.\n\n   Therefore, C's group consists of: C, P, I, B, D, G, N.\n\n2. **K's group:**\n   - K has good relationships with J, F, E, O, and L.\n   - Since K and J have a good relationship, J is in K's group.\n   - Since K and F have a good relationship, F is in K's group.\n   - Since K and E have a good relationship, E is in K's group.\n   - Since K and O have a good relationship, O is in K's group.\n   - Since K and L have a good relationship, L is in K's group.\n\n   Therefore, K's group consists of: K, J, F, E, O, L.\n\n3. **M's group:**\n   - M has good relationships with A and H.\n   - Since M and A have a good relationship, A is in M's group.\n   - Since M and H have a good relationship, H is in M's group.\n\n   Therefore, M's group consists of: M, A, H.\n\n4. **Check for any remaining individuals:**\n   - The only person not yet assigned to a group is P, but P is already in C's group.\n\n5. **Verify separation of groups:**\n   - C and K have a bad relationship, so C's group and K's group are separate.\n   - M and C have a bad relationship, so M's group and C's group are separate.\n   - M and K have a bad relationship, so M's group and K's group are separate.\n\nThus, the distinct groups are:\n- Group 1: C, P, I, B, D, G, N\n- Group 2: K, J, F, E, O, L\n- Group 3: M, A, H\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has good relationships with H, M, G, I, J, and F.\n   - By transitivity, all these people (A, H, M, G, I, J, F) have good relationships with each other.\n   - Therefore, they form a group.\n\n2. **Group 2: Starting with L**\n   - L has good relationships with C, N, and D.\n   - By transitivity, all these people (L, C, N, D) have good relationships with each other.\n   - Therefore, they form a group.\n\n3. **Group 3: Starting with K**\n   - K has a good relationship with B and E.\n   - By transitivity, all these people (K, B, E) have good relationships with each other.\n   - Therefore, they form a group.\n\nNow, let's verify the separation between these groups:\n- A and L have a bad relationship (since A has a good relationship with H, and H and L have a bad relationship).\n- A and K have a bad relationship (since A has a good relationship with H, and H and K have a bad relationship).\n- L and K have a bad relationship.\n\nSince there are no good relationships connecting these groups, they remain distinct.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has a good relationship with B, E, H, D, K, P, M, and G.\n   - Since A has a good relationship with all these people, they all have good relationships with each other due to transitivity.\n   - Therefore, Group 1 consists of: A, B, E, H, D, K, P, M, G.\n\n2. **Group 2: Starting with C**\n   - C has a good relationship with J, L, N, F, O, and I.\n   - Since C has a good relationship with all these people, they all have good relationships with each other due to transitivity.\n   - Therefore, Group 2 consists of: C, J, L, N, F, O, I.\n\n3. **Checking for overlaps or connections between groups:**\n   - A and K are in Group 1, and C and K have a bad relationship, so Group 1 and Group 2 are separate.\n   - B and J have a bad relationship, and B is in Group 1 while J is in Group 2, confirming the separation.\n   - No other connections or overlaps exist between the two groups.\n\n4. **Remaining person:**\n   - Person not yet grouped: None, as all 16 people (A to P) are accounted for in the two groups.\n\nThus, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (C's Group):**\n   - C has a good relationship with A, E, F, O, I, and B.\n   - By transitivity, A, E, F, O, I, and B all have good relationships with each other.\n   - C has a bad relationship with L and K, so L and K cannot be in this group.\n\n2. **Group 2 (K's Group):**\n   - K has a good relationship with N, D, J, M, and H.\n   - By transitivity, N, D, J, M, and H all have good relationships with each other.\n   - K has a bad relationship with L, so L cannot be in this group.\n   - K has a bad relationship with C, so none of C's group members can be in this group.\n\n3. **Group 3 (L's Group):**\n   - L has a good relationship with G.\n   - By transitivity, L and G have a good relationship with each other.\n   - L has a bad relationship with C and F, so they cannot be in this group.\n   - L has a bad relationship with K, so none of K's group members can be in this group.\n\nNow, let's verify if there are any other people not yet assigned to a group:\n- A, E, F, O, I, B are in Group 1.\n- N, D, J, M, H are in Group 2.\n- L, G are in Group 3.\n\nThe only person left is C, who is already in Group 1.\n\nThus, we have identified all individuals and their respective groups. There are no additional people left ungrouped.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Good Relationships:**\n   - J and G\n   - L and D\n   - L and I\n   - J and N\n   - L and M\n   - C and H\n   - C and O\n   - L and F\n   - C and K\n   - A and B\n   - J and E\n\n2. **Identify Bad Relationships:**\n   - A and J\n   - K and L\n   - J and L\n   - A and K\n   - C and F\n   - L and J\n   - K and J\n   - A and L\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1:** Start with J. J has good relationships with G, N, and E. Thus, Group 1 = {J, G, N, E}.\n   - **Group 2:** Start with L. L has good relationships with D, I, M, and F. Thus, Group 2 = {L, D, I, M, F}.\n   - **Group 3:** Start with C. C has good relationships with H, O, and K. Thus, Group 3 = {C, H, O, K}.\n   - **Group 4:** Start with A. A has a good relationship with B. Thus, Group 4 = {A, B}.\n\n4. **Verify Separation of Groups:**\n   - J and L have a bad relationship, so Group 1 and Group 2 are separate.\n   - A and J have a bad relationship, so Group 4 and Group 1 are separate.\n   - A and L have a bad relationship, so Group 4 and Group 2 are separate.\n   - A and K have a bad relationship, so Group 4 and Group 3 are separate.\n   - C and F have a bad relationship, so Group 3 and Group 2 are separate.\n   - K and L have a bad relationship, so Group 3 and Group 2 are separate.\n   - K and J have a bad relationship, so Group 3 and Group 1 are separate.\n\n5. **Conclusion:**\n   - Each group is distinct and separate from the others based on the bad relationships.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (E's Group):**\n   - E has a good relationship with A, B, D, and L.\n   - By transitivity, A, B, D, and L all have good relationships with each other.\n   - E has a bad relationship with J and K, so E's group is separate from any group containing J or K.\n\n2. **Group 2 (J's Group):**\n   - J has a good relationship with I and M.\n   - By transitivity, I and M have a good relationship with each other.\n   - J has a bad relationship with E and N, so J's group is separate from any group containing E or N.\n\n3. **Group 3 (K's Group):**\n   - K has a good relationship with G, F, and C.\n   - By transitivity, G, F, and C have good relationships with each other.\n   - K has a bad relationship with J, N, and E, so K's group is separate from any group containing J, N, or E.\n\n4. **Group 4 (N's Group):**\n   - N has a good relationship with H.\n   - By transitivity, H is in N's group.\n   - N has a bad relationship with E, J, I, and K, so N's group is separate from any group containing E, J, I, or K.\n\nNow, let's summarize the groups:\n- Group 1: E, A, B, D, L\n- Group 2: J, I, M\n- Group 3: K, G, F, C\n- Group 4: N, H\n\nEach group is distinct and separate from the others due to the bad relationships between members of different groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1:**\n   - Start with K, who has good relationships with N, G, D, A, O, and L.\n   - Therefore, Group 1 includes: K, N, G, D, A, O, L.\n\n2. **Group 2:**\n   - C has good relationships with F, M, E, and B.\n   - Therefore, Group 2 includes: C, F, M, E, B.\n\n3. **Group 3:**\n   - J has good relationships with H and I.\n   - Therefore, Group 3 includes: J, H, I.\n\nNow, let's verify that these groups are distinct and separate:\n\n- K has a bad relationship with C and J, which means Group 1 is separate from Groups 2 and 3.\n- C has a bad relationship with J, which means Group 2 is separate from Group 3.\n\nThus, the groups are distinct and do not overlap.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group Formation with B:**\n   - B has good relationships with F, H, J, G, E, O, D, and I.\n   - By transitivity, all these people (B, F, H, J, G, E, O, D, I) form a group because they all have good relationships with B and thus with each other.\n\n2. **Group Formation with C:**\n   - C has good relationships with N, K, M, L, and A.\n   - By transitivity, all these people (C, N, K, M, L, A) form a group because they all have good relationships with C and thus with each other.\n\n3. **Checking for Overlaps or Connections:**\n   - C has a bad relationship with E and I, who are in B's group. Therefore, there is no overlap between the group formed with B and the group formed with C.\n   - Since C has a bad relationship with E and I, and B has a good relationship with E and I, the two groups are completely separate.\n\n4. **Remaining Person:**\n   - Person O is in B's group, and all relationships involving O are accounted for within that group.\n\nThus, there are two distinct groups:\n\n- Group 1: B, F, H, J, G, E, O, D, I\n- Group 2: C, N, K, M, L, A\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "3",
+      "correct": false,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has a good relationship with D, C, G, E, N, J, M, and K.\n   - Since A has a good relationship with C, and C has a bad relationship with H, everyone in A's group must have a bad relationship with H and anyone in H's group.\n\n2. **Form A's group:**\n   - A's group includes: A, D, C, G, E, N, J, M, K.\n   - These people all have good relationships with each other through transitivity.\n\n3. **Analyze H's relationships:**\n   - H has a good relationship with O, F, L, B, and I.\n   - Since H has a bad relationship with C, and C is in A's group, everyone in H's group must have a bad relationship with everyone in A's group.\n\n4. **Form H's group:**\n   - H's group includes: H, O, F, L, B, I.\n   - These people all have good relationships with each other through transitivity.\n\n5. **Check for any ungrouped individuals:**\n   - The people not mentioned in any relationships are: P.\n   - Since P has no relationships defined, P is not part of any group and stands alone.\n\nThus, we have two distinct groups and one individual who is not part of any group:\n\n- Group 1: A, D, C, G, E, N, J, M, K\n- Group 2: H, O, F, L, B, I\n- Individual: P\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has good relationships with I, D, G, E, C, M, H, and L.\n   - Therefore, these people (A, I, D, G, E, C, M, H, L) form a group because they all have good relationships with A, and by transitivity, with each other.\n\n2. **Group 2: Starting with K**\n   - K has good relationships with N, J, F, and B.\n   - Therefore, these people (K, N, J, F, B) form another group because they all have good relationships with K, and by transitivity, with each other.\n\n3. **Checking for cross-group relationships:**\n   - C and K have a bad relationship, which means Group 1 and Group 2 are separate.\n   - D and J have a bad relationship, which further confirms that Group 1 and Group 2 are separate.\n\nSince there are no other relationships provided that would connect these two groups, and given the rules, these are the only two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with E:**\n   - E has a good relationship with I, A, B, and G.\n   - E has a bad relationship with K, H, and L.\n\n2. **Group 1 (E's group):**\n   - E, I, A, B, G are in the same group because they all have good relationships with E.\n   - Check transitive relationships:\n     - A and M have a bad relationship, so M is not in this group.\n     - E and H have a bad relationship, so H is not in this group.\n     - E and L have a bad relationship, so L is not in this group.\n     - E and K have a bad relationship, so K is not in this group.\n\n3. **Group 2 (K's group):**\n   - K has a good relationship with P, O, and M.\n   - K has a bad relationship with E, H, and L.\n   - Therefore, K, P, O, M form a group.\n\n4. **Group 3 (L's group):**\n   - L has a good relationship with N and J.\n   - L has a bad relationship with E, K, and H.\n   - Therefore, L, N, J form a group.\n\n5. **Group 4 (C's group):**\n   - C has a good relationship with D, H, and F.\n   - C has a bad relationship with G.\n   - Therefore, C, D, H, F form a group.\n\n6. **Remaining individuals:**\n   - G is not in C's group due to a bad relationship with C.\n   - G is in E's group because E and G have a good relationship.\n   - H is not in E's group due to a bad relationship with E.\n   - H is in C's group because C and H have a good relationship.\n\nAfter analyzing all relationships and applying transitive properties, we have identified 4 distinct groups:\n\n- Group 1: E, I, A, B, G\n- Group 2: K, P, O, M\n- Group 3: L, N, J\n- Group 4: C, D, H, F\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Good Relationships:**\n   - A has good relationships with K, E, D, H, G, L, I, M.\n   - C has good relationships with F, J, N, B.\n   - B has a good relationship with C.\n\n2. **Identify Bad Relationships:**\n   - B and L have a bad relationship.\n   - K and C have a bad relationship.\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1:** Start with A. A has good relationships with K, E, D, H, G, L, I, M. Therefore, Group 1 includes: A, K, E, D, H, G, L, I, M.\n   - **Group 2:** Start with C. C has good relationships with F, J, N, B. Therefore, Group 2 includes: C, F, J, N, B.\n\n4. **Verify Separation of Groups:**\n   - B and L have a bad relationship, which means Group 1 and Group 2 must be separate.\n   - K and C have a bad relationship, reinforcing the separation of Group 1 and Group 2.\n\n5. **Check for Overlaps or Additional Groups:**\n   - There are no additional people left ungrouped, and no overlaps between Group 1 and Group 2 due to the bad relationships.\n\nThus, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "3",
+      "correct": false,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has a good relationship with N, E, B, G, K, F, I, and C.\n   - Therefore, N, E, B, G, K, F, I, and C all have good relationships with each other due to transitivity through A.\n   - This forms one group: {A, N, E, B, G, K, F, I, C}.\n\n2. **Group 2: Starting with H**\n   - H has a good relationship with L, M, D, and J.\n   - Therefore, L, M, D, and J all have good relationships with each other due to transitivity through H.\n   - This forms another group: {H, L, M, D, J}.\n\n3. **Checking for any connections between the groups:**\n   - C and H have a bad relationship, which means Group 1 and Group 2 are separate.\n   - E and J have a bad relationship, which further confirms that Group 1 and Group 2 are separate.\n\n4. **Remaining person:**\n   - Person O is not mentioned in any relationships, so they form their own group.\n\nThus, we have identified three distinct groups:\n\n- Group 1: {A, N, E, B, G, K, F, I, C}\n- Group 2: {H, L, M, D, J}\n- Group 3: {O}\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has good relationships with H, J, O, N, G, F, E, I, and C.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, one group is: {A, H, J, O, N, G, F, E, I, C}.\n\n2. **Consider K:**\n   - K has good relationships with B, M, L, and D.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, another group is: {K, B, M, L, D}.\n\n3. **Check for any overlap or additional connections:**\n   - C and K have a bad relationship, which means the groups containing C and K must be separate.\n   - G and M have a bad relationship, which confirms that the groups containing G and M must be separate.\n\n4. **Remaining people:**\n   - The only people not yet grouped are F and E, but they are already included in A's group.\n   - All people are accounted for in the two groups identified.\n\nThus, there are no additional groups, and the two groups are completely separate due to the bad relationships between members of different groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with N**\n   - N has a good relationship with J, D, H, M, and B.\n   - By transitivity, J, D, H, M, and B all have good relationships with each other.\n   - N has a bad relationship with C, so C is not in this group.\n\n2. **Group 2: Starting with C**\n   - C has a good relationship with L, F, E, and G.\n   - By transitivity, L, F, E, and G all have good relationships with each other.\n   - C has a bad relationship with K, so K is not in this group.\n\n3. **Group 3: Starting with K**\n   - K has a good relationship with I, A, and O.\n   - By transitivity, I, A, and O all have good relationships with each other.\n   - K has a bad relationship with N, M, and C, so none of these are in this group.\n\nNow, let's verify if there are any overlaps or additional groups:\n\n- **Group 1**: N, J, D, H, M, B\n- **Group 2**: C, L, F, E, G\n- **Group 3**: K, I, A, O\n\nThere are no overlaps between these groups, and all 15 people are accounted for in these three groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Starting with C:**\n   - C has a good relationship with H, M, A, B, and K.\n   - By transitivity, H, M, A, B, and K all have good relationships with each other.\n   - C has a bad relationship with G, so G cannot be in this group.\n\n2. **Starting with D:**\n   - D has a good relationship with G, L, N, E, J, F, and I.\n   - By transitivity, G, L, N, E, J, F, and I all have good relationships with each other.\n   - D has a bad relationship with C (since C has a bad relationship with G), so D and its connections form a separate group from C's group.\n\n3. **Checking for any overlaps or additional groups:**\n   - B and E have a bad relationship, confirming that B (from C's group) and E (from D's group) are in separate groups.\n   - No other relationships are provided that would connect the two groups or suggest additional groups.\n\nThus, based on the given relationships and the transitive properties, there are two distinct groups:\n\n- Group 1: C, H, M, A, B, K\n- Group 2: D, G, L, N, E, J, F, I\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "4",
+      "correct": false,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with D**\n   - D has a good relationship with J, O, F, E, H, and M.\n   - Since these people all have a good relationship with D, they must have good relationships with each other (by transitivity through D).\n   - Therefore, J, O, F, E, H, and M form a group with D.\n\n2. **Group 2: Starting with N**\n   - N has a good relationship with L, A, B, and I.\n   - Since these people all have a good relationship with N, they must have good relationships with each other (by transitivity through N).\n   - Therefore, L, A, B, and I form a group with N.\n\n3. **Analyzing G**\n   - G has a bad relationship with A, N, and C.\n   - G has a good relationship with D.\n   - Since G has a bad relationship with A and N, G cannot be in the same group as N, L, A, B, and I.\n   - Since G has a good relationship with D, G could potentially be in the same group as D, but G's bad relationships with A, N, and C prevent this.\n\n4. **Analyzing K and C**\n   - K has a bad relationship with N and G.\n   - K has a good relationship with C.\n   - Since K has a bad relationship with N, K cannot be in the same group as N, L, A, B, and I.\n   - Since K has a bad relationship with G, K cannot be in the same group as G.\n   - C has a bad relationship with G, so C cannot be in the same group as G.\n   - K and C form their own group.\n\n5. **Remaining Individuals**\n   - G is isolated due to bad relationships with A, N, and C.\n   - Therefore, G forms its own group.\n\nBased on this analysis, we have the following groups:\n- Group 1: D, J, O, F, E, H, M\n- Group 2: N, L, A, B, I\n- Group 3: K, C\n- Group 4: G\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with C**\n   - C has a good relationship with O, P, A, and E.\n   - Since C and O have a good relationship, and C has a good relationship with P, A, and E, by transitivity, O also has a good relationship with P, A, and E.\n   - Therefore, Group 1 consists of C, O, P, A, and E.\n\n2. **Group 2: Starting with F**\n   - F has a good relationship with L, D, J, B, and M.\n   - Since F and L have a good relationship, and F has a good relationship with D, J, B, and M, by transitivity, L also has a good relationship with D, J, B, and M.\n   - Therefore, Group 2 consists of F, L, D, J, B, and M.\n\n3. **Group 3: Starting with K**\n   - K has a good relationship with H, G, I, and N.\n   - Since K and H have a good relationship, and K has a good relationship with G, I, and N, by transitivity, H also has a good relationship with G, I, and N.\n   - Therefore, Group 3 consists of K, H, G, I, and N.\n\n4. **Checking for any other connections:**\n   - C and K have a bad relationship, which means Group 1 and Group 3 are separate.\n   - C and L have a bad relationship, which means Group 1 and Group 2 are separate.\n   - L and K have a bad relationship, which means Group 2 and Group 3 are separate.\n   - N and O have a bad relationship, which means Group 1 and Group 3 are separate.\n   - E and F have a bad relationship, which means Group 1 and Group 2 are separate.\n\nSince all the bad relationships confirm the separation of these groups, we conclude that there are no other connections that would merge any of these groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "4",
+      "correct": false,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has good relationships with J, C, N, H, B, E, I, and M.\n   - By transitivity, all these people (A, J, C, N, H, B, E, I, M) have good relationships with each other, forming one group.\n\n2. **Consider G:**\n   - G has good relationships with D, K, L, and F.\n   - By transitivity, all these people (G, D, K, L, F) have good relationships with each other, forming another group.\n\n3. **Check for any connections between the two groups:**\n   - A and G do not have a direct relationship mentioned.\n   - C and G have a bad relationship, which means the group containing A (which includes C) and the group containing G must be separate.\n\n4. **Remaining people:**\n   - The only people not yet assigned to a group are O and P. Since there is no information about their relationships, they each form their own group.\n\nThus, we have:\n- Group 1: A, J, C, N, H, B, E, I, M\n- Group 2: G, D, K, L, F\n- Group 3: O\n- Group 4: P\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Initial Relationships:**\n   - C has a good relationship with A, G, I, L, K, and J.\n   - B has a good relationship with N, D, M, E, H, O, and F.\n   - C and N have a bad relationship.\n   - A and B have a bad relationship.\n\n2. **Form Groups Based on Good Relationships:**\n   - **Group 1 (C's Group):** C, A, G, I, L, K, J\n     - All these people have a good relationship with C and, by transitivity, with each other.\n   - **Group 2 (B's Group):** B, N, D, M, E, H, O, F\n     - All these people have a good relationship with B and, by transitivity, with each other.\n\n3. **Verify Separation of Groups:**\n   - C and N have a bad relationship, which means Group 1 and Group 2 are separate.\n   - A and B have a bad relationship, reinforcing the separation between Group 1 and Group 2.\n\n4. **Check for Additional Groups:**\n   - No other relationships are provided that would suggest the existence of additional groups or connections between these two groups.\n\nThus, based on the given relationships and the rules, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "5",
+      "correct": false,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with C.\n   - C has a good relationship with L, E, O, and B.\n   - By transitivity, L, E, O, and B all have good relationships with each other.\n   - C has a bad relationship with N, J, and G, so none of these can be in the same group as C.\n\n2. **Group 2**: Start with G.\n   - G has a good relationship with H, D, and F.\n   - By transitivity, H, D, and F all have good relationships with each other.\n   - G has a bad relationship with N, J, and A, so none of these can be in the same group as G.\n\n3. **Group 3**: Start with J.\n   - J has a good relationship with M and K.\n   - By transitivity, M and K have a good relationship with each other.\n   - J has a bad relationship with N, G, and C, so none of these can be in the same group as J.\n\n4. **Group 4**: Start with N.\n   - N has a good relationship with A.\n   - By transitivity, A and N have a good relationship with each other.\n   - N has a bad relationship with C, J, and G, so none of these can be in the same group as N.\n\n5. **Individual**: I\n   - I has a bad relationship with J, and no good relationships that connect it to any other group.\n\nNow, let's list the groups:\n- Group 1: {C, L, E, O, B}\n- Group 2: {G, H, D, F}\n- Group 3: {J, M, K}\n- Group 4: {N, A}\n- Individual: {I}\n\nThus, there are 5 distinct groups.\n\nFinal Answer: 5"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with H**\n   - H has a good relationship with A, J, D, M, L, and B.\n   - Therefore, A, J, D, M, L, and B all have good relationships with each other through H.\n   - H has a bad relationship with C and O, so C and O are not in this group.\n\n2. **Group 2: Starting with C**\n   - C has a good relationship with F, G, K, and P.\n   - Therefore, F, G, K, and P all have good relationships with each other through C.\n   - C has a bad relationship with H and O, so H and O are not in this group.\n\n3. **Group 3: Starting with O**\n   - O has a good relationship with I, E, and N.\n   - Therefore, I, E, and N all have good relationships with each other through O.\n   - O has a bad relationship with H and C, so H and C are not in this group.\n\n4. **Checking for any additional groups or overlaps:**\n   - H's group and C's group are separate because H has a bad relationship with C.\n   - H's group and O's group are separate because H has a bad relationship with O.\n   - C's group and O's group are separate because C has a bad relationship with O.\n\nThus, there are no overlaps between these groups, and no additional groups are formed.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Good Relationships:**\n   - I and B\n   - C and P\n   - C and O\n   - J and H\n   - F and K\n   - F and D\n   - F and N\n   - C and L\n   - C and M\n   - F and G\n   - F and E\n   - F and A\n\n2. **Identify Bad Relationships:**\n   - K and I\n   - K and C\n   - C and J\n   - K and J\n   - I and C\n   - I and J\n   - D and H\n   - B and C\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1:** Start with F, who has good relationships with K, D, N, G, E, and A. Thus, Group 1 = {F, K, D, N, G, E, A}.\n   - **Group 2:** Start with C, who has good relationships with P, O, L, and M. Thus, Group 2 = {C, P, O, L, M}.\n   - **Group 3:** Start with J, who has a good relationship with H. Thus, Group 3 = {J, H}.\n   - **Group 4:** Start with I, who has a good relationship with B. Thus, Group 4 = {I, B}.\n\n4. **Verify Separation of Groups:**\n   - Group 1 (F, K, D, N, G, E, A) is separate from Group 2 (C, P, O, L, M) because K and C have a bad relationship.\n   - Group 1 is separate from Group 3 (J, H) because K and J have a bad relationship.\n   - Group 1 is separate from Group 4 (I, B) because K and I have a bad relationship.\n   - Group 2 is separate from Group 3 because C and J have a bad relationship.\n   - Group 2 is separate from Group 4 because C and I have a bad relationship.\n   - Group 3 is separate from Group 4 because J and I have a bad relationship.\n\n5. **Count the Distinct Groups:**\n   - Group 1: {F, K, D, N, G, E, A}\n   - Group 2: {C, P, O, L, M}\n   - Group 3: {J, H}\n   - Group 4: {I, B}\n\nThus, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "4",
+      "correct": false,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (B's group):**\n   - B has good relationships with P, E, J, O, F, N, M, H, and K.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 1 consists of: B, P, E, J, O, F, N, M, H, K.\n\n2. **Group 2 (C's group):**\n   - C has good relationships with I, A, L, G, and D.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 2 consists of: C, I, A, L, G, D.\n\n3. **Bad relationships between groups:**\n   - D and P have a bad relationship. Since P is in Group 1 and D is in Group 2, this means everyone in Group 1 has a bad relationship with everyone in Group 2.\n   - C and K have a bad relationship. Since C is in Group 2 and K is in Group 1, this confirms that everyone in Group 1 has a bad relationship with everyone in Group 2.\n\n4. **Remaining people:**\n   - The people not mentioned in any good relationship are: Q and R.\n   - Since they are not connected to any group through good relationships, they each form their own group.\n\nThus, we have:\n- Group 1: B, P, E, J, O, F, N, M, H, K\n- Group 2: C, I, A, L, G, D\n- Group 3: Q\n- Group 4: R\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: K's Group**\n   - K has good relationships with O, M, H, E, and D.\n   - By transitivity, O, M, H, E, and D all have good relationships with each other.\n   - Therefore, Group 1 consists of {K, O, M, H, E, D}.\n\n2. **Group 2: C's Group**\n   - C has good relationships with G, N, L, and J.\n   - By transitivity, G, N, L, and J all have good relationships with each other.\n   - Therefore, Group 2 consists of {C, G, N, L, J}.\n\n3. **Group 3: B's Group**\n   - B has good relationships with I, F, and A.\n   - By transitivity, I, F, and A all have good relationships with each other.\n   - Therefore, Group 3 consists of {B, I, F, A}.\n\n4. **Checking for Overlaps and Bad Relationships:**\n   - C and K have a bad relationship, so Group 1 and Group 2 are separate.\n   - I and K have a bad relationship, so Group 1 and Group 3 are separate.\n   - I and O have a bad relationship, confirming separation between Group 1 and Group 3.\n   - A and C have a bad relationship, so Group 2 and Group 3 are separate.\n   - I and C have a bad relationship, confirming separation between Group 2 and Group 3.\n\nSince there are no overlaps and all bad relationships confirm the separation of groups, we have three distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has a good relationship with G, H, D, B, F, and E.\n   - By transitivity, G, H, D, B, F, and E all have good relationships with each other.\n   - This forms one group: {A, G, H, D, B, F, E}.\n\n2. **Consider C:**\n   - C has a good relationship with J, I, L, M, N, and K.\n   - By transitivity, J, I, L, M, N, and K all have good relationships with each other.\n   - This forms another group: {C, J, I, L, M, N, K}.\n\n3. **Check for any connections between the two groups:**\n   - A and F have a good relationship, but F and C have a bad relationship.\n   - Since F and C are in different groups and have a bad relationship, by rule 5, everyone in A's group has a bad relationship with everyone in C's group.\n\n4. **Remaining person:**\n   - Person B has a bad relationship with K.\n   - B is in A's group, and K is in C's group, which is consistent with the separation of groups.\n\nSince there are no other connections or contradictions, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has good relationships with C, K, H, E, D, O, and N.\n   - A has a bad relationship with F.\n\n2. **Extend from A:**\n   - Since A has a good relationship with C, C must have good relationships with K, H, E, D, O, and N.\n   - C has a bad relationship with J and L.\n\n3. **Consider L:**\n   - L has good relationships with M, B, F, and G.\n   - L has a bad relationship with C and J.\n\n4. **Consider J:**\n   - J has good relationships with I and P.\n   - J has a bad relationship with L and C.\n\n5. **Identify groups:**\n   - **Group 1:** A, C, K, H, E, D, O, N (all have good relationships with each other through transitivity).\n   - **Group 2:** L, M, B, F, G (all have good relationships with each other through transitivity).\n   - **Group 3:** J, I, P (all have good relationships with each other through transitivity).\n\n6. **Verify separation:**\n   - A and F have a bad relationship, separating Group 1 from Group 2.\n   - B and I have a bad relationship, separating Group 2 from Group 3.\n   - L and J have a bad relationship, separating Group 2 from Group 3.\n   - C and J have a bad relationship, separating Group 1 from Group 3.\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with H.\n   - H has a good relationship with J, M, B, and O.\n   - Therefore, J, M, B, and O are in the same group as H.\n   - H has a bad relationship with K, so K is not in this group.\n   - H has a bad relationship with C, so C is not in this group.\n\n2. **Group 2**: Start with K.\n   - K has a good relationship with D, E, I, and N.\n   - Therefore, D, E, I, and N are in the same group as K.\n   - K has a bad relationship with H, so H is not in this group.\n   - K has a bad relationship with C, so C is not in this group.\n\n3. **Group 3**: Start with C.\n   - C has a good relationship with G, A, L, and F.\n   - Therefore, G, A, L, and F are in the same group as C.\n   - C has a bad relationship with H, so H is not in this group.\n   - C has a bad relationship with K, so K is not in this group.\n   - C has a bad relationship with M, so M is not in this group.\n\nNow, let's verify if there are any overlaps or additional groups:\n\n- H's group: {H, J, M, B, O}\n- K's group: {K, D, E, I, N}\n- C's group: {C, G, A, L, F}\n\nEach group is distinct, and there are no overlaps between the groups due to the bad relationships between the starting members of each group (H, K, C).\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with M.\n   - M has a good relationship with E, I, and A.\n   - By transitivity, E, I, and A have good relationships with each other.\n   - Therefore, Group 1 consists of M, E, I, and A.\n\n2. **Group 2**: Start with K.\n   - K has a good relationship with F, B, and C.\n   - By transitivity, F, B, and C have good relationships with each other.\n   - Therefore, Group 2 consists of K, F, B, and C.\n\n3. **Group 3**: Start with N.\n   - N has a good relationship with J, D, L, G, and H.\n   - By transitivity, J, D, L, G, and H have good relationships with each other.\n   - Therefore, Group 3 consists of N, J, D, L, G, and H.\n\nNow, let's verify the separation of groups:\n- M and N have a bad relationship, so Group 1 and Group 3 are separate.\n- K and M have a bad relationship, so Group 1 and Group 2 are separate.\n- K and N have a bad relationship, so Group 2 and Group 3 are separate.\n\nThus, the groups are completely separate, and there are no overlaps.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with C:**\n   - C has a good relationship with F, B, A, P, G, and H.\n   - By transitivity, F, B, A, P, G, and H all have good relationships with each other.\n   - Thus, one group is {C, F, B, A, P, G, H}.\n\n2. **Consider J:**\n   - J has a good relationship with N, D, and O.\n   - By transitivity, N, D, and O all have good relationships with each other.\n   - Thus, another group is {J, N, D, O}.\n\n3. **Consider K:**\n   - K has a good relationship with E, I, L, and M.\n   - By transitivity, E, I, L, and M all have good relationships with each other.\n   - Thus, another group is {K, E, I, L, M}.\n\n4. **Check for any remaining individuals:**\n   - The only person not yet grouped is K, who has a bad relationship with C and J, confirming that these groups are separate.\n   - K also has a bad relationship with O, confirming separation from J's group.\n\n5. **Verify separation of groups:**\n   - C and J have a bad relationship, confirming separation of their groups.\n   - C and K have a bad relationship, confirming separation of their groups.\n   - J and K have a bad relationship, confirming separation of their groups.\n\nThus, the distinct groups are:\n- Group 1: {C, F, B, A, P, G, H}\n- Group 2: {J, N, D, O}\n- Group 3: {K, E, I, L, M}\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has good relationships with I, N, E, B, O, D, H, M, and G.\n   - Since A has a good relationship with N, and N has a bad relationship with C, everyone in A's group must have a bad relationship with C and anyone in C's group.\n\n2. **C's group:**\n   - C has good relationships with K, L, F, and J.\n   - Since C has a good relationship with K, and K has a bad relationship with M, everyone in C's group must have a bad relationship with M and anyone in M's group.\n\n3. **Determine the groups:**\n   - **Group 1 (A's group):** A, I, N, E, B, O, D, H, M, G\n   - **Group 2 (C's group):** C, K, L, F, J\n\n4. **Check for any ungrouped individuals:**\n   - All individuals from A to O are accounted for in either Group 1 or Group 2.\n\nThus, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with C**\n   - C has a good relationship with D, E, M, K, J, F, and I.\n   - By transitivity, all these people (C, D, E, M, K, J, F, I) have good relationships with each other.\n   - Therefore, they form a group.\n\n2. **Group 2: Starting with N**\n   - N has a good relationship with G, H, L, B, and A.\n   - By transitivity, all these people (N, G, H, L, B, A) have good relationships with each other.\n   - Therefore, they form another group.\n\n3. **Checking for cross-group relationships:**\n   - C and N have a bad relationship, which means Group 1 and Group 2 are separate.\n   - K and L have a bad relationship, which further confirms that Group 1 and Group 2 are separate.\n\n4. **Remaining person:**\n   - Person O is not mentioned in any relationships, so they do not belong to any group based on the given information.\n\nThus, there are 2 distinct groups based on the relationships provided.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with M:**\n   - M has a good relationship with E, F, and B.\n   - M has a bad relationship with H, K, L, and G.\n\n2. **Consider H:**\n   - H has a good relationship with C.\n   - H has a bad relationship with M, K, and L.\n\n3. **Consider L:**\n   - L has a good relationship with N, A, and I.\n   - L has a bad relationship with H, M, and K.\n\n4. **Consider J:**\n   - J has a good relationship with P and G.\n   - J has a good relationship with K.\n\n5. **Consider C:**\n   - C has a good relationship with H, D, and O.\n\nNow, let's identify the groups:\n\n- **Group 1 (M's group):** M, E, F, B\n  - M has a good relationship with E, F, and B.\n  - Since M has a bad relationship with H, K, L, and G, none of these can be in the same group as M.\n\n- **Group 2 (H's group):** H, C, D, O\n  - H has a good relationship with C.\n  - C has a good relationship with D and O.\n  - H has a bad relationship with M, K, and L, so none of these can be in the same group as H.\n\n- **Group 3 (L's group):** L, N, A, I\n  - L has a good relationship with N, A, and I.\n  - L has a bad relationship with H, M, and K, so none of these can be in the same group as L.\n\n- **Group 4 (J's group):** J, P, G, K\n  - J has a good relationship with P and G.\n  - J has a good relationship with K.\n  - Since J has a good relationship with K, and K has a bad relationship with M and L, J's group is separate from M's and L's groups.\n\nEach group is distinct because of the bad relationships between members of different groups. Therefore, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has good relationships with J, O, I, E, D, K, and N.\n   - By transitivity, all these people (A, J, O, I, E, D, K, N) have good relationships with each other.\n   - Therefore, they form one group.\n\n2. **Group 2: Starting with C**\n   - C has good relationships with B, G, M, L, F, and H.\n   - By transitivity, all these people (C, B, G, M, L, F, H) have good relationships with each other.\n   - Therefore, they form another group.\n\n3. **Checking for overlaps or connections between groups:**\n   - A and C do not have a direct relationship mentioned.\n   - K and C have a bad relationship, which means Group 1 and Group 2 are separate.\n   - M and N have a bad relationship, but M is in Group 2 and N is in Group 1, confirming they are separate groups.\n\nSince there are no connections or overlaps between the two groups, and the bad relationships confirm their separation, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has a good relationship with B, C, F, G, H, J, and O.\n   - By transitivity, all these people (A, B, C, F, G, H, J, O) have good relationships with each other.\n   - H has a bad relationship with M, so M cannot be in this group.\n\n2. **Group 2: Starting with K**\n   - K has a good relationship with D, E, I, L, M, and N.\n   - By transitivity, all these people (K, D, E, I, L, M, N) have good relationships with each other.\n   - C has a bad relationship with K, so C cannot be in this group.\n\n3. **Checking for Overlaps or Additional Groups:**\n   - Since C and K have a bad relationship, Group 1 and Group 2 are distinct and separate.\n   - H and M have a bad relationship, further confirming the separation of Group 1 and Group 2.\n   - No other relationships are given that would connect these two groups or form additional groups.\n\nThus, there are two distinct groups based on the given relationships.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with H**\n   - H has a good relationship with F, A, G, E, and I.\n   - By transitivity, F, A, G, E, and I all have good relationships with each other.\n   - H has a bad relationship with C, so C cannot be in this group.\n\n2. **Group 2: Starting with B**\n   - B has a good relationship with J, D, C, K, O, N, M, and L.\n   - By transitivity, J, D, C, K, O, N, M, and L all have good relationships with each other.\n   - B has a bad relationship with E (since E and N have a bad relationship and B has a good relationship with N), so E cannot be in this group.\n\n3. **Checking for overlaps between Group 1 and Group 2**\n   - H has a bad relationship with C, who is in Group 2, so no one from Group 1 can be in Group 2.\n   - Therefore, Group 1 and Group 2 are completely separate.\n\n4. **Remaining people:**\n   - The people not yet assigned to a group are C and E.\n   - C is already in Group 2.\n   - E is in Group 1.\n\nThus, we have two distinct groups:\n\n- Group 1: {H, F, A, G, E, I}\n- Group 2: {B, J, D, C, K, O, N, M, L}\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with E:**\n   - E has a good relationship with I, L, B, M, and O.\n   - E has a bad relationship with C, J, and K.\n\n2. **Analyze C:**\n   - C has a good relationship with D, N, H, F, and A.\n   - C has a bad relationship with E and J.\n\n3. **Analyze J:**\n   - J has a good relationship with P, K, and G.\n   - J has a bad relationship with E and C.\n\n4. **Bad relationships:**\n   - M and N have a bad relationship.\n   - C and E have a bad relationship.\n   - K and L have a bad relationship.\n   - E and J have a bad relationship.\n   - C and J have a bad relationship.\n\n**Group Formation:**\n\n- **Group 1 (E's Group):** E, I, L, B, M, O\n  - E has a good relationship with I, L, B, M, and O.\n  - L and K have a bad relationship, so K cannot be in this group.\n  - E and J have a bad relationship, so J cannot be in this group.\n\n- **Group 2 (C's Group):** C, D, N, H, F, A\n  - C has a good relationship with D, N, H, F, and A.\n  - C and E have a bad relationship, so E cannot be in this group.\n  - C and J have a bad relationship, so J cannot be in this group.\n\n- **Group 3 (J's Group):** J, P, K, G\n  - J has a good relationship with P, K, and G.\n  - J and E have a bad relationship, so E cannot be in this group.\n  - J and C have a bad relationship, so C cannot be in this group.\n\n**Conclusion:**\n\nEach group is distinct and separate due to the bad relationships between members of different groups. Therefore, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\nFirst, let's identify the relationships starting with K:\n- K has a good relationship with M, A, D, E, and J.\n- K has a bad relationship with C.\n\nUsing transitivity, we can deduce:\n- M, A, D, E, and J all have good relationships with each other because they all have good relationships with K.\n\nNow, let's identify the relationships starting with B:\n- B has a good relationship with N, G, F, L, H, I, C, and O.\n- B has a bad relationship with E (since E and N have a bad relationship and B has a good relationship with N).\n\nUsing transitivity, we can deduce:\n- N, G, F, L, H, I, C, and O all have good relationships with each other because they all have good relationships with B.\n\nNow, let's determine the groups:\n1. Group 1: {K, M, A, D, E, J}\n2. Group 2: {B, N, G, F, L, H, I, C, O}\n\nSince K and C have a bad relationship, and K is in Group 1 while C is in Group 2, these groups are completely separate.\n\nFinally, let's check if there are any other individuals not yet grouped:\n- All individuals from A to O have been accounted for in either Group 1 or Group 2.\n\nThus, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Initial Good Relationships:**\n   - K and P have a good relationship.\n   - O and B have a good relationship.\n   - L and A have a good relationship.\n   - L and E have a good relationship.\n   - F and I have a good relationship.\n   - F and D have a good relationship.\n   - L and M have a good relationship.\n   - O and N have a good relationship.\n   - O and C have a good relationship.\n   - F and G have a good relationship.\n   - F and H have a good relationship.\n   - F and J have a good relationship.\n\n2. **Apply Transitive Properties:**\n   - Since F has good relationships with I, D, G, H, and J, these people form a group: {F, I, D, G, H, J}.\n   - Since L has good relationships with A, E, and M, these people form a group: {L, A, E, M}.\n   - Since O has good relationships with B, N, and C, these people form a group: {O, B, N, C}.\n   - K and P form a group: {K, P}.\n\n3. **Check for Overlaps or Additional Connections:**\n   - There are no additional connections that would merge these groups, as all other relationships are bad or do not connect these groups.\n\n4. **Determine Distinct Groups:**\n   - Group 1: {F, I, D, G, H, J}\n   - Group 2: {L, A, E, M}\n   - Group 3: {O, B, N, C}\n   - Group 4: {K, P}\n\nEach group is distinct and separate from the others, as there are no good relationships connecting members of different groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Good Relationships:**\n   - K and H\n   - J and I\n   - J and G\n   - L and C\n   - L and E\n   - L and A\n   - J and D\n   - K and F\n   - K and M\n   - N and B\n\n2. **Identify Bad Relationships:**\n   - L and J\n   - B and M\n   - N and J\n   - L and K\n   - N and K\n   - L and N\n   - J and K\n   - D and L\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1 (L's Group):** L, C, E, A\n     - L has good relationships with C, E, and A.\n     - Check transitive relationships: C, E, and A must also have good relationships with each other.\n     - No information contradicts this, so they form a group.\n\n   - **Group 2 (K's Group):** K, H, F, M\n     - K has good relationships with H, F, and M.\n     - Check transitive relationships: H, F, and M must also have good relationships with each other.\n     - No information contradicts this, so they form a group.\n\n   - **Group 3 (J's Group):** J, I, G, D\n     - J has good relationships with I, G, and D.\n     - Check transitive relationships: I, G, and D must also have good relationships with each other.\n     - No information contradicts this, so they form a group.\n\n   - **Group 4 (N's Group):** N, B\n     - N has a good relationship with B.\n     - No further good relationships are provided, so they form a group.\n\n4. **Verify Separation of Groups:**\n   - L's group has bad relationships with J, K, N, and D, ensuring separation from J's, K's, and N's groups.\n   - J's group has a bad relationship with K, ensuring separation from K's group.\n   - N's group has a bad relationship with K, ensuring separation from K's group.\n\nThus, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties as described.\n\n1. **Group 1: Starting with I**\n   - I has a good relationship with D, B, and A.\n   - By transitivity, D, B, and A have good relationships with each other.\n   - I has a bad relationship with C, N, J, and K, so these people cannot be in the same group as I.\n\n2. **Group 2: Starting with N**\n   - N has a good relationship with F, M, O, and L.\n   - By transitivity, F, M, O, and L have good relationships with each other.\n   - N has a bad relationship with I and K, so these people cannot be in the same group as N.\n\n3. **Group 3: Starting with K**\n   - K has a good relationship with H, E, P, and J.\n   - By transitivity, H, E, P, and J have good relationships with each other.\n   - K has a bad relationship with I, N, and C, so these people cannot be in the same group as K.\n\n4. **Group 4: Starting with C**\n   - C has a good relationship with G.\n   - By transitivity, C and G have a good relationship with each other.\n   - C has a bad relationship with I, K, and N, so these people cannot be in the same group as C.\n\nNow, let's list the groups:\n- Group 1: I, D, B, A\n- Group 2: N, F, M, O, L\n- Group 3: K, H, E, P, J\n- Group 4: C, G\n\nEach group is distinct and separate from the others due to the bad relationships between members of different groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (H's Group):**\n   - H has a good relationship with I, E, G, and F.\n   - By transitivity, I, E, G, and F all have good relationships with each other.\n   - H has a bad relationship with J and L, so none of them can be in this group.\n   - H has a bad relationship with K, so K and anyone in K's group cannot be in this group.\n\n2. **Group 2 (J's Group):**\n   - J has a good relationship with B and C.\n   - By transitivity, B and C have a good relationship with each other.\n   - J has a bad relationship with L, so L cannot be in this group.\n   - J has a bad relationship with K, so K and anyone in K's group cannot be in this group.\n\n3. **Group 3 (K's Group):**\n   - K has a good relationship with P, O, M, A, and D.\n   - By transitivity, P, O, M, A, and D all have good relationships with each other.\n   - K has a bad relationship with H and J, so none of them can be in this group.\n   - K has a bad relationship with L, so L cannot be in this group.\n   - B has a bad relationship with K, so B cannot be in this group.\n\n4. **Group 4 (L's Group):**\n   - L has a good relationship with N.\n   - By transitivity, N has a good relationship with L.\n   - L has a bad relationship with J, E, and K, so none of them can be in this group.\n\nNow, let's list the groups:\n\n- Group 1: {H, I, E, G, F}\n- Group 2: {J, B, C}\n- Group 3: {K, P, O, M, A, D}\n- Group 4: {L, N}\n\nEach group is distinct and separate from the others based on the bad relationships.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (A's Group):**\n   - A has good relationships with P, O, C, B, L, I, M, D, and K.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 1 consists of: A, P, O, C, B, L, I, M, D, K.\n\n2. **Group 2 (N's Group):**\n   - N has good relationships with H, E, F, J, and G.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 2 consists of: N, H, E, F, J, G.\n\n3. **Bad Relationships:**\n   - C and N have a bad relationship.\n   - H and I have a bad relationship.\n\n   These bad relationships confirm that Group 1 and Group 2 are separate and distinct, as there are bad relationships between members of these groups.\n\n4. **Remaining People:**\n   - The only people not yet placed in a group are those not mentioned in any good relationship: none, as all people from A to P are accounted for in the two groups.\n\nThus, there are no additional groups, and the total number of distinct groups is 2.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Good Relationships:**\n   - C has good relationships with I, O, E, K, P, N, L, and H.\n   - F has good relationships with M, D, G, A, J, and B.\n\n2. **Bad Relationships:**\n   - A has a bad relationship with C.\n   - B has a bad relationship with H.\n\n3. **Transitive Good Relationships:**\n   - Since C has good relationships with I, O, E, K, P, N, L, and H, all these people form a group with C.\n   - Since F has good relationships with M, D, G, A, J, and B, all these people form a group with F.\n\n4. **Bad Relationships and Group Separation:**\n   - A has a bad relationship with C, so A and everyone in F's group must have a bad relationship with everyone in C's group.\n   - B has a bad relationship with H, so B and everyone in F's group must have a bad relationship with everyone in C's group.\n\n5. **Conclusion:**\n   - There are two distinct groups:\n     - Group 1: {C, I, O, E, K, P, N, L, H}\n     - Group 2: {F, M, D, G, A, J, B}\n\nSince there are no other relationships provided that would connect these two groups, and given the bad relationships that separate them, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1:**\n   - Start with C and A having a good relationship.\n   - C also has a good relationship with D and G.\n   - Therefore, A, C, D, and G form a group.\n\n2. **Group 2:**\n   - M and N have a good relationship.\n   - M also has a good relationship with F and I.\n   - Therefore, M, N, F, and I form a group.\n\n3. **Group 3:**\n   - K and E have a good relationship.\n   - K also has a good relationship with L, J, B, and H.\n   - Therefore, K, E, L, J, B, and H form a group.\n\nNow, let's verify that these groups are distinct and separate:\n\n- C and M have a bad relationship, so Group 1 and Group 2 are separate.\n- C and K have a bad relationship, so Group 1 and Group 3 are separate.\n- K and M have a bad relationship, so Group 2 and Group 3 are separate.\n\nThus, there are no overlaps between these groups, and they are completely separate.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with C.\n   - C has a good relationship with N, B, H, F, and D.\n   - Therefore, N, B, H, F, and D are in the same group as C.\n   - C has a bad relationship with J, so J is not in this group.\n\n2. **Group 2**: Start with J.\n   - J has a good relationship with E and G.\n   - Therefore, E and G are in the same group as J.\n   - J has a bad relationship with C, so C and its group are separate from J's group.\n\n3. **Group 3**: Start with K.\n   - K has a good relationship with L, I, M, and A.\n   - Therefore, L, I, M, and A are in the same group as K.\n   - K has a bad relationship with J, so J and its group are separate from K's group.\n   - K has a bad relationship with C, so C and its group are separate from K's group.\n\nNow, let's verify the separation:\n- **Group 1** (C, N, B, H, F, D) is separate from **Group 2** (J, E, G) and **Group 3** (K, L, I, M, A) due to the bad relationship between C and J, and C and K.\n- **Group 2** (J, E, G) is separate from **Group 3** (K, L, I, M, A) due to the bad relationship between J and K.\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with F:**\n   - F has good relationships with N, O, I, G, D, and H.\n   - F has a bad relationship with P.\n\n2. **Transitive relationships from F:**\n   - Since F has a good relationship with N, and N has a bad relationship with A, F's group cannot include A.\n   - F's group includes N, O, I, G, D, and H.\n\n3. **Analyze L:**\n   - L has good relationships with C, A, and B.\n   - L has bad relationships with K and G.\n\n4. **Transitive relationships from L:**\n   - L's group includes C, A, and B.\n\n5. **Analyze K:**\n   - K has good relationships with M, J, E, and P.\n   - K has a bad relationship with L and G.\n\n6. **Transitive relationships from K:**\n   - K's group includes M, J, E, and P.\n\n7. **Check for any overlaps or connections:**\n   - F's group (F, N, O, I, G, D, H) is separate from L's group (L, C, A, B) and K's group (K, M, J, E, P) due to bad relationships.\n   - L's group and K's group are separate due to the bad relationship between L and K.\n\n8. **Final groups:**\n   - Group 1: F, N, O, I, G, D, H\n   - Group 2: L, C, A, B\n   - Group 3: K, M, J, E, P\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has a good relationship with G, J, D, and O.\n   - By transitivity, G, J, D, and O all have good relationships with each other.\n   - A has a bad relationship with C, so C is not in this group.\n   - A has a bad relationship with L, so L is not in this group.\n   - A has no direct relationship with B, E, F, H, I, K, M, or N, but since A has a bad relationship with C and L, and C and L have relationships with these people, we need to check further.\n\n2. **Group 2: Starting with C**\n   - C has a good relationship with F, I, K, H, and E.\n   - By transitivity, F, I, K, H, and E all have good relationships with each other.\n   - C has a bad relationship with A and L, so A and L are not in this group.\n   - C has no direct relationship with B, D, G, J, M, N, or O, but since C has a bad relationship with A and L, and A and L have relationships with these people, we need to check further.\n\n3. **Group 3: Starting with L**\n   - L has a good relationship with M, N, and B.\n   - By transitivity, M, N, and B all have good relationships with each other.\n   - L has a bad relationship with A and C, so A and C are not in this group.\n   - L has no direct relationship with D, E, F, G, H, I, J, K, or O, but since L has a bad relationship with A and C, and A and C have relationships with these people, we need to check further.\n\nNow, let's verify the separation:\n- **Group 1 (A, G, J, D, O)**: A has a bad relationship with C and L, so this group is separate from Groups 2 and 3.\n- **Group 2 (C, F, I, K, H, E)**: C has a bad relationship with A and L, so this group is separate from Groups 1 and 3.\n- **Group 3 (L, M, N, B)**: L has a bad relationship with A and C, so this group is separate from Groups 1 and 2.\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **K's Group:**\n   - K has a good relationship with A.\n   - K has a bad relationship with H, J, G, and N.\n   - Therefore, A is in K's group.\n\n2. **J's Group:**\n   - J has a good relationship with C, M, and I.\n   - J has a bad relationship with N, K, and G.\n   - Therefore, C, M, and I are in J's group.\n\n3. **N's Group:**\n   - N has a good relationship with E and B.\n   - N has a bad relationship with J, K, and G.\n   - Therefore, E and B are in N's group.\n\n4. **G's Group:**\n   - G has a good relationship with F, D, L, and H.\n   - G has a bad relationship with J, K, and N.\n   - Therefore, F, D, L, and H are in G's group.\n\nNow, let's list the groups:\n\n- **Group 1:** K, A\n- **Group 2:** J, C, M, I\n- **Group 3:** N, E, B\n- **Group 4:** G, F, D, L, H\n\nEach group is distinct because there are bad relationships between members of different groups, ensuring no transitive good relationships can connect them.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\nFirst, let's identify the groups based on the given good relationships:\n\n1. **Group 1**: Starting with C:\n   - C has a good relationship with J, H, L, K, D, G, and M.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 1 consists of: C, J, H, L, K, D, G, M.\n\n2. **Group 2**: Starting with N:\n   - N has a good relationship with I, E, A, O, F, and B.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 2 consists of: N, I, E, A, O, F, B.\n\nNext, we need to ensure that these groups are completely separate, meaning there are no good relationships between any member of Group 1 and any member of Group 2. \n\n- We know that N and C have a bad relationship. Since C is in Group 1 and N is in Group 2, this confirms that the groups are separate.\n- Additionally, I and M have a bad relationship. Since M is in Group 1 and I is in Group 2, this further confirms the separation.\n\nFinally, we account for any individuals not yet placed in a group:\n- The people labeled from A to O are: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O.\n- All individuals are accounted for in either Group 1 or Group 2.\n\nThus, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has a good relationship with O, N, D, J, B, F, H, M, and E.\n   - By transitivity, all these people have good relationships with each other, forming one group.\n\n2. **Now consider C:**\n   - C has a good relationship with I, G, K, and L.\n   - C has a bad relationship with F, which means F and everyone in F's group (A's group) have a bad relationship with C and everyone in C's group.\n   - By transitivity, I, G, K, and L form another group.\n\n3. **Check for any other connections:**\n   - There are no additional connections provided that would merge these two groups or create new ones.\n\nThus, we have identified two distinct groups:\n- Group 1: A, O, N, D, J, B, F, H, M, E\n- Group 2: C, I, G, K, L\n\nSince there are no other connections or people left ungrouped, the final number of distinct groups is:\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with C.\n   - C has a good relationship with H, K, M, and L.\n   - By transitivity, H, K, M, and L all have good relationships with each other.\n   - C has a bad relationship with O, N, and J, so these people cannot be in the same group as C.\n   - C's group: {C, H, K, M, L}\n\n2. **Group 2**: Start with N.\n   - N has a good relationship with A, D, B, and P.\n   - By transitivity, A, D, B, and P all have good relationships with each other.\n   - N has a bad relationship with C, O, and J, so these people cannot be in the same group as N.\n   - N's group: {N, A, D, B, P}\n\n3. **Group 3**: Start with O.\n   - O has a good relationship with E, G, and I.\n   - By transitivity, E, G, and I all have good relationships with each other.\n   - O has a bad relationship with C, N, and J, so these people cannot be in the same group as O.\n   - O's group: {O, E, G, I}\n\n4. **Group 4**: Start with J.\n   - J has a good relationship with F.\n   - J has a bad relationship with C, N, and O, so these people cannot be in the same group as J.\n   - J's group: {J, F}\n\nEach group is distinct and separate from the others due to the bad relationships between members of different groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify Good Relationships:**\n   - O has good relationships with B, A, and F.\n   - K has good relationships with I, D, P, and M.\n   - L has good relationships with E, H, and G.\n   - J has good relationships with N and C.\n\n2. **Identify Bad Relationships:**\n   - F and J\n   - O and K\n   - J and L\n   - D and L\n   - J and K\n   - K and L\n   - O and L\n   - O and J\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1:** O, B, A, F (since O has good relationships with B, A, and F, and they are not mentioned to have bad relationships with each other)\n   - **Group 2:** K, I, D, P, M (since K has good relationships with I, D, P, and M, and they are not mentioned to have bad relationships with each other)\n   - **Group 3:** L, E, H, G (since L has good relationships with E, H, and G, and they are not mentioned to have bad relationships with each other)\n   - **Group 4:** J, N, C (since J has good relationships with N and C, and they are not mentioned to have bad relationships with each other)\n\n4. **Verify Separation of Groups:**\n   - Group 1 (O, B, A, F) is separate from Group 2 (K, I, D, P, M) because O and K have a bad relationship.\n   - Group 1 (O, B, A, F) is separate from Group 3 (L, E, H, G) because O and L have a bad relationship.\n   - Group 1 (O, B, A, F) is separate from Group 4 (J, N, C) because O and J have a bad relationship.\n   - Group 2 (K, I, D, P, M) is separate from Group 3 (L, E, H, G) because K and L have a bad relationship.\n   - Group 2 (K, I, D, P, M) is separate from Group 4 (J, N, C) because J and K have a bad relationship.\n   - Group 3 (L, E, H, G) is separate from Group 4 (J, N, C) because J and L have a bad relationship.\n\nThus, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with N**\n   - N has a good relationship with J, A, M, F, O, and G.\n   - By transitivity, J, A, M, F, O, and G all have good relationships with each other.\n   - N and C have a bad relationship, so C cannot be in this group.\n\n2. **Group 2: Starting with B**\n   - B has a good relationship with I, L, H, E, C, D, and K.\n   - By transitivity, I, L, H, E, C, D, and K all have good relationships with each other.\n   - L and M have a bad relationship, so M cannot be in this group.\n\nNow, let's verify if there are any overlaps or additional connections between these two groups:\n\n- N and C have a bad relationship, confirming that Group 1 and Group 2 are separate.\n- L and M have a bad relationship, further confirming the separation of the groups.\n\nSince there are no additional connections that would merge these groups, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1:**\n   - Start with O.\n   - O has a good relationship with B, M, J, and I.\n   - Therefore, B, M, J, and I are in the same group as O.\n   - O has a bad relationship with H, L, and K, so they cannot be in this group.\n\n2. **Group 2:**\n   - Start with L.\n   - L has a good relationship with C and E.\n   - Therefore, C and E are in the same group as L.\n   - L has a bad relationship with O, F, and K, so they cannot be in this group.\n\n3. **Group 3:**\n   - Start with K.\n   - K has a good relationship with N, A, and D.\n   - Therefore, N, A, and D are in the same group as K.\n   - K has a bad relationship with O and L, so they cannot be in this group.\n\n4. **Group 4:**\n   - Start with H.\n   - H has a good relationship with F and G.\n   - Therefore, F and G are in the same group as H.\n   - H has a bad relationship with O, L, and K, so they cannot be in this group.\n\nEach group is distinct and separate from the others due to the bad relationships between members of different groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with C**\n   - C has a good relationship with M, G, K, E, L, D, and J.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 1 consists of: C, M, G, K, E, L, D, J.\n\n2. **Group 2: Starting with N**\n   - N has a good relationship with B, A, F, H, O, and I.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, Group 2 consists of: N, B, A, F, H, O, I.\n\n3. **Checking for connections between Group 1 and Group 2**\n   - C and N have a bad relationship.\n   - By rule 5, if someone from one group has a bad relationship with someone from another group, then everyone from the first group has a bad relationship with everyone from the second group.\n   - Therefore, there are no connections between Group 1 and Group 2.\n\nSince there are no other relationships provided that would connect any members of Group 1 with Group 2, and vice versa, these are the only two groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with B**\n   - B has a good relationship with D, C, H, E, G, O, and J.\n   - By transitivity, D, C, H, E, G, O, and J all have good relationships with each other.\n   - Therefore, one group is {B, D, C, H, E, G, O, J}.\n\n2. **Group 2: Starting with A**\n   - A has a good relationship with F, N, L, P, I, M, and K.\n   - By transitivity, F, N, L, P, I, M, and K all have good relationships with each other.\n   - Therefore, another group is {A, F, N, L, P, I, M, K}.\n\n3. **Checking for overlaps or connections between groups:**\n   - H and P have a bad relationship, indicating that Group 1 and Group 2 are separate.\n   - K and C have a bad relationship, further confirming that Group 1 and Group 2 are separate.\n\nSince there are no good relationships connecting any member of Group 1 with any member of Group 2, and the bad relationships confirm the separation, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with C's relationships:**\n   - C has a good relationship with I, J, L, F, D, O, and N.\n   - C has a bad relationship with K.\n\n2. **Form C's group:**\n   - C, I, J, L, F, D, O, N form a group because they all have good relationships with C and, by transitivity, with each other.\n\n3. **Analyze A's relationships:**\n   - A has a good relationship with H, K, E, G, P, B, M.\n   - A has a bad relationship with C (since C has a bad relationship with K, and A has a good relationship with K).\n\n4. **Form A's group:**\n   - A, H, K, E, G, P, B, M form a group because they all have good relationships with A and, by transitivity, with each other.\n\n5. **Check for any overlap or additional groups:**\n   - Since A and C have a bad relationship (due to C's bad relationship with K), A's group and C's group are separate.\n   - N and P have a bad relationship, which is consistent with N being in C's group and P being in A's group.\n\n6. **Conclusion:**\n   - There are no other relationships given that would form additional groups or merge these groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with C**\n   - C has a good relationship with H, J, N, O, G, P, M, K, D, and L.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, one group is: {C, H, J, N, O, G, P, M, K, D, L}.\n\n2. **Group 2: Starting with E**\n   - E has a good relationship with A, F, B, and I.\n   - By transitivity, all these people have good relationships with each other.\n   - Therefore, another group is: {E, A, F, B, I}.\n\n3. **Checking for overlap or additional groups:**\n   - E and C have a bad relationship, so the groups containing E and C are separate.\n   - F and N have a bad relationship, confirming that Group 1 and Group 2 are distinct and separate.\n\nSince there are no other relationships provided that would create additional groups or merge these two groups, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with C:**\n   - C has a good relationship with H, A, N, G, and F.\n   - C has a bad relationship with K and E.\n\n2. **Group 1 (C's group):**\n   - C, H, A, N, G, F are in the same group because they all have good relationships with C.\n   - A has a bad relationship with M and D, so M and D cannot be in this group.\n\n3. **K's relationships:**\n   - K has a good relationship with D, P, J, and L.\n   - K has a bad relationship with C and E.\n\n4. **Group 2 (K's group):**\n   - K, D, P, J, L are in the same group because they all have good relationships with K.\n   - D has a bad relationship with A, so A cannot be in this group.\n\n5. **E's relationships:**\n   - E has a good relationship with B, I, O, and M.\n   - E has a bad relationship with K and C.\n\n6. **Group 3 (E's group):**\n   - E, B, I, O, M are in the same group because they all have good relationships with E.\n   - M has a bad relationship with A, so A cannot be in this group.\n\n7. **Check for any remaining individuals:**\n   - All individuals from A to P have been accounted for in the three groups.\n\nThus, there are three distinct groups based on the given relationships:\n\n- Group 1: C, H, A, N, G, F\n- Group 2: K, D, P, J, L\n- Group 3: E, B, I, O, M\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1**: Start with A.\n   - A and B have a good relationship.\n   - A and G have a good relationship.\n   - A and M have a good relationship.\n   - A and P have a good relationship.\n   - Therefore, B, G, M, and P are in the same group as A.\n\n2. **Group 2**: Start with C.\n   - C and K have a good relationship.\n   - C and I have a good relationship.\n   - C and H have a good relationship.\n   - C and F have a good relationship.\n   - Therefore, K, I, H, and F are in the same group as C.\n\n3. **Group 3**: Start with L.\n   - L and J have a good relationship.\n   - L and O have a good relationship.\n   - Therefore, J and O are in the same group as L.\n\n4. **Group 4**: Start with N.\n   - N and D have a good relationship.\n   - N and E have a good relationship.\n   - Therefore, D and E are in the same group as N.\n\nNow, let's verify the separations:\n- A and N have a bad relationship, so Group 1 and Group 4 are separate.\n- A and C have a bad relationship, so Group 1 and Group 2 are separate.\n- A and L have a bad relationship, so Group 1 and Group 3 are separate.\n- C and N have a bad relationship, so Group 2 and Group 4 are separate.\n- C and L have a bad relationship, so Group 2 and Group 3 are separate.\n- N and L have a bad relationship, so Group 3 and Group 4 are separate.\n\nEach group is completely separate from the others, confirming that there are no overlaps or additional connections that would merge any of these groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with C**\n   - C has a good relationship with F, O, G, J, M, and D.\n   - By transitivity, F, O, G, J, M, and D all have good relationships with each other.\n   - E has a bad relationship with C, so E cannot be in this group.\n   - K has a bad relationship with C, so K cannot be in this group.\n   - F has a bad relationship with I, so I cannot be in this group.\n\n2. **Group 2: Starting with K**\n   - K has a good relationship with A, N, I, L, and H.\n   - By transitivity, A, N, I, L, and H all have good relationships with each other.\n   - E has a bad relationship with K, so E cannot be in this group.\n   - C has a bad relationship with K, so C and anyone in C's group cannot be in this group.\n\n3. **Group 3: E and B**\n   - E and B have a good relationship.\n   - E has a bad relationship with C, so E cannot be in C's group.\n   - E has a bad relationship with K, so E cannot be in K's group.\n   - B has a bad relationship with D, so B cannot be in C's group (since D is in C's group).\n\nNow, let's verify:\n- Group 1: C, F, O, G, J, M, D\n- Group 2: K, A, N, I, L, H\n- Group 3: E, B\n\nNo other relationships contradict these groupings, and no additional people are left ungrouped.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with H**\n   - H has a good relationship with E, D, A, B, and J.\n   - By transitivity, E, D, A, B, and J all have good relationships with each other.\n   - H has a bad relationship with C and L, so C and L cannot be in this group.\n\n2. **Group 2: Starting with C**\n   - C has a good relationship with I, M, O, and F.\n   - By transitivity, I, M, O, and F all have good relationships with each other.\n   - C has a bad relationship with B and L, so B and L cannot be in this group.\n\n3. **Group 3: Starting with L**\n   - L has a good relationship with K, N, and G.\n   - By transitivity, K, N, and G all have good relationships with each other.\n   - L has a bad relationship with H and C, so H and C cannot be in this group.\n\n4. **Checking for any remaining individuals:**\n   - All individuals (A to O) are accounted for in the groups above.\n\nThus, there are 3 distinct groups based on the given relationships.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with B:**\n   - B has a good relationship with H, E, C, N, J, G, K, D, and L.\n   - Therefore, all these people (B, H, E, C, N, J, G, K, D, L) are in the same group due to transitivity.\n\n2. **Consider M:**\n   - M has a good relationship with F, I, and A.\n   - M has a bad relationship with L and C.\n   - Since M has a bad relationship with L and C, and L and C are in B's group, M and everyone in M's group (F, I, A) must have a bad relationship with everyone in B's group.\n\n3. **Identify distinct groups:**\n   - Group 1: B, H, E, C, N, J, G, K, D, L (all have good relationships with each other through B).\n   - Group 2: M, F, I, A (all have good relationships with each other through M).\n\n4. **Remaining people:**\n   - We have accounted for A, B, C, D, E, F, G, H, I, J, K, L, M, and N.\n   - All 14 people are accounted for in the two groups identified.\n\nThus, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (B's Group):**\n   - B has good relationships with I, M, L, N, E, F, and J.\n   - By transitivity, all these people (B, I, M, L, N, E, F, J) have good relationships with each other.\n   - Therefore, they form one group.\n\n2. **Group 2 (C's Group):**\n   - C has good relationships with D, K, G, H, and A.\n   - By transitivity, all these people (C, D, K, G, H, A) have good relationships with each other.\n   - Therefore, they form another group.\n\n3. **Checking for Overlaps or Connections:**\n   - C and N have a bad relationship, and A and N have a bad relationship.\n   - Since N is in B's group and has bad relationships with C and A, this confirms that B's group and C's group are separate.\n   - There are no good relationships connecting any member of B's group with any member of C's group.\n\nSince there are no connections between the two groups through good relationships, and the bad relationships confirm their separation, we conclude that there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with N:**\n   - N has a good relationship with A, M, and I.\n   - N has a bad relationship with O, J, and C.\n   - N has a good relationship with G.\n\n2. **Group 1 (N's group):**\n   - N, A, M, I, G\n   - Since N has a bad relationship with O, J, and C, none of these can be in the same group as N.\n\n3. **C's group:**\n   - C has a good relationship with L, H, K, F, and B.\n   - C has a bad relationship with N, O, and J.\n   - C's group: C, L, H, K, F, B\n\n4. **J's group:**\n   - J has a good relationship with E and P.\n   - J has a bad relationship with N, O, and C.\n   - J's group: J, E, P\n\n5. **O's group:**\n   - O has a good relationship with D.\n   - O has a bad relationship with N, J, and C.\n   - O's group: O, D\n\n6. **Check for any overlaps or additional connections:**\n   - Each group is distinct as there are no good relationships connecting members of different groups.\n   - The bad relationships ensure that these groups remain separate.\n\nThus, we have identified four distinct groups:\n\n- Group 1: N, A, M, I, G\n- Group 2: C, L, H, K, F, B\n- Group 3: J, E, P\n- Group 4: O, D\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with H's group:**\n   - H has a good relationship with L, O, I, B, and P.\n   - By transitivity, L, O, I, B, and P all have good relationships with each other.\n   - H has a bad relationship with E, so E is not in this group.\n   - H has a bad relationship with K, so K is not in this group.\n   - A and P have a bad relationship, so A is not in this group.\n\n   **H's group:** {H, L, O, I, B, P}\n\n2. **Analyze K's group:**\n   - K has a good relationship with J, A, G, F, and N.\n   - By transitivity, J, A, G, F, and N all have good relationships with each other.\n   - K has a bad relationship with H and E, so neither H nor E is in this group.\n\n   **K's group:** {K, J, A, G, F, N}\n\n3. **Analyze C's group:**\n   - C has a good relationship with M, D, and E.\n   - By transitivity, M, D, and E all have good relationships with each other.\n   - D has a bad relationship with N, so N is not in this group.\n\n   **C's group:** {C, M, D, E}\n\n4. **Remaining individuals:**\n   - From the given relationships, we have accounted for all individuals except for N.\n   - N is already included in K's group.\n\nNow, let's verify if there are any overlaps or additional groups:\n- H's group and K's group are separate due to the bad relationship between H and K.\n- C's group is separate from both H's and K's groups due to the bad relationship between D and N.\n\nThus, there are no overlaps, and each group is distinct.\n\n**Final Answer: 3**"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with known good relationships:**\n   - F has good relationships with H, N, B, P, and D.\n   - K has good relationships with M, A, O, and I.\n   - L has good relationships with J and C.\n   - E has a good relationship with G.\n\n2. **Apply transitive properties:**\n   - Since F has good relationships with H, N, B, P, and D, these people form a group: {F, H, N, B, P, D}.\n   - Since K has good relationships with M, A, O, and I, these people form another group: {K, M, A, O, I}.\n   - L, J, and C form a group because L has good relationships with J and C: {L, J, C}.\n   - E and G form a group because they have a good relationship: {E, G}.\n\n3. **Check for bad relationships to ensure separation:**\n   - L has a bad relationship with P, so L's group is separate from F's group.\n   - L has a bad relationship with N, so L's group is separate from F's group.\n   - K has a bad relationship with L, so K's group is separate from L's group.\n   - K has a bad relationship with N, so K's group is separate from F's group.\n   - K has a bad relationship with E, so K's group is separate from E's group.\n   - N has a bad relationship with E, so F's group is separate from E's group.\n   - C has a bad relationship with G, so L's group is separate from E's group.\n\n4. **Identify isolated individuals:**\n   - A, B, D, H, I, J, M, O, P are already accounted for in groups.\n   - C, E, F, G, K, L, N are accounted for in groups.\n   - There are no isolated individuals left.\n\nThus, the distinct groups are:\n- Group 1: {F, H, N, B, P, D}\n- Group 2: {K, M, A, O, I}\n- Group 3: {L, J, C}\n- Group 4: {E, G}\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "5",
+      "correct": false,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1:**\n   - Start with E. E has good relationships with A, L, P, and I.\n   - By transitivity, A, L, P, and I also have good relationships with each other.\n   - E has a bad relationship with D, J, and K, so these people cannot be in the same group as E.\n   - Therefore, Group 1 consists of: E, A, L, P, I.\n\n2. **Group 2:**\n   - Start with G. G has good relationships with B, M, and F.\n   - By transitivity, B, M, and F also have good relationships with each other.\n   - G has a bad relationship with K, so K cannot be in the same group as G.\n   - Therefore, Group 2 consists of: G, B, M, F.\n\n3. **Group 3:**\n   - Start with J. J has good relationships with O, H, and N.\n   - By transitivity, O, H, and N also have good relationships with each other.\n   - J has a bad relationship with E, D, and K, so these people cannot be in the same group as J.\n   - Therefore, Group 3 consists of: J, O, H, N.\n\n4. **Group 4:**\n   - K has a good relationship with C.\n   - K has bad relationships with D and J, so D and J cannot be in the same group as K.\n   - Therefore, Group 4 consists of: K, C.\n\n5. **Group 5:**\n   - D is left, and D has a bad relationship with E and J.\n   - D has a good relationship with G, but G is already in Group 2, and D cannot be in Group 2 due to the bad relationship with J.\n   - Therefore, Group 5 consists of: D.\n\nNow, let's ensure all people are accounted for:\n- Group 1: E, A, L, P, I\n- Group 2: G, B, M, F\n- Group 3: J, O, H, N\n- Group 4: K, C\n- Group 5: D\n\nAll 16 people (A to P) are included in these groups. Therefore, there are 5 distinct groups.\n\nFinal Answer: 5"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group with C**: \n   - C has a good relationship with K, L, F, J, H, and N.\n   - Since these people all have a good relationship with C, they form a group. \n   - A and M have a bad relationship with C, so they are not in this group.\n\n2. **Group with E**:\n   - E has a good relationship with D, G, and A.\n   - Since these people all have a good relationship with E, they form a group.\n   - E has a bad relationship with C and M, so they are not in this group.\n\n3. **Group with M**:\n   - M has a good relationship with I, O, and B.\n   - Since these people all have a good relationship with M, they form a group.\n   - M has a bad relationship with C and E, so they are not in this group.\n\nNow, let's verify if there are any overlaps or additional connections that could merge these groups:\n\n- **C's Group**: C, K, L, F, J, H, N\n- **E's Group**: E, D, G, A\n- **M's Group**: M, I, O, B\n\nThere are no good relationships between members of different groups, and the bad relationships ensure that these groups remain distinct.\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has good relationships with I, F, H, P, D, K, and N.\n   - By transitivity, I, F, H, P, D, K, and N all have good relationships with each other.\n\n2. **Consider J:**\n   - J has good relationships with C, G, and E.\n   - J has a bad relationship with L and K.\n   - Since J has a bad relationship with K, J and K cannot be in the same group. Therefore, J, C, G, and E form a separate group.\n\n3. **Consider L:**\n   - L has good relationships with O, M, and B.\n   - L has a bad relationship with J and K.\n   - Since L has a bad relationship with K, L and K cannot be in the same group. Therefore, L, O, M, and B form another separate group.\n\n4. **Consider K:**\n   - K has a bad relationship with J and L.\n   - K is already included in the group with A, I, F, H, P, D, and N.\n\n5. **Consider G:**\n   - G has a bad relationship with P.\n   - G is already included in the group with J, C, and E.\n\n6. **Remaining people:**\n   - A, I, F, H, P, D, K, and N form one group.\n   - J, C, G, and E form another group.\n   - L, O, M, and B form another group.\n\nThus, there are three distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Identify initial good relationships:**\n   - A and C\n   - B and F\n   - C and D\n   - C and L\n   - C and N\n   - K and M\n   - K and J\n   - K and G\n   - B and I\n   - O and E\n   - O and H\n\n2. **Apply transitive property for good relationships:**\n   - From A and C, and C and D, we have A, C, and D in a group.\n   - From C and L, and C and D, we have A, C, D, and L in a group.\n   - From C and N, and C and D, we have A, C, D, L, and N in a group.\n   - B and F form a group.\n   - K, M, J, and G form a group through transitive relationships.\n   - O, E, and H form a group.\n\n3. **Check for bad relationships to separate groups:**\n   - C and I have a bad relationship, so I cannot be in the group with A, C, D, L, and N.\n   - A and F have a bad relationship, so B and F cannot be in the group with A, C, D, L, and N.\n   - C and K have a bad relationship, so K, M, J, and G cannot be in the group with A, C, D, L, and N.\n   - C and O have a bad relationship, so O, E, and H cannot be in the group with A, C, D, L, and N.\n   - I and O have a bad relationship, so B and I cannot be in the group with O, E, and H.\n   - O and K have a bad relationship, so K, M, J, and G cannot be in the group with O, E, and H.\n   - I and K have a bad relationship, so B and I cannot be in the group with K, M, J, and G.\n\n4. **Determine distinct groups:**\n   - Group 1: A, C, D, L, N\n   - Group 2: B, F, I\n   - Group 3: K, M, J, G\n   - Group 4: O, E, H\n\nEach group is distinct and separate from the others based on the bad relationships.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with N:**\n   - N has a good relationship with E, L, D, I, and B.\n   - N has a bad relationship with M and C.\n\n2. **Group 1 (N's group):**\n   - Members: N, E, L, D, I, B.\n   - Check transitive relationships within this group:\n     - Since N has a good relationship with all these members, they all have good relationships with each other.\n\n3. **Bad relationships involving N:**\n   - N and M have a bad relationship, so M cannot be in Group 1.\n   - N and C have a bad relationship, so C cannot be in Group 1.\n\n4. **Group 2 (C's group):**\n   - C has a good relationship with J, A, G, and K.\n   - Members: C, J, A, G, K.\n   - Check transitive relationships within this group:\n     - Since C has a good relationship with all these members, they all have good relationships with each other.\n\n5. **Bad relationships involving C:**\n   - C and M have a bad relationship, so M cannot be in Group 2.\n\n6. **Group 3 (M's group):**\n   - M has a good relationship with H and F.\n   - Members: M, H, F.\n   - Check transitive relationships within this group:\n     - Since M has a good relationship with H and F, and F has a good relationship with M, they all have good relationships with each other.\n\n7. **Bad relationships involving M:**\n   - M and N have a bad relationship, so M cannot be in Group 1.\n   - M and C have a bad relationship, so M cannot be in Group 2.\n\n8. **Remaining individuals:**\n   - All individuals are accounted for in the groups:\n     - Group 1: N, E, L, D, I, B\n     - Group 2: C, J, A, G, K\n     - Group 3: M, H, F\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (K's Group):** \n   - K has good relationships with L, A, M, G, D, and H.\n   - By transitivity, L, A, M, G, D, and H all have good relationships with each other.\n   - Therefore, Group 1 consists of: K, L, A, M, G, D, H.\n\n2. **Group 2 (O's Group):**\n   - O has good relationships with I, F, and B.\n   - By transitivity, I, F, and B all have good relationships with each other.\n   - Therefore, Group 2 consists of: O, I, F, B.\n\n3. **Group 3 (N's Group):**\n   - N has good relationships with C and P.\n   - By transitivity, C and P have a good relationship with each other.\n   - Therefore, Group 3 consists of: N, C, P.\n\n4. **Individual Group:**\n   - J and E have a good relationship, but J has a bad relationship with N and O, and K.\n   - E is not mentioned in any other relationship, so E is in a group with J.\n   - Therefore, Group 4 consists of: J, E.\n\n5. **Remaining Individuals:**\n   - The remaining individuals are not connected to any other group through good relationships.\n   - These individuals are: None, as all individuals have been accounted for in the groups above.\n\nThus, there are 4 distinct groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (Starting with C):**\n   - C has a good relationship with L, E, B, N, and M.\n   - By transitivity, L, E, B, N, and M all have good relationships with each other.\n   - Therefore, one group is {C, L, E, B, N, M}.\n\n2. **Group 2 (Starting with A):**\n   - A has a good relationship with F, I, K, J, G, H, and D.\n   - By transitivity, F, I, K, J, G, H, and D all have good relationships with each other.\n   - Therefore, another group is {A, F, I, K, J, G, H, D}.\n\n3. **Checking for overlaps or connections between groups:**\n   - C and G have a bad relationship, which means Group 1 and Group 2 are separate.\n   - B and J have a bad relationship, which further confirms that Group 1 and Group 2 are separate.\n\nSince there are no connections that would merge these two groups into one, we have two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the rules provided.\n\n1. **Identify Good Relationships:**\n   - K, G, L, J, N are in a group because they all have good relationships with K, and by transitivity, with each other.\n   - A and D are in a group because they have a good relationship with each other.\n   - M, B, H, I are in a group because M has good relationships with B, H, and I, and by transitivity, they all have good relationships with each other.\n   - C, E, F are in a group because C has good relationships with E and F, and by transitivity, they all have good relationships with each other.\n\n2. **Identify Bad Relationships and Separate Groups:**\n   - K has a bad relationship with H and E, so the group {K, G, L, J, N} is separate from groups containing H and E.\n   - A has a bad relationship with K, H, and E, so the group {A, D} is separate from groups containing K, H, and E.\n   - H has a bad relationship with K and E, so the group {M, B, H, I} is separate from groups containing K and E.\n   - E has a bad relationship with K and H, so the group {C, E, F} is separate from groups containing K and H.\n\n3. **Determine Distinct Groups:**\n   - Group 1: {K, G, L, J, N}\n   - Group 2: {A, D}\n   - Group 3: {M, B, H, I}\n   - Group 4: {C, E, F}\n\nEach group is distinct because there are bad relationships between members of different groups, ensuring no transitive good relationships can connect them.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with A**\n   - A has good relationships with I, H, F, M, K, N, and E.\n   - By transitivity, all these people (A, I, H, F, M, K, N, E) have good relationships with each other.\n   - Therefore, they form one group.\n\n2. **Group 2: Starting with C**\n   - C has good relationships with L, B, D, G, and J.\n   - By transitivity, all these people (C, L, B, D, G, J) have good relationships with each other.\n   - Therefore, they form another group.\n\n3. **Checking for connections between Group 1 and Group 2:**\n   - K and C have a bad relationship, which means Group 1 and Group 2 are separate.\n   - F and G have a bad relationship, further confirming that Group 1 and Group 2 are separate.\n\n4. **Remaining person:**\n   - Person O is not mentioned in any relationship, so they are not part of any group.\n\nThus, there are two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the rules provided.\n\n1. **Identify Good Relationships:**\n   - C has good relationships with I, G, H, and F.\n   - L has good relationships with K and M.\n   - N has good relationships with E, P, O, D, and B.\n   - J has a good relationship with A.\n\n2. **Identify Bad Relationships:**\n   - C has bad relationships with L, N, and J.\n   - N has bad relationships with J and L.\n   - K has a bad relationship with O.\n   - E has a bad relationship with F.\n   - J has a bad relationship with L.\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1:** C, I, G, H, F (C is the central figure with good relationships with I, G, H, and F)\n   - **Group 2:** L, K, M (L is the central figure with good relationships with K and M)\n   - **Group 3:** N, E, P, O, D, B (N is the central figure with good relationships with E, P, O, D, and B)\n   - **Group 4:** J, A (J has a good relationship with A)\n\n4. **Verify Separation of Groups:**\n   - C has a bad relationship with L and N, ensuring Group 1 is separate from Groups 2 and 3.\n   - N has a bad relationship with J and L, ensuring Group 3 is separate from Groups 2 and 4.\n   - J has a bad relationship with L, ensuring Group 4 is separate from Group 2.\n\nEach group is distinct and separate from the others based on the bad relationships, confirming that there are no overlaps or connections that would merge any of these groups.\n\nFinal Answer: 4"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1 (C's Group):** \n   - C has good relationships with J, K, G, I, and H.\n   - By transitivity, J, K, G, I, and H all have good relationships with each other.\n   - Therefore, Group 1 consists of: C, J, K, G, I, H.\n\n2. **Group 2 (N's Group):**\n   - N has good relationships with L, O, E, F, and P.\n   - By transitivity, L, O, E, F, and P all have good relationships with each other.\n   - Therefore, Group 2 consists of: N, L, O, E, F, P.\n\n3. **Group 3 (M's Group):**\n   - M has good relationships with A, D, and B.\n   - By transitivity, A, D, and B all have good relationships with each other.\n   - Therefore, Group 3 consists of: M, A, D, B.\n\n4. **Checking for any other possible groups:**\n   - C and N have a bad relationship, so their groups are separate.\n   - C and M have a bad relationship, so their groups are separate.\n   - M and N have a bad relationship, so their groups are separate.\n\nSince all relationships have been accounted for and no additional connections exist that would merge these groups, we conclude that there are three distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Group 1: Starting with C**\n   - C has a good relationship with A, B, N, and J.\n   - By transitivity, A, B, N, and J all have good relationships with each other.\n   - C has a bad relationship with G, K, and I, which means A, B, N, and J also have bad relationships with G, K, and I.\n   - Therefore, Group 1 consists of: C, A, B, N, J.\n\n2. **Group 2: Starting with K**\n   - K has a good relationship with H, P, E, and O.\n   - By transitivity, H, P, E, and O all have good relationships with each other.\n   - K has a bad relationship with C and G, which means H, P, E, and O also have bad relationships with C and G.\n   - Therefore, Group 2 consists of: K, H, P, E, O.\n\n3. **Group 3: Starting with F**\n   - F has a good relationship with D, M, I, L, and G.\n   - By transitivity, D, M, I, L, and G all have good relationships with each other.\n   - F has a bad relationship with C (since C has a bad relationship with I, and F has a good relationship with I).\n   - Therefore, Group 3 consists of: F, D, M, I, L, G.\n\n4. **Remaining Individuals:**\n   - The individuals not yet grouped are: none, as all individuals from A to P have been accounted for in the groups above.\n\nThus, there are 3 distinct groups.\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with B's relationships:**\n   - B has a good relationship with L, H, M, C, D, and I.\n   - By transitivity, L, H, M, C, D, and I all have good relationships with each other.\n   - Thus, they form a group: {B, L, H, M, C, D, I}.\n\n2. **Consider A's relationships:**\n   - A has a good relationship with N, E, F, G, J, and K.\n   - By transitivity, N, E, F, G, J, and K all have good relationships with each other.\n   - Thus, they form another group: {A, N, E, F, G, J, K}.\n\n3. **Check for any connections between the two groups:**\n   - F and M have a bad relationship, indicating that the two groups are separate.\n   - K and C have a bad relationship, further confirming the separation of the two groups.\n\n4. **Verify completeness:**\n   - All 14 people (A to N) are accounted for in these two groups.\n   - There are no additional relationships that would merge these groups.\n\nTherefore, there are 2 distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the transitive properties.\n\n1. **Start with A:**\n   - A has good relationships with G, L, K, E, M, C, and B.\n   - By transitivity, all these people (A, G, L, K, E, M, C, B) have good relationships with each other.\n\n2. **Check for additional connections:**\n   - A has a good relationship with C, and C has a bad relationship with N. Therefore, everyone in A's group (A, G, L, K, E, M, C, B) has a bad relationship with N.\n   - M has a bad relationship with N, confirming that N cannot be in A's group.\n\n3. **Start with F:**\n   - F has good relationships with D, I, N, O, H, and J.\n   - By transitivity, all these people (F, D, I, N, O, H, J) have good relationships with each other.\n\n4. **Check for additional connections:**\n   - F's group includes N, and since N has a bad relationship with C, everyone in F's group (F, D, I, N, O, H, J) has a bad relationship with everyone in A's group.\n\n5. **Remaining people:**\n   - The only person not yet grouped is L, who is already in A's group.\n\nThus, we have two distinct groups:\n- Group 1: A, G, L, K, E, M, C, B\n- Group 2: F, D, I, N, O, H, J\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "To determine the number of distinct groups, we need to analyze the relationships and apply the rules of transitivity and separation.\n\n1. **Identify Good Relationships:**\n   - K has good relationships with B, N, and M.\n   - C has good relationships with F, H, and E.\n   - L has good relationships with G, I, and A.\n   - J has a good relationship with D.\n\n2. **Identify Bad Relationships:**\n   - E and J\n   - F and N\n   - L and K\n   - K and J\n   - D and G\n   - L and J\n   - L and E\n   - K and E\n\n3. **Form Groups Based on Good Relationships:**\n   - **Group 1:** K, B, N, M (K has good relationships with B, N, and M)\n   - **Group 2:** C, F, H, E (C has good relationships with F, H, and E)\n   - **Group 3:** L, G, I, A (L has good relationships with G, I, and A)\n   - **Group 4:** J, D (J has a good relationship with D)\n\n4. **Verify Separation of Groups:**\n   - **Group 1 (K, B, N, M):** \n     - K has bad relationships with J, E, and L, ensuring separation from Groups 2, 3, and 4.\n   - **Group 2 (C, F, H, E):**\n     - E has a bad relationship with J, ensuring separation from Group 4.\n     - F has a bad relationship with N, ensuring separation from Group 1.\n     - E has a bad relationship with L, ensuring separation from Group 3.\n   - **Group 3 (L, G, I, A):**\n     - L has bad relationships with J and E, ensuring separation from Groups 2 and 4.\n     - L has a bad relationship with K, ensuring separation from Group 1.\n   - **Group 4 (J, D):**\n     - J has bad relationships with K, L, and E, ensuring separation from Groups 1, 2, and 3.\n\nEach group is internally consistent with good relationships and externally separated by bad relationships.\n\nFinal Answer: 4"
+    }
+  ]
+}

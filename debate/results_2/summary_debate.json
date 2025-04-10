@@ -1,18 +1,18 @@
 {
   "llama-3.1-8B": {
-    "accuracy": 37.0,
-    "correct": 37,
+    "accuracy": 80.0,
+    "correct": 80,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 18.421052631578945,
-        "precision": 93.33333333333333
+        "recall": 81.57894736842105,
+        "precision": 91.17647058823529
       },
       "Accept": {
         "total": 24,
-        "recall": 95.83333333333334,
-        "precision": 27.058823529411764
+        "recall": 75.0,
+        "precision": 56.25
       }
     }
   },
@@ -34,138 +34,138 @@
     }
   },
   "gemma-2-27B": {
-    "accuracy": 73.0,
-    "correct": 73,
+    "accuracy": 75.0,
+    "correct": 75,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 93.42105263157895,
-        "precision": 76.34408602150538
+        "recall": 92.10526315789474,
+        "precision": 78.65168539325843
       },
       "Accept": {
         "total": 24,
-        "recall": 8.333333333333332,
-        "precision": 28.57142857142857
+        "recall": 20.833333333333336,
+        "precision": 45.45454545454545
       }
     }
   },
   "llama-3.3-70B": {
-    "accuracy": 26.0,
-    "correct": 26,
+    "accuracy": 87.0,
+    "correct": 87,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 2.631578947368421,
-        "precision": 100.0
+        "recall": 90.78947368421053,
+        "precision": 92.0
       },
       "Accept": {
         "total": 24,
-        "recall": 100.0,
-        "precision": 24.489795918367346
+        "recall": 75.0,
+        "precision": 72.0
       }
     }
   },
   "qwen-2.5-72B": {
-    "accuracy": 23.0,
-    "correct": 23,
+    "accuracy": 82.0,
+    "correct": 82,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 0.0,
-        "precision": 0.0
+        "recall": 86.8421052631579,
+        "precision": 89.1891891891892
       },
       "Accept": {
         "total": 24,
-        "recall": 95.83333333333334,
-        "precision": 23.232323232323232
+        "recall": 66.66666666666666,
+        "precision": 61.53846153846154
       }
     }
   },
   "qwq": {
-    "accuracy": 50.0,
-    "correct": 50,
+    "accuracy": 84.0,
+    "correct": 84,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 36.84210526315789,
-        "precision": 93.33333333333333
+        "recall": 92.10526315789474,
+        "precision": 87.5
       },
       "Accept": {
         "total": 24,
-        "recall": 91.66666666666666,
-        "precision": 31.428571428571427
+        "recall": 58.333333333333336,
+        "precision": 70.0
       }
     }
   },
   "deepseek-r1": {
-    "accuracy": 50.0,
-    "correct": 50,
+    "accuracy": 88.0,
+    "correct": 88,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 38.15789473684211,
-        "precision": 90.625
+        "recall": 94.73684210526315,
+        "precision": 90.0
       },
       "Accept": {
         "total": 24,
-        "recall": 87.5,
-        "precision": 30.88235294117647
+        "recall": 66.66666666666666,
+        "precision": 80.0
       }
     }
   },
   "gpt-4o-mini": {
-    "accuracy": 39.0,
-    "correct": 39,
+    "accuracy": 85.0,
+    "correct": 85,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 25.0,
-        "precision": 82.6086956521739
+        "recall": 100.0,
+        "precision": 83.51648351648352
       },
       "Accept": {
         "total": 24,
-        "recall": 83.33333333333334,
-        "precision": 25.97402597402597
+        "recall": 37.5,
+        "precision": 100.0
       }
     }
   },
   "gpt-4o": {
-    "accuracy": 55.00000000000001,
-    "correct": 55,
+    "accuracy": 86.0,
+    "correct": 86,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 43.42105263157895,
-        "precision": 94.28571428571428
+        "recall": 100.0,
+        "precision": 84.44444444444444
       },
       "Accept": {
         "total": 24,
-        "recall": 91.66666666666666,
-        "precision": 33.84615384615385
+        "recall": 41.66666666666667,
+        "precision": 100.0
       }
     }
   },
   "o3-mini": {
-    "accuracy": 40.0,
-    "correct": 40,
+    "accuracy": 86.0,
+    "correct": 86,
     "total": 100,
     "stats": {
       "Reject": {
         "total": 76,
-        "recall": 21.052631578947366,
-        "precision": 100.0
+        "recall": 92.10526315789474,
+        "precision": 89.74358974358975
       },
       "Accept": {
         "total": 24,
-        "recall": 100.0,
-        "precision": 28.57142857142857
+        "recall": 66.66666666666666,
+        "precision": 72.72727272727273
       }
     }
   }

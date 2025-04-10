@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "o3-mini",
+    "difficulty": "easy",
+    "question_type": "cluster",
+    "total_samples": 100,
+    "correct_predictions": 100,
+    "accuracy": 100.0
+  },
+  "results": [
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "From the given relationships we can work step by step:\n\n1. A is directly stated to have good relationships with E, H, B, G, and C. By transitivity, this means A, E, H, B, G, and C all form one set where everyone has a good relationship with everyone else.\n\n2. The given statement “E and F have a bad relationship” prevents F from joining A’s group (since all members in a group must have good relationships with each other). Also, “C and F have a bad relationship” reinforces that F cannot be in the same group as C (who is in A’s group).\n\n3. The only remaining information about F is “F and D have a good relationship.” Since F cannot join A’s group, F and D must form their own group.\n\nThus, there are two distinct groups:\n• Group 1: A, B, C, E, G, H \n• Group 2: D, F\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "We start by listing the provided relationships:\n\n• B has a good relationship with F  \n• B has a good relationship with H  \n• A has a good relationship with D  \n• A has a good relationship with C  \n• B has a good relationship with G  \n• A has a good relationship with I  \n• A has a good relationship with E  \n• C has a bad relationship with H\n\nUsing the rules:\n1. Good relationships are transitive. This means if person X is good with Y and Y is good with Z, then X is good with Z.  \n2. A bad relationship between any two (A bad with B) combined with A’s good relationship with a third person C, forces B and C to have a bad relationship.\n\nLet’s form groups based on the chain of good relationships:\n\n• Group 1:  \n  - A is directly good with D, C, I, and E.  \n  - By transitivity, all these people (A, D, C, I, E) share good relationships with one another.\n\n• Group 2:  \n  - B is directly good with F, H, and G.  \n  - By transitivity, B, F, H, and G form another set of people where everyone is good with each other.\n\nNow look at the information about C and H having a bad relationship. Since C is in Group 1 and H is in Group 2, this confirms that these two groups are entirely distinct—per the rules, if one member from one group is bad with one from another, then all members between the two groups must have a bad relationship.\n\nNo further connections exist to merge these groups, and each group is maximally connected by good relationships.\n\nThus, the total number of distinct groups is 2.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "A is good with C, D, F, G, and H (directly as stated). By transitivity, all these people share good relationships with one another, forming one group.\n\nMeanwhile, E is good with B, which forms another group. However, relationships between the two groups are bad (for instance, B and H have a bad relationship, and C and E have a bad relationship), so the groups remain separate.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Let's first list the relationships:\n\nGood relationships:\n• B and G\n• E and A\n• B and I\n• B and H\n• E and F\n• E and D\n• B and C\n\nBad relationships:\n• E and C\n• A and G\n\nBecause \"good\" is transitive (if A is good with B and B is good with C then A is good with C), we can merge people who are connected by good relationships into a single group.\n\nNotice the connections:\n• B is connected (good) to G, I, H, and C.\n This gives us one set: {B, G, I, H, C}.\n\n• E is connected (good) to A, F, and D.\n This gives a second set: {E, A, F, D}.\n\nNow, check the bad relationships:\n• E and C are bad. Since E is in the second group and C is in the first, that keeps the two groups separate.\n• A and G are bad. A is in the second group and G is in the first, again confirming separation.\n\nThus, based on the provided information and applying the transitivity rules, we have exactly two distinct groups.\n\nFinal Answer: 2"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "We start by listing the given relationships:\n\n1. C and H are good.\n2. J and H are bad.\n3. J and B are good.\n4. J and E are bad.\n5. C and G are good.\n6. J and I are good.\n7. C and D are good.\n8. J and A are good.\n9. F and J are bad.\n10. E and F are good.\n11. H and E are bad.\n12. C and E are bad.\n\nUsing the transitive rules:\n\n• Since C is good with H, G, and D (from 1, 5, 7), they form one group. Call this Group 1: {C, H, G, D}.\n\n• J is good with B, I, and A (from 3, 6, 8) forming another group. Call this Group 2: {J, B, I, A}.\n\n• E is good with F (from 10) forming a third group. Call this Group 3: {E, F}.\n\nNow, check the cross–group conflicts:\n– Statement 2 tells us J (from Group 2) and H (from Group 1) are bad.\n– Statement 4 tells us J (Group 2) and E (Group 3) are bad.\n– Statements 11 and 12 ensure H (Group 1) and E (Group 3), as well as C (Group 1) and E (Group 3), are bad.\n\nThus, no group can be merged because every pair across any two groups has at least one bad relationship.\n\nWe have 10 people total divided as follows:\n• Group 1: C, H, G, D (4 people)\n• Group 2: J, B, I, A (4 people)\n• Group 3: E, F (2 people)\n\nFinal Answer: 3"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "4",
+      "prediction": "4",
+      "correct": true,
+      "response": "Final Answer: 4"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "3",
+      "prediction": "3",
+      "correct": true,
+      "response": "Final Answer: 3"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "cluster",
+      "true_answer": "2",
+      "prediction": "2",
+      "correct": true,
+      "response": "Final Answer: 2"
+    }
+  ]
+}

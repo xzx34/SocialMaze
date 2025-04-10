@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "o3-mini",
+    "difficulty": "easy",
+    "question_type": "group",
+    "total_samples": 100,
+    "correct_predictions": 96,
+    "accuracy": 96.0
+  },
+  "results": [
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, D",
+      "prediction": "A, B, D",
+      "correct": true,
+      "response": "Based on the given information and rules:\n\n1. Direct good relationships with F: A and F have a good relationship.\n2. From the good relationships, we know that A is also good with D and B (A & D, A & B are good). By transitivity, F is then in the same group as A, D, and B.\n3. No other connections place any additional individuals in F’s group (the others form a separate group).\n\nSo, the people who have a good relationship with F are A, B, and D (ordered alphabetically).\n\nFinal Answer: A, B, D"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, G",
+      "prediction": "A, F, G",
+      "correct": true,
+      "response": "We first map out the relationships and then use the transitivity rules.\n\n1. A and D have a bad relationship.\n2. A and E have a good relationship.\n3. C and B have a good relationship.\n4. E and H have a bad relationship.\n5. A and C have a bad relationship.\n6. A and F have a good relationship.\n7. E and C have a bad relationship.\n8. A and G have a good relationship.\n9. C and H have a bad relationship.\n10. H and D have a good relationship.\n\nUsing the rule that people with good relationships (direct or via transitivity) are in the same group and bad relationships imply separation between groups, we can form the following groups:\n\n• Since A and E are good, they are in the same group.\n• A is also good with F and G, so F and G join A’s group.\n  Group 1: {A, E, F, G}\n\n• From C and B having a good relationship:\n  Group 2: {B, C}\n\n• From H and D having a good relationship:\n  Group 3: {D, H}\n\nThe bad relationships confirm these separations (e.g., A has a bad relationship with C and D; E has a bad relationship with H).\n\nQuestion: “Who has a good relationship with E?”\n\nSince E is in Group 1 with A, F, and G, these are the people who have a good relationship with E.\n\nListing them in alphabetical order:\n\nFinal Answer: A, F, G"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F, G, J",
+      "prediction": "D, E, F, G, J",
+      "correct": true,
+      "response": "We start with the direct information: D and I have a good relationship. Since “good” is transitive, everyone who is in D’s good relationship group is also in a good relationship with I.\n\nLooking at all direct good relationships from D we have:\n• D and F\n• D and E\n• D and J\n• D and G\n• D and I (given)\n\nThus, D’s group contains D, F, E, J, G, and I. By the definition of a group, everyone in the group has a good relationship with every other person within it.\n\nSo, the people (other than I itself) with a good relationship with I are: D, E, F, G, and J.\n\nFinal Answer: D, E, F, G, J"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D",
+      "prediction": "D",
+      "correct": true,
+      "response": "We first note the good relationships explicitly provided:\n• A and H, A and C, A and B, A and F (so A is good with H, C, B, and F).  \n• D and G are good.  \n• E and I are good.\n\nGood relationships are transitive, so people connected by good relationships form a \"group\" where everyone is good with everyone else.\n\nFrom the given information, we can divide the 9 people into 3 groups:\n• Group 1: {A, B, C, F, H} (since A is good with B, C, F, and H and those relationships extend to each other by transitivity).  \n• Group 2: {D, G} (directly established by the good relationship between D and G).  \n• Group 3: {E, I} (since E and I are good with each other).\n\nThere are also several “bad” relationships between members of different groups (for example, A and D are bad, C and D are bad, D and E are bad, etc.), confirming that these groups remain completely separate.\n\nThe question asks: Who has a good relationship with G?  \nSince G is in Group 2, the only person who has a good relationship with G is D.\n\nFinal Answer: D"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D",
+      "prediction": "C, D",
+      "correct": true,
+      "response": "We start by grouping people who have good relationships (directly or transitively). \n\n1. From the relationships, A has a good relationship with B, E, H, and F. So A, B, E, H, and F form a group (Group 1).  \n2. Also, C has a good relationship with G, and C has a good relationship with D. Hence, G, C, and D form a second group (Group 2).\n\nOne key observation: E (from Group 1) has a bad relationship with both C and G, confirming that Group 1 and Group 2 are completely separate.\n\nThus, for person G (who is in Group 2), the only people that have a good relationship with G are the ones in Group 2 – namely C and D.\n\nFinal Answer: C, D"
+    },
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, G",
+      "prediction": "B, D, G",
+      "correct": true,
+      "response": "Based on the provided information, we establish the following groups using the transitive property of good relationships:\n\n1. A has good relationships with F, C, and E. Thus, one group is {A, C, E, F}.\n2. B has a good relationship with H, and also with D and G. Thus, the other group is {B, D, G, H}.\n\nSince H is in the second group, the people who have a good relationship with H are the other members of that group, i.e. B, D, and G.\n\nFinal Answer: B, D, G"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, G, H",
+      "prediction": "A, B, C, G, H",
+      "correct": true,
+      "response": "We start by grouping people who are directly or transitively in good relationships:\n\n• A is in a good relationship with E, H, B, G, and C.\n• By transitivity, since A has a good relationship with all these people, they all belong to the same group along with A.\n\nThus, the group that includes E is: {A, B, C, E, G, H}. (Relationships from the other pair F–D form a separated group.)\n\nSince we are to list those who have a good relationship with E (excluding E herself), the answer is the members of her group except for E.\n\nFinal Answer: A, B, C, G, H"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F",
+      "prediction": "B, E, F",
+      "correct": true,
+      "response": "We need to determine the group to which person I belongs. According to the rules, people who have (direct or transitive) good relationships are in the same group.\n\nStep 1. From the given information, we know:\n• B and I have a good relationship.\n• B and F have a good relationship.\n• B and E have a good relationship.\n\nStep 2. Using transitivity, since B is good with I, F, and E, then I is also good with F and E (because all pairwise relationships in the group are good).\n\nStep 3. There is no additional connection linking I’s group to any other people.\n\nThus, person I has a good relationship with B, E, and F.\n\nFinal Answer: B, E, F"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "We first form groups using the given relationships and the rules:\n\n1. H and G have a good relationship, so H, G are in the same group.\n2. H and I have a good relationship, so I joins H's group. Now H, G, and I are together.\n3. H and E have a good relationship so E is also in H’s group. Now H's group contains E, G, H, and I.\n4. Separately, A has a good relationship with F, B, C, and D, forming a second group.\n5. Since A and E have a bad relationship, E cannot be in A’s group. This confirms the two groups are separate, and by transitivity (and the rule about bad relationships spreading across groups), everyone in A’s group is in a bad relationship with everyone in H’s group.\n\nThe question asks: Who has a good relationship with I? Anyone in I’s group (excluding I) has a good relationship with I. I’s group comprises E, G, H, and I. Listing the other people (in alphabetical order): E, G, H.\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C",
+      "prediction": "C",
+      "correct": true,
+      "response": "We first list the given relationships:\n\n• C and I: bad  \n• C and E: good  \n• H and I: bad  \n• I and D: good  \n• A and B: good  \n• A and F: good  \n• H and C: bad  \n• E and I: bad  \n• F and I: bad  \n• A and G: good  \n• A and H: good  \n\nBecause good relationships are transitive, we can form “good” groups as follows:\n\n1. From A’s connections, we have A is good with B, F, G, and H. By the transitive property (and assuming symmetry), these people all share good relationships among themselves. So one group is {A, B, F, G, H}.\n\n2. We are told that C and E have a good relationship. No other good connections extend from them; in fact, we have H and C is a bad relationship (and H is in the A group), which means C (and by extension E) must be separate. Thus, a second group is {C, E}.\n\n3. Finally, I and D have a good relationship, so they form a third group: {D, I}.\n\nNow, the rules state that people in different groups all have bad relationships with each other. Since E is in the group {C, E}, the only person who has a good relationship with E apart from E herself is C.\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, D, F",
+      "prediction": "A, B, C, D, F",
+      "correct": true,
+      "response": "We start by determining the groups based on the information provided.\n\n• A and G have a good relationship, so they are in the same group.\n• A also has good relationships with B, C, D, and F. Thus, by transitivity, these five individuals (A, B, C, D, F) are all in the same group as G.\n• E and H have a good relationship and are therefore in another group.\n• The fact that E and G have a bad relationship means these two groups are completely separate – every member of G’s group has a bad relationship with every member of E’s group.\n• The relationship between C and H (bad) further supports that C (in G’s group) and H (in E’s group) are in separate groups.\n\nThus, the members in good relationship with G are those in G’s group (other than G itself), which are A, B, C, D, and F.\n\nFinal Answer: A, B, C, D, F"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, H, J",
+      "prediction": "B, E, H, J",
+      "correct": true,
+      "response": "Based on the given relationships and the rules:\n\n1. F and G have a bad relationship.\n2. B and F have a good relationship.\n3. B also has a good relationship with E, J, and H.\n\nUsing the transitivity rule, F (being good with B) will also be good with everyone B is good with. Therefore, F’s group consists of {B, E, F, J, H}. (In a “group” everyone has a good relationship with one another.) \n\nSince we are asked to list all people other than F who have a good relationship with F, we list: B, E, H, J.\n\nFinal Answer: B, E, H, J"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, D, E",
+      "prediction": "A, B, D, E",
+      "correct": true,
+      "response": "Based on the provided information and the rules for relationships, we first look at the direct connections:\n\n• A has a good relationship with D, E, B, and G.\n• Because good relationships are transitive (if X is good with Y and Y is good with Z then X is good with Z), A, D, E, B, and G form one group.\n• Other provided information (like D and F being bad, or E and H being bad) confirms that people in this group do not extend to include others and the groups remain separate.\n\nSince G is in the same group as A, B, D, and E, these people have a good relationship with G. Listing them in alphabetical order gives:\n\nFinal Answer: A, B, D, E"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, H",
+      "prediction": "D, E, H",
+      "correct": true,
+      "response": "We start by looking at the given “good” relationships:\n• D and E have a good relationship.\n• D and H have a good relationship.\n• A and B have a good relationship.\n• A and G have a good relationship.\n• A and C have a good relationship.\n• D and F have a good relationship.\n\nNotice that:\n• A, B, C, and G are connected by good relationships.\n• D, E, H, and F are connected by good relationships (since D is linked to E, H, and F, transitivity makes E, H, and F all share a good relationship among themselves).\n\nNow, the question asks: “Who has a good relationship with F?” Since F is in the same group as D, E, and H, F has a good relationship with all of them.\n\nListing these names in alphabetical order gives: D, E, H.\n\nFinal Answer: D, E, H"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F",
+      "prediction": "C, F",
+      "correct": true,
+      "response": "We start by using the given information and the rules:\n\n1. It’s given that C and E have a good relationship. By definition, E is in a group with all people who are connected through good relationships.\n2. Also, C and F have a good relationship. Since good relationships are transitive, E also has a good relationship with F.\n3. No other “good” links connect to E without contradicting the other information (for example, H and E have a bad relationship).\n\nThus, the only people in E’s group (other than E) are C and F.\n\nFinal Answer: C, F"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A",
+      "prediction": "A",
+      "correct": true,
+      "response": "Based on the provided relationships and the rules, we work through the information as follows:\n\n1. The given relations involving good relationships are:  \n • B and D  \n • B and I  \n • B and E  \n • B and C  \n • A and G  \n • H and F  \n\n   Together with the transitivity rule for good relationships, these clues suggest that people who are directly or indirectly connected by good relations form a group.\n\n2. Next, the bad relationship clues are:  \n • D and H are bad  \n • A and C are bad  \n • A and F are bad  \n • A and H are bad  \n • C and H are bad  \n\n3. Notice also the rule stating, “If A has a bad relationship with B and A has a good relationship with C, then B and C must have a bad relationship.” Since A and G have a good relationship, anyone who is bad with A must also be bad with G.\n\n4. Grouping the people based on mutual good relationships (and ensuring no conflicts with the given bad relationships):  \n • Group 1: {B, C, D, E, I} – B is good with D, I, E, and C, and by transitivity, these all share good relationships.  \n • Group 2: {A, G} – A and G are directly stated as having a good relationship.  \n • Group 3: {F, H} – H and F have a good relationship.  \n\n5. Check consistency with the bad relationships:  \n • A has a bad relationship with C, F, and H. Since A is in Group 2, this means Group 2 (A and G) must be separate from Group 1 (which includes C) and Group 3 (which includes F and H).  \n • Other bad relations (such as D and H, A and H, C and H) further confirm these separations.\n\n6. The question asks: “Who has a good relationship with G?”  \n Since G is in Group 2 with A and the definition of a group is that every member has a good relationship with every other member in that group, the only person (apart from G) in Group 2 is A.\n\nTherefore, in alphabetical order, the only person who has a good relationship with G is:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, H",
+      "prediction": "C, D, H",
+      "correct": true,
+      "response": "Let's analyze the information step by step for F:\n\n1. The statement \"C and F have a good relationship\" tells us directly that F and C are in the same group. \n\n2. Since \"C and D have a good relationship,\" transitivity means F (through C) also has a good relationship with D.\n\n3. Similarly, \"C and H have a good relationship\" implies, via transitivity, that F also has a good relationship with H.\n\n4. Other relationship details (involving B, I, J, etc.) indicate that F is not in the same group as those people. For example, \"B and F have a bad relationship\" means B and anyone in B’s group (which includes J and G) are not in F’s group. Also, other mentions of I, A, and E form a different grouping that doesn’t include F.\n\nThus, based on the transitive nature of good relationships, F is in a group with C, D, and H. Since the question asks for all people (other than F) who have a good relationship with F, the answer in alphabetical order is:\n\nFinal Answer: C, D, H"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E",
+      "prediction": "A, E",
+      "correct": true,
+      "response": "Let's first group the people based on the given information and the transitive properties.\n\n1. From \"E and A have a good relationship\", we know A and E are in the same group.\n2. \"E and D have a good relationship\" places D in the same group as E (and A). So far, Group 1 is {A, D, E}.\n3. Other relationships confirm group separations:\n   - J is in a group with C and F (from \"J and C have a good relationship\" and \"J and F have a good relationship\"), so Group 2 is {C, F, J}.\n   - H is in a group with I, G, and B (from \"H and I have a good relationship\", \"H and G have a good relationship\", and \"H and B have a good relationship\"), which makes Group 3 {B, G, H, I}.\n4. The bad relationships (like \"E and J have a bad relationship\", \"E and H have a bad relationship\", \"H and J have a bad relationship\", \"I and J have a bad relationship\", and \"D and J have a bad relationship\") support these separations between groups.\n\nSince D is in Group 1 with A and E, the people who have a good relationship with D (excluding D) are A and E, listed in alphabetical order.\n\nFinal Answer: A, E"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, H",
+      "prediction": "A, F, H",
+      "correct": true,
+      "response": "We first note the direct good relationship information involving C:\n• C and F have a good relationship.\n• C and A have a good relationship.\n• C and H have a good relationship.\n\nBy rule 1, a good relationship is transitive, meaning that if C is directly good with someone, that person is in the same group as C. Therefore, the group that includes C consists of A, F, and H (along with C).\n\nOther relationships (like B’s connections) do not add anyone to C’s group because B has a bad relationship with F, and by rule 2, everyone connected by a good chain must be consistent in their relations.\n\nThus, the people who have a good relationship with C are A, F, and H.\n\nFinal Answer: A, F, H"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H",
+      "prediction": "C, E, H",
+      "correct": true,
+      "response": "From the given facts, we start with the direct information:\n• C and F have a good relationship.\n• C and H have a good relationship.\n• C and E have a good relationship.\n\nBecause a good relationship is transitive, F, C, H, and E all form one group. In this group every member has a good relationship with every other member.\n\nThus, the people who have a good relationship with F (other than F) are C, E, and H.\n\nFinal Answer: C, E, H"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F, H",
+      "prediction": "F, H",
+      "correct": true,
+      "response": "Analyzing the relationships:\n\n• From the given information, B has a good relationship with F and with H.\n• This means B, F, and H form a group (since the good‐relationship is transitive, B–F and B–H imply F–H is also good).\n• Also, note that B has a bad relationship with D. Since D is in the group {A, C, D, E, G, I, J} (because A is good with D, J, I, C, G, and E, and good relationships are transitive), none of those are in B’s group.\n\nThus, the only people who have a good relationship with B are F and H.\n\nFinal Answer: F, H"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, D, E, F, H",
+      "prediction": "A, C, D, E, F, H",
+      "correct": true,
+      "response": "Based on the given relationships and the rules, we first form groups where everyone in the group has a good relationship with every other person.\n\nDirect information shows many persons having a good relationship with A:\n• A and B are good.\n• A and D are good.\n• A and H are good.\n• A and C are good.\n• A and F are good.\n• A and E are good.\n\nThis means A, B, C, D, E, F, and H are directly (or transitively) connected by good relationships. (For example, since A is good with C and A is in this group, C must also be good with everyone A is good with. Similar logic applies with D, E, F, and H.)\n\nOther pieces of information (e.g., J and I are good; however, C and J are bad and D and I are bad) show that the remaining people, I, J, (and G from “J and G are good”) form a separate group with mutual good relationships. Additionally, the rules require that persons in different groups have bad relationships with each other.\n\nSince B is in the same group as A, B has a good relationship with everyone within that group (except themselves). Listed in alphabetical order, those are:\nA, C, D, E, F, H.\n\nFinal Answer: A, C, D, E, F, H"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, H",
+      "prediction": "A, H",
+      "correct": true,
+      "response": "Let's start by building groups based on the provided rules.\n\n1. We know H and C have a good relationship. So C and H are in the same group.\n2. We also know H and A have a good relationship. Because good relationships are transitive, A, H, and C must all be in the same group.\n3. The remaining information groups B with F, E, D, and G (with B–F, B–E, B–D, and B–G all good), but note that C and E have a bad relationship. Since groups must be entirely good within and entirely bad with other groups, the group containing C (which has A and H) is separate from the group containing E (and B, F, D, G).\n\nSince a person’s group includes everyone with whom they have a good relationship (directly or through transitivity), C’s group consists of A, C, and H.\n\nThe question asks: Who has a good relationship with C? Excluding C, the answer is A and H.\n\nFinal Answer: A, H"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, G",
+      "prediction": "D, E, G",
+      "correct": true,
+      "response": "Given the rules and the provided information, we first identify B’s direct good relationships:\n\n• B and E have a good relationship.\n• B and G have a good relationship.\n• B and D have a good relationship.\n\nNow, using the first transitivity rule (“If A has a good relationship with B, and B has a good relationship with C, then A has a good relationship with C”), any person who is good with one person in B’s group should be in the same group if there is a chain of good relationships. However, apart from those directly mentioned, no additional connections are given that would add more people into B’s group.\n\nThere is also explicit information that B and C have a bad relationship. In groups, everyone must share a good relationship; therefore, anyone linked only to C (even if through other good connections) cannot be in B’s group.\n\nThus, the people in the same group as B (i.e. those who have a good relationship with B) are D, E, and G.\n\nFinal Answer: D, E, G"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, G",
+      "prediction": "A, B, C, G",
+      "correct": true,
+      "response": "We first note that good relationships are transitive, forming groups in which every member has a good relationship with every other member.\n\nWe’re given:\n• A and H have a good relationship.\n• A and C have a good relationship.\n• A and G have a good relationship.\n• A and B have a good relationship.\n\nThus starting from H:\n• H has a good relationship with A.\n• Since A is good with B, C, and G, by transitivity H is also in a good relationship with B, C, and G.\n\nNo further good relationships connect H with any other people. (Other information, such as C’s bad relationship with E, D’s good with E, etc., actually separates the people into two groups.)\n\nTherefore, the people who have a good relationship with H are A, B, C, and G.\n\nFinal Answer: A, B, C, G"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, F, G",
+      "prediction": "B, F, G.",
+      "correct": false,
+      "response": "We first note the good relationships given directly:\n\n• B and F have a good relationship  \n• B and H have a good relationship  \n• A and D have a good relationship  \n• A and C have a good relationship  \n• B and G have a good relationship  \n• A and I have a good relationship  \n• A and E have a good relationship  \n\nAnd one bad relationship that matters for grouping:\n\n• C and H have a bad relationship\n\nBecause good relationships are transitive, people form groups where everyone is mutually in a good relationship. Meanwhile, if a member of one group has a bad relationship with a member of another group, everyone in the first group has a bad relationship with everyone in the second group.\n\nStep 1. Identify groups using the chain of good relationships:\n\n• Since A has a good relationship with D, C, I, and E (and by transitivity among those, they are all in one group), we have one group: {A, C, D, E, I}.\n\n• Since B is good with H, F, and G (and by transitivity among those, they are all in one group), we have another group: {B, F, G, H}.\n\nStep 2. Check the bad relationship:\n\n• It is given that C and H have a bad relationship. Since C is in the group {A, C, D, E, I} and H is in {B, F, G, H}, this confirms that these two groups are separate and opposite in terms of relationships.\n\nStep 3. Answer the question:\n\nThe question asks, “Who has a good relationship with H?” In H’s group, aside from H himself, the members are B, F, and G. Arranging these names in alphabetical order gives: B, F, G.\n\nFinal Answer: B, F, G."
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G, I",
+      "prediction": "B, G, I",
+      "correct": true,
+      "response": "Based on the information provided and the rules:\n\n1. The relationships “A and D”, “A and E”, “A and C”, and “A and H” being good imply that A, D, E, C, and H all belong to one group.\n2. The relationships “B and F”, “B and G”, and “B and I” being good imply that B, F, G, and I belong to another group.\n3. The bad relationship between D and F confirms that these two groups are separate (since D is in the first group and F is in the second).\n4. The bad relationship between C and I (with C in the first group and I in the second) further supports the separation of these two groups.\n\nSince F belongs to the group {B, F, G, I}, the people who have a good relationship with F are B, G, and I.\n\nFinal Answer: B, G, I"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, F",
+      "prediction": "B, F",
+      "correct": true,
+      "response": "We start with the provided information:\n\n• B and F have a good relationship  \n• B and A have a good relationship\n\nSince good relationships are transitive (if X and Y are good and Y and Z are good then X and Z are good), this means A (who is good with B) is also good with anyone B is good with. Thus, from the two pieces above, A is in a group with B and F.\n\nNone of the other pieces of relationship information connect A (or B or F) with any of the remaining people without conflict. In fact, it serves to separate the set {A, B, F} from the others.\n\nTherefore, the people who have a good relationship with A are B and F.\n\nFinal Answer: B, F"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, F, H",
+      "prediction": "A, C, F, H",
+      "correct": true,
+      "response": "We start by noting the direct relationships:\n\n• A and D have a good relationship.\n• A also has good relationships with H, F, and C.\n• Therefore, by the transitive property (if A is good with D and A is good with someone else then that person is also good with D), D is in a group with A, H, F, and C.\n\nThus, the people who have a good relationship with D (other than D itself) are A, C, F, and H.\n\nFinal Answer: A, C, F, H"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, H",
+      "prediction": "A, C, H",
+      "correct": true,
+      "response": "We start by grouping people based on the given relationships and using the transitive rules provided:\n\n1. B has a good relationship with J, G, I, E, and F. This forms Group 2: {B, E, F, G, I, J}.\n2. H has a good relationship with D (and via transitivity, D shares the group with H).\n3. H also has a good relationship with A and C (from H and A; H and C), so they form Group 1.\n4. Transitive property means D is in the same group as H, A, and C. Also, note that the bad relationships (A with B and C with E) keep these two groups separate.\n\nThus, we have:\n• Group 1: {A, C, D, H}  \n• Group 2: {B, E, F, G, I, J}\n\nSince D is in Group 1, the people who have a good relationship with D are those in the same group (excluding D).\n\nIn alphabetical order, those are: A, C, H.\n\nFinal Answer: A, C, H"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D",
+      "prediction": "D",
+      "correct": true,
+      "response": "We start by looking at the relationships that involve A. The information provided tells us:\n\n• A has a good relationship with D.\n• A has a bad relationship with H, G, and C.\n\nThe “good” relationships are transitive, meaning if two people are good with a third person, they must be good with each other. However, for A the only explicitly stated good relationship is with D. There is no additional information linking D to any other person in a “good” way with A.\n\nAlso, using the rule that “if A has a bad relationship with B and a good relationship with C, then B and C must have a bad relationship,” we see that even if we try to connect others (like H, G, or C) with A through D, the rule prevents any of them from joining A’s “good” circle.\n\nThus, the only person who ends up in the same “group” as A (where everyone is good with each other) is D.\n\nFinal Answer: D"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, H",
+      "prediction": "A, H",
+      "correct": true,
+      "response": "We begin by identifying groups (sets of people that share good relationships with each other by direct statement or transitive property).\n\n1. From the given data:\n   - H and A have a good relationship.\n   - H and F have a good relationship.\n   \n   Thus, by transitivity, A, H, and F are all in one group.\n\n2. The other relationships involve person B:\n   - B has a good relationship with E, I, G, D, and C.\n   - So, B, C, D, E, G, and I form another group.\n   \n3. Notice:\n   - H and C have a bad relationship.\n   - D and H have a bad relationship.\n   \n   This confirms that the two groups are entirely separate, with every person in one group having a bad relationship with every person in the other group.\n\nSince F belongs to the group with A and H, the people who have a good relationship with F are the others in his group.\n\nArranging the names in alphabetical order (excluding F):\nA, H\n\nFinal Answer: A, H"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B",
+      "prediction": "B",
+      "correct": true,
+      "response": "Let's first identify the groups based on the information provided:\n\n1. A has a good relationship with C, D, F, G, and H. By the transitive property, all these people have good relationships with each other. Thus, they form one group: {A, C, D, F, G, H}.\n\n2. We are given that E and B have a good relationship, which means they form a group. Also, note that E has a bad relationship with C, which prevents E from being in the same group as A (and thus with C, D, F, G, and H). Therefore, the second group is: {B, E}.\n\nSince people in the same group have good relationships with each other, E has a good relationship with every other member of its group. In group {B, E}, the only other person is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "G, H",
+      "prediction": "G, H",
+      "correct": true,
+      "response": "We first use the given relationships and rules to build groups where every member is connected by good relationships. Two people are directly in a group if they have a good relationship, and by transitivity, if A is good with B and B is good with C, then A is good with C.\n\nStep 1. Processing the good relationship statements:\n\n• \"H and A have a good relationship\" creates a group with A and H.\n• \"B and F have a good relationship\" creates a group with B and F.\n• \"B and D have a good relationship\" expands the B/F group to include D (group becomes {B, D, F}).\n• \"B and E have a good relationship\" further expands the group to {B, D, E, F}.\n• \"H and G have a good relationship\" expands the group of A and H to {A, H, G}.\n• \"C and I have a good relationship\" creates a group with {C, I}.\n\nStep 2. Processing the bad relationships establishes that some groups must remain entirely separate:\n  \n• “F and G have a bad relationship” means that F (in group {B, D, E, F}) cannot be in the same group as G.\n• “H and E have a bad relationship” confirms the separation between group {A, H, G} and group {B, D, E, F}.\n• “E and C have a bad relationship,” and “C and H have a bad relationship” further confirm that groups {B, D, E, F} and {C, I} as well as {A, H, G} and {C, I} are distinct.\n\nThus, the groups based on good relationships are:\n • Group 1: {A, H, G}  \n • Group 2: {B, D, E, F}  \n • Group 3: {C, I}\n\nStep 3. Answering the Question\n\nSince A is in Group 1 (which is {A, H, G}), the people with a good relationship with A (excluding A) are H and G. Listed in alphabetical order, the answer is:\n\nFinal Answer: G, H"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, F, J",
+      "prediction": "A, E, F, J.",
+      "correct": false,
+      "response": "We start with the given information:\n\n• A and J have a good relationship  \n• A and E have a good relationship  \n• A and G have a good relationship  \n• B and H have a good relationship  \n• B and I have a good relationship  \n• E and C have a bad relationship  \n• C and F have a bad relationship  \n• A and F have a good relationship  \n• B and D have a good relationship  \n• B and C have a good relationship  \n\nStep 1. Form Good Relationship Groups using transitivity:  \n• From “A and J”, “A and E”, “A and G”, and “A and F” we know that A, J, E, G, and F are all in one group (“Group A”).  \n• The statement “E and C have a bad relationship” means C cannot be in Group A.  \n• Then from “B and C”, “B and H”, “B and I”, and “B and D”, we see that B, C, D, H, and I form another group (“Group B”).  \n• The information “C and F have a bad relationship” confirms that F (in Group A) and C (in Group B) are in different, non-overlapping groups.\n\nStep 2. Answer the question:  \nThe question is \"Who has a good relationship with G?\" Since G is in Group A, all members of Group A have a good relationship with G.  \nGroup A consists of A, E, F, G, and J. Excluding G himself, we list: A, E, F, J.\n\nStep 3. List in alphabetical order:  \nA, E, F, J\n\nFinal Answer: A, E, F, J."
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F, G",
+      "prediction": "B, E, F, G",
+      "correct": true,
+      "response": "We start by identifying the direct relationships that involve C. From the given information, we know that:\n\n• I and C have a bad relationship.\n• C and H have a bad relationship.\n• B and C have a good relationship.\n\nSince good relationships are transitive, we need to consider others who have a good relationship with someone who is directly good with C. Looking at B (who is in a good relationship with C), we see that B also has good relationships with E, F, and G:\n\n• B and F have a good relationship.\n• B and G have a good relationship.\n• B and E have a good relationship.\n\nThus, through transitivity, C has a good relationship with B (directly) and, by extension, with E, F, and G.\n\nNo other connections allow us to add further people to C’s group, keeping in mind the bad relationships that would prevent inclusion.\n\nArranging the names alphabetically, the people who have a good relationship with C are: B, E, F, G.\n\nFinal Answer: B, E, F, G"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F, H, I",
+      "prediction": "D, E, F, H, I",
+      "correct": true,
+      "response": "We first list the direct relationships involving C from the given information:\n\n• C and F have a good relationship.\n• C and I have a good relationship.\n• C and D have a good relationship.\n• C and E have a good relationship.\n• C and H have a good relationship.\n\nThus, from the direct statements, F, I, D, E, and H have a good relationship with C.\n\nConsidering the transitive rules:\n• Since any two people who are both good with C must also be good with each other, all of these people belong in the same group as C.\n• There is no additional information (or transitive connections) that would add anyone else to C’s group.\n\nTherefore, the people who have a good relationship with C (excluding C themself) are, in alphabetical order: D, E, F, H, I.\n\nFinal Answer: D, E, F, H, I"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, F, G, H",
+      "prediction": "B, D, F, G, H",
+      "correct": true,
+      "response": "We first look at the provided relationships. Notice there are two distinct groups based on the given \"good\" relationships and the transitive property.\n\nGroup 1 (centered around J):\n• J is good with A, C, and E.\n• By transitivity, A, C, and E are all in a group with J.\nThus, Group 1 = {A, C, E, J}.\n\nGroup 2 (centered around B):\n• B is good with H, G, F, I, and D.\n• By transitivity, all of these individuals share a good relationship with one another.\nThus, Group 2 = {B, D, F, G, H, I}.\n\nAdditionally, note:\n• F and J have a bad relationship.\n• C and H have a bad relationship.\nThese ensure that Group 1 and Group 2 are completely separate (everyone across groups has a bad relationship).\n\nSince the question is, \"Who has a good relationship with I?\" and I belongs to Group 2, every other member in Group 2 has a good relationship with I.\n\nListing the members of Group 2 (other than I) in alphabetical order gives: B, D, F, G, H.\n\nFinal Answer: B, D, F, G, H"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, H, J",
+      "prediction": "A, C, H, J",
+      "correct": true,
+      "response": "First, we deduce which people are in the same “good” group as D.\n\n1. It’s given that A and D have a good relationship.\n2. Also, A has a good relationship with H, C, and J.\n3. By the transitive property, if A is good with D and A is good with, say, C, then D and C are also good with each other.\n4. Similarly, D is good with A, who is good with H and J; thus, D, H, and J are in the same group.\n\nThis leads us to the group: {A, C, D, H, J}.\n\nSince the question asks \"Who has a good relationship with D?\" (excluding D itself) and the names must be in alphabetical order, the answer is:\n\nFinal Answer: A, C, H, J"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, F",
+      "prediction": "E, F",
+      "correct": true,
+      "response": "We construct the “good‐relationship” graph based solely on the provided information. The given statements are:\n\n• J and I have a good relationship  \n• D and I have a bad relationship  \n• H and D have a good relationship  \n• C and E have a good relationship  \n• H and J have a bad relationship  \n• H and G have a good relationship  \n• H and E have a bad relationship  \n• J and B have a good relationship  \n• H and A have a good relationship  \n• J and E have a bad relationship  \n• C and F have a good relationship  \n• E and H have a bad relationship  \n\nNotice that C directly “has a good relationship” with E and with F. By the transitivity rule (if A is good with B and B with C then A is good with C), and the definition of a group (a set where every pair of people have a good relationship), the group containing C must include at least E and F (and no others unless an additional “good” link connects them to C).\n\nThere is no chain of good relationships that connects C with any other person beyond E and F. \n\nArranging the names (other than C) in alphabetical order, we have: E, F.\n\nFinal Answer: E, F"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, H, I, J",
+      "prediction": "D, H, I, J",
+      "correct": true,
+      "response": "We first note the direct facts about A:\n\n• A has a good relationship with H, D, I, and J.\n• A has a bad relationship with E.\n\nUsing the rule that “if A has a good relationship with B and B has a good relationship with C then A has a good relationship with C,” we gather that every person who is connected to A by a chain of good relationships will end up in the same group as A.\n\nHere’s a brief rundown:\n\n1. The information shows A is directly good with H, D, I, and J. Therefore, these four join A’s group.\n2. Other relationships (involving B, C, G, E, and F) form a separate group because we also see conflicts such as H and C having a bad relationship, and A and E having a bad relationship. Being in different groups means no good relationships between any member of A’s group and any member of the other group.\n3. Thus, no extra people join A’s group other than H, D, I, and J.\n\nSo, the people who have a good relationship with A (excluding A) are: D, H, I, J.\n\nFinal Answer: D, H, I, J"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, F, H",
+      "prediction": "A, B, F, H",
+      "correct": true,
+      "response": "From the provided relationship information, we see that A is directly connected by good relationships to H, F, G, and B. Because good relationships are transitive, everyone who has a good relationship with A (or any member of A’s group) is also in a good relationship with every other member of that group.\n\nG is directly good with A. Thus, by transitivity, G is in the same complete good‐relationship group as A, H, F, and B. (The other people, C, D, and E, are connected among themselves but are separated from group A by explicit bad relationships.)\n\nListing all of G’s group members (excluding G itself) in alphabetical order gives: A, B, F, H.\n\nFinal Answer: A, B, F, H"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H",
+      "prediction": "C, E, H",
+      "correct": true,
+      "response": "We first determine the \"good\" groups based on the transitive rule: if two people share a good relationship, and one of them is connected to another person by a good relationship, then all persons are in the same group.\n\nThe provided relationships are:\n• H and E have a good relationship.\n• H and C have a good relationship.\n• H and B have a good relationship.\n• A and F have a good relationship.\n• I and G have a good relationship.\n• I and D have a good relationship.\n\nIgnoring the bad relationship clues (which serve only to separate the groups), we look at the clusters of \"good\" links:\n• H is directly connected with E, C, and B. Thus, H’s group includes H, E, C, and B.\n• I is directly connected with G and D. So one group is I, G, and D.\n• A is directly connected with F. So another group is A and F.\n\nSince the question asks, \"Who has a good relationship with B?\" we look at the group that contains B. B is in the group containing H, E, and C. Excluding B (as we list the people who have a good relationship with B), we list the remaining members in alphabetical order.\n\nAlphabetically, the names are: C, E, H.\n\nFinal Answer: C, E, H"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "From the given information, we see that C has a directly stated good relationship with A (line 3) and with F (line 1).\n\nBecause the relationships are transitive (if X is good with Y and Y is good with Z, then X is good with Z), all people who are transitively connected by \"good\" relationships with C form a group with C. In this case, C, A, and F form such a group.\n\nThus, excluding C (since we list the people who have a good relationship with C), the people in C’s group are A and F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "G",
+      "prediction": "G",
+      "correct": true,
+      "response": "Based on the given information and rules, we start by forming groups connected by transitive good relationships and then separating those that have established bad relationships.\n\nStep 1. Identify good relationships:\n• C is good with I, F, and A (statements 3, 7, 9). So we place A, C, F, I in one group.\n• J is good with E, D, and B (statements 5, 6, 11). So we place B, D, E, J in a second group.\n• H is good with G (statement 8). So H and G form a third group.\n\nStep 2. Confirm separations using bad relationships:\n• I, C (group 1) both have bad relationships with H (statements 2 and 10), keeping group 1 separate from H’s group.\n• J (group 2) has a bad relationship with H (statement 4) and I (group 1) (statement 12), so group 2 remains separate.\n• E and G are noted to have a bad relationship (statement 1), ensuring that G stays out of group 2.\n\nStep 3. Answer the question:\nWe need to list everyone who has a good relationship with H. Since H is in group {H, G}, the only person (besides H) is G.\n\nFinal Answer: G"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, G, H, I",
+      "prediction": "C, D, G, H, I",
+      "correct": true,
+      "response": "Based on the information provided, we first note B’s direct good relationships:\n\n• B and G are good  \n• B and H are good  \n• B and D are good  \n• B and I are good  \n• B and C are good  \n\nUsing the transitive property, we form groups of people who are all mutually connected through good relationships. Here, all those directly connected with B (G, H, D, I, C) are in the same group as B.\n\nAlso, note the following:\n• E has a good relationship with F, and E with A. Thus, A, E, F form another group.\n• There is a direct bad relationship between E and C, which confirms that B’s group (which includes C) and E’s group are completely separate.  \n• B and F have a bad relationship, consistent with F being in the other group.\n\nTherefore, B’s group is {B, C, D, G, H, I}.\n\nSince the question asks for everyone who has a good relationship with B (excluding B), we list these names in alphabetical order:\n\nFinal Answer: C, D, G, H, I"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, F",
+      "prediction": "B, C, D, F",
+      "correct": true,
+      "response": "We start by listing the given relationships:\n\n• A and J have a good relationship  \n• B and H have a good relationship  \n• D and G have a bad relationship  \n• A and E have a good relationship  \n• A and G have a good relationship  \n• B and C have a good relationship  \n• E and C have a bad relationship  \n• B and F have a good relationship  \n• A and I have a good relationship  \n• B and D have a good relationship  \n\nUsing the rule that if A is good with B and B is good with C, then A is also good with C, we form groups (where every person in one group has a good relationship with every other):\n\n1. Looking at A’s connections:  \n  A is good with J, E, G, and I.  \n  Thus, one group forms: Group 1 = {A, J, E, G, I}.\n\n2. Looking at B’s connections:  \n  B is good with H, C, F, and D.  \n  Thus, another group forms: Group 2 = {B, H, C, F, D}.\n\nThere are bad relationships between members of different groups (for example, D (Group 2) and G (Group 1) have a bad relationship and E (Group 1) and C (Group 2) have a bad relationship), ensuring these groupings are separate.\n\nThe question asks: Who has a good relationship with H?  \nSince H is in Group 2, everyone else in Group 2 is on good terms with H.\n\nExcluding H, the other people in Group 2 are B, C, D, and F. Arranging them in alphabetical order, we have: B, C, D, F.\n\nFinal Answer: B, C, D, F"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, H",
+      "prediction": "A, F, H",
+      "correct": true,
+      "response": "Working through the relationships step‐by‐step:\n\n1. We are told A and D have a good relationship. Also, A has a good relationship with both H and F. By the transitivity rule for good relationships (“if A has a good relationship with B, and B has a good relationship with C, then A has a good relationship with C”), the following must be true:\n  • D, H, and F all share a good relationship with A.\n  • Therefore, D is in the same “good” group as A, F, and H.\n\n2. Since a group is defined as a set of people where every person has a good relationship with every other person, D’s group consists of A, D, F, and H.\n\n3. The question asks: “Who has a good relationship with D?” (excluding D itself). Listing the other members in alphabetical order gives: A, F, H.\n\nFinal Answer: A, F, H"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, J",
+      "prediction": "B, J",
+      "correct": true,
+      "response": "We begin by noting that a “group” is a set of people where everyone has a good relationship with one another (using transitivity of good relationships). Here’s how we can sort the 10 people:\n\n1. From the given list, we see that A has a good relationship with I, D, F, and H. This means these five people are in one group:\n  Group 1: {A, D, F, H, I}\n\n2. Next, J has a good relationship with both B and E (lines 6 and 12). By transitivity, B, E, and J form a second group:\n  Group 2: {B, E, J}\n\n3. Another connection is that C has a good relationship with G (line 5), forming a third group:\n  Group 3: {C, G}\n\nThe other “bad” relationships provided reinforce that these groups are separate from one another.\n\nSince E is in Group 2, those in a good relationship with E (besides E itself) are the other members of Group 2: B and J.\n\nFinal Answer: B, J"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F, H, J",
+      "prediction": "C, F, H, J",
+      "correct": true,
+      "response": "Based on the provided information and applying the transitive rules:\n\n1. From A's relations we see that A is in a group with E, I, D, and B.\n2. Separately, C is in a group with F, G, H, and J.\n3. Since E and C are stated to have a bad relationship, these two groups remain split and do not mix.\n\nTherefore, the complete group for G (excluding G) is: C, F, H, and J.\n\nFinal Answer: C, F, H, J"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, F, H, I",
+      "prediction": "C, D, F, H, I",
+      "correct": true,
+      "response": "Based solely on the given information and the rules, let's process the relationships:\n\n1. C has a good relationship with F, G, H, D, and I. By transitivity, these individuals are all in the same group as C.\n2. Since groups are defined as sets of people with good relationships among each other, the group containing C is {C, F, G, H, D, I}.\n3. Therefore, every person in this group has a good relationship with G.\n4. We exclude G (as the question asks for others who have a good relationship with G), so the remaining people in the group are C, D, F, H, and I.\n5. Listed in alphabetical order, these names are: C, D, F, H, I.\n\nFinal Answer: C, D, F, H, I"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "We start by listing the provided information:\n\n1. Good relationships:\n • B and G\n • B and C\n • E and D\n • A and F\n • B and H\n\n2. Bad relationships:\n • A and C\n • A and H\n • E and F\n • A and E\n • C and E\n\nRecall that a “group” is defined as a set of people where every person has a good relationship with every other person (via direct and transitive good relationships).\n\nFrom the information:\n• Person A has a direct good relationship only with F.\n• Although F might be related to others, there is no additional information linking F with someone else through a good relationship.\n• Also, note that even though B, C, G, and H form a group with good relationships (B is good with C, G, and H through transitivity), the bad relationship between A and C (and A and H) prevents A from being in that group.\n• Similarly, the group {E, D} is separate, and since A and E have a bad relationship, A is not a member.\n\nThus, the only person that has a good relationship with A is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "From the given information, we first list out the direct relationships:\n\n1. C and H have a bad relationship.\n2. H and B have a good relationship.\n3. H and I have a good relationship.\n4. C and A have a good relationship.\n5. H and E have a bad relationship.\n6. E and F have a good relationship.\n7. F and H have a bad relationship.\n8. H and G have a good relationship.\n9. C and D have a good relationship.\n10. A and G have a bad relationship.\n11. C and E have a bad relationship.\n\nUsing the transitivity rules:\n\n• If two people have a direct good relationship, then they must be in the same group.\n• If a person (say X) has a bad relationship with Y, and X has a good relationship with Z, then Y and Z must have a bad relationship.\n\nAnalyzing the provided data:\n• We see three clusters forming:\n  – Group A: H, B, I, and G (because H has good relationships with B, I, and G)\n  – Group B: C, A, and D (because C is good with A and D)\n  – Group C: E and F (because E is directly good with F)\n\nAdditionally, we have multiple conflicts:\n• H has a bad relationship with E, and by the second rule, since H is good with B, I, and G, then E must be bad with B, I, and G.\n• Similarly, C is in a good relationship with A and D; since C and E are bad, then E must be bad with A and D.\n\nTherefore, E is in a group only with F.\n\nThe question asks: Who has a good relationship with E?\nSince E’s group contains only E and F, the only person (different from E) who has a good relationship with E is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F, G",
+      "prediction": "B, E, F, G",
+      "correct": true,
+      "response": "Based on the provided information, we first determine the groups formed by good relationships using transitivity:\n\n• Good relationships given:\n - B and G\n - B and E\n - B and C\n - B and F\n - H and A\n - H and D\n\n• By transitivity, the following groups emerge:\n Group 1: B, C, E, F, G (since B is connected to C, E, F, and G)\n Group 2: A, H, D (since H is connected to A and D)\n\n• Bad relationships such as H and C and E and H further enforce that Group 1 and Group 2 are completely separate.\n\nSince C is in Group 1, everyone in Group 1 (except C herself) has a good relationship with C. In alphabetical order, these people are: B, E, F, G.\n\nFinal Answer: B, E, F, G"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G, H, I",
+      "prediction": "D, G, H, I",
+      "correct": true,
+      "response": "Based on the given facts and the rules, we work step‐by‐step:\n\n1. The facts directly state that A has a good relationship with G, H, D, and I.\n\n2. According to rule 1 (good relationships are transitive) and rule 3 (a group is a set where every person is good with every other), all people who have a direct good relationship with A belong to A’s group. There are no further chains linking A to any others beyond these.\n\n3. Therefore, the people who have a good relationship (directly or transitively in the same group) with A are D, G, H, and I.\n\nFinal Answer: D, G, H, I"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "We start by grouping people based on their good relationships (remembering that good relationships are transitive).\n\n1. Given that A has a good relationship with C, E, and I, by transitivity A, C, E, and I form one group.\n2. Next, H has a good relationship with both B and D, so H, B, and D are in a separate group.\n3. We are told that F and G have a good relationship, which means they are together in their own group. (Any one who has a good relationship directly or indirectly belongs to the same group.)\n4. Cross-checking, we see:\n   - F, I and C are explicitly noted to have bad relationships (F–I and C–F are bad), preventing group mixing between the group {F, G} and the group {A, C, E, I}.\n   - Similarly, G’s group is kept separate because G has a bad relationship with H (and by extension, with all in H’s group).\n\nSince G is only given to have a direct good relationship with F, G’s good relationship group is {F, G}. Excluding G itself, only F is in G’s good relationship circle.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "Analyzing the information:\n\n1. Directly, we know:\n • E and G have a good relationship.\n • E and B have a good relationship.\n\n2. Using the transitive rule for good relationships, people who are mutually good (directly or via intermediaries) form a group. Here, the information groups people as follows:\n • One group is {A, D, F} since A is good with D and F.\n • Another group is {E, B, G} because E is directly good with B and G (and by transitivity, B and G are good with each other).\n • A third group is {C, H} (since C is good with H).\n\n3. Since groups are defined by everyone having a good relationship with everyone else in the group, E’s group is {E, B, G}.\n\nThus, everyone (besides E itself) who has a good relationship with E is B and G.\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, F, H, I",
+      "prediction": "E, F, H, I",
+      "correct": true,
+      "response": "We first note the directly given good relationships involving D:\n• D and I have a good relationship.\n• D and F have a good relationship.\n• D and H have a good relationship.\n• D and E have a good relationship.\n\nUsing the rule that “if A has a good relationship with B and B has a good relationship with C, then A has a good relationship with C,” any person who is good with someone already good with D would also be in the same “good” group. In this case, none of the relationships provided add any new person to D’s group beyond I, F, H, and E.\n\nThus, the people who have a good relationship with D (besides D itself) are:\nE, F, H, I\n\nFinal Answer: E, F, H, I"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, F",
+      "prediction": "B, D, F",
+      "correct": true,
+      "response": "By examining the provided relationships and using the transitivity rules for good relationships, we determine the groups as follows:\n\n1. G has a good relationship with B, D, and F (directly stated).\n2. By transitivity, all people directly stated to be good with G form one group: {G, B, D, F}.\n3. Other given relationships (such as A with I, C, E, and H) form a different group. Furthermore, the bad relationship between D (in G’s group) and I (in the other group) confirms that these two groups are completely separate.\n\nThus, the people who have a good relationship with G (excluding G themself) are those in G’s group: B, D, and F.\n\nFinal Answer: B, D, F"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, I",
+      "prediction": "A, E, I",
+      "correct": true,
+      "response": "From the provided rules, people who have a good relationship with F are those that belong to F’s \"group\" (i.e. all people connected to F through one or more good relationships).\n\nWe know directly that:\n• F and E have a good relationship.\n• F and I have a good relationship.\n• F and A have a good relationship.\n\nThere is no information that adds anyone else to F’s group through transitivity. Thus, F’s group (excluding F) is just A, E, and I.\n\nFinal Answer: A, E, I"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F",
+      "prediction": "D, E, F",
+      "correct": true,
+      "response": "Final Answer: D, E, F"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "Based on the provided relationships and rules, we first determine the groups formed by transitivity:\n\n1. A’s good relationships: A has a good relationship with H, D, F, E, and C. This makes one group: {A, H, D, F, E, C}.\n\n2. I’s good relationships: I has a good relationship with G and B. This forms another group: {I, G, B}.\n\nSince C (in the first group) and I (in the second group) have a bad relationship, these groups remain entirely separate, meaning everyone in one group has a bad relationship with everyone in the other.\n\nTherefore, the people who have a good relationship with I are those in I’s group excluding I, which are B and G (listed alphabetically).\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, E, G",
+      "prediction": "A, C, E, G",
+      "correct": true,
+      "response": "Let's determine the groups based on the given information and the defined rules.\n\n1. A and B have a good relationship.\n2. A and G have a good relationship.\n3. A and E have a good relationship.\n4. A and C have a good relationship.\n\nSince good relationships are transitive, everyone connected by a chain of good relations forms a group. Therefore, A, B, C, E, and G all belong to the same group.\n\nThe rest of the given information shows:\n• C and H have a bad relationship (so C and H are in different groups).\n• H and D have a good relationship, and H and F have a good relationship, forming their own group from D, F, and H.\n• Additionally, B and F have a bad relationship, which confirms that B (in the A-group) and F (in the H-group) are in separate groups.\n\nThus, the group containing B is {A, B, C, E, G}.\n\nFor the question, \"Who has a good relationship with B?\" we list all people in B’s group (except B) in alphabetical order:\nA, C, E, G\n\nFinal Answer: A, C, E, G"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, G, H",
+      "prediction": "A, E, G, H",
+      "correct": true,
+      "response": "Final Answer: A, E, G, H"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "We start by grouping people based on the given good relationships and the transitivity rule:\n\n• From “B and F have a good relationship” we know F and B are in the same group.\n• “B and G have a good relationship” puts G in the same group as B (and therefore F).\n• Separately, A has good relationships with C, D, E, and H (via “A and C have a good relationship”, “A and D have a good relationship”, “A and E have a good relationship”, and “A and H have a good relationship”). So A, C, D, E, and H form another group.\n\nNote that “B and C have a bad relationship” and “C and F have a bad relationship” confirm that the two groups are separate.\n\nSince F’s group consists of B, F, and G, the people who have a good relationship with F are the other members of F’s group: B and G.\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "We begin by placing people into groups based on the given relationships and applying the rules of transitivity:\n\n1. A and G have a good relationship, so A and G are in the same group.\n2. A and F have a good relationship, so F is also in A’s group, which includes G.\n3. On the other hand, relationships between A and B, and A and C are bad, so B, C and their connected people are grouped separately.\n\nSince G is in the same group as A and F, G has a good relationship with A and F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, F",
+      "prediction": "A, E, F",
+      "correct": true,
+      "response": "To solve the problem, we first note that the rules imply that if two people have a good relationship (directly or by transitivity), they belong to the same group. Conversely, if there’s a bad relationship between any two people from different groups, then everyone in one group is bad with everyone in the other group.\n\nWe have 9 people (A to I) and the following information:\n\n• E and G have a good relationship  \n• E and A have a good relationship  \n• B and E have a bad relationship  \n• B and C have a good relationship  \n• B and D have a good relationship  \n• E and C have a bad relationship  \n• B and H have a good relationship  \n• E and F have a good relationship  \n• B and I have a good relationship\n\nStep 1. Group formation from the good relationships:\n• From “E and G”, “E and A”, and “E and F”, we get that E, G, A, and F form a group (since good relationships are transitive).\n• From “B and C”, “B and D”, “B and H”, and “B and I”, we see that B, C, D, H, and I form another group.\n\nStep 2. Consistency with bad relationships:\n• The bad relationship between B and E confirms that the two groups must be separate.\n• Similarly, “E and C have a bad relationship” also supports that E (in group with G, A, and F) cannot be in the same group as C (in B’s group).\n\nStep 3. Identify who has a good relationship with G:\n• G is in the group with A, E, and F.\n• Excluding G, his good relationships (by being in the same group) are with A, E, and F.\n\nSorted in alphabetical order, they are: A, E, F.\n\nFinal Answer: A, E, F"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, J",
+      "prediction": "D, J",
+      "correct": true,
+      "response": "Let's determine which group C belongs to using the given relationships and the rules:\n\n1. J and C have a good relationship. So C and J are in the same group.\n2. J and D have a good relationship. By transitivity, C, J, and D are in the same group.\n\nNone of the provided good relationships connect C to any other people. Thus, the group that includes C is {C, D, J}.\n\nThe question asks: Who has a good relationship with C? In the group, excluding C, the people are D and J.\n\nFinal Answer: D, J"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "H",
+      "prediction": "H",
+      "correct": true,
+      "response": "We start by grouping people whose relationships are \"good\" (direct or by transitivity). The given good edges are:\n\n• H and G have a good relationship → Group 1: {G, H}  \n• C and A have a good relationship → Group 2: {A, C}  \n• B and F have a good relationship → Group 3: {B, F}  \n• B and I have a good relationship → Group 3 becomes {B, F, I}  \n• B and E have a good relationship → Group 3 becomes {B, E, F, I}  \n• B and D have a good relationship → Group 3 becomes {B, D, E, F, I}\n\nThus, by \"good\" transitivity we have:\n\n• Group 1: {G, H}  \n• Group 2: {A, C}  \n• Group 3: {B, D, E, F, I}\n\nNext, the “bad” relationships show that these groups are completely separate. For example, G (in Group 1) is in a bad relationship with I (in Group 3), and H (in Group 1) is in a bad relationship with C (in Group 2). This confirms that no cross-group good relationships exist.\n\nSince G is in Group 1, the only person that has a good relationship with G is the other member of Group 1, which is H.\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, G, H",
+      "prediction": "B, C, D, G, H",
+      "correct": true,
+      "response": "From the given information, we start with the direct good relationships that A has:\n\n• A and C have a good relationship.  \n• A and B have a good relationship.  \n• A and D have a good relationship.  \n• A and G have a good relationship.  \n• A and H have a good relationship.\n\nBy rule 4, people are in the same group if and only if they have a good relationship with each other (directly or by transitivity). Since these direct connections already establish a group with A (namely, A, B, C, D, G, and H), those are the people who have a good relationship with A. \n\nOther individuals such as J, F, E, and I are part of a different set of relationships that do not connect with A’s group through any chain of good relationships. In fact, note that C and J have a bad relationship, which further confirms that J is not in A’s group.\n\nThus, the people who have a good relationship with A are:\n\nB, C, D, G, H\n\nFinal Answer: B, C, D, G, H"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, H",
+      "prediction": "B, E, H.",
+      "correct": false,
+      "response": "We start by finding groups of people linked by good relationships. A “group” is such that every member has a good relationship with every other member. Given the rules, if one person in the group is in a good relationship with another, and that person is in a good relationship with a third person, then the first and third persons are also in a good relationship.\n\nStep 1. List the direct relationships:\n\n• A has a good relationship with G, D, F, and I.\n• H has a good relationship with C, B, and E.\n• However, note that A and B have a bad relationship and G and C have a bad relationship.\n\nStep 2. Determine the groups:\n\n• Because A is directly good with G, D, F, and I, one group is {A, D, F, G, I}.\n  – Also note that because A is in a bad relationship with B, the entire group containing A cannot be in a good relationship with someone from another group.\n\n• Since H is good with C, and also with B and E, by the transitivity of good relationships, everyone in H’s circle is good with each other. Thus another group is {B, C, E, H}.\n\nIt is also confirmed by the provided bad relationships: A and B are bad and G and C are bad, so the groups remain separate.\n\nStep 3. Answer the question:\n\nThe question asks: “Who has a good relationship with C?”\n\nC is in the group {B, C, E, H}. Everyone in his group is in a good relationship with each other. Removing C, the people with a good relationship with C are: B, E, and H.\n\nList these names in alphabetical order: B, E, H.\n\nFinal Answer: B, E, H."
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "From the provided relationships and applying the given rules:\n\n1. A, F, C, D, and B have mutual good relationships (forming one group).\n2. H, G, I, and E have mutual good relationships (forming another group).\n\nSince I is in the second group, everyone in that group (except I) has a good relationship with I. Listed in alphabetical order, these people are: E, G, H.\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H, I",
+      "prediction": "C, E, H, I",
+      "correct": true,
+      "response": "The relevant relationships are:\n\n• C and G have a good relationship.\n• C and I have a good relationship.\n• C and E have a good relationship.\n• C and H have a good relationship.\n\nBy transitivity, since G is in a good relationship with C, and C is in a good relationship with E, H, and I, it follows that G is in a good relationship with C, E, H, and I.\n\nFinal Answer: C, E, H, I"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, E",
+      "prediction": "A, B, E",
+      "correct": true,
+      "response": "We first analyze the given relationships and use the transitivity rules.\n\n1. The given “good” relationships are:\n  • C and J\n  • E and B\n  • E and D\n  • C and I\n  • C and G\n  • C and F\n  • C and H\n  • E and A\n\n2. The given “bad” relationships are:\n  • E and C\n  • B and C\n\n3. Notice that since E has a bad relationship with C and a good relationship with D, rule 2 implies that C (and everyone in C’s “good” group) has a bad relationship with D. This means D does not belong to the same group as C, J, I, G, F, and H.\n\n4. Now, let’s form the groups based on transitivity of “good” relationships.\n  • One group (Group 1) comes from C’s connections: {C, J, I, G, F, H}.\n  • The other group (Group 2) involves E’s connections. We know:\n   – E and D are good.\n   – E and B are good.\n   – E and A are good.\n  By transitivity, D, B, and A must also be good with each other. So Group 2 is {A, B, D, E}.\n\n5. The question asks: “Who has a good relationship with D?” This means we list all people in the same group as D except D.\n\n6. From Group 2, the people are A, B, and E.\n\nListing them in alphabetical order gives: A, B, E.\n\nFinal Answer: A, B, E"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G, H",
+      "prediction": "D, G, H",
+      "correct": true,
+      "response": "From the given information, we start with the direct good relationships of C: \n\n• C and H have a good relationship  \n• C and G have a good relationship  \n• C and D have a good relationship  \n\nAccording to the rules, good relationships are transitive: if A and B have a good relationship and B and C have a good relationship, then A and C are also in the same group, meaning they share a good relationship. Thus, the group including C is defined by those who are directly or indirectly connected through good relationships.\n\nHere, the only persons connected to C through good relationships are D, G, and H. (Other relationships provided do not add anyone else to C’s group.)\n\nArrange the names in alphabetical order.\n\nFinal Answer: D, G, H"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, D, F",
+      "prediction": "A, D, F",
+      "correct": true,
+      "response": "Based on the given information:\n\n• A and G have a good relationship (so A and G are in the same group).\n\n• A also has a good relationship with D and F, which means D and F are in the same group as A (and thus G).\n\n• Transitivity tells us that everyone in this group (A, D, F, and G) shares a good relationship with one another.\n\nTherefore, besides G, the people who have a good relationship with G are A, D, and F.\n\nFinal Answer: A, D, F"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, E, F",
+      "prediction": "B, C, E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we first group people based on the transitive property of good relationships.\n\n1. From the given information, we know:\n   - B and G have a good relationship.\n   - B also has good relationships with C, F, and E.\n   Thus, by transitivity, G shares a good relationship with B, C, F, and E.\n\n2. Any others connected to G by good relationships?\n   - There is no additional information linking G directly or transitively to any other person except those in the set {B, C, F, E}.\n\n3. Therefore, the people who have a good relationship with G are: B, C, E, and F.\n\nFinal Answer: B, C, E, F"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D",
+      "prediction": "B, C, D",
+      "correct": true,
+      "response": "Based on the provided relationship information and the rules:\n\n1. It is given that C and I have a good relationship.\n2. Since good relationships are transitive, everyone who is in a good relationship with C is also in a good relationship with I.\n3. The information states that C has a good relationship with B and with D.\n4. Thus, by transitivity, I has a good relationship with B and D as well.\n5. Including the direct relationship with C, the complete list of people who have a good relationship with I is B, C, and D.\n\nFinal Answer: B, C, D"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "Directly, J is in a good relationship with F. Here’s how we determine it based on the rules and given information:\n\n1. J and F are stated to have a good relationship.\n2. There are no additional good-relations that connect J or F to anyone else. Other connections (like I with D, I with A, I with B; C with E, H, G) form different groups, and in fact some of these individuals have bad relationships with J (such as B and H).\n\nTherefore, the only person who ends up in the same group as J (everyone mutually in good relationships) is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "I",
+      "prediction": "I",
+      "correct": true,
+      "response": "We start by listing the given relationships:\n\n1. G and I have a bad relationship  \n2. C and H have a bad relationship  \n3. C and D have a bad relationship  \n4. C and I have a good relationship  \n5. E and D have a bad relationship  \n6. A and F have a good relationship  \n7. D and G have a good relationship  \n8. A and H have a good relationship  \n9. A and B have a good relationship  \n10. A and E have a good relationship  \n11. E and C have a bad relationship  \n\nAccording to the rules, a “group” is a set of people that are all connected by good relationships (directly or through transitivity). Let’s determine C’s group.\n\n• We know directly from (4) that C and I have a good relationship. So I is in C’s group.  \n• C has a bad relationship with H (2), with D (3), and with E (11), so they cannot be in C’s group.  \n• There are no additional relationships provided that connect I or C via good relationships to others (for example, there’s no good relationship connecting I to someone else besides C).\n\nThus, C’s group only includes C and I. Since the question asks for all people who have a good relationship with C (excluding C themself), the only answer is I.\n\nFinal Answer: I"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H, I",
+      "prediction": "C, E, H, I",
+      "correct": true,
+      "response": "Based on the information and rules provided, let's determine the groups:\n\n1. The following “good” relationships place people in the same group:\n   • C is good with H, E, I, and J, forming one group: {C, E, H, I, J}.\n   • F and G are good with each other, forming the group: {F, G}.\n   • A is good with B and D (since A–B and A–D are good), forming the group: {A, B, D}.\n\n2. Now, the “bad” relationships indicate that people in one group are bad with everyone in certain other groups:\n   • B (in {A, B, D}) is bad with F (in {F, G}) and with C (in {C, E, H, I, J}).\n   • F (in {F, G}) is bad with I (in {C, E, H, I, J}).\n   • D (in {A, B, D}) is bad with E (in {C, E, H, I, J}).\n   • C (in {C, E, H, I, J}) is bad with F (in {F, G}).\n\n   These confirm that the three groups are completely separate and that every person has a good relationship with everyone in their own group.\n\n3. Since J is in the group {C, E, H, I, J}, the people who have a good relationship with J (all direct or via transitivity) are the other members of the group.\n\nListing these names in alphabetical order (and excluding J itself), the people are: C, E, H, I.\n\nFinal Answer: C, E, H, I"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E",
+      "prediction": "B, E",
+      "correct": true,
+      "response": "We start by forming groups where every person is in a good relationship with every other person (using transitivity):\n\n1. From the facts:\n  – A has a good relationship with G, F, H, and C.\n  This connects A, G, F, H, and C together in one group.\n\n2. Also, we know:\n  – E has a good relationship with D and B.\n  So E, D, and B form another group.\n\n3. Note that the provided bad relationships (B with H and C with E) reinforce that these two groups are completely separate.\n\nSince D is in the group with E and B, the people who have a good relationship with D are the other members of that group.\n\nFinal Answer: B, E"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, H",
+      "prediction": "A, B, H",
+      "correct": true,
+      "response": "We first organize the given relationships into two groups based on the good-relationship transitivity rule.\n\n• B and F have a good relationship.\n• B and A have a good relationship.\n• B and H have a good relationship.\n\nSince good relationships are transitive, A, B, F, and H all share good relationships with one another. \n\nNext, we see:\n• C has good relationships with E, I, D, and G (from the relationships C–E, C–I, C–D, and C–G). Thus, C, D, E, I, and G form another group.\n\nAdditional provided details confirm the separation:\n• H and C have a bad relationship and E and H have a bad relationship, meaning the two groups are distinct.\n\nSince F is in the first group, F has a good relationship with everyone in his group. Excluding F itself, the people with a good relationship with F are A, B, and H.\n\nFinal Answer: A, B, H"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, F, G, H",
+      "prediction": "B, C, F, G, H",
+      "correct": true,
+      "response": "We start by noting the direct good relationships that involve A:\n\n• A and F have a good relationship  \n• A and B have a good relationship  \n• A and G have a good relationship  \n• A and C have a good relationship  \n• A and H have a good relationship  \n\nAccording to the rules, any person who is directly or indirectly connected through a chain of good relationships with A is in the same “group” as A. In this case, there are no additional connections that extend A’s group without conflict. (For example, although J has good relationships with D, E, and I, there is a conflict because C and J have a bad relationship—and since A and C are good, A cannot be in a good relationship with J.)\n\nThus, the group that has a good relationship with A includes: B, C, F, G, and H.\n\nAlphabetically ordered, the people who have a good relationship with A are: B, C, F, G, H.\n\nFinal Answer: B, C, F, G, H"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, I",
+      "prediction": "E, I",
+      "correct": true,
+      "response": "Based on the provided information, first group the people using the transitive property of good relationships.\n\n• E, F, and I have good relationships with one another (since E and I are good and E and F are good).\n\n• Other groups, such as {C, D, G, H} and {A, B}, received no connection to F.\n\nThus, the only people with a good relationship to F are those in F’s group (other than F himself).\n\nFinal Answer: E, I"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, G, J",
+      "prediction": "C, G, J",
+      "correct": true,
+      "response": "We start by forming groups based on the good relationship connections and then check for any conflicts:\n\n1. The following relationships connect certain people:\n   • J and E (good)\n   • J and C (good)\n   • J and G (good)\n   • A and H (good)\n   • A and F (good)\n   • A and D (good)\n   • A and I (good)\n   • A and B (good)\n   \n2. Using the property of transitivity:\n   • E, J, C, and G form one group (since J is good with E, C, and G, and by transitivity they all share good relationships with one another).\n   • A, H, F, D, I, B form a separate group.\n\n3. The given bad relationships help confirm these separations:\n   • B and C have a bad relationship. Since B is in A’s group and C is in J’s group, these groups must be separate.\n   • H and J have a bad relationship further confirms that the A group and the J group are separate.\n\n4. The question asks: \"Who has a good relationship with E?\" This means we list all the people in E’s group (excluding E) in alphabetical order. E is in the group {E, J, C, G}.\n\n5. Excluding E, the people with a good relationship with E are C, G, and J.\n\nFinal Answer: C, G, J"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "Let's examine the given relationship information:\n\n• Direct good relationships involving C:\n – C and H\n – C and E\n – C and G\n\nAccording to the rules, any pair connected by a good relationship (directly or transitively) belong to the same group. Here, C is directly connected with H, E, and G, so they are in the same group.\n\nThus, the people who have a good relationship with C are E, G, and H.\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, E",
+      "prediction": "A, B, C, E",
+      "correct": true,
+      "response": "G is in the same group as A, B, C, and E because:\n\n• A and G have a good relationship.\n• Also, A has a good relationship with B, C, and E.\n• Since a good relationship is transitive, G is in the same group as A, B, C, and E.\n\nListed alphabetically (excluding G itself), the answer is: A, B, C, E.\n\nFinal Answer: A, B, C, E"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "We start by noting the only explicitly stated good relationship involving G is between F and G (given: F and G have a good relationship). By the transitive rule for good relationships, if F were good with anyone else, then G would be as well. However, every other relationship involving F is listed as bad. \n\nThus G’s “good group” (the set of people who have a good relationship with G, directly or by transitivity) consists solely of F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, E",
+      "prediction": "B, C, E",
+      "correct": true,
+      "response": "We start by identifying the \"good\" relationships among the 8 people:\n\n• B and C have a good relationship.\n• B and H have a good relationship.\n• B and E have a good relationship.\n\nBecause good relationships are transitive (all persons with a good relationship are in the same group), we can form a group that includes B, C, E, and H.\n\nThus, the people who have a good relationship with H (other than H itself) in this group are: B, C, and E.\n\nFinal Answer: B, C, E"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F, H",
+      "prediction": "C, F, H.",
+      "correct": false,
+      "response": "From the information provided, let's first determine which people are in the same \"good\" group as A. Recall:\n\n• Good relationships are transitive.\n\n• People are in the same group if and only if they have a good relationship (directly or through transitivity).\n\nThe given relationships are:\n1. B and D have a good relationship.\n2. C and H have a good relationship.\n3. B and H have a bad relationship.\n4. H and E have a bad relationship.\n5. C and A have a good relationship.\n6. C and F have a good relationship.\n7. B and I have a good relationship.\n8. B and E have a good relationship.\n9. B and G have a good relationship.\n\nStep 1: Form groups using the transitive “good” relationships.\n• Since C and A have a good relationship (item 5), A and C are in the same group.\n• C and F have a good relationship (item 6), so F is grouped with A and C.\n• C and H have a good relationship (item 2), so H is also with A, C, and F.\n\nThis gives us Group 2: {A, C, F, H}.\n\nStep 2: Confirm that the other information is consistent.\n• The remaining relationships (B with D, I, E, and G in items 1, 7, 8, 9) form another group: {B, D, I, E, G}.\n• The bad relationships (B and H, and H and E in items 3 and 4) separate these two groups.\n  \nSince A is in Group 2, everyone with a good relationship with A is in Group 2 (excluding A itself).\n\nStep 3: List the people in Group 2 besides A in alphabetical order.\nThe people are C, F, and H.\n\nFinal Answer: C, F, H."
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, I",
+      "prediction": "D, I",
+      "correct": true,
+      "response": "We begin by analyzing the relationships and using the transitivity rules provided.\n\nStep 1. List the given relationships:\n• B and I: bad\n• E and B: good\n• I and D: good\n• E and F: bad\n• C and E: bad\n• C and F: bad\n• B and H: bad\n• H and A: good\n• H and G: good\n• H and C: good\n• I and F: good\n\nStep 2. Form groups based on “good” ties (remember that every pair within a group has a good relationship):\n\n• From I and F (good), and I and D (good), we group F, I, D together.\n  – Thus, Group 1: {F, I, D}\n\n• E and B are good, so they form a group.\n  – Group 2: {E, B}\n\n• H is good with A, G, and C, so these form a group.\n  – Group 3: {H, A, G, C}\n\nStep 3. Confirm cross-group bad relationships:\n• B and I are bad (Group 2 and Group 1) – consistent.\n• E and F are bad (Group 2 and Group 1) – consistent.\n• C and F are bad (Group 3 and Group 1) – consistent.\n• B and H are bad (Group 2 and Group 3) – consistent.\n• C and E are bad (Group 3 and Group 2) – consistent.\n\nStep 4. Answer the question:\nThe question asks: Who has a good relationship with F?\nSince F is in Group 1 with I and D (and no other person is connected via “good”), F’s good relationships are with I and D.\n\nOrdering alphabetically: D, I\n\nFinal Answer: D, I"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, E, F",
+      "prediction": "A, B, E, F",
+      "correct": true,
+      "response": "Based on the relationships provided:\n\n1. A and D have a good relationship.\n2. A and B have a good relationship.\n3. A and F have a good relationship.\n4. A and E have a good relationship.\n\nSince good relationships are transitive, anyone with a good relationship to A is in the same group as D. Thus, the group containing D includes A, B, F, and E (with D already being part of the group).\n\nTherefore, the people who have a good relationship with D (excluding D) are:\nA, B, E, F\n\nFinal Answer: A, B, E, F"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, F, G, I, J",
+      "prediction": "A, C, F, G, I, J",
+      "correct": true,
+      "response": "We first note the following from the relationship information:\n\n• A, B, C, F, G, I, and J are all directly or indirectly connected by good relationships:\n – A is in a good relationship with B, C, F, G, I, and J.\n – Since good relationships are transitive, everyone connected to A by a good relationship is in the same “group.”\n – Therefore, B (as a member of A’s group) must also have a good relationship with C, F, G, I, and J (along with A).\n\n• The remaining people (D, E, and H) are not in A’s group and have their own relationships, so they are not included.\n\nThus, the people who have a good relationship with B are A, C, F, G, I, and J.\n\nFinal Answer: A, C, F, G, I, J"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, G, H, I",
+      "prediction": "B, C, G, H, I",
+      "correct": true,
+      "response": "Working from the given information, we can deduce groups of people with mutual good relationships:\n\n• From \"B and H have a good relationship\", \"B and G have a good relationship\", \"B and I have a good relationship\", \"B and C have a good relationship\", and \"B and J have a good relationship,\" we see that B, H, G, I, C, and J are all connected by good relationships. Because good relationships are transitive (if X is good with Y and Y is good with Z, then X is good with Z), everyone in this set must be on good terms with every other.\n\n• The remaining direct facts (like A’s relationships with D, E, and C; or E and F’s good relationship, etc.) serve to confirm that the people do not belong to this group because of bad relationships across groups.\n\nSince J is in the group containing B, C, G, H, I, these are exactly the people who have a good relationship with J.\n\nArranged in alphabetical order, the names are: B, C, G, H, I.\n\nFinal Answer: B, C, G, H, I"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G",
+      "prediction": "D, G",
+      "correct": true,
+      "response": "We begin by noting the eight people: A, B, C, D, E, F, G, and H.\n\nStep 1. Identify Direct Relationships:\n• C and G have a bad relationship.\n• C and H have a bad relationship.\n• A and C have a good relationship.\n• H and G have a good relationship.\n• A and E have a good relationship.\n• H and D have a good relationship.\n• A and B have a good relationship.\n• A and F have a good relationship.\n\nStep 2. Form Groups Involving Good Relationships (using transitivity):\n• A is directly connected in good relationships with C, E, B, and F. Because good relationships are transitive, these people form one group: {A, B, C, E, F}.\n• H is directly connected with G and D (H and G; H and D). Thus, H, G, and D form another group: {H, G, D}.\n\nStep 3. Verify Separation by Bad Relationships:\n• C and H have a bad relationship. Since C is in group {A, B, C, E, F} and H is in group {H, G, D}, this confirms that these two groups are separate. Additionally, C and G also have a bad relationship, which is consistent with these groupings.\n\nStep 4. Answer the Question:\nThe question asks who has a good relationship with H. Since H is in the group {H, G, D}, the people who have a good relationship with H (other than H herself) are D and G.\n\nFinal Answer: D, G"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, F, I",
+      "prediction": "B, C, D, F, I",
+      "correct": true,
+      "response": "We start with the information that B and G have a good relationship. According to the rules, if two people share a good relationship, then they and all others connected by a chain of good relationships form the same group.\n\nGiven the following good relationships:\n• B and C\n• B and D\n• B and F\n• B and I\n• B and G\n\nWe see that B, C, D, F, I, and G are all in the same group. Therefore, every person in this group (except G itself) has a good relationship with G.\n\nThe alphabetical order of these names is: B, C, D, F, I.\n\nFinal Answer: B, C, D, F, I"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, F",
+      "prediction": "C, E, F",
+      "correct": true,
+      "response": "We first list all the given pieces of information:\n\n1. H and D have a good relationship.\n2. F and J have a bad relationship.\n3. C and A have a good relationship.\n4. E and J have a bad relationship.\n5. E and G have a bad relationship.\n6. J and I have a good relationship.\n7. H and B have a good relationship.\n8. C and F have a good relationship.\n9. C and E have a good relationship.\n10. G and J have a bad relationship.\n11. H and G have a good relationship.\n12. C and H have a bad relationship.\n\nRemember these two key rules:\n• Good relationships are transitive: If X and Y are good and Y and Z are good, then X and Z are good.\n• People in the same group share good relationships with each other, and groups are separate by bad relationships.\n\nStep 1. Identify groups based on the good-relationship chains:\n\n• From (3), (8), and (9) we know:\n  C and A are good,\n  C and F are good,\n  C and E are good.\n So A, C, F, and E all share a good relationship (by transitivity). Call this Group 1.\n\n• From (1), (7) and (11):\n  H and D are good,\n  H and B are good,\n  H and G are good.\n Thus B, D, G, and H form another group. (Also note (12) states C and H have a bad relationship—this confirms that H is in a separate group from Group 1.)\n\n• From (6):\n  J and I are good.\n They form Group 3.\n Also, the bad relationships (2), (4), and (10) ensure that J is not in Group 1 or Group 2.\n\nStep 2. Answer the specific question:\nThe question is: “Who has a good relationship with A?”\n\nSince A is in Group 1 (which consists of A, C, E, F), all other people in Group 1 have a good relationship with A. Excluding A, these are:\n  C, E, and F\n\nListing them in alphabetical order gives: C, E, F\n\nFinal Answer: C, E, F"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "Based on the provided relationships and the transitivity rules:\n\n1. From the information, we know directly that:\n   • C and A have a good relationship.\n   • C and F have a good relationship.\n   • C and H have a bad relationship.\n   • C and E have a bad relationship.\n\n2. The transitive rules imply that if two people have a good relationship with C (and with each other through C), they form a group. Here, A, C, and F are connected through good relationships, forming one group.\n\n3. Since groups are completely separated by bad relationships and C is in a group with A and F, the only people who have a good relationship with C are those in C’s group (except C itself).\n\n4. Therefore, the people who have a good relationship with C are A and F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, G",
+      "prediction": "D, E, G",
+      "correct": true,
+      "response": "We first note that a “group” is a set where every member has a good relationship with every other member, and that these relationships are transitive. Let’s analyze the given relationships:\n\n• D and G have a good relationship.\n• D and E have a good relationship.\n• D and F have a good relationship.\n\nBecause of transitivity, D’s good relationships mean that G, E, and F are also mutually good with one another. So, we have a group that includes D, E, F, and G.\n\nOther provided relationships help us form the additional groups (but they don’t affect the group containing F):\n\n• C and B have a good relationship → Group: {B, C}  \n• H and A have a good relationship → Group: {A, H}  \n\nThe remaining relationships (e.g., A and D have a bad relationship, H and E have a bad relationship, etc.) confirm that these groups are separate.\n\nSince F is in the group {D, E, F, G}, everyone in that group (except F) has a good relationship with F. Listing those names in alphabetical order gives:\n\nD, E, G\n\nFinal Answer: D, E, G"
+    }
+  ]
+}

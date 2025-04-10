@@ -97,7 +97,7 @@ def log_token_cost(model, input_tokens=0, output_tokens=0, total_tokens=None):
         os.rename(temp_file, log_file)
 
 
-def get_chat_response(model, system_message, messages, temperature=0.001, max_retries=3):
+def get_chat_response(model, system_message, messages, temperature=0.001, max_retries=3, use_batch_api=0):
     """
     Get response from a model with multi-turn conversation history
     
@@ -107,6 +107,7 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
         messages: list of message dicts with 'role' and 'content'
         temperature: sampling temperature
         max_retries: maximum number of retry attempts on API errors
+        use_batch_api: whether to use batch API for OpenAI models (1=yes, 0=no)
     
     Returns:
         model response as string
@@ -221,88 +222,108 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 formatted_messages = [{"role": "system", "content": system_message}]
                 formatted_messages.extend(messages)
                 
-                # 创建临时JSONL文件用于批处理API
-                with tempfile.NamedTemporaryFile(mode='w', suffix='.jsonl', delete=False) as temp_file:
-                    # 准备批处理请求
-                    batch_request = {
-                        "custom_id": "request-1",
-                        "method": "POST", 
-                        "url": "/v1/chat/completions",
-                        "body": {
-                            "model": model_dict[model],
-                            "messages": formatted_messages,
+                # 根据use_batch_api参数决定是否使用批处理API
+                if use_batch_api == 1:
+                    # 使用批处理API
+                    # 创建临时JSONL文件用于批处理API
+                    with tempfile.NamedTemporaryFile(mode='w', suffix='.jsonl', delete=False) as temp_file:
+                        # 准备批处理请求
+                        batch_request = {
+                            "custom_id": "request-1",
+                            "method": "POST", 
+                            "url": "/v1/chat/completions",
+                            "body": {
+                                "model": model_dict[model],
+                                "messages": formatted_messages,
+                            }
                         }
-                    }
-                    
-                    # 只有在非o3-mini和o1-mini模型时才添加temperature参数
-                    if model not in ['o3-mini', 'o1-mini']:
-                        batch_request["body"]["temperature"] = temperature
                         
-                    json.dump(batch_request, temp_file)
-                    temp_file_path = temp_file.name
-                
-                try:
-                    # 上传文件
-                    with open(temp_file_path, 'rb') as file:
-                        uploaded_file = client.files.create(
-                            file=file,
-                            purpose="batch"
+                        # 只有在非o3-mini和o1-mini模型时才添加temperature参数
+                        if model not in ['o3-mini', 'o1-mini']:
+                            batch_request["body"]["temperature"] = temperature
+                            
+                        json.dump(batch_request, temp_file)
+                        temp_file_path = temp_file.name
+                    
+                    try:
+                        # 上传文件
+                        with open(temp_file_path, 'rb') as file:
+                            uploaded_file = client.files.create(
+                                file=file,
+                                purpose="batch"
+                            )
+                        
+                        # 创建批处理任务
+                        batch_job = client.batches.create(
+                            input_file_id=uploaded_file.id,
+                            endpoint="/v1/chat/completions",
+                            completion_window="24h"
                         )
-                    
-                    # 创建批处理任务
-                    batch_job = client.batches.create(
-                        input_file_id=uploaded_file.id,
-                        endpoint="/v1/chat/completions",
-                        completion_window="24h"
-                    )
-                    
-                    # 等待批处理完成
-                    batch_status = None
-                    while batch_status not in ["completed", "failed", "expired", "cancelled"]:
-                        batch_info = client.batches.retrieve(batch_job.id)
-                        batch_status = batch_info.status
                         
-                        if batch_status in ["completed", "failed", "expired", "cancelled"]:
-                            break
-                        
-                        # 睡眠一段时间后再检查状态
-                        time.sleep(5)
-                    
-                    if batch_status == "completed":
-                        # 获取结果
-                        output_file = client.files.content(batch_info.output_file_id)
-                        output_content = output_file.text
-                        
-                        # 解析结果
-                        result_json = json.loads(output_content)
-                        response_body = result_json["response"]["body"]
-                        
-                        # 创建类似于普通API返回的对象
-                        response = type('', (), {})()
-                        response.choices = [type('', (), {})()]
-                        response.choices[0].message = type('', (), {})()
-                        response.choices[0].message.content = response_body["choices"][0]["message"]["content"]
-                        
-                        # 设置用于记录的usage
-                        if "usage" in response_body:
-                            response.usage = type('', (), {})()
-                            response.usage.total_tokens = response_body["usage"]["total_tokens"]
+                        # 等待批处理完成
+                        batch_status = None
+                        while batch_status not in ["completed", "failed", "expired", "cancelled"]:
+                            batch_info = client.batches.retrieve(batch_job.id)
+                            batch_status = batch_info.status
                             
-                            # 尝试获取输入输出token
-                            input_tokens = response_body["usage"].get("prompt_tokens", 0)
-                            output_tokens = response_body["usage"].get("completion_tokens", 0)
+                            if batch_status in ["completed", "failed", "expired", "cancelled"]:
+                                break
                             
-                            # 记录token使用情况
-                            log_token_cost(model, input_tokens=input_tokens, output_tokens=output_tokens, total_tokens=response.usage.total_tokens)
+                            # 睡眠一段时间后再检查状态
+                            time.sleep(5)
                         
-                        return response.choices[0].message.content
-                    else:
-                        raise Exception(f"Batch job failed with status: {batch_status}")
+                        if batch_status == "completed":
+                            # 获取结果
+                            output_file = client.files.content(batch_info.output_file_id)
+                            output_content = output_file.text
+                            
+                            # 解析结果
+                            result_json = json.loads(output_content)
+                            response_body = result_json["response"]["body"]
+                            
+                            # 创建类似于普通API返回的对象
+                            response = type('', (), {})()
+                            response.choices = [type('', (), {})()]
+                            response.choices[0].message = type('', (), {})()
+                            response.choices[0].message.content = response_body["choices"][0]["message"]["content"]
+                            
+                            # 设置用于记录的usage
+                            if "usage" in response_body:
+                                response.usage = type('', (), {})()
+                                response.usage.total_tokens = response_body["usage"]["total_tokens"]
+                                
+                                # 尝试获取输入输出token
+                                input_tokens = response_body["usage"].get("prompt_tokens", 0)
+                                output_tokens = response_body["usage"].get("completion_tokens", 0)
+                                
+                                # 记录token使用情况
+                                log_token_cost(model, input_tokens=input_tokens, output_tokens=output_tokens, total_tokens=response.usage.total_tokens)
+                            
+                            return response.choices[0].message.content
+                        else:
+                            raise Exception(f"Batch job failed with status: {batch_status}")
+                        
+                    finally:
+                        if os.path.exists(temp_file_path):
+                            os.unlink(temp_file_path)
+                else:
+                    completion_args = {
+                        "model": model_dict[model],
+                        "messages": formatted_messages,
+                    }
+                    if model not in ['o3-mini', 'o1-mini']:
+                        completion_args["temperature"] = temperature
                     
-                finally:
-                    # 清理临时文件
-                    if os.path.exists(temp_file_path):
-                        os.unlink(temp_file_path)
+                    response = client.chat.completions.create(**completion_args)
+                    
+
+                    if hasattr(response, 'usage') and response.usage:
+                        input_tokens = response.usage.prompt_tokens if hasattr(response.usage, 'prompt_tokens') else 0
+                        output_tokens = response.usage.completion_tokens if hasattr(response.usage, 'completion_tokens') else 0
+                        total_tokens = response.usage.total_tokens if hasattr(response.usage, 'total_tokens') else (input_tokens + output_tokens)
+                        log_token_cost(model, input_tokens=input_tokens, output_tokens=output_tokens, total_tokens=total_tokens)
+                    
+                    return response.choices[0].message.content
                 
         except Exception as e:
             retries += 1

@@ -304,7 +304,7 @@ def generate_statements_from_descriptions(scenario):
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Generate dataset for the Spy game')
-    parser.add_argument('--n_scenarios', type=int, default=10, 
+    parser.add_argument('--n_scenarios', type=int, default=100, 
                         help='Number of scenarios to generate')
     parser.add_argument('--num_rounds', type=int, default=3,
                         help='Number of rounds of descriptions (default: 2)')

@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gpt-4o-mini",
+    "difficulty": "easy",
+    "question_type": "group",
+    "total_samples": 100,
+    "correct_predictions": 41,
+    "accuracy": 41.0
+  },
+  "results": [
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, G",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with H, we analyze the relationships provided:\n\n1. B and H have a good relationship.\n2. C and H have a bad relationship.\n3. A and H have a bad relationship.\n\nFrom the information, we see that the only person who has a good relationship with H is B.\n\nThus, the answer is:\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, D, F",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we analyze the relationships provided:\n\n1. A and G have a good relationship.\n2. E and G have a bad relationship.\n\nSince A is the only person mentioned to have a good relationship with G, we conclude that G has a good relationship with only A.\n\nThus, the answer is:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, H, J",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we can analyze the relationships provided:\n\n1. B and F have a good relationship.\n2. F and G have a bad relationship, which means G cannot have a good relationship with F.\n3. There are no other direct relationships mentioned involving F.\n\nSince the only person we know has a good relationship with F is B, we can conclude that:\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, G",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with E, we analyze the relationships involving E:\n\n1. A and E have a good relationship.\n2. E and H have a bad relationship.\n3. E and C have a bad relationship.\n\nFrom the above, we see that E has a good relationship with A. There are no other people listed who have a good relationship with E.\n\nThus, the only person with a good relationship with E is A.\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, D",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we can analyze the relationships based on the provided information.\n\n1. F has a bad relationship with H.\n2. A has a good relationship with F.\n3. A has a good relationship with B, which means B has a bad relationship with F (since A has a good relationship with both F and B, and F has a bad relationship with H, which is not directly related but helps establish the group dynamics).\n4. There are no other direct relationships mentioned for F.\n\nFrom the above analysis, the only person with a good relationship with F is A.\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C",
+      "prediction": "C",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we analyze the provided relationships:\n\n1. C and E have a good relationship.\n2. E and I have a bad relationship.\n\nSince E has a good relationship with C, we can conclude that C is the only person with a good relationship with E based on the information provided.\n\nThus, the answer is:\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, D, E",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided:\n\n1. D and F have a bad relationship.\n2. A and D have a good relationship.\n3. C and H have a good relationship.\n4. A and E have a good relationship.\n5. C and F have a good relationship.\n6. E and H have a bad relationship.\n7. A and B have a good relationship.\n8. A and G have a good relationship.\n\nFrom the information, we see that A has a good relationship with G. However, we do not have any information about G's relationships with B, C, D, E, F, or H. Since there are no other relationships mentioned that connect G to any other person, we conclude that G does not have a good relationship with anyone else.\n\nThus, the answer is:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F, G, J",
+      "prediction": "D",
+      "correct": false,
+      "response": "To determine who has a good relationship with I, we need to analyze the relationships provided.\n\n1. D and I have a good relationship.\n2. D has good relationships with F, E, H, J, and G.\n3. H has good relationships with C and B, but has a bad relationship with E.\n4. C has a bad relationship with G.\n\nSince I only has a direct good relationship with D, and D's other relationships do not affect I's relationships directly, we can conclude that the only person with a good relationship with I is D.\n\nThus, the answer is:\n\nFinal Answer: D"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D",
+      "prediction": "C",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we analyze the relationships provided:\n\n1. C and G have a good relationship.\n2. E and G have a bad relationship.\n\nSince G has a good relationship with C, we can conclude that C is the only person with a good relationship with G. \n\nNow, we check if there are any transitive relationships that could connect G to other people. However, since G has a bad relationship with E and no other relationships involving G are mentioned, we cannot establish any further good relationships.\n\nThus, the only person who has a good relationship with G is C.\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A",
+      "prediction": "A",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we analyze the relationships provided:\n\n1. A and G have a good relationship.\n2. There are no direct relationships mentioned for G with any other individuals.\n\nSince G only has a good relationship with A and no other relationships are provided that connect G to other individuals, we conclude that the only person with a good relationship with G is A.\n\nThus, the answer is:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D",
+      "prediction": "D",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships based on the provided information.\n\n1. D and G have a good relationship.\n2. We need to check if G has any other good relationships through transitive properties.\n\nSince D has a good relationship with G, we can check D's relationships:\n- D has a bad relationship with A (which means A has a bad relationship with G).\n- D has a bad relationship with C (which means C has a bad relationship with G).\n- D has a bad relationship with E (which means E has a bad relationship with G).\n- D has a bad relationship with B (since B has a bad relationship with I, and we have no information about B's relationship with D).\n- D has a good relationship with G (already established).\n\nSince G only has a confirmed good relationship with D and no other relationships are established with anyone else, we conclude that G only has a good relationship with D.\n\nThus, the only person who has a good relationship with G is D.\n\nFinal Answer: D"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, D, E, F, H",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with B, we need to analyze the relationships provided.\n\n1. A has a good relationship with B.\n2. There are no other relationships mentioned that involve B directly or indirectly.\n\nSince A is the only person mentioned with a good relationship with B, we conclude that:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, H",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships provided:\n\n1. D and F have a good relationship.\n2. There are no other direct relationships mentioned involving F.\n\nSince F only has a good relationship with D and there are no other connections to F through transitive properties (as we don't have any information about D's relationships with others that would connect to F), we conclude that F does not have a good relationship with anyone else.\n\nThus, the answer is:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with I, we need to analyze the relationships provided.\n\n1. B has a good relationship with I.\n2. There are no other relationships mentioned that connect I to any other person.\n\nSince B is the only person with a good relationship with I, we can conclude:\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, H",
+      "prediction": "C",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships provided:\n\n1. B and F have a bad relationship.\n2. C and F have a good relationship.\n\nSince we know that F has a bad relationship with B, we can conclude that B does not have a good relationship with F. \n\nNow, we check if there are any other relationships involving F:\n- The only direct relationship mentioned is with C, who has a good relationship with F.\n\nSince C is the only person mentioned with a good relationship with F, we can conclude:\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, G, H",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with E, we analyze the relationships provided:\n\n1. A and E have a good relationship.\n2. E and F have a bad relationship.\n\nSince E has a good relationship with A, we can conclude that A is the only person with a good relationship with E. There are no other relationships involving E that indicate a good relationship with anyone else.\n\nThus, the answer is:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F",
+      "prediction": "C",
+      "correct": false,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships based on the provided information.\n\n1. H and E have a bad relationship.\n2. C and E have a good relationship.\n\nSince H has a bad relationship with E, we cannot consider H as having a good relationship with E. The only person we have that has a good relationship with E is C.\n\nThus, the people who have a good relationship with E are:\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E",
+      "prediction": "E",
+      "correct": false,
+      "response": "To determine who has a good relationship with D, we analyze the provided relationships:\n\n1. E and D have a good relationship.\n2. D and J have a bad relationship.\n\nSince D has a good relationship with E, we can conclude that E is the only person with a good relationship with D based on the information given.\n\nThus, the answer is:\n\nFinal Answer: E"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F, H",
+      "prediction": "F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we analyze the relationships provided:\n\n1. B has a good relationship with F.\n2. B has a good relationship with H.\n3. B has a bad relationship with D.\n\nSince B has a good relationship with F and H, we can conclude that the people who have a good relationship with B are F and H.\n\nNow, we list them in alphabetical order:\n\nFinal Answer: F, H"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, G",
+      "prediction": "D, E, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we analyze the relationships provided:\n\n1. B and C have a bad relationship.\n2. A and H have a good relationship.\n3. B and E have a good relationship.\n4. A and C have a good relationship.\n5. B and G have a good relationship.\n6. C and G have a bad relationship.\n7. B and D have a good relationship.\n8. A and F have a good relationship.\n\nFrom the information, we can see that:\n- B has a good relationship with E, G, and D.\n\nNow, we list these names in alphabetical order:\n- D, E, G\n\nFinal Answer: D, E, G"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with I, we can analyze the relationships provided:\n\n1. H and G have a good relationship.\n2. A and F have a good relationship.\n3. A and E have a bad relationship.\n4. H and I have a good relationship.\n5. C and H have a bad relationship.\n6. H and E have a good relationship.\n7. A and B have a good relationship.\n8. A and C have a good relationship.\n9. A and D have a good relationship.\n\nFrom the information, we know that:\n- H has a good relationship with I.\n- H also has a good relationship with G and E.\n- However, C has a bad relationship with H, which means C cannot have a good relationship with I (since I is connected to H).\n\nSince H is the only person directly connected to I with a good relationship, we need to check if H has any other connections that could extend to I. \n\nThe relationships involving H are:\n- H has a good relationship with G.\n- H has a good relationship with I.\n- H has a good relationship with E.\n- H has a bad relationship with C.\n\nSince there are no other connections from I to other people through H (as C is excluded), we conclude that the only person with a good relationship with I is H.\n\nThus, the answer is:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, F, G",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with H, we can analyze the relationships provided:\n\n1. B and H have a good relationship.\n2. C and H have a bad relationship.\n\nSince B has a good relationship with H, we can conclude that B is the only person with a good relationship with H based on the information given.\n\nThus, the answer is:\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H",
+      "prediction": "C",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships provided.\n\n1. C and F have a good relationship.\n2. There are no other direct relationships involving F mentioned in the provided information.\n\nSince the only person with a good relationship with F is C, we conclude that:\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, H",
+      "prediction": "A, F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we can analyze the relationships provided:\n\n1. C has a good relationship with F (C and F).\n2. C has a good relationship with A (C and A).\n3. C has a good relationship with H (C and H).\n\nNow, we need to check if there are any transitive relationships that can be established:\n\n- C has a good relationship with A, F, and H directly.\n- There are no bad relationships involving C that would affect these connections.\n\nThus, the people who have a good relationship with C are A, F, and H.\n\nListing these names in alphabetical order gives us: A, F, H.\n\nFinal Answer: A, F, H"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "G, H",
+      "prediction": "H",
+      "correct": false,
+      "response": "To determine who has a good relationship with A, we analyze the provided relationships:\n\n1. H and A have a good relationship. \n2. There are no other direct relationships mentioned involving A.\n\nSince A only has a good relationship with H and there are no other connections to A through transitive relationships, we conclude that the only person with a good relationship with A is H.\n\nThus, the answer is:\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D",
+      "prediction": "D",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we analyze the relationships based on the provided information:\n\n1. A and H have a bad relationship.\n2. A and G have a bad relationship.\n3. A and D have a good relationship.\n4. A and C have a bad relationship.\n\nFrom the above, we see that A has a good relationship only with D. \n\nThus, the people who have a good relationship with A are:\n\nFinal Answer: D"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, H",
+      "prediction": "H",
+      "correct": false,
+      "response": "To determine who has a good relationship with C, we analyze the relationships provided:\n\n1. **B and F have a good relationship.**\n2. **C and E have a bad relationship.** (This means C does not have a good relationship with E.)\n3. **H and C have a good relationship.** (This means C has a good relationship with H.)\n4. **B and E have a good relationship.**\n5. **H and A have a good relationship.**\n6. **B and D have a good relationship.**\n7. **B and G have a good relationship.**\n\nFrom the information, we see that C has a good relationship with H. There are no other relationships mentioned that connect C to any other person positively.\n\nThus, the only person who has a good relationship with C is H.\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, H",
+      "prediction": "H",
+      "correct": false,
+      "response": "To determine who has a good relationship with D, we analyze the provided relationships:\n\n1. H and D have a good relationship.\n2. There are no other direct relationships involving D mentioned.\n\nSince H is the only person with a good relationship with D and there are no transitive relationships that connect D to any other person, we conclude that:\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, G",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with H, we analyze the relationships provided:\n\n1. A and H have a good relationship.\n2. A has good relationships with B, C, G.\n3. C has a bad relationship with E.\n4. E has good relationships with D and F.\n5. D has a bad relationship with G.\n\nSince H has a good relationship with A, we can conclude that A is the only person with a good relationship with H based on the information provided.\n\nThus, the answer is:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, F",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with A, we can analyze the provided relationships:\n\n1. B and A have a good relationship.\n2. B has a good relationship with F.\n3. B has a bad relationship with D.\n4. C has a good relationship with E.\n5. F has a bad relationship with C.\n6. C has a good relationship with D.\n7. C has a good relationship with H.\n8. C has a good relationship with G.\n\nSince A has a good relationship with B, we can conclude that B is the only person with a good relationship with A based on the information provided.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, F",
+      "prediction": "E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we can analyze the relationships provided:\n\n1. C has a good relationship with E (C and E have a good relationship).\n2. E has a bad relationship with H (E and H have a bad relationship), which means C cannot have a good relationship with H through E.\n3. C has a good relationship with F (C and F have a good relationship).\n\nSince we only know that C has good relationships with E and F, and E's relationship with H is bad, we cannot conclude any further good relationships for C.\n\nThus, the people who have a good relationship with C are E and F.\n\nFinal Answer: E, F"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, H",
+      "prediction": "H",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we analyze the provided relationships:\n\n1. H and F have a good relationship.\n2. H has a bad relationship with C and D, and a good relationship with A.\n3. B has good relationships with E, I, G, and C, and a bad relationship with H.\n\nSince F only has a direct good relationship with H, and there are no other connections provided that would indicate F has a good relationship with anyone else, we conclude that:\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G, I",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships based on the provided information.\n\n1. A has a good relationship with D, E, C, and H.\n2. B has a good relationship with G, F, and I.\n3. D has a bad relationship with F.\n4. C has a bad relationship with I.\n5. B has a good relationship with F.\n\nNow, since D has a bad relationship with F, we cannot consider D as having a good relationship with F. \n\nNext, we check the relationships of F:\n- F has a good relationship with B.\n- F has a bad relationship with D.\n\nSince F only has a good relationship with B, we conclude that the only person with a good relationship with F is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, H, J",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships involving D based on the provided information.\n\n1. A and D have a good relationship.\n2. D and E have a bad relationship.\n\nSince D has a good relationship with A, we can conclude that A is the only person with a good relationship with D. \n\nNow, let's list the people who have a good relationship with D:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, F, H",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships based on the provided information.\n\n1. **Direct relationships involving D:**\n   - D and E have a bad relationship.\n   - A and D have a good relationship.\n\n2. **Transitive relationships:**\n   - Since A has a good relationship with D, we need to check A's relationships to see if they can extend to D.\n   - A has good relationships with H, F, and C (as per the information provided).\n   - A has a bad relationship with B (since C and B have a bad relationship, and A has a good relationship with C).\n\n3. **Summary of good relationships for D:**\n   - The only direct good relationship we have for D is with A.\n   - A's good relationships (H, F, C) do not affect D's relationships since A's relationship with B is bad.\n\nThus, the only person with a good relationship with D is A.\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B",
+      "prediction": "B",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we analyze the relationships provided:\n\n1. E has a good relationship with B (E and B have a good relationship).\n2. C has a bad relationship with E (C and E have a bad relationship).\n3. We do not have any direct information about E's relationships with A, D, F, G, or H.\n\nSince E has a good relationship with B, and B has a bad relationship with H, we can conclude that E does not have a good relationship with H. \n\nNow, we check if B has any good relationships with A, D, F, G, or H:\n- A has good relationships with D, F, C, H, and G, but since B has a bad relationship with H, we cannot conclude any good relationships for E through A.\n- D, F, and G have no direct relationships with E mentioned.\n\nThus, the only person we can confirm has a good relationship with E is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F, H, I",
+      "prediction": "D, E, F, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we can analyze the provided relationships:\n\n1. C and F have a good relationship.\n2. C and I have a good relationship.\n3. C and D have a good relationship.\n4. C and E have a good relationship.\n5. C and H have a good relationship.\n6. A and C have a bad relationship, which means A does not have a good relationship with C.\n\nNow, we can compile the list of people who have a good relationship with C:\n\n- F\n- I\n- D\n- E\n- H\n\nListing these names in alphabetical order gives us:\n\nD, E, F, H, I\n\nFinal Answer: D, E, F, H, I"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H",
+      "prediction": "H",
+      "correct": false,
+      "response": "To determine who has a good relationship with B, we can analyze the relationships based on the provided information.\n\n1. H and B have a good relationship (directly stated).\n2. We need to check if B has any other good relationships through transitivity. However, we don't have any information about B's relationships with anyone else besides H.\n\nSince H is the only person mentioned in relation to B, we conclude that:\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, F, J",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we analyze the provided relationships:\n\n1. A and G have a good relationship.\n2. There are no other relationships mentioned that involve G directly or indirectly with other people.\n\nSince G only has a good relationship with A and no other relationships are established with G, we conclude that the only person with a good relationship with G is A.\n\nThus, the answer is:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F, G",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with C, we need to analyze the relationships based on the provided information.\n\n1. I and C have a bad relationship.\n2. C and H have a bad relationship.\n3. H and D have a good relationship.\n4. I and H have a bad relationship.\n5. I and A have a good relationship.\n6. A and D have a bad relationship.\n7. B and F have a good relationship.\n8. B and C have a good relationship.\n9. B and G have a good relationship.\n10. B and E have a good relationship.\n11. B and D have a bad relationship.\n\nFrom the information, we see that:\n- C has a good relationship with B (from point 8).\n- There are no other direct relationships mentioned that indicate C has a good relationship with anyone else.\n\nThus, the only person who has a good relationship with C is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "G",
+      "prediction": "G",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the relationships involving H based on the provided information.\n\n1. H has a bad relationship with I (I and H have a bad relationship).\n2. H has a bad relationship with C (C and H have a bad relationship).\n3. H has a good relationship with G (H and G have a good relationship).\n4. H has a bad relationship with J (J and H have a bad relationship).\n\nNow, let's summarize the relationships:\n- H has a good relationship with G.\n- H has bad relationships with I, C, and J.\n\nSince G is the only person with a good relationship with H, we can conclude:\n\nFinal Answer: G"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, G, H, I",
+      "prediction": "C, D, G, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we can analyze the relationships provided:\n\n1. B and F have a bad relationship (B does not have a good relationship with F).\n2. B and G have a good relationship (B has a good relationship with G).\n3. B and H have a good relationship (B has a good relationship with H).\n4. B and D have a good relationship (B has a good relationship with D).\n5. B and I have a good relationship (B has a good relationship with I).\n6. B and C have a good relationship (B has a good relationship with C).\n\nNow, we can list all the people who have a good relationship with B based on the information above:\n\n- G\n- H\n- D\n- I\n- C\n\nThus, the final answer is:\n\nFinal Answer: C, D, G, H, I"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, J",
+      "prediction": "J",
+      "correct": false,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships provided:\n\n1. J and E have a good relationship.\n2. J has a bad relationship with C and H.\n3. J has a good relationship with B.\n4. B has a bad relationship with G.\n5. A has good relationships with I, D, F, and H.\n6. C has a good relationship with G but a bad relationship with H and F.\n7. A has a good relationship with I, D, F, and H.\n8. C has a bad relationship with F.\n\nSince E only has a known good relationship with J, and there are no other connections to E through J (as J has bad relationships with C and H), we conclude that E does not have any other good relationships.\n\nThus, the only person with a good relationship with E is J.\n\nFinal Answer: J"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, F, H",
+      "prediction": "A, B, F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided:\n\n1. A and H have a good relationship.\n2. C and E have a good relationship.\n3. A and F have a good relationship.\n4. C and D have a good relationship.\n5. A and G have a good relationship.\n6. H and E have a bad relationship.\n7. A and B have a good relationship.\n8. A and D have a bad relationship.\n\nFrom the information, we see that A has a good relationship with G (point 5). \n\nNow, we need to check if G has any other good relationships through transitive properties:\n\n- A has good relationships with B, F, and H (from points 1, 3, and 7).\n- Since A has a good relationship with G, and A has good relationships with B, F, and H, we can conclude that G also has good relationships with B, F, and H through A.\n\nNow we can list all the people who have a good relationship with G:\n- A (directly)\n- B (through A)\n- F (through A)\n- H (through A)\n\nThus, the people who have a good relationship with G are A, B, F, and H.\n\nFinal Answer: A, B, F, H"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, H, I, J",
+      "prediction": "D, H, I, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we analyze the relationships based on the provided information:\n\n1. A has a good relationship with H.\n2. A has a good relationship with D.\n3. A has a good relationship with I.\n4. A has a good relationship with J.\n5. A has a bad relationship with E.\n\nNow, we need to check the relationships of H, D, I, and J to see if they have good relationships with each other or with B, since B has good relationships with G, E, and F.\n\n- H has a bad relationship with C, but we don't have any information about H's relationship with D, I, or J.\n- D has no relationships mentioned with anyone else.\n- I has no relationships mentioned with anyone else.\n- J has no relationships mentioned with anyone else.\n\nSince we only know that A has good relationships with H, D, I, and J, and we don't have any further information about their relationships with each other or with B, we can conclude that the only people we can confirm have a good relationship with A are H, D, I, and J.\n\nThus, the final answer is:\n\nFinal Answer: D, H, I, J"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, F, G, H",
+      "prediction": "B, D, F, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to analyze the relationships provided:\n\n1. J and A have a good relationship.\n2. B and H have a good relationship.\n3. J and C have a good relationship.\n4. B and G have a good relationship.\n5. J and E have a good relationship.\n6. F and J have a bad relationship.\n7. C and H have a bad relationship.\n8. B and F have a good relationship.\n9. B and I have a good relationship.\n10. B and D have a good relationship.\n\nFrom the information, we see that B has a good relationship with I. However, we need to check if B has good relationships with anyone else that could connect to I through transitivity.\n\n- B has good relationships with:\n  - H\n  - G\n  - F\n  - I (the person in question)\n  - D\n\nSince B has good relationships with H, G, F, and D, we can conclude that I also has good relationships with these individuals through B.\n\nThus, the people who have a good relationship with I are B, H, G, F, and D.\n\nListing these in alphabetical order gives us: B, D, F, G, H.\n\nFinal Answer: B, D, F, G, H"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, F, H, I",
+      "prediction": "D, F, H, I",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided.\n\n1. C and F have a good relationship.\n2. E and C have a bad relationship.\n3. C and G have a good relationship.\n4. E and B have a good relationship.\n5. C and H have a good relationship.\n6. C and D have a good relationship.\n7. E and A have a good relationship.\n8. A and C have a bad relationship.\n9. C and I have a good relationship.\n\nFrom the information, we see that G has a good relationship with C (point 3). \n\nNext, we need to find out if C has good relationships with anyone else that could connect to G through transitivity. \n\n- C has good relationships with F, H, D, and I (points 1, 5, 6, and 9).\n- E has a bad relationship with C (point 2), so E cannot be in the same group as C.\n- A has a bad relationship with C (point 8), so A cannot be in the same group as C.\n\nThus, the people who have a good relationship with G, through C, are F, H, D, and I.\n\nNow, we list these names in alphabetical order:\n\nD, F, H, I\n\nFinal Answer: D, F, H, I"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G, H, I",
+      "prediction": "D, G, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we can analyze the relationships provided:\n\n1. A and G have a good relationship.\n2. A and H have a good relationship.\n3. A and D have a good relationship.\n4. A and I have a good relationship.\n\nSince A has good relationships with G, H, D, and I, we can list these people in alphabetical order.\n\nFinal Answer: D, G, H, I"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, H",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships provided.\n\n1. A and H have a good relationship.\n2. B and E have a good relationship.\n3. A and F have a good relationship.\n4. F and E have a bad relationship.\n5. E and F have a bad relationship.\n6. B and G have a good relationship.\n7. B and C have a good relationship.\n8. A and D have a good relationship.\n\nFrom the information, we see that A has a good relationship with D. However, we need to check if D has good relationships with anyone else.\n\n- A has good relationships with H, F, and D.\n- B has good relationships with E, G, and C.\n- E has a bad relationship with F.\n- F has a bad relationship with E.\n- B has good relationships with G and C.\n\nSince D is only mentioned in relation to A, and there are no other relationships provided that connect D to any other person, we conclude that D does not have a good relationship with anyone else.\n\nThus, the answer is:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, F",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with H, we need to analyze the provided relationships:\n\n1. A and J have a good relationship.\n2. B and H have a good relationship.\n3. D and G have a bad relationship.\n4. A and E have a good relationship.\n5. A and G have a good relationship.\n6. B and C have a good relationship.\n7. E and C have a bad relationship.\n8. B and F have a good relationship.\n9. A and I have a good relationship.\n10. B and D have a good relationship.\n\nFrom the information, we see that B has a good relationship with H. However, we need to check if B has good relationships with anyone else that could connect to H through transitivity.\n\n- B has good relationships with C, D, and F.\n- Since there are no other connections from H to any other person through B, we conclude that the only person with a good relationship with H is B.\n\nThus, the final answer is:\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we can analyze the provided relationships:\n\n1. C has a good relationship with F.\n2. C has a good relationship with A.\n3. C has a bad relationship with E.\n\nNow, we need to check if A and F have any relationships that can help us find more people with a good relationship with C.\n\n- A has a bad relationship with G (no impact on C).\n- F has no other relationships mentioned.\n\nNext, we check the relationships of A and F:\n- A has a good relationship with C (already noted).\n- F has a good relationship with C (already noted).\n\nSince C has a good relationship with A and F, we can conclude that the people who have a good relationship with C are A and F.\n\nListing them in alphabetical order gives us: A, F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F, G",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with C, we analyze the relationships provided:\n\n1. B and C have a good relationship.\n2. H and C have a bad relationship, which means H does not have a good relationship with C.\n3. There are no other direct relationships mentioned involving C.\n\nSince the only person with a good relationship with C is B, we conclude that:\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F, H, J",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided.\n\n1. G has a good relationship with C (as stated).\n2. C has a good relationship with F, H, and J.\n3. However, E has a bad relationship with C, which means E cannot have a good relationship with G either.\n\nSince G's only known good relationship is with C, and C's relationships do not extend to G, we conclude that G does not have any good relationships with anyone else.\n\nThus, the answer is:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, F, H, I",
+      "prediction": "E, F, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we analyze the relationships involving D:\n\n1. D and I have a good relationship.\n2. D and F have a good relationship.\n3. D and H have a good relationship.\n4. D and E have a good relationship.\n\nFrom the above information, we can conclude that D has good relationships with I, F, H, and E.\n\nNow, we list these names in alphabetical order:\n\n- E\n- F\n- H\n- I\n\nFinal Answer: E, F, H, I"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships involving E based on the provided information.\n\n1. **E and F have a good relationship**: This means F has a good relationship with E.\n2. **H and E have a bad relationship**: This means H does not have a good relationship with E.\n3. **C and E have a bad relationship**: This means C does not have a good relationship with E.\n\nNow, we check if F has any good relationships that could connect E to others:\n- F has a bad relationship with H (F and H have a bad relationship).\n- There are no other relationships involving F that would indicate good relationships with anyone else.\n\nSince the only person with a good relationship with E is F, and F does not connect E to any other individuals with good relationships, we conclude that E only has one good relationship.\n\nThus, the only person who has a good relationship with E is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, E, G",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with B, we can analyze the relationships provided:\n\n1. A and B have a good relationship.\n2. B and F have a bad relationship.\n\nSince A has a good relationship with B, we can include A in the list. However, since B has a bad relationship with F, F cannot be included. There are no other relationships involving B that indicate good relationships with other people.\n\nThus, the only person with a good relationship with B is A.\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we can analyze the relationships provided:\n\n1. E has a good relationship with B (E and B have a good relationship).\n2. E has a good relationship with G (E and G have a good relationship).\n3. E has a bad relationship with H (E and H have a bad relationship).\n4. E has a bad relationship with A (A and E have a bad relationship).\n\nNow, we need to check if there are any transitive relationships that can be established:\n\n- E has a good relationship with B.\n- E has a good relationship with G.\n\nSince there are no other relationships involving E that would affect the good relationships, we can conclude that the people who have a good relationship with E are B and G.\n\nListing them in alphabetical order gives us: B, G.\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we analyze the relationships based on the provided information:\n\n1. A has a bad relationship with C (A and C have a bad relationship).\n2. A has a bad relationship with E (A and E have a bad relationship).\n3. A has a bad relationship with H (A and H have a bad relationship).\n4. A has a good relationship with F (A and F have a good relationship).\n\nNow, we check if F has any good relationships with others that could connect A to more people:\n\n- F has a bad relationship with E (E and F have a bad relationship).\n- There is no information about F's relationships with B, D, G, or H that indicates a good relationship.\n\nSince A only has a good relationship with F and F does not connect A to any other good relationships, the only person with a good relationship with A is F.\n\nThus, the final answer is:\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "H",
+      "prediction": "H",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we analyze the relationships based on the provided information:\n\n1. G and I have a bad relationship.\n2. H and G have a good relationship.\n3. C and G have a bad relationship.\n\nFrom the above, we see that G has a good relationship with H. There are no other relationships mentioned that involve G having a good relationship with anyone else.\n\nThus, the only person who has a good relationship with G is H.\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, F",
+      "prediction": "B, D, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we can analyze the provided relationships:\n\n1. G has a good relationship with B.\n2. G has a good relationship with D.\n3. G has a good relationship with F.\n\nNow, we need to check if G has any indirect good relationships through transitivity:\n\n- G has a good relationship with D, and D has a bad relationship with I (but this does not affect G's relationships).\n- G has a good relationship with F, and F has a bad relationship with C (but this does not affect G's relationships).\n\nSince G has direct good relationships with B, D, and F, we can list them:\n\nFinal Answer: B, D, F"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, I",
+      "prediction": "A, E, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we can analyze the relationships based on the provided information:\n\n1. F and E have a good relationship.\n2. F and I have a good relationship.\n3. F and A have a good relationship.\n\nNow, we can compile the list of people who have a good relationship with F:\n\n- E\n- I\n- A\n\nListing these names in alphabetical order gives us:\n\nA, E, I\n\nFinal Answer: A, E, I"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F",
+      "prediction": "E",
+      "correct": false,
+      "response": "To determine who has a good relationship with A, we analyze the relationships provided:\n\n1. E and A have a good relationship.\n2. A and G have a bad relationship.\n\nSince A has a good relationship with E, we can conclude that E is the only person with a good relationship with A.\n\nThus, the answer is:\n\nFinal Answer: E"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided:\n\n1. G and H have a bad relationship.\n2. A and C have a good relationship.\n3. A and E have a good relationship.\n4. H and B have a good relationship.\n5. A and I have a good relationship.\n6. C and H have a bad relationship.\n7. F and I have a bad relationship.\n8. C and F have a bad relationship.\n9. H and D have a good relationship.\n10. F and G have a good relationship.\n11. H and F have a bad relationship.\n\nFrom the information, we see that:\n- G has a good relationship with F (10).\n- G has a bad relationship with H (1).\n- There are no other direct relationships involving G that indicate good relationships with other people.\n\nSince F is the only person with a good relationship with G, we need to check if F has good relationships with others that could connect G to more people. \n\n- F has a bad relationship with I (7).\n- F has a bad relationship with C (8).\n- F has a good relationship with G (10).\n- F has a bad relationship with H (11).\n- F has a good relationship with G (10).\n\nSince F does not have good relationships with anyone else, G only has a good relationship with F.\n\nThus, the final answer is:\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, F",
+      "prediction": "E",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided.\n\n1. E and G have a good relationship.\n2. E has a good relationship with A, F, and has a bad relationship with C.\n3. B has a bad relationship with E, which means B has a bad relationship with G as well (since E and G are good).\n4. B has good relationships with C, D, H, and I.\n\nSince G only has a direct good relationship with E, and E is the only person we know G has a good relationship with, we cannot conclude any other good relationships for G based on the information provided.\n\nThus, the only person with a good relationship with G is E.\n\nFinal Answer: E"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided.\n\n1. A and G have a good relationship.\n2. There are no other relationships involving G mentioned in the provided information.\n\nSince G only has a good relationship with A and there are no other connections to G, we conclude that the only person with a good relationship with G is A.\n\nThus, the answer is:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we analyze the relationships based on the provided information:\n\n1. I has a bad relationship with C (C and I have a bad relationship).\n2. I has a good relationship with B (I and B have a good relationship).\n3. I has a good relationship with G (I and G have a good relationship).\n\nNow, we need to check if B and G have good relationships with each other or with any other person that could connect back to I through transitive relationships.\n\n- B has no relationships mentioned with anyone else, so we cannot conclude anything further about B's relationships.\n- G has a bad relationship with C (C and G have a bad relationship), but we do not have any other information about G's relationships with A, D, E, or F.\n\nSince we only have the direct good relationship of I with B and G, and no further connections can be established, we conclude that the only people with a good relationship with I are B and G.\n\nThus, the final answer is:\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, H",
+      "prediction": "H",
+      "correct": false,
+      "response": "To determine who has a good relationship with C, we need to analyze the relationships based on the provided information.\n\n1. A has a good relationship with G, D, F, B (bad), and I.\n2. G has a bad relationship with C.\n3. H has a good relationship with C, B, and E.\n\nSince G has a bad relationship with C, and A has a bad relationship with B, we can conclude that C does not have a good relationship with A, G, or B. \n\nThe only person who has a good relationship with C is H.\n\nThus, the people who have a good relationship with C are:\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, J",
+      "prediction": "J",
+      "correct": false,
+      "response": "To determine who has a good relationship with C, we start with the information given:\n\n1. J and C have a good relationship.\n\nNow, we need to see if there are any other people who have a good relationship with C through transitive properties. However, we do not have any information about C's relationships with any other individuals besides J.\n\nSince J is the only person mentioned to have a good relationship with C, and there are no other connections provided that would indicate C has a good relationship with anyone else, we conclude that:\n\nFinal Answer: J"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, G, H",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with J, we need to analyze the relationships provided.\n\nFrom the information given:\n- A has a good relationship with J.\n\nNow, we need to find out if A has any good relationships with other people, as those relationships can be transitive.\n\nA has good relationships with:\n- H\n- G\n- J (itself)\n- E\n\nNext, we check if any of these people (H, G, E) have good relationships with others that could connect back to J.\n\n1. H has a bad relationship with C (no further connections).\n2. G has no other relationships mentioned.\n3. E has a bad relationship with B (no further connections).\n\nSince A is the only person with a direct good relationship with J, and there are no other connections leading to J through A's relationships, we conclude that:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, G, H",
+      "prediction": "B, C, D, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we can analyze the relationships provided:\n\n1. A has a good relationship with:\n   - C (A and C have a good relationship)\n   - B (A and B have a good relationship)\n   - D (A and D have a good relationship)\n   - G (A and G have a good relationship)\n   - H (A and H have a good relationship)\n\nNow, we need to check if any of these people have good relationships with each other, which would allow us to include them in A's group:\n\n- C has a bad relationship with J, but we don't have any information about C's relationships with B, D, G, or H.\n- B has no bad relationships mentioned, so we can assume B has good relationships with A, C, D, G, and H.\n- D has no bad relationships mentioned, so we can assume D has good relationships with A, B, C, G, and H.\n- G has a bad relationship with I, but we don't have any information about G's relationships with B, C, D, or H.\n- H has no bad relationships mentioned, so we can assume H has good relationships with A, B, C, D, and G.\n\nSince all the relationships mentioned are good, we can conclude that A has good relationships with B, C, D, G, and H.\n\nListing these in alphabetical order gives us:\n\nB, C, D, G, H\n\nFinal Answer: B, C, D, G, H"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H, I",
+      "prediction": "C, E, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships based on the provided information.\n\n1. C and G have a good relationship.\n2. We need to check if G has any other good relationships through transitive properties.\n\nSince G has a good relationship with C, we can look at C's relationships:\n- C has a good relationship with I, E, and H.\n- C has a bad relationship with A.\n\nNow, we check if any of C's good relationships (I, E, H) have a good relationship with G:\n- C and I: Good relationship (C is a common link)\n- C and E: Good relationship (C is a common link)\n- C and H: Good relationship (C is a common link)\n\nThus, G has good relationships with:\n- C (directly)\n- I (through C)\n- E (through C)\n- H (through C)\n\nNow, we list all people who have a good relationship with G:\n- C, E, H, I\n\nFinally, we present the answer in alphabetical order:\nFinal Answer: C, E, H, I"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with J, we analyze the provided relationships:\n\n1. J and F have a good relationship.\n2. B and J have a bad relationship.\n3. H and J have a bad relationship.\n\nFrom the information, we see that J has a good relationship with F. However, J has bad relationships with B and H. \n\nSince F is the only person with a good relationship with J, we conclude:\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we can analyze the relationships provided:\n\n1. B and G have a good relationship.\n2. A and D have a good relationship.\n3. C and F have a bad relationship.\n4. B and F have a good relationship.\n5. A and C have a good relationship.\n6. B and C have a bad relationship.\n7. A and H have a good relationship.\n8. A and E have a good relationship.\n\nFrom the information, we see that:\n- B has a good relationship with F (point 4).\n- C has a bad relationship with F (point 3).\n\nNow, we need to check if there are any other people who have a good relationship with F through transitive relationships. \n\nSince B has a good relationship with F, we can check who has a good relationship with B:\n- B has a good relationship with G (point 1).\n- B has a bad relationship with C (point 6).\n\nThus, the people who have a good relationship with F are:\n- B (directly)\n\nNow, we check if there are any other people who have a good relationship with F through B:\n- G (since B and G have a good relationship).\n\nTherefore, the people who have a good relationship with F are B and G.\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, E",
+      "prediction": "E",
+      "correct": false,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships based on the provided information.\n\n1. **C and J have a good relationship.**\n2. **E and C have a bad relationship.** (This means E cannot be in the same group as C.)\n3. **E and B have a good relationship.**\n4. **B and C have a bad relationship.** (This means B cannot be in the same group as C.)\n5. **E and D have a good relationship.**\n6. **C and I have a good relationship.**\n7. **C and G have a good relationship.**\n8. **C and F have a good relationship.**\n9. **C and H have a good relationship.**\n10. **E and A have a good relationship.**\n\nFrom the information, we know:\n- E has a good relationship with D.\n- E also has good relationships with B and A.\n- Since E has a bad relationship with C, and C has good relationships with I, G, F, H, and J, we can conclude that E, B, and D form one group, while C, I, G, F, H, and J form another group.\n\nSince D has a good relationship with E, and E is the only person we have confirmed has a good relationship with D, we can conclude that:\n\nFinal Answer: E"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G, H",
+      "prediction": "D, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we can analyze the relationships provided:\n\n1. C and H have a good relationship.\n2. C and G have a good relationship.\n3. C and D have a good relationship.\n4. C and E have a bad relationship (so E cannot be in the same group as C).\n\nNow, we can summarize the good relationships for C:\n- C has a good relationship with H.\n- C has a good relationship with G.\n- C has a good relationship with D.\n\nSince there are no other relationships involving C that indicate bad relationships with others, we can conclude that the people who have a good relationship with C are H, G, and D.\n\nListing these names in alphabetical order gives us:\nD, G, H.\n\nFinal Answer: D, G, H"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, E, F",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we analyze the relationships provided:\n\n1. B and G have a good relationship.\n2. G and J have a bad relationship.\n\nSince G has a good relationship with B, we can conclude that B is the only person with a good relationship with G.\n\nThus, the answer is:\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, D, F",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided:\n\n1. A and G have a good relationship.\n2. There are no other relationships mentioned that involve G directly.\n\nSince G only has a good relationship with A and there are no other people listed with a good relationship with G, we conclude that:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D",
+      "prediction": "C",
+      "correct": false,
+      "response": "To determine who has a good relationship with I, we need to analyze the relationships based on the provided information.\n\n1. C and I have a good relationship.\n2. C has a good relationship with B and D, but has a bad relationship with H.\n3. A has good relationships with H, F, E, and G.\n4. B has a bad relationship with F, but has a good relationship with C.\n5. Since C has a good relationship with I, and I has no other relationships mentioned, we can conclude that the only person with a good relationship with I is C.\n\nThus, the only person who has a good relationship with I is C.\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H, I",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with J, we need to analyze the relationships provided.\n\nFrom the information given:\n- C and J have a good relationship.\n\nNow, we need to check if C has any good relationships with others that could connect J to them. \n\nC has good relationships with:\n- H\n- E\n- I\n\nHowever, we also know that:\n- C has a bad relationship with F.\n- B has a bad relationship with C.\n\nSince J only has a direct good relationship with C and no other connections through C to other people, we conclude that J does not have any good relationships with anyone else.\n\nThus, the final answer is:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, G, J",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with E, we analyze the provided relationships:\n\n1. J and E have a good relationship.\n2. There are no other relationships involving E mentioned in the provided information.\n\nSince E only has a good relationship with J and there are no other connections to E, we conclude that no one else has a good relationship with E.\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, H",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we analyze the provided relationships:\n\n1. B and F have a good relationship.\n\nSince there are no other relationships involving F mentioned, we conclude that the only person with a good relationship with F is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, F, G, H",
+      "prediction": "B, C, F, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we can analyze the relationships provided:\n\n1. A and F have a good relationship.\n2. A and B have a good relationship.\n3. A and G have a good relationship.\n4. A and C have a good relationship.\n5. A and H have a good relationship.\n\nFrom the above information, we can conclude that A has good relationships with the following people:\n\n- B\n- C\n- F\n- G\n- H\n\nNow, we will list these names in alphabetical order:\n\n- B\n- C\n- F\n- G\n- H\n\nFinal Answer: B, C, F, G, H"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to analyze the relationships based on the provided information.\n\n1. **C and H have a bad relationship** - This means C cannot be in the same group as H.\n2. **A and F have a good relationship** - A is in a group with F.\n3. **A and C have a good relationship** - A is also in a group with C.\n4. **E and F have a bad relationship** - This means E cannot be in the same group as F.\n5. **A and D have a good relationship** - A is in a group with D.\n6. **H and G have a good relationship** - H is in a group with G.\n7. **H and I have a good relationship** - H is in a group with I.\n8. **H and E have a good relationship** - H is also in a group with E.\n9. **A and B have a good relationship** - A is in a group with B.\n\nFrom the relationships, we can summarize the groups:\n\n- Group 1: A, B, C, D, F (since A has good relationships with B, C, D, and F)\n- Group 2: H, G, I, E (since H has good relationships with G, I, and E)\n\nSince I is in Group 2 with H, G, and E, we can conclude that:\n\n**I has a good relationship with H, G, and E.**\n\nNow, listing these names in alphabetical order:\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, E",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we analyze the provided relationships:\n\n1. A and G have a good relationship.\n2. There are no other relationships mentioned that involve G directly.\n\nSince the only person mentioned with a good relationship with G is A, we conclude that A is the only person with a good relationship with G.\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "I",
+      "prediction": "I",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we analyze the relationships provided:\n\n1. C and I have a good relationship.\n2. C and H have a bad relationship.\n3. C and D have a bad relationship.\n4. E and C have a bad relationship.\n\nFrom the above, we see that C has a good relationship only with I. \n\nNow, we check if there are any transitive relationships that could connect C to others:\n- C has bad relationships with H, D, and E, which means none of these can be in the same group as C.\n- The only person with a good relationship with C is I.\n\nThus, the only person who has a good relationship with C is I.\n\nFinal Answer: I"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E",
+      "prediction": "B, E",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships provided:\n\n1. A and G have a good relationship.\n2. B and H have a bad relationship.\n3. A and F have a good relationship.\n4. C and E have a bad relationship.\n5. E and D have a good relationship.\n6. E and B have a good relationship.\n7. A and H have a good relationship.\n8. A and C have a good relationship.\n\nFrom the information, we see that E has a good relationship with D. \n\nNext, we check if E has any good relationships with others:\n- E has a good relationship with B (from point 6).\n- E has a bad relationship with C (from point 4).\n- E has a good relationship with D (from point 5).\n\nNow, we need to see if D has any good relationships with others through E:\n- Since E has a good relationship with D, and E has a good relationship with B, we can conclude that D also has a good relationship with B (through E).\n\nNow we can summarize the good relationships:\n- D has a good relationship with E (directly).\n- D has a good relationship with B (through E).\n\nThus, the people who have a good relationship with D are E and B.\n\nListing them in alphabetical order gives us: B, E.\n\nFinal Answer: B, E"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F, H",
+      "prediction": "C",
+      "correct": false,
+      "response": "To determine who has a good relationship with A, we can analyze the relationships based on the provided information.\n\n1. C has a good relationship with A (from the information given).\n2. There are no other direct relationships mentioned involving A.\n\nSince C is the only person mentioned to have a good relationship with A, we conclude that:\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we analyze the provided relationships:\n\n1. F and G have a good relationship.\n2. C and F have a bad relationship, which means C has a bad relationship with G (since G is good with F).\n3. H and F have a bad relationship, which means H has a bad relationship with G.\n4. A and F have a bad relationship, which means A has a bad relationship with G.\n5. E and F have a bad relationship, which means E has a bad relationship with G.\n6. A and D have a good relationship, but since A has a bad relationship with G, D cannot have a good relationship with G either.\n7. E and B have a good relationship, but since E has a bad relationship with G, B cannot have a good relationship with G either.\n\nSince G only has a good relationship with F, and all other relationships involving G lead to bad relationships, we conclude that the only person with a good relationship with G is F.\n\nThus, the final answer is:\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G",
+      "prediction": "D, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we analyze the relationships provided:\n\n1. C and H have a bad relationship.\n2. H and G have a good relationship.\n3. H and D have a good relationship.\n\nFrom the above information, we can conclude that H has good relationships with G and D.\n\nNow, we list the people who have a good relationship with H in alphabetical order:\n\nG, D\n\nFinal Answer: D, G"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we can analyze the relationships based on the provided information:\n\n1. C has a good relationship with H.\n2. C has a good relationship with E.\n3. C has a good relationship with G.\n\nNow, we need to check if C has any bad relationships that would affect these connections. \n\n- A has a bad relationship with C, but this does not affect C's good relationships with H, E, and G.\n- There are no other bad relationships involving C that would impact the good relationships.\n\nThus, the people who have a good relationship with C are H, E, and G.\n\nListing these names in alphabetical order gives us: E, G, H.\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, I",
+      "prediction": "I",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we analyze the relationships provided:\n\n1. **F and E**: Bad relationship (given).\n2. **F and I**: Good relationship (given).\n3. **F and C**: Bad relationship (given).\n4. **F and B**: No direct relationship mentioned, but since B has a bad relationship with E and C, we can infer that F also has a bad relationship with B.\n5. **F and H**: No direct relationship mentioned, but since H has a good relationship with C (who has a bad relationship with F), we can infer that F has a bad relationship with H.\n6. **F and D**: No direct relationship mentioned, but since I (who has a good relationship with F) has a good relationship with D, we cannot infer a bad relationship here.\n\nFrom the analysis, the only person with a confirmed good relationship with F is I.\n\nThus, the final answer is:\n\nFinal Answer: I"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we analyze the relationships provided:\n\n1. C and A have a good relationship.\n2. C and F have a good relationship.\n3. C and H have a bad relationship.\n4. C and E have a bad relationship.\n\nFrom the above, we can see that C has good relationships with A and F. \n\nNow, we need to check if A and F have any relationships that could affect C's relationships through transitivity:\n\n- A has no relationships mentioned with others, so we cannot infer anything further.\n- F has a bad relationship with E, but that does not affect C's relationships since C and F are directly good.\n\nThus, the people who have a good relationship with C are A and F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, I",
+      "prediction": "E, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships provided:\n\n1. E and I have a good relationship.\n2. E and H have a bad relationship.\n3. A and E have a bad relationship.\n4. C and D have a good relationship.\n5. A and H have a bad relationship.\n6. E and F have a good relationship.\n7. A and B have a good relationship.\n8. C and G have a good relationship.\n9. H and E have a bad relationship.\n10. C and H have a good relationship.\n11. B and F have a bad relationship.\n\nFrom the information, we see that:\n- E has a good relationship with F (point 6).\n- F does not have a good relationship with B (point 11).\n\nNow, we need to find out if F has any other good relationships through transitive properties. \n\nSince E has a good relationship with F, we can check E's relationships:\n- E has a bad relationship with H (point 2).\n- E has a bad relationship with A (point 3).\n- E has a good relationship with I (point 1).\n- E has a good relationship with F (point 6).\n\nThus, the only person we can confirm has a good relationship with F is E. \n\nNow, we check if F has any other good relationships through E:\n- E has no good relationships with A or H, which means F cannot have good relationships with A or H through E.\n- E has a good relationship with I, so F also has a good relationship with I through E.\n\nTherefore, the people who have a good relationship with F are E and I.\n\nFinal Answer: E, I"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, F, G, I, J",
+      "prediction": "No one",
+      "correct": false,
+      "response": "To determine who has a good relationship with B, we need to analyze the relationships provided.\n\n1. A and B have a good relationship.\n2. A has good relationships with G, F, J, I, and C.\n3. A has a bad relationship with E.\n4. H has a good relationship with E and D.\n5. C has a bad relationship with H.\n\nSince B has a good relationship only with A, and A is the only person we know has a good relationship with B, we need to check if A has good relationships with anyone else that could connect to B.\n\nHowever, since B does not have any direct good relationships with anyone else (other than A), we conclude that:\n\nFinal Answer: No one"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, G, H, I",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with J, we need to analyze the relationships provided.\n\nFrom the information given:\n- B and J have a good relationship.\n\nNow, we need to check if B has any good relationships with other people, as they could potentially connect J to others through transitivity.\n\nB has good relationships with:\n- H\n- G\n- I\n- C\n\nHowever, we also need to consider the bad relationships:\n- B and F have a bad relationship.\n\nSince J has a good relationship with B, and B has good relationships with H, G, I, and C, we can conclude that J has a good relationship with B only, as there are no transitive connections to other people from B to J.\n\nThus, the only person with a good relationship with J is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, E, F",
+      "prediction": "A",
+      "correct": false,
+      "response": "To determine who has a good relationship with D, we analyze the provided relationships:\n\n1. A and D have a good relationship.\n2. There are no other relationships mentioned that involve D.\n\nSince the only relationship involving D is with A, and there are no other connections to D through transitivity (as no other person has a good relationship with A that connects to D), we conclude that:\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, F",
+      "prediction": "C",
+      "correct": false,
+      "response": "To determine who has a good relationship with A, we analyze the relationships provided:\n\n1. C and A have a good relationship.\n2. There are no other direct relationships mentioned involving A.\n\nSince C is the only person mentioned with a good relationship with A, we conclude that:\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, E",
+      "prediction": "B, C, E",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the relationships provided:\n\n1. B and C have a good relationship.\n2. A and G have a good relationship.\n3. A and C have a bad relationship.\n4. A and D have a good relationship.\n5. G and C have a bad relationship.\n6. B and H have a good relationship.\n7. A and F have a good relationship.\n8. B and E have a good relationship.\n\nFrom the information, we see that B has a good relationship with H. \n\nNext, we need to check if B has any other good relationships that could connect to H through transitivity. The relationships involving B are:\n- B and C (good)\n- B and H (good)\n- B and E (good)\n\nSince B has good relationships with C and E, we can conclude that:\n- C and E also have a good relationship with H through B.\n\nNow, we can list all the people who have a good relationship with H:\n- B (directly)\n- C (through B)\n- E (through B)\n\nThus, the people who have a good relationship with H are B, C, and E.\n\nFinal Answer: B, C, E"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, F, I",
+      "prediction": "B",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships provided.\n\n1. B and G have a good relationship.\n2. B has good relationships with C, D, F, and I.\n3. H has a bad relationship with C, but has good relationships with A and E.\n4. A has a bad relationship with I.\n\nSince G has a good relationship with B, we can conclude that G also has a good relationship with everyone that B has a good relationship with, due to the transitive property of good relationships.\n\nHowever, we need to check if G has any direct relationships with others:\n- G has a good relationship with B.\n- There are no other direct relationships mentioned for G.\n\nThus, the only person we can confirm has a good relationship with G is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, G",
+      "prediction": "D, E, G, H",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships provided:\n\n1. D and G have a good relationship.\n2. H and E have a bad relationship.\n3. C and E have a bad relationship.\n4. D and E have a good relationship.\n5. H and C have a bad relationship.\n6. A and C have a bad relationship.\n7. D and F have a good relationship.\n8. A and D have a bad relationship.\n9. C and B have a good relationship.\n10. H and A have a good relationship.\n\nFrom the information, we see that D has a good relationship with F (point 7). \n\nNext, we check who has a good relationship with D:\n- D has a good relationship with G (point 1).\n- D has a good relationship with E (point 4).\n- D has a good relationship with F (point 7).\n\nNow, we need to check if D has any bad relationships that would affect F's relationships:\n- A has a bad relationship with D (point 8), which means A has a bad relationship with F as well.\n- H has a good relationship with D (point 10), which means H has a good relationship with F as well.\n\nNow we can summarize:\n- F has a good relationship with D (directly).\n- F has a good relationship with G (through D).\n- F has a good relationship with E (through D).\n- F has a good relationship with H (through D).\n\nThus, the people who have a good relationship with F are D, G, E, and H.\n\nListing them in alphabetical order gives us: D, E, G, H.\n\nFinal Answer: D, E, G, H"
+    }
+  ]
+}

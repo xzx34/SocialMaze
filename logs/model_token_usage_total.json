@@ -1,42 +1,42 @@
 {
   "llama-3.1-8B": {
-    "input_tokens": 4958698,
-    "output_tokens": 1693086
+    "input_tokens": 5012566,
+    "output_tokens": 1763348
   },
   "gemma-2-9B": {
     "input_tokens": 4214559,
     "output_tokens": 1164824
   },
   "gemma-2-27B": {
-    "input_tokens": 4667828,
-    "output_tokens": 1354179
+    "input_tokens": 4721696,
+    "output_tokens": 1443139
   },
   "llama-3.3-70B": {
-    "input_tokens": 5170090,
-    "output_tokens": 1806520
+    "input_tokens": 5223958,
+    "output_tokens": 1880152
   },
   "qwen-2.5-72B": {
-    "input_tokens": 5738364,
-    "output_tokens": 2665878
+    "input_tokens": 5792232,
+    "output_tokens": 2749998
   },
   "qwq": {
-    "input_tokens": 13066289,
-    "output_tokens": 14511612
+    "input_tokens": 13120157,
+    "output_tokens": 14719969
   },
   "deepseek-r1": {
-    "input_tokens": 13899910,
-    "output_tokens": 7314782
+    "input_tokens": 13953778,
+    "output_tokens": 7470060
   },
   "gpt-4o-mini": {
-    "input_tokens": 2704676,
-    "output_tokens": 800802
+    "input_tokens": 3170729,
+    "output_tokens": 1192876
   },
   "gpt-4o": {
-    "input_tokens": 2316457,
-    "output_tokens": 635713
+    "input_tokens": 2782510,
+    "output_tokens": 1025733
   },
   "o3-mini": {
-    "input_tokens": 2485574,
-    "output_tokens": 2596939
+    "input_tokens": 2950527,
+    "output_tokens": 3921069
   }
 }

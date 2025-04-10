@@ -167,6 +167,8 @@ Final Decision: [Accept/Reject]
     prompt = base_prompt + paper_info + reviewer_comments + author_response + final_instruction
     
     prompt=base_prompt + paper_info + reviewer_comments + final_instruction
+
+    prompt=base_prompt + paper_info + final_instruction
     return prompt
 
 def process_paper(debate_item, model, system_prompt):

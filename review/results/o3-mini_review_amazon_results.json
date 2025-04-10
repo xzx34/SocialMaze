@@ -1,0 +1,777 @@
+{
+  "model": "o3-mini",
+  "total_scenarios": 100,
+  "correct_predictions": 51,
+  "accuracy": 51.0,
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      2,
+      3,
+      2,
+      2
+    ],
+    [
+      0,
+      4,
+      8,
+      39,
+      25
+    ],
+    [
+      0,
+      0,
+      1,
+      3,
+      9
+    ]
+  ],
+  "rating_distributions": {
+    "3": {
+      "total": 11,
+      "distribution": {
+        "1": 18.181818181818183,
+        "2": 18.181818181818183,
+        "3": 27.27272727272727,
+        "4": 18.181818181818183,
+        "5": 18.181818181818183
+      }
+    },
+    "4": {
+      "total": 76,
+      "distribution": {
+        "1": 0.0,
+        "2": 5.263157894736842,
+        "3": 10.526315789473683,
+        "4": 51.31578947368421,
+        "5": 32.89473684210527
+      }
+    },
+    "5": {
+      "total": 13,
+      "distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 7.6923076923076925,
+        "4": 23.076923076923077,
+        "5": 69.23076923076923
+      }
+    }
+  },
+  "results": [
+    {
+      "scenario_id": "product_5",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "All eight reviews are overwhelmingly positive. They use strong affirmations like \"loved it,\" \"perfect,\" and \"very good\" along with a recommendation based on specific hair needs. This consistency across genuine feedback indicates that the typical consumer experience would be excellent. Based on this analysis, the true quality of the product is about 5 stars.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_1",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "Analyzing the reviews, nearly all customers express strong satisfaction with the product. Most reviews mention it as a favorite, with “amazing” performance, excellent color match, and durability (e.g., staying put). Even the more neutral review (“It’s good for the price”) does not detract from the overall overwhelmingly positive sentiment. This consistency strongly suggests that a typical unbiased consumer would rate it very highly on the scale.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_21",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "The reviews are uniformly positive. There are no negative comments; every reviewer expresses satisfaction with the product's style, comfort, or fit. Multiple reviews mention that both the reviewer and their family members (such as a daughter) love the item, and even remarks like \"very cute and comfy\" as well as satisfaction with the product matching its picture suggest that it meets or exceeds expectations. Given that all customer feedback is very positive and there’s no indication of issues or disappointment, a typical unbiased consumer would rate the product very highly.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_4",
+      "true_rating": 5,
+      "prediction": 4,
+      "correct": false,
+      "response": "Analyzing the reviews, most customers appear satisfied with the product’s functionality – particularly for travel purposes and its leak-proof design. Several reviews highlight ease of use with the bottles and accessories being well-suited for travel. A couple of reviewers note problems with parts of the case (the zipper and cap), but these issues seem to be in the minority. Taking into account that genuine customer feedback overwhelmingly praises its core functionality despite a few design or durability issues, the product appears to be of good quality overall.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_10",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All eight reviews are generally positive. Several reviewers highlight that the product is cute, soft, and effective at keeping hair back during activities like applying makeup or using a face mask. The only minor downside mentioned is that the product can feel a bit tight at first, but there's also an expectation that it will loosen up over time. Even the less enthusiastic review (\"Does it's job.\") is neutral, indicating satisfaction with basic performance.\n\nTaking into account that the majority of genuine reviews praise the product’s design, comfort, and functionality—with only a slight issue noted by one reviewer—the overall impression is very positive. Averaging these opinions, the true product quality is most consistent with a near-perfect rating.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_15",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most of the reviews are clearly positive. Reviewers #1, #2, #3, #4, and #8 praise how the product performs—highlighting that it blends well and that the color is true to the photo. Reviewer #5 comments on past positive experiences and competitive pricing, further implying satisfaction. Only Reviewer #6 has a mild complaint about the product being too dark for her daughter, and Reviewer #7 gives a very neutral \"Okay.\" Considering that the majority of genuine feedback is very positive, with just a minor concern mentioned, the overall impression is that the product is of high quality. This would place it around 4.6 out of 5, which rounds to 5 when rounded to the nearest whole number.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_19",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most reviews are glowing. Nearly all praise the beeswax for its quality, performance in homemade products, pleasant (or acceptable) smell, and ease of use. Only one review mentioned a slight deviation in smell compared to expectations, but even that reviewer noted it wasn't an issue for their application. Given the overwhelmingly positive feedback—with six clearly highly satisfied comments and the one minor issue not detracting from its overall utility—a typical, unbiased consumer would likely rate this product at 5 stars.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_3",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Reasoning:\nNearly all of the reviews are positive. Multiple reviewers comment on the product’s compact design, satisfactory performance under typical loads (such as running a laptop or charging devices), and reliable operation on long road trips. While one or two reviewers mention the fan noise (or suggest caution about leaving it plugged in when not in use), these points are relatively minor compared to the overall satisfaction expressed. Taking all genuine customer feedback into account, the typical, unbiased consumer would likely rate this product around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_18",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "Almost all the reviews praise the product for its material, stretch, and overall design. Although Reviewer #1 tells an odd, distracting story, the core comment about loving the product remains positive. The only slight critique comes from Reviewer #3, who mentions that for users with shorter hair a stiffer scarf might be better for holding volume, but even then, the material and color are complimented.\n\nAll things considered, the overwhelming majority of reviews are highly positive, indicating that a typical unbiased consumer would likely rate it at the top of the scale.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_7",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most of the reviews mention that the scent is pleasant and some reviewers even express delight in the product, while a few note issues such as a short-lasting aroma or dissatisfaction with the scent. Counting the votes, five reviews are generally positive about the product (\"Nice smell\", \"Love the smell\", \"Recomendado\", etc.), and three reviews point out negative aspects, with criticisms mainly regarding longevity and personal preference. When we roughly average these sentiments, we get an approximate rating around 3.6 stars, which rounds to 4 stars. \n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_14",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "Most reviewers agree that the design and look of these nails are attractive, and a few even report compliments on them. However, several reviews consistently point out significant issues with durability (lasting only a few hours or a day in several cases), problems with the glue consistency, and discomfort or pain when wearing them. Although one reviewer mentioned a longer wear time with proper preparation, the overall recurring concern is that the product fails to perform reliably for most typical users. Balancing the attractive design against the repeated issues with longevity and application, the true quality as experienced by an average, unbiased consumer appears to be around 3 stars.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_22",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most of the reviews are glowing, with multiple users praising the nail forms for their durability, stickiness, and ease of use. Reviewers #1, #2, #3, #5, #7, and #8 highlight key attributes like strength, the adhesive quality, and overall usability—even noting that the nail forms are especially helpful for beginners and that they make the work easier. Although Reviewer #6 mentioned a problem with sticking, this view is strongly outweighed by the other opinions and seems to be an outlier amid the overwhelmingly positive feedback.\n\nConsidering the majority of solid endorsements and only one complaint about the product’s adhesive performance, the typical neutral consumer response would lean very positive. When we average the implied ratings (with most being around 5 stars and one lower), we get a value well above 4.5, which rounds to 5.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_6",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Review analysis:\n\n• Reviewer #1 liked the application and inclusions but noted that there isn’t enough product for long nails. This is a mostly positive review with a minor drawback.\n• Reviewer #2 mentioned that the colors aren’t as bright or as represented, which is a notable negative point.\n• Reviewer #3 was very enthusiastic, noting the product exceeded expectations in performance, durability, and value.\n• Reviewer #4 experienced a major functional issue where the color failed under UV light, resulting in disappointment.\n• Reviewer #5 found the product difficult to use.\n• Reviewer #6, #7, and #8 all had positive experiences noting ease-of-use, good colors, and overall satisfaction.\n\nBalancing the positives—which are about ease-of-use, good value, and performance—with the negatives regarding color accuracy, product quantity, and some usability issues, the overall impression from genuine users suggests a good but not perfect product.\n\nTaking everything into account, the true quality appears to be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_11",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviews are positive, emphasizing good build quality, ease of use, and waterproof functionality. While one review mentioned that it doesn’t deliver the very closest shave compared to a traditional blade, the majority indicate that it meets expectations very well and offers excellent value. Considering the minor criticism along with consistent praise from genuine users (and potential exaggeration by overly positive reviewers), the overall true quality appears to be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_12",
+      "true_rating": 5,
+      "prediction": 4,
+      "correct": false,
+      "response": "Here's how I arrived at the rating:\n\n• Reviews #1, #2, #3, #4, and #6 offer positive feedback. They highlight that the product meets its advertised purpose, helps organize the workspace, and is a good size/design.\n\n• Reviews #5 and #7 mention issues—a broken unit and a unit that arrived scratched—which seem to be isolated incidents rather than reflective of overall product performance.\n\n• Review #8 doesn’t contribute any evaluative content, so it’s neutral.\n\nGiven that most reviews (about 5 out of 8) are clearly positive while only a couple note problems that might be due to defects or shipping issues rather than the design itself, the overall consensus suggests that the product is good. A typical, unbiased consumer would likely experience the benefits mentioned in the positive reviews rather than the occasional defect.\n\nThus, on a scale of 1–5 stars, the true quality of the product rounds to:\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_25",
+      "true_rating": 5,
+      "prediction": 3,
+      "correct": false,
+      "response": "Analyzing the reviews, we see a mix of strong positive and negative feedback. For example, Reviewer #2 praises the product for being “nice and easy to use” and “sturdy,” while Reviewer #1 and Reviewer #3 point out that the clips broke or aren’t worth the money. Several reviewers (e.g., #4 and #7) mention that parts of the product appear cheap or flimsy, whereas others (e.g., #5, #6, and #8) express satisfaction with ease of use and quality details like the smooth plastic and useful extra tooth.\n\nBalancing the comments—recognizing that some users may be exaggerating on the positive side while others may be overly critical—the overall impression is of a product that performs adequately but has some notable reliability issues. The average sentiment seems to align with a middling performance.\n\nThus, considering both the positive and negative points raised, the true quality of the product is most likely around 3 stars.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_20",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "The reviews are mostly positive with several users praising the clipper’s quiet operation, accessories, and ease of use. Many of the reviews (Reviewers #2, #4, #5, #6, #7) underline that it functions well and is especially useful for children or even delicate situations (e.g., trimming on pets). On the other hand, a few reviewers (Reviewers #1, #3, #8) note that while the product is quieter than standard models, it isn’t completely noiseless and may still be a bit too loud or vibratory—an important consideration for those with sensory issues.\n\nOverall, considering that the majority of genuine user experiences point to satisfactory performance with minor shortcomings related to the “noiseless” claim, the true quality of the product appears to be around 4 stars when taking into account both the praise for its performance and the criticism about its noise level.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_9",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Based on the reviews, most of the customers express satisfaction with the quality, look, and value of the hair product. Several reviewers mention that the color is vibrant, the texture is soft, and it offers a good value in terms of coverage and overall appearance. There are a couple of points of contention—specifically regarding the longevity or durability of the colored (burgundy) version compared to the black version—but these concerns seem to be isolated compared to the overall positive feedback. With the majority of genuine reviews being favorable and only minor issues noted by a few, the true quality, as experienced by an average, unbiased consumer, is high but not flawless.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_26",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "All reviews agree that the toothbrush itself is well‐made, attractive, and well-suited for its intended use. Several reviewers note the very soft bristles (ideal for baby gums) and nice design, as well as the eco-friendly bamboo material. A couple of reviews raised issues with how the product is pictured and marketed—showing three brushes when only one is provided—but almost every reviewer who commented on this still liked the product once they used it. Even when a reviewer mentioned the price, it was balanced by overall satisfaction regarding the quality.\n\nConsidering that genuine customer feedback overwhelmingly praises the actual product while acknowledging only minor marketing or pricing concerns, the unbiased typical consumer would likely rate the quality as very good—around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_16",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "Review Analysis:\n• Reviewer #1 is very positive, favoring the silicone sponge over foam alternatives.\n• Reviewer #2 says it works well but could use a design improvement (a finger slot), suggesting a good product with room for enhancement.\n• Reviewer #3 appreciates that it doesn’t absorb makeup but finds it harder to apply a light touch, indicating mixed feelings.\n• Reviewer #4 and #5 offer brief positive remarks.\n• Reviewer #6 likes the idea behind a silicone product but criticizes its stiffness and difficulty blending fine areas.\n• Reviewer #7 is strongly negative due to the need to pull on the skin, which is particularly problematic for older users.\n• Reviewer #8 gives a short “Works oj” comment that seems neutral to slightly positive.\n\nWhen balancing these comments—a few highly positive comments and some significant criticisms about blending and usability—the overall sentiment leans toward a product that performs reasonably well but has notable limitations. Weighing the generally positive aspects with the detractors yields an overall average around a 3‑star rating.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_17",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "There are several factors to consider when evaluating this product's true quality:\n\n1. Most reviewers who tested the product for nail art applications found it to be effective. Multiple reviewers noted that it performs well for protecting skin and simplifying cleanup when doing detailed nail art.\n\n2. Some reviewers mentioned minor drawbacks – notably a strong, fishy odor and, in one case, a slower drying time or non-ideal peeling behavior when compared to a competitor's product. Additionally, one review addressed a packaging defect, but that issue appears to be isolated from the product’s inherent performance.\n\n3. Even though a couple of reviews had modest negative points (packaging, drying time, smell), the overall sentiment remains positive, with repeated commendations of its functional effectiveness.\n\nTaking all these into account, the product appears to be well-received by genuine users and provides the expected functionality for its intended purpose, with only minor issues that don’t significantly impact its overall performance. In other words, it’s a good product with a few caveats.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_8",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "Most reviewers note that while the brush is conceptually good, several issues affect its reliability—multiple comments mention it arriving broken or having parts that come off easily, necessitating repair with glue. A couple of reviews express satisfaction overall, and one even praises it as \"amazing,\" but these positive remarks seem to be tempered by recurring problems with construction and durability that real customers experienced.\n\nIf we roughly translate these sentiments into star ratings, we might estimate scores around 3 stars from reviews that mention breakage or design flaws, with a couple of higher ratings possibly reflecting service or cosmetic appeal. Overall, when balancing the frequent durability issues with the occasional positive feedback, the quality averages out to about a 3-star experience.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_23",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "Analyzing the eight reviews shows that opinions differ considerably. Some users (Reviewers 3, 5, 6, and 7) praise the polish’s color and overall appearance and feel that—with proper technique and preparation—the product creates an attractive effect. However, several reviewers (Reviewers 1, 2, 4, and 8) report significant issues such as the magnetic effect not lasting or not working at all, inconsistent color delivery, curing problems, and even packaging issues.\n\nTaking into account that most reviews are genuine while recognizing that some might lean too positively (perhaps from loyal customers or professional reviewers) or too negatively (possibly focusing excessively on flaws), the overall impression is that the product works well for some but is inconsistent in performance and quality control. This mix of positive and negative feedback implies that an unbiased typical consumer would likely find the product to be average.\n\nBased on this analysis, the best estimate for the true quality of the product is:\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_2",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "Let’s break down the reviews:\n\n• Reviewer #1 notes that while the pins are attractive, they aren’t very strong or durable – they work for most needs but aren’t reliable if you want to wear your hair down.  \n• Reviews #2, #3, and #4 gush about their beauty and overall appeal for updos, suggesting high praise.  \n• However, Review #5 indicates a mixed/balanced opinion.  \n• Reviewer #6, who bought them for a wedding, points out quality issues (misaligned parts, etc.) even though most were useable.  \n• Reviewer #7 and Reviewer #8 both mention that the decorative elements break off and that while the pins look good, they do not work well if you need them to actually hold hair in place.\n\nIt appears that while some positive reviews (possibly from professional positive reviewers) focus on the looks and the decorative appeal, several genuine customers describe durability and functionality issues. Given that a typical, unbiased consumer is likely to judge a hair accessory not just on the aesthetic but also on its ability to hold hair as expected and withstand normal wear, the true quality seems to be middling.\n\nA rough look at the opinions from those with performance concerns (reviews #1, #5, #6, #7, and #8) suggests an average rating around 3 out of 5 stars, whereas the more glowing comments seem influenced by style over substance. Taking into account the overall balance of genuine concerns regarding build and durability, the typical quality as experienced by an unbiased customer would be around 3 stars.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_27",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most reviews are very positive, with most reviewers praising the product's ability to smooth skin, provide hydration without oiliness, and improve makeup wear; only one outlier review mentions negative aspects (sticky texture and bad taste). If we estimate, the majority of the reviews seem to imply a 5-star experience while the one negative comment would be an exception. In averaging the feedback (with a high concentration of 5-star ratings and one low score), the overall score comes out around 4.5, which rounds to 5.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_29",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All of the reviews are highly positive, focusing on the product's ease of use, effective protection, and the fact that it causes no damage to natural nails during removal. Several reviewers highlighted that their nail treatments lasted for two weeks without issues, and they provided useful tips to achieve even better results. Even the review mentioning a small wrinkle during application noted that it was easily covered up in the final result. With every reviewer recommending the product for its performance and convenience, it is clear that a typical, unbiased consumer would rate it very favorably. \n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_35",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Analysis:\n\nAmong the eight reviews, one criticizes the product's performance on a Maltese, which might have a different coat type, while the remaining reviews offer strong praise. Most reviewers describe the tool as effective, innovative, and easy to use for managing various types of dog fur, especially for breeds that shed or have matted hair. Even though a few reviewers might sound professional in their positive language, the majority of genuine customer experiences indicate that the product performs exceptionally well for its intended purpose. Taking all this into account, for a typical unbiased consumer the overall quality appears to be excellent.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_38",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All of the reviews are overwhelmingly positive regarding the product’s performance and quality. Nearly every reviewer praises the hair for its quality, texture, and ease of use. Even though one review mentioned that \"packs are thin,\" the focus of that comment was on the packaging rather than the hair itself. Considering that the majority of genuine customer feedback emphasizes satisfaction and repeat purchases, the true quality of the product appears to be very high, aligning with a top-tier rating.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_28",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Based on the reviews, most users praise the shampoo for its cleaning power, lovely scent, and suitability for non–color-treated hair. Several reviewers mention that it leaves hair soft, clean, and shiny. One review highlights excellent performance for fine, long hair, while another points out that someone with color-treated hair experienced fading. There are also concerns about the packaging (a leaky cap) and one report of a scalp reaction, which seem to be individual issues rather than common faults with the formulation. Weighing the very positive feedback against these issues, most genuine customers seem to have a favorable experience overall, and the drawbacks (packaging defects and occasional skin sensitivities) only affect a minority of users. Therefore, for the typical, unbiased consumer the true quality of the product is around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_13",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "The reviews are overwhelmingly positive. Several reviewers note clear improvements in their skin’s condition, with detailed personal experiences and multiple repeat purchases, while even the shorter reviews consistently praise the product's benefits. Given that almost every reviewer is enthusiastic and reporting genuine, positive results, the consensus points solidly toward an excellent product quality. Therefore, on a scale of 1-5 stars, the true rating is rounded to 5.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_44",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviewers praise the product for its natural look, pleasant color, and overall satisfaction (“Just what I wanted...”, “My fave lipstick color”), while only a couple mention minor issues (such as the shimmer wearing off quickly and not meeting metallic pink expectations). The majority of the reviews lean positive, suggesting that an unbiased consumer would likely rate this product above average but perhaps not perfect due to the minor drawbacks noted. \n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_41",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "All the reviews are overwhelmingly positive. Most users report that the device works great for various hair types and styles, is easy to use once you get the hang of it, and holds styles reliably throughout the day. While one reviewer noted a couple of minor drawbacks—like the product being a bit large for fine hair, potential bending/deformation with repeated use, and a slight chipping of the black coating—these issues seem secondary relative to the overall performance of the product.\n\nGiven that nearly every reviewer described their experience as excellent and useful, with only minor usability or longevity reservations mentioned on occasion, the consensus suggests that the product deserves a high rating. Taking into account the noted flaws that prevent it from being a perfect 5 stars but still recognizing the strong positive sentiment, the typical unbiased consumer would likely rate it 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_39",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "Most of the reviews describe the product as having high-quality material, attractive colors, and a soft, stretchy feel. However, several reviewers mention significant issues with sizing (running too large for infants or newborns) and with the construction (flimsiness, coming apart, or not staying in place). Although many customers like the fabric and design, these persistent flaws reduce overall functionality and satisfaction. Balancing the praise for quality with the recurring practical problems, the product seems to deliver an average performance that would likely be rated around three stars by a typical unbiased consumer.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_45",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All reviews are uniformly positive. The comments range from \"works great\" and \"just as described\" to praising the perfect fit, durability, and even customer service. Even the more reserved comments (like \"good\" or \"just what I needed\") indicate satisfaction without any hints of significant issues. Overall, the genuine customer feedback overwhelmingly supports a high-quality product experience, leading to a conclusion that an unbiased typical consumer would likely rate it at 5 stars.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_52",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "All the reviews are overwhelmingly positive. Multiple reviewers mention that the headband is well made, fits perfectly, and even garners compliments from others. None of the customers reported any issues or flaws. Although one reviewer mentioned its use as a Halloween accessory, the rest of the reviews focus on quality and fit for everyday wear. Given the consensus among genuine customer reviews, it is clear that the product meets or exceeds expectations for most users.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_24",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Let’s look at each review briefly:\n\n• Reviewer 1 calls it “a good product” (though overpriced), suggesting that on its merits the product works well even if its value might be questioned.\n• Reviewer 2 reports that it “didn't help” with odor at all, a strongly negative experience.\n• Reviewer 3 claims it’s “the very best, most effective deodorant ever!”\n• Reviewer 4 is enthusiastic—“Awesome product!!”\n• Reviewer 5 has mixed experiences: happy with the first order but then “totally different” on the second, with no protection and smell.\n• Reviewer 6 offers a balanced review that, while noting a few shortcomings (e.g. not preventing marks after hot days and a tendency for stains if not used carefully), emphasizes that it has no smell, is antiallergic, and lasts a long time.\n• Reviewer 7 calls it a “favourite deodorant” that contains no harsh chemicals and actually works.\n• Reviewer 8 is very positive, appreciating the lack of smell, no allergy risk, and the fact that it keeps them fresh all day—and has used it reliably for three years.\n\nIf we roughly assign star ratings based on these perspectives, we might picture something like this:\n – A couple of reviews (Reviewers 2 and 5) are clearly negative (around 1–2 stars).\n – Reviewer 1 is moderately positive (about 3–4 stars).\n – Reviews 3, 4, 7, and 8 are highly positive (around 5 stars).\n – Reviewer 6 is overall positive with minor caveats (around 4 stars).\n\nAveraging these impressions (and noting that the majority of reviews are praising the product on performance while a few express disappointment) suggests that an unbiased, typical consumer would likely consider the product “good” but not perfect—in the region of 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_30",
+      "true_rating": 4,
+      "prediction": 2,
+      "correct": false,
+      "response": "Examining the reviews reveals a mix, but the majority point to concerns with the product’s practical performance. One review simply states “Good hair,” while another raves about the length and texture. However, several other reviews—such as one where a beautician couldn’t work with it, another saying the hair is too thin, complaints about strands coming out when brushed, and it getting matted—highlight repeated issues affecting usability and durability. While a couple of reviews seem particularly positive and might even indicate professional praise, the genuine user feedback appears to lean toward significant quality problems. Averaging the feedback leads to a true quality that would be noticeably below “average.” Rounding to the nearest whole number suggests that an unbiased consumer might rate this product around 2 stars.\n\nFinal Rating: 2"
+    },
+    {
+      "scenario_id": "product_31",
+      "true_rating": 3,
+      "prediction": 3,
+      "correct": true,
+      "response": "Several reviews report noticeable improvements (Reviewers #3, #4, and #7), while an equal number express little to no change (Reviewers #1 and #6). A couple of reviews are still pending long‑term results or are neutral in nature (Reviewers #2, #5, and #8). Weighing the enthusiastic experiences against the disappointed ones suggests that — for most typical users — the product is moderately effective, but not outstanding. Overall, it appears to be about average in quality.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_32",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Review Analysis:\n• Reviewer #1 praises the pricing and color variety.\n• Reviewer #2 calls it a “Great deal.”\n• Reviewer #3 comments on its quality by noting there are no defective caps, especially compared to cheaper alternatives.\n• Reviewer #4 says “Perfect” and loves the color.\n• Reviewer #5 expresses satisfaction.\n• Reviewer #6, while not having used them yet, notes that most items appear clean although a few are dirty – a minor inconsistency.\n• Reviewer #7 and #8 also give positive remarks, emphasizing value and authenticity of color.\n\nOverall, the majority of genuine-sounding reviews are highly positive and suggest that the product performs well and is of good quality. The one review that mentioned a slight concern (a few items appearing dirty) appears to be an isolated observation that does not outweigh the many positive comments.\n\nThus, the true quality as experienced by an unbiased typical consumer appears to be very high.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_40",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most reviewers praise the product for its effectiveness, scent, and value, highlighting benefits like relaxation and suitability for sensitive skin. Only one review mentions an issue—a leaked product on arrival—which appears to be an isolated shipping or packaging problem rather than a flaw in the product itself. Minor packaging design criticisms aside, nearly all the feedback is highly positive.\n\nConsidering that the majority of genuine customers are extremely satisfied with the product and the negative comment seems to be an exception, the overall true quality is best represented by a 5‐star rating.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_46",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most of the reviews are very positive about the product’s performance—its moisturizing ability, pleasant feel, and attractive color. Several reviewers note that while the product works well, the packaging or size is smaller than expected. Only two of the eight reviews mention this drawback, and even those are not attacking its effectiveness but rather the product size. In weighing overall performance against the drawback of its small size, the typical, unbiased consumer is likely to rate the product as very good. Rounded to a whole number, this product would likely receive 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_36",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most of the reviewers expressed high satisfaction with the oil's performance on skin and hair. Six out of eight reviews are very positive—some even mentioning repeated purchases and enjoying “the feel” and “the price”—while one review only highlights a packaging issue (despite noting the product quality was great). There is one outlier review that focused solely on disliking the scent, which may be more of a personal preference or even an extreme view compared to the general consensus.\n\nSince the overwhelming majority of reviewers are enthusiastic about the product’s quality—with nearly all emphasizing excellent performance—the overall honest appraisal from a typical customer points to a top-tier product.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_49",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "I examined all the reviews and found that nearly every reviewer praised the product for its detangling performance, even on various hair types. One reviewer mentioned a minor inconvenience (having to wash hair afterward), but overall the feedback was overwhelmingly positive, with several reviewers claiming it was their favorite or even the only product that worked for them. This leads me to conclude that the true quality of the product is very high. \n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_37",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "The reviews are uniformly positive with no criticism. Most customers express strong affection for the product, mentioning its excellent smell, quality, and overall experience (\"love it!\", \"Best on the market!\", \"Everyday pleasure\", \"Good quality product\"). Even the stylistically negative or facetious remarks (like \"Italians do it better for sure\") are framed in a complimentary context comparing favorably against the best in the market. Given this convergence of genuinely enthusiastic feedback from multiple reviewers, it is reasonable to conclude that the true quality of the product would be rated very highly by an unbiased consumer.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_43",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Many reviewers agree that the product works well—leaving hair soft, moisturized, and nicely scented. While a couple of reviewers noted that it can make hair greasy (likely an issue for those with thicker or frizzy hair) and some raised concerns about the packaging (leaking or broken bottles), the core performance of the shampoo and conditioner is positively received. Overall, these concerns seem to be minor compared to the product’s benefits for most users, suggesting that the true quality for a typical consumer is high, though not flawless.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_51",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Review analysis:\n\n• Reviewer #1 notes that the material is \"cheap,\" which suggests lower quality in terms of build/material but doesn't address overall usefulness.\n• Reviewer #2 mentions the product is \"very cute\" and \"so far so good,\" and they'd order again although they express a slight concern about durability.\n• Reviewer #3 praises the product for being attractive and a good value for its price, highlighting practical uses.\n• Reviewer #4 simply states \"Satisfactory,\" implying it meets basic expectations.\n• Reviewer #5 finds the size perfect for makeup, indicating it fulfills its intended purpose.\n• Reviewer #6 also appreciates the size for travel, although they note the item feels a bit cheaply made; however, the overall sentiment remains positive.\n• Reviewer #7 describes it as a \"good product,\" while Reviewer #8 calls it a \"great makeup pouch.\"\n\nAlthough there are some concerns about material quality and durability, most reviews indicate that the product meets expectations, especially considering its price and intended use. The slight negatives are outweighed by the consistent practical satisfaction mentioned by most reviewers.\n\nThus, the true quality of this product appears to be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_50",
+      "true_rating": 3,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most of the reviews praise the product's moisturizing and hydrating effects, and several highlight its suitability even for sensitive or dry skin. While one reviewer noted minor irritation around the eyes and mentioned using the mask for a shorter duration as a precaution, all other feedback is clearly positive and supportive. Even when discounting the compensated review or the very brief ones, the overall sentiment is strongly favorable. Thus, taking all reviews into account and considering that any minor issues can be adjusted for, the true quality for a typical consumer appears to be very high.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_60",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "All the reviews are very positive, with customers happily noting that these hair ties are both stylish and effective at holding hair without causing issues. Several reviewers even mention they’re perfect for special occasions like bridesmaid gifts and celebrations, with only a minor note about assembly that was deemed insignificant. There’s no substantial criticism or indication of any manufacturing or quality issues. Considering the enthusiastic and consistent feedback, the true quality of the product can be considered excellent.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_33",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "I looked carefully at each review, keeping in mind that a few extreme statements may come from either professional “hype” or focused negative opinions. One reviewer mentioned that it “stopped functioning after only a few uses” (and another noted it “worked great while it lasted, which was less than a week”), which raises concerns about durability. Yet there are reviews saying its cleaning performance is impressive, with one reviewer even claiming “I am sold for life,” while another called its performance “fair” and suitable for a child’s first power brush. A couple of comments are mostly descriptive (“Bought as a gift” and listing its features), and one reviewer complained that “the brush is too big,” a usability issue that would matter to some but not all consumers.\n\nWhen balancing these points–several complaints about durability and sizing alongside remarks that it cleans well and is cost‐effective–an ordinary, unbiased consumer is likely to view the product as average overall. Averaging out the enthusiastic assertions, the criticisms, and the neutral comments leads to a product quality that is neither especially excellent nor terrible.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_53",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviewers comment on the attractive design and good quality of the headbands, with several noting that they look great, are cute, and work well enough (with one reviewer even praising their sturdiness). There are a few minor concerns regarding fit (some saying they’re too big or better for smaller heads) and one reviewer had issues with durability during application, but these appear to be exceptions rather than the norm. Balancing the overall enthusiastic responses with the minor sizing and application drawbacks, a typical, unbiased customer experience would lean toward a positive impression. \n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_42",
+      "true_rating": 4,
+      "prediction": 2,
+      "correct": false,
+      "response": "Analyzing the reviews, several customers report significant flaws. Reviewer #1 and Reviewer #5 note the bottle collars and caps coming off and leaks, while Reviewer #2 and Reviewer #4 experience inconsistent dispensing and issues with durability. Although Reviewer #3 and Reviewer #8 mention that the product “does the job” or is “ok,” and Reviewers #6 and #7 claim they work well for travel, these positive comments are far outweighed by the recurring problems such as leaks, unreliable performance, and convenience issues. Taken as a whole by a typical, unbiased consumer, the overall performance is below average. \n\nFinal Rating: 2"
+    },
+    {
+      "scenario_id": "product_67",
+      "true_rating": 3,
+      "prediction": 1,
+      "correct": false,
+      "response": "All the reviews consistently express strong dissatisfaction, with complaints that the product “doesn’t work” to achieve its advertised effect (eliminating gray hair) and that it is essentially a waste of money. There is no indication of any moderately positive or balanced feedback, and even with potential biases in review types, the genuine customer feedback overwhelmingly indicates a non-functional product. Thus, the true quality of the product is very low.\n\nFinal Rating: 1"
+    },
+    {
+      "scenario_id": "product_58",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "The reviews are largely positive — many customers love the cute design, ideal size, and functionality for traveling. Some reviewers mention that the bag feels a bit flimsy or doesn’t stand up on its own. However, those are minor drawbacks compared to the overall satisfaction people have with it. Considering the mix, most users would probably give the product around a 4-star rating. \n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_34",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "I looked at the content and tone of each review carefully. Several of the reviews (for example, reviewers #1, #3, #4, and #6) come off as genuine customers describing positive effects on their teeth or gums—even if some mention delays or only preliminary results. Two of the reviews (#2 and #5) use very dramatic language to warn about “fake” or “knock‐off” versions; given that only a few reviews tend to be malicious or overly negative, these appear less likely to represent the typical experience. The other reviews (#7 and #8) are more anecdotal or indicate that the effects need more time to emerge. Overall, when discounting what appear to be the outlier “scam” warnings, an unbiased consumer who receives a genuine, correctly shipped version would likely experience real—though perhaps not miraculous—benefits. On balance, the product seems to deliver noticeable dental improvements for many users, and the genuine reviews average in the positive (roughly 4‐star) range.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_54",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most of the reviews are very positive with enthusiastic comments about the design, quality, and functionality. Only one review mentioned a minor drawback regarding the accessibility of trays and available space, while the others described the product as perfect or excellent. If we estimate that most reviewers would give a 5-star rating and one reviewer might give a lower rating (around 3 stars), the overall average would be very high—around 4.75 stars—which rounds to 5 when rounded to the nearest whole number.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_61",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Reviewers #1, #4, and #7 are clearly very positive, highlighting the appealing appearance, pleasant scents, and fun experience. Reviewer #3, while noting some trade-offs (like residue and the need for multiple bombs), still considers the product a good value. On the other hand, reviewers #2, #5, #6, and #8 mention issues such as the product’s small size and the residue it leaves behind in the tub—points that would be a nuisance to many users.\n\nOverall, the positive aspects seem to dominate the genuine customer feedback, with most noting that despite a few drawbacks (mainly cleaning residue), the product still delivers a fun, enjoyable bath experience. Weighing both the enthusiasm of the positive reviews and the consistent concerns about residue and size, a typical, unbiased consumer would likely rate the product around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_57",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Reasoning:\nMost of the reviewers express positive sentiments about the product, with several specifically praising its natural, dewy glow and how well it wears. A couple of reviewers provide more balanced opinions: one notes that it accentuates skin imperfections like pores and acne, and another simply dislikes the texture or look. While the majority of the reviews lean positive (though some may be slightly exaggerated), the few concerns raised indicate that the product isn’t perfect for every user. Averaging these experiences, a typical unbiased consumer is likely to find the product very good but with some minor drawbacks.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_47",
+      "true_rating": 3,
+      "prediction": 5,
+      "correct": false,
+      "response": "Analyzing the reviews:\n\n• Reviewer #1 praises both the company’s service and the eye cream’s performance for reducing puffiness and providing good absorption.\n\n• Reviewer #2 noted it works fine as a moisturizer, although it didn’t change their specific skin concerns—still a positive if viewed for hydration.\n\n• Reviewer #3 is very enthusiastic about the product’s soothing, lightly scented qualities, indicating visible improvements in puffiness and fine lines.\n\n• Reviewer #4, though brief, comments on the “good price” and implies satisfaction with the value.\n\n• Reviewer #5 received a discount but found the cream silky and effective in reducing wrinkles.\n\n• Reviewer #6 states it leaves the face soft and is a “great product” they’d buy again.\n\n• Reviewer #7 calls it “fairly good,” noting quick absorption that benefits those using makeup and some reduction in fine lines.\n\n• Reviewer #8 provides a detailed account of benefits including reduced wrinkles, improved moisture, and a healthier looking, more elastic skin.\n\nOut of these eight reviews, seven are clearly positive—with many users experiencing noticeable benefits, especially regarding hydration, reduced fine lines, and improved under-eye issues—while only one reviewer (Reviewer #2) was somewhat lukewarm. Overall, the aggregated sentiment averages to around 4.5 stars; rounded to the nearest whole number, that results in a rating of 5.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_64",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviewers are overwhelmingly positive, highlighting that the wig performs well and fulfills its purpose (whether for cosplay, parties, or occasions like Comic Con and Halloween). There are very few criticisms; those that exist (such as the bangs being slightly too long and a long shipping delay) are minor in the context of overall satisfaction. This suggests that while the product is not perfect, it is still very good for its price and intended use. After balancing the few small negatives with the abundance of praise, the true quality of the product appears to be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_69",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All of the reviews are extremely positive. Multiple reviewers praise the product for its ability to improve shine, softness, and health while protecting the hair. Several comments mention benefits beyond just the look, such as protection from heat and balance for issues like frizz. Even the reviewer mentioning price appears to be pointing out that it’s worth the value received compared to a higher marked price elsewhere. Considering that genuine customers find notable benefits and satisfaction with the product, the typical unbiased consumer would likely rate it at 5 stars.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_56",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Let’s break down what the reviews are saying:\n\n• Reviews #1, #2, #4, and #7 are clearly enthusiastic. They praise the product’s performance, from its soothing, cool feel to the enjoyable massage experience.\n\n• Review #5 is generally positive, noting that the roller works as expected and helps with product absorption and puffiness, though it flags that one component (the small roller) sometimes gets stuck.\n\n• Review #3 shows a mixed experience. The reviewer loves the product overall but had an issue with a part arriving broken, which they were able to fix themselves.\n\n• Reviews #6 and #8 point out significant quality issues. One mentions that the rollers keep falling off during use, while the other states the item arrived broken.\n\nTaking all this into account, most genuine customer feedback is positive despite some quality control and durability hiccups. Averaging out the enthusiasm from many reviews with the issues from a few, the overall quality that an unbiased consumer might experience appears to be good, though not flawless.\n\nRoughly assigning values as:\n • Strong positive reviews around 5 stars,\n • Mixed/complaint-focused reviews around 2–4 stars,\nthe average comes out close to 3.9–4 stars. When rounded to the nearest whole number, that yields a rating of 4.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_62",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Reviewers #1, #3, #4, #5, and #7 all offered distinctly positive comments regarding appearance, compliments, and ease of installation. Reviewer #6, while overall positive (“good buy”), did note issues with tangling in some sections. Two reviewers – #2 and #8 – raised significant concerns: one experienced an allergic reaction, and the other complained about poor texture and tangling.\n\nConsidering the majority of genuine customers expressed satisfaction with the product's look, ease of use, and value, while a couple of users faced issues (which might be individual sensitivities or expectations), the overall consensus suggests a good quality product. Weighing these positive comments against the criticisms, the true quality for an unbiased average consumer appears to be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_55",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Let’s break down the reviews:\n\n• Reviewer #1 simply expresses love for the product.\n• Reviewer #2 notes the product is as described and even lasts up to a week for them.\n• Reviewer #3 was pleasantly surprised, praising both the packaging and the beauty of the tattoos.\n• Reviewer #4 liked the look but wished the tattoos lasted longer, remarking they only stuck around a few hours.\n• Reviewer #5’s brief comment appears positive (\"They look resl\" seems to intend “real” or genuine).\n• Reviewer #6 was disappointed with the lifespan, stating they didn’t last a day and flaked off.\n• Reviewer #7 appreciated the attractive color but found the tattoos too small.\n• Reviewer #8 loved the product and mentioned that they stay on for quite a while.\n\nMost reviewers praise the design, color, and overall appearance. However, several point out concerns with durability (lasting time) and one mentions the size being too small. Balancing these perspectives, most genuine comments are positive with legitimate constructive feedback regarding longevity and size.\n\nTaking everything into account, a typical, unbiased consumer looking for attractive temporary tattoos (and with realistic expectations about how long a temporary tattoo should last) would likely rate it around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_73",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All the reviews are overwhelmingly positive regarding the product’s performance and benefits. Almost every reviewer praises the toner for its moisturizing, hydrating, and non-drying qualities, with many calling it their favorite product for their skincare routine. While one review mentioned a problem with packaging resulting in damage during shipping, this issue was related to handling rather than the product itself. The genuine customer experiences overwhelmingly reinforce that the quality is excellent, with no significant drawbacks noted in terms of the toner’s performance. Considering this consistent high praise and the few isolated logistical concerns, an unbiased evaluation places the product at the top of the scale.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_66",
+      "true_rating": 3,
+      "prediction": 4,
+      "correct": false,
+      "response": "We see that most reviews are positive. For example, several reviewers mentioned that the wristband feels good (comfortable, light, great look and feel) and even performed well under stress. While two reviews raised serious concerns about odor and durability (a broken snap and a moldy smell), these negative comments come from a minority of reviewers. When we roughly estimate the ratings—from around 4–5 stars for the positive reviews and 1 star for the negative reviews—the overall average comes out near 4 stars. Given that most genuine customers had a good experience, the true quality as seen by an unbiased consumer is about 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_70",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "The vast majority of reviewers are highly enthusiastic about the product. Most reviews give strong positive endorsements, noting that the product is effective for cleaning, lubrication, and makeup removal. Even the review that hints at a minor drawback (the pink liquid not being “mild”) doesn’t detract from its high performance; rather, it appears to be a minor complaint compared to the benefits detailed by other genuine users. Overall, given that almost every customer describes significant benefits and satisfaction, the typical unbiased consumer experience appears to be extremely positive.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_68",
+      "true_rating": 3,
+      "prediction": 2,
+      "correct": false,
+      "response": "Most of the reviews point toward dissatisfaction with key aspects of the product. While a couple of reviewers mentioned minor positives—one saying it was \"pretty\" and another noting a \"good price\"—a significant number of the reviews focus on issues such as an unexpected amount of hair, a style that didn’t meet expectations (too red, very curly instead of wavy), and the simple sentiment that it was \"not good\" or not liked by someone. Given that the majority of the feedback is negative, even when accounting for potential biases from overly positive or negative reviewers, a typical, unbiased consumer would likely rate the product on the lower side. Rounding to the nearest whole number, the overall true quality is best represented by a 2-star rating.\n\nFinal Rating: 2"
+    },
+    {
+      "scenario_id": "product_74",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most of the reviews are extremely positive, with reviewers raving about the product’s benefits—its pleasant scent, refreshing feeling, and noticeable improvements in skin appearance. Only one review mentioned a drawback related to product dispensing, but all the other reviews highlight significant benefits such as cleaning, moisturizing, and rejuvenation. Even allowing for the possibility that extreme praise might sometimes be professionally influenced, the overwhelming customer sentiment seems highly favorable. Given this balance, a typical unbiased consumer would likely rate this product very highly.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_72",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most of the reviews are positive. Reviews #1, #4, #5, #6, and #7 praise the scent and overall experience, suggesting high satisfaction. While Reviews #2, #3, and #8 point out problems—such as leakage, a change in scent quality, or not meeting expectations—they form a minority. The majority of genuine customer comments lean toward a product that works well overall.\n\nIf we roughly assign score values (for example, positive reviews approximating 5 stars and the negative ones around 2 or below), the average comes close to around 4 stars. This indicates that an unbiased typical consumer would likely rate the product about 4 stars overall.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_65",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Review Analysis:\n\n• Reviewer #1 had a very negative experience describing damage to their nails. (Likely around 1 star.) However, this negative report seems to be an outlier compared to most feedback.\n\n• Reviewers #2 and #6 mention a discrepancy in the advertised quantity (headline saying 10 vs. the description stating 5). They note some confusion and disappointment regarding expectations, yet in #2 the files “work really well” despite the mix‐up, suggesting the files themselves function adequately.\n\n• Reviewers #3, #4, #5, #7, and #8 express overall satisfaction. They refer to the product as “good,” “great,” “durable,” “easy to use,” and “love them.” Considering some of these reviews are in Spanish and others in English, the majority are positive.\n\nBalancing these perspectives:\n• One extremely negative review (Reviewer #1) contrasts with several genuine, satisfied user experiences.\n• Some discontent over misleading marketing about quantity is noted, but the core product functionality is regarded positively by most users.\n\nOverall, the consensus seems to lean toward a product that works well when used as intended even if package details cause minor issues. If we roughly assign star values to each review:\n – One very negative (1 star)\n – A couple of mixed feedback (around 3 stars)\n – Multiple strongly positive (4 to 5 stars)\nThe average appears to fall around 3.5–3.75 stars, which when rounded to the nearest whole number suggests 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_71",
+      "true_rating": 3,
+      "prediction": 3,
+      "correct": true,
+      "response": "Looking across the reviews, several points stand out:\n\n• Some reviewers (such as Reviewer #1 and #2) mention that while the product may provide a temporary fix, its hold is very short-lived.  \n• At least one reviewer (Reviewer #3) is quite satisfied with the product’s performance—especially noting that it doesn’t make the hair feel greasy or stiff—though even then the product is described as best for quick fixes.  \n• Other reviewers (Reviewers #5 and #6) report significant issues such as receiving nearly empty or dried-up products, suggesting possible quality control problems or variability in the batch.  \n• The remaining reviews (Reviewers #4, #7, and #8) fell somewhere in between, with some saying the product works, though typical hold time seems limited.\n\nWhen averaging an unbiased consumer’s experience, the product appears to perform adequately for very short-term styling, but its inconsistent performance and packaging issues pull its overall quality down. This balanced view – acknowledging that while it does work, it does so only for a brief period and may suffer from quality issues – corresponds to an overall rating of around 3 stars.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_83",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All eight reviews are positive and emphasize that the shower cap functions as advertised. Multiple reviewers note the cap is well-made, comfortable, and effectively keeps hair dry while being available at a fair price. There are no signs of significant issues or widespread criticism, and the overall consensus among genuine buyers is very favorable. There is a very consistent message of satisfaction, so the objective evaluation of the product on a 1–5 scale leads to a rating rounded to 5 stars.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_63",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviews praise the product’s color, wear, scent, and overall appeal. Reviews #1, #2, #3, #6, #7, and #8 are generally very positive, highlighting its attractive color, lasting quality, and pleasant smell. While Reviews #4 and #5 point out issues related to accuracy of color representation and packaging mislabeling, these comments appear to be in the minority and focus on logistical or representation problems rather than the inherent quality of the product itself.\n\nWeighing the majority of positive feedback against the few criticisms, it seems that a typical unbiased consumer would likely rate the inherent quality of the product around a 4 out of 5.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_79",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviewers praise the product’s innovative clip design and secure hold compared to traditional rubber options. Several users mention its long‐term performance (even one using it for over five years) and overall satisfaction. However, a couple of reviews note issues with the chain breaking, suggesting that while the clip mechanism is excellent, there may be occasional durability concerns with the chain itself. Weighing the majority of positive experiences against the few reports of failure, the true quality for a typical unbiased consumer would likely be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_87",
+      "true_rating": 5,
+      "prediction": 4,
+      "correct": false,
+      "response": "Most reviews are positive, with many praising the product’s look, variety, and functionality. While one reviewer mentioned that the material felt a bit like cheap chiffon and another noted the scrunchies are on the smaller side, these critiques are relatively minor compared to the overall satisfaction expressed by multiple reviewers. Taking into account the balance of very positive feedback and a few slight complaints, the product's true quality appears to be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_48",
+      "true_rating": 3,
+      "prediction": 4,
+      "correct": false,
+      "response": "There’s some conflicting feedback here, with about half of the reviews praising the product for enhancing lash appearance and being long‐lasting while a similar number point out shortcomings—especially that it doesn’t live up to its “smudge proof” claim and is a pain to remove. For example, one reviewer complains “Supposed to be smudge proof!!! It’s not!” and another adds it made removing lashes difficult, while several others rave about its performance. Averaging the impressions (with the negative reviews suggesting around 2–3 stars and the positives around 4–5 stars) puts the overall customer experience at roughly a 3.5. When rounded to the nearest whole number, that comes out as 4.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_81",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Reviewers generally love the design, colors, and patterns of these headbands. However, multiple reviews point out that, due to the fabric and fit, the headbands sometimes do not stay on the head without additional help (like barrettes), and one reviewer even noted they were too tight and ended up being used as scrunchies instead. On the other hand, several reviews report that the headbands do stay on well for them, and the overall look and comfort are praised.\n\nBy weighing the positive aesthetic comments against the recurring functionality issue (the potential for slipping), the overall quality seems to be above average but with noticeable practical shortcomings. Estimating approximate ratings from the reviews (with a couple around 2-3 stars for the slipping issue, and most around 4-5 stars for the design and comfort), the overall average comes out to be close to 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_88",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All eight reviews express positive sentiments about the wig. Reviewers mention that the hair is soft, fits well, has a natural look, and even garners compliments. Although one reviewer notes that a trim might be needed to suit personal style, this is a minor observation compared to the overwhelmingly positive feedback. Considering that most reviews are genuine and one just suggests a minor adjustment, the typical, unbiased consumer is likely to rate this product extremely well.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_86",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most of the reviewers express strong positive sentiments, mentioning that the scent is well-balanced, long-lasting, and even prompts repeat purchasing. Only one review is starkly negative, and one reviewer seems indifferent. Given that the majority of genuine customer feedback is positive and only one outlier seems decidedly against the product, the overall true quality would likely be rated around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_82",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "Most reviewers have shared positive experiences using the product. The majority mention benefits such as improved hair softness, enhanced shine, and effective control of frizz—all of which indicate a high level of satisfaction. Although one reviewer noted an issue with missing packaging components (the sprayer), this complaint is minor compared to the overall praise for the product's performance.\n\nConsidering that nearly all the feedback is positive and consistent with long-term repeat use (as one reviewer mentioned years of usage with positive results), the true quality of the product would be rated very highly by an average, unbiased consumer.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_84",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Several reviews praise the product highly for its pleasant, non-overpowering scent, affordable price, and attractive packaging. Reviewer #1, #3, #5, #6, and #7 are very positive—many calling it a favorite and even “sexy” or “amazing”—while reviewers #2 and #8 express moderate satisfaction, mentioning a light but enjoyable scent with minor drawbacks (such as longevity). Only reviewer #4 is negative, but this one appears to be an outlier compared to the overall trend.\n\nTaking into account that some ultra-positive reviews might be a bit exaggerated and the one negative review seems unrepresentative of most customer experiences, the average genuine consumer response would lean toward a very good rating, though not perfect because of some practical drawbacks noted (like the scent not lasting very long).\n\nThus, considering the balance of enthusiasm and minor criticisms, the true quality for an unbiased consumer would be around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_78",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most reviewers praise the deodorant enthusiastically. Reviews #1, #2, #3, #4, #5, and #6 all share positive experiences – noting its pleasant, subtle scent, long-lasting effectiveness, non-overpowering properties, and overall value. Even reviewer #7, while mentioning a slight greasiness, still confirms that it works well as a deodorant. Only reviewer #8 has a negative comment, complaining about a sticky feeling and an unpleasant smell. Given that the vast majority of genuine experiences are highly favorable, the overall quality for a typical consumer would be rated at the high end of the scale.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_93",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All reviews are very positive, with customers praising the brush for its performance, ease of use, and suitability for various applications. There are no negative comments, and almost every review indicates strong satisfaction with the product. Based on this consistent positive feedback, the true quality of the product for an unbiased consumer is likely to be 5 stars.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_99",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "All eight reviews are very positive. They mention fast heating, ease of use, effective straightening or curling, frizz control, portability, and overall satisfaction. There are no substantial complaints, and even evaluations from users with different hair types confirm the product works well. With the majority of genuine positive reviews, the true quality is likely around 5 stars.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_85",
+      "true_rating": 4,
+      "prediction": 2,
+      "correct": false,
+      "response": "The reviews show a pattern: several customers complain that the product is not as advertised (a small bottle, wrong description, and even price discrepancies) and mention issues like the aroma not lasting long. Although a couple of reviewers provided a brief \"good\" remark, the majority of the feedback contains specific negative observations that suggest a significant deviation from customer expectations. Taking all comments into account, the unbiased evaluation of the product quality points toward a rating that is well below average. \n\nFinal Rating: 2"
+    },
+    {
+      "scenario_id": "product_76",
+      "true_rating": 3,
+      "prediction": 3,
+      "correct": true,
+      "response": "Several reviewers mention that the product performs well in terms of pigmentation, longevity, and color payoff (“Love these colors!!!”, “stays on all day”, “awesome pigmentation”), while others note a recurring issue: the product appears much darker in person than in the online image, with a couple complaining it rubbed off or required adjustments. One review also mentions receiving a used product, which could be a shipping/packaging issue rather than a flaw with the formula, and one review criticizes the value relative to the price.\n\nTaking all reviews into account, most of the positive comments focus on the product’s performance as a lipstick (good wear, rich color), but the consistent observation that the shade appears darker than expected and some issues with consistency or condition lead to a tempered overall opinion. Averaging the sentiment, a typical unbiased customer—experiencing the product as it is (excellent pigmentation and lasting quality with a mild drawback in color accuracy)—would likely rate it around 3 stars.\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_80",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Let's break down the reviews:\n\n• Reviewer #1 says it left their face glowing and silky – a clearly enthusiastic response (around 5 stars).  \n• Reviewer #2 says “its work” when buying for a sister. This suggests it works as expected; not overly enthusiastic but satisfactory (around 4 stars).  \n• Reviewer #3 simply writes “good,” which is a brief, middling positive comment (around 3–4 stars).  \n• Reviewer #4 loves the turmeric, notes it solves a problem they had with store-bought turmeric, and says they’ll repurchase – very positive (around 5 stars).  \n• Reviewer #5 loves it despite a minor issue (a slight stink) but appreciates that it doesn’t stain the skin, suggesting overall satisfaction (around 4 stars).  \n• Reviewer #6 states their mom loves it, another enthusiastic endorsement (around 5 stars).  \n• Reviewer #7, in Spanish, says “Excelente como yo quería” – meaning “excellent, just as I wanted” (around 5 stars).  \n• Reviewer #8 is dissatisfied, calling it messy and staining skin and clothes – a distinctly negative review (around 1–2 stars).\n\nEvaluating all reviews, the majority are very positive (with ratings of 5 stars and a couple around 4), while only one review stands out as negative and one is lukewarm. Considering the overall sentiment from a typical unbiased user, the product would most likely average at about 4 stars when rounding to the nearest whole number.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_90",
+      "true_rating": 3,
+      "prediction": 2,
+      "correct": false,
+      "response": "Looking at the eight reviews, most customers describe serious issues with these replacement blades. Several mention that the product pulls hair, does not shave closely, and even causes nicks or cuts, suggesting that it doesn’t perform well compared to the original product. Only two reviews are positive, with one stating it works well for a 14‐year‐old and another praising its quality. Given that the majority of genuine user feedback is negative—and knowing that a couple of positive reviews may be professional (or less rigorous) endorsements—the overall, unbiased impression is that the product is of very poor quality. In a simple average assuming negative reviews around 1 star and the positive ones around 5 stars, the combined score would fall near 2 stars.\n\nFinal Rating: 2"
+    },
+    {
+      "scenario_id": "product_95",
+      "true_rating": 3,
+      "prediction": 1,
+      "correct": false,
+      "response": "The majority of the reviews are overwhelmingly negative. Only one reviewer stated that the wig was “just like the picture,” while the other seven complained about discrepancies between the product and its photos, poor fit, and overall low quality. Even the reviews in different languages converge on the same point—the product does not meet expectations. Based on this consistent feedback from genuine customer experiences (despite one positive review that might be from an atypical experience), the true quality is very poor. \n\nFinal Rating: 1"
+    },
+    {
+      "scenario_id": "product_59",
+      "true_rating": 4,
+      "prediction": 2,
+      "correct": false,
+      "response": "Based on the reviews, several genuine customers describe significant quality issues. Multiple reviewers complained about poor pigment, an awkward, malfunctioning applicator, and features that fall short of advertised claims (e.g., lack of a gradient effect and non-waterproof performance). Though a couple of the reviews are positive—likely reflecting personal satisfaction with the price or as a novelty for a K-pop or K-drama fan base—the majority of the feedback centers on functionality and performance problems. This leads to the conclusion that for an average, unbiased consumer looking for quality performance, the product would be rated poorly.\n\nFinal Rating: 2"
+    },
+    {
+      "scenario_id": "product_89",
+      "true_rating": 5,
+      "prediction": 5,
+      "correct": true,
+      "response": "Most of the reviews praise the product’s performance – from its pleasant scent to its gentleness on skin – with many customers saying they love it and are repeat buyers. Although a couple of reviewers note minor issues about price and longevity, these concerns do not seem to affect the overall performance and satisfaction with the soap itself. Given that most genuine customers highlight its effective cleaning, appealing fragrance, and suitability for sensitive skin, the product quality appears exceptional from a performance and usage standpoint.\n\nFinal Rating: 5"
+    },
+    {
+      "scenario_id": "product_96",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviewers focus on the size of the set. Some express surprise that it’s so small—sometimes perceiving it as a drawback relative to its price—while several others mention that its size is exactly what they need for facial masks and mixing clay. A couple of reviews even emphasize that its compact, cute design makes it convenient for travel or bathroom display. Although a few reviewers seem dissatisfied with its “tiny” dimensions, the majority appreciate its appropriateness for their intended use, suggesting that the product generally meets its intended purpose.\n\nConsidering these points, the overall, unbiased quality from a typical consumer’s perspective appears to be good, though not outstanding. Rounding the assessment, I determine the true quality to be 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_75",
+      "true_rating": 4,
+      "prediction": 3,
+      "correct": false,
+      "response": "Let’s break down the reviews:\n\n• Reviewer #1 wasn’t thrilled with the color match—even though this is a relatively minor cosmetic concern.\n• Reviewer #2 praised the look of the product.\n• Reviewer #3 noticed that although the product helped her make-up last longer, she experienced unwanted eyelid roughness after use.\n• Reviewer #4 found that even when used alone as an eyeshadow base, it had great staying power.\n• Reviewer #5 considered it authentic and maintained its consistency even under challenging storage conditions.\n• Reviewer #6 encountered burning and watering eyes on several occasions.\n• Reviewer #7 was disappointed because it “provides no coverage.”\n• Reviewer #8 was duped by the listing (showing a primer when the product was the eyeshadow base), but still felt that the actual product was good.\n\nThere are roughly four reviewers who reported that the product delivers well on its promises (even noting long wear and authenticity) and four who raised concerns—the issues range from color mismatch to actual adverse skin reactions (such as roughness, burning, or lack of coverage). Since most reviewers are genuine, we have a roughly even split between those who had a positive experience and those who had negative physical reactions or performance issues. Given this balance, and knowing that occasional professional positive reviews might exaggerate while harsh negative reviews might focus on flaws, the overall true quality for an unbiased user averages out to be about average.\n\nRounding to the nearest whole star, the true product quality is most likely:\n\nFinal Rating: 3"
+    },
+    {
+      "scenario_id": "product_98",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Reviewers #1, #2, #3, #6, and #7 provide glowing praise and suggest a high-quality product. Reviewer #4 notes that the bristles are on the harder side, while Reviewer #5 mentions that the brush’s bristles are a little too soft and the handle tends to separate when hung. Reviewer #8 reports a significant durability issue—one brush failing after one use and the other losing its shape. \n\nIn balancing these opinions, while most feedback is very positive (roughly 6 out of 8 reviews leaning toward high satisfaction), the product does have recurring concerns related to its build quality and durability. Averaging these impressions suggests a product that is generally well-received but has some reliability issues. Numerically, if we roughly equate the positive reviews to 5-star ratings and the moderate/negative reviews to 3–1 stars, the overall average comes out to just over 4 stars. When rounding to the nearest whole number, this indicates a 4‑star product.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_94",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Here’s how I arrived at the conclusion:\n\n• Reviewer #1 loves the design and only wishes for an additional color option.  \n• Reviewer #2 finds it cute and matching, although its small size and limited sturdiness are noted if you need more capacity.  \n• Reviewer #3 is very pleased with the purchase.  \n• Reviewer #4 praises it for being sturdy and durable.  \n• Reviewer #5 considers it cute and even uses it regularly despite wishing it were larger.  \n• Reviewer #6 thinks it is bright, colorful, and well-sized for everyday use.  \n• Reviewer #7 notes it’s bigger than expected and well made.  \n• Reviewer #8 is disappointed with the packaging and delivery condition, which affects its appearance as a gift, though the bag’s style remains appealing.\n\nMost reviews are positive, with only minor criticisms regarding size or packaging rather than fundamental quality. Weighing these points, it seems that an unbiased consumer would find this product to be of good quality overall, even if not perfect for all needs. This gives us an average that rounds to about 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_100",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Reviewers overall lean positive, with six out of eight comments emphasizing benefits such as smoother, healthier skin, glowing appearance, and effective ingredients like the night serum and Marula oil. Two reviews are markedly negative (one calling it “worst product” and another complaining about its size and feeling ripped off), but these appear to be outliers possibly driven by differing expectations or even bias. While the overly positive endorsements might come from professional reviewers, the majority of genuine-sounding feedback points to a product that works well, despite minor issues (like the small size or the oily nature of one variant).\n\nBalancing the majority of positive reviews with the few extreme negatives, the most likely true quality that a typical, unbiased consumer would rate this product is around 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_92",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "After reviewing all of the comments, it's clear that most genuine customers are happy with the product—it’s soft, lightweight, easy to use, and even pretty innovative. A few reviewers mentioned that although the product works well, the quantity provided sometimes isn’t enough for those seeking a fuller look. There are also small issues like sensitivity when using the hook or ends sticking together. Overall, the positive aspects outweigh the negatives, but the minor concerns keep it from being perfect.\n\nGiven that most reviews lean toward enthusiasm with only minor caveats, the true quality likely falls around an average of 4 stars when taking all feedback into account.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_97",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "Most reviews rave about the oil’s effectiveness and rapid relief. Out of eight reviews, seven offer high praise—with statements like “awesome,” “magic,” and “outstanding”—while only one review complains about a negative inconsistency regarding the product’s texture (too oily), suggesting a possible manufacturing or batch issue. Overall, the majority of genuine customers had a very positive experience.\n\nTaking this into account, a typical, unbiased consumer would likely rate it highly, though the occasional quality inconsistency prevents a perfect five. Rounding the overall sentiment to the nearest whole number gives a rating of 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_77",
+      "true_rating": 4,
+      "prediction": 4,
+      "correct": true,
+      "response": "There are eight reviews in all. Most of them are effusively positive, with several reviewers calling them “one of the best lashes” and “so beautiful.” Reviewers #1, #3, #4, #6, #7, and #8 express lots of joy with the look, feel, and price. Two of the reviews, however, note issues. Reviewer #2 is unhappy about how the lashes are constructed (particularly the band, which he suggests could be improved) and Reviewer #5 experienced an irritation (their eyes began to itch).\n\nConsidering that most genuine customers praise the lashes for their dramatic and attractive appearance while only a couple mention significant flaws, the overall impression for an average, unbiased buyer would be that the product is very good, though not without minor issues. Averaging the predominately 5-star responses with the few lower ratings gives a number near 4.25, which rounds to 4 stars.\n\nFinal Rating: 4"
+    },
+    {
+      "scenario_id": "product_91",
+      "true_rating": 4,
+      "prediction": 5,
+      "correct": false,
+      "response": "Most of the reviews are very positive. Seven out of the eight reviews mention that the tote is exactly what they need—even if it’s compact, it holds their tools perfectly. Only one review mentioned that it was a little tight when trying to carry more items than expected, which indicates that the design meets its intended purpose rather than being a flaw. After weighing these comments, the overall sentiment and functionality described by genuine users point to a high-quality product.\n\nFinal Rating: 5"
+    }
+  ]
+}

@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gpt-4o",
+    "difficulty": "easy",
+    "question_type": "group",
+    "total_samples": 100,
+    "correct_predictions": 94,
+    "accuracy": 94.0
+  },
+  "results": [
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, D, E",
+      "prediction": "A, B, D, E, G",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to identify the group to which G belongs. We start by examining the relationships involving G:\n\n1. A and G have a good relationship.\n\nNow, we need to find all people who have a good relationship with A, as they will also have a good relationship with G due to transitivity:\n\n- A and B have a good relationship.\n- A and D have a good relationship.\n- A and E have a good relationship.\n- A and G have a good relationship.\n\nThus, the group that includes A and G is {A, B, D, E, G}.\n\nSince G is in this group, G has a good relationship with everyone in this group.\n\nFinal Answer: A, B, D, E, G"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, G",
+      "prediction": "A, F, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships provided and apply the transitive properties.\n\n1. E has a good relationship with A.\n2. E has a bad relationship with H.\n3. E has a bad relationship with C.\n\nNow, let's explore the transitive relationships:\n\n- A has a good relationship with E, F, and G.\n- Since E has a good relationship with A, and A has a good relationship with F and G, by transitivity, E also has a good relationship with F and G.\n\nNow, let's check if there are any other transitive relationships:\n\n- E has a bad relationship with H, and H has a good relationship with D. Therefore, E must have a bad relationship with D.\n- E has a bad relationship with C, and C has a good relationship with B. Therefore, E must have a bad relationship with B.\n\nThus, the people who have a good relationship with E are A, F, and G.\n\nFinal Answer: A, F, G"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F, G, J",
+      "prediction": "D, E, F, G, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to identify the group to which I belongs. We start with the direct relationships provided:\n\n1. D and I have a good relationship.\n\nNow, let's explore D's relationships to find the group:\n\n- D and F have a good relationship.\n- D and E have a good relationship.\n- D and J have a good relationship.\n- D and G have a good relationship.\n\nSince relationships are transitive, everyone who has a good relationship with D also has a good relationship with each other. Therefore, the group includes D, F, E, J, G, and I.\n\nThus, the people who have a good relationship with I are D, E, F, G, and J.\n\nFinal Answer: D, E, F, G, J"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, H, J",
+      "prediction": "B, H, J",
+      "correct": false,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. B and F have a good relationship.\n2. B has good relationships with J and H.\n3. Therefore, by transitivity, F has good relationships with J and H.\n\nNow, let's verify if there are any other connections through B:\n\n- B and E have a good relationship, but E and C have a bad relationship, and A and E have a bad relationship. This doesn't affect F directly.\n- B and I have no direct relationship mentioned, and I and J have a bad relationship, which doesn't affect F directly.\n- B and A have no direct relationship mentioned, and A and F have no direct relationship mentioned.\n\nThus, based on the transitive properties and the given relationships, F has good relationships with B, H, and J.\n\nFinal Answer: B, H, J"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D",
+      "prediction": "C, D",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the given relationships and apply the transitive properties.\n\n1. **Direct relationships:**\n   - C and G have a good relationship.\n\n2. **Transitive relationships:**\n   - C and D have a good relationship, and since C has a good relationship with G, by transitivity, D also has a good relationship with G.\n\n3. **Bad relationships:**\n   - E and C have a bad relationship, and E and G have a bad relationship. Therefore, E cannot have a good relationship with G.\n\n4. **Checking other connections:**\n   - A has no direct or transitive connection to G through good relationships, as A is not connected to C or D.\n   - B, F, and H are only connected to A, and since A has no connection to G, they cannot have a good relationship with G.\n\nTherefore, the people who have a good relationship with G are C and D.\n\nFinal Answer: C, D"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, D",
+      "prediction": "A, B, D",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships using the transitive properties provided.\n\n1. A and F have a good relationship.\n2. A and D have a good relationship, so D also has a good relationship with F (transitivity through A).\n3. A and B have a good relationship, so B also has a good relationship with F (transitivity through A).\n\nNow, let's check if there are any other connections:\n- F and H have a bad relationship, so H cannot have a good relationship with F.\n- B and E have a bad relationship, so E cannot have a good relationship with F.\n- C and E have a good relationship, but since E has a bad relationship with B (who has a good relationship with F), C cannot have a good relationship with F.\n- C and G have a good relationship, but since C cannot have a good relationship with F, G cannot either.\n- C and H have a good relationship, but since C cannot have a good relationship with F, H cannot either.\n\nTherefore, the people who have a good relationship with F are A, B, and D.\n\nFinal Answer: A, B, D"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D",
+      "prediction": "D",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to identify the group to which G belongs. We know:\n\n1. D and G have a good relationship.\n2. D has a bad relationship with A, C, and E.\n3. A has good relationships with B, C, F, and H.\n4. B has a bad relationship with I.\n5. E has a good relationship with I.\n\nSince D has a good relationship with G, and D has bad relationships with A, C, and E, G must also have bad relationships with A, C, and E (and by extension, with anyone in their group).\n\nD and G form a group. We need to check if anyone else can be in this group:\n\n- D has a bad relationship with A, so anyone in A's group (B, C, F, H) cannot be in D and G's group.\n- D has a bad relationship with E, so anyone in E's group (I) cannot be in D and G's group.\n\nTherefore, the only person who has a good relationship with G is D.\n\nFinal Answer: D"
+    },
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, G",
+      "prediction": "B, D, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and H have a good relationship.\n2. C and H have a bad relationship.\n3. A and H have a bad relationship.\n\nNow, let's analyze the relationships involving B, since B has a good relationship with H:\n\n- B and D have a good relationship.\n- B and G have a good relationship.\n\nSince B has a good relationship with H, D and G also have a good relationship with H due to the transitive property of good relationships.\n\nNow, let's check if there are any other indirect relationships through B:\n\n- A and B have no direct relationship mentioned, but A has a bad relationship with H, so A cannot have a good relationship with H.\n- C and B have no direct relationship mentioned, but C has a bad relationship with H, so C cannot have a good relationship with H.\n- E and B have no direct relationship mentioned, and E has no relationship with H mentioned, so E cannot have a good relationship with H.\n- F and B have no direct relationship mentioned, and F has no relationship with H mentioned, so F cannot have a good relationship with H.\n\nTherefore, the people who have a good relationship with H are B, D, and G.\n\nFinal Answer: B, D, G"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, D, F",
+      "prediction": "A, B, C, D, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships using the transitive properties and rules provided.\n\n1. A and G have a good relationship.\n2. A and D have a good relationship.\n3. A and F have a good relationship.\n4. A and C have a good relationship.\n5. A and B have a good relationship.\n\nSince A has a good relationship with G, and A has good relationships with B, C, D, and F, by transitivity, G also has good relationships with B, C, D, and F.\n\n6. E and G have a bad relationship.\n\nSince E has a bad relationship with G, E cannot have a good relationship with anyone who has a good relationship with G.\n\n7. H and E have a good relationship.\n\nSince H has a good relationship with E, and E has a bad relationship with G, H must also have a bad relationship with G.\n\nTherefore, the people who have a good relationship with G are A, B, C, D, and F.\n\nFinal Answer: A, B, C, D, F"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C",
+      "prediction": "C",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the given relationships and apply the transitive properties.\n\n1. **Direct relationships involving E:**\n   - C and E have a good relationship.\n   - E and I have a bad relationship.\n\n2. **Transitive relationships:**\n   - Since C and E have a good relationship, anyone who has a good relationship with C will also have a good relationship with E.\n   - C has a bad relationship with I and H, so neither I nor H can have a good relationship with E.\n   - C has a good relationship with E, and E has a bad relationship with I, so C and I must have a bad relationship, which is consistent with the given information.\n\n3. **Analyzing other relationships:**\n   - A and B have a good relationship.\n   - A and F have a good relationship.\n   - A and G have a good relationship.\n   - A and H have a good relationship.\n   - I and D have a good relationship.\n   - F and I have a bad relationship.\n\n4. **Groups:**\n   - A, B, F, G, and H form a group because they all have good relationships with each other through A.\n   - C and E form a group because they have a good relationship with each other.\n   - I and D form a group because they have a good relationship with each other.\n\nSince E is in a group with C, and no other relationships are provided that connect E to the group of A, B, F, G, H, or the group of I, D, the only person with a good relationship with E is C.\n\nFinal Answer: C"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F",
+      "prediction": "B, E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to identify the group that I belongs to based on the given relationships.\n\n1. B and I have a good relationship.\n2. B and F have a good relationship.\n3. B and E have a good relationship.\n\nSince B has a good relationship with F and E, and B has a good relationship with I, by transitivity, I also has a good relationship with F and E.\n\nNow, let's check if there are any other connections:\n- C and E have a bad relationship, so C cannot be in the same group as I.\n- D and F have a bad relationship, so D cannot be in the same group as I.\n\nThus, the people who have a good relationship with I are B, E, and F.\n\nFinal Answer: B, E, F"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, D, E, F, H",
+      "prediction": "A, C, D, E, F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we need to identify B's group based on the transitive properties of good relationships.\n\n1. A and B have a good relationship.\n2. A has good relationships with C, D, E, F, and H.\n\nSince B has a good relationship with A, and A has good relationships with C, D, E, F, and H, by transitivity, B also has good relationships with C, D, E, F, and H.\n\nTherefore, the people who have a good relationship with B are A, C, D, E, F, and H.\n\nFinal Answer: A, C, D, E, F, H"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, G, H",
+      "prediction": "A, B, C, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships using the transitive properties and the given information.\n\n1. A and E have a good relationship.\n2. A and B have a good relationship.\n3. A and C have a good relationship.\n4. A and G have a good relationship.\n5. A and H have a good relationship.\n\nSince A has a good relationship with E, and A also has good relationships with B, C, G, and H, by transitivity, E must have good relationships with B, C, G, and H.\n\nHowever, E and F have a bad relationship, so F cannot be in the same group as E.\n\nTherefore, the people who have a good relationship with E are A, B, C, G, and H.\n\nFinal Answer: A, B, C, G, H"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, H",
+      "prediction": "D, E, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships using the transitive properties provided.\n\n1. D and F have a good relationship.\n2. D and E have a good relationship, so E also has a good relationship with F (through D).\n3. D and H have a good relationship, so H also has a good relationship with F (through D).\n\nNow, let's check if there are any other transitive relationships:\n\n- Since D has a good relationship with F, E, and H, and F has a good relationship with D, E, and H, we need to ensure there are no bad relationships that would prevent further transitive good relationships.\n- There are no direct relationships provided between F and A, B, C, or G, and no transitive path through D that would connect F to these individuals without encountering a bad relationship.\n\nThus, the people who have a good relationship with F are D, E, and H.\n\nFinal Answer: D, E, H"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F",
+      "prediction": "C, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships using the transitive properties and the given information.\n\n1. **Direct relationships involving E:**\n   - E and C have a good relationship.\n   - E and H have a bad relationship.\n\n2. **Transitive relationships:**\n   - Since E has a good relationship with C, we need to find who else C has a good relationship with.\n   - C and F have a good relationship, so E also has a good relationship with F.\n   - C and G have a bad relationship, so E and G must also have a bad relationship.\n   - C and E have a good relationship, which is already known.\n\n3. **Checking other connections:**\n   - Since E has a bad relationship with H, and H has a good relationship with A, E must have a bad relationship with A.\n   - Since E has a bad relationship with A, and A has good relationships with B, D, and G, E must have bad relationships with B, D, and G as well.\n\nFrom the above analysis, E has a good relationship with C and F only.\n\nFinal Answer: C, F"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F, H",
+      "prediction": "F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we need to analyze the relationships provided and apply the transitive properties.\n\n1. B and F have a good relationship.\n2. B and H have a good relationship.\n\nNow, let's check if there are any transitive relationships:\n\n- B has a bad relationship with D. Therefore, D cannot have a good relationship with anyone who has a good relationship with B.\n- C and H have a bad relationship. Since B has a good relationship with H, B cannot have a good relationship with C.\n\nNo other transitive relationships can be derived from the given information that would affect B's relationships.\n\nTherefore, the people who have a good relationship with B are F and H.\n\nFinal Answer: F, H"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, H",
+      "prediction": "C, D, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the given relationships and apply the transitive properties.\n\n1. F has a good relationship with C (given).\n2. C has a good relationship with D and H (given).\n3. Therefore, F has a good relationship with D and H (transitive property through C).\n4. C also has a good relationship with F itself, which confirms F's relationship with C.\n\nNow, let's check if there are any other transitive relationships:\n\n- F has a bad relationship with B (given), so B cannot have a good relationship with anyone F has a good relationship with.\n- F has a bad relationship with I (since I has a bad relationship with H, and F has a good relationship with H).\n- F has a bad relationship with J (since J has a bad relationship with H, and F has a good relationship with H).\n- F has a bad relationship with E (since E has a bad relationship with B, and F has a bad relationship with B).\n\nThus, the people who have a good relationship with F are C, D, and H.\n\nFinal Answer: C, D, H"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A",
+      "prediction": "A",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships using the transitive properties provided.\n\n1. A and G have a good relationship.\n2. Since A and C have a bad relationship, and A has a good relationship with G, C and G must have a bad relationship.\n3. Since A and F have a bad relationship, and A has a good relationship with G, F and G must have a bad relationship.\n4. Since A and H have a bad relationship, and A has a good relationship with G, H and G must have a bad relationship.\n\nNow, let's consider the other relationships:\n- B is not directly related to G, and since B has a good relationship with C, D, E, and I, we need to check if any of these have a good relationship with G through transitivity.\n- C has a bad relationship with G (as established above).\n- D is not directly related to G, but D has a bad relationship with H. Since H has a bad relationship with G (through A), D and G must have a bad relationship.\n- E is not directly related to G, and there is no information connecting E to G through transitivity.\n- I is not directly related to G, and there is no information connecting I to G through transitivity.\n\nSince no other relationships connect to G through transitivity, the only person with a good relationship with G is A.\n\nFinal Answer: A"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to analyze the relationships using the transitive properties and the given information.\n\n1. H and I have a good relationship.\n2. H and G have a good relationship, so G and I have a good relationship (transitive property).\n3. H and E have a good relationship, so E and I have a good relationship (transitive property).\n4. C and H have a bad relationship, so C and I have a bad relationship (since I has a good relationship with H).\n5. A and E have a bad relationship, but since E has a good relationship with I, A and I have a bad relationship.\n6. A and B have a good relationship, but since A and I have a bad relationship, B and I have a bad relationship.\n7. A and C have a good relationship, but since A and I have a bad relationship, C and I have a bad relationship.\n8. A and D have a good relationship, but since A and I have a bad relationship, D and I have a bad relationship.\n9. A and F have a good relationship, but since A and I have a bad relationship, F and I have a bad relationship.\n\nFrom this analysis, the people who have a good relationship with I are G, H, and E.\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, H",
+      "prediction": "A, F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the given relationships and apply the transitive properties.\n\n1. C and F have a good relationship.\n2. C and A have a good relationship.\n3. C and H have a good relationship.\n\nNow, let's check if any other relationships can be inferred through transitivity:\n\n- Since C has a good relationship with F, and F has no other good relationships mentioned, we cannot infer any additional good relationships for C through F.\n- Since C has a good relationship with A, and A has no other good relationships mentioned, we cannot infer any additional good relationships for C through A.\n- Since C has a good relationship with H, and H has no other good relationships mentioned, we cannot infer any additional good relationships for C through H.\n\nNo other relationships involving C are mentioned, and no transitive relationships can be inferred beyond those directly stated.\n\nTherefore, the people who have a good relationship with C are A, F, and H.\n\nFinal Answer: A, F, H"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, H",
+      "prediction": "A, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the given relationships and apply the transitive properties.\n\n1. H and C have a good relationship.\n2. H and A have a good relationship, which means A and C also have a good relationship due to transitivity (since H is the common link with good relationships to both A and C).\n\nNow, let's check if there are any other indirect relationships involving C:\n\n- C and E have a bad relationship, so E cannot have a good relationship with C.\n- B is not directly connected to C, and since B has a good relationship with E, B cannot have a good relationship with C (because C and E have a bad relationship).\n- F, D, and G are only connected to B, and since B cannot have a good relationship with C, neither can F, D, or G.\n\nThus, the only people who have a good relationship with C are A and H.\n\nFinal Answer: A, H"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, G",
+      "prediction": "A, B, C, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to identify the group that H belongs to based on the transitive properties of good relationships.\n\n1. **A and H have a good relationship.**\n   - This means H is in the same group as A.\n\n2. **A and C have a good relationship.**\n   - Therefore, H also has a good relationship with C.\n\n3. **A and G have a good relationship.**\n   - Therefore, H also has a good relationship with G.\n\n4. **A and B have a good relationship.**\n   - Therefore, H also has a good relationship with B.\n\nNow, let's verify if any of these relationships are contradicted by bad relationships:\n\n- **C and E have a bad relationship.**\n  - This does not affect H directly since E is not in the group with A, C, G, B, and H.\n\n- **E and D have a good relationship.**\n  - This does not affect H since E is not in the group with A, C, G, B, and H.\n\n- **E and F have a good relationship.**\n  - This does not affect H since E is not in the group with A, C, G, B, and H.\n\n- **D and G have a bad relationship.**\n  - G is in the group with A, C, B, and H, so D cannot be in the same group as H.\n\nThus, the group that includes H consists of A, B, C, G, and H. Therefore, the people who have a good relationship with H are A, B, C, and G.\n\nFinal Answer: A, B, C, G"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E",
+      "prediction": "A, E",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the given relationships and apply the transitive properties.\n\n1. E and D have a good relationship.\n2. E and A have a good relationship, so by transitivity, D and A have a good relationship.\n\nNow, let's check if there are any other transitive relationships involving D:\n\n- E and J have a bad relationship, so D and J have a bad relationship.\n- E and H have a bad relationship, so D and H have a bad relationship.\n- E and J have a bad relationship, and J and F have a good relationship, so D and F have a bad relationship.\n- E and J have a bad relationship, and J and C have a good relationship, so D and C have a bad relationship.\n- E and J have a bad relationship, and J and I have a bad relationship, so no direct conclusion about D and I.\n- E and J have a bad relationship, and J and G have no direct relationship, so no conclusion about D and G.\n- E and J have a bad relationship, and J and B have no direct relationship, so no conclusion about D and B.\n\nBased on the information and transitive properties, the only people with a good relationship with D are E and A.\n\nFinal Answer: A, E"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, F, G",
+      "prediction": "B, F, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and H have a good relationship.\n2. B and F have a good relationship. Therefore, by transitivity, F and H have a good relationship.\n3. B and G have a good relationship. Therefore, by transitivity, G and H have a good relationship.\n4. C and H have a bad relationship. Therefore, C cannot be in the same group as H.\n5. A, D, E, and I are not directly connected to H through B, F, or G, and there is no transitive path from H to these individuals through good relationships.\n\nThus, the people who have a good relationship with H are B, F, and G.\n\nFinal Answer: B, F, G"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D",
+      "prediction": "D",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the relationships using the transitive properties and the given information.\n\n1. A and D have a good relationship. So, D is in A's group.\n2. A and H have a bad relationship, so H is not in A's group.\n3. A and G have a bad relationship, so G is not in A's group.\n4. A and C have a bad relationship, so C is not in A's group.\n5. Since A and C have a bad relationship, and C has a good relationship with B, B must also have a bad relationship with A.\n6. Since A and H have a bad relationship, and H has a good relationship with F, F must also have a bad relationship with A.\n7. Since A and H have a bad relationship, and H has a good relationship with E, E must also have a bad relationship with A.\n\nTherefore, the only person who has a good relationship with A is D.\n\nFinal Answer: D"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, F",
+      "prediction": "E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the relationships using the transitive properties provided.\n\n1. C and E have a good relationship.\n2. C and F have a good relationship.\n\nNow, let's check if there are any transitive relationships:\n\n- Since C has a good relationship with E, and E has a bad relationship with H, C and H must have a bad relationship.\n- Since C has a good relationship with F, and there are no other relationships involving F, we cannot deduce any further good relationships through F.\n\nTherefore, the people who have a good relationship with C are E and F.\n\nFinal Answer: E, F"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H",
+      "prediction": "C, E, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships using the transitive properties provided.\n\n1. C and F have a good relationship.\n2. C and H have a good relationship, so F and H also have a good relationship (transitive property through C).\n3. C and E have a good relationship, so F and E also have a good relationship (transitive property through C).\n\nNow, let's verify if there are any other connections:\n\n- A and B have a good relationship, but A has a bad relationship with C, so B and C must have a bad relationship. Therefore, B and F have a bad relationship.\n- A and D have a bad relationship, so D and C must have a bad relationship. Therefore, D and F have a bad relationship.\n- A and G have a bad relationship, so G and C must have a bad relationship. Therefore, G and F have a bad relationship.\n\nThus, the people who have a good relationship with F are C, E, and H.\n\nFinal Answer: C, E, H"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "G, H",
+      "prediction": "G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we start with the given information:\n\n1. H and A have a good relationship.\n\nNow, let's explore the transitive properties:\n\n- Since H has a good relationship with A, anyone who has a good relationship with H will also have a good relationship with A.\n\nFrom the information provided:\n- H and G have a good relationship.\n\nTherefore, G also has a good relationship with A.\n\nNo other relationships involving H that could connect to A are given, and no other direct relationships with A are mentioned.\n\nThus, the people who have a good relationship with A are H and G.\n\nFinal Answer: G, H"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, G",
+      "prediction": "D, E, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and E have a good relationship.\n2. B and G have a good relationship.\n3. B and D have a good relationship.\n\nNow, let's check if any transitive relationships can be established:\n\n- Since B has a good relationship with E, G, and D, we need to check if any of these people have good relationships with each other, which would extend the good relationship to B through transitivity.\n\nHowever, there is no information provided about relationships between E, G, and D with each other or with other people that would affect B's relationships.\n\nTherefore, based on the given information, the people who have a good relationship with B are E, G, and D.\n\nFinal Answer: D, E, G"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, F, H",
+      "prediction": "A, C, F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships using the transitive properties and the given information.\n\n1. A and D have a good relationship.\n2. A and H have a good relationship, so D and H have a good relationship (transitivity through A).\n3. A and F have a good relationship, so D and F have a good relationship (transitivity through A).\n4. A and C have a good relationship, so D and C have a good relationship (transitivity through A).\n\nNow, let's list the people who have a good relationship with D:\n- A\n- C\n- F\n- H\n\nFinal Answer: A, C, F, H"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, F",
+      "prediction": "B, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the relationships using the transitive properties provided.\n\n1. B and A have a good relationship.\n2. B and F have a good relationship, so A and F also have a good relationship (transitivity: A -> B -> F).\n3. B and D have a bad relationship, so D cannot have a good relationship with A.\n4. F and C have a bad relationship, so C cannot have a good relationship with A.\n5. C and E have a good relationship, but since C has a bad relationship with A, E cannot have a good relationship with A.\n6. C and H have a good relationship, but since C has a bad relationship with A, H cannot have a good relationship with A.\n7. C and G have a good relationship, but since C has a bad relationship with A, G cannot have a good relationship with A.\n\nTherefore, the people who have a good relationship with A are B and F.\n\nFinal Answer: B, F"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G, I",
+      "prediction": "B, G, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships using the transitive properties and the given information.\n\n1. B and F have a good relationship.\n2. B and G have a good relationship, so F and G have a good relationship through B.\n3. B and I have a good relationship, so F and I have a good relationship through B.\n\nNow, let's check if there are any other connections:\n- D and F have a bad relationship, so D cannot be in the same group as F.\n- A, C, E, and H are not directly connected to B or F, and there are no transitive connections that would link them to F without involving D (who has a bad relationship with F).\n\nThus, the people who have a good relationship with F are B, G, and I.\n\nFinal Answer: B, G, I"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, H",
+      "prediction": "A, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. H and F have a good relationship.\n2. H and A have a good relationship, so A and F have a good relationship through H.\n3. H and C have a bad relationship, so C cannot have a good relationship with F.\n4. D and H have a bad relationship, so D cannot have a good relationship with F.\n\nSince there is no information connecting F to B, E, G, or I, and no transitive path through H or A to these individuals, we cannot conclude that F has a good relationship with any of them.\n\nTherefore, the people who have a good relationship with F are A and H.\n\nFinal Answer: A, H"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F, H, I",
+      "prediction": "D, E, F, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to consider both direct and transitive relationships.\n\n1. Direct good relationships with C:\n   - C and F have a good relationship.\n   - C and I have a good relationship.\n   - C and D have a good relationship.\n   - C and E have a good relationship.\n   - C and H have a good relationship.\n\n2. Transitive good relationships:\n   - Since C has a good relationship with F, I, D, E, and H, we need to check if any of these people have good relationships with each other, which would extend the good relationship to C through transitivity. However, based on the given information, there are no additional transitive relationships that can be derived.\n\nTherefore, the people who have a good relationship with C are F, I, D, E, and H.\n\nFinal Answer: D, E, F, H, I"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, F, J",
+      "prediction": "A, E, F, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to identify the group that G belongs to based on the transitive properties of good relationships.\n\n1. G has a good relationship with A.\n2. A has a good relationship with J, E, and F.\n3. Since G has a good relationship with A, G also has a good relationship with J, E, and F through transitivity.\n\nNow, let's verify if there are any other connections:\n- A and E have a good relationship, but E and C have a bad relationship. Therefore, G cannot have a good relationship with C.\n- A and F have a good relationship, and since G has a good relationship with A, G also has a good relationship with F.\n- A and J have a good relationship, and since G has a good relationship with A, G also has a good relationship with J.\n\nThus, the people who have a good relationship with G are A, E, F, and J.\n\nFinal Answer: A, E, F, J"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B",
+      "prediction": "B",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships using the transitive properties and the given information.\n\n1. E and B have a good relationship.\n2. B and H have a bad relationship, which means E and H must also have a bad relationship (by transitivity rule 2).\n3. C and E have a bad relationship.\n4. Since E has a good relationship with B, we need to check if B has good relationships with others that could extend to E:\n   - B has a bad relationship with H, so E cannot have a good relationship with H.\n   - There is no information about B having a good relationship with any other person besides E.\n\nBased on the given information and the transitive properties, the only person E has a good relationship with is B.\n\nFinal Answer: B"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, H",
+      "prediction": "A, C, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the given relationships and apply the transitive properties.\n\n1. H and D have a good relationship.\n2. H and A have a good relationship.\n3. H and C have a good relationship.\n\nFrom these, we can deduce:\n- Since H has a good relationship with D, A, and C, and relationships are transitive, D has a good relationship with A and C through H.\n\nTherefore, the people who have a good relationship with D are A, C, and H.\n\nFinal Answer: A, C, H"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F, G",
+      "prediction": "B, E, F, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the given relationships and apply the transitive properties.\n\n1. C and B have a good relationship.\n2. B has good relationships with F, G, and E.\n3. By transitivity, C also has good relationships with F, G, and E.\n\nNow, let's verify if there are any other possible connections:\n\n- C has a bad relationship with I and H, so they cannot be in the same group as C.\n- C has a good relationship with B, and through B, with F, G, and E.\n- C has no direct or transitive good relationship with A or D, as A and D are connected to I and H, with whom C has bad relationships.\n\nTherefore, the people who have a good relationship with C are B, E, F, and G.\n\nFinal Answer: B, E, F, G"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H",
+      "prediction": "B, C, E, H",
+      "correct": false,
+      "response": "To determine who has a good relationship with B, we need to analyze the relationships using the transitive properties and the given information.\n\n1. H and B have a good relationship.\n2. H and E have a good relationship.\n3. H and C have a good relationship.\n\nFrom the above, we can infer:\n- Since H has a good relationship with B, E, and C, B has a good relationship with E and C due to transitivity.\n\nNow, let's check if there are any other relationships that can be inferred:\n- Since B has a good relationship with H, and H has a good relationship with E and C, B also has a good relationship with E and C.\n\nThus, the people who have a good relationship with B are B, C, E, and H.\n\nFinal Answer: B, C, E, H"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, H, J",
+      "prediction": "A, C, H, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships using the transitive properties and the information given.\n\n1. A and D have a good relationship.\n2. A and H have a good relationship. Since A and D have a good relationship, by transitivity, D and H also have a good relationship.\n3. A and C have a good relationship. Since A and D have a good relationship, by transitivity, D and C also have a good relationship.\n4. A and J have a good relationship. Since A and D have a good relationship, by transitivity, D and J also have a good relationship.\n\nNow, let's verify if there are any other indirect relationships through transitivity:\n\n- D has a bad relationship with E (since E and D have a bad relationship).\n- D has a good relationship with C, but C has a bad relationship with E, so D and E cannot have a good relationship.\n- D has a good relationship with C, but C has a bad relationship with F, so D and F cannot have a good relationship.\n- D has a good relationship with C, but C has a bad relationship with E, and E has a good relationship with G, so D and G cannot have a good relationship.\n- D has a good relationship with C, but C has a bad relationship with F, and F has a good relationship with B, so D and B cannot have a good relationship.\n- D has a good relationship with A, and A has a good relationship with H, so D and H have a good relationship.\n- D has a good relationship with A, and A has a good relationship with J, so D and J have a good relationship.\n\nThus, the people who have a good relationship with D are A, C, H, and J.\n\nFinal Answer: A, C, H, J"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, F, H",
+      "prediction": "B, F, H",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. A and G have a good relationship.\n2. A and B have a good relationship, so B and G have a good relationship (transitive through A).\n3. A and F have a good relationship, so F and G have a good relationship (transitive through A).\n4. A and H have a good relationship, so H and G have a good relationship (transitive through A).\n\nNow, let's check if G has a good relationship with C, D, or E:\n\n- A and D have a bad relationship, and since A and G have a good relationship, G and D must have a bad relationship.\n- C and E have a good relationship, and C and D have a good relationship, but there is no direct or transitive connection between G and C or E through A, B, F, or H.\n\nTherefore, the people who have a good relationship with G are B, F, and H.\n\nFinal Answer: B, F, H"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, F, H, I",
+      "prediction": "C, D, F, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. C and G have a good relationship.\n2. C and F have a good relationship. Therefore, by transitivity, G and F have a good relationship.\n3. C and H have a good relationship. Therefore, by transitivity, G and H have a good relationship.\n4. C and D have a good relationship. Therefore, by transitivity, G and D have a good relationship.\n5. C and I have a good relationship. Therefore, by transitivity, G and I have a good relationship.\n\nNow, let's list all the people who have a good relationship with G:\n- C\n- D\n- F\n- H\n- I\n\nFinal Answer: C, D, F, H, I"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, F, G, H",
+      "prediction": "B, D, F, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to identify the group that I belongs to based on the given relationships.\n\n1. B and I have a good relationship.\n2. B and H have a good relationship.\n3. B and G have a good relationship.\n4. B and F have a good relationship.\n5. B and D have a good relationship.\n\nSince I has a good relationship with B, and B has good relationships with H, G, F, and D, by transitivity, I also has good relationships with H, G, F, and D.\n\nTherefore, the people who have a good relationship with I are B, D, F, G, and H.\n\nFinal Answer: B, D, F, G, H"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, F",
+      "prediction": "B, C, D, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. B and H have a good relationship.\n2. B and C have a good relationship.\n3. B and F have a good relationship.\n4. B and D have a good relationship.\n\nUsing transitivity:\n- Since B has a good relationship with H, C, F, and D, and H has a good relationship with B, H also has a good relationship with C, F, and D.\n\nTherefore, the people who have a good relationship with H are B, C, D, and F.\n\nFinal Answer: B, C, D, F"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, J",
+      "prediction": "B, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. J and E have a good relationship.\n2. J and B have a good relationship.\n3. Since J and E have a good relationship, and J and B have a good relationship, by transitivity, B and E have a good relationship.\n\nNow, let's check if there are any other transitive relationships involving E:\n\n- J has a bad relationship with C and H, so E cannot have a good relationship with C or H.\n- B has a bad relationship with G, so E cannot have a good relationship with G.\n\nNo other relationships directly or transitively connect E to other people with good relationships.\n\nTherefore, the people who have a good relationship with E are B and J.\n\nFinal Answer: B, J"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, H, I, J",
+      "prediction": "D, H, I, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. A has a good relationship with H, D, I, and J directly.\n2. A has a bad relationship with E.\n\nNow, let's consider the transitive properties:\n\n- Since A has a good relationship with H, and H has a bad relationship with C, A and C must have a bad relationship.\n- Since A has a good relationship with D, I, and J, and there is no information about their relationships with others, we assume they only have a good relationship with A for now.\n- Since A has a bad relationship with E, and B has a good relationship with E, A and B must have a bad relationship.\n- Since A has a bad relationship with E, and B has a good relationship with F, A and F must have a bad relationship.\n- Since A has a bad relationship with E, and B has a good relationship with G, A and G must have a bad relationship.\n\nThus, the people who have a good relationship with A are H, D, I, and J.\n\nFinal Answer: D, H, I, J"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the given relationships and apply the transitive properties.\n\n1. C and F have a good relationship.\n2. C and A have a good relationship.\n\nNow, let's check if there are any indirect relationships through transitivity:\n\n- Since C has a good relationship with A, and A has a bad relationship with G, G cannot have a good relationship with C.\n- C has a bad relationship with E, so E cannot have a good relationship with C.\n\nNow, let's check if there are any indirect relationships through transitivity with B:\n\n- B and D have a good relationship, but since there is no direct or transitive relationship between C and B, D cannot have a good relationship with C.\n- B and H have a good relationship, but since there is no direct or transitive relationship between C and B, H cannot have a good relationship with C.\n- B and E have a good relationship, but since C and E have a bad relationship, E cannot have a good relationship with C.\n- B and I have a good relationship, but since there is no direct or transitive relationship between C and B, I cannot have a good relationship with C.\n- B and G have a good relationship, but since there is no direct or transitive relationship between C and B, G cannot have a good relationship with C.\n\nTherefore, the only people who have a good relationship with C are A and F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "G",
+      "prediction": "G",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the given relationships and apply the transitive properties.\n\n1. H and G have a good relationship.\n2. H and I have a bad relationship.\n3. H and J have a bad relationship.\n4. H and C have a bad relationship.\n\nNow, let's consider the transitive properties:\n\n- Since H and G have a good relationship, anyone who has a good relationship with G should also have a good relationship with H, unless they have a direct bad relationship with H.\n- G has a good relationship with H, but we don't have any other direct relationships involving G, so we can't infer any additional good relationships for H through G.\n\nGiven the information, the only person with a good relationship with H is G.\n\nFinal Answer: G"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, D, G, H, I",
+      "prediction": "C, D, G, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and G have a good relationship.\n2. B and H have a good relationship.\n3. B and D have a good relationship.\n4. B and I have a good relationship.\n5. B and C have a good relationship.\n\nNow, let's check if any of these relationships can be extended through transitivity:\n\n- B and G have a good relationship, and B and C have a good relationship. Since C and G are not mentioned to have a bad relationship, we assume they have a good relationship through B.\n- B and H have a good relationship, and B and C have a good relationship. Since C and H are not mentioned to have a bad relationship, we assume they have a good relationship through B.\n- B and D have a good relationship, and B and C have a good relationship. Since C and D are not mentioned to have a bad relationship, we assume they have a good relationship through B.\n- B and I have a good relationship, and B and C have a good relationship. Since C and I are not mentioned to have a bad relationship, we assume they have a good relationship through B.\n\nNow, let's list all people who have a good relationship with B:\n\n- C\n- D\n- G\n- H\n- I\n\nTherefore, the people who have a good relationship with B are C, D, G, H, and I.\n\nFinal Answer: C, D, G, H, I"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G, H, I",
+      "prediction": "D, G, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the relationships provided and apply the transitive properties.\n\n1. A and G have a good relationship.\n2. A and H have a good relationship.\n3. A and D have a good relationship.\n4. A and I have a good relationship.\n\nNow, let's check if any other relationships can be inferred through transitivity:\n\n- Since A has a good relationship with H, and H has a bad relationship with E, A's good relationship with H does not affect A's relationship with E.\n- Since A has a good relationship with G, and no other relationships involving G are provided, we cannot infer further relationships through G.\n- Since A has a good relationship with D, and no other relationships involving D are provided, we cannot infer further relationships through D.\n- Since A has a good relationship with I, and no other relationships involving I are provided, we cannot infer further relationships through I.\n\nTherefore, based on the information and transitive properties, the people who have a good relationship with A are D, G, H, and I.\n\nFinal Answer: D, G, H, I"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships based on the given information and the rules of transitivity.\n\n1. E and F have a good relationship.\n2. H and E have a bad relationship.\n3. C and E have a bad relationship.\n\nNow, let's consider the transitive properties:\n\n- Since E and F have a good relationship, F is in the same group as E.\n- H and E have a bad relationship, so H is not in the same group as E.\n- C and E have a bad relationship, so C is not in the same group as E.\n\nNow, let's check if F has any other good relationships that could connect back to E:\n\n- F and H have a bad relationship, so H is not in the same group as F.\n- Since F is in the same group as E, anyone who has a good relationship with F would also have a good relationship with E, but F only has a good relationship with E.\n\nTherefore, the only person who has a good relationship with E is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, F, H, I",
+      "prediction": "E, F, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the given relationships and apply the transitive properties.\n\n1. D and I have a good relationship.\n2. D and F have a good relationship.\n3. D and H have a good relationship.\n4. D and E have a good relationship.\n\nNow, let's check if any transitive relationships can be established:\n\n- Since D has a good relationship with E, and E has a bad relationship with B and C, D cannot have a good relationship with B or C.\n- Since D has a good relationship with E, and E has a bad relationship with G, D cannot have a good relationship with G.\n- Since D has a good relationship with F, H, and I, and there are no bad relationships mentioned for F, H, or I with any of D's good relationships, they remain in the good group with D.\n\nTherefore, the people who have a good relationship with D are E, F, H, and I.\n\nFinal Answer: E, F, H, I"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the given relationships and apply the transitive properties.\n\n1. G and H have a bad relationship.\n2. F and G have a good relationship.\n\nSince F and G have a good relationship, we need to check if there are any other people who have a good relationship with F, and then verify if they can have a good relationship with G through transitivity.\n\n- F and I have a bad relationship.\n- C and F have a bad relationship.\n- H and F have a bad relationship.\n\nFrom the information provided, F only has a good relationship with G. There are no other people who have a good relationship with F that could extend to G through transitivity.\n\nTherefore, the only person who has a good relationship with G is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F, H",
+      "prediction": "A, F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships based on the transitive properties provided.\n\n1. A and D have a good relationship.\n2. A and H have a good relationship, so D and H have a good relationship (transitive property).\n3. A and F have a good relationship, so D and F have a good relationship (transitive property).\n\nNow, let's check if D has a good relationship with anyone else through these connections:\n\n- Since D has a good relationship with A, H, and F, we need to check if these people have good relationships with others that could extend to D.\n- A has a good relationship with H, F, and D (already considered).\n- F has a good relationship with A (already considered) and a bad relationship with E, so no extension there.\n- H has a good relationship with A (already considered).\n\nNo further extensions are possible based on the given information.\n\nTherefore, the people who have a good relationship with D are A, F, and H.\n\nFinal Answer: A, F, H"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, E, G",
+      "prediction": "A, C, E, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we need to analyze the relationships using the transitive properties provided.\n\n1. A and B have a good relationship.\n2. A and G have a good relationship. Since A and B have a good relationship, B and G also have a good relationship.\n3. A and E have a good relationship. Since A and B have a good relationship, B and E also have a good relationship.\n4. A and C have a good relationship. Since A and B have a good relationship, B and C also have a good relationship.\n5. B and F have a bad relationship, so F cannot have a good relationship with B.\n\nNow, let's list all the people who have a good relationship with B:\n- A\n- C\n- E\n- G\n\nFinal Answer: A, C, E, G"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the given relationships and apply the transitive properties.\n\n1. A and F have a good relationship. So, F is in A's group.\n2. A and C have a bad relationship, so C is not in A's group.\n3. A and H have a bad relationship, so H is not in A's group.\n4. A and E have a bad relationship, so E is not in A's group.\n\nNow, let's check if there are any indirect good relationships through F:\n\n- F has a bad relationship with E, so E is not in A's group.\n- There is no information about F's relationship with B, C, D, G, or H, so we cannot infer any additional good relationships through F.\n\nTherefore, based on the given information, the only person who has a good relationship with A is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F, H, J",
+      "prediction": "F, H, J",
+      "correct": false,
+      "response": "To determine who has a good relationship with G, we need to identify the group that G belongs to based on the given relationships and the transitive properties.\n\n1. C and G have a good relationship.\n2. C also has good relationships with F, H, and J.\n3. Therefore, G has a good relationship with F, H, and J through C.\n\nNow, let's check if there are any other connections:\n\n- C and E have a bad relationship, so G cannot have a good relationship with E.\n- A and E have a good relationship, but since E and C have a bad relationship, A cannot be in the same group as C, F, G, H, and J.\n- A and D have a good relationship, and A and B have a good relationship, but since A is not in the same group as C, neither D nor B can be in the same group as G.\n\nThus, the people who have a good relationship with G are F, H, and J.\n\nFinal Answer: F, H, J"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, I",
+      "prediction": "A, E, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the given relationships and apply the transitive properties.\n\n1. F and E have a good relationship.\n2. F and I have a good relationship.\n3. F and A have a good relationship.\n\nNow, let's check if there are any transitive relationships:\n\n- Since F has a good relationship with E, and E has no other good relationships mentioned, we cannot extend this further.\n- F has a good relationship with I, and I has no other good relationships mentioned, so this cannot be extended.\n- F has a good relationship with A, and A has no other good relationships mentioned, so this cannot be extended.\n\nThus, the people who have a good relationship with F are A, E, and I.\n\nFinal Answer: A, E, I"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, D, F",
+      "prediction": "B, D, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships using the transitive properties provided.\n\n1. G and B have a good relationship.\n2. G and D have a good relationship.\n3. G and F have a good relationship.\n\nNow, let's check if there are any transitive relationships:\n\n- Since G has a good relationship with B, D, and F, we need to check if any of these people have good relationships with others that would extend to G.\n\n- D has a good relationship with G, but D has a bad relationship with I. Therefore, G and I must have a bad relationship.\n\n- F has a good relationship with G, but F has a bad relationship with C. Therefore, G and C must have a bad relationship.\n\n- B has a good relationship with G, but there is no further information about B's relationships with others.\n\nSince there are no other transitive relationships that can be derived from the given information, the people who have a good relationship with G are B, D, and F.\n\nFinal Answer: B, D, F"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we need to analyze the relationships using the transitive properties and the rules provided.\n\n1. E and B have a good relationship.\n2. E and G have a good relationship.\n3. E and H have a bad relationship.\n\nNow, let's check the transitive relationships:\n\n- Since E has a good relationship with B and G, we need to check if B and G have any further good relationships that could connect back to E.\n\n4. G and H have a bad relationship, so H cannot be in a good relationship with E through G.\n5. A and G have a bad relationship, so A cannot be in a good relationship with E through G.\n6. A and E have a bad relationship, so A cannot be in a good relationship with E directly.\n7. C and H have a good relationship, but since E and H have a bad relationship, C cannot be in a good relationship with E through H.\n8. A and F have a good relationship, but since A and E have a bad relationship, F cannot be in a good relationship with E through A.\n\nBased on the information and transitive properties, the only people who have a good relationship with E are B and G.\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, F",
+      "prediction": "A, E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. E and G have a good relationship.\n2. E and A have a good relationship.\n3. E and F have a good relationship.\n\nSince E has a good relationship with G, A, and F, and relationships are transitive, G must also have a good relationship with A and F.\n\nTherefore, the people who have a good relationship with G are A, E, and F.\n\nFinal Answer: A, E, F"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we start with the given information:\n\n1. A and G have a good relationship.\n2. A and F have a good relationship.\n\nSince A and G have a good relationship, and A and F have a good relationship, by transitivity, G and F also have a good relationship.\n\nNow, let's check if there are any other connections:\n\n- A and C have a bad relationship, so C cannot have a good relationship with G.\n- A and B have a bad relationship, so B cannot have a good relationship with G.\n- B and H, B and E, B and C, B and D all have good relationships with B, but since B has a bad relationship with A, none of these people can have a good relationship with G.\n\nThus, the only people who have a good relationship with G are A and F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, F, G",
+      "prediction": "B, E, F, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the relationships using the transitive properties provided.\n\n1. B and C have a good relationship.\n2. B and G have a good relationship, so C and G have a good relationship (transitive property).\n3. B and E have a good relationship, so C and E have a good relationship (transitive property).\n4. B and F have a good relationship, so C and F have a good relationship (transitive property).\n\nNow, let's check if C has a good relationship with any other people:\n\n- H and C have a bad relationship, so C cannot have a good relationship with H or anyone H has a good relationship with (A and D).\n- Since C has a bad relationship with H, and H has a good relationship with A and D, C must have a bad relationship with A and D.\n\nTherefore, the people who have a good relationship with C are B, E, F, and G.\n\nFinal Answer: B, E, F, G"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "H",
+      "prediction": "H",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the given relationships and apply the transitive properties.\n\n1. **Direct Relationships:**\n   - G and I have a bad relationship.\n   - H and G have a good relationship.\n   - C and G have a bad relationship.\n\n2. **Transitive Analysis:**\n   - Since H and G have a good relationship, we start with H.\n   - H has a bad relationship with C (C and H have a bad relationship), so C cannot be in the same group as G.\n   - H has a bad relationship with E (E and H have a bad relationship), so E cannot be in the same group as G.\n   - H has a good relationship with G, but we don't have information about H's relationship with others that could connect to G.\n\n3. **Checking Other Connections:**\n   - G has a bad relationship with I, so I cannot be in the same group as G.\n   - G has a bad relationship with C, so C cannot be in the same group as G.\n\nFrom the information provided, the only person who has a good relationship with G is H.\n\nFinal Answer: H"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, F",
+      "prediction": "D, E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the relationships using the transitive properties provided.\n\n1. E and A have a good relationship.\n2. E and F have a good relationship, and since E has a good relationship with A, by transitivity, A and F have a good relationship.\n3. E and D have a good relationship, and since E has a good relationship with A, by transitivity, A and D have a good relationship.\n\nNow, let's check if there are any other indirect relationships:\n\n- A and G have a bad relationship, so G cannot be in A's group.\n- E and C have a bad relationship, so C cannot be in A's group.\n- B is not directly connected to A, and since B has a good relationship with C, who has a bad relationship with E (and thus A), B cannot be in A's group.\n\nThus, the people who have a good relationship with A are E, F, and D.\n\nFinal Answer: D, E, F"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, G, H",
+      "prediction": "B, C, D, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to consider both direct and transitive relationships based on the given information.\n\n1. Direct good relationships with A:\n   - A and C have a good relationship.\n   - A and B have a good relationship.\n   - A and D have a good relationship.\n   - A and G have a good relationship.\n   - A and H have a good relationship.\n\n2. Transitive good relationships:\n   - Since A has a good relationship with C, and C has a bad relationship with J, J cannot be in the same group as A.\n   - Since A has a good relationship with G, and G has a bad relationship with I, I cannot be in the same group as A.\n\nFrom the information provided, we can conclude that the people who have a good relationship with A are B, C, D, G, and H.\n\nFinal Answer: B, C, D, G, H"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, E, G, H",
+      "prediction": "A, E, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with J, we need to identify the group that J belongs to based on the transitive properties of good relationships.\n\n1. J has a good relationship with A.\n2. A has a good relationship with H, G, and E.\n3. Therefore, J also has a good relationship with H, G, and E through A.\n4. Since A has a good relationship with J, H, G, and E, they all form a group where everyone has a good relationship with each other.\n\nThus, the people who have a good relationship with J are A, E, G, and H.\n\nFinal Answer: A, E, G, H"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, E",
+      "prediction": "A, B, E",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships based on the given information and the rules provided.\n\n1. E and D have a good relationship.\n2. E and B have a good relationship, so B and D have a good relationship through E.\n3. E and A have a good relationship, so A and D have a good relationship through E.\n\nNow, let's verify if there are any other transitive relationships:\n\n- Since E has a bad relationship with C, D cannot have a good relationship with C or anyone in C's group (C, J, I, G, F, H).\n- Since E has a good relationship with B and A, and D has a good relationship with E, B, and A, we have already accounted for these relationships.\n\nThus, the people who have a good relationship with D are A, B, and E.\n\nFinal Answer: A, B, E"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E, H",
+      "prediction": "B, E, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the given relationships and apply the transitive properties.\n\n1. H and C have a good relationship.\n2. H and B have a good relationship.\n3. H and E have a good relationship.\n\nSince H has a good relationship with C, B, and E, and relationships are transitive, B and E also have a good relationship with C.\n\n4. G and C have a bad relationship.\n\nSince G has a bad relationship with C, anyone who has a good relationship with G must have a bad relationship with C. From the information given:\n- A has a good relationship with G, so A must have a bad relationship with C.\n- A has a good relationship with F and I, so F and I must also have a bad relationship with C.\n\n5. A and D have a good relationship, so D must also have a bad relationship with C.\n\nNow, let's list the people who have a good relationship with C:\n- H\n- B\n- E\n\nFinal Answer: B, E, H"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H, I",
+      "prediction": "C, E, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to identify all individuals who are in the same group as G based on the transitive properties of good relationships.\n\n1. C and G have a good relationship.\n2. C and I have a good relationship, so G and I have a good relationship (transitive property).\n3. C and E have a good relationship, so G and E have a good relationship (transitive property).\n4. C and H have a good relationship, so G and H have a good relationship (transitive property).\n\nNow, let's list all people who have a good relationship with G:\n- C (directly)\n- E (through C)\n- H (through C)\n- I (through C)\n\nTherefore, the people who have a good relationship with G are C, E, H, and I.\n\nFinal Answer: C, E, H, I"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to analyze the relationships using the transitive properties provided.\n\n1. I and G have a good relationship.\n2. I and B have a good relationship.\n\nNow, let's check if there are any transitive relationships:\n\n- Since I has a good relationship with G, and G has a bad relationship with C, I and C cannot have a good relationship.\n- Since I has a good relationship with B, and B has no other relationships mentioned, we cannot infer any additional good relationships through B.\n- No other relationships involving I are mentioned that could lead to further transitive good relationships.\n\nTherefore, the people who have a good relationship with I are B and G.\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G, H",
+      "prediction": "D, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to identify the group that C belongs to based on the transitive properties of good relationships.\n\n1. C and H have a good relationship.\n2. C and G have a good relationship.\n3. C and D have a good relationship.\n\nNow, let's check if any of these relationships can be extended through transitivity:\n\n- Since C has a good relationship with H, G, and D, we need to check if these people have good relationships with each other to form a group.\n- H has a bad relationship with J and E, so H cannot be in the same group as J or E.\n- G and D do not have any additional information provided, so we assume they only have good relationships with C.\n\nThus, the group that C belongs to, based on the given information, includes C, H, G, and D.\n\nFinal Answer: D, G, H"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with J, we need to analyze the relationships using the transitive properties and the given information.\n\n1. J and F have a good relationship.\n2. B and J have a bad relationship.\n3. H and J have a bad relationship.\n\nFrom the information:\n- J has a good relationship with F.\n- J has a bad relationship with B and H.\n\nNow, let's check if there are any transitive relationships that could extend J's good relationships:\n\n- F has a bad relationship with I, so I cannot have a good relationship with J.\n- F has a bad relationship with C, so C cannot have a good relationship with J.\n- C has a good relationship with E, H, and G, but since C has a bad relationship with F, none of these can have a good relationship with J through C.\n- I has a good relationship with D, A, and B, but since I has a bad relationship with F, none of these can have a good relationship with J through I.\n\nTherefore, the only person who has a good relationship with J is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to identify the group to which I belongs, based on the transitive properties of good relationships.\n\n1. H and I have a good relationship.\n2. H and G have a good relationship, so I and G also have a good relationship.\n3. H and E have a good relationship, so I and E also have a good relationship.\n\nWe need to check if there are any other connections through transitivity:\n\n- Since H has a good relationship with G and E, and I has a good relationship with H, G, and E, we can conclude that I, H, G, and E form a group where everyone has a good relationship with each other.\n\nTherefore, the people who have a good relationship with I are E, G, and H.\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, D, F",
+      "prediction": "A, D, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships based on the given information and the transitive properties of good relationships.\n\n1. A and G have a good relationship.\n2. A and D have a good relationship.\n3. A and F have a good relationship.\n\nSince A has a good relationship with G, D, and F, by transitivity, G also has a good relationship with D and F.\n\nNow, let's list all the people who have a good relationship with G:\n- A\n- D\n- F\n\nFinal Answer: A, D, F"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, G",
+      "prediction": "B, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the given relationships and apply the transitive properties.\n\n1. B and F have a good relationship.\n2. C and F have a bad relationship.\n\nNow, let's see if we can find any other good relationships involving F through transitivity:\n\n- B has a good relationship with G. Therefore, F also has a good relationship with G (since B and F have a good relationship).\n- B has a bad relationship with C. Since F has a good relationship with B, F must have a bad relationship with C (which is already given).\n- A has a good relationship with C. Since F has a bad relationship with C, F must have a bad relationship with A.\n- A has a good relationship with D, E, and H. Since F has a bad relationship with A, F must have a bad relationship with D, E, and H.\n\nThus, the only people who have a good relationship with F are B and G.\n\nFinal Answer: B, G"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, J",
+      "prediction": "D, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the relationships using the transitive properties provided.\n\n1. J and C have a good relationship.\n2. J and D have a good relationship, so C and D also have a good relationship (transitive property of good relationships).\n3. J and A have no direct relationship mentioned, but since J and C have a good relationship, and J and D have a good relationship, we need to check if A can be connected through transitive good relationships.\n4. A has good relationships with B, E, I, and G.\n5. J and E have a bad relationship, so E cannot have a good relationship with C.\n6. J and H have a bad relationship, so H cannot have a good relationship with C.\n7. J and F have a bad relationship, so F cannot have a good relationship with C.\n8. A and J have no direct relationship, but since A has a good relationship with B, E, I, and G, and J has a good relationship with C and D, we need to check if any of these can connect to C through transitive good relationships.\n9. Since J and E have a bad relationship, E cannot connect to C.\n10. Since J and H have a bad relationship, H cannot connect to C.\n11. Since J and F have a bad relationship, F cannot connect to C.\n12. A and J have no direct relationship, but since A has a good relationship with B, E, I, and G, and J has a good relationship with C and D, we need to check if any of these can connect to C through transitive good relationships.\n13. Since J and E have a bad relationship, E cannot connect to C.\n14. Since J and H have a bad relationship, H cannot connect to C.\n15. Since J and F have a bad relationship, F cannot connect to C.\n16. A and J have no direct relationship, but since A has a good relationship with B, E, I, and G, and J has a good relationship with C and D, we need to check if any of these can connect to C through transitive good relationships.\n17. Since J and E have a bad relationship, E cannot connect to C.\n18. Since J and H have a bad relationship, H cannot connect to C.\n19. Since J and F have a bad relationship, F cannot connect to C.\n\nBased on the above analysis, the people who have a good relationship with C are J and D.\n\nFinal Answer: D, J"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, H, I",
+      "prediction": "C, E, H, I, J",
+      "correct": false,
+      "response": "To determine who has a good relationship with J, we need to identify the group that J belongs to based on the transitive properties of good relationships.\n\n1. J has a direct good relationship with C.\n2. C has good relationships with H, E, and I.\n3. Therefore, J also has good relationships with H, E, and I through C.\n4. C also has a good relationship with J, so J has a good relationship with C.\n\nNow, let's list all the people who have a good relationship with J:\n- C\n- E\n- H\n- I\n- J (since everyone has a good relationship with themselves)\n\nFinal Answer: C, E, H, I, J"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, G, J",
+      "prediction": "C, G, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with E, we start with the given information:\n\n1. J and E have a good relationship.\n2. J and C have a good relationship.\n3. J and G have a good relationship.\n4. H and J have a bad relationship.\n\nFrom the above, we know:\n- E has a good relationship with J.\n- Since J has a good relationship with C and G, by transitivity, E also has a good relationship with C and G.\n\nNow, let's verify if there are any other connections:\n- Since H has a bad relationship with J, and E has a good relationship with J, E must have a bad relationship with H.\n- There are no other direct or transitive connections provided that involve E.\n\nThus, the people who have a good relationship with E are C, G, and J.\n\nFinal Answer: C, G, J"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "I",
+      "prediction": "I",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the given relationships and apply the transitive properties.\n\n1. C and I have a good relationship.\n2. C and H have a bad relationship.\n3. C and D have a bad relationship.\n4. E and C have a bad relationship.\n\nFrom the information given, C only has a direct good relationship with I. Since C has bad relationships with H, D, and E, and no other good relationships are mentioned, we cannot infer any additional good relationships through transitivity.\n\nTherefore, the only person who has a good relationship with C is I.\n\nFinal Answer: I"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, E, F",
+      "prediction": "B, C, E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships using the transitive properties and the rules provided.\n\n1. B and G have a good relationship.\n2. B has good relationships with C, F, and E.\n3. Since B and G have a good relationship, and B has good relationships with C, F, and E, by transitivity, G also has good relationships with C, F, and E.\n\nNow, let's check if G has any other good relationships through transitivity:\n\n- G and J have a bad relationship, so J cannot be in the same group as G.\n- A has good relationships with D, I, J, and H. However, since G and J have a bad relationship, G cannot have a good relationship with A or anyone in A's group (D, I, J, H).\n\nThus, the people who have a good relationship with G are B, C, E, and F.\n\nFinal Answer: B, C, E, F"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, H",
+      "prediction": "A, B, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships using the transitive properties provided.\n\n1. B and F have a good relationship.\n2. B and A have a good relationship.\n3. B and H have a good relationship.\n\nFrom these, we can deduce:\n- Since B has a good relationship with F, A, and H, and relationships are transitive, F also has a good relationship with A and H.\n\nTherefore, the people who have a good relationship with F are A, B, and H.\n\nFinal Answer: A, B, H"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "F",
+      "prediction": "F",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we start with the given information:\n\n1. F and G have a good relationship.\n\nNow, let's analyze the relationships involving F, since G has a good relationship with F:\n\n- C and F have a bad relationship.\n- H and F have a bad relationship.\n- B and F have a bad relationship.\n- E and F have a bad relationship.\n- A and F have a bad relationship.\n\nSince F has a good relationship with G, and F has bad relationships with C, H, B, E, and A, by the transitive property of bad relationships, G must also have bad relationships with C, H, B, E, and A.\n\nTherefore, the only person who has a good relationship with G is F.\n\nFinal Answer: F"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, E",
+      "prediction": "B, E",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships using the transitive properties provided.\n\n1. E and D have a good relationship.\n2. E and B have a good relationship, so B and D have a good relationship through E.\n3. C and E have a bad relationship, so C and D have a bad relationship.\n4. A and C have a good relationship, but since C and D have a bad relationship, A and D must have a bad relationship.\n5. A and F have a good relationship, but since A and D have a bad relationship, F and D must have a bad relationship.\n6. A and G have a good relationship, but since A and D have a bad relationship, G and D must have a bad relationship.\n7. A and H have a good relationship, but since A and D have a bad relationship, H and D must have a bad relationship.\n\nFrom this analysis, the only people who have a good relationship with D are E and B.\n\nFinal Answer: B, E"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D",
+      "prediction": "B, C, D",
+      "correct": true,
+      "response": "To determine who has a good relationship with I, we need to identify the group that I belongs to based on the transitive properties of good relationships.\n\n1. **C and I have a good relationship.**\n   - This means I is in the same group as C.\n\n2. **C and B have a good relationship.**\n   - Therefore, B is in the same group as C and I.\n\n3. **C and D have a good relationship.**\n   - Therefore, D is in the same group as C, B, and I.\n\nNow, let's check if there are any other connections through transitivity:\n\n- **B and F have a bad relationship.**\n  - This means F cannot be in the same group as B, C, D, or I.\n\n- **H and C have a bad relationship.**\n  - This means H cannot be in the same group as C, B, D, or I.\n\n- **A and H have a good relationship.**\n  - This does not affect the group of I since H is not in the same group as C.\n\n- **A and F have a good relationship.**\n  - This does not affect the group of I since F is not in the same group as C.\n\n- **A and E have a good relationship.**\n  - This does not affect the group of I since E is not connected to C.\n\n- **A and G have a good relationship.**\n  - This does not affect the group of I since G is not connected to C.\n\nBased on the above analysis, the group that includes I consists of B, C, D, and I.\n\nFinal Answer: B, C, D"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, C, E",
+      "prediction": "A, B, C, E",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to identify the group that G belongs to based on the transitive properties of good relationships.\n\n1. A and G have a good relationship.\n2. A has good relationships with B, C, and E.\n3. Therefore, G also has good relationships with B, C, and E due to transitivity.\n\nNow, let's verify if there are any other connections through transitivity:\n\n- A has a good relationship with B, C, and E.\n- Since G has a good relationship with A, G also has a good relationship with B, C, and E.\n\nThere are no further connections that can be made from the given information that would include other people in G's group.\n\nThus, the people who have a good relationship with G are A, B, C, and E.\n\nFinal Answer: A, B, C, E"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, I",
+      "prediction": "E, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships based on the given information and the rules provided.\n\n1. E and F have a good relationship.\n2. B and F have a bad relationship.\n\nNow, let's explore the transitive relationships:\n\n- Since E and F have a good relationship, anyone who has a good relationship with E will also have a good relationship with F.\n- E has a good relationship with I, so I has a good relationship with F.\n- E has a bad relationship with A and H, so A and H cannot have a good relationship with F.\n- E has a good relationship with F, and F has a bad relationship with B, so E and B must have a bad relationship. Therefore, B cannot have a good relationship with F.\n- E has a good relationship with F, and F has a good relationship with E, so E remains in the group with F.\n\nThus, the people who have a good relationship with F are E and I.\n\nFinal Answer: E, I"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, F, G, H",
+      "prediction": "B, C, F, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to identify all individuals who are in the same group as A, based on the transitive properties of good relationships.\n\n1. A has a good relationship with B, C, F, G, and H directly.\n2. Since A has a good relationship with C, and C has a good relationship with A, B, F, G, and H (through A), they all have good relationships with each other.\n3. A has a good relationship with F, and F has a good relationship with A, B, C, G, and H (through A), they all have good relationships with each other.\n4. A has a good relationship with G, and G has a good relationship with A, B, C, F, and H (through A), they all have good relationships with each other.\n5. A has a good relationship with H, and H has a good relationship with A, B, C, F, and G (through A), they all have good relationships with each other.\n\nThus, the group of people who have a good relationship with A includes: A, B, C, F, G, and H.\n\nFinal Answer: B, C, F, G, H"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, F, H",
+      "prediction": "C, F, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the relationships using the transitive properties provided.\n\n1. C and A have a good relationship.\n2. C and H have a good relationship. Therefore, A and H have a good relationship through C.\n3. C and F have a good relationship. Therefore, A and F have a good relationship through C.\n\nNow, let's list all the people who have a good relationship with A:\n- C (directly)\n- H (through C)\n- F (through C)\n\nFinal Answer: C, F, H"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "E, G, H",
+      "prediction": "E, G, H",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the given relationships and apply the transitive properties.\n\n1. C and H have a good relationship.\n2. C and E have a good relationship.\n3. C and G have a good relationship.\n\nNow, let's check if any of these relationships can be extended through transitivity:\n\n- C has a good relationship with H, E, and G.\n- There are no additional relationships provided that connect these people to others in a way that would extend C's good relationships further.\n\nTherefore, the people who have a good relationship with C are H, E, and G.\n\nFinal Answer: E, G, H"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, I",
+      "prediction": "D, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. **Direct relationships involving F:**\n   - E and F have a bad relationship.\n   - C and F have a bad relationship.\n   - I and F have a good relationship.\n\n2. **Transitive relationships:**\n   - Since I and F have a good relationship, we need to find out who else I has a good relationship with.\n   - I and D have a good relationship.\n   - I and F have a good relationship.\n\n3. **Checking transitive relationships for I:**\n   - Since I has a good relationship with D and F, D and F have a good relationship through I.\n\n4. **Conclusion:**\n   - F has a good relationship with I and D.\n\nTherefore, the people who have a good relationship with F are D and I.\n\nFinal Answer: D, I"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, E",
+      "prediction": "B, C, E",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. B and H have a good relationship.\n2. B and C have a good relationship.\n3. B and E have a good relationship.\n\nUsing transitivity:\n- Since B has a good relationship with H and C, H and C have a good relationship.\n- Since B has a good relationship with H and E, H and E have a good relationship.\n\nTherefore, the people who have a good relationship with H are B, C, and E.\n\nFinal Answer: B, C, E"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, G, H, I",
+      "prediction": "B, C, G, H, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with J, we need to identify the group that J belongs to. We know that B and J have a good relationship. Therefore, J is in the same group as B. We need to find all people who have a good relationship with B, as they will also have a good relationship with J.\n\nFrom the given information:\n- B and H have a good relationship.\n- B and G have a good relationship.\n- B and I have a good relationship.\n- B and C have a good relationship.\n- B and J have a good relationship.\n\nThese people (H, G, I, C, and J) form a group with B. Since J is in this group, J has a good relationship with B, C, G, H, and I.\n\nFinal Answer: B, C, G, H, I"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, G",
+      "prediction": "D, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with H, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. H and G have a good relationship.\n2. H and D have a good relationship.\n\nNow, let's check if there are any transitive relationships:\n\n- Since H has a good relationship with G, and G has a bad relationship with C, H and C must have a bad relationship (which is already given).\n- Since H has a good relationship with D, and there are no other relationships involving D, we cannot infer any additional good relationships through D.\n\nThere are no other relationships involving H that can be used to infer additional good relationships through transitivity.\n\nTherefore, the people who have a good relationship with H are D and G.\n\nFinal Answer: D, G"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, C, F, G, I, J",
+      "prediction": "A, C, F, G, I, J",
+      "correct": true,
+      "response": "To determine who has a good relationship with B, we need to identify the group that B belongs to. B has a good relationship with A, and we need to find all people who have a good relationship with A, either directly or through transitivity.\n\n1. A has good relationships with: G, F, B, J, I, C.\n2. Since B has a good relationship with A, B also has good relationships with G, F, J, I, and C through transitivity.\n\nTherefore, the people who have a good relationship with B are: A, C, F, G, I, J.\n\nFinal Answer: A, C, F, G, I, J"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, F",
+      "prediction": "A, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with C, we need to analyze the relationships using the transitive properties provided.\n\n1. **Direct relationships with C:**\n   - C and A have a good relationship.\n   - C and F have a good relationship.\n   - C and H have a bad relationship.\n   - C and E have a bad relationship.\n\n2. **Transitive relationships:**\n   - Since C has a good relationship with A and F, we need to check if A and F have any other good relationships that could extend to C.\n   - A has no other relationships mentioned, so no further transitive relationships can be derived from A.\n   - F has a bad relationship with E, so no good relationship can be derived from F to E.\n   - Since C has a bad relationship with H, and H has a good relationship with D and B, C cannot have a good relationship with D or B due to the bad relationship with H.\n\n3. **Conclusion:**\n   - The only people with a good relationship with C are those directly mentioned: A and F.\n\nFinal Answer: A, F"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "A, B, E, F",
+      "prediction": "A, B, E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with D, we need to analyze the relationships using the transitive properties provided.\n\n1. A and D have a good relationship.\n2. A and B have a good relationship.\n3. A and F have a good relationship.\n4. A and E have a good relationship.\n\nUsing transitivity:\n- Since A has a good relationship with D, B, F, and E, and D has a good relationship with A, D must also have a good relationship with B, F, and E.\n\nTherefore, the people who have a good relationship with D are A, B, E, and F.\n\nFinal Answer: A, B, E, F"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "B, C, D, F, I",
+      "prediction": "B, C, D, F, I",
+      "correct": true,
+      "response": "To determine who has a good relationship with G, we need to analyze the relationships involving G and apply the transitive properties.\n\n1. B and G have a good relationship.\n2. B has good relationships with C, D, F, and I.\n\nSince G has a good relationship with B, and B has good relationships with C, D, F, and I, by transitivity, G also has good relationships with C, D, F, and I.\n\nTherefore, the people who have a good relationship with G are B, C, D, F, and I.\n\nFinal Answer: B, C, D, F, I"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "C, E, F",
+      "prediction": "C, E, F",
+      "correct": true,
+      "response": "To determine who has a good relationship with A, we need to analyze the relationships using the transitive properties and the given information.\n\n1. C and A have a good relationship.\n2. C and F have a good relationship, which means A and F also have a good relationship through C.\n3. C and E have a good relationship, which means A and E also have a good relationship through C.\n\nNow, let's check if there are any other transitive relationships:\n\n- Since C and H have a bad relationship, A and H cannot have a good relationship through C.\n- There are no other direct relationships involving A, so we cannot establish any further good relationships for A.\n\nTherefore, the people who have a good relationship with A are C, E, and F.\n\nFinal Answer: C, E, F"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "group",
+      "true_answer": "D, E, G",
+      "prediction": "D, E, G",
+      "correct": true,
+      "response": "To determine who has a good relationship with F, we need to analyze the relationships based on the given information and the transitive properties.\n\n1. D and F have a good relationship.\n2. D and G have a good relationship, so F and G have a good relationship (transitive property).\n3. D and E have a good relationship, so F and E have a good relationship (transitive property).\n\nNow, let's check if F has a good relationship with anyone else through transitivity:\n\n- Since F has a good relationship with D, G, and E, we need to check if any of these people have good relationships with others that could extend to F.\n\n4. D has a good relationship with G and E, which we've already accounted for.\n5. G and E do not have any additional good relationships that would extend to F.\n\nTherefore, the people who have a good relationship with F are D, E, and G.\n\nFinal Answer: D, E, G"
+    }
+  ]
+}

@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gpt-4o-mini",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "total_samples": 100,
+    "correct_predictions": 83,
+    "accuracy": 83.0
+  },
+  "results": [
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "To determine if F and K have a good relationship, we can analyze the relationships based on the provided information.\n\n1. C has a good relationship with F (C and F).\n2. C has a good relationship with K (C and K).\n3. There is no direct relationship information provided between F and K.\n\nHowever, since both F and K have a good relationship with C, we can use the transitive property of good relationships:\n\n- C (good) → F (good)\n- C (good) → K (good)\n\nSince both F and K have a good relationship with C, we can conclude that F and K also have a good relationship with each other through C.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "To determine if I and H have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. B has good relationships with F, H, J, G, E, O, D, and I.\n2. C has good relationships with N, K, M, L, A, and has bad relationships with E and I.\n\nSince B has a good relationship with H, we can conclude that B and H are in the same group. \n\nNext, we check if I has a good relationship with anyone in B's group. B has a good relationship with I, but C has a bad relationship with I. Since C is connected to B through good relationships, we need to check if I is in the same group as B.\n\nHowever, since C has a bad relationship with I, and C is connected to B through good relationships, it implies that I must have a bad relationship with everyone in C's group, including H.\n\nThus, I and H do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "To determine if I and M have a good relationship, we can analyze the relationships provided:\n\n1. A has good relationships with G, H, D, B, F, and E.\n2. C has good relationships with J, I, L, M, N, and K, but has a bad relationship with F.\n3. B has a bad relationship with K.\n4. Since A has a good relationship with F, and F has a bad relationship with C, we can conclude that A and C must have a bad relationship (because of the transitive property).\n\nNow, since A has a bad relationship with C, and C has a good relationship with I and M, we can analyze the relationships further:\n\n- C and M have a good relationship.\n- C and I have a good relationship.\n\nHowever, since A and C have a bad relationship, and A has a good relationship with I (through C), we cannot conclude that I and M have a good relationship directly.\n\nThus, we cannot definitively say that I and M have a good relationship based on the provided information.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "To determine whether I and C have a good relationship, we can analyze the relationships provided:\n\n1. A has a good relationship with J, C, N, H, B, E, and I (directly).\n2. G has a good relationship with D, K, L, and F (directly).\n3. C has a bad relationship with G.\n\nNow, since A has a good relationship with I, and I has a bad relationship with F, we can analyze the implications:\n\n- Since G has a good relationship with F, and F has a bad relationship with I, it follows that G and I must have a bad relationship (due to the transitive property).\n- Since C has a bad relationship with G, and G has a bad relationship with I, it follows that C and I must also have a bad relationship (again, due to the transitive property).\n\nThus, I and C do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if K and P have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. **E and N have a bad relationship**: This means E and N are in different groups.\n2. **N and F have a good relationship**: F is in the same group as N.\n3. **E and I have a good relationship**: I is in the same group as E.\n4. **E and G have a good relationship**: G is in the same group as E.\n5. **N and L have a bad relationship**: L is in a different group from N.\n6. **E and L have a bad relationship**: L is in a different group from E.\n7. **J and C have a good relationship**: C is in the same group as J.\n8. **N and M have a good relationship**: M is in the same group as N.\n9. **L and K have a good relationship**: K is in the same group as L.\n10. **B and M have a bad relationship**: B is in a different group from M.\n11. **N and O have a good relationship**: O is in the same group as N.\n12. **G and N have a bad relationship**: G is in a different group from N.\n13. **N and P have a good relationship**: P is in the same group as N.\n14. **J and N have a bad relationship**: J is in a different group from N.\n15. **J and E have a bad relationship**: J is in a different group from E.\n16. **J and L have a bad relationship**: J is in a different group from L.\n17. **J and A have a good relationship**: A is in the same group as J.\n18. **E and D have a good relationship**: D is in the same group as E.\n19. **L and H have a good relationship**: H is in the same group as L.\n\nFrom the relationships, we can summarize the groups:\n- Group 1: E, I, G, D (since E has bad relationships with N and L)\n- Group 2: N, F, M, O, P (since N has good relationships with F, M, O, and P)\n- Group 3: J, C, A, B (since J has bad relationships with N, E, and L)\n- Group 4: L, K, H (since L has good relationships with K and H)\n\nSince K is in Group 4 (L, K, H) and P is in Group 2 (N, F, M, O, P), and there is a bad relationship between L (in Group 4) and N (in Group 2), it follows that K and P must also have a bad relationship due to the separation of groups.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if F and H have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. K and N have a good relationship.\n2. K and J have a good relationship.\n3. C and K have a bad relationship.\n4. A and I have a good relationship.\n5. K and F have a good relationship.\n6. A and D have a good relationship.\n7. A and G have a good relationship.\n8. A and E have a good relationship.\n9. K and B have a good relationship.\n10. A and C have a good relationship.\n11. A and M have a good relationship.\n12. A and H have a good relationship.\n13. A and L have a good relationship.\n14. D and J have a bad relationship.\n\nFrom the information:\n- A has good relationships with I, D, G, E, C, M, H, and L.\n- K has good relationships with N, J, F, and B, but a bad relationship with C.\n- Since A has a good relationship with C, and C has a bad relationship with K, it implies that A and K are not in the same group.\n\nNow, let's analyze the relationships involving F and H:\n- F has a good relationship with K.\n- H has a good relationship with A.\n\nSince A and K are not in the same group, and K has a good relationship with F, it implies that F is in the group with K. However, since A is in a different group, and A has a good relationship with H, it means that H is in A's group.\n\nSince F and H are in different groups (F is with K and H is with A), they must have a bad relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine whether F and L have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. **D and J have a good relationship**: This means D and J are in the same group.\n2. **A and G have a bad relationship**: A and G are in different groups.\n3. **N and G have a bad relationship**: N and G are in different groups.\n4. **D and G have a good relationship**: Since D has a good relationship with G, D is in the same group as G.\n5. **C and G have a bad relationship**: C and G are in different groups.\n6. **D and O have a good relationship**: D and O are in the same group.\n7. **N and L have a good relationship**: N and L are in the same group.\n8. **N and A have a good relationship**: N and A are in the same group.\n9. **N and K have a bad relationship**: N and K are in different groups.\n10. **D and F have a good relationship**: D and F are in the same group.\n11. **D and E have a good relationship**: D and E are in the same group.\n12. **D and H have a good relationship**: D and H are in the same group.\n13. **D and M have a good relationship**: D and M are in the same group.\n14. **K and G have a bad relationship**: K and G are in different groups.\n15. **K and C have a good relationship**: K and C are in the same group.\n16. **N and B have a good relationship**: N and B are in the same group.\n17. **N and I have a good relationship**: N and I are in the same group.\n\nFrom the relationships, we can summarize the groups:\n\n- Group 1: D, J, O, F, E, H, M (since D has good relationships with all of them)\n- Group 2: N, L, A, B, I (N has good relationships with all of them)\n- Group 3: K, C, G (K has a good relationship with C, but both have bad relationships with N and G)\n\nSince F is in Group 1 and L is in Group 2, they are in different groups. Therefore, F and L do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "To determine if P and G have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. **K and E have a good relationship.**\n2. **C and J have a bad relationship.**\n3. **C and F have a good relationship.**\n4. **J and N have a good relationship.**\n5. **K and I have a good relationship.**\n6. **K and L have a good relationship.**\n7. **A and D have a bad relationship.**\n8. **K and M have a good relationship.**\n9. **C and B have a good relationship.**\n10. **C and A have a good relationship.**\n11. **C and P have a good relationship.**\n12. **J and K have a bad relationship.**\n13. **C and G have a good relationship.**\n14. **K and O have a bad relationship.**\n15. **J and D have a good relationship.**\n16. **C and K have a bad relationship.**\n17. **J and O have a good relationship.**\n18. **C and H have a good relationship.**\n\nFrom the information:\n- C has a good relationship with P (11).\n- C has a good relationship with G (13).\n\nSince C has a good relationship with both P and G, we can conclude that P and G also have a good relationship through C, as they are both connected to C with good relationships.\n\nThus, the answer to the question \"Do P and G have a good relationship?\" is:\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine whether M and L have a good relationship, we need to analyze the relationships provided and see if there is a connection between M and L through good relationships.\n\n1. **C and L have a good relationship**: This means L is in the same group as C.\n2. **G and H have a good relationship**: This means H is in the same group as G.\n3. **N and G have a bad relationship**: N is not in the same group as G.\n4. **G and J have a bad relationship**: J is not in the same group as G.\n5. **N and C have a bad relationship**: N is not in the same group as C.\n6. **A and G have a bad relationship**: A is not in the same group as G.\n7. **I and J have a bad relationship**: I is not in the same group as J.\n8. **N and J have a bad relationship**: N is not in the same group as J.\n9. **C and E have a good relationship**: E is in the same group as C.\n10. **N and A have a good relationship**: A is in the same group as N.\n11. **G and D have a good relationship**: D is in the same group as G.\n12. **J and M have a good relationship**: M is in the same group as J.\n13. **G and F have a good relationship**: F is in the same group as G.\n14. **C and O have a good relationship**: O is in the same group as C.\n15. **G and I have a good relationship**: I is in the same group as G.\n16. **C and J have a bad relationship**: J is not in the same group as C.\n17. **C and B have a good relationship**: B is in the same group as C.\n18. **J and K have a good relationship**: K is in the same group as J.\n19. **C and G have a bad relationship**: G is not in the same group as C.\n\nFrom the analysis:\n- C is in a group with L, E, O, and B.\n- M is in a group with J, K, and possibly others connected through J.\n- Since C and J have a bad relationship, C's group (which includes L) cannot be connected to J's group (which includes M).\n\nThus, M and L do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if I and M have a good relationship, we need to analyze the relationships provided.\n\n1. **B and M have a good relationship.**\n2. **C and I have a good relationship.**\n3. **C and D have a good relationship.**\n4. **D and P have a bad relationship.**\n5. **C and K have a bad relationship.**\n6. **C and L have a good relationship.**\n7. **C and G have a good relationship.**\n8. **B and J have a good relationship.**\n9. **B and O have a good relationship.**\n10. **B and E have a good relationship.**\n11. **B and N have a good relationship.**\n12. **B and H have a good relationship.**\n13. **B and K have a good relationship.**\n\nFrom the information, we know:\n- C has a good relationship with I.\n- B has a good relationship with M.\n\nHowever, we do not have any direct or transitive information linking I and M. Since we cannot establish a good relationship between I and M based on the provided relationships, we conclude that they do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "To determine if G and E have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. H has a good relationship with G (H and G).\n2. H has a good relationship with E (H and E).\n3. H has a bad relationship with C (H and C).\n4. E has a bad relationship with N (E and N).\n\nSince H has a good relationship with both G and E, we can conclude that G and E are in the same group as H. However, we do not have any direct or transitive information about the relationship between G and E.\n\nThus, we cannot definitively say that G and E have a good relationship based on the provided information.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Yes",
+      "correct": false,
+      "response": "To determine whether A and L have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. **K and I have a bad relationship**: K - I (bad)\n2. **K and C have a bad relationship**: K - C (bad)\n3. **I and B have a good relationship**: I - B (good)\n4. **C and P have a good relationship**: C - P (good)\n5. **C and O have a good relationship**: C - O (good)\n6. **C and J have a bad relationship**: C - J (bad)\n7. **K and J have a bad relationship**: K - J (bad)\n8. **J and H have a good relationship**: J - H (good)\n9. **I and C have a bad relationship**: I - C (bad)\n10. **F and K have a good relationship**: F - K (good)\n11. **I and J have a bad relationship**: I - J (bad)\n12. **F and D have a good relationship**: F - D (good)\n13. **F and N have a good relationship**: F - N (good)\n14. **D and H have a bad relationship**: D - H (bad)\n15. **C and L have a good relationship**: C - L (good)\n16. **C and M have a good relationship**: C - M (good)\n17. **F and G have a good relationship**: F - G (good)\n18. **F and E have a good relationship**: F - E (good)\n19. **F and A have a good relationship**: F - A (good)\n20. **B and C have a bad relationship**: B - C (bad)\n\nFrom the relationships:\n- C has a good relationship with L (C - L).\n- C has a bad relationship with B (B - C), which means B cannot be in the same group as C.\n- I has a bad relationship with C (I - C), which means I cannot be in the same group as C.\n- F has a good relationship with A (F - A), and F has a good relationship with C (F - C indirectly through F's good relationships).\n\nSince A is connected to F, and F is connected to C (through good relationships), we can conclude that A is in the same group as C.\n\nHowever, L is connected to C (C - L), which means L is also in the same group as C.\n\nSince both A and L are connected through C, they must have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "To determine if O and L have a good relationship, we can analyze the relationships based on the provided information.\n\n1. K has a good relationship with M, A, D, E, J, and has a bad relationship with C.\n2. B has a good relationship with N, G, F, L, H, I, C, and O.\n3. E has a bad relationship with N.\n\nNow, let's see how O and L are connected:\n\n- B has a good relationship with L and O.\n- Since B has a good relationship with both L and O, and there are no bad relationships mentioned between B and either L or O, we can conclude that L and O must also have a good relationship.\n\nThus, based on the transitive property of relationships, we can conclude that O and L have a good relationship.\n\nFinal Answer: Yes"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if H and I have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. O and H have a bad relationship.\n2. O and I have a good relationship.\n3. H and F have a good relationship.\n4. H and G have a good relationship.\n\nSince O and H have a bad relationship, and O has a good relationship with I, we can conclude that H and I cannot have a good relationship because of the transitive property of bad relationships. If H had a good relationship with I, then O would also have to have a good relationship with I, which contradicts the fact that O and I have a good relationship.\n\nThus, H and I do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if D and H have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. **C and A have a good relationship**: A is in the same group as C.\n2. **M and N have a good relationship**: N is in the same group as M.\n3. **K and E have a good relationship**: E is in the same group as K.\n4. **C and M have a bad relationship**: C and M are in different groups.\n5. **C and K have a bad relationship**: C and K are in different groups.\n6. **C and D have a good relationship**: D is in the same group as C.\n7. **K and M have a bad relationship**: K and M are in different groups.\n8. **A and F have a bad relationship**: F is in a different group than A.\n9. **M and F have a good relationship**: F is in the same group as M.\n10. **B and C have a bad relationship**: B is in a different group than C.\n11. **K and L have a good relationship**: L is in the same group as K.\n12. **M and I have a good relationship**: I is in the same group as M.\n13. **K and J have a good relationship**: J is in the same group as K.\n14. **K and B have a good relationship**: B is in the same group as K.\n15. **C and G have a good relationship**: G is in the same group as C.\n16. **K and H have a good relationship**: H is in the same group as K.\n\nFrom the analysis:\n- C is in a group with A, D, G, and is separate from K, M, B, and F.\n- K is in a group with E, L, J, H, and is separate from C, D, G.\n- Since D is in the same group as C and H is in the same group as K, and since C and K have a bad relationship, D and H must also have a bad relationship.\n\nThus, D and H do not have a good relationship.\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "To determine if B and P have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. H and L have a good relationship.\n2. K and H have a bad relationship.\n3. K and E have a bad relationship.\n4. H and O have a good relationship.\n5. C and M have a good relationship.\n6. K and J have a good relationship.\n7. H and I have a good relationship.\n8. H and B have a good relationship.\n9. K and A have a good relationship.\n10. H and P have a good relationship.\n11. K and G have a good relationship.\n12. A and P have a bad relationship.\n13. C and D have a good relationship.\n14. H and E have a bad relationship.\n15. C and E have a good relationship.\n16. K and F have a good relationship.\n17. D and N have a bad relationship.\n18. K and N have a good relationship.\n\nFrom the information:\n- H has a good relationship with B (8).\n- H has a good relationship with P (10).\n- A has a bad relationship with P (12).\n\nSince H has a good relationship with both B and P, we can conclude that B and P are in different groups because A's bad relationship with P indicates that everyone in A's group (including K) has a bad relationship with P. \n\nSince K has a good relationship with B (6), and K is in a different group from P, it follows that B and P must also have a bad relationship.\n\nThus, the answer to the question \"Do B and P have a good relationship?\" is:\n\nFinal Answer: No"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "No",
+      "correct": false,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Yes",
+      "correct": true,
+      "response": "Final Answer: Yes"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "Final Answer: No"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "No",
+      "correct": true,
+      "response": "To determine if A and H have a good relationship, we need to analyze the relationships based on the provided information.\n\n1. **K and B have a good relationship.**\n2. **K and N have a good relationship.**\n3. **K and M have a good relationship.**\n4. **K and J have a bad relationship.**\n5. **L and K have a bad relationship.**\n6. **L and G have a good relationship.**\n7. **L and J have a bad relationship.**\n8. **L and E have a bad relationship.**\n9. **L and A have a good relationship.**\n10. **L and I have a good relationship.**\n11. **C and F have a good relationship.**\n12. **C and H have a good relationship.**\n13. **C and E have a good relationship.**\n14. **E and J have a bad relationship.**\n15. **F and N have a bad relationship.**\n16. **D and G have a bad relationship.**\n17. **J and D have a good relationship.**\n\nFrom the information:\n- L has a good relationship with A.\n- L has a good relationship with G.\n- G has a bad relationship with D.\n- C has a good relationship with H.\n\nSince L has a good relationship with A, and L has a good relationship with G, we can infer that A is in the same group as L and G. \n\nC has a good relationship with H, and since C also has a good relationship with E, and E has a bad relationship with J, we can see that C and H are in a separate group from J.\n\nHowever, we do not have direct information about the relationship between A and H. Since A is connected to L and H is connected to C, we cannot definitively conclude that A and H have a good relationship based on the transitive properties provided.\n\nThus, the answer to the question \"Do A and H have a good relationship?\" is:\n\nFinal Answer: No"
+    }
+  ]
+}

@@ -320,5 +320,143 @@
         "total": 100
       }
     }
+  },
+  "o3-mini": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 96.0,
+        "correct": 96,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 99.0,
+        "correct": 99,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 98.0,
+        "correct": 98,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      }
+    }
+  },
+  "gpt-4o-mini": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 77.0,
+        "correct": 77,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 41.0,
+        "correct": 41,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 87.0,
+        "correct": 87,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 5.0,
+        "correct": 5,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 83.0,
+        "correct": 83,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 38.0,
+        "correct": 38,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 83.0,
+        "correct": 83,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 11.0,
+        "correct": 11,
+        "total": 100
+      }
+    }
+  },
+  "gpt-4o": {
+    "easy": {
+      "reasoning": {
+        "accuracy": 99.0,
+        "correct": 99,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 94.0,
+        "correct": 94,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 99.0,
+        "correct": 99,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 84.0,
+        "correct": 84,
+        "total": 100
+      }
+    },
+    "hard": {
+      "reasoning": {
+        "accuracy": 100.0,
+        "correct": 100,
+        "total": 100
+      },
+      "group": {
+        "accuracy": 90.0,
+        "correct": 90,
+        "total": 100
+      },
+      "cluster": {
+        "accuracy": 93.0,
+        "correct": 93,
+        "total": 100
+      },
+      "count": {
+        "accuracy": 86.0,
+        "correct": 86,
+        "total": 100
+      }
+    }
   }
 }
