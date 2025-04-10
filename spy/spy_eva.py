@@ -7,6 +7,8 @@ from pathlib import Path
 from tqdm import tqdm
 from dotenv import load_dotenv
 import sys
+import concurrent.futures
+
 
 # Add parent directory to path for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -90,7 +92,7 @@ def generate_user_prompt(scenario):
     
     return prompt
 
-def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
+def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None, max_workers=4):
     """
     Evaluate model performance on the Word Spy dataset
     
@@ -99,6 +101,7 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
         dataset_path: path to dataset json file
         num_scenarios: number of scenarios to evaluate (None for all)
         output_file: optional file to save results
+        max_workers: maximum number of concurrent workers for scenario evaluation
     """
     # Load dataset
     with open(dataset_path, 'r', encoding='utf-8') as f:
@@ -112,8 +115,7 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
     correct_predictions = 0
     total_scenarios = len(dataset)
     
-    # Evaluate each scenario
-    for scenario in tqdm(dataset, desc=f"Evaluating {model}"):
+    def process_scenario(scenario):
         scenario_id = scenario["scenario_id"]
         spy_player = scenario["spy_player"]
         
@@ -133,9 +135,6 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
         prediction = extract_spy_prediction(response)
         is_correct = prediction == spy_player
         
-        if is_correct:
-            correct_predictions += 1
-        
         # Store result
         result = {
             "scenario_id": scenario_id,
@@ -144,10 +143,25 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
             "correct": is_correct,
             "response": response
         }
-        results.append(result)
         
         # Optional: Add delay to avoid rate limits
         time.sleep(0.5)
+        
+        return result, is_correct
+    
+    # Process scenarios with ThreadPoolExecutor
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Use tqdm to show progress
+        futures = []
+        for scenario in dataset:
+            futures.append(executor.submit(process_scenario, scenario))
+        
+        # Process results as they complete
+        for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc=f"Evaluating {model}"):
+            result, is_correct = future.result()
+            results.append(result)
+            if is_correct:
+                correct_predictions += 1
     
     # Calculate accuracy
     accuracy = correct_predictions / total_scenarios * 100 if total_scenarios > 0 else 0
@@ -161,10 +175,6 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
         "results": results
     }
     
-    # Print summary
-    print(f"\nModel: {model}")
-    print(f"Accuracy: {accuracy:.2f}% ({correct_predictions}/{total_scenarios})")
-    
     # Save results if output file specified
     if output_file:
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -176,12 +186,17 @@ def evaluate_model(model, dataset_path, num_scenarios=None, output_file=None):
 def main():
     """Main function to run evaluation"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on Word Spy game')
-    parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o-mini','llama-3.3-70B'],
+    #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq deepseek-r1 o3-mini gpt-4o-mini gpt-4o
+    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.1-8B','gemma-2-9B','gemma-2-27B','llama-3.3-70B','qwen-2.5-72B','qwq','deepseek-r1','o3-mini','gpt-4o-mini','gpt-4o'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--dataset', type=str, default='data/spy_dataset_eval.json', 
                         help='Path to dataset')
-    parser.add_argument('--num_scenarios', type=int, default=8, 
+    parser.add_argument('--num_scenarios', type=int, default=100, 
                         help='Number of scenarios to evaluate')
+    parser.add_argument('--model_workers', type=int, default=2,
+                        help='Maximum number of concurrent workers for model evaluation')
+    parser.add_argument('--scenario_workers', type=int, default=10,
+                        help='Maximum number of concurrent workers for scenario evaluation')
     
     args = parser.parse_args()
     
@@ -193,21 +208,35 @@ def main():
     # Get dataset basename for result files
     dataset_basename = os.path.basename(args.dataset).split('.')[0]
     
-    # Evaluate each model
+    # Evaluate models concurrently
     results_summary = {}
-    for model in args.models:
+    
+    def evaluate_model_wrapper(model):
         # Create unique output filename for this model
         output_file = results_dir / f"{model}_results.json"
         
         # Run evaluation
-        model_results = evaluate_model(model, args.dataset, args.num_scenarios, output_file)
+        model_results = evaluate_model(model, args.dataset, args.num_scenarios, output_file, args.scenario_workers)
         
-        # Add to summary
-        results_summary[model] = {
-            "accuracy": model_results["accuracy"],
-            "correct": model_results["correct_predictions"],
-            "total": model_results["total_scenarios"]
-        }
+        print(f"\nModel: {model}")
+        print(f"Accuracy: {model_results['accuracy']:.2f}% ({model_results['correct_predictions']}/{model_results['total_scenarios']})")
+        
+        return model, model_results
+    
+    # Use ThreadPoolExecutor for concurrent execution
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.model_workers) as executor:
+        # Submit all model evaluation tasks
+        future_to_model = {executor.submit(evaluate_model_wrapper, model): model for model in args.models}
+        
+        # Collect results as they complete
+        for future in concurrent.futures.as_completed(future_to_model):
+            model, model_results = future.result()
+            # Add to summary
+            results_summary[model] = {
+                "accuracy": model_results["accuracy"],
+                "correct": model_results["correct_predictions"],
+                "total": model_results["total_scenarios"]
+            }
     
     # Save overall summary
     summary_file = results_dir / f"summary_{dataset_basename}.json"
