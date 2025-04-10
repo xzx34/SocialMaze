@@ -277,13 +277,13 @@ def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on e-commerce review inference')
     #llama-3.1-8B gemma-2-9B gemma-2-27B llama-3.3-70B qwen-2.5-72B qwq deepseek-r1
-    parser.add_argument('--models', type=str, nargs='+', default=['llama-3.1-8B', 'gemma-2-9B', 'gemma-2-27B', 'llama-3.3-70B', 'qwen-2.5-72B', 'qwq', 'deepseek-r1'],
+    parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o-mini','gpt-4o','o3-mini'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--dataset', type=str, default='data/review_llm.json', 
                         help='Path to dataset')
     parser.add_argument('--num_scenarios', type=int, default=100, 
                         help='Number of scenarios to evaluate (default: all)')
-    parser.add_argument('--max_workers', type=int, default=10,
+    parser.add_argument('--max_workers', type=int, default=25,
                         help='Maximum number of concurrent workers (default: 10)')
     
     return parser.parse_args()

@@ -28,8 +28,8 @@
     "output_tokens": 7314782
   },
   "gpt-4o-mini": {
-    "input_tokens": 2649393,
-    "output_tokens": 764688
+    "input_tokens": 2704676,
+    "output_tokens": 800802
   },
   "gpt-4o": {
     "input_tokens": 2316457,
