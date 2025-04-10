@@ -15,9 +15,9 @@
     "overall_accuracy": 64.0
   },
   "gpt-4o-mini": {
-    "age_accuracy": 63.0,
-    "gender_accuracy": 52.0,
-    "overall_accuracy": 57.49999999999999
+    "age_accuracy": 60.0,
+    "gender_accuracy": 51.0,
+    "overall_accuracy": 55.50000000000001
   },
   "llama-3.3-70B": {
     "age_accuracy": 73.0,
@@ -28,5 +28,20 @@
     "age_accuracy": 74.0,
     "gender_accuracy": 63.0,
     "overall_accuracy": 68.5
+  },
+  "o3-mini": {
+    "age_accuracy": 67.0,
+    "gender_accuracy": 73.0,
+    "overall_accuracy": 70.0
+  },
+  "gpt-4o": {
+    "age_accuracy": 72.0,
+    "gender_accuracy": 71.0,
+    "overall_accuracy": 71.5
+  },
+  "deepseek-r1": {
+    "age_accuracy": 69.0,
+    "gender_accuracy": 73.0,
+    "overall_accuracy": 71.0
   }
 }

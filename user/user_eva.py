@@ -490,7 +490,7 @@ def evaluate_model_persona(model, dataset_path, num_scenarios=None, output_file=
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on user demographic prediction')
-    parser.add_argument('--models', type=str, nargs='+', default=['gemma-2-9B', 'gemma-3-27B', 'qwen-2.5-72B', 'gpt-4o-mini','llama-3.3-70B','qwq'],
+    parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o-mini','o3-mini','gpt-4o','deepseek-r1'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--entity_dataset', type=str, default='data/user_entity.json', 
                         help='Path to entity dataset')
@@ -500,7 +500,7 @@ def parse_arguments():
                         help='Number of scenarios to evaluate (default: all)')
     parser.add_argument('--task', type=str, choices=['entity', 'persona', 'both'], default='both',
                         help='Which evaluation task to run')
-    parser.add_argument('--max_workers', type=int, default=10,
+    parser.add_argument('--max_workers', type=int, default=20,
                         help='Maximum number of concurrent workers for parallel processing')
     
     return parser.parse_args()

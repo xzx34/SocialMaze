@@ -24,19 +24,19 @@
     "output_tokens": 15016603
   },
   "deepseek-r1": {
-    "input_tokens": 14009350,
-    "output_tokens": 7668970
+    "input_tokens": 14117565,
+    "output_tokens": 7904302
   },
   "gpt-4o-mini": {
-    "input_tokens": 3243524,
-    "output_tokens": 1253416
+    "input_tokens": 3343919,
+    "output_tokens": 1317523
   },
   "gpt-4o": {
-    "input_tokens": 2832253,
-    "output_tokens": 1071830
+    "input_tokens": 2927384,
+    "output_tokens": 1139959
   },
   "o3-mini": {
-    "input_tokens": 3000170,
-    "output_tokens": 4146402
+    "input_tokens": 3095101,
+    "output_tokens": 4351025
   }
 }
