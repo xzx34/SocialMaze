@@ -19,8 +19,6 @@ def calculate_average_length(data, round_num=3):
         for round_data in scenario.get("rounds", []):
             if round_data.get("round") == 3 or round_data.get("round") == 2 or round_data.get("round") == 1:
                 response = round_data.get("response", "")
-                # 移除<think>...</think>标记内的内容
-                # response = re.sub(r'<think>.*?</think>', '', response, flags=re.DOTALL)
                 total_length += len(response)
                 count += 1   
     
@@ -39,7 +37,7 @@ def get_round_accuracy(data, round_num=3):
 
 def main():
     results_dir = "results"
-    output_file = "model_round3_stats.csv"
+    output_file = "model_length_stats.csv"
     
     # 收集结果
     results = []
@@ -60,7 +58,8 @@ def main():
                         "model": model_name,
                         "avg_response_length": avg_length,
                         "criminal_accuracy": criminal_acc,
-                        "self_role_accuracy": self_role_acc
+                        "self_role_accuracy": self_role_acc,
+                        "avg_accuracy": (criminal_acc + self_role_acc) / 2
                     })
                     
                     print(f"处理完成: {model_name}")
@@ -70,7 +69,7 @@ def main():
     # 写入CSV文件
     if results:
         with open(output_file, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=["model", "avg_response_length", "criminal_accuracy", "self_role_accuracy"])
+            writer = csv.DictWriter(f, fieldnames=["model", "avg_response_length", "criminal_accuracy", "self_role_accuracy", "avg_accuracy"])
             writer.writeheader()
             writer.writerows(results)
         
