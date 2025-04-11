@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 定义颜色
-colors = ['#C7EAEC', '#AED9CE', '#96BAC7']
+colors = ['#FFCCCB', '#FF9797', '#AF3240']
 
 # 定义文件夹和文件
 results_dirs = ['results', 'results_2', 'results_3']
@@ -86,7 +86,7 @@ width = 0.23  # 柱子宽度
 
 # 创建三个柱状图，前两轮降低透明度
 linewidth = 1.5  # 边框线条宽度
-alpha_stages = [0.5, 0.7, 1.0]  # 三个阶段的透明度
+alpha_stages = [0.7, 0.7, 1.0]  # 三个阶段的透明度
 
 bars1 = plt.bar(x - width, stage1_values, width, label=stage_names[0], color=colors[0], 
                 edgecolor='black', linewidth=linewidth, alpha=alpha_stages[0])

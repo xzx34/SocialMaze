@@ -51,7 +51,6 @@ for filename in sorted(all_results_files):
 # 模型名称映射字典，用于重命名模型
 model_name_map = {
     'deepseek-r1': 'DeepSeek-R1',
-    'gemma-2-9B': 'Gemma-2-9B',
     'gemma-2-27B': 'Gemma-2-27B',
     'llama-3.1-8B': 'Llama-3.1-8B',
     'llama-3.3-70B': 'Llama-3.3-70B',
@@ -66,7 +65,6 @@ model_name_map = {
 model_order = [
     'llama-3.1-8B',
     'llama-3.3-70B',
-    'gemma-2-9B',
     'gemma-2-27B',
     'qwen-2.5-72B',
     'gpt-4o-mini',

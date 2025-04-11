@@ -1,6 +1,5 @@
 model,avg_response_length,avg_accuracy
 gpt-4o,1754.465,73.75
-gemma-2-9B,1102.105,64.5
 deepseek-r1,4708.195,72.75
 qwen-2.5-72B,1657.7849999999999,66.0
 gemma-3-27B,1671.5900000000001,64.5

@@ -45,52 +45,6 @@
       }
     }
   },
-  "gemma-2-9b": {
-    "easy": {
-      "reasoning": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      },
-      "group": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      },
-      "cluster": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      },
-      "count": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      }
-    },
-    "hard": {
-      "reasoning": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      },
-      "group": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      },
-      "cluster": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      },
-      "count": {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": 100
-      }
-    }
-  },
   "gemma-2-27B": {
     "easy": {
       "reasoning": {

@@ -4,11 +4,6 @@
     "correct": 37,
     "total": 100
   },
-  "gemma-2-9B": {
-    "accuracy": 48.0,
-    "correct": 48,
-    "total": 100
-  },
   "gemma-2-27B": {
     "accuracy": 49.0,
     "correct": 49,
