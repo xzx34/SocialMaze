@@ -85,71 +85,53 @@ marker_styles = ['o', 's']
 line_width = 2.5
 marker_size = 9
 
-# Create Figure 1: Accuracy Comparison (Line Chart)
-plt.figure(figsize=(12, 7))
+# 计算长度比
+length_ratios = [task_results[task]['length_ratio'] for task in sorted_tasks]
+
+# 创建组合图表（准确率折线图 + 长度比柱状图）
+plt.figure(figsize=(14, 8))
 plt.rcParams['axes.edgecolor'] = 'black'
 plt.rcParams['axes.linewidth'] = 1.5
 
-fig, ax = plt.subplots(figsize=(12, 7))
+fig, ax1 = plt.subplots(figsize=(14, 8))
 
-# Plot lines with markers
+# 绘制准确率折线图（左Y轴）- 移除阴影填充
 x = np.arange(len(sorted_tasks))
-ax.plot(x, long_chain_accuracies, marker=marker_styles[0], linestyle='-', linewidth=line_width, 
-        markersize=marker_size, label='Long-Chain Models', color=line_colors[0])
-ax.plot(x, short_chain_accuracies, marker=marker_styles[1], linestyle='-', linewidth=line_width, 
-        markersize=marker_size, label='Short-Chain Models', color=line_colors[1])
+line1 = ax1.plot(x, long_chain_accuracies, marker=marker_styles[0], linestyle='-', linewidth=line_width, 
+        markersize=marker_size, label='Long-Chain Models (Accuracy)', color=line_colors[0])
+line2 = ax1.plot(x, short_chain_accuracies, marker=marker_styles[1], linestyle='-', linewidth=line_width, 
+        markersize=marker_size, label='Short-Chain Models (Accuracy)', color=line_colors[1])
 
-# Fill areas under lines with light colors
-ax.fill_between(x, long_chain_accuracies, alpha=0.2, color=colors[0])
-ax.fill_between(x, short_chain_accuracies, alpha=0.2, color=colors[1])
+# 设置左Y轴（准确率）
+ax1.set_ylabel('Accuracy (%)', fontsize=14, fontweight='bold')
+ax1.set_ylim(0, min(100, max(max(long_chain_accuracies), max(short_chain_accuracies)) * 1.15))
+ax1.grid(axis='y', linestyle='--', alpha=0.3, color='gray')
 
-ax.set_ylabel('Accuracy (%)', fontsize=12, fontweight='bold')
-ax.set_xticks(x)
-ax.set_xticklabels(display_tasks, fontsize=11)  # 增大x轴标签字体
-ax.legend(fontsize=14, loc='upper right')  # 增大图例标签字体
+# 创建右Y轴用于长度比柱状图 - 修改颜色并添加黑色边框
+ax2 = ax1.twinx()
+bar_width = 0.4
+bar_color = '#AED9CE'  # 更改柱状图颜色
+bars = ax2.bar(x, length_ratios, bar_width, alpha=0.7, color=bar_color, 
+              label='Length Ratio (Long/Short)', 
+              edgecolor='black', linewidth=2)  # 添加粗黑色边框
 
-# Add light grid lines only on y-axis
-ax.grid(axis='y', linestyle='--', alpha=0.3, color='gray')
+# 移除柱状图数值标签
 
-# Set y-axis limits
-y_max = max(max(long_chain_accuracies), max(short_chain_accuracies))
-ax.set_ylim(0, min(100, y_max * 1.15))
+# 设置右Y轴（长度比）
+ax2.set_ylabel('Length Ratio (Long/Short)', fontsize=14, fontweight='bold')
+ax2.set_ylim(0, max(length_ratios) * 2.5)  # 为标签留出空间
 
-plt.tight_layout()
-plt.savefig('accuracy_comparison_line.png', dpi=300, bbox_inches='tight')
-plt.close()
+# 设置X轴
+ax1.set_xticks(x)
+ax1.set_xticklabels(display_tasks, fontsize=14)
 
-# Create Figure 2: Length Comparison (Line Chart)
-plt.figure(figsize=(12, 7))
-plt.rcParams['axes.edgecolor'] = 'black'
-plt.rcParams['axes.linewidth'] = 1.5
-
-fig, ax = plt.subplots(figsize=(12, 7))
-
-# Plot lines with markers
-ax.plot(x, long_chain_lengths, marker=marker_styles[0], linestyle='-', linewidth=line_width, 
-        markersize=marker_size, label='Long-Chain Models', color=line_colors[0])
-ax.plot(x, short_chain_lengths, marker=marker_styles[1], linestyle='-', linewidth=line_width, 
-        markersize=marker_size, label='Short-Chain Models', color=line_colors[1])
-
-# Fill areas under lines with light colors
-ax.fill_between(x, long_chain_lengths, alpha=0.2, color=colors[0])
-ax.fill_between(x, short_chain_lengths, alpha=0.2, color=colors[1])
-
-ax.set_ylabel('Response Length (chars)', fontsize=12, fontweight='bold')
-ax.set_xticks(x)
-ax.set_xticklabels(display_tasks, fontsize=11)  # 增大x轴标签字体
-ax.legend(fontsize=14, loc='upper right')  # 增大图例标签字体
-
-# Add light grid lines only on y-axis
-ax.grid(axis='y', linestyle='--', alpha=0.3, color='gray')
-
-# Set y-axis limits
-y_max = max(max(long_chain_lengths), max(short_chain_lengths))
-ax.set_ylim(0, y_max * 1.15)
+# 合并图例
+lines1, labels1 = ax1.get_legend_handles_labels()
+lines2, labels2 = ax2.get_legend_handles_labels()
+ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right', fontsize=14)
 
 plt.tight_layout()
-plt.savefig('length_comparison_line.png', dpi=300, bbox_inches='tight')
+plt.savefig('combined_accuracy_length_ratio.png', dpi=300, bbox_inches='tight')
 plt.close()
 
-print("Line charts generated successfully!")
+print("Combined chart generated successfully!")
