@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "model": "gemma-2-9B",
+    "difficulty": "easy",
+    "question_type": "reasoning",
+    "total_samples": 100,
+    "correct_predictions": 0,
+    "accuracy": 0.0
+  },
+  "results": [
+    {
+      "sample_id": 6,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Final"
+    },
+    {
+      "sample_id": 12,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Final"
+    },
+    {
+      "sample_id": 15,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships and determine if H and E have a good relationship.\n\n1. **H and E have a bad relationship** (given).\n\nTherefore, the answer is No.\n\nFina"
+    },
+    {
+      "sample_id": 20,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships and determine if E and B have a good relationship.\n\nWe are given:\n1. B and C have a bad relationship.\n2. A and H have a good relationship.\n3. B and E have a good relationship.\n4. A and C have a good relationship.\n5. B and G have a good relationship.\n6. C and G have a bad relationship.\n7. B and D have a good relationship.\n8. A and F have a good relationship.\n\nThe question asks if E and B have a good relationship. We are directly given that B and E have a good relationship (statement 3).\n\nFinal"
+    },
+    {
+      "sample_id": 23,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships to determine if C and B have a good relationship.\n\n1. **B and I have a good relationship.**\n2. **B and D have a good relationship.**\n3. **B and E have a good relationship.**\n4. **B and F have a bad relationship.**\n5. **C and F have a good relationship.**\n6. **C and A have a good relationship.**\n7. **C and H have a good relationship.**\n\nNow, let's trace the relationships:\n\n*   We know B has good relationships with I, D, and E.\n*   We know C has a good relationship with F.\n*   We know B and F have a bad relationship.\n*   Since C and F have a good relationship, and B and F have a bad relationship, then B and C must have a bad relationship (due to transitive property rule 2).\n\nTherefore, C and B do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 1,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A and D have a good relationship.**\n2. **D and F have a bad relationship.**  Therefore, A and F must have a bad relationship (transitive property of bad relationships).\n3. **A and E have a good relationship.**\n4. **A and B have a good relationship.**\n5. **A and G have a good relationship.**\n6. **C and H have a good relationship.**\n7. **C and F have a good relationship.**\n8. **E and H have a bad relationship.** Therefore, E and C must have a bad relationship (transitive property of bad relationships).\n\nNow let's determine the groups:\n\n*   **Group 1:** A, B, E, G (all have good relationships with A)\n*   **Group 2:** C, H, F (all have good relationships with C)\n\nSince A and F have a bad relationship, Group 1 and Group 2 are separate.\n\nSince E and C have a bad relationship, and A and E have a good relationship, A and C must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 29,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Final"
+    },
+    {
+      "sample_id": 0,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **C and H have a bad relationship.**\n2. **A and G have a good relationship.**\n3. **H and E have a good relationship.**\n4. **A and D have a good relationship.**\n5. **A and F have a good relationship.**\n6. **A and C have a good relationship.**\n7. **A and B have a good relationship.**\n8. **E and G have a bad relationship.**\n\nNow let's deduce the relationships:\n\n*   **Group 1 (A's group):** A has good relationships with B, C, D, F, and G. Since relationships are transitive, B, C, D, and F also have good relationships with each other. So, A, B, C, D, and F are in the same group.\n\n*   **H and E's relationship:** H has a good relationship with E.\n\n*   **E and G's relationship:** E and G have a bad relationship.\n\n*   **H and G's relationship:** Since H has a good relationship with E, and E has a bad relationship with G, H must have a bad relationship with G.\n\n*   **H and A's relationship:** A has a good relationship with G, and H has a bad relationship with G. Therefore, H and A must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 17,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships to determine if E and H have a good relationship.\n\n1. **I and H have a bad relationship.**\n2. **I and E have a good relationship.**\n3. **I and A have a good relationship.**\n4. **C and H have a good relationship.**\n5. **C and F have a good relationship.**\n6. **B and F have a bad relationship.**\n7. **B and E have a bad relationship.**\n8. **J and B have a good relationship.**\n9. **J and H have a bad relationship.**\n10. **J and G have a good relationship.**\n11. **C and D have a good relationship.**\n\nNow let's deduce:\n\n*   Since I and E have a good relationship, and I and A have a good relationship, E and A have a good relationship (transitivity).\n*   Since I and H have a bad relationship, and I and E have a good relationship, E and H must have a bad relationship (Rule 2).\n*   Since J and B have a good relationship, and B and F have a bad relationship, J and F must have a bad relationship.\n*   Since J and H have a bad relationship, and J and G have a good relationship, G and H must have a bad relationship.\n*   Since C and H have a good relationship, and I and H have a bad relationship, C and I must have a bad relationship.\n\nTherefore, E and H have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 11,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **D and E have a good relationship.**\n2. **D and H have a good relationship.**\n3. **B and H have a bad relationship.** (This is a direct statement)\n4. **A and B have a good relationship.**\n5. **C and E have a bad relationship.**\n6. **A and G have a good relationship.**\n7. **A and C have a good relationship.**\n8. **D and F have a good relationship.**\n\nNow let's deduce group memberships and relationships:\n\n*   **Group 1 (A, C, G):** A has a good relationship with C and G. Since relationships are transitive, C and G also have a good relationship. So, A, C, and G form a group.\n*   **Group 2 (D, E, F, H):** D has a good relationship with E, H, and F. Since relationships are transitive, E, H, and F also have good relationships with each other. So, D, E, F, and H form a group.\n*   **A and B have a good relationship.** Since A is in Group 1, B must also be in Group 1. However, this contradicts the fact that B and H have a bad relationship, and H is in Group 2.\n\nNow, let's consider the relationship between H and B. We are given that B and H have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 21,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **B has good relationships with:** D, E, G, and F.\n2. **H has good relationships with:** A and C.\n3. **C has a bad relationship with:** E.\n4. **E has a good relationship with:** B.\n\nNow let's deduce group memberships and relationships:\n\n*   **B, D, E, F, and G** all have good relationships with B. Since B has good relationships with D, E, F, and G, and relationships are transitive, D, E, F, and G all have good relationships with each other. Thus, B, D, E, F, and G form a group.\n*   **H and A** have a good relationship.\n*   **H and C** have a good relationship.\n*   Since C and E have a bad relationship, and E is in the group {B, D, E, F, G}, then C has a bad relationship with everyone in that group.\n*   Since H has a good relationship with C, and C has a bad relationship with everyone in the {B, D, E, F, G} group, then H has a bad relationship with everyone in the {B, D, E, F, G} group.\n*   Since H has a good relationship with A, and H has a bad relationship with B, then A and B must have a bad relationship.\n*   Since B has a good relationship with D, and A and B have a bad relationship, then A and D must have a bad relationship.\n\nTherefore, A and D do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 26,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step based on the given rules.\n\n1. **J and I have a good relationship.** (J-I: Good)\n2. **D and I have a bad relationship.** (D-I: Bad)\n3. **H and D have a good relationship.** (H-D: Good)\n4. **C and E have a good relationship.** (C-E: Good)\n5. **H and J have a bad relationship.** (H-J: Bad)\n6. **H and G have a good relationship.** (H-G: Good)\n7. **H and E have a bad relationship.** (H-E: Bad)\n8. **J and B have a good relationship.** (J-B: Good)\n9. **H and A have a good relationship.** (H-A: Good)\n10. **J and E have a bad relationship.** (J-E: Bad)\n11. **C and F have a good relationship.** (C-F: Good)\n12. **E and H have a bad relationship.** (E-H: Bad) - This is redundant with #7.\n\nThe question is: Do I and D have a good relationship?\n\nWe are given that D and I have a bad relationship (statement 2). Therefore, I and D do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 22,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **A and H have a good relationship.**\n2. **A and C have a good relationship.**  Since A and H have a good relationship, and A and C have a good relationship, then H and C have a good relationship (transitivity).\n3. **C and E have a bad relationship.**\n4. **A and G have a good relationship.** Since A and H have a good relationship, and A and G have a good relationship, then H and G have a good relationship (transitivity).\n5. **E and D have a good relationship.**\n6. **E and F have a good relationship.**\n7. **A and B have a good relationship.** Since A and H have a good relationship, and A and B have a good relationship, then H and B have a good relationship (transitivity).\n8. **D and G have a bad relationship.**\n\nNow let's determine the groups:\n\n*   **Group 1: A, B, C, H, G.**  A has good relationships with B, C, H, and G. B has a good relationship with A and H. C has a good relationship with A and H. H has good relationships with A, B, and G. G has good relationships with A and H.\n*   **Group 2: E, F, D.** E has good relationships with D and F. F has a good relationship with E. D has a good relationship with E.\n\nSince D and G have a bad relationship, and D is in Group 2, then everyone in Group 2 (E, F, D) has a bad relationship with everyone in Group 1 (A, B, C, H, G).\n\nTherefore, F has a bad relationship with B.\n\nFina"
+    },
+    {
+      "sample_id": 8,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships to determine if I and B have a good relationship.\n\n1. **C and I have a bad relationship.**\n2. **C and E have a good relationship.**\n3. **H and I have a bad relationship.**\n4. **I and D have a good relationship.**\n5. **A and B have a good relationship.**\n6. **A and F have a good relationship.**\n7. **H and C have a bad relationship.**\n8. **E and I have a bad relationship.**\n9. **F and I have a bad relationship.**\n10. **A and G have a good relationship.**\n11. **A and H have a good relationship.**\n\nNow, let's deduce the group memberships and relationships.\n\n*   **Group 1: A, B, F, G, H** - A has good relationships with B, F, G, and H. Since relationships are transitive, all these people have good relationships with each other.\n\n*   **I and D have a good relationship.** Let's see if D can join Group 1. A has a good relationship with H, and H has a bad relationship with I. Therefore, A and I have a bad relationship. Since A is in Group 1, I cannot be in Group 1.\n\n*   **C and E have a good relationship.** Let's see if C can join Group 1. H has a bad relationship with C. Therefore, C cannot be in Group 1.\n\nNow, let's analyze the relationship between I and B.\n\n*   A and B have a good relationship.\n*   A and H have a good relationship.\n*   H and I have a bad relationship.\n*   Therefore, B and I have a bad relationship (because A has a good relationship with both B and H, and H has a bad relationship with I).\n\nFina"
+    },
+    {
+      "sample_id": 9,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A and D have a good relationship.**\n2. **A and F have a good relationship.**\n3. **A and B have a good relationship.**\n4. **F and H have a bad relationship.**\n5. **B and E have a bad relationship.**\n6. **C and E have a good relationship.**\n7. **C and G have a good relationship.**\n8. **C and H have a good relationship.**\n\nNow let's deduce groups:\n\n*   **Group 1 (A, B, D, F):** A has good relationships with B, D, and F. B has a good relationship with A. D has a good relationship with A. F has a good relationship with A.  Since A has good relationships with B, D, and F, and relationships are transitive, B, D, and F also have good relationships with each other. So, A, B, D, and F are in the same group.\n\n*   **Group 2 (C, G, H):** C has good relationships with G and H. G has a good relationship with C. H has a good relationship with C. Therefore, C, G, and H are in the same group.\n\n*   **E is isolated:** E has a bad relationship with B.  E has a good relationship with C.\n\nNow let's consider the relationship between G and B.\n\n*   G is in Group 2 (C, G, H).\n*   B is in Group 1 (A, B, D, F).\n*   F and H have a bad relationship. Since H is in Group 2 and F is in Group 1, all members of Group 1 have a bad relationship with all members of Group 2.\n\nTherefore, B (from Group 1) has a bad relationship with G (from Group 2).\n\nFina"
+    },
+    {
+      "sample_id": 25,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **A's relationships:** A has good relationships with D, C, I, and E.\n2. **B's relationships:** B has good relationships with F, H, and G.\n3. **C's relationships:** C has a good relationship with A and a bad relationship with H.\n4. **H's relationships:** H has a good relationship with B and a bad relationship with C.\n5. **F's relationships:** F has a good relationship with B.\n6. **G's relationships:** G has a good relationship with B.\n7. **I's relationships:** I has a good relationship with A.\n8. **E's relationships:** E has a good relationship with A.\n\nNow let's determine the groups.\n\n*   **Group 1 (A, C, D, E, I):** A has good relationships with C, D, E, and I. Since relationships are transitive, C, D, E, and I all have good relationships with each other.\n*   **Group 2 (B, F, G, H):** B has good relationships with F, G, and H. Since relationships are transitive, F, G, and H all have good relationships with each other.\n\nNow, let's consider the relationship between C and H. C and H have a bad relationship. This means that everyone in Group 1 (A, C, D, E, I) has a bad relationship with everyone in Group 2 (B, F, G, H).\n\nTherefore, E has a bad relationship with G.\n\nFina"
+    },
+    {
+      "sample_id": 18,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **A's relationships:** A has good relationships with D, J, I, C, G, and E.\n2. **Transitivity:**\n   - Since A has a good relationship with D and D has a bad relationship with B, A and B must have a bad relationship.\n   - Since A has a good relationship with J, and A has a good relationship with I, J and I have a good relationship.\n   - Since A has a good relationship with C, and A has a good relationship with G, C and G have a good relationship.\n   - Since A has a good relationship with E, and A has a good relationship with G, E and G have a good relationship.\n3. **Groups:**\n   - A, D, J, I, C, G, and E form a group because they all have good relationships with A, and the transitive properties hold.\n   - B and F form a group because B has a good relationship with F.\n   - H is isolated so far.\n4. **B's relationships:** B has good relationships with F and H, and a bad relationship with D.\n5. **C's relationships:** C has a good relationship with A and a bad relationship with H.\n6. **D's relationships:** D has a good relationship with A and a bad relationship with B.\n7. **E's relationships:** E has a good relationship with A.\n8. **F's relationships:** F has a good relationship with B.\n9. **G's relationships:** G has a good relationship with A.\n10. **H's relationships:** H has a good relationship with B and a bad relationship with C.\n11. **I's relationships:** I has a good relationship with A.\n12. **J's relationships:** J has a good relationship with A.\n\nSince A has a good relationship with E and A has a good relationship with G, and relationships are transitive, E and G have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 2,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A's relationships:** A has good relationships with B, E, H, and F.\n2. **B's relationships:** B has a good relationship with A.\n3. **C's relationships:** C has good relationships with G and D. C has a bad relationship with E.\n4. **E's relationships:** E has a good relationship with A. E has a bad relationship with C and G.\n5. **G's relationships:** G has a good relationship with C and a bad relationship with E.\n6. **D's relationships:** D has a good relationship with C.\n7. **F's relationships:** F has a good relationship with A.\n8. **H's relationships:** H has a good relationship with A.\n\nNow let's determine the groups:\n\n* **Group 1 (A-B-F-H):** A has good relationships with B, F, and H. B has a good relationship with A. F has a good relationship with A. H has a good relationship with A.  Since A has good relationships with B, F, and H, and relationships are transitive, B, F, and H all have good relationships with each other. Therefore, A, B, F, and H are in the same group.\n\n* **Group 2 (C-D-G):** C has good relationships with D and G. D has a good relationship with C. G has a good relationship with C. Therefore, C, D, and G are in the same group.\n\n* **E is isolated:** E has a good relationship only with A. Since A is in Group 1, and E has bad relationships with C and G (who are in Group 2), E is not part of Group 1 or Group 2.\n\nNow, let's check the relationship between F and B.  Since A has a good relationship with both F and B, and A, B, and F are in the same group, F and B must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 4,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step to determine if E and D have a good relationship.\n\n1. **E and C have a bad relationship.**\n2. **B and E have a good relationship.**\n3. **F and G have a bad relationship.**\n4. **A and D have a good relationship.**\n5. **B and J have a good relationship.**\n6. **B and F have a good relationship.**\n7. **C and I have a good relationship.**\n8. **I and J have a bad relationship.**\n9. **B and H have a good relationship.**\n10. **A and E have a bad relationship.**\n11. **A and C have a bad relationship.**\n12. **A and G have a good relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1: B, F, H, J** (All have good relationships with B, and each other through B)\n*   **Relationship between Group 1 and E:** B has a good relationship with E, but E has a bad relationship with C. Since C and I have a good relationship, and I and J have a bad relationship, this implies that Group 1 (B, F, H, J) has a bad relationship with I.\n*   **Relationship between Group 1 and C:** B has a good relationship with E, and E has a bad relationship with C. Therefore, Group 1 has a bad relationship with C.\n*   **Relationship between A and E:** A and E have a bad relationship.\n*   **Relationship between A and C:** A and C have a bad relationship.\n*   **Relationship between A and G:** A and G have a good relationship.\n*   **Relationship between E and C:** E and C have a bad relationship.\n*   **Relationship between C and I:** C and I have a good relationship.\n*   **Relationship between I and J:** I and J have a bad relationship.\n\nNow, let's see if we can determine the relationship between E and D.\n\n*   A and D have a good relationship.\n*   A and E have a bad relationship.\n*   Since A has a good relationship with D and a bad relationship with E, then D and E must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 14,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **A and E have a good relationship.**\n2. **C and F have a bad relationship.**\n3. **A and H have a good relationship.**\n4. **A and B have a good relationship.**\n5. **F and D have a good relationship.**\n6. **E and F have a bad relationship.**\n7. **A and G have a good relationship.**\n8. **A and C have a good relationship.**\n\nNow let's deduce the relationships:\n\n*   **Group 1: A, B, C, G, H, E.**  Since A has good relationships with B, C, G, H, and E, and relationships are transitive, all these people have good relationships with each other.\n*   **F and D have a good relationship.**\n*   **C and F have a bad relationship.** This is given.\n*   **E and F have a bad relationship.** This is given.\n\nSince A has a good relationship with C, and A has a good relationship with E, then C and E *should* have a good relationship due to transitivity. However, we know that C and F have a bad relationship, and E and F have a bad relationship.\n\nLet's consider the implications of C and F having a bad relationship. Since A has a good relationship with C, and A has a good relationship with everyone in Group 1 (A, B, C, G, H, E), then B, G, H, and E must all have a bad relationship with F.\n\nSimilarly, since E and F have a bad relationship, and A has a good relationship with E, then A must have a bad relationship with F. This contradicts the fact that A has a good relationship with C, and C has a bad relationship with F.\n\nHowever, we are given that C and F have a bad relationship.  Since A has a good relationship with C and A has a good relationship with E, then C and E *should* have a good relationship. But E and F have a bad relationship, and C and F have a bad relationship. This means that C and E cannot have a good relationship.\n\nTherefore, C and E do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 13,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **A's relationships:** A has good relationships with D, H, C, and G.\n2. **D's relationships:** D has a good relationship with A and a bad relationship with F.\n3. **H's relationships:** H has a good relationship with A.\n4. **C's relationships:** C has a good relationship with A and a bad relationship with E.\n5. **G's relationships:** G has a good relationship with A.\n6. **B's relationships:** B has good relationships with F, I, and E.\n7. **F's relationships:** F has a good relationship with B and a bad relationship with D.\n8. **I's relationships:** I has a good relationship with B.\n9. **E's relationships:** E has a good relationship with B and a bad relationship with C.\n\nNow let's determine the groups:\n\n*   **Group 1 (A, D, H, G, C):** A has good relationships with D, H, C, and G. D has a good relationship with A. H has a good relationship with A. G has a good relationship with A. C has a good relationship with A.  Since A has good relationships with D, H, G, and C, and relationships are transitive, D, H, G, and C all have good relationships with each other. Therefore, A, D, H, G, and C form a group.\n\n*   **Group 2 (B, F, I, E):** B has good relationships with F, I, and E. F has a good relationship with B. I has a good relationship with B. E has a good relationship with B. Therefore, B, F, I, and E form a group.\n\n*   **Separation of Groups:** D and F have a bad relationship. Since D is in Group 1 and F is in Group 2, this means everyone in Group 1 has a bad relationship with everyone in Group 2.\n\nNow, let's check the relationship between G and B. G is in Group 1, and B is in Group 2. Since Group 1 and Group 2 are completely separate, G and B must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 24,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships and determine the groups.\n\n1. **A's relationships:**\n   - A-B: Good\n   - A-D: Bad\n   - A-E: Bad\n   - A-G: Bad\n\n2. **C's relationships:**\n   - C-F: Good\n   - C-H: Good\n   - C-E: Good\n\n3. **D's relationships:**\n   - D-A: Bad\n   - D-E: Bad\n   - D-G: Good\n\n4. **E's relationships:**\n   - E-A: Bad\n   - E-C: Good\n   - E-D: Bad\n\n5. **F's relationships:**\n   - F-C: Good\n\n6. **G's relationships:**\n   - G-A: Bad\n   - G-D: Good\n   - G-H: Bad\n\n7. **H's relationships:**\n   - H-C: Good\n   - H-G: Bad\n\nNow let's deduce the groups:\n\n*   **Group 1 (A, B):** A-B is good.\n*   **Group 2 (C, E, F, H):** C-F, C-H, C-E are good.  Since C is in this group, E, F, and H are also in this group.\n*   **Group 3 (D, G):** D-G is good.\n\nNow let's check for conflicts and transitive relationships:\n\n*   A has bad relationships with D, E, and G. This means Group 1 (A, B) has bad relationships with D, E, and G.\n*   C has a good relationship with E and H. This means Group 2 (C, E, F, H) has good relationships with each other.\n*   D has a bad relationship with A and E. This means Group 3 (D, G) has bad relationships with A and E.\n*   G has a bad relationship with A and H. This means Group 3 (D, G) has bad relationships with A and H.\n\nThe question asks: Do F and C have a good relationship?\n\nAccording to the given information, C and F have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 42,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Final"
+    },
+    {
+      "sample_id": 7,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **D and F have a good relationship.**\n2. **D and E have a good relationship.**\n3. **H and C have a good relationship.**\n4. **H and B have a good relationship.**\n5. **C and G have a bad relationship.**\n6. **E and H have a bad relationship.**\n7. **H and A have a good relationship.**\n8. **D and J have a good relationship.**\n9. **D and G have a good relationship.**\n10. **D and I have a good relationship.**\n\nNow let's deduce the relationships:\n\n*   Since D and F have a good relationship, and D and E have a good relationship, and relationships are transitive, F and E *should* have a good relationship. However, we need to check for conflicting information.\n\n*   We know E and H have a bad relationship.\n*   We know H and C have a good relationship.\n*   We know C and G have a bad relationship.\n\nLet's see if we can build groups:\n\n*   **Group 1 (potentially):** D, F, E, J, G, I.  All have good relationships with D.\n*   **Group 2 (potentially):** H, B, A, C. All have good relationships with H.\n\nNow let's check for conflicts.\n\n*   E and H have a bad relationship. This means Group 1 (D, F, E, J, G, I) and Group 2 (H, B, A, C) are separate groups.\n*   Since C and G have a bad relationship, and C is in Group 2, and G is in Group 1, this confirms the groups are separate.\n*   Since D and E have a good relationship, and D is in Group 1, and E is in Group 1, they are in the same group.\n*   Since D and F have a good relationship, and D is in Group 1, and F is in Group 1, they are in the same group.\n\nSince D, E, and F are all in the same group, and relationships are transitive within a group, if D and E have a good relationship, and D and F have a good relationship, then E and F must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 5,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, building groups and identifying bad relationships.\n\n1. **A and H have a good relationship.**\n2. **A and C have a good relationship.**  Since A has a good relationship with both C and H, and relationships are transitive, C and H have a good relationship.\n3. **A and B have a good relationship.** Since A has a good relationship with B, C, and H, B, C, and H have good relationships with each other. Thus, A, B, C, and H form a group.\n4. **D and E have a bad relationship.**\n5. **C and E have a bad relationship.**\n6. **A and D have a bad relationship.** Since A is in the group {A, B, C, H}, and A has a bad relationship with D, then B, C, and H all have bad relationships with D.\n7. **C and D have a bad relationship.** This is consistent with the previous deduction.\n8. **D and G have a good relationship.** Since D has bad relationships with A, B, C, and H, and a good relationship with G, then A, B, C, and H all have bad relationships with G.\n9. **A and F have a good relationship.** Since A is in the group {A, B, C, H}, then B, C, and H all have good relationships with F.\n10. **E and I have a good relationship.**\n\nNow let's consider the groups. We have:\n\n*   Group 1: {A, B, C, H} - all have good relationships with each other.\n*   Since D has a bad relationship with A, B, C, and H, D is not in Group 1.\n*   Since E has a bad relationship with D, and D has bad relationships with A, B, C, and H, E is not in Group 1.\n*   Since G has a good relationship with D, and D has bad relationships with A, B, C, and H, G is not in Group 1.\n*   Since F has a good relationship with A, F is not in Group 1.\n*   Since I has a good relationship with E, and E has a bad relationship with D, and D has bad relationships with A, B, C, and H, I is not in Group 1.\n\nNow let's analyze the relationships involving B and H. We know B and H are in Group 1, so they have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 10,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **B's relationships:** B has good relationships with D, I, E, and C.\n2. **Transitivity from B:**\n   - Since B has a good relationship with D and D has a good relationship with H, then B has a good relationship with H.\n   - Since B has a good relationship with C, and C has a good relationship with H, then B has a good relationship with H.\n   - Since B has a good relationship with I, and B has a good relationship with C, then I has a good relationship with C.\n3. **A's relationships:** A has a bad relationship with C and F, but a good relationship with G.\n4. **H's relationships:** H has a bad relationship with D and a good relationship with F.\n5. **C's relationships:** C has a good relationship with B and a bad relationship with H.\n6. **Groups:**\n   - Let's consider the group containing B.  Since B has good relationships with D, I, E, and C, these people are all in the same group as B. So, the group {B, D, I, E, C} exists.\n   - A has a bad relationship with C. Since C is in the group {B, D, I, E, C}, A has a bad relationship with everyone in that group.\n   - A has a good relationship with G.  Since A has a bad relationship with B (because B is in the group {B, D, I, E, C}), G and everyone in the group {B, D, I, E, C} must have a bad relationship. Thus, G is in a separate group from {B, D, I, E, C}.\n   - A has a bad relationship with F. Since A has a bad relationship with everyone in the group {B, D, I, E, C}, F must have a bad relationship with everyone in the group {B, D, I, E, C}.\n   - H has a bad relationship with D. Since D is in the group {B, D, I, E, C}, H has a bad relationship with everyone in that group.\n   - H has a good relationship with F. Since H has a bad relationship with B, F and B must have a bad relationship.\n   - C has a bad relationship with H. This is consistent with H having a bad relationship with everyone in the group {B, D, I, E, C}.\n\nNow, let's determine the relationship between D and F. We know that F has a bad relationship with everyone in the group {B, D, I, E, C}. Since D is in that group, D and F have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 27,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **A and H have a bad relationship.**\n2. **H and F have a good relationship.**\n3. **A and G have a bad relationship.**\n4. **A and D have a good relationship.**\n5. **C and G have a good relationship.**\n6. **H and E have a good relationship.**\n7. **C and H have a bad relationship.**\n8. **A and C have a bad relationship.**\n9. **C and B have a good relationship.**\n10. **B and E have a bad relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1: A and D** (A and D have a good relationship)\n*   **Group 2: C and G** (C and G have a good relationship)\n*   **Group 3: H and F and E** (H and F have a good relationship, H and E have a good relationship)\n*   **Group 4: C and B** (C and B have a good relationship)\n\nSince A and H have a bad relationship, and A is in Group 1, H is not in Group 1. Since H is in Group 3, Group 1 and Group 3 are separate.\n\nSince A and C have a bad relationship, and A is in Group 1, C is not in Group 1. Since C is in Group 2 and Group 4, Group 1, Group 2, and Group 4 are separate.\n\nSince C and H have a bad relationship, and C is in Group 2 and Group 4, H is not in Group 2 or Group 4. Since H is in Group 3, Group 2, Group 3, and Group 4 are separate.\n\nSince B and E have a bad relationship, and B is in Group 4, E is not in Group 4. Since E is in Group 3, Group 3 and Group 4 are separate.\n\nNow let's consider the question: Do H and G have a good relationship?\n\nWe know H is in Group 3 and G is in Group 2. Since Group 2 and Group 3 are separate, any relationship between them must be bad.\n\nTherefore, H and G have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 35,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A and D have a good relationship.**\n2. **A and F have a good relationship.**\n3. **A and C have a good relationship.**\n4. **A and H have a good relationship.**\n5. **A and G have a good relationship.**\n6. **B and H have a bad relationship.**\n7. **C and E have a bad relationship.**\n8. **E and B have a good relationship.**\n\nNow let's deduce the group memberships:\n\n*   **Group 1: A, C, D, F, G, H** - Since A has good relationships with C, D, F, G, and H, and relationships are transitive, all these people are in the same group.\n*   **Group 2: B, E** - E and B have a good relationship.\n\nNow let's consider the relationship between F and H. F is in Group 1, and H is in Group 1. Since all members of a group have good relationships with each other, F and H must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 32,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step, applying the given rules.\n\n1. **H and C have a bad relationship.**\n2. **H and A have a good relationship.**\n3. **B and E have a good relationship.**\n4. **B and I have a good relationship.**\n5. **D and H have a bad relationship.**\n6. **B and G have a good relationship.**\n7. **B and D have a good relationship.**\n8. **B and C have a good relationship.**\n9. **H and F have a good relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1: B, E, I, G, D, C** - Since B has good relationships with E, I, G, D, and C, and relationships are transitive, these people are all in the same group.\n*   **Group 2: H, A, F** - H has good relationships with A and F.\n\nSince H and C have a bad relationship, and C is in Group 1, and H is in Group 2, all members of Group 1 have a bad relationship with all members of Group 2.\n\nWe want to know if D and I have a good relationship. Both D and I are in Group 1. Since all members of a group have good relationships with each other, D and I have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 19,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules:\n\n1. **E and A have a good relationship.**\n2. **J and C have a good relationship.**\n3. **E and J have a bad relationship.**\n4. **H and I have a good relationship.**\n5. **H and G have a good relationship.**\n6. **E and H have a bad relationship.**\n7. **H and J have a bad relationship.**\n8. **J and F have a good relationship.**\n9. **H and B have a good relationship.**\n10. **I and J have a bad relationship.**\n11. **E and D have a good relationship.**\n12. **D and J have a bad relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: {H, G, I, B}**: H has good relationships with G, I, and B. Since transitivity applies, G, I, and B all have good relationships with each other.\n*   **E and H have a bad relationship.** This means everyone in Group 1 (H, G, I, B) has a bad relationship with E.\n*   **E and A have a good relationship.** This means A does *not* belong to the same group as E.\n*   **E and J have a bad relationship.** This means everyone in the group containing J has a bad relationship with E.\n*   **H and J have a bad relationship.** This confirms that J is not in the same group as H, G, I, or B.\n*   **I and J have a bad relationship.** This reinforces that I and J are not in the same group.\n*   **D and J have a bad relationship.** This means D is not in the same group as J.\n*   **J and C have a good relationship.**\n*   **J and F have a good relationship.**\n*   **E and D have a good relationship.**\n\nSince E and H have a bad relationship, and H is in {H, G, I, B}, then E has a bad relationship with G, I, and B.\n\nSince H and J have a bad relationship, and H is in {H, G, I, B}, then J has a bad relationship with G, I, and B.\n\nSince J and C have a good relationship, and J and F have a good relationship, and J has a bad relationship with H, G, I, B, then C and F are not in the same group as H, G, I, B.\n\nSince E and D have a good relationship, and D and J have a bad relationship, then E and J have a bad relationship.\n\nWe know that H, G, I, and B are in one group.  E is separate. J, C, and F are separate. D is separate.\n\nWe want to know if G and J have a good relationship. We know that H and G have a good relationship, and H and J have a bad relationship. Since H is in a group with G, and J is not in that group, and H and J have a bad relationship, then G and J must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 33,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A's relationships:** A has good relationships with D, E, C, and H.\n2. **D's relationships:** D has a good relationship with A and a bad relationship with F.\n3. **E's relationships:** E has a good relationship with A.\n4. **C's relationships:** C has a good relationship with A and a bad relationship with I.\n5. **H's relationships:** H has a good relationship with A.\n6. **B's relationships:** B has good relationships with G and F, and a good relationship with I.\n7. **G's relationships:** G has a good relationship with B.\n8. **F's relationships:** F has a good relationship with B and a bad relationship with D.\n9. **I's relationships:** I has a good relationship with B and a bad relationship with C.\n\nNow let's determine the groups:\n\n* **Group 1 (A, D, E, C, H):**  A has good relationships with D, E, C, and H.  Since relationships are transitive, D, E, C, and H all have good relationships with each other.\n* **Group 2 (B, G, F, I):** B has good relationships with G, F, and I. Since relationships are transitive, G, F, and I all have good relationships with each other.\n\nNow let's check the relationship between I and G.  I is in Group 2, and G is in Group 2.  Since they are in the same group, they have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 51,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **C and E have a good relationship.**\n2. **F and H have a bad relationship.**\n3. **C and B have a good relationship.**\n4. **A and G have a good relationship.**\n5. **C and F have a good relationship.**\n6. **A and H have a good relationship.**\n7. **H and E have a bad relationship.**\n8. **A and D have a good relationship.**\n9. **A and I have a good relationship.**\n\nWe are asked if H and A have a good relationship.  The information directly states \"A and H have a good relationship.\"\n\nFinal"
+    },
+    {
+      "sample_id": 31,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **B and J have a good relationship.**\n2. **H and D have a good relationship.**\n3. **B and G have a good relationship.**\n4. **B and I have a good relationship.**\n5. **B and E have a good relationship.**\n6. **A and B have a bad relationship.**\n7. **C and E have a bad relationship.**\n8. **H and A have a good relationship.**\n9. **B and F have a good relationship.**\n10. **H and C have a good relationship.**\n\nNow, let's deduce the relationships:\n\n*   **Group 1 (B's group):** Since B has good relationships with J, G, I, E, and F, and relationships are transitive, J, G, I, E, and F all have good relationships with each other. Therefore, {B, J, G, I, E, F} form a group.\n*   **A and B have a bad relationship.** This means A and everyone in B's group (J, G, I, E, F) have bad relationships.\n*   **H and A have a good relationship.**\n*   **H and C have a good relationship.**\n*   **C and E have a bad relationship.** Since A has a bad relationship with E (because E is in B's group), and H has a good relationship with A, then H must have a bad relationship with E. This contradicts the fact that C and E have a bad relationship. However, we know that H and C have a good relationship. Since C and E have a bad relationship, and H and C have a good relationship, then H and E must have a bad relationship.\n*   **Group 2 (H's group):** H has a good relationship with A and D. Since H and C have a good relationship, C is also in H's group. Therefore, {H, A, C, D} form a group.\n*   **A and I:** A has a bad relationship with B. B has a good relationship with I. Therefore, A and I must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 36,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **C is central:** We have many relationships involving C: C-F (good), C-I (good), C-D (good), C-E (good), C-H (good).\n\n2. **A's relationships:** A-G (good), A-B (good), A-C (bad).\n\n3. **G's relationships:** G-H (bad).\n\n4. **Transitive relationships with C:**\n   - Since C-F (good) and C-I (good), then F-I (good).\n   - Since C-D (good) and C-E (good), then D-E (good).\n   - Since C-H (good), and C-I (good), then H-I (good).\n\n5. **Group formation:**\n   - A-B (good), so A and B are in the same group.\n   - A-G (good), so A and G are in the same group. However, G-H (bad), so A and H cannot be in the same group.\n   - C-F (good), C-I (good), C-D (good), C-E (good), C-H (good), so C, F, I, D, E, and H are in the same group.\n\n6. **Relationship between A and the C group:** A-C (bad). This means everyone in the A group (A, B, G) has a bad relationship with everyone in the C group (C, F, I, D, E, H).\n\n7. **Now let's consider D and H:** Both D and H are in the C group. Since people in the same group have good relationships with each other (directly or through transitivity), D and H must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 28,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, building up groups and identifying bad relationships.\n\n1. **B, D, and F have a good relationship:** B-F (good), B-D (good).  Since relationships are transitive, B-D-F is a good chain.\n\n2. **H and A have a good relationship:** H-A (good).\n\n3. **H and G have a good relationship:** H-G (good).\n\n4. **H and E have a bad relationship:** H-E (bad).\n\n5. **H and C have a bad relationship:** H-C (bad).\n\n6. **C and H have a bad relationship:** This is the same as #5.\n\n7. **C and I have a good relationship:** C-I (good).\n\n8. **B and E have a good relationship:** B-E (good).\n\n9. **E and C have a bad relationship:** E-C (bad).\n\nNow let's deduce groups and bad relationships:\n\n*   **Group 1: B, D, F, G, H, A:**  B-F (good), F-G (bad).  Since H-G (good) and H-A (good), and B-F (good), we have B-A (good) and D-A (good) and D-G (good) and F-A (good).  However, F-G is bad. This means that the group B, D, F, G, H, A is not a single group.\n\n*   **B, D, F:** These have a good relationship with each other.\n\n*   **H, A, G:** These have a good relationship with each other.\n\n*   **C, I:** These have a good relationship with each other.\n\n*   **H and E have a bad relationship.** Since H is in a group with A and G, and H-E is bad, then A-E is bad and G-E is bad.\n\n*   **E and C have a bad relationship.** Since C is in a group with I, and E-C is bad, then E-I is bad.\n\n*   **C and H have a bad relationship.** Since H is in a group with A and G, and C-H is bad, then C-A is bad and C-G is bad.\n\nNow let's see if we can determine the relationship between A and I.\n\nWe know A-H (good) and H-G (good), so A-G (good).\nWe know C-I (good).\nWe know H-C (bad), so A-C (bad) since A-H (good) and H-C (bad).\nWe know C-I (good).\nSince A-C (bad) and C-I (good), then A-I must be bad.\n\nFina"
+    },
+    {
+      "sample_id": 50,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **C and H have a bad relationship.**\n2. **H and B have a good relationship.**\n3. **H and I have a good relationship.**\n4. **C and A have a good relationship.**\n5. **H and E have a bad relationship.**\n6. **E and F have a good relationship.**\n7. **F and H have a bad relationship.**\n8. **H and G have a good relationship.**\n9. **C and D have a good relationship.**\n10. **A and G have a bad relationship.**\n11. **C and E have a bad relationship.**\n\nWe are asked if H and F have a good relationship. We are given that F and H have a bad relationship (statement 7).\n\nFina"
+    },
+    {
+      "sample_id": 39,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **I and C have a bad relationship.**\n2. **C and H have a bad relationship.**\n3. **H and D have a good relationship.**\n4. **I and H have a bad relationship.**\n5. **I and A have a good relationship.**\n6. **A and D have a bad relationship.**\n7. **B and F have a good relationship.**\n8. **B and C have a good relationship.**\n9. **B and G have a good relationship.**\n10. **B and E have a good relationship.**\n11. **B and D have a bad relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1: B, F, C, G, E:**  B has good relationships with F, C, G, and E. Since relationships are transitive, F, C, G, and E all have good relationships with each other.\n*   **I and A have a good relationship.**\n*   **A and D have a bad relationship.**  Since I has a good relationship with A, and A has a bad relationship with D, I must have a bad relationship with D (transitive bad relationship).\n*   **I and C have a bad relationship.**\n*   **I and H have a bad relationship.**\n*   **C and H have a bad relationship.**\n\nNow, let's consider the relationship between G and I.  G is in Group 1 (B, F, C, G, E).  B has a good relationship with G.  B has a good relationship with C.  I has a bad relationship with C.  Therefore, I and G must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 53,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step based on the given rules.\n\n1. **A and E have a good relationship.**\n2. **A and I have a good relationship.**\n3. **C and F have a good relationship.**\n4. **C and G have a good relationship.**\n5. **C and H have a good relationship.**\n6. **C and J have a good relationship.**\n7. **A and D have a good relationship.**\n8. **A and B have a good relationship.**\n9. **D and J have a bad relationship.**\n10. **E and C have a bad relationship.**\n\nThe question asks if C and H have a good relationship. According to statement 5, C and H *do* have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 61,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Fina"
+    },
+    {
+      "sample_id": 41,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **J and A have a good relationship.**\n2. **J and C have a good relationship.**  Since J and A have a good relationship, and J and C have a good relationship, and relationships are transitive, A and C have a good relationship.\n3. **B and H have a good relationship.**\n4. **B and G have a good relationship.**\n5. **B and F have a good relationship.**\n6. **B and I have a good relationship.**\n7. **B and D have a good relationship.**  This means B has good relationships with H, G, F, I, and D.\n8. **F and J have a bad relationship.**\n9. **C and H have a bad relationship.**\n\nNow let's determine the groups:\n\n*   **Group 1 (B's group):** B has good relationships with H, G, F, I, and D.  Since B has a good relationship with H, and H has a bad relationship with C, then B and C must have a bad relationship. Since B has a good relationship with F, and F has a bad relationship with J, then B and J must have a bad relationship.\n*   **Group 2 (J's group):** J has good relationships with A, C, and E. Since J and A have a good relationship, and J and C have a good relationship, then A and C have a good relationship. Since J and E have a good relationship, A, C, and E are in the same group.\n*   **Group 3 (C and H's group):** C and H have a bad relationship.\n\nNow let's see if E and C have a good relationship. We know J and E have a good relationship, and J and C have a good relationship. Therefore, E and C have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 45,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships to determine if C and H have a good relationship.\n\n1. **C and F: Good**\n2. **B and D: Good**\n3. **C and A: Good**\n4. **B and H: Good**\n5. **C and E: Bad**\n6. **A and G: Bad**\n7. **B and E: Good**\n8. **B and I: Good**\n9. **B and G: Good**\n\nNow let's trace the relationships:\n\n*   **Group 1 (B-centric):** B has good relationships with D, H, E, I, and G.  Therefore, D, H, E, I, and G all have good relationships with each other (through transitivity). So, we have a group consisting of B, D, H, E, I, and G.\n\n*   **Group 2 (C-centric):** C has a good relationship with F and A.  Since A has a bad relationship with G (from rule 6), C must also have a bad relationship with G.\n\n*   **C and E:** We know C and E have a bad relationship. Since E is in Group 1, this means C is *not* in Group 1.\n\n*   **C and H:** H is in Group 1. Since C and E have a bad relationship, and E is in Group 1, C must have a bad relationship with everyone in Group 1. Therefore, C and H have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 38,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step to determine if F and I have a good relationship.\n\n1. **A and I have a bad relationship.**\n2. **C and I have a bad relationship.**\n3. **I and G have a good relationship.**\n4. **I and D have a good relationship.**\n5. **H and E have a good relationship.**\n6. **H and C have a good relationship.**\n7. **E and G have a bad relationship.**\n8. **A and F have a good relationship.**\n9. **H and B have a good relationship.**\n10. **A and C have a bad relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1: H, E, C, B:** H has a good relationship with E, C, and B. E and C have a good relationship (through H). C and B have a good relationship (through H). Therefore, H, E, C, and B are in the same group.\n\n*   **A and C have a bad relationship.** Since H, E, C, and B are in the same group, and A has a bad relationship with C, A must have a bad relationship with H, E, B, and C.\n\n*   **A and F have a good relationship.**\n\n*   **A and I have a bad relationship.**\n\n*   **I and G have a good relationship.**\n\n*   **I and D have a good relationship.**\n\n*   **E and G have a bad relationship.** Since E is in Group 1, and E has a bad relationship with G, everyone in Group 1 (H, E, C, B) has a bad relationship with G.\n\n*   **C and I have a bad relationship.** Since C is in Group 1, and C has a bad relationship with I, everyone in Group 1 (H, E, C, B) has a bad relationship with I.\n\nNow let's consider F and I. A and F have a good relationship. A and I have a bad relationship. Therefore, F and I must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 3,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, building groups and identifying bad relationships.\n\n1. **A and D: Bad**\n2. **A and E: Good**\n3. **C and B: Good**\n4. **E and H: Bad**\n5. **A and C: Bad**\n6. **A and F: Good**\n7. **E and C: Bad**\n8. **A and G: Good**\n9. **C and H: Bad**\n10. **H and D: Good**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: A, E, F, G:** A has good relationships with E, F, and G. Since relationships are transitive, E, F, and G all have good relationships with each other.\n*   **A and C: Bad.** This means that C is not in Group 1.\n*   **C and B: Good.** This means B is potentially in a group with C.\n*   **E and C: Bad.** Since E is in Group 1, and E has a bad relationship with C, C cannot be in Group 1.\n*   **C and H: Bad.** This means H is not in Group 1.\n*   **H and D: Good.** This means D is potentially in a group with H.\n*   **A and D: Bad.** Since A is in Group 1, and A has a bad relationship with D, D cannot be in Group 1.\n\nNow let's consider Group 2: C and B. Since C and B have a good relationship, they could form a group. However, C has bad relationships with A, E, and H. B has a good relationship with C, but we don't know about its relationship with A, E, F, G, or H.\n\nLet's consider Group 3: H and D. Since H and D have a good relationship, they could form a group. However, H has bad relationships with A and C. D has a bad relationship with A.\n\nSince A and D have a bad relationship, and A is in Group 1, D cannot be in Group 1. Since A and C have a bad relationship, C cannot be in Group 1. Since E and H have a bad relationship, H cannot be in Group 1. Since C and H have a bad relationship, H cannot be in Group 1.\n\nNow let's analyze the relationships involving G. G is in Group 1 (A, E, F, G).\n\nWe need to determine if G and H have a good relationship. We know that E and H have a bad relationship. Since A and E have a good relationship, and A and G have a good relationship, E and G should have a good relationship. However, E and H have a bad relationship. This means that G and H must have a bad relationship.\n\nSince A and D have a bad relationship, and A and G have a good relationship, D and G must have a bad relationship.\n\nSince A and D have a bad relationship, and A and E have a good relationship, D and E must have a bad relationship.\n\nSince A and D have a bad relationship, and A and F have a good relationship, D and F must have a bad relationship.\n\nSince A and D have a bad relationship, and A and G have a good relationship, D and G must have a bad relationship.\n\nSince A and D have a bad relationship, and A and E have a good relationship, D and E must have a bad relationship.\n\nSince A and D have a bad relationship, and A and F have a good relationship, D and F must have a bad relationship.\n\nSince A and D have a bad relationship, and A and G have a good relationship, D and G must have a bad relationship.\n\nSince E and H have a bad relationship, and A and E have a good relationship, A and H must have a bad relationship.\n\nSince C and H have a bad relationship, and A and C have a bad relationship, A and H must have a bad relationship.\n\nSince E and H have a bad relationship, and E and C have a bad relationship, C and H must have a bad relationship.\n\nSince E and H have a bad relationship, and E and G have a good relationship, G and H must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 43,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **J and E have a good relationship, and E and G have a bad relationship.** Therefore, J and G have a bad relationship.\n\n2. **J and H have a bad relationship.**\n\n3. **H and G have a good relationship.** Therefore, J and G have a bad relationship (from rule 2).\n\n4. **I and J have a bad relationship.**\n\n5. **C and I have a good relationship.** Therefore, C and J have a bad relationship (from rule 2).\n\n6. **J and B have a good relationship.**\n\n7. **C and F have a good relationship.**\n\n8. **C and A have a good relationship.**\n\n9. **C and H have a bad relationship.**\n\n10. **I and H have a bad relationship.**\n\nNow let's determine the groups.\n\n*   **Group 1: {J, B, D}**: J has a good relationship with B and D. Since B and D have a good relationship with J, they are in the same group.\n\n*   **Group 2: {C, A, F}**: C has a good relationship with A and F. Since A and F have a good relationship with C, they are in the same group.\n\n*   **Group 3: {H, G}**: H and G have a good relationship.\n\n*   **Group 4: {I}**: I doesn't have a good relationship with anyone else.\n\nNow let's check the relationships between groups.\n\n*   J (Group 1) and C (Group 2) have a bad relationship. Therefore, everyone in Group 1 has a bad relationship with everyone in Group 2.  So, B and C have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 40,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A and H have a good relationship.**\n2. **C and E have a good relationship.**\n3. **A and F have a good relationship.**\n4. **C and D have a good relationship.**\n5. **A and G have a good relationship.**\n6. **H and E have a bad relationship.**\n7. **A and B have a good relationship.**\n8. **A and D have a bad relationship.**\n\nNow let's deduce the relationships:\n\n*   **Group 1 (A-related):** A has good relationships with B, F, G, and H. Since relationships are transitive:\n    *   B has a good relationship with F, G, and H.\n    *   F has a good relationship with G and H.\n    *   G has a good relationship with F and H.\n    *   H has a good relationship with F and G.\n    *   Therefore, B, F, G, and H all have good relationships with each other. So, {A, B, F, G, H} form a group.\n\n*   **Group 2 (C-related):** C has a good relationship with D and E. Since relationships are transitive:\n    *   D has a good relationship with E.\n    *   E has a good relationship with D.\n    *   Therefore, {C, D, E} form a group.\n\n*   **A and D have a bad relationship.** Since A is in Group 1 (A, B, F, G, H) and D is in Group 2 (C, D, E), and A and D have a bad relationship, everyone in Group 1 has a bad relationship with everyone in Group 2.\n\n*   **H and E have a bad relationship.** This is consistent with the fact that H is in Group 1 and E is in Group 2.\n\nNow, let's check if G and F have a good relationship.  We know that A has a good relationship with both G and F, and A, F, and G are all in the same group. Therefore, F and G must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 44,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **C and F have a good relationship.**\n2. **E and C have a bad relationship.**\n3. **C and G have a good relationship.**\n4. **E and B have a good relationship.**\n5. **C and H have a good relationship.**\n6. **C and D have a good relationship.**\n7. **E and A have a good relationship.**\n8. **A and C have a bad relationship.**\n9. **C and I have a good relationship.**\n\nNow let's deduce the relationships:\n\n*   **Group 1 (C-centric):** Since C has good relationships with F, G, H, D, and I, and groups are defined by everyone having good relationships with each other, we need to see if these people are all connected through good relationships.\n*   **A and C have a bad relationship.** This means A is not in the same group as C.\n*   **E and C have a bad relationship.** This means E is not in the same group as C.\n*   **E and B have a good relationship.** Since E is not in the same group as C, and E has a good relationship with B, then B must have a bad relationship with everyone in the C-centric group (F, G, H, D, I).\n*   **E and A have a good relationship.** Since E is not in the same group as C, and E has a good relationship with A, then A must have a bad relationship with everyone in the C-centric group (F, G, H, D, I).\n\nNow let's focus on D and H. Both D and H have a good relationship with C. Since groups are connected by transitivity of good relationships, and we know C has good relationships with D and H, then D and H must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 47,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **B and F have a bad relationship.**\n2. **B and G have a good relationship.**\n3. **B and H have a good relationship.**\n4. **E and F have a good relationship.**\n5. **B and D have a good relationship.**\n6. **B and I have a good relationship.**\n7. **E and A have a good relationship.**\n8. **B and C have a good relationship.**\n9. **E and C have a bad relationship.**\n\nNow let's deduce the relationships:\n\n*   **Group 1 (B-related):** B has good relationships with D, G, H, C, and I. Since relationships are transitive, D, G, H, C, and I all have good relationships with each other. So, {B, D, G, H, C, I} form a group.\n\n*   **E-related:** E has a good relationship with A and a good relationship with F. E has a bad relationship with C.\n\n*   **F-related:** F has a bad relationship with B and a good relationship with E.\n\n*   **A-related:** A has a good relationship with E.\n\n*   **C-related:** C has a good relationship with B and a bad relationship with E.\n\nNow let's consider the relationship between A and D.\n\n*   B has a good relationship with D.\n*   B has a good relationship with A (through E).\n*   Since B has a good relationship with both A and D, and the transitive property states that if A has a good relationship with B and B has a good relationship with C, then A has a good relationship with C, A and D should have a good relationship.\n\nTherefore, A and D have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 37,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **A and H have a good relationship.**\n2. **E and I have a good relationship.**\n3. **F and E have a bad relationship.**\n4. **E and G have a good relationship.**\n5. **D and E have a bad relationship.**\n6. **C and F have a bad relationship.**\n7. **A and C have a good relationship.**\n8. **C and E have a bad relationship.**\n9. **A and D have a good relationship.**\n10. **A and J have a good relationship.**\n11. **B and I have a bad relationship.**\n12. **B and F have a good relationship.**\n\nNow, let's deduce the relationships and groups:\n\n*   **Group 1: A, C, D, H, J**\n    *   A and C are good.\n    *   A and D are good.\n    *   A and H are good.\n    *   A and J are good.\n    *   C and A are good (transitive).\n    *   D and A are good (transitive).\n    *   H and A are good (transitive).\n    *   J and A are good (transitive).\n    *   Since A and C are good, and A and D are good, C and D must be good.\n    *   Since A and H are good, and A and J are good, H and J must be good.\n\n*   **Group 2: E, G, I**\n    *   E and I are good.\n    *   E and G are good.\n    *   I and E are good (transitive).\n    *   G and E are good (transitive).\n    *   Therefore, G and I are good.\n\n*   **F is isolated.** F has a bad relationship with E, C.\n\n*   **B is isolated.** B has a bad relationship with I, and a good relationship with F.\n\nNow let's check the relationship between G and D.\n\nWe know A and D are good, and A and G are good (through E).\nA and D are good.\nE and G are good.\nD and E are bad.\n\nSince A and D are good, and A and G are good (through E), we need to determine if G and D are good or bad.\n\nWe know D and E are bad.\nWe know E and G are good.\nTherefore, D and G must be bad.\n\nFina"
+    },
+    {
+      "sample_id": 16,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships and determine if E and D have a good relationship.\n\n1. **A's relationships:** A has good relationships with D, H, C, F, E, and B.\n2. **D's relationships:** D has a good relationship with A and a bad relationship with I.\n3. **I's relationships:** I has a good relationship with J and a bad relationship with D.\n4. **J's relationships:** J has a good relationship with I and G, and a bad relationship with C.\n5. **C's relationships:** C has a bad relationship with J and a good relationship with A.\n6. **F's relationships:** F has a good relationship with A.\n7. **H's relationships:** H has a good relationship with A.\n8. **B's relationships:** B has a good relationship with A.\n9. **G's relationships:** G has a good relationship with J.\n10. **E's relationships:** E has a good relationship with A.\n\nNow let's deduce groups:\n\n*   **Group 1 (A-centric):** A, D, H, C, F, E, B are all connected through good relationships.  Since A has good relationships with D, H, C, F, E, and B, and transitivity applies, they are all in the same group.  However, C has a bad relationship with J. Therefore, J is not in this group.\n*   **Group 2 (J-centric):** J, I, and G are connected through good relationships. J has a good relationship with I and G.\n*   **Separation:** Since C has a bad relationship with J, and C is in Group 1, then everyone in Group 1 has a bad relationship with everyone in Group 2.\n\nNow, let's consider E and D. Both are in Group 1 (A-centric).  We need to determine if they have a good relationship. We know A has a good relationship with both E and D. However, this doesn't directly tell us about the relationship between E and D.\n\nSince D has a bad relationship with I, and I is in Group 2, then D has a bad relationship with everyone in Group 2. Since E is in Group 1, and Group 1 and Group 2 are separate, we can't directly infer the relationship between E and D.\n\nHowever, we know A has a good relationship with both E and D. Let's see if we can use transitivity. We don't have any direct relationships between E and D.\n\nLet's re-examine the rules. If A has a good relationship with B, and B has a good relationship with C, then A has a good relationship with C.  This doesn't work in reverse.\n\nSince D has a bad relationship with I, and I is in Group 2, then D has a bad relationship with everyone in Group 2.  Since E is in Group 1, we don't know if E has a good or bad relationship with anyone in Group 2.\n\nWe know A has a good relationship with E and D. We also know that C has a bad relationship with J. Since A has a good relationship with C, and C has a bad relationship with J, then A must have a bad relationship with J. But J has a good relationship with G and I. This means A has a bad relationship with G and I. This contradicts the fact that A has a good relationship with E and D.\n\nLet's consider the relationship between D and I. D has a bad relationship with I. I has a good relationship with J. C has a bad relationship with J. A has a good relationship with C. Therefore, A has a bad relationship with J. A has a good relationship with D. Therefore, D and J have a bad relationship.\n\nSince A has a good relationship with E, and A has a bad relationship with J, then E and J have a bad relationship.\n\nSince D has a bad relationship with I, and I has a good relationship with J, then D and J have a bad relationship.\n\nWe are trying to determine if E and D have a good relationship. We know A has a good relationship with both E and D. We also know that D has a bad relationship with I. Since I has a good relationship with J, and C has a bad relationship with J, then A must have a bad relationship with J.\n\nSince A has a good relationship with E and D, and A has a bad relationship with J, then E and J have a bad relationship, and D and J have a bad relationship.\n\nWe don't have enough information to determine if E and D have a good relationship. However, we know that A has a good relationship with both E and D.\n\nFina"
+    },
+    {
+      "sample_id": 48,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **A's relationships:** A has good relationships with J, E, G, and I.\n2. **B's relationships:** B has good relationships with H, C, F, and D.\n3. **D and G have a bad relationship.**\n4. **E and C have a bad relationship.**\n\nNow let's deduce group memberships and relationships:\n\n*   **Group 1 (A's group):** Since A has good relationships with J, E, G, and I, and relationships are transitive, J, E, G, and I are all in the same group as A. Let's call this Group 1. So, Group 1 consists of {A, J, E, G, I}.\n*   **Group 2 (B's group):** B has good relationships with H, C, F, and D. Therefore, H, C, F, and D are in the same group as B. Let's call this Group 2. So, Group 2 consists of {B, H, C, F, D}.\n*   **D and G have a bad relationship:** This means Group 2 (containing D) and Group 1 (containing G) are separate.\n*   **E and C have a bad relationship:** This means Group 1 (containing E) and Group 2 (containing C) are separate.\n\nSince Group 1 is {A, J, E, G, I} and Group 2 is {B, H, C, F, D}, and we know D and G have a bad relationship, and E and C have a bad relationship, we can confirm the groups are separate.\n\nNow, let's consider F and E. F is in Group 2, and E is in Group 1. Since the groups are separate, and we know E and C have a bad relationship, and C is in Group 2, then E and F must have a bad relationship.\n\nTherefore, F and E do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 34,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A-J is good:** A has a good relationship with J.\n2. **A-E is good:** A has a good relationship with E.\n3. **A-G is good:** A has a good relationship with G.\n4. **B-H is good:** B has a good relationship with H.\n5. **B-I is good:** B has a good relationship with I.\n6. **E-C is bad:** E has a bad relationship with C.\n7. **C-F is bad:** C has a bad relationship with F.\n8. **A-F is good:** A has a good relationship with F.\n9. **B-D is good:** B has a good relationship with D.\n10. **B-C is good:** B has a good relationship with C.\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1 (A-based):** Since A-E is good, A-G is good, and A-F is good, E, G, and F are potentially in the same group as A.\n*   **Transitivity from A:**\n    *   A-J is good, so J is potentially in the same group as A.\n    *   A-E is good, so E is in the same group as A.\n    *   A-G is good, so G is in the same group as A.\n    *   A-F is good, so F is in the same group as A.\n*   **Group 2 (B-based):** Since B-H is good, B-I is good, and B-D is good, H, I, and D are potentially in the same group as B.\n*   **Transitivity from B:**\n    *   B-H is good, so H is in the same group as B.\n    *   B-I is good, so I is in the same group as B.\n    *   B-D is good, so D is in the same group as B.\n    *   B-C is good, so C is in the same group as B.\n\nNow let's consider the bad relationships:\n\n*   **E-C is bad:** Since E is in the A-group and C is in the B-group, the entire A-group has a bad relationship with the entire B-group.\n*   **C-F is bad:** Since C is in the B-group and F is in the A-group, this confirms the bad relationship between the groups.\n\nTherefore:\n\n*   Group 1: A, E, G, F, J\n*   Group 2: B, H, I, D, C\n\nWe want to know if G and C have a good relationship. Since G is in Group 1 and C is in Group 2, and we know that Group 1 and Group 2 have a bad relationship, G and C must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 49,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **A and H have a good relationship.**\n2. **B and E have a good relationship.**\n3. **A and F have a good relationship.**\n4. **F and E have a bad relationship.**\n5. **E and F have a bad relationship.** (This is redundant with #4, but doesn't change anything)\n6. **B and G have a good relationship.**\n7. **B and C have a good relationship.**\n8. **A and D have a good relationship.**\n\nNow let's deduce group memberships and relationships:\n\n*   **Group 1: A, D, F, H:**  A has good relationships with D, F, and H. F has a good relationship with A and H. D has a good relationship with A. H has a good relationship with A. Therefore, A, D, F, and H are in the same group.\n\n*   **Group 2: B, C, E, G:** B has good relationships with C, E, and G. C has a good relationship with B. E has a good relationship with B and G. G has a good relationship with B. Therefore, B, C, E, and G are in the same group.\n\n*   **Relationship between Groups 1 and 2:** A (from Group 1) has a good relationship with F (from Group 1). F (from Group 1) has a bad relationship with E (from Group 2). Therefore, everyone in Group 1 has a bad relationship with everyone in Group 2. This means A has a bad relationship with B, C, E, and G.  Similarly, D has a bad relationship with B, C, E, and G. F has a bad relationship with B, C, E, and G. H has a bad relationship with B, C, E, and G.\n\nNow, let's determine the relationship between C and E. Both C and E are in Group 2. Since Group 2 is defined by everyone having a good relationship with everyone else within the group, C and E must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 60,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step based on the given rules:\n\n1. **F and E have a good relationship.**\n2. **I and H have a bad relationship.**\n3. **F and I have a good relationship.**\n4. **H and G have a good relationship.**\n5. **D and E have a bad relationship.**\n6. **F and A have a good relationship.**\n7. **C and D have a good relationship.**\n8. **C and B have a good relationship.**\n9. **I and C have a bad relationship.**\n10. **C and G have a bad relationship.**\n11. **C and H have a bad relationship.**\n\nThe question asks if H and C have a good relationship.  We are directly told in statement 11 that C and H have a bad relationship. Therefore, they do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 54,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **E and G have a bad relationship.**\n2. **D and I have a good relationship.**\n3. **B and E have a bad relationship.**\n4. **C and E have a bad relationship.**\n5. **C and A have a good relationship.**\n6. **B and C have a bad relationship.** (This is redundant with #4, but we'll keep it)\n7. **B and G have a good relationship.**\n8. **D and F have a good relationship.**\n9. **D and H have a good relationship.**\n10. **D and E have a good relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: D, F, H, I.**  D has good relationships with F, H, and I. Since groups are defined by all members having good relationships with each other, and we have no information to the contrary, we can assume F, H, and I also have good relationships with each other.\n\n*   **Relationship between Group 1 and E:** D has a good relationship with E. However, E has a bad relationship with G.  Therefore, the entire Group 1 (D, F, H, I) has a bad relationship with G.\n\n*   **Relationship between B and E:** B has a bad relationship with E.\n\n*   **Relationship between B and C:** B has a bad relationship with C.\n\n*   **Relationship between C and A:** C has a good relationship with A.\n\n*   **Relationship between B and G:** B has a good relationship with G.\n\nNow, let's determine the relationship between B and A. We know C and A have a good relationship, and B and C have a bad relationship. Therefore, B and A must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 65,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step based on the given rules.\n\n1. **E and G have a good relationship.**\n2. **E and A have a good relationship.**\n3. **B and E have a bad relationship.**\n4. **B and C have a good relationship.**\n5. **B and D have a good relationship.**\n6. **E and C have a bad relationship.** (This is directly stated)\n7. **B and H have a good relationship.**\n8. **E and F have a good relationship.**\n9. **B and I have a good relationship.**\n\nThe question asks if E and C have a good relationship. The information explicitly states that E and C have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 55,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **B and G have a good relationship.**\n2. **B and C have a good relationship.**\n3. **A and C have a bad relationship.**\n4. **E and D have a good relationship.**\n5. **A and H have a bad relationship.**\n6. **E and F have a bad relationship.**\n7. **A and E have a bad relationship.**\n8. **C and E have a bad relationship.**\n9. **A and F have a good relationship.**\n10. **B and H have a good relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1: B, C, G, H.**  B has good relationships with C, G, and H. C has a good relationship with B. G has a good relationship with B. H has a good relationship with B.  Since relationships are transitive, B, C, G, and H are all in the same group.\n\n*   **A and C have a bad relationship.** Since B and C have a good relationship, and C and A have a bad relationship, B and A must have a bad relationship.\n\n*   **A and H have a bad relationship.**\n\n*   **A and E have a bad relationship.**\n\n*   **A and F have a good relationship.**\n\n*   **C and E have a bad relationship.**\n\n*   **E and F have a bad relationship.**\n\nNow let's consider the relationship between C and F. We know:\n\n*   C and E have a bad relationship.\n*   E and F have a bad relationship.\n\nTherefore, C and F must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 30,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **B and F have a good relationship.**\n2. **C and E have a good relationship.**\n3. **B and D have a bad relationship.**\n4. **F and C have a bad relationship.**\n5. **C and D have a good relationship.**\n6. **C and H have a good relationship.**\n7. **C and G have a good relationship.**\n8. **B and A have a good relationship.**\n\nNow let's deduce the relationships:\n\n*   **A and B have a good relationship.** Since B and F have a good relationship, and A and B have a good relationship, A and F *might* have a good relationship (transitivity). However, we need to check for conflicting information.\n*   **F and C have a bad relationship.**\n*   **C and D have a good relationship.** Since B and D have a bad relationship, and C and D have a good relationship, B and C must have a bad relationship.\n*   **B and C have a bad relationship.** This is consistent with the previous deductions.\n*   **C and H have a good relationship.**\n*   **C and G have a good relationship.**\n\nNow let's consider the group relationships. C is connected to E, H, G, and D through good relationships.  B is connected to A and F through good relationships, but also to D through a bad relationship. F is connected to B through a good relationship, and C through a bad relationship.\n\nLet's trace the relationships to determine if A and F have a good relationship.\n\n*   A has a good relationship with B.\n*   B has a good relationship with F.\n*   Therefore, A and F *could* have a good relationship.\n\nHowever, we also know that F and C have a bad relationship.  C has a good relationship with D. Since B and D have a bad relationship, B and C must have a bad relationship.  Since B and A have a good relationship, A and C must have a bad relationship.\n\nNow, let's consider the transitive property with the bad relationships. Since F and C have a bad relationship, and C and D have a good relationship, F and D must have a bad relationship. Since B and D have a bad relationship, and B and A have a good relationship, A and D must have a bad relationship.\n\nSince F and C have a bad relationship, and C and H have a good relationship, F and H must have a bad relationship. Since F and C have a bad relationship, and C and G have a good relationship, F and G must have a bad relationship.\n\nSince B and F have a good relationship, and B and D have a bad relationship, F and D must have a bad relationship.\n\nWe have established that F has bad relationships with C, D, H, G.\n\nLet's consider the group containing C, E, H, G, and D.  Since F and C have a bad relationship, F is not in the same group as C, E, H, G, and D.\n\nSince A and B have a good relationship, and B and F have a good relationship, A and F *could* have a good relationship. However, we have not found a direct or transitive good relationship between A and F.\n\nLet's re-examine the rules. If A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship. We don't have this situation.\n\nSince B and F have a good relationship, and B and A have a good relationship, it seems like A and F should have a good relationship. However, the presence of the bad relationships involving F complicates things.\n\nLet's consider the group containing A and B. Since B and F have a good relationship, A and F *could* have a good relationship. But we also know F and C have a bad relationship.\n\nSince we cannot definitively conclude that A and F have a good relationship based on the given information and rules, the answer is No.\n\nFina"
+    },
+    {
+      "sample_id": 63,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step based on the given rules.\n\n1. **B and G have a good relationship.**\n2. **E and A have a good relationship.**\n3. **B and I have a good relationship.**\n4. **B and H have a good relationship.**\n5. **E and F have a good relationship.**\n6. **E and C have a bad relationship.**\n7. **E and D have a good relationship.**\n8. **B and C have a good relationship.**\n9. **A and G have a bad relationship.**\n\nNow, let's deduce relationships:\n\n*   Since B has a good relationship with G, and G has a good relationship with A (transitive from E and A), we *cannot* conclude anything about B and A's relationship yet.\n*   Since B has a good relationship with C, and E has a bad relationship with C, then B and E must have a bad relationship.\n*   Since E has a good relationship with A, and B has a bad relationship with E, then B and A must have a bad relationship.\n\nTherefore, B and A do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 71,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **A and G have a good relationship.**\n2. **A and D have a good relationship.**\n3. **G and C have a bad relationship.**\n4. **A and F have a good relationship.**\n5. **H and C have a good relationship.**\n6. **A and I have a good relationship.**\n7. **H and B have a good relationship.**\n8. **H and E have a good relationship.**\n9. **A and B have a bad relationship.**\n\nNow let's deduce:\n\n*   Since A and G have a good relationship, and G and C have a bad relationship, A and C must have a bad relationship (transitive property of bad relationships).\n\nTherefore, A and C do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 80,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Final"
+    },
+    {
+      "sample_id": 79,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships to determine if C and B have a good relationship.\n\nWe are given that B and C have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 58,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **A and B have a good relationship.**\n2. **C and H have a bad relationship.**\n3. **A and G have a good relationship.**\n4. **A and E have a good relationship.**\n5. **H and D have a good relationship.**\n6. **A and C have a good relationship.**\n7. **H and F have a good relationship.**\n8. **B and F have a bad relationship.**\n\nNow let's deduce the relationships:\n\n*   **Group 1: A, B, C, E, G.**  Since A has good relationships with B, C, E, and G, and relationships are transitive, B, C, E, and G all have good relationships with each other.\n*   **H and D have a good relationship.**\n*   **H and F have a good relationship.**\n*   **B and F have a bad relationship.**  Since B is in Group 1, and B has a bad relationship with F, everyone in Group 1 has a bad relationship with F.\n*   **C and H have a bad relationship.**\n*   **Since H has a good relationship with D, and C has a bad relationship with H, C must have a bad relationship with D.**\n*   **Since A has a good relationship with C, and C has a bad relationship with D, A must have a bad relationship with D.**\n*   **Since A has a good relationship with E, and A has a bad relationship with D, E must have a bad relationship with D.**\n\nTherefore, E and D have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 73,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **C and H have a good relationship.**\n2. **J and H have a bad relationship.**\n3. **J and B have a good relationship.**\n4. **J and E have a bad relationship.**\n5. **C and G have a good relationship.**\n6. **J and I have a good relationship.**\n7. **C and D have a good relationship.**\n8. **J and A have a good relationship.**\n9. **F and J have a bad relationship.**\n10. **E and F have a good relationship.**\n11. **H and E have a bad relationship.**\n12. **C and E have a bad relationship.**\n\nWe are asked if E and H have a good relationship. We are directly told that H and E have a bad relationship (rule 11).\n\nFina"
+    },
+    {
+      "sample_id": 52,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **B has good relationships with:** E, C, F, G.\n2. **E has good relationships with:** B.  E has a bad relationship with H.\n3. **C has good relationships with:** B. C has a bad relationship with H.\n4. **H has good relationships with:** A, D. H has bad relationships with C, E.\n5. **A has good relationships with:** H.\n6. **D has good relationships with:** H.\n7. **F has good relationships with:** B.\n8. **G has good relationships with:** B.\n\nNow let's determine the groups:\n\n*   **Group 1 (B-related):** B is connected to E, C, F, and G.\n    *   B-E: Good\n    *   B-C: Good\n    *   B-F: Good\n    *   B-G: Good\n    *   E-C: Since B-E and B-C are good, E-C is good (transitivity).\n    *   E-F: Since B-E and B-F are good, E-F is good (transitivity).\n    *   E-G: Since B-E and B-G are good, E-G is good (transitivity).\n    *   C-F: Since B-C and B-F are good, C-F is good (transitivity).\n    *   C-G: Since B-C and B-G are good, C-G is good (transitivity).\n    *   F-G: Since B-F and B-G are good, F-G is good (transitivity).\n    * Therefore, Group 1 consists of B, E, C, F, and G.\n\n*   **Group 2 (H-related):** H is connected to A and D.\n    *   H-A: Good\n    *   H-D: Good\n    *   A-D: Since H-A and H-D are good, A-D is good (transitivity).\n    * Therefore, Group 2 consists of H, A, and D.\n\nNow let's check the relationship between D and F. D is in Group 2 (H, A, D) and F is in Group 1 (B, E, C, F, G).  We know that H and E have a bad relationship. Since H is in Group 2 and E is in Group 1, everyone in Group 2 has a bad relationship with everyone in Group 1. Therefore, D (from Group 2) has a bad relationship with F (from Group 1).\n\nFina"
+    },
+    {
+      "sample_id": 46,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **A and I have a good relationship.**\n2. **B and G have a bad relationship.**\n3. **H and C have a bad relationship.**\n4. **A and D have a good relationship.**\n5. **C and G have a good relationship.**\n6. **J and B have a good relationship.**\n7. **J and C have a bad relationship.**\n8. **A and F have a good relationship.**\n9. **C and F have a bad relationship.**\n10. **A and H have a good relationship.**\n11. **H and J have a bad relationship.**\n12. **J and E have a good relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: A, D, F, H, I** (A has good relationships with D, F, H, and I. H has a good relationship with A. D and F are connected to A, so they are in the same group. I is connected to A.)\n*   **J and C have a bad relationship.** This means that anyone who has a good relationship with J will have a bad relationship with C, and vice versa.\n*   **C and G have a good relationship.**\n*   **H and C have a bad relationship.**\n*   **C and F have a bad relationship.** Since A and F have a good relationship, and A is in Group 1, then F must have a bad relationship with everyone in Group 1. But we know A and F have a good relationship, which is a contradiction. Let's re-examine.\n\nLet's trace the relationships more carefully.\n\n*   A has good relationships with D, F, H, I. So A, D, F, H, I are potentially in the same group.\n*   J has good relationships with B and E. J has a bad relationship with C.\n*   B has a good relationship with J, but a bad relationship with G.\n*   C has a good relationship with G, but a bad relationship with F and J.\n*   H has a good relationship with A, but a bad relationship with C and J.\n\nSince A and H have a good relationship, and A, D, F, H, I are potentially in the same group, let's see if we can confirm this.\nSince H and J have a bad relationship, and A and H have a good relationship, then A and J must have a bad relationship.\nSince J and B have a good relationship, and A and J have a bad relationship, then A and B must have a bad relationship.\nSince A and D have a good relationship, and A and B have a bad relationship, then B and D must have a bad relationship.\nSince A and F have a good relationship, and A and B have a bad relationship, then B and F must have a bad relationship.\nSince A and I have a good relationship, and A and B have a bad relationship, then B and I must have a bad relationship.\n\nNow, let's consider Group 1: A, D, F, H, I.\nH and J have a bad relationship.\nTherefore, A, D, F, H, I all have a bad relationship with J.\n\nThe question is: Do J and H have a good relationship? We are given that H and J have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 62,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step, applying the given rules.\n\n1. **H and G have a good relationship.**\n2. **G and I have a bad relationship.**  Therefore, H and I have a bad relationship (transitive property of bad relationships).\n3. **C and H have a bad relationship.**  Therefore, C and I have a bad relationship (transitive property of bad relationships).\n4. **C and A have a good relationship.** Since C and I have a bad relationship, A and I have a bad relationship.\n5. **C and G have a bad relationship.** Since H and G have a good relationship, H and C have a bad relationship (given).\n6. **C and E have a bad relationship.**\n7. **B and F have a good relationship.**\n8. **B and I have a good relationship.**\n9. **B and E have a good relationship.**\n10. **B and D have a good relationship.**\n11. **E and H have a bad relationship.**\n\nNow let's determine the groups.\n\n*   **Group 1:** B, D, F, I (B has good relationships with D, F, and I).\n*   **Group 2:** A, C, E, G, H (C has a good relationship with A, and H has a good relationship with G. C and E have a bad relationship, and C and H have a bad relationship. E and H have a bad relationship. C and G have a bad relationship.)\n\nSince B and E have a good relationship, and B is in Group 1 and E is in Group 2, Groups 1 and 2 are separate. This means everyone in Group 1 has a bad relationship with everyone in Group 2.\n\nSince D is in Group 1 and E is in Group 2, D and E have a bad relationship.\n\nTherefore, D and E do *not* have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 70,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **C and J have a good relationship.**\n2. **E and C have a bad relationship.**\n3. **E and B have a good relationship.**\n4. **B and C have a bad relationship.**\n5. **E and D have a good relationship.**\n6. **C and I have a good relationship.**\n7. **C and G have a good relationship.**\n8. **C and F have a good relationship.**\n9. **C and H have a good relationship.**\n10. **E and A have a good relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: C, G, F, H, I, J.**  Since C has a good relationship with G, F, H, I, and J, and relationships are transitive, all these people are in the same group.\n\n*   **Group 2: E, A, B, D.** E has a good relationship with A and D, and a bad relationship with C. B has a good relationship with E, but a bad relationship with C. Therefore, E, A, B, and D are in a separate group.\n\n*   **Relationship between Groups:** E has a bad relationship with C. Since E is in Group 2 and C is in Group 1, all members of Group 2 have a bad relationship with all members of Group 1.\n\nSince F is in Group 1 and E is in Group 2, F and E have a bad relationship.\n\nWe are asked if F and G have a good relationship. Since F and G are both in Group 1, they *must* have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 56,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, building groups and identifying bad relationships.\n\n1. **A and D have a good relationship.**\n2. **A and G have a bad relationship.**\n3. **C and H have a good relationship.**\n4. **A and E have a bad relationship.**\n5. **E and H have a bad relationship.**\n6. **G and H have a bad relationship.**\n7. **E and G have a good relationship.**\n8. **A and H have a bad relationship.**\n9. **A and F have a good relationship.**\n10. **E and B have a good relationship.**\n\nNow, let's deduce the groups and relationships:\n\n*   **Group 1: A and F.** (A and F have a good relationship)\n*   **Since A and G have a bad relationship, F and G have a bad relationship.** (Transitive property of bad relationships)\n*   **Since A and E have a bad relationship, F and E have a bad relationship.** (Transitive property of bad relationships)\n*   **Since A and H have a bad relationship, F and H have a bad relationship.** (Transitive property of bad relationships)\n*   **Group 2: E and B.** (E and B have a good relationship)\n*   **Since E and H have a bad relationship, B and H have a bad relationship.** (Transitive property of bad relationships)\n*   **Since E and G have a good relationship, B and G have a good relationship.** (Transitive property of good relationships)\n*   **Group 3: C and H.** (C and H have a good relationship)\n\nNow let's consider the connections between groups.\n\n*   A has a bad relationship with G, E, and H. Therefore, F (in Group 1) has a bad relationship with G, E, and H.\n*   E has a bad relationship with A and H. Therefore, B (in Group 2) has a bad relationship with A and H.\n*   C has a good relationship with H.\n\nSince A has a bad relationship with H, and A has a good relationship with F, then F and H have a bad relationship.\nSince C has a good relationship with H, and H has a bad relationship with F, then C and F must have a bad relationship.\n\nTherefore, F and C do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 74,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step to determine if F and E have a good relationship.\n\n1. **C and E have a good relationship.** (Given)\n2. **C and F have a bad relationship.** (Given)\n3. **C and H have a good relationship.** (Given)\n4. **C and G have a good relationship.** (Given)\n5. **J and F have a good relationship.** (Given)\n6. **F and I have a bad relationship.** (Given)\n7. **I and D have a good relationship.** (Given)\n8. **I and A have a good relationship.** (Given)\n9. **I and B have a good relationship.** (Given)\n10. **B and J have a bad relationship.** (Given)\n11. **B and H have a bad relationship.** (Given)\n12. **H and J have a bad relationship.** (Given)\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: C, E, H, G.**  C has good relationships with E, H, and G. Since relationships are transitive, E, H, and G all have good relationships with each other.\n*   **Relationship between Group 1 (C, E, H, G) and F:** C and F have a bad relationship. Therefore, everyone in Group 1 (C, E, H, G) has a bad relationship with F. So, E and F have a bad relationship.\n\nTherefore, F and E do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 75,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A and F: Good**\n2. **A and C: Good**\n3. **A and D: Good**\n4. **A and B: Good**\n5. **C and H: Bad**\n6. **H and G: Good**\n7. **H and I: Good**\n8. **H and E: Good**\n9. **E and F: Bad**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: A, B, C, D, F:**  A has good relationships with B, C, and D. A and F have a good relationship. Therefore, B, C, D, and F all have good relationships with each other (through A).\n*   **Group 2: H, G, I, E:** H has good relationships with G, I, and E. Therefore, G, I, and E all have good relationships with each other (through H).\n\nNow let's consider the relationship between C and I.\n\n*   C is in Group 1.\n*   I is in Group 2.\n*   C and H have a bad relationship.\n*   H and I have a good relationship.\n*   Since C and H have a bad relationship, and C is in Group 1 and H is in Group 2, everyone in Group 1 has a bad relationship with everyone in Group 2.\n\nTherefore, C and I have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 76,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A and D have a good relationship.**\n2. **D and C have a bad relationship.**\n3. **A and C have a bad relationship.** (This is consistent with rule 2: A-D good, A-C bad, therefore D-C must be bad).\n4. **B and C have a good relationship.**\n5. **B and H have a good relationship.**\n6. **B and E have a good relationship.**\n7. **A and G have a good relationship.**\n8. **A and F have a good relationship.**\n\nNow let's determine the groups:\n\n*   **Group 1 (A-related):** A has good relationships with F and G. Since A has a bad relationship with C, F and G have bad relationships with C.\n*   **Group 2 (B-related):** B has good relationships with C, H, and E.\n\nLet's see if we can connect F and B.\n\n*   A and F have a good relationship.\n*   A and B do *not* have a direct relationship given.\n*   However, A has a bad relationship with C. B has a good relationship with C. Therefore, A and B must have a bad relationship.\n*   Since A and B have a bad relationship, and A and F have a good relationship, F and B must have a bad relationship.\n\nTherefore, F and B do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 72,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **A and C have a bad relationship.**\n2. **C and I have a good relationship.**\n3. **A and I must have a bad relationship** (because A has a bad relationship with C, and C has a good relationship with I).\n4. **C and H have a good relationship.**\n5. **C and E have a good relationship.**\n6. **C and G have a good relationship.**\n7. **A and B have a good relationship.**\n8. **A and F have a good relationship.**\n9. **A and D have a good relationship.**\n10. **A and J have a good relationship.**\n11. **D and H have a bad relationship.**\n\nNow let's determine the groups:\n\n*   **Group 1 (A-B-F-J-D):** A has good relationships with B, F, D, and J. Since relationships are transitive, B, F, D, and J all have good relationships with each other.\n*   **Group 2 (C-E-G-H):** C has good relationships with E, G, and H. Since relationships are transitive, E, G, and H all have good relationships with each other.\n*   **A has a bad relationship with C.** This separates Group 1 and Group 2. Therefore, everyone in Group 1 has a bad relationship with everyone in Group 2.\n\nSince H is in Group 2 and I is related to C (who is in Group 2), and A has a bad relationship with I, and A is in Group 1, then I must also be in Group 2.\n\nSince H and I are both in Group 2, they have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 86,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships and determine if G and A have a good relationship.\n\nWe are given:\n1. B and F have a bad relationship.\n2. C and H have a bad relationship.\n3. A and G have a good relationship.\n4. H and I have a good relationship.\n5. H and D have a good relationship.\n6. A and B have a good relationship.\n7. A and E have a good relationship.\n8. A and C have a good relationship.\n9. H and F have a good relationship.\n\nWe want to know if G and A have a good relationship.\n\nFrom the given information, we directly know that A and G have a good relationship (statement 3).\n\nFinal"
+    },
+    {
+      "sample_id": 68,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A's relationships:** A has good relationships with H, G, J, and E.\n2. **H's relationships:** H has a good relationship with A and a bad relationship with C.\n3. **G's relationships:** G has a good relationship with A.\n4. **J's relationships:** J has a good relationship with A.\n5. **E's relationships:** E has a good relationship with A and a bad relationship with B.\n6. **B's relationships:** B has good relationships with I, F, C, and D. B has a bad relationship with E.\n7. **C's relationships:** C has a good relationship with B and a bad relationship with H.\n8. **D's relationships:** D has a good relationship with B.\n9. **I's relationships:** I has a good relationship with B.\n10. **F's relationships:** F has a good relationship with B.\n\nNow let's determine the groups:\n\n* **Group 1 (A-H-G-J-E):** A has good relationships with H, G, J, and E. H has a good relationship with A. G has a good relationship with A. J has a good relationship with A. E has a good relationship with A. However, H and C have a bad relationship. Therefore, C is not in this group.\n* **Group 2 (B-I-F-C-D):** B has good relationships with I, F, C, and D. I has a good relationship with B. F has a good relationship with B. C has a good relationship with B. D has a good relationship with B.\n\nSince H and C have a bad relationship, and A has a good relationship with H, then A must have a bad relationship with C.  Since A has a good relationship with E, and A has a bad relationship with C, then E must have a bad relationship with C.\n\nNow, let's consider the relationship between C and D. B has a good relationship with both C and D. Therefore, C and D are in the same group (B-I-F-C-D). Since they are in the same group, they must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 81,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step:\n\n1. **A and G have a good relationship.**\n2. **B and H have a bad relationship.**\n3. **A and F have a good relationship.**\n4. **C and E have a bad relationship.**\n5. **E and D have a good relationship.**\n6. **E and B have a good relationship.**\n7. **A and H have a good relationship.**\n8. **A and C have a good relationship.**\n\nNow let's deduce group memberships and relationships:\n\n*   **Group 1: A, F, C, G, H, D, B**\n    *   A has good relationships with F, C, G, H, and A.\n    *   H has a good relationship with A.\n    *   C has a good relationship with A.\n    *   G has a good relationship with A.\n    *   F has a good relationship with A.\n    *   E has a good relationship with D and B.\n    *   D has a good relationship with E.\n    *   B has a good relationship with E.\n\n*   **Relationship between H and G:** A has a good relationship with both H and G. Therefore, H and G have a good relationship (transitive property).\n\nFinal"
+    },
+    {
+      "sample_id": 78,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **C and B have a good relationship.**\n2. **B and F have a bad relationship.**\n3. **H and C have a bad relationship.**\n4. **C and D have a good relationship.**\n5. **A and H have a good relationship.**\n6. **A and F have a good relationship.**\n7. **A and E have a good relationship.**\n8. **C and I have a good relationship.**\n9. **A and G have a good relationship.**\n\nNow let's deduce the groups:\n\n*   **Group 1: A, E, F, G, H** - A has good relationships with E, F, G, and H. F and H have a good relationship with A.\n*   **Group 2: C, D, I** - C has good relationships with D and I. D and I have a good relationship with C.\n\nSince B has a bad relationship with F, and F is in Group 1, B cannot be in Group 1.\nSince C has a good relationship with B, and C is in Group 2, B must be in Group 2.\n\nNow, let's check if B and I have a good relationship. I is in Group 2 (C, D, I). B is also in Group 2. Since Group 2 consists of people with good relationships with each other, B and I must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 88,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships and determine if A and H have a good relationship.\n\n1. **A and F have a good relationship.**\n2. **C and H have a good relationship.**\n3. **C and E have a good relationship.**\n4. **I and B have a good relationship.**\n5. **I and D have a good relationship.**\n6. **C and G have a good relationship.**\n7. **A and I have a bad relationship.**\n8. **D and F have a bad relationship.**\n9. **A and C have a bad relationship.**\n10. **I and H have a bad relationship.**\n11. **A and H have a bad relationship.**\n\nWe are given directly that A and H have a bad relationship. Therefore, the answer is No.\n\nFina"
+    },
+    {
+      "sample_id": 57,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, building groups and identifying bad relationships.\n\n1. **A, C, E, I:** A has good relationships with C, E, and I. C and E are not directly related, but A's good relationships with C and E don't immediately imply anything about their relationship.  A, C, E, and I are potentially in the same group.\n\n2. **H, B, D:** H has good relationships with B and D.\n\n3. **G, F:** F and G have a good relationship.\n\n4. **G, H, F:** H and F have a bad relationship. Since F and G have a good relationship, and H and F have a bad relationship, G and H must have a bad relationship (transitive bad relationship). This is consistent with the given information.\n\n5. **C, H:** C and H have a bad relationship.\n\n6. **G, H:** G and H have a bad relationship (given).\n\n7. **F, I:** F and I have a bad relationship (given).\n\n8. **C, F:** C and F have a bad relationship (given).\n\nNow let's determine the groups:\n\n*   **Group 1: A, C, E, I:** A has good relationships with C, E, and I.  We need to see if C, E, and I have good relationships with each other. C and H have a bad relationship. C and F have a bad relationship. F and I have a bad relationship. So, C, E, and I are not all in the same group.\n\n*   **Group 2: H, B, D:** H has good relationships with B and D.\n\n*   **Group 3: G, F:** F and G have a good relationship.\n\nNow let's consider the bad relationships and how they separate groups.\n\n*   G and H have a bad relationship. This means everyone in the G, F group has a bad relationship with everyone in the H, B, D group.\n*   C and H have a bad relationship. This means everyone in the A, C, E, I group has a bad relationship with everyone in the H, B, D group.\n*   F and I have a bad relationship. This means everyone in the G, F group has a bad relationship with everyone in the I group.\n*   C and F have a bad relationship. This means everyone in the A, C, E, I group has a bad relationship with everyone in the G, F group.\n*   H and F have a bad relationship. This reinforces the separation between the H, B, D group and the G, F group.\n\nTherefore, we have three distinct groups:\n\n*   Group 1: A, C, E, I\n*   Group 2: H, B, D\n*   Group 3: G, F\n\nSince A is in Group 1 and D is in Group 2, and there's a bad relationship between Group 1 and Group 2, A and D have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 66,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step to determine if D and F have a good relationship.\n\n1. **A and D have a good relationship.**\n2. **A and C have a good relationship.**\n3. **A and B have a good relationship.** (Since A and D have a good relationship, and A and C have a good relationship, and A and B have a good relationship, we can't directly infer anything about B and D or B and C. However, we'll use this later.)\n4. **B and G have a good relationship.**\n5. **B and F have a good relationship.**\n6. **C and F have a bad relationship.**\n7. **B and C have a bad relationship.**\n8. **A and H have a good relationship.**\n9. **A and E have a good relationship.**\n\nNow let's deduce groups:\n\n*   **Group 1: A, D, E, H.** (A has good relationships with D, E, and H)\n*   **Group 2: A, B, F, G.** (A has good relationships with B and G. B has a good relationship with F and G. F has a good relationship with B.)\n\nSince A is in both groups, let's see if we can combine them.  However, we know that B and C have a bad relationship.  Also, C and F have a bad relationship.  Since A has a good relationship with both B and F, this implies that B and F must have a bad relationship, which contradicts the given information that B and F have a good relationship. Therefore, the groups are separate.\n\nNow, let's consider the relationship between D and F. D is in Group 1, and F is in Group 2. Since Group 1 and Group 2 are separate, and we know A has a good relationship with D and a good relationship with F, this doesn't directly tell us anything about D and F.\n\nHowever, we know that A and C have a good relationship. C and F have a bad relationship. Therefore, A and F must have a bad relationship. This contradicts the fact that A and F have a good relationship. Let's re-examine the given information.\n\nWe have:\n* A-D good\n* A-C good\n* B-G good\n* C-F bad\n* B-F good\n* B-C bad\n* A-H good\n* A-E good\n\nSince A-C is good and C-F is bad, A-F must be bad.\nSince A-D is good and A-F is bad, D-F must be bad.\n\nFina"
+    },
+    {
+      "sample_id": 89,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step based on the given rules:\n\n1. **B and D have a good relationship.**\n2. **C and H have a good relationship.**\n3. **B and H have a bad relationship.**\n4. **H and E have a bad relationship.**\n5. **C and A have a good relationship.**\n6. **C and F have a good relationship.**\n7. **B and I have a good relationship.**\n8. **B and E have a good relationship.**\n9. **B and G have a good relationship.**\n\nNow let's deduce:\n\n*   Since B and H have a bad relationship, and C and H have a good relationship, B and C must have a bad relationship (transitive property of bad relationships).\n*   Since B and C have a bad relationship, and C and A have a good relationship, B and A must have a bad relationship.\n\nTherefore, B and A do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 77,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A's relationships:** A has good relationships with D, I, J, and H.\n2. **B's relationships:** B has good relationships with C, F, and E. B also has a good relationship with G.\n3. **G's relationships:** G has a good relationship with B and a bad relationship with J.\n4. **H's relationships:** H has a good relationship with A and a bad relationship with C.\n5. **C's relationships:** C has a good relationship with B and a bad relationship with H.\n6. **I's relationships:** I has a good relationship with A.\n7. **J's relationships:** J has a good relationship with A and a bad relationship with G.\n\nNow let's determine the groups:\n\n*   **Group 1 (A, D, I, J, H):** A has good relationships with D, I, J, and H. Since relationships are transitive, D, I, J, and H are all in the same group as A.\n*   **Group 2 (B, C, E, F, G):** B has good relationships with C, E, F, and G. Since relationships are transitive, C, E, F, and G are all in the same group as B.\n\nNow let's check the relationship between I and G.\n\n*   I is in Group 1 (A, D, I, J, H).\n*   G is in Group 2 (B, C, E, F, G).\n*   We know that G and J have a bad relationship. J is in Group 1.\n*   Since Group 1 and Group 2 are completely separate, if someone from Group 1 has a bad relationship with someone from Group 2, then everyone from Group 1 has a bad relationship with everyone from Group 2.\n*   Therefore, I (from Group 1) has a bad relationship with G (from Group 2).\n\nHowever, the question asks if I and G have a *good* relationship. Since they have a bad relationship, they do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 90,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **B and I have a bad relationship.**\n2. **E and B have a good relationship.**\n3. **I and D have a good relationship.**\n4. **E and F have a bad relationship.**\n5. **C and E have a bad relationship.**\n6. **C and F have a bad relationship.**\n7. **B and H have a bad relationship.**\n8. **H and A have a good relationship.**\n9. **H and G have a good relationship.**\n10. **H and C have a good relationship.**\n11. **I and F have a good relationship.**\n\nWe are asked if H and A have a good relationship.  The information explicitly states: **H and A have a good relationship.**\n\nFinal"
+    },
+    {
+      "sample_id": 92,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **A and G have a good relationship.**\n2. **H and E have a good relationship.**\n3. **A and E have a bad relationship.**\n4. **A and F have a good relationship.**\n5. **A and B have a good relationship.**\n6. **A and J have a good relationship.**\n7. **A and I have a good relationship.**\n8. **H and D have a good relationship.**\n9. **C and H have a bad relationship.**\n10. **A and C have a good relationship.**\n\nWe are asked if I and A have a good relationship.  We are given that A and I have a good relationship (statement 7). Therefore, I and A have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 67,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A's relationships:** A has good relationships with B, C, D, G, and H.\n2. **C's relationships:** C has a good relationship with A and a bad relationship with J.\n3. **J's relationships:** J has a good relationship with F, I, and E, and a bad relationship with C.\n4. **G's relationships:** G has a good relationship with A and a bad relationship with I.\n5. **I's relationships:** I has a good relationship with J and a bad relationship with G.\n\nNow let's determine the groups:\n\n*   **Group 1 (A-based):** A, B, C, D, G, H.  Since A has good relationships with B, C, D, G, and H, and C has a good relationship with A, and G has a good relationship with A, all these people are in the same group.\n*   **Group 2 (J-based):** J, F, E, I. J has good relationships with F, E, and I. I has a good relationship with J, and F and E have good relationships with J.\n\nNow let's check for connections between the groups.\n\n*   C and J have a bad relationship. This means everyone in Group 1 (A, B, C, D, G, H) has a bad relationship with everyone in Group 2 (J, F, E, I).\n*   G and I have a bad relationship. This confirms the separation of the groups.\n*   J and I have a good relationship. This is contradictory to the group separation. Let's re-examine the information.\n\nWe are given:\n* C and J have a bad relationship\n* G and I have a bad relationship\n* J and F have a good relationship\n* A and C have a good relationship\n* A and B have a good relationship\n* A and D have a good relationship\n* J and I have a good relationship\n* J and E have a good relationship\n* A and G have a good relationship\n* A and H have a good relationship\n\nFrom A and C having a good relationship, and C and J having a bad relationship, we know that A and J must have a bad relationship (transitive property of bad relationships).\n\nSince A has a good relationship with D, and A and J have a bad relationship, D and J must have a bad relationship.\n\nSince J has a good relationship with I, and J and C have a bad relationship, C and I must have a bad relationship.\n\nSince G has a good relationship with A, and A and J have a bad relationship, G and J must have a bad relationship.\n\nSince G has a bad relationship with I, and G and A have a good relationship, A and I must have a bad relationship.\n\nSince A has a good relationship with D, and A and I have a bad relationship, D and I must have a bad relationship.\n\nTherefore, D and I have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 83,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **A and F have a good relationship.**\n2. **A and B have a good relationship.**\n3. **A and C have a good relationship.**\n4. **A and G have a good relationship.**\n5. **A and H have a good relationship.**\n\nSince A has good relationships with B, C, F, G, and H, and relationships are transitive, B, C, F, G, and H all have good relationships with each other. Therefore, B, C, F, G, and H form a group.\n\n6. **J and D have a good relationship.**\n7. **J and I have a good relationship.**\n8. **J and E have a good relationship.**\n9. **C and J have a bad relationship.**\n\nSince C and J have a bad relationship, and C is in the group {B, C, F, G, H}, then J and everyone in the group {B, C, F, G, H} have a bad relationship.  Therefore, J, D, and I are in a separate group.  Also, E is in a separate group with J, D, and I.\n\n10. **E and G have a bad relationship.**\n\nThis confirms that the group {B, C, F, G, H} and the group {E, J, D, I} are separate.\n\nNow, let's determine if B and F have a good relationship. Since B and F are both in the group {B, C, F, G, H}, they have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 96,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships to determine if D and C have a good relationship.\n\n1. **H and D have a good relationship.**\n2. **H and B have a good relationship.**\n3. **H and G have a good relationship.**\n4. **C and A have a good relationship.**\n5. **C and F have a good relationship.**\n6. **C and E have a good relationship.**\n7. **C and H have a bad relationship.**\n\nFrom 1 and 2, we know H has good relationships with D and B.\nFrom 1 and 3, we know H has good relationships with D and G.\n\nSince H and C have a bad relationship (7), and H has a good relationship with D (1), then D and C must have a bad relationship (rule 2).\n\nTherefore, D and C do not have a good relationship.\n\nFina"
+    },
+    {
+      "sample_id": 64,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **A's relationships:** A has good relationships with H, D, F, E, and C.\n2. **Transitivity from A:**\n   - Since A has a good relationship with H, and we don't have any other information about H, we can't infer anything about H's relationships with others yet.\n   - Since A has a good relationship with D, we can't infer anything about D's relationships with others yet.\n   - Since A has a good relationship with F, and we don't have any other information about F, we can't infer anything about F's relationships with others yet.\n   - Since A has a good relationship with E, and we don't have any other information about E, we can't infer anything about E's relationships with others yet.\n   - Since A has a good relationship with C, we know A and C have a good relationship.\n3. **C's relationships:** C has a good relationship with A and a bad relationship with I and G.\n4. **I's relationships:** I has a good relationship with G and a bad relationship with C.\n5. **G's relationships:** G has a good relationship with I and a bad relationship with C.\n6. **B's relationships:** B has a good relationship with I.\n\nNow let's consider the groups.\n\n*   **Group 1 (potentially):** A, F, E, D, H, C.  All these people have a good relationship with A.  We need to check if they have good relationships with each other.\n*   **Group 2 (potentially):** I, G, B. All these people have a good relationship with each other.\n\nLet's examine the relationship between F and E. We know A has a good relationship with both F and E. However, we don't have any direct information about the relationship between F and E.\n\nNow, let's consider the relationship between C and I. C and I have a bad relationship. Since A has a good relationship with C, and I has a good relationship with B, then C and B must have a bad relationship.\n\nSince C has a bad relationship with I, and A has a good relationship with C, then A must have a bad relationship with I. But we know A has a good relationship with H, and I has a good relationship with G. This means that H and G must have a bad relationship.\n\nWe know A has good relationships with F and E. We don't have any information about the relationship between F and E directly. However, we know that A has a good relationship with C, and C has a bad relationship with I. Since I has a good relationship with B, then C and B must have a bad relationship.\n\nSince A has a good relationship with F and E, and A has a good relationship with C, and C has a bad relationship with I, then F and E must have a bad relationship with I.\n\nWe don't have enough information to determine if F and E have a good relationship.\n\nHowever, let's re-examine the rules. If A has a good relationship with B, and B has a good relationship with C, then A has a good relationship with C. If A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship.\n\nWe know A has good relationships with F and E. We don't know if F and E have a good relationship with each other.\n\nFina"
+    },
+    {
+      "sample_id": 97,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **A and D have a good relationship.**\n2. **E and H have a bad relationship.** (Given)\n3. **A and B have a good relationship.**\n4. **C and G have a good relationship.**\n5. **C and H have a good relationship.**\n6. **C and E have a bad relationship.**\n7. **A and F have a good relationship.**\n8. **A and E have a good relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1 (A, B, D, F, E):** A has good relationships with B, D, F, and E. Since relationships are transitive, B, D, F, and E all have good relationships with each other.\n*   **Group 2 (C, G, H):** C has good relationships with G and H. Since relationships are transitive, G and H have a good relationship with each other.\n\nNow let's consider the relationship between E and H. We are given that E and H have a bad relationship.\n\nTherefore, the answer is No.\n\nFina"
+    },
+    {
+      "sample_id": 69,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **A's relationships:** A has good relationships with B, E, I, and G.\n2. **B's relationships:** B has a good relationship with A.  Since A and B have a good relationship, B is in the same group as A.\n3. **E's relationships:** E has good relationships with A and a bad relationship with J and H.\n4. **I's relationships:** I has good relationships with A and a bad relationship with D.\n5. **J's relationships:** J has good relationships with C and D, and bad relationships with E, H, and F.\n6. **H's relationships:** H has good relationships with F and bad relationships with E and J.\n7. **F's relationships:** F has a good relationship with H and a bad relationship with J.\n8. **D's relationships:** D has a bad relationship with I and a good relationship with J.\n9. **C's relationships:** C has a good relationship with J.\n10. **G's relationships:** G has a good relationship with A.\n\nNow let's determine the groups:\n\n*   **Group 1 (A, B, G, E, I):** A has good relationships with B, E, I, and G. B is connected to A, E is connected to A, I is connected to A, and G is connected to A. Therefore, A, B, E, G, and I are in the same group.\n*   **Group 2 (J, C, D):** J has good relationships with C and D. C is connected to J, and D is connected to J. Therefore, J, C, and D are in the same group.\n*   **Group 3 (H, F):** H has a good relationship with F. Therefore, H and F are in the same group.\n\nNow let's check for transitivity and bad relationships:\n\n*   Since A and E have a good relationship, and A and I have a good relationship, then E and I must have a good relationship.\n*   Since A and E have a good relationship, and E and J have a bad relationship, then A and J must have a bad relationship.\n*   Since A and E have a good relationship, and E and H have a bad relationship, then A and H must have a bad relationship.\n*   Since A and I have a good relationship, and I and D have a bad relationship, then A and D must have a bad relationship.\n*   Since J and C have a good relationship, and J and D have a good relationship, then C and D have a good relationship.\n*   Since J and D have a good relationship, and D and I have a bad relationship, then J and I must have a bad relationship.\n*   Since J and H have a bad relationship, and J and C have a good relationship, then H and C must have a bad relationship.\n*   Since J and H have a bad relationship, and J and D have a good relationship, then H and D must have a bad relationship.\n*   Since F and J have a bad relationship, and J and C have a good relationship, then F and C must have a bad relationship.\n*   Since F and J have a bad relationship, and J and D have a good relationship, then F and D must have a bad relationship.\n\nSince E and I are both in Group 1 (A, B, G, E, I), and all members of a group have good relationships with each other, E and I must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 85,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **A and H have a bad relationship.**\n2. **F and G have a good relationship.**\n3. **C and F have a bad relationship.**\n4. **H and F have a bad relationship.**\n5. **A and D have a good relationship.**\n6. **E and B have a good relationship.**\n7. **B and F have a bad relationship.**\n8. **A and F have a bad relationship.**\n9. **E and F have a bad relationship.**\n10. **C and H have a good relationship.**\n11. **E and H have a bad relationship.**\n12. **A and E have a bad relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: A, D** (A and D have a good relationship)\n*   **A and F have a bad relationship.** Since A is in Group 1, and A has a bad relationship with F, then everyone in Group 1 has a bad relationship with F. Therefore, D has a bad relationship with F.\n*   **A and H have a bad relationship.** Since A is in Group 1, and A has a bad relationship with H, then everyone in Group 1 has a bad relationship with H. Therefore, D has a bad relationship with H.\n*   **A and E have a bad relationship.** Since A is in Group 1, and A has a bad relationship with E, then everyone in Group 1 has a bad relationship with E. Therefore, D has a bad relationship with E.\n*   **E and B have a good relationship.**\n*   **B and F have a bad relationship.**\n*   **E and F have a bad relationship.**\n*   **H and F have a bad relationship.**\n*   **C and F have a bad relationship.**\n*   **C and H have a good relationship.**\n\nLet's consider the relationships involving E. We know:\n\n*   E and B have a good relationship.\n*   E and F have a bad relationship.\n*   E and H have a bad relationship.\n*   E and A have a bad relationship.\n\nNow, let's see if we can determine the relationship between B and E. We are given that E and B have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 59,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **A and I have a good relationship.**\n2. **D and I have a bad relationship.**\n3. **G and B have a good relationship.**\n4. **G and D have a good relationship.**\n5. **A and C have a good relationship.**\n6. **G and F have a good relationship.**\n7. **A and H have a good relationship.**\n8. **A and E have a good relationship.**\n9. **C and F have a bad relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1: A, C, E, F, G, H, I**\n    *   A has good relationships with C, E, F, G, H, I.\n    *   C has a good relationship with A.\n    *   E has a good relationship with A.\n    *   F has good relationships with A and G.\n    *   G has good relationships with A, B, D, F.\n    *   H has a good relationship with A.\n    *   I has a good relationship with A and D.\n    *   Since A has a good relationship with C, and C has a good relationship with A, they are in the same group.\n    *   Since A has a good relationship with E, and E has a good relationship with A, they are in the same group.\n    *   Since A has a good relationship with F, and F has a good relationship with A and G, and G has a good relationship with A, they are in the same group.\n    *   Since A has a good relationship with H, and H has a good relationship with A, they are in the same group.\n    *   Since A has a good relationship with I, and I has a good relationship with A and D, they are in the same group.\n    *   Since G has a good relationship with D, and A has a good relationship with I, and I has a good relationship with D, then A has a good relationship with D.\n    *   Since A has a good relationship with D, and A is in Group 1, then D is in Group 1.\n    *   Therefore, Group 1 is A, C, E, F, G, H, I, D.\n\n*   **B is in a separate group.**\n    *   G has a good relationship with B.\n    *   Since G is in Group 1, and G has a good relationship with B, B must be in Group 1. This contradicts the fact that groups are completely separate. Let's re-examine.\n\nLet's re-evaluate the group structure.\n\n*   A, C, E, G, H, I form a group because A has good relationships with all of them.\n*   Since G and D have a good relationship, D is also in this group. So, A, C, D, E, G, H, I form a group.\n*   Since C and F have a bad relationship, F is not in the same group as A, C, D, E, G, H, I.\n*   Since G and F have a good relationship, F must be in the same group as G. This is a contradiction.\n\nLet's re-examine the rules. If A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship.\n\n*   A, C, E, G, H, I are in a group.\n*   D and I have a bad relationship. Since I is in the group, D must be outside the group.\n*   G and D have a good relationship. This means D is not in the same group as A, C, E, G, H, I.\n*   G and B have a good relationship. This means B is not in the same group as A, C, E, G, H, I.\n*   C and F have a bad relationship. This means F is not in the same group as A, C, E, G, H, I.\n*   G and F have a good relationship. This means F is not in the same group as A, C, E, G, H, I.\n\nSo, we have two groups:\n* Group 1: A, C, E, G, H, I\n* Group 2: B, D, F\n\nSince H is in Group 1 and D is in Group 2, and groups are completely separate, H and D must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 94,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **B and H have a good relationship.**\n2. **A and D have a good relationship.**\n3. **D and F have a bad relationship.**\n4. **B and G have a good relationship.**\n5. **B and I have a good relationship.**\n6. **A and E have a bad relationship.**\n7. **E and F have a good relationship.**\n8. **B and C have a good relationship.**\n9. **C and E have a bad relationship.**\n10. **B and J have a good relationship.**\n11. **A and C have a bad relationship.**\n12. **B and F have a bad relationship.**\n\nNow let's deduce group memberships and relationships:\n\n*   **Group 1: B, C, G, H, I, J** - All have good relationships with B. Since B has good relationships with C, G, H, I, and J, and relationships are transitive, they all have good relationships with each other.\n*   **A and C have a bad relationship.** This means A is not in Group 1.\n*   **A and D have a good relationship.**\n*   **D and F have a bad relationship.** This means F is not in Group 1.\n*   **A and E have a bad relationship.** This means E is not in Group 1.\n*   **E and F have a good relationship.**\n*   **B and F have a bad relationship.**\n\nSince A and D have a good relationship, and D and F have a bad relationship, then A and F must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 93,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step to determine if C and B have a good relationship.\n\n1. **C and A have a good relationship.**\n2. **C and F have a good relationship.**\n3. **C and H have a bad relationship.**\n4. **H and E have a bad relationship.**\n5. **H and D have a good relationship.**\n6. **E and F have a bad relationship.**\n7. **E and H have a bad relationship.** (Redundant with 4)\n8. **H and B have a good relationship.**\n9. **E and G have a good relationship.**\n10. **C and E have a bad relationship.**\n\nNow let's deduce group memberships and relationships:\n\n*   **Group 1: C, A, F.**  Since C has a good relationship with A and F, and transitivity applies, A and F also have a good relationship with each other.\n*   **H is connected to B and D with good relationships.**\n*   **H has bad relationships with C and E.** This means the group {C, A, F} has a bad relationship with H, B, and D.\n*   **E has a bad relationship with C, F, and H.**\n*   **E has a good relationship with G.**\n*   **F has a bad relationship with E.**\n*   **Since C and E have a bad relationship, and C is in Group 1, E has a bad relationship with everyone in Group 1 (C, A, F).**\n*   **Since H has a bad relationship with C, and H has a good relationship with B, then C and B must have a bad relationship.**\n\nTherefore, C and B have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 84,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step to determine if F and H have a good relationship.\n\n1. **B and F have a good relationship.**\n2. **B and A have a good relationship.**\n3. **B and H have a good relationship.**\n4. **H and C have a bad relationship.**\n5. **C and E have a good relationship.**\n6. **C and I have a good relationship.**\n7. **C and D have a good relationship.**\n8. **C and G have a good relationship.**\n9. **E and H have a bad relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1: A, B, H** (Since B has good relationships with A and H)\n*   **Group 2: C, E, I, D, G** (C has good relationships with E, I, D, and G)\n\nSince H is in Group 1 and C is in Group 2, and H and C have a bad relationship, this confirms that Group 1 and Group 2 are separate.\n\nNow, let's consider F. F has a good relationship with B. Since B is in Group 1, F must also be in Group 1. Therefore, F is in Group 1 with A, B, and H.\n\nSince F is in Group 1 and H is in Group 1, they *should* have a good relationship. However, we need to check for any conflicting information.\n\nWe know E and H have a bad relationship. Since C and E have a good relationship, and C and H have a bad relationship, this is consistent with the transitive property.\n\nNow, let's see if we can determine the relationship between F and H directly. We know B and F have a good relationship, and B and H have a good relationship.  Since relationships are transitive, F and H *should* have a good relationship.\n\nHowever, let's consider the relationship between E and H. E and H have a bad relationship. Since C and E have a good relationship, and C and H have a bad relationship, this is consistent.\n\nSince F is in Group 1 (with A, B, H) and E is in Group 2 (with C, I, D, G), and E and H have a bad relationship, this doesn't directly tell us about F and H.\n\nLet's re-examine the rules. If A has a bad relationship with B, and A has a good relationship with C, then B and C must have a bad relationship. This rule doesn't apply here.\n\nSince B and F have a good relationship, and B and H have a good relationship, and relationships are transitive, F and H should have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 98,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules.\n\n1. **B and C have a good relationship.**\n2. **H and A have a good relationship.**\n3. **H and E have a good relationship.**\n4. **B and D have a good relationship.**\n5. **H and C have a bad relationship.**\n6. **B and G have a good relationship.**\n7. **B and F have a good relationship.**\n8. **A and I have a bad relationship.**\n9. **B and I have a good relationship.**\n\nNow let's deduce the group memberships and relationships:\n\n*   **Group 1 (B's group):** B has good relationships with C, D, G, F, and I.  Since good relationships are transitive, C, D, G, F, and I are also in this group. So, Group 1 consists of {B, C, D, F, G, I}.\n\n*   **H's relationships:** H has good relationships with A and E, and a bad relationship with C. Since C is in Group 1, H has a bad relationship with everyone in Group 1. Therefore, H has a bad relationship with B, C, D, F, G, and I.\n\n*   **A's relationships:** H has a good relationship with A. However, H has a bad relationship with everyone in Group 1. Since I is in Group 1, H has a bad relationship with I.  We are given that A and I have a bad relationship.\n\n*   **I's relationships:** B has a good relationship with I.  Since B is in Group 1, I is in Group 1.\n\nNow, let's address the question: Do I and A have a good relationship?\n\nWe are given that A and I have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 87,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step, applying the given rules.\n\n1. **E and I have a good relationship.**\n2. **E and H have a bad relationship.**\n3. **A and E have a bad relationship.**\n4. **C and D have a good relationship.**\n5. **A and H have a bad relationship.**\n6. **E and F have a good relationship.**\n7. **A and B have a good relationship.**\n8. **C and G have a good relationship.**\n9. **H and E have a bad relationship.** (Redundant with 2)\n10. **C and H have a good relationship.**\n11. **B and F have a bad relationship.**\n\nNow let's deduce groups and relationships:\n\n*   **Group 1 (A, B):** A and B have a good relationship. Since there are only two people, they form a group.\n*   **Relationship between Group 1 and E:** A and E have a bad relationship. Therefore, the entire Group 1 (A, B) has a bad relationship with E.\n*   **Relationship between E and H:** E and H have a bad relationship.\n*   **Relationship between A and H:** A and H have a bad relationship.\n*   **Relationship between B and F:** B and F have a bad relationship.\n*   **Relationship between E and F:** E and F have a good relationship.\n*   **Group 2 (C, D, G, H):** C and D have a good relationship, C and G have a good relationship, and C and H have a good relationship.  We need to see if D and G, D and H, and G and H have good relationships. We don't have direct information about D and G, D and H, or G and H. However, since C has good relationships with all three, let's assume for now that they all form a group.\n*   **Relationship between Group 1 and Group 2:** A has a bad relationship with H (from Group 2). Therefore, Group 1 (A, B) has a bad relationship with Group 2 (C, D, G, H).\n\nNow let's focus on the question: Do A and F have a good relationship?\n\nWe know:\n\n*   A and E have a bad relationship.\n*   E and F have a good relationship.\n*   A and B have a good relationship.\n*   B and F have a bad relationship.\n\nSince A and E have a bad relationship, and E and F have a good relationship, we cannot directly conclude anything about A and F. However, we know that A is in Group 1 (A, B) and B and F have a bad relationship.\n\nLet's consider the transitive property. If A had a good relationship with F, then since A and B have a good relationship, B would also have a good relationship with F. But we know B and F have a bad relationship. Therefore, A cannot have a good relationship with F.\n\nFina"
+    },
+    {
+      "sample_id": 82,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships and determine if H and F have a good relationship.\n\n1. **C and I have a good relationship.**\n2. **G and I have a bad relationship.**  Since C and I have a good relationship, and G and I have a bad relationship, C and G must have a bad relationship.\n3. **C and H have a bad relationship.**\n4. **C and D have a bad relationship.**\n5. **E and D have a bad relationship.**\n6. **D and G have a good relationship.** Since C and G have a bad relationship, and D and G have a good relationship, C and D must have a bad relationship. This is consistent with the given information.\n7. **A and F have a good relationship.**\n8. **A and H have a good relationship.**\n9. **A and B have a good relationship.**\n10. **A and E have a good relationship.**\n11. **E and C have a bad relationship.**\n\nNow let's identify groups.\n\n*   **Group 1: A, B, E, H.**  A has good relationships with B, E, and H. B and E have no direct relationship given, but A has good relationships with both, so they are in the same group. E and H have no direct relationship given, but A has good relationships with both, so they are in the same group. Therefore, A, B, E, and H are in the same group.\n*   **Group 2: C, I, G, D.** C has a good relationship with I, and a bad relationship with H and D. G has a bad relationship with I and a good relationship with D. D has a bad relationship with C and E, and a good relationship with G. I has a good relationship with C and a bad relationship with G. This group is complex. Let's analyze further. Since C and I have a good relationship, and G and I have a bad relationship, C and G have a bad relationship. Since C and D have a bad relationship, and D and G have a good relationship, C and G have a bad relationship. Since C and H have a bad relationship, and A and H have a good relationship, C and A have a bad relationship.\n\nNow, let's see if H and F have a good relationship. H is in Group 1 (A, B, E, H). F has a good relationship with A, who is in Group 1. However, we need to determine if there's any bad relationship between Group 1 and any other group.\n\nWe know C and H have a bad relationship. Since H is in Group 1, and C is in Group 2, Group 1 and Group 2 have a bad relationship. Since F is in Group 1, F and C have a bad relationship.\n\nTherefore, H and F are in the same group (Group 1). However, since Group 1 and Group 2 have a bad relationship, and C is in Group 2, H and F have a bad relationship with C. This doesn't directly tell us if H and F have a good relationship.\n\nLet's consider the transitive property. A has a good relationship with F and H. Since A, B, E, and H are in the same group, and A and F have a good relationship, F must also be in the same group as A, B, E, and H. Therefore, H and F should have a good relationship. However, we know that Group 1 and Group 2 have a bad relationship. Since C is in Group 2, and C and H have a bad relationship, and C and F have a bad relationship, H and F cannot have a good relationship.\n\nSince H and F are both in Group 1, and Group 1 has a bad relationship with Group 2, and C is in Group 2, and C and H have a bad relationship, and C and F have a bad relationship, H and F must have a bad relationship.\n\nFina"
+    },
+    {
+      "sample_id": 99,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step by step:\n\n1. **H and E have a bad relationship.**\n2. **C and E have a bad relationship.**\n3. **D and E have a good relationship.**\n4. **D and G have a good relationship.**\n5. **D and F have a good relationship.**\n6. **H and C have a bad relationship.**\n7. **A and C have a bad relationship.**\n8. **C and B have a good relationship.**\n9. **H and A have a good relationship.**\n10. **A and D have a bad relationship.**\n\nNow let's deduce the group memberships:\n\n*   **Group 1: A, H** (H and A have a good relationship)\n*   Since A and D have a bad relationship, D is not in Group 1.\n*   Since H and E have a bad relationship, E is not in Group 1.\n*   Since H and C have a bad relationship, C is not in Group 1.\n*   Since A and C have a bad relationship, C is not in Group 1.\n*   Since C and B have a good relationship, and C is not in Group 1, B is not in Group 1.\n\n*   **Group 2: C, B** (C and B have a good relationship)\n*   Since C and E have a bad relationship, E is not in Group 2.\n*   Since A and C have a bad relationship, A is not in Group 2.\n*   Since H and C have a bad relationship, H is not in Group 2.\n\n*   **Group 3: D, F, G** (D and F have a good relationship, D and G have a good relationship)\n*   Since D and E have a good relationship, E is not in Group 3.\n*   Since A and D have a bad relationship, A is not in Group 3.\n*   Since H and E have a bad relationship, H is not in Group 3.\n\nNow let's consider the relationships between groups:\n\n*   Group 1 (A, H) and Group 3 (D, F, G): A and D have a bad relationship. Therefore, everyone in Group 1 has a bad relationship with everyone in Group 3.  So, H has a bad relationship with D, F, and G.\n*   Group 2 (C, B) and Group 3 (D, F, G):  We don't have direct information about relationships between C/B and D/F/G.\n\nWe want to know if H and F have a good relationship. We know H has a bad relationship with everyone in Group 3 (D, F, G). Therefore, H has a bad relationship with F.\n\nFina"
+    },
+    {
+      "sample_id": 91,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "Yes",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step:\n\n1. **A's relationships:** A has good relationships with B, C, E, and F.\n2. **C's relationships:** C has a good relationship with A, but bad relationships with G and H.\n3. **H's relationships:** H has a good relationship with D and G, but a bad relationship with C.\n4. **G's relationships:** G has a good relationship with H, but a bad relationship with C.\n\nNow let's deduce group memberships:\n\n*   **Group 1 (A's group):** Since A has good relationships with B, C, E, and F, and groups are defined by good relationships, let's see if we can build a group around A.\n    *   A and B have a good relationship.\n    *   A and C have a good relationship.\n    *   A and E have a good relationship.\n    *   A and F have a good relationship.\n*   **Group 2 (H's group):** H has a good relationship with D and G.\n    *   H and D have a good relationship.\n    *   H and G have a good relationship.\n\nNow let's consider transitivity and the bad relationships:\n\n*   C has a bad relationship with G and H. Since A has a good relationship with C, A must have a bad relationship with both G and H (due to rule 2).\n*   Therefore, A has bad relationships with G and H. This means A cannot be in the same group as H or G.\n*   Since A has a good relationship with B, E, and F, and A has bad relationships with G and H, B, E, and F must have bad relationships with G and H.\n*   Since H has a good relationship with D, and H has a bad relationship with C, D must have a bad relationship with C.\n*   Since C has a bad relationship with G, and A has a good relationship with C, A must have a bad relationship with G.\n*   Since H has a good relationship with G, and C has a bad relationship with H, C must have a bad relationship with G.\n\nNow let's determine if E and B have a good relationship.\n\n*   A has a good relationship with B and E.\n*   Since A has a good relationship with B and C, and C has a bad relationship with H, B must have a bad relationship with H.\n*   Since A has a good relationship with E and C, and C has a bad relationship with G, E must have a bad relationship with G.\n*   Since A has a good relationship with B and E, and A has a bad relationship with G and H, B and E must have a bad relationship with G and H.\n\nSince A has a good relationship with B and E, and there's no direct information stating they have a bad relationship, let's see if we can determine if they are in the same group.  Since A is in a group with B and E, and C is not in that group, and C has bad relationships with G and H, and A has bad relationships with G and H, then B and E must also have bad relationships with G and H.  This doesn't tell us if B and E have a good or bad relationship with each other.\n\nHowever, consider this: A has good relationships with B and E. If B and E had a *bad* relationship, then A would have to have a bad relationship with both B and E, which contradicts the given information. Therefore, B and E must have a good relationship.\n\nFinal"
+    },
+    {
+      "sample_id": 95,
+      "difficulty": "unknown",
+      "question_type": "reasoning",
+      "true_answer": "No",
+      "prediction": "Unknown",
+      "correct": false,
+      "response": "Let's analyze the relationships step-by-step based on the given rules:\n\n1. **B and C have a good relationship.**\n2. **A and G have a good relationship.**\n3. **A and C have a bad relationship.**\n4. **A and D have a good relationship.**\n5. **G and C have a bad relationship.**\n6. **B and H have a good relationship.**\n7. **A and F have a good relationship.**\n8. **B and E have a good relationship.**\n\nNow let's deduce the group memberships:\n\n*   **Group 1: A, D, F** - A has good relationships with D and F. Since groups are defined by everyone having good relationships with each other, and we haven't been given any bad relationships within this set, we can assume they are in the same group.\n\n*   **Group 2: B, E, H** - B has good relationships with E and H.  Again, no bad relationships within this set are given, so they form a group.\n\n*   **Relationship between Group 1 and Group 2:** A has a bad relationship with C. A is in Group 1. G has a bad relationship with C. G is not in Group 1. B has a good relationship with C. B is in Group 2. Therefore, Group 1 and Group 2 are separate.\n\n*   **Relationship between A and C:** A and C have a bad relationship.\n\n*   **Relationship between G and C:** G and C have a bad relationship.\n\n*   **Relationship between B and C:** B and C have a good relationship.\n\nSince A and C have a bad relationship, and A is in Group 1, then everyone in Group 1 has a bad relationship with everyone in the group containing C.\n\nSince B and C have a good relationship, and B is in Group 2, then everyone in Group 2 has a good relationship with everyone in the group containing C.\n\nNow, let's consider the relationships involving E. B and E have a good relationship. B is in Group 2. Therefore, E is also in Group 2.\n\nSince B and C have a good relationship, and B is in Group 2, then C must be in a group with B. However, we know A and C have a bad relationship, and A is in Group 1. This means C is not in Group 1.\n\nSince G and C have a bad relationship, and G is not in Group 1, then G is not in Group 2.\n\nSince A and F have a good relationship, and A is in Group 1, then F is also in Group 1.\n\nSince B and H have a good relationship, and B is in Group 2, then H is also in Group 2.\n\nWe know B and E have a good relationship, and both are in Group 2. Since Group 2 is defined as everyone having good relationships with each other, F and E do not necessarily have a good relationship. They are in different groups.\n\nSince Group 1 and Group 2 are separate, and A (from Group 1) has a bad relationship with C, and B (from Group 2) has a good relationship with C, then Group 1 and Group 2 are separate.\n\nSince B and E have a good relationship, and B is in Group 2, E is also in Group 2. Since F is in Group 1, and Group 1 and Group 2 are separate, F and E must have a bad relationship.\n\nFina"
+    }
+  ]
+}

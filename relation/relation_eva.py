@@ -255,7 +255,7 @@ def evaluate_model(model, difficulty, question_type, dataset_path, num_samples=N
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(description='Evaluate model performance on relation tasks')
-    parser.add_argument('--models', type=str, nargs='+', default=['o3-mini','gpt-4o-mini','gpt-4o'],
+    parser.add_argument('--models', type=str, nargs='+', default=['gemma-2-9B'],
                         help='Models to evaluate (can provide multiple)')
     parser.add_argument('--difficulties', type=str, nargs='+', default=['easy', 'hard'],
                         help='Difficulty levels to evaluate')
@@ -266,7 +266,7 @@ def parse_arguments():
                         help='Number of samples to evaluate (default: all)')
     parser.add_argument('--force_reevaluate', action='store_true',
                         help='Force re-evaluation of models even if they exist in summary')
-    parser.add_argument('--concurrency', type=int, default=10,
+    parser.add_argument('--concurrency', type=int, default=25,
                         help='Number of concurrent evaluations to run (default: 4)')
     
     return parser.parse_args()

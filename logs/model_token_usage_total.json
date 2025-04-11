@@ -4,8 +4,8 @@
     "output_tokens": 1812012
   },
   "gemma-2-9B": {
-    "input_tokens": 4270131,
-    "output_tokens": 1230724
+    "input_tokens": 4622432,
+    "output_tokens": 1652955
   },
   "gemma-2-27B": {
     "input_tokens": 4802537,
