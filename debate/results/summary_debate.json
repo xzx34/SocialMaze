@@ -16,23 +16,6 @@
       }
     }
   },
-  "gemma-2-9b": {
-    "accuracy": 76.0,
-    "correct": 76,
-    "total": 100,
-    "stats": {
-      "Reject": {
-        "total": 76,
-        "recall": 100.0,
-        "precision": 76.0
-      },
-      "Accept": {
-        "total": 24,
-        "recall": 0.0,
-        "precision": 0
-      }
-    }
-  },
   "gemma-2-27B": {
     "accuracy": 73.0,
     "correct": 73,
