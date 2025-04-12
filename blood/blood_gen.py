@@ -167,14 +167,44 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
         if count > 0:
             possible_roles.append(role)
     
-    # Calculate scenarios per role
-    scenarios_per_role = n_scenarios_per_type // len(possible_roles)
-    extra_scenarios = n_scenarios_per_type % len(possible_roles)
+    # 使用固定比例分配场景数量
+    role_scenario_targets = {}
+    
+    # 1号Investigator和Criminal各占10%
+    role_scenario_targets["Investigator"] = int(n_scenarios_per_type * 0.00)
+    role_scenario_targets["Criminal"] = int(n_scenarios_per_type * 0.00)
+    
+    # 计算Rumormonger和Lunatic需要均分的剩余场景数
+    remaining_scenarios = n_scenarios_per_type - role_scenario_targets["Investigator"] - role_scenario_targets["Criminal"]
+    
+    # 检查dataset_type中是否包含Rumormonger和Lunatic
+    rumormonger_exists = "Rumormonger" in possible_roles
+    lunatic_exists = "Lunatic" in possible_roles
+    
+    # 计算Rumormonger和Lunatic的场景数
+    if rumormonger_exists and lunatic_exists:
+        # 两者都存在，均分剩余场景
+        role_scenario_targets["Rumormonger"] = remaining_scenarios // 2
+        role_scenario_targets["Lunatic"] = remaining_scenarios - role_scenario_targets["Rumormonger"]
+    elif rumormonger_exists:
+        # 只有Rumormonger，获取所有剩余场景
+        role_scenario_targets["Rumormonger"] = remaining_scenarios
+    elif lunatic_exists:
+        # 只有Lunatic，获取所有剩余场景
+        role_scenario_targets["Lunatic"] = remaining_scenarios
+    
+    # 移除不在possible_roles中的角色
+    role_scenario_targets = {role: count for role, count in role_scenario_targets.items() if role in possible_roles}
+    
+    # 确保总数等于n_scenarios_per_type
+    total = sum(role_scenario_targets.values())
+    if total < n_scenarios_per_type:
+        # 将剩余的场景分配给最后一个角色
+        last_role = possible_roles[-1]
+        role_scenario_targets[last_role] += n_scenarios_per_type - total
     
     # Keep track of generated scenarios per role
     role_scenario_counts = {role: 0 for role in possible_roles}
-    role_scenario_targets = {role: scenarios_per_role + (1 if i < extra_scenarios else 0) 
-                            for i, role in enumerate(possible_roles)}
     
     # Generate scenarios until we have enough for each role
     attempts = 0
