@@ -43,9 +43,9 @@ for filename in sorted(all_results_files):
             self_role_acc3 = round3.get('self_role_accuracy', 0)
 
             model_data[model_name] = {
-                'round1': (criminal_acc1 + self_role_acc1) / 2,
-                'round2': (criminal_acc2 + self_role_acc2) / 2,
-                'round3': (criminal_acc3 + self_role_acc3) / 2
+                'round1': (criminal_acc1) ,
+                'round2': (criminal_acc2) ,
+                'round3': (criminal_acc3) 
             }
 
 # 模型名称映射字典，用于重命名模型
@@ -58,7 +58,9 @@ model_name_map = {
     'gpt-4o-mini': 'GPT-4o-mini',
     'gpt-4o': 'GPT-4o',
     'qwen-2.5-72B': 'Qwen-2.5-72B',
-    'qwq': 'QWQ-32B'
+    'qwq': 'QwQ-32B',
+    'o1': 'o1',
+    'gemeni-2.5': 'Gemeni-2.5-Pro'
 }
 
 # 指定模型的顺序
@@ -71,10 +73,28 @@ model_order = [
     'gpt-4o',
     'o3-mini',
     'qwq',  
-    'deepseek-r1'
+    'deepseek-r1',
+    'o1',
+    'gemeni-2.5'
 ]
 
 # 重组数据以匹配新的顺序和名称
+models = [m for m in model_order if m in model_data]
+
+# 手动添加o1和gemeni-2.5的数据
+model_data['o1'] = {
+    'round1': 42,
+    'round2': 68,
+    'round3': 77
+}
+
+model_data['gemeni-2.5'] = {
+    'round1': 43,
+    'round2': 74,
+    'round3': 88
+}
+
+# 确保包含手动添加的模型
 models = [m for m in model_order if m in model_data]
 display_names = [model_name_map.get(m, m) for m in models]
 
@@ -125,9 +145,9 @@ plt.tight_layout()
 plt.subplots_adjust(top=0.8)  # 为图例留出更多空间
 
 # 保存图像
-plt.savefig('model_accuracy_comparison.png', dpi=300, bbox_inches='tight')
+plt.savefig('multiturn_role.png', dpi=300, bbox_inches='tight')
 
 # 显示图像
 plt.show()
 
-print("图表已保存为 model_accuracy_comparison.png")
+print("图表已保存为 multiturn_role.png")

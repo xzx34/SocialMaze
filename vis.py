@@ -68,11 +68,11 @@ short_chain_lengths = [task_results[task]['short_chain_length'] for task in sort
 
 # Task name mapping for better readability
 task_name_map = {
-    'blood': 'Hidden Role',
+    'blood': 'Role Deduction',
     'debate': 'Review Decision',
-    'relation': 'Social Graph',
+    'relation': 'Graph Analysis',
     'review': 'Rating Estimation',
-    'spy': 'Word Spy',
+    'spy': 'Find the Spy',
     'user': 'User Profile Inference'
 }
 
@@ -131,7 +131,7 @@ lines2, labels2 = ax2.get_legend_handles_labels()
 ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right', fontsize=14)
 
 plt.tight_layout()
-plt.savefig('combined_accuracy_length_ratio.png', dpi=300, bbox_inches='tight')
+plt.savefig('deep_reason.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 print("Combined chart generated successfully!")

@@ -151,5 +151,15 @@
         "precision": 53.333333333333336
       }
     }
+  },
+  "gemeni-2.5": {
+    "accuracy": 78,
+    "correct": 78,
+    "total": 100
+  },
+  "o1": {
+    "accuracy": 86.0,
+    "correct": 86,
+    "total": 100
   }
 }

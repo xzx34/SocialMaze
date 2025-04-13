@@ -14,7 +14,7 @@ summary_filename = 'summary_debate.json'
 model_data = {}
 
 # 阶段名称
-stage_names = ['Abstract Only', 'With Reviews', 'After Rebuttal']
+stage_names = ['Paper Informantion', 'With Reviews', 'After Rebuttal']
 
 # 读取和处理每个阶段的数据
 for stage_idx, results_dir in enumerate(results_dirs):
@@ -50,21 +50,23 @@ model_name_map = {
     'gpt-4o-mini': 'GPT-4o-mini',
     'gpt-4o': 'GPT-4o',
     'qwen-2.5-72B': 'Qwen-2.5-72B',
-    'qwq': 'QWQ-32B'
+    'qwq': 'QWQ-32B',
+    'o1':'o1',
+    'gemeni-2.5': 'Gemeni-2.5-Pro'
 }
 
 # 指定模型的顺序
 model_order = [
     'llama-3.1-8B',
     'llama-3.3-70B', 
-    #'gemma-2-9b',
-    #'gemma-2-27B',
     'qwen-2.5-72B',
     'gpt-4o-mini',
     'gpt-4o',
     'o3-mini',
     'qwq',
-    'deepseek-r1'
+    'deepseek-r1',
+    'o1',
+    'gemeni-2.5'
 ]
 
 # 重组数据以匹配新的顺序和名称
@@ -119,9 +121,9 @@ plt.tight_layout()
 plt.subplots_adjust(top=0.85)  # 为图例和标题留出更多空间
 
 # 保存图像
-plt.savefig('paper_acceptance_prediction_accuracy.png', dpi=300, bbox_inches='tight')
+plt.savefig('multiturn_debate.png', dpi=300, bbox_inches='tight')
 
 # 显示图像
 plt.show()
 
-print("图表已保存为 paper_acceptance_prediction_accuracy.png")
+print("图表已保存为 multiturn_debate.png")
