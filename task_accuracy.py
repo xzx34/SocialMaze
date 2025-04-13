@@ -94,8 +94,8 @@ bar_width = 0.15
 index = np.arange(num_models)
 
 # Create color gradients for bar charts and lines - ordered from light to dark
-bar_colors = cm.Blues([0.3, 0.5, 0.7, 0.9])  # Increasing blue intensity for bars
-line_colors = cm.Reds([0.3, 0.5, 0.7, 0.9])  # Increasing red intensity for lines
+line_colors = cm.Reds([0.3, 0.5, 0.7, 0.9])  # Increasing red intensity for bars (now for self-role)
+bar_colors= cm.Blues([0.3, 0.5, 0.7, 0.9])  # Increasing blue intensity for lines (now for criminal)
 
 # Bar positions adjustment for each scenario
 bar_positions = {}
@@ -109,24 +109,7 @@ line_markers = ['o', 's', 'D', '^']
 # Create second y-axis for line plots
 ax2 = ax.twinx()
 
-# Plot bar charts for criminal accuracy
-for i, scenario in enumerate(scenarios):
-    scenario_data = []
-    for model in models:
-        if model in results and scenario in results[model]:
-            scenario_data.append(results[model][scenario]['criminal_accuracy'])
-        else:
-            scenario_data.append(0)
-    
-    bar = ax.bar(bar_positions[scenario], scenario_data, bar_width, 
-                 color=bar_colors[i], label=f'{scenario_names[scenario]} (Criminal)', 
-                 edgecolor='black', linewidth=0.5, alpha=0.8)
-    
-    # Removed value labels on bars
-    
-    bars.append(bar)
-
-# Plot lines for self-role accuracy
+# Plot bar charts for self-role accuracy (previously was criminal accuracy)
 for i, scenario in enumerate(scenarios):
     scenario_data = []
     for model in models:
@@ -135,21 +118,34 @@ for i, scenario in enumerate(scenarios):
         else:
             scenario_data.append(0)
     
+    bar = ax.bar(bar_positions[scenario], scenario_data, bar_width, 
+                 color=bar_colors[i], label=f'{scenario_names[scenario]} (Self-Role)', 
+                 edgecolor='black', linewidth=0.5, alpha=0.8)
+    
+    bars.append(bar)
+
+# Plot lines for criminal accuracy (previously was self-role accuracy)
+for i, scenario in enumerate(scenarios):
+    scenario_data = []
+    for model in models:
+        if model in results and scenario in results[model]:
+            scenario_data.append(results[model][scenario]['criminal_accuracy'])
+        else:
+            scenario_data.append(0)
+    
     # Use a different position set for lines (center of the model group)
     line_pos = index
     line = ax2.plot(line_pos, scenario_data, marker=line_markers[i], linestyle='-', 
                     color=line_colors[i], linewidth=2, markersize=8,
-                    label=f'{scenario_names[scenario]} (Self-Role)')
-    
-    # Removed value labels on line points
+                    label=f'{scenario_names[scenario]} (Criminal)')
     
     lines.extend(line)
 
 # Set title and labels
 ax.set_title('Model Performance Comparison In Hidden Role Deduction', fontsize=18, fontweight='bold')
 ax.set_xlabel('Models', fontsize=14)
-ax.set_ylabel('Criminal Identification Accuracy (%)', fontsize=14)
-ax2.set_ylabel('Self-Role Identification Accuracy (%)', fontsize=14)
+ax.set_ylabel('Self-Role Identification Accuracy (%)', fontsize=14)
+ax2.set_ylabel('Criminal Identification Accuracy (%)', fontsize=14)
 
 # Set x-ticks and labels
 ax.set_xticks(index)
@@ -165,15 +161,15 @@ ax.grid(axis='y', linestyle='--', alpha=0.3)
 # 创建清晰的图例，确保柱状图颜色有明确标注
 legend_elements = []
 
-# 柱状图图例（带颜色说明）
+# 柱状图图例（带颜色说明）- 现在是Self-Role
 for i, scenario in enumerate(scenarios):
     legend_elements.append(Patch(facecolor=bar_colors[i], edgecolor='black', 
-                               label=f'{scenario_names[scenario]} (Criminal)', alpha=0.8))
+                               label=f'{scenario_names[scenario]} (Self-Role)', alpha=0.8))
 
-# 折线图图例
+# 折线图图例 - 现在是Criminal
 for i, scenario in enumerate(scenarios):
     legend_elements.append(Line2D([0], [0], color=line_colors[i], marker=line_markers[i],
-                               label=f'{scenario_names[scenario]} (Self-Role)', 
+                               label=f'{scenario_names[scenario]} (Criminal)', 
                                markersize=8, linestyle='-', linewidth=2))
 
 # 添加组合图例
