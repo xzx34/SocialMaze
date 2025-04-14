@@ -4,17 +4,22 @@ import numpy as np
 import os
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
+import matplotlib.patheffects as path_effects
 
-# Initialize data structures
+# 增大全局字体
+plt.rcParams.update({'font.size': 16, 'axes.titlesize': 18, 'axes.labelsize': 16})
+plt.rcParams['axes.linewidth'] = 1.6
+
+# 初始化角色及其颜色，使用新的配色方案
 roles = ['Investigator', 'Criminal', 'Rumormonger', 'Lunatic']
 role_colors = {
-    'Investigator': 'forestgreen',
-    'Criminal': 'darkred',
-    'Rumormonger': 'darkorange',
-    'Lunatic': 'darkblue'
+    'Investigator': '#2E594D',
+    'Criminal': '#44886F',
+    'Rumormonger': '#87C2A9',
+    'Lunatic': '#D9EEE3'
 }
 
-# Define model display names - ORDER MATTERS HERE
+# 定义模型展示名称 —— 顺序很重要
 model_display_names = {
     'llama-3.1-8B': 'Llama-3.1-8B',
     'llama-3.3-70B': 'Llama-3.3-70B',
@@ -27,26 +32,24 @@ model_display_names = {
     'o1': 'o1',
     'Gemeni-2.5-Pro': 'Gemeni-2.5-Pro'
 }
-
-# Use the order of models directly from model_display_names
 models = list(model_display_names.keys())
 
-# Function to load data from individual result files
+# 从结果文件中提取角色特定数据的函数
 def extract_role_specific_data(file_path):
     role_data = {}
     if os.path.exists(file_path):
         with open(file_path, 'r') as f:
             data = json.load(f)
-        if 'summary' in data and 'role_specific' in data['summary']:
-            for role in roles:
-                if role in data['summary']['role_specific'] and '3' in data['summary']['role_specific'][role]:
-                    role_data[role] = {
-                        'criminal_accuracy': data['summary']['role_specific'][role]['3']['criminal_accuracy'],
-                        'self_role_accuracy': data['summary']['role_specific'][role]['3']['self_role_accuracy']
-                    }
+            if 'summary' in data and 'role_specific' in data['summary']:
+                for role in roles:
+                    if role in data['summary']['role_specific'] and '3' in data['summary']['role_specific'][role]:
+                        role_data[role] = {
+                            'criminal_accuracy': data['summary']['role_specific'][role]['3']['criminal_accuracy'],
+                            'self_role_accuracy': data['summary']['role_specific'][role]['3']['self_role_accuracy']
+                        }
     return role_data
 
-# Hard-code data for o1 and Gemeni-2.5-Pro models
+# 针对 o1 和 Gemeni-2.5-Pro 模型硬编码数据
 special_model_data = {
     'o1': {
         'Investigator': {'criminal_accuracy': 96, 'self_role_accuracy': 100},
@@ -62,7 +65,7 @@ special_model_data = {
     }
 }
 
-# Collect data for all models
+# 收集所有模型的数据
 results = {}
 for model in models:
     if model in special_model_data:
@@ -71,74 +74,71 @@ for model in models:
         file_path = f"blood/results/{model}_6_all_results.json"
         results[model] = extract_role_specific_data(file_path)
 
-# Create figure
-plt.figure(figsize=(20, 10))
+# 创建绘图窗口
 fig, ax_bar = plt.subplots(figsize=(20, 10))
 ax_line = ax_bar.twinx()
 
-# Set width of bars
+# 设置柱状图宽度
 bar_width = 0.15
 index = np.arange(len(models))
 
-# Create arrays for legend
-bar_handles = []
-line_handles = []
+# 用来存放图例元素
+legend_elements = []
 
-# Plot for each role
+# 针对每个角色分别绘图
 for i, role in enumerate(roles):
-    # Prepare data arrays
     criminal_accuracy_data = []
     self_role_accuracy_data = []
-    
+
     for model in models:
         model_data = results.get(model, {})
         role_data = model_data.get(role, {'criminal_accuracy': 0, 'self_role_accuracy': 0})
         criminal_accuracy_data.append(role_data.get('criminal_accuracy', 0))
         self_role_accuracy_data.append(role_data.get('self_role_accuracy', 0))
-    
-    # Plot bars for self-role accuracy on left axis
+
+    # 计算柱状图位置
     bar_position = index + (i - 1.5) * bar_width
-    bars = ax_bar.bar(bar_position, self_role_accuracy_data, bar_width, 
-                     color=role_colors[role], edgecolor='black', alpha=0.6)
-    bar_handles.append(bars)
-    
-    # Plot lines for criminal accuracy on right axis
+    # 绘制自身角色识别准确率柱状图（左侧坐标轴）
+    ax_bar.bar(bar_position, self_role_accuracy_data, bar_width, 
+               color=role_colors[role], edgecolor='black', linewidth=1.5, alpha=0.6)
+
+    # 绘制犯罪角色识别准确率的折线图（右侧坐标轴）
     line = ax_line.plot(index, criminal_accuracy_data, marker='o', linestyle='-', 
-                       color=role_colors[role], linewidth=2, markersize=8)
-    line_handles.append(line[0])
+                 color=role_colors[role], linewidth=4, markersize=8,
+                 markeredgecolor='black', markeredgewidth=0.8
+                 )
+    
+    # 添加黑色描边效果
+    line[0].set_path_effects([path_effects.Stroke(linewidth=5, foreground='black'),
+                           path_effects.Normal()])
 
-# Set labels and title
-ax_bar.set_title('Role-Specific Performance in Full Task', fontsize=18, fontweight='bold')
-ax_bar.set_xlabel('Models', fontsize=14)
-ax_bar.set_ylabel('Self-Role Identification Accuracy (%)', fontsize=14)
-ax_line.set_ylabel('Criminal Identification Accuracy (%)', fontsize=14)
+    # 为每个角色添加图例元素（一次添加柱状图和折线图图例）
+    legend_elements.append(Patch(facecolor=role_colors[role], edgecolor='black', alpha=0.6,
+                                 label=f'{role} (Self-Role)'))
+    legend_elements.append(Line2D([0], [0], color=role_colors[role], marker='o', linestyle='-',
+                                  linewidth=4, markersize=8, markeredgecolor='black', markeredgewidth=0.5,
+                                  path_effects=[path_effects.Stroke(linewidth=5, foreground='black'),
+                                               path_effects.Normal()],
+                                  label=f'{role} (Criminal)'))
 
-# Set x-ticks and labels
+# 设置y轴标签（保留y轴标签以便说明数值含义）
+ax_bar.set_ylabel('Self-Role Identification Accuracy (%)', fontsize=26)
+ax_line.set_ylabel('Criminal Identification Accuracy (%)', fontsize=26)
+
+# 设置x轴刻度
 ax_bar.set_xticks(index)
-ax_bar.set_xticklabels([model_display_names[model] for model in models], rotation=45, ha='right', fontsize=12)
+ax_bar.set_xticklabels([model_display_names[model] for model in models], rotation=20, ha='center', fontsize=18)
 
-# Set y-limits
-ax_bar.set_ylim(0, 105)
-ax_line.set_ylim(0, 105)
+# 设置y轴范围
+ax_bar.set_ylim(0, 115)
+ax_line.set_ylim(0, 115)
 
-# Add grid
+# 添加网格线
 ax_bar.grid(axis='y', linestyle='--', alpha=0.3)
 
-# Create legend with custom handles
-legend_elements = []
-for i, role in enumerate(roles):
-    # Add bar element
-    legend_elements.append(Patch(facecolor=role_colors[role], edgecolor='black', alpha=0.6,
-                                label=f'{role} (Self-Role)'))
-    
-    # Add line element
-    legend_elements.append(Line2D([0], [0], color=role_colors[role], marker='o', linestyle='-',
-                                linewidth=2, markersize=8, label=f'{role} (Criminal)'))
+# 将图例放置在图内部的左上角，并设置半透明背景
+ax_bar.legend(handles=legend_elements,ncol=4, loc='upper left', framealpha=0.8, fontsize=17)
 
-# Add legend
-fig.legend(handles=legend_elements, loc='upper center', 
-           bbox_to_anchor=(0.5, 0.05), ncol=4, fontsize=12)
-
-plt.tight_layout(rect=[0, 0.1, 1, 0.96])
+plt.tight_layout()
 plt.savefig('role_accuracy.png', dpi=300, bbox_inches='tight')
-print("Role-specific accuracy chart saved as 'role_accuracy.png'") 
+print("Role-specific accuracy chart saved as 'role_accuracy.png'")

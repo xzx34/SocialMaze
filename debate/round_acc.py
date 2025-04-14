@@ -97,13 +97,12 @@ bars2 = plt.bar(x, stage2_values, width, label=stage_names[1], color=colors[1],
 bars3 = plt.bar(x + width, stage3_values, width, label=stage_names[2], color=colors[2], 
                 edgecolor='black', linewidth=linewidth, alpha=alpha_stages[2])
 
-# 添加标题和标签
-#plt.title('Model Accuracy in Paper Acceptance Prediction', fontsize=16, fontweight='bold')
-plt.ylabel('Accuracy (%)', fontsize=14, fontweight='bold')
+# 添加标签，增大字体
+plt.ylabel('Accuracy (%)', fontsize=24, fontweight='bold')  # 增大字体
 
-# 设置x轴标签为模型显示名称
-plt.xticks(x, display_names, rotation=45, ha='right', fontsize=12)
-plt.yticks(fontsize=12)
+# 设置x轴标签为模型显示名称，增大字体
+plt.xticks(x, display_names, rotation=20, ha='center', fontsize=16)  # 增大字体
+plt.yticks(fontsize=14)  # 增大字体
 
 # 设置y轴范围，使图表更紧凑
 y_max = max(max(stage1_values), max(stage2_values), max(stage3_values))
@@ -112,13 +111,11 @@ plt.ylim(0, min(100, y_max * 1.15))  # 设置上限为最大值的1.15倍或100�
 # 添加网格线以便于阅读，但降低可见度
 plt.grid(axis='y', linestyle='--', alpha=0.3, color='gray')
 
-# 将图例放在图表完全外部的顶部，横向排列
-plt.legend(bbox_to_anchor=(0.5, 1.12), loc='upper center', ncol=3, fontsize=12, 
-           frameon=True, edgecolor='black')
+# 将图例放在图表内部的右上角，增大字体
+plt.legend(loc='upper left', fontsize=15, ncol=3, frameon=True, edgecolor='black')  # 增大字体，移到图内
 
 # 调整布局
 plt.tight_layout()
-plt.subplots_adjust(top=0.85)  # 为图例和标题留出更多空间
 
 # 保存图像
 plt.savefig('multiturn_debate.png', dpi=300, bbox_inches='tight')

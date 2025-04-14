@@ -2,11 +2,14 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.cm as cm
-from matplotlib.colors import LinearSegmentedColormap
 import os
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
+import matplotlib.patheffects as path_effects
+
+# 增大全局字体
+plt.rcParams.update({'font.size': 16, 'axes.titlesize': 18, 'axes.labelsize': 16})
+plt.rcParams['axes.linewidth'] = 1.6
 
 # Initialize data structures
 scenarios = ['original', 'lunatic',  'rumormonger','all']
@@ -20,6 +23,14 @@ metrics = ['criminal_accuracy', 'self_role_accuracy']
 metric_names = {
     'criminal_accuracy': 'Criminal Identification Accuracy',
     'self_role_accuracy': 'Self-Role Identification Accuracy'
+}
+
+# 更新配色方案，使用同样风格的颜色
+scenario_colors = {
+    'original': '#2E594D',
+    'lunatic': '#44886F',
+    'rumormonger': '#87C2A9',
+    'all': '#D9EEE3'
 }
 
 # Define model display names - ORDER MATTERS HERE
@@ -85,31 +96,23 @@ model_display_list = [model_display_names[model] for model in models]
 num_models = len(models)
 num_scenarios = len(scenarios)
 
-# Create combined figure
-plt.figure(figsize=(20, 7))
-fig, ax = plt.subplots(figsize=(20, 7))
+# 创建绘图窗口
+fig, ax_bar = plt.subplots(figsize=(20, 10))
+ax_line = ax_bar.twinx()
 
 # Set width of bars
 bar_width = 0.15
 index = np.arange(num_models)
-
-# Create color gradients for bar charts and lines - ordered from light to dark
-line_colors = cm.Reds([0.3, 0.5, 0.7, 0.9])  # Increasing red intensity for bars (now for self-role)
-bar_colors= cm.Blues([0.3, 0.5, 0.7, 0.9])  # Increasing blue intensity for lines (now for criminal)
 
 # Bar positions adjustment for each scenario
 bar_positions = {}
 for i, scenario in enumerate(scenarios):
     bar_positions[scenario] = index + (i - 1.5) * bar_width
 
-bars = []
-lines = []
-line_markers = ['o', 's', 'D', '^']
+# 用来存放图例元素
+legend_elements = []
 
-# Create second y-axis for line plots
-ax2 = ax.twinx()
-
-# Plot bar charts for self-role accuracy (previously was criminal accuracy)
+# Plot bar charts for self-role accuracy
 for i, scenario in enumerate(scenarios):
     scenario_data = []
     for model in models:
@@ -118,13 +121,10 @@ for i, scenario in enumerate(scenarios):
         else:
             scenario_data.append(0)
     
-    bar = ax.bar(bar_positions[scenario], scenario_data, bar_width, 
-                 color=bar_colors[i], label=f'{scenario_names[scenario]} (Self-Role)', 
-                 edgecolor='black', linewidth=0.5, alpha=0.8)
-    
-    bars.append(bar)
+    bar = ax_bar.bar(bar_positions[scenario], scenario_data, bar_width, 
+                 color=scenario_colors[scenario], edgecolor='black', linewidth=1.5, alpha=0.6)
 
-# Plot lines for criminal accuracy (previously was self-role accuracy)
+# Plot lines for criminal accuracy
 for i, scenario in enumerate(scenarios):
     scenario_data = []
     for model in models:
@@ -133,49 +133,42 @@ for i, scenario in enumerate(scenarios):
         else:
             scenario_data.append(0)
     
-    # Use a different position set for lines (center of the model group)
-    line_pos = index
-    line = ax2.plot(line_pos, scenario_data, marker=line_markers[i], linestyle='-', 
-                    color=line_colors[i], linewidth=2, markersize=8,
-                    label=f'{scenario_names[scenario]} (Criminal)')
+    # 绘制犯罪角色识别准确率的折线图
+    line = ax_line.plot(index, scenario_data, marker='o', linestyle='-', 
+                  color=scenario_colors[scenario], linewidth=4, markersize=8,
+                  markeredgecolor='black', markeredgewidth=0.8)
     
-    lines.extend(line)
+    # 添加黑色描边效果
+    line[0].set_path_effects([path_effects.Stroke(linewidth=5, foreground='black'),
+                           path_effects.Normal()])
+    
+    # 为每个场景添加图例元素
+    legend_elements.append(Patch(facecolor=scenario_colors[scenario], edgecolor='black', alpha=0.6,
+                                label=f'{scenario_names[scenario]} (Self-Role)'))
+    legend_elements.append(Line2D([0], [0], color=scenario_colors[scenario], marker='o', linestyle='-',
+                                linewidth=4, markersize=8, markeredgecolor='black', markeredgewidth=0.5,
+                                path_effects=[path_effects.Stroke(linewidth=5, foreground='black'),
+                                            path_effects.Normal()],
+                                label=f'{scenario_names[scenario]} (Criminal)'))
 
-# Set title and labels
-ax.set_title('Model Performance Comparison In Hidden Role Deduction', fontsize=18, fontweight='bold')
-ax.set_xlabel('Models', fontsize=14)
-ax.set_ylabel('Self-Role Identification Accuracy (%)', fontsize=14)
-ax2.set_ylabel('Criminal Identification Accuracy (%)', fontsize=14)
+# 设置y轴标签
+ax_bar.set_ylabel('Self-Role Identification Accuracy (%)', fontsize=26)
+ax_line.set_ylabel('Criminal Identification Accuracy (%)', fontsize=26)
 
-# Set x-ticks and labels
-ax.set_xticks(index)
-ax.set_xticklabels(model_display_list, rotation=45, ha='right', fontsize=12)
+# 设置x轴刻度
+ax_bar.set_xticks(index)
+ax_bar.set_xticklabels(model_display_list, rotation=20, ha='center', fontsize=18)
 
-# Set y-limits
-ax.set_ylim(0, 105)
-ax2.set_ylim(0, 105)
+# 设置y轴范围
+ax_bar.set_ylim(0, 115)
+ax_line.set_ylim(0, 115)
 
-# Add grid
-ax.grid(axis='y', linestyle='--', alpha=0.3)
+# 添加网格线
+ax_bar.grid(axis='y', linestyle='--', alpha=0.3)
 
-# 创建清晰的图例，确保柱状图颜色有明确标注
-legend_elements = []
+# 将图例放置在图内部的左上角，并设置半透明背景
+ax_bar.legend(handles=legend_elements, ncol=4, loc='upper left', framealpha=0.8, fontsize=17)
 
-# 柱状图图例（带颜色说明）- 现在是Self-Role
-for i, scenario in enumerate(scenarios):
-    legend_elements.append(Patch(facecolor=bar_colors[i], edgecolor='black', 
-                               label=f'{scenario_names[scenario]} (Self-Role)', alpha=0.8))
-
-# 折线图图例 - 现在是Criminal
-for i, scenario in enumerate(scenarios):
-    legend_elements.append(Line2D([0], [0], color=line_colors[i], marker=line_markers[i],
-                               label=f'{scenario_names[scenario]} (Criminal)', 
-                               markersize=8, linestyle='-', linewidth=2))
-
-# 添加组合图例
-fig.legend(handles=legend_elements, loc='upper center', 
-           bbox_to_anchor=(0.5, 0.05), ncol=4, fontsize=12)
-
-plt.tight_layout(rect=[0, 0.1, 1, 0.96])
+plt.tight_layout()
 plt.savefig('task_accuracy.png', dpi=300, bbox_inches='tight')
-print("Combined chart saved as 'task_accuracy.png'") 
+print("Combined chart saved as 'task_accuracy.png'")

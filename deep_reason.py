@@ -63,75 +63,88 @@ sorted_tasks = sorted(task_results.keys(), key=lambda x: task_results[x]['length
 # Extract sorted data
 long_chain_accuracies = [task_results[task]['long_chain_accuracy'] for task in sorted_tasks]
 short_chain_accuracies = [task_results[task]['short_chain_accuracy'] for task in sorted_tasks]
-long_chain_lengths = [task_results[task]['long_chain_length'] for task in sorted_tasks]
-short_chain_lengths = [task_results[task]['short_chain_length'] for task in sorted_tasks]
+length_ratios = [task_results[task]['length_ratio'] for task in sorted_tasks]
 
 # Task name mapping for better readability
 task_name_map = {
-    'blood': 'Role Deduction',
-    'debate': 'Review Decision',
-    'relation': 'Graph Analysis',
-    'review': 'Rating Estimation',
-    'spy': 'Find the Spy',
-    'user': 'User Profile Inference'
+    'blood': 'Role\nDeduction',
+    'debate': 'Review\nDecision',
+    'relation': 'Graph\nAnalysis',
+    'review': 'Rating\nEstimation',
+    'spy': 'Find\nthe Spy',
+    'user': 'User Profile\nInference'
 }
 
 display_tasks = [task_name_map.get(task, task) for task in sorted_tasks]
 
-# Set up light color palette and marker styles
-colors = ['#C7EAEC', '#AED9CE']
-line_colors = ['#2E86C1', '#28B463']  # Slightly darker for better line visibility
+# 设置更优雅的配色方案
+line_colors = ['#47659D', '#8B8CC2']  
+bar_color = '#B8A7CD'  
 marker_styles = ['o', 's']
-line_width = 2.5
-marker_size = 9
+line_width = 3
+marker_size = 10
 
-# 计算长度比
-length_ratios = [task_results[task]['length_ratio'] for task in sorted_tasks]
+# 创建图表
+plt.figure(figsize=(14, 9))  # 增加高度以适应两行任务名
+fig, ax1 = plt.subplots(figsize=(14, 9))
 
-# 创建组合图表（准确率折线图 + 长度比柱状图）
-plt.figure(figsize=(14, 8))
+# 设置全局字体大小
+plt.rcParams.update({'font.size': 18})  # 增加基础字体大小
 plt.rcParams['axes.edgecolor'] = 'black'
-plt.rcParams['axes.linewidth'] = 1.5
+plt.rcParams['axes.linewidth'] = 1.5  # 稍微增加轴线宽度
 
-fig, ax1 = plt.subplots(figsize=(14, 8))
-
-# 绘制准确率折线图（左Y轴）- 移除阴影填充
+# 定义x坐标
 x = np.arange(len(sorted_tasks))
-line1 = ax1.plot(x, long_chain_accuracies, marker=marker_styles[0], linestyle='-', linewidth=line_width, 
-        markersize=marker_size, label='Long-Chain Models (Accuracy)', color=line_colors[0])
-line2 = ax1.plot(x, short_chain_accuracies, marker=marker_styles[1], linestyle='-', linewidth=line_width, 
-        markersize=marker_size, label='Short-Chain Models (Accuracy)', color=line_colors[1])
+bar_width = 0.6
+
+# 创建右Y轴用于长度比柱状图
+ax2 = ax1.twinx()
+
+# 先绘制柱状图，并增加更高的透明度
+bars = ax2.bar(x, length_ratios, bar_width, color=bar_color,
+              label='Output Length Ratio (Long/Short)', 
+              edgecolor='black', linewidth=2,
+              alpha=0.8)  # 增加透明度使折线更清晰可见
+
+# 确保折线图的标记点更大更突出
+line1 = ax1.plot(x, long_chain_accuracies, marker=marker_styles[0], linestyle='-', linewidth=line_width+1, 
+        markersize=marker_size+2, label='Long-Chain Models (Accuracy)', color=line_colors[0])
+line2 = ax1.plot(x, short_chain_accuracies, marker=marker_styles[1], linestyle='-', linewidth=line_width+1, 
+        markersize=marker_size+2, label='Short-Chain Models (Accuracy)', color=line_colors[1])
+
+# 添加折线图的标记点边框，使它们更加突出
+for i, (y1, y2) in enumerate(zip(long_chain_accuracies, short_chain_accuracies)):
+    ax1.plot(x[i], y1, 'o', markersize=marker_size+2, markerfacecolor=line_colors[0], 
+             markeredgecolor='white', markeredgewidth=1.5)
+    ax1.plot(x[i], y2, 's', markersize=marker_size+2, markerfacecolor=line_colors[1], 
+             markeredgecolor='white', markeredgewidth=1.5)
 
 # 设置左Y轴（准确率）
-ax1.set_ylabel('Accuracy (%)', fontsize=14, fontweight='bold')
+ax1.set_ylabel('Accuracy (%)', fontsize=26, fontweight='bold')  # 增大字体
 ax1.set_ylim(0, min(100, max(max(long_chain_accuracies), max(short_chain_accuracies)) * 1.15))
 ax1.grid(axis='y', linestyle='--', alpha=0.3, color='gray')
-
-# 创建右Y轴用于长度比柱状图 - 修改颜色并添加黑色边框
-ax2 = ax1.twinx()
-bar_width = 0.4
-bar_color = '#AED9CE'  # 更改柱状图颜色
-bars = ax2.bar(x, length_ratios, bar_width, alpha=0.7, color=bar_color, 
-              label='Length Ratio (Long/Short)', 
-              edgecolor='black', linewidth=2)  # 添加粗黑色边框
-
-# 移除柱状图数值标签
+ax1.tick_params(axis='y', labelsize=22)  # 增大刻度标签
 
 # 设置右Y轴（长度比）
-ax2.set_ylabel('Length Ratio (Long/Short)', fontsize=14, fontweight='bold')
-ax2.set_ylim(0, max(length_ratios) * 2.5)  # 为标签留出空间
+ax2.set_ylabel('Output Length Ratio (Long/Short)', fontsize=26, fontweight='bold')  # 增大字体
+ax2.set_ylim(0, max(length_ratios) * 2.4)
+ax2.tick_params(axis='y', labelsize=22)  # 增大刻度标签
 
-# 设置X轴
+# 设置X轴 - 不旋转，并增加间距适应两行文本
 ax1.set_xticks(x)
-ax1.set_xticklabels(display_tasks, fontsize=14)
+ax1.set_xticklabels(display_tasks, fontsize=22, rotation=0, ha='center')  # 不旋转，居中对齐
+ax1.tick_params(axis='x', labelsize=22, pad=10)  # 增大刻度标签并增加底部间距
 
 # 合并图例
 lines1, labels1 = ax1.get_legend_handles_labels()
 lines2, labels2 = ax2.get_legend_handles_labels()
-ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right', fontsize=14)
+ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right', fontsize=22, framealpha=1)  # 增大图例字体
 
-plt.tight_layout()
+# 添加网格线以便更好地阅读数据
+ax1.grid(True, linestyle='--', alpha=0.3)
+
+plt.tight_layout(pad=2.0)  # 增加额外的填充以确保标签不被裁剪
 plt.savefig('deep_reason.png', dpi=300, bbox_inches='tight')
 plt.close()
 
-print("Combined chart generated successfully!")
+print("Optimized chart generated successfully!")
