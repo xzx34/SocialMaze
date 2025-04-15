@@ -404,7 +404,7 @@ def parse_arguments():
                         default=['ICLR.cc/2020/Conference','ICLR.cc/2021/Conference', 'ICLR.cc/2022/Conference', 'ICLR.cc/2023/Conference'],
                         help='List of conference IDs to retrieve papers from')
     
-    parser.add_argument('--papers_per_conf', type=int, default=25,
+    parser.add_argument('--papers_per_conf', type=int, default=1000,
                         help='Number of papers to retrieve from each conference')
     
     parser.add_argument('--output', type=str, default='data/debate.json',
