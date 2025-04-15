@@ -2,6 +2,7 @@ import os
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+import csv  # 添加csv模块导入
 
 # 定义颜色
 colors = ['#FFCCCB', '#FF9797', '#AF3240']
@@ -77,6 +78,17 @@ stage1_values = [model_data[m]['stage1'] for m in models]
 stage2_values = [model_data[m]['stage2'] for m in models]
 stage3_values = [model_data[m]['stage3'] for m in models]
 
+# 生成CSV文件保存数据
+def save_to_csv(filename, models, display_names, stage1, stage2, stage3, stage_names):
+    with open(filename, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        # 写入表头
+        writer.writerow(['Model ID', 'Model Display Name'] + stage_names)
+        # 写入每个模型的数据
+        for i in range(len(models)):
+            writer.writerow([models[i], display_names[i], stage1[i], stage2[i], stage3[i]])
+    print(f"数据已保存到 {filename}")
+
 # 设置图形风格
 plt.figure(figsize=(14, 7))
 plt.rcParams['axes.edgecolor'] = 'black'
@@ -120,7 +132,12 @@ plt.tight_layout()
 # 保存图像
 plt.savefig('multiturn_debate.png', dpi=300, bbox_inches='tight')
 
+# 同时保存CSV数据
+save_to_csv('multiturn_debate_results.csv', models, display_names, 
+            stage1_values, stage2_values, stage3_values, stage_names)
+
 # 显示图像
 plt.show()
 
 print("图表已保存为 multiturn_debate.png")
+print("数据已保存为 multiturn_debate_results.csv")

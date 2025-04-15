@@ -120,13 +120,13 @@ for i, (y1, y2) in enumerate(zip(long_chain_accuracies, short_chain_accuracies))
              markeredgecolor='white', markeredgewidth=1.5)
 
 # 设置左Y轴（准确率）
-ax1.set_ylabel('Accuracy (%)', fontsize=26, fontweight='bold')  # 增大字体
+ax1.set_ylabel('Accuracy (%)', fontsize=26)  # 增大字体
 ax1.set_ylim(0, min(100, max(max(long_chain_accuracies), max(short_chain_accuracies)) * 1.15))
 ax1.grid(axis='y', linestyle='--', alpha=0.3, color='gray')
 ax1.tick_params(axis='y', labelsize=22)  # 增大刻度标签
 
 # 设置右Y轴（长度比）
-ax2.set_ylabel('Output Length Ratio (Long/Short)', fontsize=26, fontweight='bold')  # 增大字体
+ax2.set_ylabel('Output Length Ratio (Long/Short)', fontsize=26)  # 增大字体
 ax2.set_ylim(0, max(length_ratios) * 2.4)
 ax2.tick_params(axis='y', labelsize=22)  # 增大刻度标签
 
