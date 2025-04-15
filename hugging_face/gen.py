@@ -143,9 +143,16 @@ Please provide this Final Judgment after each round of statements, updating your
     return prompts
 
 
-def generate_dataset(number, dataset_type, n_scenarios_per_type):
+def generate_dataset(number, dataset_type, n_scenarios_per_type, role_percentages=None):
     """
-    Generate a dataset with equal distribution of player 1's roles.
+    Generate a dataset with distribution of player 1's roles based on provided percentages.
+    
+    Args:
+        number: Total number of players
+        dataset_type: Type of dataset/game configuration
+        n_scenarios_per_type: Number of scenarios to generate
+        role_percentages: Dictionary with role percentages (e.g., {"Investigator": 0.1, "Criminal": 0.1, ...})
+                         If None, all valid roles will be equally distributed
     """
     dataset = []
     solvable_scenarios = 0
@@ -167,41 +174,36 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
         if count > 0:
             possible_roles.append(role)
     
-    # 使用固定比例分配场景数量
+    # 根据输入参数或均匀分配角色比例
     role_scenario_targets = {}
     
-    # 1号Investigator和Criminal各占10%
-    role_scenario_targets["Investigator"] = int(n_scenarios_per_type * 0.00)
-    role_scenario_targets["Criminal"] = int(n_scenarios_per_type * 0.00)
-    
-    # 计算Rumormonger和Lunatic需要均分的剩余场景数
-    remaining_scenarios = n_scenarios_per_type - role_scenario_targets["Investigator"] - role_scenario_targets["Criminal"]
-    
-    # 检查dataset_type中是否包含Rumormonger和Lunatic
-    rumormonger_exists = "Rumormonger" in possible_roles
-    lunatic_exists = "Lunatic" in possible_roles
-    
-    # 计算Rumormonger和Lunatic的场景数
-    if rumormonger_exists and lunatic_exists:
-        # 两者都存在，均分剩余场景
-        role_scenario_targets["Rumormonger"] = remaining_scenarios // 2
-        role_scenario_targets["Lunatic"] = remaining_scenarios - role_scenario_targets["Rumormonger"]
-    elif rumormonger_exists:
-        # 只有Rumormonger，获取所有剩余场景
-        role_scenario_targets["Rumormonger"] = remaining_scenarios
-    elif lunatic_exists:
-        # 只有Lunatic，获取所有剩余场景
-        role_scenario_targets["Lunatic"] = remaining_scenarios
-    
-    # 移除不在possible_roles中的角色
-    role_scenario_targets = {role: count for role, count in role_scenario_targets.items() if role in possible_roles}
-    
-    # 确保总数等于n_scenarios_per_type
-    total = sum(role_scenario_targets.values())
-    if total < n_scenarios_per_type:
-        # 将剩余的场景分配给最后一个角色
-        last_role = possible_roles[-1]
-        role_scenario_targets[last_role] += n_scenarios_per_type - total
+    if role_percentages is None:
+        # 如果没有提供比例，均匀分配场景给所有可能的角色
+        scenarios_per_role = n_scenarios_per_type // len(possible_roles)
+        for role in possible_roles:
+            role_scenario_targets[role] = scenarios_per_role
+        
+        # 分配剩余的场景给最后一个角色
+        remainder = n_scenarios_per_type - scenarios_per_role * len(possible_roles)
+        if remainder > 0:
+            role_scenario_targets[possible_roles[-1]] += remainder
+    else:
+        # 使用提供的比例分配场景
+        for role in possible_roles:
+            if role in role_percentages:
+                role_scenario_targets[role] = int(n_scenarios_per_type * role_percentages[role])
+        
+        # 计算已分配的场景总数
+        allocated = sum(role_scenario_targets.values())
+        
+        # 如果分配的总数少于要求的场景数，将剩余场景分配给有效角色
+        if allocated < n_scenarios_per_type:
+            remaining = n_scenarios_per_type - allocated
+            # 找出未分配满的角色
+            unfilled_roles = [r for r in possible_roles if r in role_scenario_targets]
+            if unfilled_roles:
+                # 将剩余场景分配给最后一个角色
+                role_scenario_targets[unfilled_roles[-1]] += remaining
     
     # Keep track of generated scenarios per role
     role_scenario_counts = {role: 0 for role in possible_roles}
@@ -215,7 +217,7 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
         
         # Determine which role to generate next
         available_roles = [role for role in possible_roles 
-                          if role_scenario_counts[role] < role_scenario_targets[role]]
+                          if role_scenario_counts[role] < role_scenario_targets.get(role, 0)]
         
         if not available_roles:
             break
@@ -281,6 +283,13 @@ def generate_dataset(number, dataset_type, n_scenarios_per_type):
     if attempts >= max_attempts:
         print(f"Warning: Reached maximum attempts ({max_attempts}) for {dataset_type} with {number} players")
         print(f"Only generated {solvable_scenarios}/{n_scenarios_per_type} scenarios")
+    
+    # 返回前对数据集进行随机排序，确保不同角色的场景均匀分布
+    random.shuffle(dataset)
+    
+    # 重新编号场景ID以保持顺序一致
+    for i, scenario in enumerate(dataset):
+        scenario["scenario_id"] = f"{dataset_type}_{i+1}"
     
     return dataset
 
@@ -628,15 +637,23 @@ def format_set(s):
     return '{' + ', '.join(sorted(s)) + '}'
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Generate Blood Game dataset')
+    parser = argparse.ArgumentParser(description='Generate dataset')
     parser.add_argument('--dataset_types', nargs='+', default=["all"],
                         help='Types of datasets to generate')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6, 10],
                         help='Number of players in each game')
-    parser.add_argument('--n_scenarios_per_type', type=int, default=1000,
+    parser.add_argument('--n_scenarios_per_type', type=int, default=4000,
                         help='Number of scenarios to generate for each dataset type')
     parser.add_argument('--output_dir', type=str, default=None,
                         help='Custom output directory for saving datasets')
+    parser.add_argument('--investigator_pct', type=float, default=0.03,
+                        help='Percentage of scenarios where player 1 is Investigator')
+    parser.add_argument('--criminal_pct', type=float, default=0.02,
+                        help='Percentage of scenarios where player 1 is Criminal')
+    parser.add_argument('--rumormonger_pct', type=float, default=0.6,
+                        help='Percentage of scenarios where player 1 is Rumormonger')
+    parser.add_argument('--lunatic_pct', type=float, default=0.35,
+                        help='Percentage of scenarios where player 1 is Lunatic')
     return parser.parse_args()
 
 if __name__ == "__main__":
@@ -644,6 +661,19 @@ if __name__ == "__main__":
     dataset_types = args.dataset_types
     player_counts = args.player_counts
     n_scenarios_per_type = args.n_scenarios_per_type
+    
+    # 构建角色比例字典
+    role_percentages = {
+        "Investigator": args.investigator_pct,
+        "Criminal": args.criminal_pct,
+        "Rumormonger": args.rumormonger_pct,
+        "Lunatic": args.lunatic_pct
+    }
+    
+    # 检查总百分比是否接近1.0，如果不是，则打印警告
+    total_pct = sum(role_percentages.values())
+    if abs(total_pct - 1.0) > 0.01:  # 允许有1%的误差
+        print(f"警告: 角色比例总和为 {total_pct}，预期应为1.0")
     
     # Use specified output directory or create default data directory
     if args.output_dir:
@@ -659,10 +689,10 @@ if __name__ == "__main__":
     for dataset_type in dataset_types:
         for player_count in player_counts:
             print(f"Generating dataset '{dataset_type}' with {player_count} players...")
-            dataset = generate_dataset(player_count, dataset_type, n_scenarios_per_type)
+            dataset = generate_dataset(player_count, dataset_type, n_scenarios_per_type, role_percentages)
             
             # Save to the data directory with explicit filename
-            output_filename = os.path.join(data_dir, f"blood_{player_count}_{dataset_type}.json")
+            output_filename = os.path.join(data_dir, f"socialmaze_{player_count}_{dataset_type}.json")
             
             # Ensure we're writing to the correct path
             print(f"Saving to: {os.path.abspath(output_filename)}")

@@ -34,7 +34,8 @@ model_dict = {
     'deepseek-v3': 'deepseek-ai/DeepSeek-V3',
     'deepseek-r1': 'deepseek-ai/DeepSeek-R1',
     'deepseek-r1-32B': 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
-    'deepseek-r1-70B': 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B'
+    'deepseek-r1-70B': 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B',
+    'phi-4': 'microsoft/phi-4'
 }
 
 token_log_lock = threading.Lock()
@@ -144,7 +145,7 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 return message.content[0].text
             
             # Handle DeepInfra models
-            if model in ['deepseek-v3', 'deepseek-r1', 'deepseek-r1-32B', 'deepseek-r1-70B', 'qwq', 'llama-3.3-70B', 'llama-3.1-70B', 'llama-3.1-8B', 'qwen-2.5-72B', 'gemma-2-27B', 'gemma-3-27B','gemma-2-9B']:
+            if model in ['deepseek-v3', 'deepseek-r1', 'deepseek-r1-32B', 'deepseek-r1-70B', 'qwq', 'llama-3.3-70B', 'llama-3.1-70B', 'llama-3.1-8B', 'qwen-2.5-72B', 'gemma-2-27B', 'gemma-3-27B','gemma-2-9B','phi-4']:
                 client = OpenAI(
                     api_key=os.getenv('DEEPINFRA_API_KEY'),
                     base_url=os.getenv('DEEPINFRA_BASE_URL')
