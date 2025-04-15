@@ -3,6 +3,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 import re
+import csv  # 添加csv模块导入
 
 # 定义颜色
 colors = ['#C7EAEC', '#AED9CE', '#96BAC7']
@@ -78,9 +79,6 @@ model_order = [
     'gemeni-2.5'
 ]
 
-# 重组数据以匹配新的顺序和名称
-models = [m for m in model_order if m in model_data]
-
 # 手动添加o1和gemeni-2.5的数据
 model_data['o1'] = {
     'round1': 42,
@@ -94,13 +92,31 @@ model_data['gemeni-2.5'] = {
     'round3': 88
 }
 
-# 确保包含手动添加的模型
+# 重组数据以匹配新的顺序和名称
 models = [m for m in model_order if m in model_data]
 display_names = [model_name_map.get(m, m) for m in models]
 
 round1_values = [model_data[m]['round1'] for m in models]
 round2_values = [model_data[m]['round2'] for m in models]
 round3_values = [model_data[m]['round3'] for m in models]
+
+# 输出数据到CSV文件
+csv_filename = 'multiturn_role_accuracy.csv'
+with open(csv_filename, 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    # 写入表头
+    writer.writerow(['Model', 'Display Name', 'Round 1', 'Round 2', 'Round 3'])
+    # 写入数据
+    for i, model in enumerate(models):
+        writer.writerow([
+            model, 
+            display_names[i], 
+            round1_values[i], 
+            round2_values[i], 
+            round3_values[i]
+        ])
+    
+print(f"CSV数据已保存为 {csv_filename}")
 
 # 设置图形风格
 plt.figure(figsize=(14, 7))
