@@ -161,7 +161,8 @@ ax_bar.set_xticklabels(model_display_list, rotation=20, ha='center', fontsize=18
 
 # 设置y轴范围
 ax_bar.set_ylim(0, 115)
-ax_line.set_ylim(0, 115)
+ax_line.set_ylim(25, 115) # 调整右侧 Y 轴的上限，增加顶部空间
+ax_line.set_yticks(np.arange(30, 101, 10)) # 设置右侧 Y 轴刻度从 30 到 100，步长为 10
 
 # 添加网格线
 ax_bar.grid(axis='y', linestyle='--', alpha=0.3)

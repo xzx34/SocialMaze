@@ -13,10 +13,10 @@ plt.rcParams['axes.linewidth'] = 1.6
 # 初始化角色及其颜色，使用新的配色方案
 roles = ['Investigator', 'Criminal', 'Rumormonger', 'Lunatic']
 role_colors = {
-    'Investigator': '#2E594D',
-    'Criminal': '#44886F',
-    'Rumormonger': '#87C2A9',
-    'Lunatic': '#D9EEE3'
+    'Investigator': '#325373',
+    'Criminal': '#4F72A8',
+    'Rumormonger': '#82A5C9',
+    'Lunatic': '#CFDCEA'
 }
 
 # 定义模型展示名称 —— 顺序很重要

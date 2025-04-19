@@ -143,7 +143,7 @@ ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right', fontsize=22, f
 # 添加网格线以便更好地阅读数据
 ax1.grid(True, linestyle='--', alpha=0.3)
 
-plt.tight_layout(pad=2.0)  # 增加额外的填充以确保标签不被裁剪
+plt.tight_layout(pad=1.0)  # 减小 pad 值以使布局更紧凑
 plt.savefig('deep_reason.png', dpi=300, bbox_inches='tight')
 plt.close()
 
