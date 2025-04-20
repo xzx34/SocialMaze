@@ -75,7 +75,7 @@ for model in models:
         results[model] = extract_role_specific_data(file_path)
 
 # 创建绘图窗口
-fig, ax_bar = plt.subplots(figsize=(20, 10))
+fig, ax_bar = plt.subplots(figsize=(20, 8))
 ax_line = ax_bar.twinx()
 
 # 设置柱状图宽度
@@ -130,14 +130,15 @@ ax_bar.set_xticks(index)
 ax_bar.set_xticklabels([model_display_names[model] for model in models], rotation=20, ha='center', fontsize=18)
 
 # 设置y轴范围
-ax_bar.set_ylim(0, 115)
-ax_line.set_ylim(0, 115)
+ax_bar.set_ylim(0, 103)
+ax_line.set_ylim(0, 103)
 
 # 添加网格线
 ax_bar.grid(axis='y', linestyle='--', alpha=0.3)
 
-# 将图例放置在图内部的左上角，并设置半透明背景
-ax_bar.legend(handles=legend_elements,ncol=4, loc='upper left', framealpha=0.8, fontsize=17)
+# 将图例放置在图上方，并设置半透明背景
+ax_bar.legend(handles=legend_elements, ncol=4, loc='upper center', bbox_to_anchor=(0.5, 1.15), 
+             framealpha=0.8, fontsize=17)
 
 plt.tight_layout()
 plt.savefig('role_accuracy.png', dpi=300, bbox_inches='tight')

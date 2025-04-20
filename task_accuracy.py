@@ -96,8 +96,8 @@ model_display_list = [model_display_names[model] for model in models]
 num_models = len(models)
 num_scenarios = len(scenarios)
 
-# 创建绘图窗口
-fig, ax_bar = plt.subplots(figsize=(20, 10))
+# 创建绘图窗口，减小高度
+fig, ax_bar = plt.subplots(figsize=(20, 8))
 ax_line = ax_bar.twinx()
 
 # Set width of bars
@@ -159,16 +159,19 @@ ax_line.set_ylabel('Criminal Identification Accuracy (%)', fontsize=26)
 ax_bar.set_xticks(index)
 ax_bar.set_xticklabels(model_display_list, rotation=20, ha='center', fontsize=18)
 
-# 设置y轴范围
-ax_bar.set_ylim(0, 115)
-ax_line.set_ylim(25, 115) # 调整右侧 Y 轴的上限，增加顶部空间
-ax_line.set_yticks(np.arange(30, 101, 10)) # 设置右侧 Y 轴刻度从 30 到 100，步长为 10
+# 设置y轴范围，使左右y轴对齐
+ax_bar.set_ylim(25, 103)
+ax_line.set_ylim(25, 103)
+ax_bar.set_yticks(np.arange(25, 103, 10))
+ax_line.set_yticks(np.arange(25, 103, 10))
 
 # 添加网格线
 ax_bar.grid(axis='y', linestyle='--', alpha=0.3)
 
-# 将图例放置在图内部的左上角，并设置半透明背景
-ax_bar.legend(handles=legend_elements, ncol=4, loc='upper left', framealpha=0.8, fontsize=17)
+# 将图例放置在图上方，并设置半透明背景
+ax_bar.legend(handles=legend_elements, ncol=4, loc='upper center', bbox_to_anchor=(0.5, 1.15), 
+             framealpha=0.8, fontsize=17)
+
 
 plt.tight_layout()
 plt.savefig('task_accuracy.png', dpi=300, bbox_inches='tight')
