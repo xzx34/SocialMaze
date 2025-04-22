@@ -13,10 +13,10 @@ plt.rcParams['axes.linewidth'] = 1.6
 # 初始化角色及其颜色，使用新的配色方案
 roles = ['Investigator', 'Criminal', 'Rumormonger', 'Lunatic']
 role_colors = {
-    'Investigator': '#325373',
-    'Criminal': '#4F72A8',
-    'Rumormonger': '#82A5C9',
-    'Lunatic': '#CFDCEA'
+    'Investigator': '#102E50',
+    'Criminal': '#F5C45E',
+    'Rumormonger': '#E78B48',
+    'Lunatic': '#BE3D2A'
 }
 
 # 定义模型展示名称 —— 顺序很重要
@@ -75,11 +75,11 @@ for model in models:
         results[model] = extract_role_specific_data(file_path)
 
 # 创建绘图窗口
-fig, ax_bar = plt.subplots(figsize=(20, 8))
+fig, ax_bar = plt.subplots(figsize=(17, 5))
 ax_line = ax_bar.twinx()
 
 # 设置柱状图宽度
-bar_width = 0.15
+bar_width = 0.2
 index = np.arange(len(models))
 
 # 用来存放图例元素
@@ -109,25 +109,25 @@ for i, role in enumerate(roles):
                  )
     
     # 添加黑色描边效果
-    line[0].set_path_effects([path_effects.Stroke(linewidth=5, foreground='black'),
+    line[0].set_path_effects([path_effects.Stroke(linewidth=2, foreground='black'),
                            path_effects.Normal()])
 
     # 为每个角色添加图例元素（一次添加柱状图和折线图图例）
     legend_elements.append(Patch(facecolor=role_colors[role], edgecolor='black', alpha=0.6,
                                  label=f'{role} (Self-Role)'))
     legend_elements.append(Line2D([0], [0], color=role_colors[role], marker='o', linestyle='-',
-                                  linewidth=4, markersize=8, markeredgecolor='black', markeredgewidth=0.5,
-                                  path_effects=[path_effects.Stroke(linewidth=5, foreground='black'),
+                                  linewidth=2, markersize=8, markeredgecolor='black', markeredgewidth=0.5,
+                                  path_effects=[path_effects.Stroke(linewidth=2, foreground='black'),
                                                path_effects.Normal()],
                                   label=f'{role} (Criminal)'))
 
 # 设置y轴标签（保留y轴标签以便说明数值含义）
-ax_bar.set_ylabel('Self-Role Identification Accuracy (%)', fontsize=26)
-ax_line.set_ylabel('Criminal Identification Accuracy (%)', fontsize=26)
+ax_bar.set_ylabel('Self-Role Identification Acc. (%)', fontsize=14)
+ax_line.set_ylabel('Criminal Identification Acc. (%)', fontsize=14)
 
 # 设置x轴刻度
 ax_bar.set_xticks(index)
-ax_bar.set_xticklabels([model_display_names[model] for model in models], rotation=20, ha='center', fontsize=18)
+ax_bar.set_xticklabels([model_display_names[model] for model in models], rotation=20, ha='center', fontsize=14)
 
 # 设置y轴范围
 ax_bar.set_ylim(0, 103)
@@ -137,9 +137,9 @@ ax_line.set_ylim(0, 103)
 ax_bar.grid(axis='y', linestyle='--', alpha=0.3)
 
 # 将图例放置在图上方，并设置半透明背景
-ax_bar.legend(handles=legend_elements, ncol=4, loc='upper center', bbox_to_anchor=(0.5, 1.15), 
-             framealpha=0.8, fontsize=17)
+ax_bar.legend(handles=legend_elements, ncol=4, loc='upper center', bbox_to_anchor=(0.5, 1.3), 
+             framealpha=0.8, fontsize=14)
 
 plt.tight_layout()
-plt.savefig('role_accuracy.png', dpi=300, bbox_inches='tight')
+plt.savefig('role_accuracy.pdf', dpi=300, bbox_inches='tight')
 print("Role-specific accuracy chart saved as 'role_accuracy.png'")
