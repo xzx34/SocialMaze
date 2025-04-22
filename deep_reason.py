@@ -108,9 +108,9 @@ bars = ax2.bar(x, length_ratios, bar_width, color=bar_color,
 
 # 确保折线图的标记点更大更突出
 line1 = ax1.plot(x, long_chain_accuracies, marker=marker_styles[0], linestyle='-', linewidth=line_width+1, 
-        markersize=marker_size+2, label='Long-Chain Models (Accuracy)', color=line_colors[0])
+        markersize=marker_size+2, label='Long CoT Models (Accuracy)', color=line_colors[0])
 line2 = ax1.plot(x, short_chain_accuracies, marker=marker_styles[1], linestyle='-', linewidth=line_width+1, 
-        markersize=marker_size+2, label='Short-Chain Models (Accuracy)', color=line_colors[1])
+        markersize=marker_size+2, label='Short CoT Models (Accuracy)', color=line_colors[1])
 
 # 添加折线图的标记点边框，使它们更加突出
 for i, (y1, y2) in enumerate(zip(long_chain_accuracies, short_chain_accuracies)):

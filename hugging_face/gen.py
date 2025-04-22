@@ -642,17 +642,17 @@ def parse_args():
                         help='Types of datasets to generate')
     parser.add_argument('--player_counts', type=int, nargs='+', default=[6, 10],
                         help='Number of players in each game')
-    parser.add_argument('--n_scenarios_per_type', type=int, default=4000,
+    parser.add_argument('--n_scenarios_per_type', type=int, default=500,
                         help='Number of scenarios to generate for each dataset type')
-    parser.add_argument('--output_dir', type=str, default=None,
+    parser.add_argument('--output_dir', type=str, default='test',
                         help='Custom output directory for saving datasets')
-    parser.add_argument('--investigator_pct', type=float, default=0.03,
+    parser.add_argument('--investigator_pct', type=float, default=0.00,
                         help='Percentage of scenarios where player 1 is Investigator')
-    parser.add_argument('--criminal_pct', type=float, default=0.02,
+    parser.add_argument('--criminal_pct', type=float, default=0.00,
                         help='Percentage of scenarios where player 1 is Criminal')
     parser.add_argument('--rumormonger_pct', type=float, default=0.6,
                         help='Percentage of scenarios where player 1 is Rumormonger')
-    parser.add_argument('--lunatic_pct', type=float, default=0.35,
+    parser.add_argument('--lunatic_pct', type=float, default=0.4,
                         help='Percentage of scenarios where player 1 is Lunatic')
     return parser.parse_args()
 

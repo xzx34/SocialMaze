@@ -1,7 +1,7 @@
 {
   "llama-3.1-8B": {
-    "input_tokens": 5580064,
-    "output_tokens": 2359058
+    "input_tokens": 6302350,
+    "output_tokens": 3108183
   },
   "gemma-2-9B": {
     "input_tokens": 5116993,
@@ -40,7 +40,7 @@
     "output_tokens": 7996633
   },
   "phi-4": {
-    "input_tokens": 494561,
-    "output_tokens": 487855
+    "input_tokens": 1216847,
+    "output_tokens": 1206193
   }
 }
