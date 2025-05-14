@@ -41,31 +41,15 @@ model_dict = {
 token_log_lock = threading.Lock()
 
 def log_token_cost(model, input_tokens=0, output_tokens=0, total_tokens=None):
-    """
-    记录模型token使用量，累计每个模型的输入和输出token
-    
-    Args:
-        model: 模型名称
-        input_tokens: 输入token数量
-        output_tokens: 输出token数量
-        total_tokens: 总token数量(向后兼容，如果提供则自动分配)
-    """
-    # 如果只提供了total_tokens，尝试分配给输入和输出（向后兼容）
     if total_tokens is not None and input_tokens == 0 and output_tokens == 0:
-        # 假设输入占比约为70%，输出占比约为30%
         input_tokens = int(total_tokens * 0.7)
         output_tokens = total_tokens - input_tokens
     
-    # 创建logs目录(如果不存在)
     log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs")
     os.makedirs(log_dir, exist_ok=True)
-    
-    # 使用单一JSON文件记录所有模型的token累计使用情况
     log_file = os.path.join(log_dir, "model_token_usage_total.json")
     
-    # 使用线程锁确保并发安全
     with token_log_lock:
-        # 读取现有的token使用记录(如果存在)
         token_records = {}
         if os.path.exists(log_file):
             try:
@@ -74,27 +58,22 @@ def log_token_cost(model, input_tokens=0, output_tokens=0, total_tokens=None):
             except:
                 token_records = {}
         
-        # 确保模型记录存在
         if model not in token_records:
             token_records[model] = {"input_tokens": 0, "output_tokens": 0}
         
-        # 更新当前模型的token使用量
         token_records[model]["input_tokens"] += input_tokens
         token_records[model]["output_tokens"] += output_tokens
         
-        # 使用临时文件写入然后重命名，确保原子操作
         temp_file = f"{log_file}.temp.{os.getpid()}"
         with open(temp_file, "w", encoding="utf-8") as f:
             json.dump(token_records, f, indent=2)
         
-        # 在Windows上，可能需要先删除目标文件
         if os.path.exists(log_file):
             try:
                 os.remove(log_file)
             except:
                 pass
                 
-        # 原子性地重命名文件
         os.rename(temp_file, log_file)
 
 
@@ -155,7 +134,6 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 formatted_messages = [{"role": "system", "content": system_message}]
                 formatted_messages.extend(messages)
                 
-                # 直接使用流式API获取响应并估算token使用情况
                 full_response = ''
                 input_text_length = len(system_message) + sum(len(msg['content']) for msg in messages)
                 
@@ -174,13 +152,10 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                             content = event.choices[0].delta.content or ""
                             full_response += content
 
-                    # 估算token使用量
-                    # 大约4个字符等于1个token（这是一个粗略估计）
                     estimated_input_tokens = input_text_length // 4
                     estimated_output_tokens = len(full_response) // 4
                     estimated_total_tokens = estimated_input_tokens + estimated_output_tokens
                     
-                    # 记录估算的token使用情况
                     log_token_cost(model, 
                                  input_tokens=estimated_input_tokens, 
                                  output_tokens=estimated_output_tokens, 
@@ -223,12 +198,8 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                 formatted_messages = [{"role": "system", "content": system_message}]
                 formatted_messages.extend(messages)
                 
-                # 根据use_batch_api参数决定是否使用批处理API
                 if use_batch_api == 1:
-                    # 使用批处理API
-                    # 创建临时JSONL文件用于批处理API
                     with tempfile.NamedTemporaryFile(mode='w', suffix='.jsonl', delete=False) as temp_file:
-                        # 准备批处理请求
                         batch_request = {
                             "custom_id": "request-1",
                             "method": "POST", 
@@ -239,7 +210,6 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                             }
                         }
                         
-                        # 只有在非o3-mini和o1-mini模型时才添加temperature参数
                         if model not in ['o3-mini', 'o1-mini']:
                             batch_request["body"]["temperature"] = temperature
                             
@@ -247,21 +217,18 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                         temp_file_path = temp_file.name
                     
                     try:
-                        # 上传文件
                         with open(temp_file_path, 'rb') as file:
                             uploaded_file = client.files.create(
                                 file=file,
                                 purpose="batch"
                             )
                         
-                        # 创建批处理任务
                         batch_job = client.batches.create(
                             input_file_id=uploaded_file.id,
                             endpoint="/v1/chat/completions",
                             completion_window="24h"
                         )
                         
-                        # 等待批处理完成
                         batch_status = None
                         while batch_status not in ["completed", "failed", "expired", "cancelled"]:
                             batch_info = client.batches.retrieve(batch_job.id)
@@ -270,34 +237,31 @@ def get_chat_response(model, system_message, messages, temperature=0.001, max_re
                             if batch_status in ["completed", "failed", "expired", "cancelled"]:
                                 break
                             
-                            # 睡眠一段时间后再检查状态
                             time.sleep(5)
                         
                         if batch_status == "completed":
-                            # 获取结果
+                            
                             output_file = client.files.content(batch_info.output_file_id)
                             output_content = output_file.text
                             
-                            # 解析结果
+                            
                             result_json = json.loads(output_content)
                             response_body = result_json["response"]["body"]
                             
-                            # 创建类似于普通API返回的对象
+                        
                             response = type('', (), {})()
                             response.choices = [type('', (), {})()]
                             response.choices[0].message = type('', (), {})()
                             response.choices[0].message.content = response_body["choices"][0]["message"]["content"]
                             
-                            # 设置用于记录的usage
+                            
                             if "usage" in response_body:
                                 response.usage = type('', (), {})()
                                 response.usage.total_tokens = response_body["usage"]["total_tokens"]
                                 
-                                # 尝试获取输入输出token
                                 input_tokens = response_body["usage"].get("prompt_tokens", 0)
                                 output_tokens = response_body["usage"].get("completion_tokens", 0)
                                 
-                                # 记录token使用情况
                                 log_token_cost(model, input_tokens=input_tokens, output_tokens=output_tokens, total_tokens=response.usage.total_tokens)
                             
                             return response.choices[0].message.content
