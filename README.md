@@ -5,7 +5,7 @@
 Welcome to the official repository for **SocialMaze**, a novel benchmark designed to comprehensively evaluate the social reasoning capabilities of Large Language Models (LLMs). SocialMaze systematically incorporates three core challenges inherent in real-world social interactions: *deep reasoning*, *dynamic interaction*, and *information uncertainty*. It features six diverse tasks across three key settings—social reasoning games, daily-life interactions, and digital community platforms.
 
 While this repository contains the full code for data generation and model evaluation across all tasks, **we strongly recommend using our pre-packaged dataset on Hugging Face for a streamlined model evaluation experience**:
-👉 [**SocialMaze on Hugging Face Datasets**](https://huggingface.co/datasets/MBZUAI/SocialMaze) 👈
+[**SocialMaze on Hugging Face Datasets**](https://huggingface.co/datasets/MBZUAI/SocialMaze) 👈
 
 This allows you to directly test LLMs on curated data, particularly for our most challenging task, Hidden Role Deduction, which is provided in a convenient QA format.
 
