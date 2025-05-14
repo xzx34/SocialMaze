@@ -1,4 +1,3 @@
-```markdown
 <h1 align="center">SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models</h1>
 
 ## Introduction
