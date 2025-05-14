@@ -1,0 +1,255 @@
+{
+  "description": "Dataset for inferring user demographic features from user comments",
+  "profile_groups": [
+    {
+      "group_id": 1,
+      "demographics": {
+        "age_group": "35-54",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "WHOOP 4.0 Fitness Tracker",
+          "comment": "I've been using the WHOOP 4.0 for a few months now, and I really appreciate how it tracks my recovery and sleep. It's been eye-opening to see how my workouts impact my body and how much rest I actually need. The strap is comfortable too, which is a big plus for me. Overall, it's a solid tool for anyone serious about getting in better shape and understanding their body's needs."
+        },
+        {
+          "product": "Ted Lasso",
+          "comment": "Ted Lasso is a breath of fresh air in the world of TV. It's got heart, humor, and a bunch of well-developed characters that you can't help but root for."
+        },
+        {
+          "product": "WHOOP 4.0 Fitness Tracker",
+          "comment": "This WHOOP 4.0 is game-changing for my training routine. It's given me real insights into my recovery and helped me optimize my workouts without overdoing it."
+        },
+        {
+          "product": "WHOOP 4.0 Fitness Tracker",
+          "comment": "I've been using the WHOOP 4.0 for a couple of months now, and it's really helping me track my recovery and sleep better. The insights it provides are pretty detailed, and it’s motivating me to stay more consistent with my workouts and rest days."
+        }
+      ]
+    },
+    {
+      "group_id": 2,
+      "demographics": {
+        "age_group": "55+",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "Fitbit Charge 6",
+          "comment": "I've had my Fitbit Charge 6 for a few weeks now and it's been a game changer for keeping track of my daily activity, I have to say it's pretty darn accurate too. The battery life is great, I only have to charge it every 5-6 days which is nice because I'm not exactly tech savvy and don't want to be bothered with constant recharging. My grandkids helped me set it up and now I can even get notifications from my phone, which is handy for an old guy like me!"
+        },
+        {
+          "product": "Microsoft 365 Family Plan",
+          "comment": "I've been using the Microsoft 365 Family Plan for a few months now, and I can't say enough good things about it. It’s great to have all my kids and grandkids on one subscription, and we all get to use the Office apps without any hassle. Plus, the OneDrive storage has been a lifesaver for keeping all our family photos safe and accessible. Highly recommend it for families!"
+        },
+        {
+          "product": "Microsoft 365 Family Plan",
+          "comment": "I've been using the Microsoft 365 Family Plan for a few months now, and it's really come in handy for all of us. The kids use it for school projects, and I find the cloud storage particularly useful for keeping everything organized."
+        },
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "I've been wearing these Nike Dri-FIT Running Shorts for a few months now and I gotta say, they're pretty comfortable. The material is lightweight and breathable, which is great for my morning jogs. I'm not as spry as I used to be, but these shorts make me feel like I can still keep up with the younger folks - well, at least for a little while anyway!"
+        }
+      ]
+    },
+    {
+      "group_id": 3,
+      "demographics": {
+        "age_group": "18-34",
+        "gender": "Non-binary"
+      },
+      "comments": [
+        {
+          "product": "Fitbit Charge 6",
+          "comment": "I've been using the Fitbit Charge 6 for like, a month now, and I'm super impressed with the accuracy of the heart rate monitoring and sleep tracking - it's def helped me stay on top of my fitness goals. The battery life is also pretty lit, I only have to charge it like, every 5-7 days. One thing I wish it had though, is more customizable watch faces, but overall it's a solid device and I'd totes recommend it to anyone looking for a reliable fitness tracker!"
+        },
+        {
+          "product": "Bose QuietComfort Earbuds",
+          "comment": "I've been using the Bose QuietComfort Earbuds for a few weeks now and I'm low-key obsessed - the noise cancellation is insane and they're so comfy to wear for hours on end. I was a bit skeptical about spending this much on earbuds, but honestly they're worth it, the sound quality is fire and they're perfect for listening to music or podcasts on the go. My only complaint is that the case is a bit bulky, but overall I'm really happy with my purchase!"
+        },
+        {
+          "product": "VanMoof S5 E-Bike",
+          "comment": "I just got the VanMoof S5 and I'm totally obsessed! 🚲💨 The design is sleek and modern, plus the integrated tech makes riding super smooth. It's made my commutes so much more enjoyable and I love how it feels to just zip around town without breaking a sweat. 10/10 would recommend!"
+        },
+        {
+          "product": "Tesla Model Y",
+          "comment": "Honestly, I’m obsessed with my Tesla Model Y! It’s like driving a futuristic spaceship—super smooth and tons of tech features that are just so user-friendly. The space inside is amazing for road trips with friends, plus, I love how environmentally friendly it is. Definitely a game changer for me! 🚗💨"
+        }
+      ]
+    },
+    {
+      "group_id": 4,
+      "demographics": {
+        "age_group": "55+",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "Fitbit Charge 6",
+          "comment": "Well, I upgraded from an older Fitbit – a Charge 3, I think it was – and this Charge 6 is a nice step up. The screen is much brighter, which is good for my eyes, and I like that it connects to my gym equipment now, keeps track of things a bit more accurately. Honestly, the biggest thing for me is just getting nudged to move around during the day; helps this old body not get *too*"
+        },
+        {
+          "product": "Tesla Model Y",
+          "comment": "I've had my Model Y for a few months now, and I must say, it's a real game changer. The ride is smooth, the acceleration is impressive, and it's surprisingly roomy for a compact SUV."
+        },
+        {
+          "product": "Honkai: Star Rail",
+          "comment": "I've been playing Honkai: Star Rail for a couple of weeks now, and I have to say, it's quite the experience. The graphics are stunning, and I find the turn-based combat refreshing compared to other games out there. The characters have unique stories that keep me invested, and I enjoy leveling them up. Just wish I had more time to dive into it, but it definitely keeps me entertained!"
+        },
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "These shorts are comfortable and lightweight, perfect for my daily jogs. They keep me cool and dry, even on hot days, and the pockets are handy for keeping my keys."
+        }
+      ]
+    },
+    {
+      "group_id": 5,
+      "demographics": {
+        "age_group": "35-54",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "Microsoft 365 Family Plan",
+          "comment": "I've been using the Microsoft 365 Family Plan for a while now, and it's been really handy for my whole family. We all have our own accounts, so everyone can store their files and use the Office apps without any issues. Plus, the collaboration features make it easy for me and my kids to work on projects together. Definitely worth it for the price!"
+        },
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "These shorts are comfortable and lightweight, perfect for my morning runs. The Dri-FIT tech really keeps the sweat at bay, and they've held up well after a bunch of washes."
+        },
+        {
+          "product": "WHOOP 4.0 Fitness Tracker",
+          "comment": "I've been using the WHOOP 4.0 for a few months now, and I really appreciate how it tracks my recovery and sleep. It's been eye-opening to see how my workouts impact my body and how much rest I actually need. The strap is comfortable too, which is a big plus for me. Overall, it's a solid tool for anyone serious about getting in better shape and understanding their body's needs."
+        },
+        {
+          "product": "Ted Lasso",
+          "comment": "Honestly, I was kinda hesitant to watch this at first – seemed a little too…sweet, ya know? But man, it really got to me. It's genuinely funny, but also surprisingly heartwarming, and a nice change of pace from all the dark stuff on TV these days. Definitely recommend giving it a shot, even if you don’t usually go for c"
+        }
+      ]
+    },
+    {
+      "group_id": 6,
+      "demographics": {
+        "age_group": "35-54",
+        "gender": "Non-binary"
+      },
+      "comments": [
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "I've been wearing these shorts for a few months now and I gotta say, they're super comfy and breathable - perfect for my morning runs. The Dri-FIT tech really does make a difference, I don't feel all sweaty and gross even after a tough workout. My only complaint is that they run a bit shorter than I expected, but overall I'm really happy with the purchase."
+        },
+        {
+          "product": "Ted Lasso",
+          "comment": "Okay, seriously, Ted Lasso just *gets* it. It’s such a genuinely kind show, which honestly feels rare these days, and I needed that. Plus, the characters are all so well-developed, you really root for everyone – even the ones who start out kinda awful, ya know? Definitely recommend if you’re looking for something to lift your"
+        },
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "I've been running in these shorts for a few weeks now and I have to say, they're super comfy and the Dri-FIT tech really does make a difference - I don't feel like I'm sweating buckets like I used to in my old shorts. The material is lightweight and breathable, which is perfect for those hot summer runs. My only minor complaint is that the pocket could be a bit bigger, but overall I'm really happy with these shorts and would definitely recommend them to fellow runners."
+        },
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "Okay, these shorts are seriously a game changer for my runs. I’ve been looking for something that doesn’t ride up, and these actually stay put – hallelujah! The fabric is super lightweight and breathable, which is a must when you’re pushing it, and they wash really well too, which is always a plus. Honestly, I'm probably going to buy another pair or two, they're *tha"
+        }
+      ]
+    },
+    {
+      "group_id": 7,
+      "demographics": {
+        "age_group": "55+",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "WHOOP 4.0 Fitness Tracker",
+          "comment": "I've been using the WHOOP 4.0 for a few months now and I gotta say, it's been a game changer for me - I'm 62 and trying to stay active, and this thing tracks everything from my sleep to my workouts. The battery life is pretty good, I only have to charge it every 4-5 days, and the strap is comfy to wear. My only complaint is that the app can be a bit confusing to navigate, but overall I'm really happy with the purchase."
+        },
+        {
+          "product": "Tesla Model Y",
+          "comment": "I've had my Model Y for a few months now, and I must say, it's a real game changer. The ride is smooth, the acceleration is impressive, and it's surprisingly roomy for a compact SUV."
+        },
+        {
+          "product": "Tesla Model Y",
+          "comment": "I recently got the Tesla Model Y, and I have to say, it’s quite a change from my usual vehicles. The tech is impressive, but it took me a little while to get used to all the gadgets. I love how smooth and quiet it drives—much easier on my knees than my old truck. Plus, the space inside is great for my grandkids when we go on trips!"
+        },
+        {
+          "product": "Fitbit Charge 6",
+          "comment": "Well, I upgraded from an older Fitbit – a Charge 3, I think it was – and this Charge 6 is a nice step up. The screen is much brighter, which is good for my eyes, and I like that it connects to my gym equipment now, keeps track of things a bit more accurately. Honestly, the biggest thing for me is just getting nudged to move around during the day; helps this old body not get *too*"
+        }
+      ]
+    },
+    {
+      "group_id": 8,
+      "demographics": {
+        "age_group": "35-54",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "Ted Lasso",
+          "comment": "Ted Lasso is an absolute gem. It’s got heart, humor, and some really great life lessons that hit home."
+        },
+        {
+          "product": "Ted Lasso",
+          "comment": "I just binged Ted Lasso with my wife and we both loved it - it's a really funny show with a lot of heart. Jason Sudeikis is perfect as the titular character, and the supporting cast is great too. I've already recommended it to a bunch of my friends, it's definitely worth checking out if you're looking for a lighthearted comedy. The characters really grow on you over the course of the season, and it's become one of my favorite shows."
+        },
+        {
+          "product": "WHOOP 4.0 Fitness Tracker",
+          "comment": "I've been using the WHOOP 4.0 for a few weeks now and I gotta say, it's been a game changer for my workout routine. The recovery tracking feature is super helpful in making sure I'm not overdoing it, and the sleep tracking is pretty accurate too. My only gripe is that the battery life could be better, but overall I'm really happy with the purchase and feel like it's helped me take my fitness to the next level."
+        },
+        {
+          "product": "WHOOP 4.0 Fitness Tracker",
+          "comment": "I've been using the WHOOP 4.0 for a few months now, and I really appreciate how it tracks my recovery and sleep. It's been eye-opening to see how my workouts impact my body and how much rest I actually need. The strap is comfortable too, which is a big plus for me. Overall, it's a solid tool for anyone serious about getting in better shape and understanding their body's needs."
+        }
+      ]
+    },
+    {
+      "group_id": 9,
+      "demographics": {
+        "age_group": "55+",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "Microsoft 365 Family Plan",
+          "comment": "I've been using the Microsoft 365 Family Plan for a few months now, and it's really come in handy for all of us. The kids use it for school projects, and I find the cloud storage particularly useful for keeping everything organized."
+        },
+        {
+          "product": "Fitbit Charge 6",
+          "comment": "Well, I upgraded from an older Fitbit – a Charge 3, I think it was – and this Charge 6 is a nice step up. The screen is much brighter, which is good for my eyes, and I like that it connects to my gym equipment now, keeps track of things a bit more accurately. Honestly, the biggest thing for me is just getting nudged to move around during the day; helps this old body not get *too*"
+        },
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "These shorts are comfortable and lightweight, perfect for my daily jogs. They keep me cool and dry, even on hot days, and the pockets are handy for keeping my keys."
+        },
+        {
+          "product": "Fitbit Charge 6",
+          "comment": "I've had my Fitbit Charge 6 for a few weeks now and it's been a game changer for keeping track of my daily activity, I have to say it's pretty darn accurate too. The battery life is great, I only have to charge it every 5-6 days which is nice because I'm not exactly tech savvy and don't want to be bothered with constant recharging. My grandkids helped me set it up and now I can even get notifications from my phone, which is handy for an old guy like me!"
+        }
+      ]
+    },
+    {
+      "group_id": 10,
+      "demographics": {
+        "age_group": "35-54",
+        "gender": "Male"
+      },
+      "comments": [
+        {
+          "product": "Ted Lasso",
+          "comment": "I just binge-watched Ted Lasso with my wife and we both loved it, it's a really feel-good show that's all about the underdog story. Jason Sudeikis is hilarious as Ted, and the whole cast is great, we're already waiting for the next season. I've been recommending it to all my friends, it's a great show to watch if you're looking for something light-hearted and entertaining. The writing is top-notch and the characters are all really well-developed, it's definitely one of the best shows I've seen in a while."
+        },
+        {
+          "product": "Nike Dri-FIT Running Shorts",
+          "comment": "These shorts are solid for running; they stay in place and wick sweat really well. The only thing I wish is they came in more colors or patterns."
+        },
+        {
+          "product": "Microsoft 365 Family Plan",
+          "comment": "I've been using the Microsoft 365 Family Plan for a while now, and it's been really handy for my whole family. We all have our own accounts, so everyone can store their files and use the Office apps without any issues. Plus, the collaboration features make it easy for me and my kids to work on projects together. Definitely worth it for the price!"
+        },
+        {
+          "product": "Microsoft 365 Family Plan",
+          "comment": "I've been using the Microsoft 365 Family Plan for a few months now and it's been a game changer for my household - my wife and kids are always on their devices, so it's great that we can all be covered under one plan. The cloud storage has been a lifesaver, especially with all the photos and videos we take, and the fact that we get the latest versions of Office is a big plus. Overall, I'd definitely recommend it to anyone with a family that's as digitally connected as mine is."
+        }
+      ]
+    }
+  ]
+}

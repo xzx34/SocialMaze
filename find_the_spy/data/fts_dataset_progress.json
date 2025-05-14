@@ -1,0 +1,1042 @@
+[
+  {
+    "scenario_id": "normal_2",
+    "normal_word": "almond",
+    "spy_word": "peanut",
+    "spy_player": "2",
+    "player_words": {
+      "1": "almond",
+      "2": "peanut",
+      "3": "almond",
+      "4": "almond"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "4": {
+        "round1": "This is a common ingredient in baking that adds a crunchy texture and a rich flavor.",
+        "round2": "It's a tree that blooms with beautiful white flowers and is valued for its edible seeds.",
+        "round3": "Often found in the snack aisle, this item is a favorite for those looking for a healthy, on-the-go option.",
+        "full_response": "Round 1 description: This is a common ingredient in baking that adds a crunchy texture and a rich flavor.\nRound 2 description: It's a tree that blooms with beautiful white flowers and is valued for its edible seeds.\nRound 3 description: Often found in the snack aisle, this item is a favorite for those looking for a healthy, on-the-go option."
+      },
+      "3": {
+        "round1": "It’s a seed often enjoyed as a snack, and can be processed into a creamy spread.",
+        "round2": "This item features in many baking recipes, providing a delicate, slightly sweet flavor.",
+        "round3": "Often associated with health and beauty, it contains beneficial oils and is a key ingredient in m",
+        "full_response": "Round 1 description: It’s a seed often enjoyed as a snack, and can be processed into a creamy spread.\nRound 2 description: This item features in many baking recipes, providing a delicate, slightly sweet flavor.\nRound 3 description: Often associated with health and beauty, it contains beneficial oils and is a key ingredient in m"
+      },
+      "1": {
+        "round1": "This is a type of nut that is often used in baking and can be found in various desserts, adding a rich flavor and crunchy texture.",
+        "round2": "You might find this ingredient in a popular milk alternative, commonly enjoyed by those who are lactose intolerant or looking for a plant-based option.",
+        "round3": "This nut is known for its heart-healthy benefits and is often recommended as a healthy snack, packed with nutrients and healthy fats.",
+        "full_response": "Round 1 description: This is a type of nut that is often used in baking and can be found in various desserts, adding a rich flavor and crunchy texture.  \nRound 2 description: You might find this ingredient in a popular milk alternative, commonly enjoyed by those who are lactose intolerant or looking for a plant-based option.  \nRound 3 description: This nut is known for its heart-healthy benefits and is often recommended as a healthy snack, packed with nutrients and healthy fats."
+      },
+      "2": {
+        "round1": "This popular snack is often associated with baseball games and circus performances, where it's commonly served in a specific format.",
+        "round2": "The plant that produces this food is a legume, requiring a specific type of soil and climate to grow, and is widely cultivated in many parts of the world.",
+        "round3": "When processed, this ingredient can be transformed into a variety of products, including a creamy paste, a sweet syrup, and even a flavorful oil used in cooking.",
+        "full_response": "Round 1 description: This popular snack is often associated with baseball games and circus performances, where it's commonly served in a specific format.\nRound 2 description: The plant that produces this food is a legume, requiring a specific type of soil and climate to grow, and is widely cultivated in many parts of the world.\nRound 3 description: When processed, this ingredient can be transformed into a variety of products, including a creamy paste, a sweet syrup, and even a flavorful oil used in cooking."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a type of nut that is often used in baking and can be found in various desserts, adding a rich flavor and crunchy texture."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This popular snack is often associated with baseball games and circus performances, where it's commonly served in a specific format."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s a seed often enjoyed as a snack, and can be processed into a creamy spread."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is a common ingredient in baking that adds a crunchy texture and a rich flavor."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find this ingredient in a popular milk alternative, commonly enjoyed by those who are lactose intolerant or looking for a plant-based option."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The plant that produces this food is a legume, requiring a specific type of soil and climate to grow, and is widely cultivated in many parts of the world."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This item features in many baking recipes, providing a delicate, slightly sweet flavor."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a tree that blooms with beautiful white flowers and is valued for its edible seeds."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This nut is known for its heart-healthy benefits and is often recommended as a healthy snack, packed with nutrients and healthy fats."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: When processed, this ingredient can be transformed into a variety of products, including a creamy paste, a sweet syrup, and even a flavorful oil used in cooking."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: Often associated with health and beauty, it contains beneficial oils and is a key ingredient in m"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: Often found in the snack aisle, this item is a favorite for those looking for a healthy, on-the-go option."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_2",
+    "normal_word": "hat",
+    "spy_word": "cap",
+    "spy_player": "1",
+    "player_words": {
+      "1": "cap",
+      "2": "hat",
+      "3": "hat",
+      "4": "hat"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is often worn on the head and can serve both a practical purpose and a fashion statement.",
+        "round2": "Some types of this can signify rank or affiliation, particularly in various organizations or sports teams.",
+        "round3": "You might find this item protecting you from the sun or keeping you warm in colder weather, depending on its design.",
+        "full_response": "Round 1 description: This is often worn on the head and can serve both a practical purpose and a fashion statement.  \nRound 2 description: Some types of this can signify rank or affiliation, particularly in various organizations or sports teams.  \nRound 3 description: You might find this item protecting you from the sun or keeping you warm in colder weather, depending on its design."
+      },
+      "4": {
+        "round1": "This item is often used to protect one from the sun or rain.",
+        "round2": "You might find a variety of these items in a costume closet.",
+        "round3": "It's a common accessory that can be a part of a uniform or a fashion statement.",
+        "full_response": "Round 1 description: This item is often used to protect one from the sun or rain.\nRound 2 description: You might find a variety of these items in a costume closet.\nRound 3 description: It's a common accessory that can be a part of a uniform or a fashion statement."
+      },
+      "3": {
+        "round1": "It’s often worn to shield from the sun or add a bit of style to an outfit.",
+        "round2": "You might find this item at a costume party or on a cold winter's day.",
+        "round3": "This covering is generally placed on the head, and can be made of many differen",
+        "full_response": "Round 1 description: It’s often worn to shield from the sun or add a bit of style to an outfit.\nRound 2 description: You might find this item at a costume party or on a cold winter's day.\nRound 3 description: This covering is generally placed on the head, and can be made of many differen"
+      },
+      "2": {
+        "round1": "It's something that people often wear on their head to protect themselves from the sun or to make a fashion statement.",
+        "round2": "This item can be made from a wide variety of materials, including fabric, straw, or even synthetic materials, and comes in many different shapes and sizes.",
+        "round3": "It's a popular accessory that can be dressed up or down, and is often used to express the wearer's personal style, occupation, or cultural affiliation.",
+        "full_response": "Round 1 description: It's something that people often wear on their head to protect themselves from the sun or to make a fashion statement.\nRound 2 description: This item can be made from a wide variety of materials, including fabric, straw, or even synthetic materials, and comes in many different shapes and sizes.\nRound 3 description: It's a popular accessory that can be dressed up or down, and is often used to express the wearer's personal style, occupation, or cultural affiliation."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is often worn on the head and can serve both a practical purpose and a fashion statement."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's something that people often wear on their head to protect themselves from the sun or to make a fashion statement."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s often worn to shield from the sun or add a bit of style to an outfit."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This item is often used to protect one from the sun or rain."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Some types of this can signify rank or affiliation, particularly in various organizations or sports teams."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This item can be made from a wide variety of materials, including fabric, straw, or even synthetic materials, and comes in many different shapes and sizes."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You might find this item at a costume party or on a cold winter's day."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: You might find a variety of these items in a costume closet."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find this item protecting you from the sun or keeping you warm in colder weather, depending on its design."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a popular accessory that can be dressed up or down, and is often used to express the wearer's personal style, occupation, or cultural affiliation."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This covering is generally placed on the head, and can be made of many differen"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a common accessory that can be a part of a uniform or a fashion statement."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_1",
+    "normal_word": "snake",
+    "spy_word": "lizard",
+    "spy_player": "3",
+    "player_words": {
+      "1": "snake",
+      "2": "snake",
+      "3": "lizard",
+      "4": "snake"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This creature is a long, legless reptile often found slithering through grass or hiding under rocks.",
+        "round2": "Known for its ability to shed its skin, this animal symbolizes transformation and renewal in many cultures.",
+        "round3": "Some species of this creature can be venomous, using their bite to immobilize prey or defend themselves.",
+        "full_response": "Round 1 description: This creature is a long, legless reptile often found slithering through grass or hiding under rocks.  \nRound 2 description: Known for its ability to shed its skin, this animal symbolizes transformation and renewal in many cultures.  \nRound 3 description: Some species of this creature can be venomous, using their bite to immobilize prey or defend themselves."
+      },
+      "3": {
+        "round1": "It’s a cold-blooded creature often seen basking in the sun to regulate its body temperature.",
+        "round2": "This animal is known for its ability to detach its tail as a defense mechanism.",
+        "round3": "Many types of this reptile change color to camouflage themselves within their envi",
+        "full_response": "Round 1 description: It’s a cold-blooded creature often seen basking in the sun to regulate its body temperature.\nRound 2 description: This animal is known for its ability to detach its tail as a defense mechanism.\nRound 3 description: Many types of this reptile change color to camouflage themselves within their envi"
+      },
+      "4": {
+        "round1": "This creature is known for its sleek, legless body that can slither through grass without making a sound.",
+        "round2": "In many cultures, this being is often associated with cunning and deceit, sometimes even leading to its portrayal as a villain.",
+        "round3": "It can be found in a variety of habitats, from deserts to rainforests, and it plays a crucial role in controlling pest populations.",
+        "full_response": "Round 1 description: This creature is known for its sleek, legless body that can slither through grass without making a sound.\nRound 2 description: In many cultures, this being is often associated with cunning and deceit, sometimes even leading to its portrayal as a villain.\nRound 3 description: It can be found in a variety of habitats, from deserts to rainforests, and it plays a crucial role in controlling pest populations."
+      },
+      "2": {
+        "round1": "This creature is often feared for its venomous fangs and slithering movements, striking fear into the hearts of many who cross its path.",
+        "round2": "In many ecosystems, this long and slender creature plays a crucial role in maintaining the balance of nature, serving as both predator and prey.",
+        "round3": "Throughout history and across various cultures, this animal has been a symbol of renewal, transformation, and healing, appearing in numerous myths, legends, and artworks.",
+        "full_response": "Round 1 description: This creature is often feared for its venomous fangs and slithering movements, striking fear into the hearts of many who cross its path.\nRound 2 description: In many ecosystems, this long and slender creature plays a crucial role in maintaining the balance of nature, serving as both predator and prey.\nRound 3 description: Throughout history and across various cultures, this animal has been a symbol of renewal, transformation, and healing, appearing in numerous myths, legends, and artworks."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This creature is a long, legless reptile often found slithering through grass or hiding under rocks."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This creature is often feared for its venomous fangs and slithering movements, striking fear into the hearts of many who cross its path."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s a cold-blooded creature often seen basking in the sun to regulate its body temperature."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This creature is known for its sleek, legless body that can slither through grass without making a sound."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Known for its ability to shed its skin, this animal symbolizes transformation and renewal in many cultures."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: In many ecosystems, this long and slender creature plays a crucial role in maintaining the balance of nature, serving as both predator and prey."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This animal is known for its ability to detach its tail as a defense mechanism."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: In many cultures, this being is often associated with cunning and deceit, sometimes even leading to its portrayal as a villain."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Some species of this creature can be venomous, using their bite to immobilize prey or defend themselves."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: Throughout history and across various cultures, this animal has been a symbol of renewal, transformation, and healing, appearing in numerous myths, legends, and artworks."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: Many types of this reptile change color to camouflage themselves within their envi"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It can be found in a variety of habitats, from deserts to rainforests, and it plays a crucial role in controlling pest populations."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_3",
+    "normal_word": "menu",
+    "spy_word": "recipe",
+    "spy_player": "2",
+    "player_words": {
+      "1": "menu",
+      "2": "recipe",
+      "3": "menu",
+      "4": "menu"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a list that showcases various options available for a meal, often found in restaurants or cafes.",
+        "round2": "It serves as a guide to help you decide what dishes or drinks you might want to order during your dining experience.",
+        "round3": "Typically, this item is printed on paper or displayed on a board, and it can also vary by season or special events.",
+        "full_response": "Round 1 description: This is a list that showcases various options available for a meal, often found in restaurants or cafes.  \nRound 2 description: It serves as a guide to help you decide what dishes or drinks you might want to order during your dining experience.  \nRound 3 description: Typically, this item is printed on paper or displayed on a board, and it can also vary by season or special events.  "
+      },
+      "4": {
+        "round1": "It's a list that guides you through making a selection at an establishment.",
+        "round2": "This item is often found in the hands of customers before they order, and it's crucial for navigating choices.",
+        "round3": "Think of it as a map that leads you to decide on what you want to enjoy, often used in places where you sit down to be served.",
+        "full_response": "Round 1 description: It's a list that guides you through making a selection at an establishment.\nRound 2 description: This item is often found in the hands of customers before they order, and it's crucial for navigating choices.\nRound 3 description: Think of it as a map that leads you to decide on what you want to enjoy, often used in places where you sit down to be served."
+      },
+      "2": {
+        "round1": "It's a set of instructions that helps people create something delicious to eat by combining various ingredients in a specific order.",
+        "round2": "This thing is often found in books or online, and it usually includes a list of necessary items and step-by-step guidance to achieve a desired outcome.",
+        "round3": "In many cultures, it's a treasured family secret that's passed down through generations, and it can be used to make a wide range of sweet and savory dishes.",
+        "full_response": "Round 1 description: It's a set of instructions that helps people create something delicious to eat by combining various ingredients in a specific order.\nRound 2 description: This thing is often found in books or online, and it usually includes a list of necessary items and step-by-step guidance to achieve a desired outcome.\nRound 3 description: In many cultures, it's a treasured family secret that's passed down through generations, and it can be used to make a wide range of sweet and savory dishes."
+      },
+      "3": {
+        "round1": "It's a list of choices, often presented in a structured way, telling you what’s available.",
+        "round2": "You encounter this frequently when deciding what you want to consume, whether it's food or digital content.",
+        "round3": "It can be physical or digital, and is designed to help you make a selection from a range of",
+        "full_response": "Round 1 description: It's a list of choices, often presented in a structured way, telling you what’s available.\nRound 2 description: You encounter this frequently when deciding what you want to consume, whether it's food or digital content.\nRound 3 description: It can be physical or digital, and is designed to help you make a selection from a range of "
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a list that showcases various options available for a meal, often found in restaurants or cafes."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a set of instructions that helps people create something delicious to eat by combining various ingredients in a specific order."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's a list of choices, often presented in a structured way, telling you what’s available."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a list that guides you through making a selection at an establishment."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It serves as a guide to help you decide what dishes or drinks you might want to order during your dining experience."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This thing is often found in books or online, and it usually includes a list of necessary items and step-by-step guidance to achieve a desired outcome."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You encounter this frequently when deciding what you want to consume, whether it's food or digital content."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This item is often found in the hands of customers before they order, and it's crucial for navigating choices."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Typically, this item is printed on paper or displayed on a board, and it can also vary by season or special events."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: In many cultures, it's a treasured family secret that's passed down through generations, and it can be used to make a wide range of sweet and savory dishes."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It can be physical or digital, and is designed to help you make a selection from a range of"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: Think of it as a map that leads you to decide on what you want to enjoy, often used in places where you sit down to be served."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_4",
+    "normal_word": "pizza",
+    "spy_word": "pasta",
+    "spy_player": "1",
+    "player_words": {
+      "1": "pasta",
+      "2": "pizza",
+      "3": "pizza",
+      "4": "pizza"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a popular Italian dish that comes in many shapes and is often served with a variety of sauces.",
+        "round2": "You can find this staple food in a box at the grocery store, and it's a favorite for quick meals.",
+        "round3": "This ingredient is often boiled and then paired with toppings like cheese, vegetables, or meats to create a hearty dish.",
+        "full_response": "Round 1 description: This is a popular Italian dish that comes in many shapes and is often served with a variety of sauces.  \nRound 2 description: You can find this staple food in a box at the grocery store, and it's a favorite for quick meals.  \nRound 3 description: This ingredient is often boiled and then paired with toppings like cheese, vegetables, or meats to create a hearty dish."
+      },
+      "3": {
+        "round1": "It’s often enjoyed with friends and family, and frequently delivered to your door.",
+        "round2": "A circular base is key, and it’s highly customizable with various toppings.",
+        "round3": "Many people consider it a comfort food, perfect for casual gatherings or a qui",
+        "full_response": "Round 1 description: It’s often enjoyed with friends and family, and frequently delivered to your door.\nRound 2 description: A circular base is key, and it’s highly customizable with various toppings.\nRound 3 description: Many people consider it a comfort food, perfect for casual gatherings or a qui"
+      },
+      "4": {
+        "round1": "This is a popular food often served at parties and gatherings, known for its round shape and versatile toppings.",
+        "round2": "It's a dish that can be cooked in a variety of ways, from quick and easy in a home oven to slow and traditional in a wood-fired brick oven.",
+        "round3": "This item is a staple in many households, often ordered for convenience and enjoyed for its comforting, savory flavors.",
+        "full_response": "Round 1 description: This is a popular food often served at parties and gatherings, known for its round shape and versatile toppings.\nRound 2 description: It's a dish that can be cooked in a variety of ways, from quick and easy in a home oven to slow and traditional in a wood-fired brick oven.\nRound 3 description: This item is a staple in many households, often ordered for convenience and enjoyed for its comforting, savory flavors."
+      },
+      "2": {
+        "round1": "It's a popular dish that originated in Italy and is often served hot, topped with a variety of ingredients such as cheese, vegetables, and meats.",
+        "round2": "This favorite food item is typically circular in shape and is commonly consumed as a snack or a meal, often accompanied by dips or sides like garlic bread.",
+        "round3": "The preparation of this culinary delight involves combining different ingredients on a flattened piece of dough, which is then cooked in an oven until the crust is crispy and golden brown.",
+        "full_response": "Round 1 description: It's a popular dish that originated in Italy and is often served hot, topped with a variety of ingredients such as cheese, vegetables, and meats.\nRound 2 description: This favorite food item is typically circular in shape and is commonly consumed as a snack or a meal, often accompanied by dips or sides like garlic bread.\nRound 3 description: The preparation of this culinary delight involves combining different ingredients on a flattened piece of dough, which is then cooked in an oven until the crust is crispy and golden brown."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a popular Italian dish that comes in many shapes and is often served with a variety of sauces."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a popular dish that originated in Italy and is often served hot, topped with a variety of ingredients such as cheese, vegetables, and meats."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s often enjoyed with friends and family, and frequently delivered to your door."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is a popular food often served at parties and gatherings, known for its round shape and versatile toppings."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You can find this staple food in a box at the grocery store, and it's a favorite for quick meals."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This favorite food item is typically circular in shape and is commonly consumed as a snack or a meal, often accompanied by dips or sides like garlic bread."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: A circular base is key, and it’s highly customizable with various toppings."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a dish that can be cooked in a variety of ways, from quick and easy in a home oven to slow and traditional in a wood-fired brick oven."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This ingredient is often boiled and then paired with toppings like cheese, vegetables, or meats to create a hearty dish."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The preparation of this culinary delight involves combining different ingredients on a flattened piece of dough, which is then cooked in an oven until the crust is crispy and golden brown."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: Many people consider it a comfort food, perfect for casual gatherings or a qui"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This item is a staple in many households, often ordered for convenience and enjoyed for its comforting, savory flavors."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_4",
+    "normal_word": "grapefruit",
+    "spy_word": "lemon",
+    "spy_player": "4",
+    "player_words": {
+      "1": "grapefruit",
+      "2": "grapefruit",
+      "3": "grapefruit",
+      "4": "lemon"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This fruit is known for its unique combination of sweetness and bitterness, often enjoyed in salads or as a breakfast option.",
+        "round2": "Its vibrant, yellow-orange flesh is packed with vitamin C and is often used in juices and cocktails.",
+        "round3": "This citrus fruit is usually larger than an orange and can be found in a variety of colors, including pink and white.",
+        "full_response": "Round 1 description: This fruit is known for its unique combination of sweetness and bitterness, often enjoyed in salads or as a breakfast option.  \nRound 2 description: Its vibrant, yellow-orange flesh is packed with vitamin C and is often used in juices and cocktails.  \nRound 3 description: This citrus fruit is usually larger than an orange and can be found in a variety of colors, including pink and white."
+      },
+      "3": {
+        "round1": "It’s a breakfast food that’s often enjoyed sectioned with a spoon.",
+        "round2": "This citrus fruit has a slightly tart and tangy flavor, often a beautiful pinkish-red inside.",
+        "round3": "Think of a fruit that's a hybrid – a result of combining two different citrus va",
+        "full_response": "Round 1 description: It’s a breakfast food that’s often enjoyed sectioned with a spoon.\nRound 2 description: This citrus fruit has a slightly tart and tangy flavor, often a beautiful pinkish-red inside.\nRound 3 description: Think of a fruit that's a hybrid – a result of combining two different citrus va"
+      },
+      "4": {
+        "round1": "This is a common citrus fruit often used to add a tangy flavor to dishes.",
+        "round2": "It's a small, round fruit that's a key ingredient in making a popular summer beverage.",
+        "round3": "This fruit is not only edible but also frequently used in cleaning products due to its fresh scent.",
+        "full_response": "Round 1 description: This is a common citrus fruit often used to add a tangy flavor to dishes.\nRound 2 description: It's a small, round fruit that's a key ingredient in making a popular summer beverage.\nRound 3 description: This fruit is not only edible but also frequently used in cleaning products due to its fresh scent."
+      },
+      "2": {
+        "round1": "This type of fruit is often eaten for breakfast, typically halved and served with a sprinkle of sugar to balance out its tartness.",
+        "round2": "The peel of this particular citrus fruit is usually quite thick and rough to the touch, making it a bit challenging to peel by hand.",
+        "round3": "When juiced, this fruit produces a refreshing and slightly bitter drink that's popular for its potential health benefits and unique flavor profile.",
+        "full_response": "Round 1 description: This type of fruit is often eaten for breakfast, typically halved and served with a sprinkle of sugar to balance out its tartness.\nRound 2 description: The peel of this particular citrus fruit is usually quite thick and rough to the touch, making it a bit challenging to peel by hand.\nRound 3 description: When juiced, this fruit produces a refreshing and slightly bitter drink that's popular for its potential health benefits and unique flavor profile."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This fruit is known for its unique combination of sweetness and bitterness, often enjoyed in salads or as a breakfast option."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This type of fruit is often eaten for breakfast, typically halved and served with a sprinkle of sugar to balance out its tartness."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s a breakfast food that’s often enjoyed sectioned with a spoon."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is a common citrus fruit often used to add a tangy flavor to dishes."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Its vibrant, yellow-orange flesh is packed with vitamin C and is often used in juices and cocktails."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The peel of this particular citrus fruit is usually quite thick and rough to the touch, making it a bit challenging to peel by hand."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This citrus fruit has a slightly tart and tangy flavor, often a beautiful pinkish-red inside."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a small, round fruit that's a key ingredient in making a popular summer beverage."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This citrus fruit is usually larger than an orange and can be found in a variety of colors, including pink and white."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: When juiced, this fruit produces a refreshing and slightly bitter drink that's popular for its potential health benefits and unique flavor profile."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: Think of a fruit that's a hybrid – a result of combining two different citrus va"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This fruit is not only edible but also frequently used in cleaning products due to its fresh scent."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_5",
+    "normal_word": "wall",
+    "spy_word": "roof",
+    "spy_player": "1",
+    "player_words": {
+      "1": "roof",
+      "2": "wall",
+      "3": "wall",
+      "4": "wall"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "3": {
+        "round1": "It’s a vertical structure often providing division or support.",
+        "round2": "You might decorate it, or lean against it when tired.",
+        "round3": "Historically, it offered protection from invaders and defined",
+        "full_response": "Round 1 description: It’s a vertical structure often providing division or support.\nRound 2 description: You might decorate it, or lean against it when tired.\nRound 3 description: Historically, it offered protection from invaders and defined"
+      },
+      "4": {
+        "round1": "This is often the boundary that defines the inside from the outside in a structure.",
+        "round2": "It can be painted in various colors and textures to match the aesthetic of a room.",
+        "round3": "It's a surface that can support art, shelves, and even the weight of a leaning head in deep thought.",
+        "full_response": "Round 1 description: This is often the boundary that defines the inside from the outside in a structure.\nRound 2 description: It can be painted in various colors and textures to match the aesthetic of a room.\nRound 3 description: It's a surface that can support art, shelves, and even the weight of a leaning head in deep thought."
+      },
+      "2": {
+        "round1": "It's a common feature found in many buildings that serves as a divider or separator between different spaces.",
+        "round2": "This structure is often used for decoration, with various materials and designs being used to make it visually appealing.",
+        "round3": "Its primary function is to provide support and stability, while also marking boundaries and defining areas within a given space.",
+        "full_response": "Round 1 description: It's a common feature found in many buildings that serves as a divider or separator between different spaces.\nRound 2 description: This structure is often used for decoration, with various materials and designs being used to make it visually appealing.\nRound 3 description: Its primary function is to provide support and stability, while also marking boundaries and defining areas within a given space."
+      },
+      "1": {
+        "round1": "This structure provides shelter from rain and snow, protecting what lies underneath.",
+        "round2": "It's often found atop buildings and can be made of various materials like shingles or tiles.",
+        "round3": "This element is crucial for insulation and can affect the overall energy efficiency of a home.",
+        "full_response": "Round 1 description: This structure provides shelter from rain and snow, protecting what lies underneath.  \nRound 2 description: It's often found atop buildings and can be made of various materials like shingles or tiles.  \nRound 3 description: This element is crucial for insulation and can affect the overall energy efficiency of a home."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This structure provides shelter from rain and snow, protecting what lies underneath."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a common feature found in many buildings that serves as a divider or separator between different spaces."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s a vertical structure often providing division or support."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is often the boundary that defines the inside from the outside in a structure."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It's often found atop buildings and can be made of various materials like shingles or tiles."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This structure is often used for decoration, with various materials and designs being used to make it visually appealing."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You might decorate it, or lean against it when tired."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It can be painted in various colors and textures to match the aesthetic of a room."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This element is crucial for insulation and can affect the overall energy efficiency of a home."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: Its primary function is to provide support and stability, while also marking boundaries and defining areas within a given space."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: Historically, it offered protection from invaders and defined"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a surface that can support art, shelves, and even the weight of a leaning head in deep thought."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_1",
+    "normal_word": "pizza",
+    "spy_word": "pasta",
+    "spy_player": "1",
+    "player_words": {
+      "1": "pasta",
+      "2": "pizza",
+      "3": "pizza",
+      "4": "pizza"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a versatile staple food that can be served in a variety of shapes and sizes, often enjoyed with a rich sauce or in a salad.",
+        "round2": "It’s commonly associated with Italian cuisine and can be paired with ingredients like cheese, vegetables, or meats to create a delightful dish.",
+        "round3": "This food item is made from a simple mixture of flour and water, usually cooked in boiling water until it reaches a tender texture.",
+        "full_response": "Round 1 description: This is a versatile staple food that can be served in a variety of shapes and sizes, often enjoyed with a rich sauce or in a salad.  \nRound 2 description: It’s commonly associated with Italian cuisine and can be paired with ingredients like cheese, vegetables, or meats to create a delightful dish.  \nRound 3 description: This food item is made from a simple mixture of flour and water, usually cooked in boiling water until it reaches a tender texture."
+      },
+      "3": {
+        "round1": "It’s often enjoyed with friends and family, and frequently delivered to your door.",
+        "round2": "This circular food is easily customizable with a variety of toppings.",
+        "round3": "A popular choice for a quick and satisfying meal, it's often cut into triangular",
+        "full_response": "Round 1 description: It’s often enjoyed with friends and family, and frequently delivered to your door.\nRound 2 description: This circular food is easily customizable with a variety of toppings.\nRound 3 description: A popular choice for a quick and satisfying meal, it's often cut into triangular"
+      },
+      "4": {
+        "round1": "This is a popular food item often served at parties and gatherings, known for its round shape.",
+        "round2": "It's a dish that can be customized with various toppings and is a favorite for quick, casual meals.",
+        "round3": "This food is often associated with Friday night dinners and can be found in countless varieties across different cultures.",
+        "full_response": "Round 1 description: This is a popular food item often served at parties and gatherings, known for its round shape.\nRound 2 description: It's a dish that can be customized with various toppings and is a favorite for quick, casual meals.\nRound 3 description: This food is often associated with Friday night dinners and can be found in countless varieties across different cultures."
+      },
+      "2": {
+        "round1": "It's a popular food item that originated in Italy and is often served hot, typically topped with a variety of ingredients such as cheese, vegetables, and meats.",
+        "round2": "This favorite comfort food is usually circular in shape, crispy on the bottom, and chewy on the inside, making it a satisfying meal or snack for people of all ages.",
+        "round3": "The preparation of this beloved dish often involves a specific type of oven or cooking technique, and its aroma is known to tantalize the senses and stimulate appetite.",
+        "full_response": "Round 1 description: It's a popular food item that originated in Italy and is often served hot, typically topped with a variety of ingredients such as cheese, vegetables, and meats.\nRound 2 description: This favorite comfort food is usually circular in shape, crispy on the bottom, and chewy on the inside, making it a satisfying meal or snack for people of all ages.\nRound 3 description: The preparation of this beloved dish often involves a specific type of oven or cooking technique, and its aroma is known to tantalize the senses and stimulate appetite."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a versatile staple food that can be served in a variety of shapes and sizes, often enjoyed with a rich sauce or in a salad."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a popular food item that originated in Italy and is often served hot, typically topped with a variety of ingredients such as cheese, vegetables, and meats."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s often enjoyed with friends and family, and frequently delivered to your door."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is a popular food item often served at parties and gatherings, known for its round shape."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It’s commonly associated with Italian cuisine and can be paired with ingredients like cheese, vegetables, or meats to create a delightful dish."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This favorite comfort food is usually circular in shape, crispy on the bottom, and chewy on the inside, making it a satisfying meal or snack for people of all ages."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This circular food is easily customizable with a variety of toppings."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a dish that can be customized with various toppings and is a favorite for quick, casual meals."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This food item is made from a simple mixture of flour and water, usually cooked in boiling water until it reaches a tender texture."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: The preparation of this beloved dish often involves a specific type of oven or cooking technique, and its aroma is known to tantalize the senses and stimulate appetite."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: A popular choice for a quick and satisfying meal, it's often cut into triangular"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This food is often associated with Friday night dinners and can be found in countless varieties across different cultures."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "spy_3",
+    "normal_word": "novel",
+    "spy_word": "poem",
+    "spy_player": "1",
+    "player_words": {
+      "1": "poem",
+      "2": "novel",
+      "3": "novel",
+      "4": "novel"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a form of artistic expression that often utilizes rhythm and can evoke deep emotions through carefully chosen words.",
+        "round2": "It can be written in various structures, such as sonnets or haikus, and often features imagery and metaphor.",
+        "round3": "Many cultures have celebrated this literary form through contests and recitals, highlighting its importance in storytelling and tradition.",
+        "full_response": "Round 1 description: This is a form of artistic expression that often utilizes rhythm and can evoke deep emotions through carefully chosen words.  \nRound 2 description: It can be written in various structures, such as sonnets or haikus, and often features imagery and metaphor.  \nRound 3 description: Many cultures have celebrated this literary form through contests and recitals, highlighting its importance in storytelling and tradition."
+      },
+      "3": {
+        "round1": "It’s a lengthy, imaginative creation often enjoyed during leisure time.",
+        "round2": "This form of storytelling typically features complex characters and a developed plot.",
+        "round3": "It’s something you might borrow from a library or find on a bedside table, offering an escape into anothe",
+        "full_response": "Round 1 description: It’s a lengthy, imaginative creation often enjoyed during leisure time.\nRound 2 description: This form of storytelling typically features complex characters and a developed plot.\nRound 3 description: It’s something you might borrow from a library or find on a bedside table, offering an escape into anothe"
+      },
+      "4": {
+        "round1": "This is something that often takes you on a journey through different worlds or times.",
+        "round2": "People spend hours engaged with this, turning pages or swiping screens to uncover the next chapter.",
+        "round3": "It can be a platform for exploring complex ideas or escaping reality, often ending with a satisfying conclusion.",
+        "full_response": "Round 1 description: This is something that often takes you on a journey through different worlds or times.\nRound 2 description: People spend hours engaged with this, turning pages or swiping screens to uncover the next chapter.\nRound 3 description: It can be a platform for exploring complex ideas or escaping reality, often ending with a satisfying conclusion."
+      },
+      "2": {
+        "round1": "It's something that people often find on bookshelves in their homes, usually with a captivating storyline and memorable characters.",
+        "round2": "This item is typically created by an individual with a vivid imagination, requiring a significant amount of time and effort to produce a polished version.",
+        "round3": "Many people enjoy getting lost in one of these for hours, exploring new worlds, meeting new people, and experiencing different emotions through the power of imagination and storytelling.",
+        "full_response": "Round 1 description: It's something that people often find on bookshelves in their homes, usually with a captivating storyline and memorable characters.\nRound 2 description: This item is typically created by an individual with a vivid imagination, requiring a significant amount of time and effort to produce a polished version.\nRound 3 description: Many people enjoy getting lost in one of these for hours, exploring new worlds, meeting new people, and experiencing different emotions through the power of imagination and storytelling."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a form of artistic expression that often utilizes rhythm and can evoke deep emotions through carefully chosen words."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's something that people often find on bookshelves in their homes, usually with a captivating storyline and memorable characters."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s a lengthy, imaginative creation often enjoyed during leisure time."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This is something that often takes you on a journey through different worlds or times."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It can be written in various structures, such as sonnets or haikus, and often features imagery and metaphor."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This item is typically created by an individual with a vivid imagination, requiring a significant amount of time and effort to produce a polished version."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: This form of storytelling typically features complex characters and a developed plot."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: People spend hours engaged with this, turning pages or swiping screens to uncover the next chapter."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: Many cultures have celebrated this literary form through contests and recitals, highlighting its importance in storytelling and tradition."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: Many people enjoy getting lost in one of these for hours, exploring new worlds, meeting new people, and experiencing different emotions through the power of imagination and storytelling."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It’s something you might borrow from a library or find on a bedside table, offering an escape into anothe"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It can be a platform for exploring complex ideas or escaping reality, often ending with a satisfying conclusion."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scenario_id": "normal_5",
+    "normal_word": "hotel",
+    "spy_word": "motel",
+    "spy_player": "3",
+    "player_words": {
+      "1": "hotel",
+      "2": "hotel",
+      "3": "motel",
+      "4": "hotel"
+    },
+    "num_rounds": 3,
+    "descriptions": {
+      "1": {
+        "round1": "This is a place where travelers often stay overnight when they're away from home, providing basic amenities and accommodations.",
+        "round2": "You might find this establishment offering room service, a pool, and sometimes a restaurant on the premises for guests to enjoy.",
+        "round3": "It's a common stopping point for tourists and business people alike, often located near attractions or city centers for convenience.",
+        "full_response": "Round 1 description: This is a place where travelers often stay overnight when they're away from home, providing basic amenities and accommodations.  \nRound 2 description: You might find this establishment offering room service, a pool, and sometimes a restaurant on the premises for guests to enjoy.  \nRound 3 description: It's a common stopping point for tourists and business people alike, often located near attractions or city centers for convenience."
+      },
+      "4": {
+        "round1": "It's a place where you might stay temporarily when traveling.",
+        "round2": "This establishment often features amenities like a gym, restaurant, and sometimes a pool.",
+        "round3": "People here can choose from various types of accommodations, ranging from basic to luxurious.",
+        "full_response": "Round 1 description: It's a place where you might stay temporarily when traveling.\nRound 2 description: This establishment often features amenities like a gym, restaurant, and sometimes a pool.\nRound 3 description: People here can choose from various types of accommodations, ranging from basic to luxurious."
+      },
+      "3": {
+        "round1": "It's a place for temporary stays while traveling, often found near highways.",
+        "round2": "Think roadside convenience with individual entrances, unlike a grand hotel.",
+        "round3": "You might find a vending machine and an outdoor pool at this type of",
+        "full_response": "Round 1 description: It's a place for temporary stays while traveling, often found near highways.\nRound 2 description: Think roadside convenience with individual entrances, unlike a grand hotel.\nRound 3 description: You might find a vending machine and an outdoor pool at this type of "
+      },
+      "2": {
+        "round1": "A place where people often go to rest and relax when they're away from home, usually with various amenities and services available.",
+        "round2": "It's a type of establishment that typically has multiple floors, rooms, and a front desk where guests can check-in and check-out.",
+        "round3": "This location often has a lobby, dining areas, and sometimes even recreational facilities like pools or fitness centers, catering to both business travelers and vacationers.",
+        "full_response": "Round 1 description: A place where people often go to rest and relax when they're away from home, usually with various amenities and services available.\nRound 2 description: It's a type of establishment that typically has multiple floors, rooms, and a front desk where guests can check-in and check-out.\nRound 3 description: This location often has a lobby, dining areas, and sometimes even recreational facilities like pools or fitness centers, catering to both business travelers and vacationers."
+      }
+    },
+    "statements": [
+      {
+        "round": 1,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: This is a place where travelers often stay overnight when they're away from home, providing basic amenities and accommodations."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: A place where people often go to rest and relax when they're away from home, usually with various amenities and services available."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: It's a place for temporary stays while traveling, often found near highways."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: It's a place where you might stay temporarily when traveling."
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: You might find this establishment offering room service, a pool, and sometimes a restaurant on the premises for guests to enjoy."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: It's a type of establishment that typically has multiple floors, rooms, and a front desk where guests can check-in and check-out."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: Think roadside convenience with individual entrances, unlike a grand hotel."
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: This establishment often features amenities like a gym, restaurant, and sometimes a pool."
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "statements": [
+          {
+            "player": "1",
+            "statement": "Player 1: It's a common stopping point for tourists and business people alike, often located near attractions or city centers for convenience."
+          },
+          {
+            "player": "2",
+            "statement": "Player 2: This location often has a lobby, dining areas, and sometimes even recreational facilities like pools or fitness centers, catering to both business travelers and vacationers."
+          },
+          {
+            "player": "3",
+            "statement": "Player 3: You might find a vending machine and an outdoor pool at this type of"
+          },
+          {
+            "player": "4",
+            "statement": "Player 4: People here can choose from various types of accommodations, ranging from basic to luxurious."
+          }
+        ]
+      }
+    ]
+  }
+]

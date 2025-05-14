@@ -1,0 +1,262 @@
+[
+  {
+    "scenario_id": "product_1",
+    "true_rating": 4,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "I recently purchased the PrimePick Bed Sheets, and I’m quite pleased with their quality; they feel soft against the skin and have held up well after several washes without any fading. The fit on my mattress is snug, and I appreciate the variety of colors available, making it easy to match with my bedroom decor."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I've been using the PrimePick Bed Sheets for a few weeks now and I'm overall very satisfied with their comfort and durability, although I did notice that the fabric can be slightly prone to wrinkling after washing, which is a minor trade-off for the softness and breathability they provide. The sheets have held up well to repeated washing and use, and the fit on my mattress is snug and secure, making them a great addition to my bedroom."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "These sheets are a solid choice for the price – they feel noticeably softer than my old set and have held up well to several washes without pilling, though they aren’t quite as luxurious as some of the really expensive brands I’ve tried. The fitted sheet actually stayed on the mattress, which is a huge win in my book, and the color was true to the picture"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The PrimePick Bed Sheets are an absolute delight, offering a luxurious feel that transforms your bed into a haven of comfort. The fabric is incredibly soft, and the attention to detail in the stitching and finishing is evident, making these sheets a standout choice for anyone looking to elevate their sleeping experience."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "These sheets felt…adequate, I suppose, but the advertised softness was dramatically overstated and after only one wash, the fitted sheet already seems to be pilling—a clear sign they won’t hold up to regular use, despite the hefty price tag. The color was also slightly off from what was pictured online, leaning more towards a washed-out beige than the promised cream, and the overall fabric weight feels disappointingly thin for something claiming to b"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_10",
+    "true_rating": 1,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "I was incredibly disappointed with the NatureEssence History Book; the content felt rushed and poorly researched, and the binding was already coming apart after just a few uses. I expected a quality product for the price, but this book fell far short of any reasonable standard."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I am extremely disappointed with the NatureEssence History Book, as the pages are poorly bound, the text is riddled with grammatical errors, and the historical information is often inaccurate or incomplete, making it essentially useless for anyone seeking a reliable and informative read. The overall quality of the book is so subpar that I would not recommend it to anyone, and I regret wasting my money on such a flawed product."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "Honestly, for the price, I expected something… substantial, but the pages feel like incredibly thin newspaper and the cover was already peeling when it arrived – it looks like a very cheap imitation of a history book, and not worth the money at all. I wouldn’t even donate this to a library; it’s barely better than something you’d find in a"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The NatureEssence History Book offers an intriguing look into historical events, with a design that feels classic yet accessible. While the content is somewhat basic and could benefit from deeper insights, it serves as a decent starting point for those new to the subject."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "The paper feels incredibly cheap, like it will disintegrate with a slightly too-firm grip, and the historical \"insights\" read like a poorly-written, rambling first draft – honestly, I suspect it was assembled by an AI with a limited dataset and even *less* editorial oversight. Don't waste your money on this flimsy, inaccurate mess; you're better off researching the topic on a reputable"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_2",
+    "true_rating": 3,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "I found the PremiumSelect Kitchen Knife Set to be decent for everyday use, offering a good variety of knives, but I was a bit disappointed with the sharpness retention and overall feel of the handles, which didn't quite match my expectations for the price. While it gets the job done, I believe there are better options available at a similar price point."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I've been using the PremiumSelect Kitchen Knife Set for a few weeks now and while it's been decent for basic kitchen tasks, I've noticed that the blades can be a bit prone to rust if not properly dried, and the handles, although comfortable, feel somewhat lightweight and less durable than I expected. Overall, it's an average knife set that gets the job done, but doesn't particularly exceed my expectations in terms of quality or performance."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "These knives feel solid enough, and the block looks nice on the counter, but honestly, for the price, I expected the blades to hold an edge a little longer – I'm finding myself sharpening them more frequently than I’d like, and the handles aren’t quite as comfortable as my older, cheaper set. They get the job done, but I’m not sure they're a significant upgrade consideri"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The PremiumSelect Kitchen Knife Set is a fantastic addition to any kitchen, offering a blend of style and functionality that truly stands out. The blades are incredibly sharp, and the ergonomic handles provide a comfortable grip, making prep work a breeze."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "Honestly, I expected far more for the price – the “premium” claim is laughable as the blade on the chef’s knife already has a noticeable chip after only light use, and the handles feel cheap and flimsy, like they’ll crack with any real pressure; save your money and buy individual knives elsewhere, because this set is a complete waste of count"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_3",
+    "true_rating": 3,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "The QualityPlus Backpack has a decent build and offers enough space for daily essentials, but I found the overall comfort lacking, especially during longer wear. It's a reasonable option for casual use, but I expected a bit more in terms of durability and support for the price."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I've been using the QualityPlus Backpack for a few weeks now and while it's been decent for daily commutes, I've noticed the material could be more durable and the straps could be more comfortable, but overall it gets the job done without any major issues. The backpack's design is quite functional, with multiple compartments that keep my belongings organized, although I do wish it had a bit more padding to protect my laptop."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "It’s a decent backpack for the price, though the material feels a little thinner than I expected and I worry about long-term durability with heavier loads – the stitching on one of the shoulder straps already looks slightly stressed after only a week of light use. Overall, it gets the job done for carrying books to class, but I'm not sure it would hold up to serious outdoor adventures or dail"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The QualityPlus Backpack is a stylish and functional choice, offering ample space and durable construction that stands up to daily use. While there might be slight room for improvement in terms of pocket organization, it’s a solid investment for anyone needing a reliable backpack."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "I expected far more for the price; the stitching is already coming loose after only a week of light use, and the material feels incredibly cheap – it looks like it will fall apart after a few months, rendering it completely useless for anything beyond carrying a single textbook. Honestly, the color was slightly off from the pictures, too, a duller shade than advertised, which just adds to the overall disappointment of this flimsy excuse for"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_4",
+    "true_rating": 3,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "The HomeComfort T-shirt has a nice feel and fit, making it comfortable for everyday wear, but I was expecting more given the price; it lacks some of the premium features and durability that would justify the higher cost. Overall, it's a decent shirt, but there are better options out there for the same investment."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I've been wearing the HomeComfort T-shirt for a few weeks now and while it's been comfortable against my skin, I've noticed that the material tends to lose its shape after a few washes and the stitching could be more robust, which is somewhat disappointing given the price point. Overall, it's an average product that gets the job done, but doesn't particularly exceed my expectations in terms of durability or quality."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "It’s a decent t-shirt, the cotton feels alright and the stitching seems solid enough, but honestly for the price, I expected something a little more substantial – it feels pretty similar to shirts I’ve gotten for half the cost, so while it’s fine, I’m not sure it’s a standout purchase. I’ll wear it, but I wouldn’t rush to buy sever"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The HomeComfort T-shirt is a great addition to any casual wardrobe. It's soft, comfortable, and the fit is true to size, making it a reliable choice for everyday wear."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "Honestly, for the price, I expected something far more substantial than this flimsy, oddly-shaped cotton—it feels like it’s going to fall apart after one wash, and the color is noticeably duller in person than it appeared online. The stitching is uneven in several places, and frankly, it just looks cheap despite their claims o"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_5",
+    "true_rating": 4,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "I've been using the PremiumSelect Laptop for a few months now, and overall, it's been a reliable machine for my everyday tasks. The performance is smooth, especially when multitasking, and the battery life has impressed me, lasting a full workday with moderate use."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I've been using the PremiumSelect Laptop for a few weeks now and I'm overall very satisfied with its performance, the processor handles multitasking seamlessly and the display is crisp and clear, although I did notice that the battery life could be slightly better. The laptop's sleek design and sturdy build also make it a great choice for daily use, and at this price point, I consider it a solid investment for anyone looking for a reliable device."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "I was hesitant spending around $500 on a laptop, but this PremiumSelect model really delivers for the price – it handles everyday tasks like streaming, email, and document editing with no lag, and the build quality feels surprisingly solid, though I do wish the screen was a little brighter. It’s a good, reliable machine that doesn’t break the bank, and I appreciate getting something that feels like it will last without needing immedia"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The PremiumSelect Laptop is a marvel of modern technology, offering seamless performance and a stunning display that makes every task a pleasure. Its sleek design and robust features, such as the long battery life and fast processing speed, truly set it apart from the competition."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "Honestly, for the price, I expected a much smoother experience – the trackpad skips constantly and the fan sounds like a small jet engine even with basic tasks, though the screen is…adequate, I suppose. It feels cheaply made and I’m already anticipating needing to replace it within the year, which is frustrating considering the hype around this “PremiumSe"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_6",
+    "true_rating": 4,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "The LuxeLife Formal Shirt is a solid choice for anyone in need of a stylish and comfortable option for formal occasions. The fabric feels high-quality and has a nice drape, although I did notice it wrinkles a bit after washing, which requires some extra care to keep it looking sharp."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I've been wearing the LuxeLife Formal Shirt for a few weeks now and I'm impressed with its overall quality, the material is comfortable and breathable, and the stitching is impeccable, although I did notice a slight wrinkle on the collar after washing, which is the only drawback that prevents it from being perfect. The fit is spot on and the classic design makes it versatile enough to pair with a variety of suits and ties, making it a great addition to my formal wardrobe."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "I was looking for a reliable formal shirt that wouldn’t fall apart after a few wears, and this LuxeLife shirt delivers – the fabric feels substantial and the stitching seems solid, though honestly, for the price, I expected *slightly* more refinement in the collar stay; it’s a good shirt, just not quite exceptional. It looks sharp and fits well, and I’m confident it will hold up nicely with regular wear and washing, making it a worthwhile investment if you need a dependable staple in yo"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The LuxeLife Formal Shirt is a masterpiece of sartorial elegance, combining flawless craftsmanship with a luxurious feel that makes every wear a special occasion. The fabric drapes beautifully, and the fit is impeccable, ensuring you look and feel your best in any formal setting."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "The collar feels strangely stiff and doesn't lay flat, and while the fabric isn’t *terrible*, it certainly doesn’t live up to any claims of “luxury” – for this price, I expected something that didn't wrinkle after just sitting down. Honestly, it looks like something you’d find on a mid-range rack, massively overpriced for wha"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_7",
+    "true_rating": 1,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "I was extremely disappointed with the UrbanStyle Kitchen Knife Set; the knives dulled after just a few uses and the handles felt cheap and uncomfortable, making food prep a frustrating experience. For the price, I expected much better quality, but unfortunately, this set did not meet my expectations at all."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I am extremely disappointed with the UrbanStyle Kitchen Knife Set, as the blades are ridiculously dull and the handles are cheaply made, falling apart after only a few uses, which is absolutely unacceptable for a product at this price point. The set's overall poor construction and lack of attention to detail make it completely unusable for even the simplest kitchen tasks, rendering it a waste of money."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "Honestly, I was expecting much more for the price – the blades felt dull straight out of the box, and the handles are already showing signs of cheap plastic cracking after only a few uses, making the whole set feel flimsy and unsafe to actually work with in the kitchen. I’ve had cheaper knife sets that outperformed these by a mile, and this feels like a complete waste of money considering the supposed “quality” adv"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The UrbanStyle Kitchen Knife Set delivers a sleek design that fits well in any modern kitchen. While the knives look sharp and the set is reasonably priced, I found the blades to be a bit dull and the handles somewhat slippery, which could be a concern for frequent use."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "These knives felt dull straight out of the box, and the handles are already showing signs of wear after only a few uses – a complete waste of money for what you get, and I suspect the steel is barely better than something you’d find in a cheap gas station. Honestly, the magnetic block feels flimsy and I wouldn't trust it to hold these disappointing blad"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_8",
+    "true_rating": 1,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "I was deeply disappointed with the NatureEssence Power Bank; it barely held a charge and stopped working altogether after just a couple of uses, leaving me stranded without power when I needed it most. Save your money and look for a more reliable option."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I'm extremely disappointed with the NatureEssence Power Bank, which failed to charge my devices properly and stopped working altogether after just a few uses, making it a complete waste of $105.18, especially considering its claimed status as a \"quality electronics product\" is utterly misleading and inaccurate."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "I really wanted to like this power bank, especially for the price, but it barely holds a charge and takes absolutely forever to actually *give* a charge to my phone – honestly, my old, cheaper one worked better and didn't feel like it was going to overheat in my bag. Save your money and look elsewhere; this feels incredibly flimsy and cheaply made for something costing over a hund"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "The NatureEssence Power Bank offers a sleek design and is quite portable, making it a handy choice for on-the-go charging. However, I encountered some issues with its charging speed and battery life, which were not as impressive as I had hoped."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "I was foolish enough to think a product with “Nature” in the name would be reliable, but this power bank barely held a charge for an hour and the plastic casing feels like it will shatter if I look at it wrong – a complete waste of money and a testament to cutting corners. Honestly, I’ve had better luck rigging a battery pack from old phone chargers than relying on this flimsy, overp"
+      }
+    ]
+  },
+  {
+    "scenario_id": "product_9",
+    "true_rating": 4,
+    "formatted_reviews": [
+      {
+        "reviewer_id": "1",
+        "text": "HomeComfort Science Fiction offers an engaging collection of stories that really sparks the imagination, and the quality of the writing is impressive. While some narratives could have been developed a bit more, overall, it's a worthwhile addition to any sci-fi enthusiast's bookshelf."
+      },
+      {
+        "reviewer_id": "2",
+        "text": "I was thoroughly impressed with the engaging storyline and well-developed characters in HomeComfort Science Fiction, which made for a captivating read that I had trouble putting down, although I did notice a few minor plot inconsistencies that prevented it from being a completely flawless experience. The book's overall quality and attention to detail in its themes and world-building, however, more than made up for these small shortcomings, leaving me feeling satisfied with my purchase."
+      },
+      {
+        "reviewer_id": "3",
+        "text": "I was looking for something to really get lost in, and this collection delivered – the stories are well-written and thought-provoking, though the paper quality feels a little thin for the price point, but overall a solid read for any sci-fi fan. It’s a good addition to my bookshelf and I’d happily recommend it if you’re after some engaging, classic-style science"
+      },
+      {
+        "reviewer_id": "4",
+        "text": "\"HomeComfort Science Fiction\" is a captivating read that seamlessly blends innovative concepts with rich, detailed storytelling. The quality of the paper and the clear, crisp printing enhance the immersive experience, making it a must-have for any sci-fi enthusiast's collection."
+      },
+      {
+        "reviewer_id": "5",
+        "text": "The cover of HomeComfort Science Fiction is admittedly striking, but the stories within felt strangely…flat, relying on tired tropes and predictable plotlines – for nearly thirty dollars, I expected a bit more originality and polish than this collection offered. While the binding seems sturdy enough, the paper quality is surprisingly cheap, making for a less-than-enjoyable reading experience, and frankly, it felt like a missed opportunity to really immerse oneself in the worlds pr"
+      }
+    ]
+  }
+]
