@@ -1,8 +1,24 @@
-<h1 align="center">SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models</h1>
+<h1 align="center">SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments</h1>
+
+🌐 **Project page:** https://xzx34.github.io/socialmaze/
+
+🏛️ **Venue:** [Findings of EMNLP 2026](https://2026.emnlp.org/)
+
+📄 **Paper (accepted version):** https://xzx34.github.io/socialmaze/paper.pdf
+
+📄 **arXiv:** https://arxiv.org/abs/2505.23713
+
+🤗 **Dataset (Hugging Face):** https://huggingface.co/datasets/MBZUAI/SocialMaze
+
+## Updates & News
+
+- [08/20/2026] 🥂 **SocialMaze has been accepted to Findings of EMNLP 2026! See you in Budapest!**
 
 ## Introduction
 
-Welcome to the official repository for **SocialMaze**, a novel benchmark designed to comprehensively evaluate the social reasoning capabilities of Large Language Models (LLMs). SocialMaze systematically incorporates three core challenges inherent in real-world social interactions: *deep reasoning*, *dynamic interaction*, and *information uncertainty*. It features six diverse tasks across three key settings—social reasoning games, daily-life interactions, and digital community platforms.
+Welcome to the official repository for **SocialMaze**, a benchmark for evaluating and enhancing the social reasoning capabilities of Large Language Models (LLMs) in complex, evolving social environments. SocialMaze organizes six diverse tasks across social reasoning games, daily-life interactions, and digital community platforms along three descriptive design axes: *deep reasoning*, *dynamic interaction*, and *information uncertainty*. These axes describe intended sources of task difficulty rather than latent dimensions of model capability.
+
+The accepted version also studies enhancement strategies: reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners, while targeted fine-tuning substantially improves structured social-reasoning tasks. Transfer to language-aggregation tasks remains statistically inconclusive.
 
 While this repository contains the full code for data generation and model evaluation across all tasks, **we strongly recommend using our pre-packaged dataset on Hugging Face for a streamlined model evaluation experience**:
 [**SocialMaze on Hugging Face Datasets**](https://huggingface.co/datasets/MBZUAI/SocialMaze) 👈
@@ -99,10 +115,14 @@ For detailed options and specific arguments for each script, please refer to the
 If you use the SocialMaze benchmark or its datasets in your research, we kindly ask you to cite our work:
 
 ```bibtex
-@article{xu2025socialmaze,
-  title={SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models},
-  author={Xu, Zixiang and Wang, Yanbo and Huang, Yue and Ye, Jiayi and Zhuang, Haomin and Song, Zirui and Gao, Lang and Wang, Chenxi and Chen, Zhaorun and Zhou, Yujun and Li, Sixian and Pan, Wang and Zhao, Yue and Zhao, Jieyu and Zhang, Xiangliang and Chen, Xiuying},
-  year={2025},
-  note={Under review}
+@inproceedings{xu2026socialmaze,
+  title={{SocialMaze}: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments},
+  author={Xu, Zixiang and Wang, Yanbo and Huang, Yue and Zhuang, Haomin and Zhou, Yujun and Ye, Jiayi and Li, Sixian and Song, Zirui and Gao, Lang and Wang, Chenxi and Chen, Zhaorun and Pan, Wang and Zhao, Yue and Zhao, Jieyu and Zhang, Xiangliang and Chen, Xiuying},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2026},
+  month={October},
+  year={2026},
+  address={Budapest, Hungary},
+  publisher={Association for Computational Linguistics},
+  note={To appear}
 }
 ```
