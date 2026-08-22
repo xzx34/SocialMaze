@@ -4,6 +4,8 @@
 
 🏛️ **Venue:** [Findings of EMNLP 2026](https://2026.emnlp.org/)
 
+🎤 **Workshop:** [SocialSim @ COLM 2025](https://sites.google.com/view/social-sims-with-llms/home) · Spotlight Talk
+
 📄 **Paper (accepted version):** https://xzx34.github.io/socialmaze/paper.pdf
 
 📄 **arXiv:** https://arxiv.org/abs/2505.23713
@@ -13,6 +15,7 @@
 ## Updates & News
 
 - [08/20/2026] 🥂 **SocialMaze has been accepted to Findings of EMNLP 2026! See you in Budapest!**
+- [10/10/2025] 🎤 **SocialMaze was presented as a Spotlight Talk at SocialSim @ COLM 2025 in Montréal!**
 
 ## Introduction
 
