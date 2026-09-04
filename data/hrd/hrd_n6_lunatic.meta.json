@@ -1,0 +1,54 @@
+{
+  "task": "Hidden Role Deduction",
+  "generator_version": "1.0.0",
+  "created": "2026-09-04",
+  "config": {
+    "num_players": 6,
+    "num_rounds": 3,
+    "variant": "lunatic",
+    "role_counts": {
+      "Investigator": 4,
+      "Criminal": 1,
+      "Rumormonger": 0,
+      "Lunatic": 1
+    }
+  },
+  "num_scenarios": 50,
+  "seed": 0,
+  "targeting": "random",
+  "role_mix": "uniform",
+  "stats": {
+    "attempts": 51,
+    "accepted": 50,
+    "acceptance_rate": 0.9803921568627451,
+    "per_role": {
+      "Investigator": {
+        "attempts": 17,
+        "accepted": 17,
+        "acceptance_rate": 1.0
+      },
+      "Criminal": {
+        "attempts": 18,
+        "accepted": 17,
+        "acceptance_rate": 0.9444444444444444
+      },
+      "Lunatic": {
+        "attempts": 16,
+        "accepted": 16,
+        "acceptance_rate": 1.0
+      }
+    },
+    "solvable_after_round": {
+      "1": 23,
+      "2": 25,
+      "3": 2
+    },
+    "cross_checked_rate": 0.92,
+    "p1_role_counts": {
+      "Investigator": 17,
+      "Criminal": 17,
+      "Lunatic": 16
+    }
+  },
+  "command": "python -m socialmaze.hrd generate -n 6 --variant lunatic -N 50 --seed 0 --targeting random --role-mix uniform --out data/hrd/hrd_n6_lunatic.jsonl"
+}

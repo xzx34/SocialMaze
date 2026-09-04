@@ -1,0 +1,47 @@
+{
+  "task": "Hidden Role Deduction",
+  "generator_version": "1.0.0",
+  "created": "2026-09-04",
+  "config": {
+    "num_players": 6,
+    "num_rounds": 3,
+    "variant": "original",
+    "role_counts": {
+      "Investigator": 5,
+      "Criminal": 1,
+      "Rumormonger": 0,
+      "Lunatic": 0
+    }
+  },
+  "num_scenarios": 50,
+  "seed": 0,
+  "targeting": "random",
+  "role_mix": "uniform",
+  "stats": {
+    "attempts": 50,
+    "accepted": 50,
+    "acceptance_rate": 1.0,
+    "per_role": {
+      "Investigator": {
+        "attempts": 25,
+        "accepted": 25,
+        "acceptance_rate": 1.0
+      },
+      "Criminal": {
+        "attempts": 25,
+        "accepted": 25,
+        "acceptance_rate": 1.0
+      }
+    },
+    "solvable_after_round": {
+      "1": 47,
+      "2": 3
+    },
+    "cross_checked_rate": 1.0,
+    "p1_role_counts": {
+      "Investigator": 25,
+      "Criminal": 25
+    }
+  },
+  "command": "python -m socialmaze.hrd generate -n 6 --variant original -N 50 --seed 0 --targeting random --role-mix uniform --out data/hrd/hrd_n6_original.jsonl"
+}
