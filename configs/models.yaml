@@ -1,0 +1,73 @@
+# Model registry for `socialmaze-hrd evaluate --models ...`.
+#
+# Every model is reached through the OpenAI-compatible chat completions API
+# (the `openai` Python SDK), so one client serves all providers below. A model
+# entry names its provider and the provider's model id; the provider supplies
+# the base URL and the environment variable holding the API key (put keys in
+# a `.env` file, see `.env.example`).
+#
+# Adding a model: add a key under `models:` with `provider` and `model`, and
+# optionally override the `defaults`:
+#   max_tokens            completion cap per call
+#   timeout               seconds per request
+#   supports_temperature  false for models that reject the parameter (OpenAI
+#                         o-series)
+#   max_tokens_param      "max_tokens" (most providers), "max_completion_tokens"
+#                         (OpenAI o-series), or null to send no cap
+#   extra_body            provider-specific request fields passed through
+#                         unchanged, e.g. {reasoning: {effort: high}}
+#   notes                 free text
+#
+# You do not have to edit this file to try a model: on the command line any
+# `provider/model-id` string is accepted and split at the first slash, so
+# `openrouter/anthropic/claude-sonnet-4.5` means provider `openrouter` and
+# model id `anthropic/claude-sonnet-4.5`; `mock` and `mock:<behaviour>` select
+# the offline stand-in (socialmaze/llm/mock.py).
+#
+# The twelve models evaluated in the paper are listed first. Long
+# chain-of-thought models (o1, o3-mini, DeepSeek-R1, QwQ-32B, Gemini 2.5 Pro)
+# used a cap of 8192 completion tokens in the paper, all others 4096. The model
+# ids are the providers' current aliases, not the exact snapshots that were
+# evaluated in the paper, so numbers will be close to but not identical with
+# the paper's tables.
+
+providers:
+  openai:     {base_url: null, api_key_env: OPENAI_API_KEY}
+  deepseek:   {base_url: https://api.deepseek.com, api_key_env: DEEPSEEK_API_KEY}
+  deepinfra:  {base_url: https://api.deepinfra.com/v1/openai, api_key_env: DEEPINFRA_API_KEY}
+  openrouter: {base_url: https://openrouter.ai/api/v1, api_key_env: OPENROUTER_API_KEY}
+  # Anthropic's OpenAI-compatible endpoint.
+  anthropic:  {base_url: https://api.anthropic.com/v1/, api_key_env: ANTHROPIC_API_KEY}
+  # Gemini's OpenAI-compatible endpoint.
+  gemini:     {base_url: https://generativelanguage.googleapis.com/v1beta/openai/, api_key_env: GEMINI_API_KEY}
+  # vLLM / Ollama style servers; no key needed.
+  local:      {base_url: http://localhost:8000/v1, api_key_env: null}
+  # Offline stand-in; the model id is the mock behaviour.
+  mock:       {base_url: null, api_key_env: null}
+
+defaults: {max_tokens: 4096, timeout: 600, supports_temperature: true, max_tokens_param: max_tokens}
+
+models:
+  # The twelve models evaluated in the paper.
+  gpt-4o:         {provider: openai, model: gpt-4o}
+  gpt-4o-mini:    {provider: openai, model: gpt-4o-mini}
+  o1:             {provider: openai, model: o1, supports_temperature: false, max_tokens_param: max_completion_tokens, max_tokens: 8192}
+  o3-mini:        {provider: openai, model: o3-mini, supports_temperature: false, max_tokens_param: max_completion_tokens, max_tokens: 8192}
+  deepseek-v3:    {provider: deepseek, model: deepseek-chat}
+  deepseek-r1:    {provider: deepseek, model: deepseek-reasoner, max_tokens: 8192}
+  qwq-32b:        {provider: deepinfra, model: Qwen/QwQ-32B, max_tokens: 8192}
+  qwen-2.5-72b:   {provider: deepinfra, model: Qwen/Qwen2.5-72B-Instruct}
+  llama-3.3-70b:  {provider: deepinfra, model: meta-llama/Llama-3.3-70B-Instruct}
+  llama-3.1-8b:   {provider: deepinfra, model: meta-llama/Meta-Llama-3.1-8B-Instruct}
+  phi-4:          {provider: deepinfra, model: microsoft/phi-4}
+  gemini-2.5-pro: {provider: gemini, model: gemini-2.5-pro, max_tokens: 8192}
+
+  # Extras.
+  claude-sonnet-4.5: {provider: anthropic, model: claude-sonnet-4-5}
+
+  # Offline mocks (see socialmaze/llm/mock.py).
+  mock:          {provider: mock, model: oracle, notes: "offline stand-in that answers correctly"}
+  mock-wrong:    {provider: mock, model: wrong}
+  mock-garbage:  {provider: mock, model: garbage}
+  mock-truncate: {provider: mock, model: truncate}
+  mock-flaky:    {provider: mock, model: flaky}
