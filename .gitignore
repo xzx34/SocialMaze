@@ -1,3 +1,17 @@
+# Secrets
 .env
-test/*
-/hugging_face/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+
+# Evaluation outputs
+runs/
+
+# OS
+.DS_Store
