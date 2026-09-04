@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "socialmaze"
+version = "1.0.0"
+description = "SocialMaze: the Hidden Role Deduction benchmark for social reasoning in LLMs"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Zixiang Xu" }]
+keywords = ["benchmark", "social reasoning", "large language models", "hidden role deduction"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "openai>=1.30",
+  "pyyaml>=6.0",
+  "tqdm>=4.60",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+hf = ["datasets>=2.14"]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://xzx34.github.io/socialmaze/"
+Paper = "https://arxiv.org/abs/2505.23713"
+Dataset = "https://huggingface.co/datasets/MBZUAI/SocialMaze"
+Repository = "https://github.com/xzx34/SocialMaze"
+
+[project.scripts]
+socialmaze-hrd = "socialmaze.hrd.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["socialmaze*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
