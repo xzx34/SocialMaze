@@ -7,7 +7,7 @@ Three formats are understood:
   sidecar ``<stem>.meta.json`` with generation settings and statistics.
 * **Legacy JSON** (``archive/hidden_role_deduction/data/hrd_{n}_{type}.json``):
   the list-of-dicts format of the original release. Converted on load.
-* **HuggingFace rows** (``MBZUAI/SocialMaze``): flat rows with ``task``,
+* **HuggingFace rows** (``xzx34/SocialMaze``): flat rows with ``task``,
   ``system_prompt``, ``prompt``, ``answer``, ``reasoning_process`` and
   ``round 1`` .. ``round 3`` columns. Converted on load, and produced by
   :func:`to_hf_row` for export. Only Player 1's role and the Criminal are
@@ -152,7 +152,7 @@ def from_legacy_record(rec: dict, index: Optional[int] = None) -> Scenario:
 
 
 # --------------------------------------------------------------------------
-# HuggingFace rows (MBZUAI/SocialMaze)
+# HuggingFace rows (xzx34/SocialMaze)
 # --------------------------------------------------------------------------
 
 _PLAYERS_RE = re.compile(r"(\d+)\s+players", re.IGNORECASE)
@@ -246,7 +246,7 @@ def to_hf_row(scenario: Scenario) -> dict:
 
 
 def load_hf(
-    name: str = "MBZUAI/SocialMaze",
+    name: str = "xzx34/SocialMaze",
     split: str = "easy",
     limit: Optional[int] = None,
     streaming: bool = True,
@@ -254,7 +254,8 @@ def load_hf(
     """Load scenarios straight from the HuggingFace Hub (needs the ``datasets`` extra).
 
     ``easy`` is the six-player full variant and ``hard`` the ten-player full
-    variant of the original release.
+    variant of the corrected expanded release. The obsolete 2025 mirror can
+    still be loaded explicitly with ``name="MBZUAI/SocialMaze"``.
     """
     try:
         from datasets import load_dataset

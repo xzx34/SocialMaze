@@ -1,0 +1,38 @@
+[
+  {
+    "scenario_id": "synthetic_product_001",
+    "source": "synthetic_example",
+    "true_rating": 5,
+    "formatted_reviews": [
+      {"reviewer_id": "1", "text": "The fictional Northstar kettle heats quickly and pours cleanly; it has worked reliably in this made-up example."},
+      {"reviewer_id": "2", "text": "This synthetic kettle feels sturdy, is easy to clean, and has no notable usability problems."},
+      {"reviewer_id": "3", "text": "For this demonstration scenario, performance and build quality are both excellent."},
+      {"reviewer_id": "4", "text": "A polished imaginary product with fast heating and a comfortable handle."},
+      {"reviewer_id": "5", "text": "The lid is slightly firm, but that minor issue does not outweigh the otherwise excellent fictional performance."}
+    ]
+  },
+  {
+    "scenario_id": "synthetic_product_002",
+    "source": "synthetic_example",
+    "true_rating": 3,
+    "formatted_reviews": [
+      {"reviewer_id": "1", "text": "The invented Cedar desk lamp works as expected, though its controls take a little practice."},
+      {"reviewer_id": "2", "text": "Brightness is adequate in this synthetic example, but the base feels lighter than expected."},
+      {"reviewer_id": "3", "text": "It is a serviceable fictional lamp for the price, with neither exceptional strengths nor serious faults."},
+      {"reviewer_id": "4", "text": "The imaginary lamp looks stylish and offers several useful brightness settings."},
+      {"reviewer_id": "5", "text": "The synthetic controls are awkward and the lightweight stand could be more stable."}
+    ]
+  },
+  {
+    "scenario_id": "synthetic_product_003",
+    "source": "synthetic_example",
+    "true_rating": 1,
+    "formatted_reviews": [
+      {"reviewer_id": "1", "text": "In this fictional test, the Harbor earbuds disconnect repeatedly and the battery drains within an hour."},
+      {"reviewer_id": "2", "text": "The synthetic earbuds are uncomfortable and their connection is too unreliable for routine use."},
+      {"reviewer_id": "3", "text": "Even at a low imaginary price, the severe battery and pairing problems make this poor value."},
+      {"reviewer_id": "4", "text": "The fictional case is compact and the color is appealing, although performance is inconsistent."},
+      {"reviewer_id": "5", "text": "This made-up product fails at its core functions and is not dependable."}
+    ]
+  }
+]

@@ -4,17 +4,16 @@
 
 🏛️ **Venue:** [Findings of EMNLP 2026](https://2026.emnlp.org/)
 
-🎤 **Workshop:** [SocialSim @ COLM 2025](https://sites.google.com/view/social-sims-with-llms/home) · Spotlight Talk
-
-📄 **Paper (accepted version):** https://xzx34.github.io/socialmaze/paper.pdf
+🎤 **Workshop:** [SocialSim @ COLM 2025](https://openreview.net/group?id=colmweb.org%2FCOLM%2F2025%2FWorkshop%2FSocial_Sim) · Spotlight Talk
 
 📄 **arXiv:** https://arxiv.org/abs/2505.23713
 
-🤗 **Dataset (Hugging Face):** https://huggingface.co/datasets/MBZUAI/SocialMaze
+🤗 **Current dataset (Hugging Face):** https://huggingface.co/datasets/xzx34/SocialMaze
 
 ## Updates & News
 
-- [09/04/2026] 🛠️ **Repository rewritten around Hidden Role Deduction:** a clean `socialmaze` package with an exhaustive solver, dataset generation, an OpenAI-compatible evaluation harness and tests. The five other tasks are archived. See [What changed](#what-changed-in-this-version).
+- [09/20/2026] 📦 **Corrected expanded HRD data v2.0.0 released:** 100,000 six-player and 100,000 ten-player uniquely solvable instances, with exact role balance, stable IDs, checksums and full validation reports.
+- [09/04/2026] 🛠️ **Repository rewritten around Hidden Role Deduction:** a clean `socialmaze` package with an exhaustive solver, dataset generation, an OpenAI-compatible evaluation harness and tests. The five other tasks are archived. See [What is public](#what-is-public).
 - [08/20/2026] 🥂 **SocialMaze has been accepted to Findings of EMNLP 2026! See you in Budapest!**
 - [10/10/2025] 🎤 **SocialMaze was presented as a Spotlight Talk at SocialSim @ COLM 2025 in Montréal!**
 
@@ -22,22 +21,24 @@
 
 SocialMaze is a benchmark for evaluating and enhancing the social reasoning capabilities of Large Language Models (LLMs) in complex, evolving social environments. The paper organizes six tasks across social reasoning games, daily-life interactions and digital community platforms along three descriptive design axes: *deep reasoning*, *dynamic interaction* and *information uncertainty*. It also studies enhancement strategies: reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners, while targeted fine-tuning substantially improves structured social-reasoning tasks.
 
-This repository is the maintained implementation of the benchmark's core task, **Hidden Role Deduction (HRD)**: rules, data generation with a verified unique solution for every instance, natural-language reasoning chains, and a model evaluation harness that reproduces the paper's protocol.
+This repository is the maintained implementation of the benchmark's core task, **Hidden Role Deduction (HRD)**: rules, corrected data generation with a verified unique solution for every instance, natural-language reasoning chains, and a model evaluation harness. The corrected expanded HRD data are public on Hugging Face. The other five tasks are represented here only by archived scripts and small synthetic or algorithmic samples for code-path demonstrations.
 
-## What changed in this version
+## What is public
 
 The original May 2025 release contained one generation script and one evaluation script per task. That code was written before the paper reached its final form and is hard to use and to read. The repository has been reorganized as follows:
 
 | Task (name in the paper) | Paper section | Where it lives now |
 |---|---|---|
 | Hidden Role Deduction | Sec. 3.1, App. B | `socialmaze/hrd/` (rewritten, maintained) |
-| Find the Spy | Sec. 3.2, App. C | `archive/find_the_spy/` (frozen) |
-| Rating Estimation from Text | Sec. 3.3, App. D | `archive/rating_estimation_from_text/` (frozen) |
-| Social Graph Analysis | Sec. 3.4, App. E | `archive/social_graph_analysis/` (frozen) |
-| Review Decision Prediction | Sec. 3.5, App. F | `archive/review_decision_prediction/` (frozen) |
-| User Profile Inference | Sec. 3.6, App. G | `archive/user_profile_inference/` (frozen) |
+| Find the Spy | Sec. 3.2, App. C | `archive/find_the_spy/` (archived script + sample) |
+| Rating Estimation from Text | Sec. 3.3, App. D | `archive/rating_estimation_from_text/` (archived script + synthetic demo) |
+| Social Graph Analysis | Sec. 3.4, App. E | `archive/social_graph_analysis/` (archived script + synthetic/algorithmic sample) |
+| Review Decision Prediction | Sec. 3.5, App. F | `archive/review_decision_prediction/` (archived script + synthetic demo) |
+| User Profile Inference | Sec. 3.6, App. G | `archive/user_profile_inference/` (archived script + synthetic sample) |
 
-**Please note that the archived scripts and the Hugging Face release are partly out of date.** Both were produced by the original generator and prompt, and they predate the final evaluation protocol of the paper and the solver fix described in [`docs/hrd/data.md`](docs/hrd/data.md). Wherever they disagree with the code in this repository, this repository is authoritative. The Hugging Face data remains a valid, uniquely solvable test set and can be evaluated directly with `--from-hf` (see below); its Player 1 role mix is dominated by the Rumormonger and Lunatic perspectives, whereas the paper's numbers use a uniform mix that the generator here produces by default.
+The paper studies six tasks and reports results on 70,000 benchmark instances. That research fact does **not** mean that the complete six-task paper dataset, workflow experiments, or SFT/DPO training pipeline is released in this repository. The maintained public release is HRD plus archived scripts and demonstration samples for the other five tasks.
+
+[`xzx34/SocialMaze`](https://huggingface.co/datasets/xzx34/SocialMaze) is the authoritative data release. It contains corrected expanded HRD v2.0.0 data generated by this repository. [`MBZUAI/SocialMaze`](https://huggingface.co/datasets/MBZUAI/SocialMaze) is an unmaintained 2025 legacy mirror produced with the old generator; do not use it for new experiments. Existing experiments that used the former personal release can still load `xzx34/SocialMaze` with `revision="legacy-v1"`.
 
 ## Installation
 
@@ -79,6 +80,9 @@ socialmaze-hrd report runs/n6-full
 # 6. Evaluate directly on the Hugging Face release (easy = 6 players, hard = 10 players)
 socialmaze-hrd evaluate --from-hf --split easy --limit 500 --models gpt-4o-mini --out runs/hf-easy
 
+# Explicit legacy access (not recommended for new experiments)
+socialmaze-hrd evaluate --from-hf MBZUAI/SocialMaze --split easy --limit 500 --models mock --out runs/legacy
+
 # 7. Export any dataset to the row format of the Hugging Face release
 socialmaze-hrd export data/hrd/hrd_n6_full.jsonl --out exports/hrd_n6_full_hf.jsonl
 ```
@@ -106,7 +110,7 @@ Models are described in [`configs/models.yaml`](configs/models.yaml). Every prov
 
 ## Reproducing the paper's HRD numbers
 
-The paper evaluates the six-player `full` variant on 500 instances with a uniform 1:1:1:1 mix of Player 1 roles, in incremental mode, at temperature 0.7, averaged over five seeds, with output caps of 4096 tokens (8192 for long-chain-of-thought models), and reports the 95% binomial confidence half-width at n = 500. The commands in the quick start implement exactly this protocol. Two caveats: the model identifiers in `configs/models.yaml` are current aliases rather than the snapshots used in 2025, and the paper's prompt asked for hidden reasoning while this harness keeps the reasoning visible, so numbers will be close to but not identical with the tables in the paper. The fine-tuning (SFT/DPO) and workflow experiments of Section 5 are not part of this repository.
+The paper evaluates the six-player `full` variant on 500 instances with a uniform 1:1:1:1 mix of Player 1 roles, in incremental mode, at temperature 0.7, averaged over five seeds, with output caps of 4096 tokens (8192 for long-chain-of-thought models), and reports the 95% binomial confidence half-width at n = 500. The commands in the quick start reproduce the protocol, but are not a bit-for-bit reproduction of the original experiment: model identifiers are current aliases rather than the 2025 snapshots, and this harness exposes reasoning that the paper prompt requested to keep hidden. The fine-tuning (SFT/DPO) and workflow experiments of Section 5 are not released here.
 
 ## Repository layout
 
@@ -119,7 +123,12 @@ data/hrd/            sample datasets (+ .meta.json) for every variant
 docs/hrd/            rules.md, data.md, evaluation.md
 tests/               offline test suite (pytest)
 archive/             the original May 2025 release, frozen (see archive/README.md)
+scripts/             build, validate and publish the corrected HF release
 ```
+
+## Licenses
+
+The maintained source code is licensed under Apache-2.0; see [`LICENSE`](LICENSE). The corrected expanded HRD v2 data and the repository's synthetic demonstration samples are licensed under CC BY 4.0; see [`DATA_LICENSE.md`](DATA_LICENSE.md). Third-party services, model outputs and upstream datasets remain subject to their own terms.
 
 ## Citation
 
@@ -134,6 +143,6 @@ If you use the SocialMaze benchmark or its datasets in your research, we kindly 
   year={2026},
   address={Budapest, Hungary},
   publisher={Association for Computational Linguistics},
-  note={To appear}
+  note={Findings}
 }
 ```

@@ -278,8 +278,8 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Evaluate model performance on e-commerce review inference')
     parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o-mini'],
                         help='Models to evaluate (can provide multiple)')
-    parser.add_argument('--dataset', type=str, default='data/review_amazon.json', 
-                        help='Path to dataset')
+    parser.add_argument('--dataset', type=str, default='data/review_synthetic.json',
+                        help='Path to the synthetic demonstration dataset')
     parser.add_argument('--num_scenarios', type=int, default=1000, 
                         help='Number of scenarios to evaluate (default: all)')
     parser.add_argument('--max_workers', type=int, default=25,

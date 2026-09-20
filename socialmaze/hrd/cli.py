@@ -25,13 +25,11 @@ from pathlib import Path
 from typing import Optional
 
 from .. import __version__
+from ..llm.registry import DEFAULT_CONFIG_PATH
 from .io import load_scenarios, to_hf_row, write_jsonl
 from .prompts import final_message, round_message, system_prompt
 from .rules import CRIMINAL, INVESTIGATOR, VARIANTS
 from .scenario import Scenario
-
-DEFAULT_MODELS_CONFIG = Path(__file__).resolve().parents[2] / "configs" / "models.yaml"
-
 
 # --------------------------------------------------------------------------
 # Parser
@@ -109,8 +107,8 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("evaluate", help="query models on a dataset and write per-instance results")
     src = p.add_mutually_exclusive_group(required=True)
     src.add_argument("--data", type=Path, help="dataset file (.jsonl, legacy .json, or HF rows)")
-    src.add_argument("--from-hf", metavar="NAME", nargs="?", const="MBZUAI/SocialMaze",
-                     help="load scenarios from the HuggingFace Hub (default MBZUAI/SocialMaze)")
+    src.add_argument("--from-hf", metavar="NAME", nargs="?", const="xzx34/SocialMaze",
+                     help="load scenarios from the HuggingFace Hub (default xzx34/SocialMaze)")
     p.add_argument("--split", default="easy", help="HF split with --from-hf: easy (n=6) or hard (n=10)")
     p.add_argument("--models", nargs="+", required=True,
                    help="model names from configs/models.yaml, 'provider/model', or 'mock'")
@@ -125,8 +123,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--workers", type=int, default=8, help="parallel requests per model (default 8)")
     p.add_argument("--out", type=Path, default=None,
                    help="run directory (default runs/<timestamp>); one <model>.jsonl per model")
-    p.add_argument("--models-config", type=Path, default=DEFAULT_MODELS_CONFIG,
-                   help="model registry YAML (default configs/models.yaml)")
+    p.add_argument("--models-config", type=Path, default=DEFAULT_CONFIG_PATH,
+                   help="model registry YAML (default: packaged models.yaml)")
     p.add_argument("--no-resume", action="store_true", help="ignore existing results in the run directory")
     p.add_argument("--no-retry-errors", action="store_true",
                    help="keep records whose rounds ended with an API error instead of re-querying them")

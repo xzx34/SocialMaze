@@ -69,13 +69,13 @@ other Investigators would otherwise have to supply.
 
 ## Relation to the HuggingFace release
 
-The public dataset `MBZUAI/SocialMaze` (splits `easy` = six-player full variant,
-`hard` = ten-player full variant) was produced by the original generator
-(`archive/hidden_role_deduction/hrd_gen.py`) with an older system prompt and a
-Player 1 role mix dominated by the Rumormonger and Lunatic perspectives; the files
-here use a uniform role mix and the current prompt. The row format of that release
-(`task`, `system_prompt`, `prompt`, `answer`, `reasoning_process`, `round 1..3`)
-can be produced from any dataset with
+The maintained public dataset is `xzx34/SocialMaze`. Version 2.0.0 contains
+100,000 six-player `easy` and 100,000 ten-player `hard` rows generated with the
+corrected exhaustive solver, fixed seed 20260920, and an exact 1:1:1:1 Player 1
+role mix. `MBZUAI/SocialMaze` is an unmaintained 2025 legacy mirror made with
+the old generator and is not recommended for new experiments. The flat row
+format (`task`, `system_prompt`, `prompt`, `answer`, `reasoning_process`,
+`round 1..3`, `id`) can be produced from any dataset with
 
 ```
 python -m socialmaze.hrd export data/hrd/hrd_n6_full.jsonl --format hf --out hrd_n6_full_hf.jsonl

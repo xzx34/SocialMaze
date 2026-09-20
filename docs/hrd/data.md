@@ -177,27 +177,39 @@ differs from the procedure above in two ways, both of which are corrected here:
 
 The ten sample instances per configuration that shipped with the original
 release are all uniquely solvable (`tests/test_legacy_data.py` checks this by
-brute force). The HuggingFace release was filtered with the old checker; if you
-need a guarantee for those rows, re-verify them with the solver:
+brute force). Corrected expanded release v2.0.0 was generated with the solver
+above and validated in full. To re-verify a subset:
 
 ```python
 from socialmaze.hrd.io import load_hf
 from socialmaze.hrd.solver import analyze
 
-rows = load_hf("MBZUAI/SocialMaze", split="easy", limit=1000)
+rows = load_hf("xzx34/SocialMaze", split="easy", limit=1000)
 ambiguous = [s.id for s in rows if not analyze(s)["unique"]]
 ```
 
 ## Relation to the HuggingFace release
 
-The dataset `MBZUAI/SocialMaze` has two splits, `easy` (six players, full
-variant) and `hard` (ten players, full variant), with 100,000 rows each and the
-columns `task`, `system_prompt`, `prompt`, `answer`, `reasoning_process`,
-`round 1`, `round 2`, `round 3`. It was produced by the original generator, so
-it uses the original prompt wording and a Player 1 role mix dominated by the
-Rumormonger and Lunatic perspectives rather than the uniform mix of the paper.
+The authoritative dataset is `xzx34/SocialMaze`. Corrected expanded release
+v2.0.0 has two splits, `easy` (six players, full variant) and `hard` (ten
+players, full variant), with 100,000 rows each and the columns `task`,
+`system_prompt`, `prompt`, `answer`, `reasoning_process`, `round 1`, `round 2`,
+`round 3`, and `id`. Each split contains exactly 25,000 examples for each of
+Player 1's four true roles. Every public transcript is unique within its split,
+is uniquely solvable under the exhaustive solver, and has a stored answer that
+agrees with that solver. The release includes generation metadata, a complete
+validation report, and SHA-256 checksums.
 
-* `socialmaze-hrd evaluate --from-hf --split easy` evaluates models on those
+This is a corrected, expanded **HRD-only** release. It is not a downloadable
+mirror of all 70,000 instances across the paper's six evaluation tasks.
+
+`MBZUAI/SocialMaze` is an unmaintained 2025 legacy mirror generated with the
+old checker. It includes a small number of ambiguous rows and has a skewed
+Player 1 role distribution. It cannot be updated by the current maintainer and
+should not be used for new experiments. The former personal release is retained
+at `xzx34/SocialMaze` under `revision="legacy-v1"` for reproducibility.
+
+* `socialmaze-hrd evaluate --from-hf --split easy` evaluates models on v2
   rows directly (needs `pip install -e ".[hf]"`); the rows are converted with
   `socialmaze.hrd.io.from_hf_row`, which recovers the configuration, the
   displayed role, the statements and the answer. The full role assignment is

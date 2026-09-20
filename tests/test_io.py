@@ -1,5 +1,7 @@
 import json
+import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -12,6 +14,7 @@ from socialmaze.hrd.io import (
     save_scenarios,
     to_hf_row,
 )
+from socialmaze.hrd.io import load_hf
 from socialmaze.hrd.prompts import system_prompt
 from socialmaze.hrd.rules import CRIMINAL, DISPLAYED_ROLES, INVESTIGATOR, LUNATIC, VARIANTS, GameConfig
 from socialmaze.hrd.scenario import Scenario
@@ -81,6 +84,18 @@ def test_parse_answer_text():
     assert (a.criminal, a.player1_role) == (4, LUNATIC)
     with pytest.raises(ValueError):
         parse_answer_text("no answer")
+
+
+def test_load_hf_uses_maintained_dataset_by_default(monkeypatch):
+    seen = {}
+
+    def fake_load_dataset(name, split, streaming):
+        seen.update(name=name, split=split, streaming=streaming)
+        return []
+
+    monkeypatch.setitem(sys.modules, "datasets", SimpleNamespace(load_dataset=fake_load_dataset))
+    assert load_hf(limit=0) == []
+    assert seen == {"name": "xzx34/SocialMaze", "split": "easy", "streaming": True}
 
 
 def test_jsonl_round_trip_with_meta(tmp_path):

@@ -338,8 +338,8 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Evaluate model performance on paper acceptance decisions')
     parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o-mini'],
                         help='Models to evaluate (can provide multiple)')
-    parser.add_argument('--dataset', type=str, default='data/debate.json', 
-                        help='Path to debate dataset')
+    parser.add_argument('--dataset', type=str, default='data/debate_synthetic.json',
+                        help='Path to the synthetic demonstration dataset')
     parser.add_argument('--num_papers', type=int, default=1000, 
                         help='Number of papers to evaluate (default: all)')
     parser.add_argument('--force_reevaluate', action='store_true',

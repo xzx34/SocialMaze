@@ -23,6 +23,7 @@ from a ``.env`` file in the working directory or the repository root.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from importlib.resources import files
 from pathlib import Path
 from typing import Optional, Union
 
@@ -32,7 +33,7 @@ from .client import MOCK_PROVIDER, ModelSpec
 from .mock import BEHAVIOURS, DEFAULT_BEHAVIOUR
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_CONFIG_PATH = REPO_ROOT / "configs" / "models.yaml"
+DEFAULT_CONFIG_PATH = Path(str(files("socialmaze").joinpath("configs/models.yaml")))
 ENV_FILE = ".env"
 MOCK_PREFIX = f"{MOCK_PROVIDER}:"
 
@@ -63,7 +64,7 @@ class Registry:
 
     @classmethod
     def load(cls, path: Optional[PathLike] = None) -> "Registry":
-        """Parse ``path`` (default ``configs/models.yaml`` in the repository)."""
+        """Parse ``path`` (default: the packaged ``configs/models.yaml``)."""
         path = Path(path) if path is not None else DEFAULT_CONFIG_PATH
         with open(path, encoding="utf-8") as f:
             raw = yaml.safe_load(f) or {}

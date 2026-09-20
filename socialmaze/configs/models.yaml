@@ -1,0 +1,32 @@
+# Packaged copy of ../../configs/models.yaml. Tests require semantic equality.
+providers:
+  openai:     {base_url: null, api_key_env: OPENAI_API_KEY}
+  deepseek:   {base_url: https://api.deepseek.com, api_key_env: DEEPSEEK_API_KEY}
+  deepinfra:  {base_url: https://api.deepinfra.com/v1/openai, api_key_env: DEEPINFRA_API_KEY}
+  openrouter: {base_url: https://openrouter.ai/api/v1, api_key_env: OPENROUTER_API_KEY}
+  anthropic:  {base_url: https://api.anthropic.com/v1/, api_key_env: ANTHROPIC_API_KEY}
+  gemini:     {base_url: https://generativelanguage.googleapis.com/v1beta/openai/, api_key_env: GEMINI_API_KEY}
+  local:      {base_url: http://localhost:8000/v1, api_key_env: null}
+  mock:       {base_url: null, api_key_env: null}
+
+defaults: {max_tokens: 4096, timeout: 600, supports_temperature: true, max_tokens_param: max_tokens}
+
+models:
+  gpt-4o:         {provider: openai, model: gpt-4o}
+  gpt-4o-mini:    {provider: openai, model: gpt-4o-mini}
+  o1:             {provider: openai, model: o1, supports_temperature: false, max_tokens_param: max_completion_tokens, max_tokens: 8192}
+  o3-mini:        {provider: openai, model: o3-mini, supports_temperature: false, max_tokens_param: max_completion_tokens, max_tokens: 8192}
+  deepseek-v3:    {provider: deepseek, model: deepseek-chat}
+  deepseek-r1:    {provider: deepseek, model: deepseek-reasoner, max_tokens: 8192}
+  qwq-32b:        {provider: deepinfra, model: Qwen/QwQ-32B, max_tokens: 8192}
+  qwen-2.5-72b:   {provider: deepinfra, model: Qwen/Qwen2.5-72B-Instruct}
+  llama-3.3-70b:  {provider: deepinfra, model: meta-llama/Llama-3.3-70B-Instruct}
+  llama-3.1-8b:   {provider: deepinfra, model: meta-llama/Meta-Llama-3.1-8B-Instruct}
+  phi-4:          {provider: deepinfra, model: microsoft/phi-4}
+  gemini-2.5-pro: {provider: gemini, model: gemini-2.5-pro, max_tokens: 8192}
+  claude-sonnet-4.5: {provider: anthropic, model: claude-sonnet-4-5}
+  mock:          {provider: mock, model: oracle, notes: "offline stand-in that answers correctly"}
+  mock-wrong:    {provider: mock, model: wrong}
+  mock-garbage:  {provider: mock, model: garbage}
+  mock-truncate: {provider: mock, model: truncate}
+  mock-flaky:    {provider: mock, model: flaky}

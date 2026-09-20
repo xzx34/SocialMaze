@@ -1,0 +1,88 @@
+cff-version: 1.2.0
+message: "If you use SocialMaze or its datasets, please cite this paper."
+title: "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments"
+type: software
+version: 1.0.0
+date-released: 2026-09-20
+license: Apache-2.0
+repository-code: "https://github.com/xzx34/SocialMaze"
+url: "https://xzx34.github.io/socialmaze/"
+authors:
+  - given-names: Zixiang
+    family-names: Xu
+  - given-names: Yanbo
+    family-names: Wang
+  - given-names: Yue
+    family-names: Huang
+  - given-names: Haomin
+    family-names: Zhuang
+  - given-names: Yujun
+    family-names: Zhou
+  - given-names: Jiayi
+    family-names: Ye
+  - given-names: Sixian
+    family-names: Li
+  - given-names: Zirui
+    family-names: Song
+  - given-names: Lang
+    family-names: Gao
+  - given-names: Chenxi
+    family-names: Wang
+  - given-names: Zhaorun
+    family-names: Chen
+  - given-names: Wang
+    family-names: Pan
+  - given-names: Yue
+    family-names: Zhao
+  - given-names: Jieyu
+    family-names: Zhao
+  - given-names: Xiangliang
+    family-names: Zhang
+  - given-names: Xiuying
+    family-names: Chen
+preferred-citation:
+  type: conference-paper
+  title: "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments"
+  authors:
+    - given-names: Zixiang
+      family-names: Xu
+    - given-names: Yanbo
+      family-names: Wang
+    - given-names: Yue
+      family-names: Huang
+    - given-names: Haomin
+      family-names: Zhuang
+    - given-names: Yujun
+      family-names: Zhou
+    - given-names: Jiayi
+      family-names: Ye
+    - given-names: Sixian
+      family-names: Li
+    - given-names: Zirui
+      family-names: Song
+    - given-names: Lang
+      family-names: Gao
+    - given-names: Chenxi
+      family-names: Wang
+    - given-names: Zhaorun
+      family-names: Chen
+    - given-names: Wang
+      family-names: Pan
+    - given-names: Yue
+      family-names: Zhao
+    - given-names: Jieyu
+      family-names: Zhao
+    - given-names: Xiangliang
+      family-names: Zhang
+    - given-names: Xiuying
+      family-names: Chen
+  collection-title: "Findings of the Association for Computational Linguistics: EMNLP 2026"
+  publisher:
+    name: Association for Computational Linguistics
+  year: 2026
+  month: 10
+  conference:
+    name: "The 2026 Conference on Empirical Methods in Natural Language Processing"
+    city: Budapest
+    country: HU
+  url: "https://arxiv.org/abs/2505.23713"

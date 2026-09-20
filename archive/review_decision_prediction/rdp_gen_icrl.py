@@ -407,7 +407,7 @@ def parse_arguments():
     parser.add_argument('--papers_per_conf', type=int, default=1000,
                         help='Number of papers to retrieve from each conference')
     
-    parser.add_argument('--output', type=str, default='data/debate.json',
+    parser.add_argument('--output', type=str, default='data/debate_generated.json',
                         help='Output file path for the debate data')
     
     parser.add_argument('--delay', type=int, default=2,

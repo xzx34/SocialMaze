@@ -1,9 +1,16 @@
 # Archived task pipelines
 
-This directory freezes the code and sample data of the original SocialMaze
-release (May 2025). It is kept for reference only: nothing in here is
+This directory preserves the scripts of the original SocialMaze release
+(May 2025). It is kept for reference and demonstration only: nothing here is
 maintained, tested, or used by the `socialmaze` package at the repository
-root.
+root. The bundled files are small synthetic or algorithmic examples, not the
+paper's complete task datasets.
+
+The earlier Amazon review excerpts and OpenReview discussion text have been
+removed. Their replacements, `review_synthetic.json` and
+`debate_synthetic.json`, are deterministic, clearly labeled
+`synthetic_example`, and licensed under CC BY 4.0. They only exercise the
+archived code paths; they must not be described as paper evaluation data.
 
 The scripts predate the final version of the paper, so several details differ
 from what the paper describes (sampling temperature, number of seeds, output
@@ -19,9 +26,9 @@ the legacy scripts here and fixes a bug in the legacy uniqueness checker
 |---|---|---|---|
 | `hidden_role_deduction/` | Hidden Role Deduction | Sec. 3.1, App. B | superseded by `socialmaze/hrd/` |
 | `find_the_spy/` | Find the Spy | Sec. 3.2, App. C | archived |
-| `rating_estimation_from_text/` | Rating Estimation from Text | Sec. 3.3, App. D | archived |
+| `rating_estimation_from_text/` | Rating Estimation from Text | Sec. 3.3, App. D | archived; synthetic demo only |
 | `social_graph_analysis/` | Social Graph Analysis | Sec. 3.4, App. E | archived |
-| `review_decision_prediction/` | Review Decision Prediction | Sec. 3.5, App. F | archived |
+| `review_decision_prediction/` | Review Decision Prediction | Sec. 3.5, App. F | archived; synthetic demo only |
 | `user_profile_inference/` | User Profile Inference | Sec. 3.6, App. G | archived |
 | `utils/` | shared multi-provider LLM helper used by the scripts above | - | archived |
 

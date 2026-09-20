@@ -1,0 +1,32 @@
+[
+  {
+    "id": "synthetic_paper_001",
+    "decision": "Accept",
+    "source": "synthetic_example",
+    "statements": [
+      {"round1": "Title: Calibrated Reasoning in Fictional Multi-Agent Systems\nKeywords: calibration, agents\nAbstract: This entirely synthetic paper proposes a calibration method and evaluates it on controlled simulated tasks."},
+      {"round2": "Reviewer 1: The method is clear and the controlled results support the stated claims.\nReviewer 2: The ablations are useful; the limitations should be made more prominent."},
+      {"round3": "Author response: We will expand the limitations and clarify that the experiments use only synthetic environments."}
+    ]
+  },
+  {
+    "id": "synthetic_paper_002",
+    "decision": "Reject",
+    "source": "synthetic_example",
+    "statements": [
+      {"round1": "Title: An Imaginary Benchmark Without Baselines\nKeywords: benchmark, evaluation\nAbstract: This synthetic submission introduces a small benchmark but reports no comparison systems or validation."},
+      {"round2": "Reviewer 1: The motivation is relevant, but there are no baselines and the sample is too small.\nReviewer 2: The evaluation does not establish reliability or novelty."},
+      {"round3": "Author response: We acknowledge that baseline experiments and validation are not yet available."}
+    ]
+  },
+  {
+    "id": "synthetic_paper_003",
+    "decision": "Accept",
+    "source": "synthetic_example",
+    "statements": [
+      {"round1": "Title: Robust Graph Inference on Constructed Worlds\nKeywords: graphs, robustness\nAbstract: This fictional study provides a reproducible graph suite and a simple robust inference algorithm."},
+      {"round2": "Reviewer 1: The release is reproducible and the analysis is careful.\nReviewer 2: Gains are modest but consistent across the declared settings."},
+      {"round3": "Author response: We added confidence intervals and clarified the narrow scope of the conclusions."}
+    ]
+  }
+]

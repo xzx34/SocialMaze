@@ -1,5 +1,6 @@
 """The model registry and the request/retry logic of the chat client, all offline."""
 
+from pathlib import Path
 from types import SimpleNamespace
 
 try:  # the openai SDK depends on httpx2 from 3.0 on and on httpx before
@@ -48,6 +49,13 @@ def test_default_yaml_loads_with_paper_models(registry):
     for name in PAPER_MODELS:
         spec = registry.resolve(name)
         assert spec.name == name and spec.model and spec.provider in registry.providers
+
+
+def test_packaged_and_repository_registries_match():
+    repository_config = Path(__file__).resolve().parents[1] / "configs" / "models.yaml"
+    packaged = yaml.safe_load(DEFAULT_CONFIG_PATH.read_text(encoding="utf-8"))
+    visible = yaml.safe_load(repository_config.read_text(encoding="utf-8"))
+    assert packaged == visible
 
 
 def test_resolve_exact_o1_mapping(registry):

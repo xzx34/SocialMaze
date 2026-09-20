@@ -76,7 +76,7 @@ configurations of the released data:
 | 10 | lunatic | 7 | 1 | 0 | 2 |
 | 10 | full | 5 | 1 | 2 | 2 |
 
-The paper's experiments use the six-player `full` variant. The HuggingFace
+The paper's experiments use the six-player `full` variant. The current HuggingFace
 release calls the six-player full variant `easy` and the ten-player full
 variant `hard`. The original code called the full variant `all`; that name is
 still accepted as an alias.

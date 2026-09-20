@@ -31,6 +31,8 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
+import json
 import math
 import random
 import shlex
@@ -50,6 +52,23 @@ from .solver import analyze
 
 #: Normalised weights per role present in the game, or ``None`` for "natural".
 RoleMix = Optional[dict[str, float]]
+
+
+def content_fingerprint(scenario: Scenario) -> str:
+    """Stable SHA-256 for the observable game content, excluding ids/provenance.
+
+    The full hidden assignment is intentionally excluded: two records that show
+    a model the same transcript and expect the same answer are duplicates even
+    if unobserved non-Player-1 roles were assigned differently.
+    """
+    content = {
+        "config": scenario.config.to_dict(),
+        "displayed_role": scenario.displayed_role,
+        "rounds": [[statement.to_dict() for statement in rnd] for rnd in scenario.rounds],
+        "answer": scenario.answer.to_dict(),
+    }
+    payload = json.dumps(content, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 # --------------------------------------------------------------------------
 # Role mix
@@ -141,6 +160,7 @@ def generation_stats(
     attempts: int,
     attempts_by_role: Counter,
     accepted_by_role: Counter,
+    duplicate_attempts: int = 0,
 ) -> dict:
     """Acceptance and solvability statistics of one generation run."""
     per_role = {}
@@ -151,6 +171,7 @@ def generation_stats(
     cross = [s.solution["p1_cross_checked_by_investigator"] for s in scenarios]
     return {
         "attempts": attempts,
+        "duplicate_attempts": duplicate_attempts,
         "accepted": len(scenarios),
         "acceptance_rate": len(scenarios) / attempts if attempts else None,
         "per_role": per_role,
@@ -185,6 +206,8 @@ def generate_dataset(
     attempts_by_role: Counter = Counter()
     accepted_by_role: Counter = Counter()
     scenarios: list[Scenario] = []
+    fingerprints: set[str] = set()
+    duplicate_attempts = 0
     attempts = 0
     max_attempts = num_scenarios * max_attempts_factor
     bar = tqdm(
@@ -207,6 +230,11 @@ def generate_dataset(
         solution = analyze(scenario)
         if not solution["unique"]:
             continue
+        fingerprint = content_fingerprint(scenario)
+        if fingerprint in fingerprints:
+            duplicate_attempts += 1
+            continue
+        fingerprints.add(fingerprint)
         accepted_by_role[p1_role] += 1
         scenario.id = make_scenario_id(config, len(scenarios) + 1, id_prefix)
         scenario.solution = solution
@@ -216,13 +244,16 @@ def generate_dataset(
             "targeting": policy.name,
             "seed": seed,
             "attempt": attempts,
+            "content_sha256": fingerprint,
         }
         scenario.validate()
         scenarios.append(scenario)
         bar.update(1)
         bar.set_postfix(attempts=attempts, refresh=False)
     bar.close()
-    return scenarios, generation_stats(config, scenarios, attempts, attempts_by_role, accepted_by_role)
+    return scenarios, generation_stats(
+        config, scenarios, attempts, attempts_by_role, accepted_by_role, duplicate_attempts
+    )
 
 
 # --------------------------------------------------------------------------

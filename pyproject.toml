@@ -16,6 +16,7 @@ classifiers = [
   "Intended Audience :: Science/Research",
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
+license = "Apache-2.0"
 dependencies = [
   "openai>=1.30",
   "pyyaml>=6.0",
@@ -30,7 +31,7 @@ dev = ["pytest>=7.0"]
 [project.urls]
 Homepage = "https://xzx34.github.io/socialmaze/"
 Paper = "https://arxiv.org/abs/2505.23713"
-Dataset = "https://huggingface.co/datasets/MBZUAI/SocialMaze"
+Dataset = "https://huggingface.co/datasets/xzx34/SocialMaze"
 Repository = "https://github.com/xzx34/SocialMaze"
 
 [project.scripts]
@@ -38,6 +39,9 @@ socialmaze-hrd = "socialmaze.hrd.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["socialmaze*"]
+
+[tool.setuptools.package-data]
+socialmaze = ["configs/models.yaml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

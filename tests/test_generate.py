@@ -1,5 +1,6 @@
 """Dataset generation: quotas, role mixes, provenance and the CLI round trip."""
 
+import copy
 import json
 from collections import Counter
 
@@ -7,7 +8,7 @@ import pytest
 
 from socialmaze import __version__
 from socialmaze.hrd.cli import main
-from socialmaze.hrd.generate import allocate_quotas, generate_dataset, parse_role_mix
+from socialmaze.hrd.generate import allocate_quotas, content_fingerprint, generate_dataset, parse_role_mix
 from socialmaze.hrd.io import from_hf_row, load_meta, load_scenarios, meta_path, to_hf_row, write_jsonl
 from socialmaze.hrd.prompts import answer_block
 from socialmaze.hrd.rules import CRIMINAL, INVESTIGATOR, LUNATIC, RUMORMONGER, GameConfig
@@ -36,6 +37,7 @@ def test_generate_dataset_uniform_full():
         assert s.meta["generator_version"] == __version__
         assert s.meta["targeting"] == "random" and s.meta["seed"] == 0
     assert stats["accepted"] == 12 and stats["attempts"] >= 12
+    assert stats["duplicate_attempts"] == 0
     assert stats["acceptance_rate"] == pytest.approx(12 / stats["attempts"])
     assert set(stats["per_role"]) == set(cfg.roles_present())
     assert sum(c["attempts"] for c in stats["per_role"].values()) == stats["attempts"]
@@ -100,6 +102,30 @@ def test_strategic_targeting_and_id_prefix():
     assert all(s.meta["targeting"] == "strategic" for s in scenarios)
     assert [s.id for s in scenarios] == [f"demo-n6-full-{i:05d}" for i in range(1, 5)]
     assert stats["accepted"] == 4
+
+
+def test_generation_rejects_duplicate_observable_content(monkeypatch):
+    import socialmaze.hrd.generate as generation
+
+    original = generation.simulate_game
+    first = generate_dataset(
+        GameConfig.create(6, "full"), 1, role_mix="Investigator=1", seed=11
+    )[0][0]
+    calls = 0
+
+    def repeat_once(config, p1_role, policy, rng):
+        nonlocal calls
+        calls += 1
+        if calls <= 2:
+            return copy.deepcopy(first)
+        return original(config, p1_role, policy, rng)
+
+    monkeypatch.setattr(generation, "simulate_game", repeat_once)
+    scenarios, stats = generate_dataset(
+        GameConfig.create(6, "full"), 2, role_mix="Investigator=1", seed=9
+    )
+    assert stats["duplicate_attempts"] == 1
+    assert len({content_fingerprint(scenario) for scenario in scenarios}) == 2
 
 
 def test_attempt_limit_raises():
