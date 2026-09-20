@@ -143,6 +143,10 @@ If you use the SocialMaze benchmark or its datasets in your research, we kindly 
   year={2026},
   address={Budapest, Hungary},
   publisher={Association for Computational Linguistics},
-  note={Findings}
+  note={To appear},
+  eprint={2505.23713},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2505.23713}
 }
 ```

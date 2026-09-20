@@ -110,7 +110,14 @@ The v2 data are licensed under [CC BY 4.0](https://creativecommons.org/licenses/
   title={{SocialMaze}: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments},
   author={Xu, Zixiang and Wang, Yanbo and Huang, Yue and Zhuang, Haomin and Zhou, Yujun and Ye, Jiayi and Li, Sixian and Song, Zirui and Gao, Lang and Wang, Chenxi and Chen, Zhaorun and Pan, Wang and Zhao, Yue and Zhao, Jieyu and Zhang, Xiangliang and Chen, Xiuying},
   booktitle={Findings of the Association for Computational Linguistics: EMNLP 2026},
+  month={October},
   year={2026},
-  publisher={Association for Computational Linguistics}
+  address={Budapest, Hungary},
+  publisher={Association for Computational Linguistics},
+  note={To appear},
+  eprint={2505.23713},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2505.23713}
 }
 ```
