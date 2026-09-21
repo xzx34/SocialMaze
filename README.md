@@ -1,5 +1,7 @@
 <h1 align="center">SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments</h1>
 
+**SocialMaze is a six-task benchmark for evaluating LLM social reasoning across dynamic multi-turn interaction, deep inference, deception, and information uncertainty.**
+
 🌐 **Project page:** https://xzx34.github.io/socialmaze/
 
 🏛️ **Venue:** [Findings of EMNLP 2026](https://2026.emnlp.org/)
@@ -19,7 +21,9 @@
 
 ## Introduction
 
-SocialMaze is a benchmark for evaluating and enhancing the social reasoning capabilities of Large Language Models (LLMs) in complex, evolving social environments. The paper organizes six tasks across social reasoning games, daily-life interactions and digital community platforms along three descriptive design axes: *deep reasoning*, *dynamic interaction* and *information uncertainty*. It also studies enhancement strategies: reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners, while targeted fine-tuning substantially improves structured social-reasoning tasks.
+SocialMaze evaluates whether large language models can integrate evolving interaction histories, infer hidden roles and mental states, and reason under deception and unreliable information. The paper organizes six tasks across social-deduction games, daily-life interactions and digital community platforms along three descriptive design axes: *deep reasoning*, *dynamic interaction* and *information uncertainty*. It also studies enhancement strategies: reasoning workflows help weaker short-chain-of-thought backbones but saturate on stronger reasoners, while targeted fine-tuning substantially improves structured social-reasoning tasks.
+
+SocialMaze bridges traditional **Theory-of-Mind evaluation** and open-ended **social-agent benchmarks** by measuring verifiable social reasoning over evolving interaction histories and uncertain information. It includes mental-state inference, but treats it as part of a broader social-intelligence evaluation rather than reducing social reasoning to isolated belief questions. Unlike environments centered on open-ended goal completion, SocialMaze emphasizes whether a model's social inferences are correct and how they change as new evidence arrives.
 
 This repository is the maintained implementation of the benchmark's core task, **Hidden Role Deduction (HRD)**: rules, corrected data generation with a verified unique solution for every instance, natural-language reasoning chains, and a model evaluation harness. The corrected expanded HRD data are public on Hugging Face. The other five tasks are represented here only by archived scripts and small synthetic or algorithmic samples for code-path demonstrations.
 

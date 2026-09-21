@@ -6,7 +6,7 @@ language:
 license: cc-by-4.0
 multilinguality:
 - monolingual
-pretty_name: SocialMaze Corrected Expanded Hidden Role Deduction
+pretty_name: 'SocialMaze: Hidden Role Deduction for LLM Social Reasoning'
 size_categories:
 - 100K<n<1M
 source_datasets:
@@ -18,6 +18,16 @@ tags:
 - large-language-models
 - benchmark
 - hidden-role-deduction
+- social-intelligence
+- llm-evaluation
+- social-deduction
+- hidden-role-reasoning
+- multi-turn-reasoning
+- dynamic-interaction
+- deception
+- information-uncertainty
+- theory-of-mind
+- arxiv:2505.23713
 configs:
 - config_name: default
   data_files:
@@ -29,9 +39,17 @@ configs:
 
 # SocialMaze: Corrected Expanded Hidden Role Deduction
 
-This is the authoritative maintained data release for **SocialMaze: A
-Benchmark for Evaluating and Enhancing Social Reasoning in Large Language
-Models in Complex Social Environments**, published in Findings of EMNLP 2026.
+This is the authoritative maintained Hidden Role Deduction release for
+**SocialMaze**, a six-task benchmark for evaluating LLM social reasoning under
+dynamic interaction, deception, and information uncertainty. The paper,
+**SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in
+Large Language Models in Complex Social Environments**, is published in
+Findings of EMNLP 2026.
+
+This dataset card contains the **corrected expanded HRD-only release**. The
+paper evaluates six tasks on 70,000 benchmark instances; this 200,000-instance
+Hugging Face dataset is not a complete downloadable mirror of that six-task
+evaluation collection.
 
 Version **2.0.0** contains 200,000 corrected Hidden Role Deduction (HRD)
 instances generated with the exhaustive solver in

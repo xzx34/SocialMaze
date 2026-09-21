@@ -5,11 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "socialmaze"
 version = "1.0.0"
-description = "SocialMaze: the Hidden Role Deduction benchmark for social reasoning in LLMs"
+description = "Hidden Role Deduction for evaluating LLM social reasoning under dynamic interaction, deception, and information uncertainty"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Zixiang Xu" }]
-keywords = ["benchmark", "social reasoning", "large language models", "hidden role deduction"]
+keywords = [
+  "benchmark",
+  "LLM evaluation",
+  "social reasoning",
+  "social intelligence",
+  "theory of mind",
+  "social deduction",
+  "hidden role deduction",
+  "multi-turn reasoning",
+  "dynamic interaction",
+  "deception",
+  "information uncertainty",
+]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
